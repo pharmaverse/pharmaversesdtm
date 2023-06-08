@@ -1,0 +1,52 @@
+Package: admiraltemplate
+Type: Package
+Title: ADaM in R Asset Library - Extension
+Version: 0.0.2
+Authors@R: c(
+    person("Open", "Source", email = "admiraltemplate@pharmaverse.com", role = c("aut", "cre")))
+Description: A toolbox for programming Clinical Data Standards Interchange Consortium
+    (CDISC) compliant Analysis Data Model (ADaM) datasets in R. ADaM datasets are a
+    mandatory part of any New Drug or Biologics License Application submitted to the
+    United States Food and Drug Administration (FDA). Analysis derivations are
+    implemented in accordance with the "Analysis Data Model Implementation Guide"
+    (CDISC Analysis Data Model Team, 2021, <https://www.cdisc.org/standards/foundational/adam/adamig-v1-3-release-package>).
+License: Apache License (>= 2)
+URL: https://pharmaverse.github.io/admiraltemplate, https://github.com/pharmaverse/admiraltemplate
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: R (>= 3.5)
+Imports:
+    admiral (>= 0.10.0),
+    admiraldev (>= 0.3.0),
+    dplyr (>= 0.8.4),
+    hms (>= 0.5.3),
+    lifecycle (>= 0.1.0),
+    lubridate (>= 1.7.4),
+    magrittr (>= 1.5),
+    purrr (>= 0.3.3),
+    rlang (>= 0.4.4),
+    stringr (>= 1.4.0),
+    tidyr (>= 1.0.2),
+    tidyselect (>= 1.1.0)
+Suggests:
+    admiral.test (>= 0.5.0),
+    covr,
+    devtools,
+    diffdf,
+    DT,
+    knitr,
+    lintr,
+    methods,
+    miniUI,
+    pkgdown,
+    rmarkdown,
+    roxygen2,
+    spelling,
+    testthat (>= 3.0.0),
+    tibble,
+    usethis,
+VignetteBuilder: knitr
+Config/testthat/edition: 3
