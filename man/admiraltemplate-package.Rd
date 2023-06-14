@@ -19,7 +19,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Open Source \email{admiraltemplate@pharmaverse.com}
+\strong{Maintainer}: Edoardo Mancini \email{edoardo.mancini@roche.com}
 
 }
 \concept{internal}
