@@ -1,4 +1,4 @@
-# admiraltemplate 0.0.2
+# admiraldata 0.0.2
 
 ## New Features
 
@@ -10,7 +10,7 @@
 
 ## Documentation
 
- - Many updates across documentation made to match v0.10.0 of `admiral` [PR #51](https://github.com/pharmaverse/admiraltemplate/pull/51), including: 
+ - Many updates across documentation made to match v0.10.0 of `admiral` [PR #51](https://github.com/pharmaverse/admiraldata/pull/51), including: 
  - Links were fixed on the website 
  - Templates were aligned to current `admiral` standards
  - Package dependencies were updated
@@ -18,9 +18,9 @@
 
 ## Various
 
- - Renamed from `admiralext` to `admiraltemplate`
+ - Renamed from `admiralext` to `admiraldata`
  
-# admiraltemplate 0.0.1
+# admiraldata 0.0.1
 
 ## New Features
 
