@@ -28,7 +28,7 @@ remotes::install_github("pharmaverse/admiraldata", ref = "devel")
 
 # Data Sources
 
-Some of the test datasets has been sourced from the [CDISC pilot project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while other datasets have been constructed ad-hoc by the admiral team. Please check the [github repository](https://github.com/pharmaverse/admiral.test/tree/main/data) for detailed information regarding the source of specific datasets.
+Some of the test datasets has been sourced from the [CDISC pilot project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while other datasets have been constructed ad-hoc by the admiral team. Please check the [Github repository](https://github.com/pharmaverse/admiral.test/tree/main/data) for detailed information regarding the source of specific datasets.
 
 # Naming Conventions
 * Datasets that are TA-agnostic are prefixed with `admiral_` (e.g. `admiral_dm`).
