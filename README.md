@@ -3,7 +3,6 @@
 <!-- badges: start -->
 
 [<img src="http://pharmaverse.org/shields/admiral.svg">](https://pharmaverse.org)
-[![CRAN status](https://www.r-pkg.org/badges/version/admiraldata)](https://CRAN.R-project.org/package=admiraldata)
 [![Test Coverage](https://raw.githubusercontent.com/pharmaverse/admiraldata/badges/main/test-coverage.svg)](https://github.com/pharmaverse/admiraldata/actions/workflows/code-coverage.yml)
 
 <!-- badges: end -->
