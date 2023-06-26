@@ -67,14 +67,6 @@
 <li class="nav-item">
   <a class="nav-link" href="news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/admiraldata/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/admiraldata/cran-release">cran-release</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/admiraldata/v0.0.2">v0.0.2</a> </div></li>
-<!-- end dropdown for versions -->
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
@@ -96,129 +88,81 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="admiral-package-extension-template-">admiral package extension Template <a class="anchor" aria-label="anchor" href="#admiral-package-extension-template-"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="admiraldata-">admiraldata <a class="anchor" aria-label="anchor" href="#admiraldata-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
 <!-- badges: end -->
+<p>Test data for the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family of packages</p>
+</div>
+<div class="section level1">
+<h1 id="purpose">Purpose<a class="anchor" aria-label="anchor" href="#purpose"></a>
+</h1>
+<p>To provide a one-stop-shop for SDTM test data in the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family of packages. This includes datasets that are therapeutic area (TA)-agnostic (<code>DM</code>, <code>VS</code>, <code>EG</code>, etc.) as well TA-specific ones (<code>RS</code>, <code>TR</code>, <code>OE</code>, etc.).</p>
+</div>
+<div class="section level1">
+<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h1>
+<p>The package is available from CRAN and can be installed by running <code>install.packages("admiraldata")</code>. To install the latest development version of the package directly from GitHub use the following code:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"remotes"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<span class="op">}</span>
+
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"pharmaverse/admiraldata"</span>, ref <span class="op">=</span> <span class="st">"devel"</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level1">
+<h1 id="data-sources">Data Sources<a class="anchor" aria-label="anchor" href="#data-sources"></a>
+</h1>
+<p>Some of the test datasets has been sourced from the <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project" class="external-link">CDISC pilot project</a>, while other datasets have been constructed ad-hoc by the admiral team. Please check the <a href="https://github.com/pharmaverse/admiral.test/tree/main/data" class="external-link">Github repository</a> for detailed information regarding the source of specific datasets.</p>
+</div>
+<div class="section level1">
+<h1 id="naming-conventions">Naming Conventions<a class="anchor" aria-label="anchor" href="#naming-conventions"></a>
+</h1>
+<ul>
+<li>Datasets that are TA-agnostic are prefixed with <code>admiral_</code> (e.g. <code>admiral_dm</code>).</li>
+<li>Datasets that are TA-specific are prefixed with the <code>admiral</code> extension package from which they derive (e.g. <code>admiralonco_rs</code>, <code>admiralophtha_oe</code>).</li>
+</ul>
+<p><strong>Note</strong>: <em>If an SDTM domain is used by multiple TAs, <code>{admiraldata}</code> may provide multiple versions of the corresponding test dataset. For instance, the package contains <code>admiral_ex</code> and <code>admiralophtha_ex</code> as the latter contains ophthalmology-specific variables such as <code>EXLAT</code> and <code>EXLOC</code>, and <code>EXROUTE</code> is exchanged for a plausible ophthalmology value.</em></p>
+</div>
+<div class="section level1">
+<h1 id="how-to-update">How To Update<a class="anchor" aria-label="anchor" href="#how-to-update"></a>
+</h1>
+<p>Firstly, make a GitHub issue in this repo with the planned updates and tag <code>@pharmaverse/admiral</code> so that one of the development core team can sanity check the request. Then there are two main ways to extend the test data: either by adding new datasets or extending existing datasets with new records/variables. Whichever method you choose, it is worth noting the following:</p>
+<ul>
+<li>Programs that generate test data are stored in the <code>dev/</code> folder.</li>
+<li>Each of these programs is written as a standalone R script: if any packages need to be loaded for a given program, then call <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> at the start of the program (but please do <strong>not</strong> call <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library(admiraldata)</a></code>).</li>
+<li>Most of the packages that you are likely to need will already be specified in the <code>renv.lock</code> file, so they will already be installed if you have been keeping in sync–you can check this by entering <code><a href="https://rstudio.github.io/renv/reference/status.html" class="external-link">renv::status()</a></code> in the Console. However, you may also wish to install <a href="https://pharmaverse.github.io/metatools/" class="external-link">metatools</a> and <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>, which are currently not specified in the <code>renv.lock</code> file. If you feel that you need to install any other packages in addition to those just mentioned, then please tag <code>@pharmaverse/admiral</code> to discuss with the development core team.</li>
+<li>When you have created a program in the <code>dev/</code> folder, you need to run it as a standalone R script, in order to generate a test dataset that will become part of the <code>{admiraldata}</code> package, but you do not need to build the package.</li>
+<li>Following <a href="https://r-pkgs.org/data.html#sec-data-data" class="external-link">best practice</a>, each dataset is stored as a <code>.rda</code> file whose name is consistent with the name of the dataset: for example, the dataset <code>dm</code> should be renamed to <code>raw_dm</code> before saving it as <code>raw_dm.rda</code>; if you save <code>dm</code> as <code>raw_dm.rda</code> and subsequently load the <code>.rda</code> file, then <code>dm</code> (not <code>raw_dm</code>) will be loaded into the global environment.</li>
+<li>The programs in <code>dev/</code> are stored within the <code>{admiraldata}</code> GitHub repository, but they are <strong>not</strong> part of the <code>{admiraldata}</code> package–the <code>dev/</code> folder is specified in <code>.Rbuildignore</code>.</li>
+<li>When you run a program that is in the <code>dev/</code> folder, you generate a dataset that is written to the <code>data/</code> folder, which will become part of the <code>{admiraldata}</code> package.</li>
+<li>The names of test datasets are specified in <code>R/data.R</code>, for the purpose of generating documentation in the <code>man/</code> folder.</li>
+</ul>
 <div class="section level2">
-<h2 id="table-of-contents">Table of Contents<a class="anchor" aria-label="anchor" href="#table-of-contents"></a>
+<h2 id="adding-new-sdtm-datasets">Adding New SDTM Datasets<a class="anchor" aria-label="anchor" href="#adding-new-sdtm-datasets"></a>
 </h2>
 <ul>
-<li><a href="#extension-expectations">Extension Expectations</a></li>
-<li><a href="#what-is-included-in-the-template">What is included in the template</a></li>
-<li><a href="#package-extension-guidance">Package Extension Guidance</a></li>
-<li><a href="#quick-start-guide-for-template">Quick Start Guide for Template</a></li>
+<li>Create a program in the <code>dev/</code> folder, named <code>&lt;name&gt;.R</code>, where <code>&lt;name&gt;</code> is the SDTM domain name, (e.g. <code>rs.R</code>), to generate the test data and output <code>admiral_&lt;name&gt;.rda</code> to the <code>data/</code> folder. Use CDISC pilot data such as <code>admiral_dm</code> as input in this program in order to create realistic synthetic data that remains consistent with other domains. Note that <strong>no personal data should be used</strong> as part of this package, even if anonymized.</li>
+<li>Run the program.</li>
+<li>Reflect this update, by specifying <code>admiral_&lt;name&gt;</code> in <code>R/data.R</code>.</li>
+<li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 </ul>
 </div>
 <div class="section level2">
-<h2 id="extension-expectations">Extension Expectations<a class="anchor" aria-label="anchor" href="#extension-expectations"></a>
+<h2 id="updating-existing-sdtm-datasets">Updating Existing SDTM Datasets<a class="anchor" aria-label="anchor" href="#updating-existing-sdtm-datasets"></a>
 </h2>
-<p>To be included as an <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> package extension we expect developers to adhere to the following standards:</p>
 <ul>
-<li><a href="https://pharmaverse.github.io/admiral/main/CODE_OF_CONDUCT.html" class="external-link">Code of Conduct</a></li>
-<li><a href="https://pharmaverse.github.io/admiral/main/index.html?q=manifest#admiral-manifesto" class="external-link">Manifesto</a></li>
-<li><a href="https://pharmaverse.github.io/admiraldev/main/articles/programming_strategy.html" class="external-link">Programming Strategy</a></li>
-<li><a href="https://pharmaverse.github.io/admiraldev/main/articles/development_process.html" class="external-link">Development Process</a></li>
-<li>Follow consistent workflow checks</li>
-<li>A CRAN Release means 90% or greater test coverage</li>
-</ul>
-<p>We have developed this repository template in order to reduce the burden on developers to follow these standards. This template will also help to harmonize the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family of R packages, to ensure a consistent user experience and ease of installing and adopting all the packages. With this in mind, we expect the same core package dependencies and versions as used for <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a>.</p>
-</div>
-<div class="section level2">
-<h2 id="what-is-included-in-the-template">What is included in the template<a class="anchor" aria-label="anchor" href="#what-is-included-in-the-template"></a>
-</h2>
-<p>The repository template includes the following:</p>
-<ul>
-<li>License file (Apache 2.0 - but company co-developers need to be added to copyright section)</li>
-<li>Required folders (R; test; templates; vignettes; renv; etc)</li>
-<li>Set-up files (DESCRIPTION; NAMESPACE; renv.lock; etc)</li>
-<li>Issue Templates (Bug Template; Feature Request; Documentation Request/Update; Onboarding)</li>
-<li>Pull Request Template</li>
-<li>Workflow actions (a selection of generic and specific CI/CD auto-checks)</li>
-<li>Package badges (Test coverage; etc)</li>
-<li>Branch protection rules</li>
+<li>Rename the source dataset as <code>raw_&lt;name&gt;</code>, where <code>&lt;name&gt;</code> is the SDTM domain name (e.g. rename <code>ds</code> to <code>raw_ds</code>), and then save it to the <code>data/</code> folder as <code>raw_&lt;name&gt;.rda</code> (e.g. <code>save(raw_ds, file = "data/raw_ds.rda")</code>).</li>
+<li>Create a program in the <code>dev/</code> folder, named <code>update_&lt;name&gt;.R</code>, to load <code>raw_&lt;name&gt;.rda</code>, make the updates, and output <code>admiral_&lt;name&gt;.rda</code> to the <code>data/</code> folder.</li>
+<li>Run the program.</li>
+<li>Reflect this update, by specifying both <code>raw_&lt;name&gt;</code> and <code>admiral_&lt;name&gt;</code> in <code>R/data.R</code>.</li>
+<li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 </ul>
 </div>
-<div class="section level2">
-<h2 id="package-extension-guidance">Package Extension Guidance<a class="anchor" aria-label="anchor" href="#package-extension-guidance"></a>
-</h2>
-<p><a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> is made up of a family of packages and we foresee this only growing over time to cover more specific areas such as TA (Therapeutic Area) package extensions, with a wider range of companies and individuals getting on board to join development efforts. This step-by-step guidance talks through our recommendations on how new development teams would go about creating such package extensions. It is critical that this guidance is followed, as our users need to feel a consistent experience when working across <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> packages. If an admiral package extension doesn’t follow these conventions then we wouldn’t include it under pharmaverse and as part of the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family.</p>
-<p><em>Note: The ordering numbers below are suggested but don’t all need to strictly be followed in this sequence.</em></p>
-<ol style="list-style-type: decimal">
-<li>Raise the need for a new <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> package extension with the sponsors (Ross Farrugia <a href="mailto:ross.farrugia@roche.com" class="email">ross.farrugia@roche.com</a> &amp; Ben Arancibia <a href="mailto:benjamin.c.arancibia@gsk.com" class="email">benjamin.c.arancibia@gsk.com</a>). The naming convention needs to be <code>{admiralxxx}</code> and we request that the scope is not targeted overly narrow, for example instead of a package extension for HIV we’d prefer one across virology. Otherwise the number of packages may become unmanageable.</li>
-<li>Once agreed, reach out to other company contacts working in similar areas to see if a collaborative development can be achieved. <em>Our recommendation here is always to target at least 2 companies to start so that any implementation remains robust and we protect from going down a company-specific route. However, consider that if more than 4 or 5 companies get involved too early it may slow down decision-making.</em>
-</li>
-<li>From the companies that agree to co-develop, identify a lead from each. One company should act as the driver for the overall package extension and put forward a product owner and technical lead who ultimately have final say on any contentious decisions. The product owner would cover project decisions (e.g. around scope and priorities), whereas the technical lead would cover technical decisions (e.g. around design and implementation). <em>Ideally, the technical lead should have had some earlier involvement in <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> such as being part of the core development team or as a contributor, as this is a key role in order to keep the design true to the manifesto.</em>
-</li>
-<li>Agree on a charter and expectations of each company, e.g. we usually ask for at least 3 developers with at least 25% capacity and a mix of R, GitHub and TA experience. Within the charter make sure the scope and timelines are clear. <em>It is important here not to try to boil the ocean. Focus first on the very common endpoints required as a foundation and then the package can build up from here via contributions from both the co-development companies and also the wider across-industry admiral community. If useful, the <a href="https://pharmaverse.github.io/admiralonco/" class="external-link">admiralonco</a> charter could be shared as a guide.</em>
-</li>
-<li>Each company should start to identify the required developer resources. Then they all need to attend one of the monthly admiral onboarding sessions (as advertised via our Slack channel - which they should join using this <a href="https://join.slack.com/t/pharmaverse/shared_invite/zt-yv5atkr4-Np2ytJ6W_QKz_4Olo7Jo9A" class="external-link">link</a>). All should read up on the admiral <a href="https://pharmaverse.github.io/admiral/main/" class="external-link">site</a>, especially the developer guides which all need to be followed for package extensions.</li>
-<li>Optionally it can be useful to host a kick-off meeting to decide how the team will work, for which we recommend agile/scrum practices.</li>
-<li>Set up a “admiralxxx_dev” channel on Slack to add all team members to for informal team chat, and agree a way to share working documents across the co-development team.</li>
-<li>A useful starter development activity could be to look into <code>{admiral.test}</code> to check that the test data there is sufficient for your TA needs, e.g. for <a href="https://pharmaverse.github.io/admiralonco/" class="external-link">admiralonco</a> we had to generate new test data for SDTM domains such as RS and TU. Note that no personal data should be used here (even if anonymized) and it is important to keep any data generated in-line with the CDISC pilot data we use here, i.e. use same USUBJIDs as DM etc.</li>
-<li>Optionally draft, agree and sign a collaboration agreement if the collaborating companies so wish, as this could be useful for protecting secondary IP such as company standard specifications that may be shared within the team. An example is stored <a href="https://github.com/pharmaverse/pharmaverse/blob/main/content/contribute/Pharmaverse%20Collaborative%20Agreement%20(template).docx" class="external-link">here</a>, but work with your Legal teams as required.</li>
-<li>Share company-specific implementations and specifications to be able to harmonize into your design strategy for the package extension. <em>Here it is important to remain pragmatic and consider a higher perspective than any one company. Engage your company standards representatives and where you find discrepancies across company approaches then question if you really need to be doing things differently here (do health authorities or patients benefit at all if you do?). Also consider that we always expect a level of company-specifics to be covered in the internal company package extensions.</em>
-</li>
-<li>Set up a new public GitHub repo under the <a href="https://github.com/pharmaverse" class="external-link">pharmaverse org</a> using <a href="https://github.com/pharmaverse/admiraltemplate" class="external-link">admiraltemplate</a> - this includes set-up pieces (such as CI/CD checks and issue/PR templates) that will enable your package to stay consistent with others in the admiral family, as well as the same core package dependencies and versions. See Quick Start Guide for Template section below for instructions. <em>Note that this step requires org member access which could be granted by of the pharmaverse council reps, who are admins for this org. Also you are free to add additional package dependencies as needed assuming only reliable packages are used, but they must not depend on newer versions of other packages (always reply “no” if updates are suggested during installation).</em>
-</li>
-<li>Once the repo is available the technical lead could be granted admin access to this repo and then could set up a GitHub team with the same name as the package extension to assign required access for all other co-development team members. Most will only require write access, but you may choose to give the other leads admin access as well so that never a bottle-neck waiting on one person.</li>
-<li>Update the template license file in your repo by adding the co-development company names in place of Roche &amp; GSK - for <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> package extensions we use Apache 2.0, which is our preferred permissive license. Agree with the co-development companies any required extra wording for the copyright/IP section.</li>
-<li>Set up a project board, such as <a href="https://github.com/orgs/pharmaverse/projects/12" class="external-link">this</a>, to help manage your backlog.</li>
-<li>Assuming you work under agile/scrum, then create a product backlog, prioritize and make a sprint plan.</li>
-<li>The intention is always to re-use as much as possible from <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> core package. If you find anything additional needed for the package extension, you should first question whether it might be a common need for other TAs and if so consider instead raising an issue to <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> core. When designing new functions always try to stay aligned with the <a href="https://pharmaverse.github.io/admiraldev/main/articles/programming_strategy.html" class="external-link">programming strategy.</a>.</li>
-<li>Start development of your foundational first release 0.1.0. Follow a consistent <a href="https://pharmaverse.github.io/admiraldev/main/articles/development_process.html" class="external-link">development process</a> to <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a>.</li>
-<li>Line up testers from your companies and others and set expectations around when you believe a stable version would be available for user testing. You can use the admiral Slack community to raise interest to get involved.</li>
-<li>Add a pharmaverse badge to your README: <a href="https://pharmaverse.org/contribute/badges/" class="external-link uri">https://pharmaverse.org/contribute/badges/</a> - needs support from a pharmaverse council rep.</li>
-<li>Raise an <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> repo issue to ensure your package extension site is linked from the core <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> site <a href="https://pharmaverse.github.io/admiral/main/index.html#types-of-packages" class="external-link">here.</a>
-</li>
-<li>It is important that the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family of packages keep to a similar release schedule and cadence, in order to ease adoption by our users and to give clear expectations. The <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> core package cadence of releases is one every quarter on a fixed schedule (every first Monday of the last month of a quarter - March, June, September, December). The core package will set the release schedule for the package extensions to follow, i.e. once <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> releases we’d expect package extension releases targeted within a 2 week window. These releases are communicated via our Slack channel as well as at our quarterly user community meetings.</li>
-<li>Once you are happy your package extension has been well tested and is at a sufficient state then make a submission to CRAN. The technical lead should be named as maintainer. After the CRAN release, you should advertise this via Slack &amp; LinkedIn.</li>
-<li>Plan any future further enhancements and make issues. When your team feels ready you can open up to development contributions for these from the wider community - see <a href="https://pharmaverse.github.io/admiral/main/CONTRIBUTING.html#type-1-contribution-with-code" class="external-link">this page.</a>. Please use the <em>“good first issue”</em> (ideal for new starters) &amp; <em>“help wanted”</em> (ideal for more experienced contributors) issue labels.</li>
-</ol>
 </div>
-<div class="section level2">
-<h2 id="quick-start-guide-for-template">Quick Start Guide for Template<a class="anchor" aria-label="anchor" href="#quick-start-guide-for-template"></a>
-</h2>
-<p>Please thoroughly read the Package Extension Guidance above. The intention of the Quick Start is to just get the template code into a new repo and check that the package works in your environment. Please contact us via slack if any issues arise.</p>
-<ol style="list-style-type: decimal">
-<li>Click the Green <code>Use this Template</code> Button.</li>
-<li>Change owner to <code>pharmaverse</code> and enter your repository name</li>
-<li>Create <code>devel</code> and <code>patch</code> branches. These will be important later for workflows!</li>
-<li>Once repo has been created click Green Code button and download the repo using <code>https</code> or <code>ssh</code>
-</li>
-<li>Run <code><a href="https://rstudio.github.io/renv/reference/restore.html" class="external-link">renv::restore()</a></code> - you will see a prompt and this will take a few minutes
-<ul>
-<li>This will ensure that your development environment for your extension package is synced with other admiral packages</li>
-</ul>
-</li>
-<li>Update/Remove the following files to use your extension name:
-<ul>
-<li>
-<code>DESCRIPTION</code> File - Name, Authors</li>
-<li><code>admiraltemplate.Rproj</code></li>
-<li><code>testthat.R</code></li>
-<li><code>News.md</code></li>
-</ul>
-</li>
-<li>Run <code><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">devtools::load_all()</a></code> and resolve issues</li>
-<li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> and resolve issues</li>
-<li>Run <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>
-<ul>
-<li>Reach out to slack for help with creating a hex sticker/logo to replace pharmaverse logo</li>
-</ul>
-</li>
-<li>
-<em>Recommended</em>: Review the <a href="https://pharmaverse.github.io/admiralci/main/#what-these-workflows-do" class="external-link">documentation on the CI/CD workflows</a> for information about how to reuse the workflows from this template. Pay special attention to the section on creating the <code>badges</code> orphan branch in <a href="https://pharmaverse.github.io/admiralci/main/#code-coverage" class="external-link">this section</a>.</li>
-<li>Test out a dummy branch and do a Pull Request to ensure CI/CD works.</li>
-<li>Any clearly dummy files like <code>R/my_first_fcn.R</code> or <code>inst/templates/ad_adxx.R</code> can be updated or removed.</li>
-<li>Set up <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule" class="external-link">branch protections rules</a> for <code>main</code>, <code>devel</code>, and optionally for <code>pre-release</code> and <code>test</code> depending on your branching strategy.</li>
-<li>Set up and assign admin and write rights in Settings/Collaborators for members of the repository - using a GitHub team for all developers.</li>
-<li>Change badges and hex image in <code>README.Rmd</code> to your package.</li>
-</ol>
-</div>
-</div>
+
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
@@ -253,8 +197,7 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://pharmaverse.org" class="external-link"><img src="http://pharmaverse.org/shields/admiral.svg"></a></li>
-<li><a href="https://CRAN.R-project.org/package=admiral" class="external-link"><img src="https://www.r-pkg.org/badges/version/admiral" alt="CRAN status"></a></li>
-<li><a href="https://github.com/pharmaverse/admiraltemplate/actions/workflows/code-coverage.yml" class="external-link"><img src="https://raw.githubusercontent.com/pharmaverse/admiraltemplate/badges/main/test-coverage.svg" alt="Test Coverage"></a></li>
+<li><a href="https://github.com/pharmaverse/admiraldata/actions/workflows/code-coverage.yml" class="external-link"><img src="https://raw.githubusercontent.com/pharmaverse/admiraldata/badges/main/test-coverage.svg" alt="Test Coverage"></a></li>
 </ul>
 </div>
 
