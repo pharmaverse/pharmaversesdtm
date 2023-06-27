@@ -2,7 +2,7 @@
 
 ## New Features
 
- - New `renv` lock files were setup (#48)
+ - New `renv` lock files were setup (#ISSUE-NUMBER)
 
 ## Updates of Existing Functions
 
@@ -10,16 +10,11 @@
 
 ## Documentation
 
- - Many updates across documentation made to match v0.10.0 of `admiral` [PR #51](https://github.com/pharmaverse/admiraldata/pull/51), including: 
- - Links were fixed on the website 
- - Templates were aligned to current `admiral` standards
- - Package dependencies were updated
- - Explanation on how to use family/keywords have been provided
+
 
 ## Various
 
- - Renamed from `admiralext` to `admiraldata`
- 
+
 # admiraldata 0.0.1
 
 ## New Features
