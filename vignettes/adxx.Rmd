@@ -17,4 +17,4 @@ knitr::opts_chunk$set(
 
 # Introduction
 
-This article describes creating an `ADXX` ADaM.
+This article describes creating SDTM datasets.

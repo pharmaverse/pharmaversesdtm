@@ -13,8 +13,11 @@
 ^man/dev_util_.+\.Rd$
 ^LICENSE\.md$
 ^\.github$
-^admiraltemplate\.Rcheck$
-^admiraltemplate.*\.tar\.gz$
-^admiraltemplate.*\.tgz$
+^admiraldata\.Rcheck$
+^admiraldata.*\.tar\.gz$
+^admiraldata.*\.tgz$
 ^staged_dependencies.yaml$
 ^README.Rmd$
+^dev$
+^vignettes/adxx\.Rmd$
+^vignettes/admiraldata\.Rmd$
