@@ -4,11 +4,11 @@
 \name{pharmaversesdtm-package}
 \alias{pharmaversesdtm}
 \alias{pharmaversesdtm-package}
-\title{pharmaversesdtm: Test Data for the 'admiral' Package}
+\title{pharmaversesdtm: Test Data for the Pharmaverse Family of Packages}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) derivations inside the 'admiral' package.
+A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) derivations inside the pharmaverse family of packages.
 }
 \seealso{
 Useful links:
