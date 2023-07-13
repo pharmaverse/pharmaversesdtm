@@ -1,4 +1,4 @@
-Package: admiraldata
+Package: pharmaversesdtm
 Type: Package
 Title: Test Data for the 'admiral' Package
 Version: 0.0.2
@@ -11,7 +11,7 @@ Description: A set of Study Data Tabulation Model (SDTM) datasets from the Clini
     package.
 Language: en-US
 License: Apache License (>= 2.0)
-URL: https://pharmaverse.github.io/admiraldata, https://github.com/pharmaverse/admiraldata
+URL: https://pharmaverse.github.io/pharmaversesdtm, https://github.com/pharmaverse/pharmaversesdtm
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true
