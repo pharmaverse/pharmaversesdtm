@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A set of Study Data Tabulation Model (SDTM) datasets from the Clinical
     Data Interchange Standards Consortium (CDISC) pilot project used for testing
-    and developing Analysis Data Model (ADaM) derivations inside the admiral
-    package.">
-<title>Test Data for the admiral Package • admiraldata</title>
+    and developing Analysis Data Model (ADaM) derivations inside the pharmaverse 
+    family of packages.">
+<title>Test Data for the Pharmaverse Family of Packages • pharmaversesdtm</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -20,12 +20,12 @@
 <link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Test Data for the admiral Package">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Test Data for the Pharmaverse Family of Packages">
 <meta property="og:description" content="A set of Study Data Tabulation Model (SDTM) datasets from the Clinical
     Data Interchange Standards Consortium (CDISC) pilot project used for testing
-    and developing Analysis Data Model (ADaM) derivations inside the admiral
-    package.">
-<meta property="og:image" content="https://pharmaverse.github.io/admiraldata/devel/logo.png">
+    and developing Analysis Data Model (ADaM) derivations inside the pharmaverse 
+    family of packages.">
+<meta property="og:image" content="https://pharmaverse.github.io/pharmaversesdtm/devel/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -37,7 +37,7 @@
 
     <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
-    <a class="navbar-brand me-2" href="index.html">admiraldata</a>
+    <a class="navbar-brand me-2" href="index.html">pharmaversesdtm</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
 
@@ -49,7 +49,7 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
-  <a class="nav-link" href="articles/admiraldata.html">Get Started</a>
+  <a class="nav-link" href="articles/pharmaversesdtm.html">Get Started</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
@@ -63,14 +63,6 @@
 <li class="nav-item">
   <a class="nav-link" href="news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/admiraldata/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/admiraldata/cran-release">cran-release</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/admiraldata/v0.0.2">v0.0.2</a> </div></li>
-<!-- end dropdown for versions -->
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
@@ -78,7 +70,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/pharmaverse/admiraldata" aria-label="github">
+  <a class="external-link nav-link" href="https://github.com/pharmaverse/pharmaversesdtm" aria-label="github">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -92,29 +84,29 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="admiraldata-">admiraldata <a class="anchor" aria-label="anchor" href="#admiraldata-"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="pharmaversesdtm-">pharmaversesdtm <a class="anchor" aria-label="anchor" href="#pharmaversesdtm-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>Test data for the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family of packages</p>
+<p>Test data (SDTM) for the pharmaverse family of packages</p>
 </div>
 <div class="section level1">
 <h1 id="purpose">Purpose<a class="anchor" aria-label="anchor" href="#purpose"></a>
 </h1>
-<p>To provide a one-stop-shop for SDTM test data in the <a href="https://pharmaverse.github.io/admiral/" class="external-link">admiral</a> family of packages. This includes datasets that are therapeutic area (TA)-agnostic (<code>DM</code>, <code>VS</code>, <code>EG</code>, etc.) as well TA-specific ones (<code>RS</code>, <code>TR</code>, <code>OE</code>, etc.).</p>
+<p>To provide a one-stop-shop for SDTM test data in the pharmaverse family of packages. This includes datasets that are therapeutic area (TA)-agnostic (<code>DM</code>, <code>VS</code>, <code>EG</code>, etc.) as well TA-specific ones (<code>RS</code>, <code>TR</code>, <code>OE</code>, etc.).</p>
 </div>
 <div class="section level1">
 <h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h1>
-<p>The package is available from CRAN and can be installed by running <code>install.packages("admiraldata")</code>. To install the latest development version of the package directly from GitHub use the following code:</p>
+<p>The package is available from CRAN and can be installed by running <code>install.packages("pharmaversesdtm")</code>. To install the latest development version of the package directly from GitHub use the following code:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"remotes"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
   <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
 <span class="op">}</span>
 
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"pharmaverse/admiraldata"</span>, ref <span class="op">=</span> <span class="st">"devel"</span><span class="op">)</span></code></pre></div>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"pharmaverse/pharmaversesdtm"</span>, ref <span class="op">=</span> <span class="st">"devel"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="data-sources">Data Sources<a class="anchor" aria-label="anchor" href="#data-sources"></a>
@@ -125,10 +117,10 @@
 <h1 id="naming-conventions">Naming Conventions<a class="anchor" aria-label="anchor" href="#naming-conventions"></a>
 </h1>
 <ul>
-<li>Datasets that are TA-agnostic are prefixed with <code>admiral_</code> (e.g. <code>admiral_dm</code>).</li>
-<li>Datasets that are TA-specific are prefixed with the <code>admiral</code> extension package from which they derive (e.g. <code>admiralonco_rs</code>, <code>admiralophtha_oe</code>).</li>
+<li>Datasets that are TA-agnostic: same as SDTM domain name (e.g., <code>dm</code>, <code>rs</code>).</li>
+<li>Datasets that are TA-specific: prefix the domain name with the TA (e.g., <code>onco_rs</code>, <code>ophtha_oe</code>).</li>
 </ul>
-<p><strong>Note</strong>: <em>If an SDTM domain is used by multiple TAs, <a href="https://pharmaverse.github.io/admiraldata" class="external-link">admiraldata</a> may provide multiple versions of the corresponding test dataset. For instance, the package contains <code>admiral_ex</code> and <code>admiralophtha_ex</code> as the latter contains ophthalmology-specific variables such as <code>EXLAT</code> and <code>EXLOC</code>, and <code>EXROUTE</code> is exchanged for a plausible ophthalmology value.</em></p>
+<p><strong>Note</strong>: <em>If an SDTM domain is used by multiple TAs, <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> may provide multiple versions of the corresponding test dataset. For instance, the package contains <code>ex</code> and <code>ophtha_ex</code> as the latter contains ophthalmology-specific variables such as <code>EXLAT</code> and <code>EXLOC</code>, and <code>EXROUTE</code> is exchanged for a plausible ophthalmology value.</em></p>
 </div>
 <div class="section level1">
 <h1 id="how-to-update">How To Update<a class="anchor" aria-label="anchor" href="#how-to-update"></a>
@@ -136,21 +128,21 @@
 <p>Firstly, make a GitHub issue in this repo with the planned updates and tag <code>@pharmaverse/admiral</code> so that one of the development core team can sanity check the request. Then there are two main ways to extend the test data: either by adding new datasets or extending existing datasets with new records/variables. Whichever method you choose, it is worth noting the following:</p>
 <ul>
 <li>Programs that generate test data are stored in the <code>dev/</code> folder.</li>
-<li>Each of these programs is written as a standalone R script: if any packages need to be loaded for a given program, then call <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> at the start of the program (but please do <strong>not</strong> call <code><a href="https://pharmaverse.github.io/admiraldata" class="external-link">library(admiraldata)</a></code>).</li>
+<li>Each of these programs is written as a standalone R script: if any packages need to be loaded for a given program, then call <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> at the start of the program (but please do <strong>not</strong> call <code><a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">library(pharmaversesdtm)</a></code>).</li>
 <li>Most of the packages that you are likely to need will already be specified in the <code>renv.lock</code> file, so they will already be installed if you have been keeping in sync–you can check this by entering <code><a href="https://rstudio.github.io/renv/reference/status.html" class="external-link">renv::status()</a></code> in the Console. However, you may also wish to install <a href="https://pharmaverse.github.io/metatools/" class="external-link">metatools</a> and <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>, which are currently not specified in the <code>renv.lock</code> file. If you feel that you need to install any other packages in addition to those just mentioned, then please tag <code>@pharmaverse/admiral</code> to discuss with the development core team.</li>
-<li>When you have created a program in the <code>dev/</code> folder, you need to run it as a standalone R script, in order to generate a test dataset that will become part of the <a href="https://pharmaverse.github.io/admiraldata" class="external-link">admiraldata</a> package, but you do not need to build the package.</li>
+<li>When you have created a program in the <code>dev/</code> folder, you need to run it as a standalone R script, in order to generate a test dataset that will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> package, but you do not need to build the package.</li>
 <li>Following <a href="https://r-pkgs.org/data.html#sec-data-data" class="external-link">best practice</a>, each dataset is stored as a <code>.rda</code> file whose name is consistent with the name of the dataset: for example, the dataset <code>dm</code> should be renamed to <code>raw_dm</code> before saving it as <code>raw_dm.rda</code>; if you save <code>dm</code> as <code>raw_dm.rda</code> and subsequently load the <code>.rda</code> file, then <code>dm</code> (not <code>raw_dm</code>) will be loaded into the global environment.</li>
-<li>The programs in <code>dev/</code> are stored within the <a href="https://pharmaverse.github.io/admiraldata" class="external-link">admiraldata</a> GitHub repository, but they are <strong>not</strong> part of the <a href="https://pharmaverse.github.io/admiraldata" class="external-link">admiraldata</a> package–the <code>dev/</code> folder is specified in <code>.Rbuildignore</code>.</li>
-<li>When you run a program that is in the <code>dev/</code> folder, you generate a dataset that is written to the <code>data/</code> folder, which will become part of the <a href="https://pharmaverse.github.io/admiraldata" class="external-link">admiraldata</a> package.</li>
+<li>The programs in <code>dev/</code> are stored within the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> GitHub repository, but they are <strong>not</strong> part of the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> package–the <code>dev/</code> folder is specified in <code>.Rbuildignore</code>.</li>
+<li>When you run a program that is in the <code>dev/</code> folder, you generate a dataset that is written to the <code>data/</code> folder, which will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> package.</li>
 <li>The names of test datasets are specified in <code>R/data.R</code>, for the purpose of generating documentation in the <code>man/</code> folder.</li>
 </ul>
 <div class="section level2">
 <h2 id="adding-new-sdtm-datasets">Adding New SDTM Datasets<a class="anchor" aria-label="anchor" href="#adding-new-sdtm-datasets"></a>
 </h2>
 <ul>
-<li>Create a program in the <code>dev/</code> folder, named <code>&lt;name&gt;.R</code>, where <code>&lt;name&gt;</code> is the SDTM domain name, (e.g. <code>rs.R</code>), to generate the test data and output <code>admiral_&lt;name&gt;.rda</code> to the <code>data/</code> folder. Use CDISC pilot data such as <code>admiral_dm</code> as input in this program in order to create realistic synthetic data that remains consistent with other domains. Note that <strong>no personal data should be used</strong> as part of this package, even if anonymized.</li>
+<li>Create a program in the <code>dev/</code> folder, named <code>&lt;name&gt;.R</code>, where <code>&lt;name&gt;</code> is the SDTM domain name, (e.g. <code>rs.R</code>), to generate the test data and output <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder. Use CDISC pilot data such as <code>dm</code> as input in this program in order to create realistic synthetic data that remains consistent with other domains. Note that <strong>no personal data should be used</strong> as part of this package, even if anonymized.</li>
 <li>Run the program.</li>
-<li>Reflect this update, by specifying <code>admiral_&lt;name&gt;</code> in <code>R/data.R</code>.</li>
+<li>Reflect this update, by specifying <code>&lt;name&gt;</code> in <code>R/data.R</code>.</li>
 <li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 </ul>
 </div>
@@ -159,9 +151,9 @@
 </h2>
 <ul>
 <li>Rename the source dataset as <code>raw_&lt;name&gt;</code>, where <code>&lt;name&gt;</code> is the SDTM domain name (e.g. rename <code>ds</code> to <code>raw_ds</code>), and then save it to the <code>data/</code> folder as <code>raw_&lt;name&gt;.rda</code> (e.g. <code>save(raw_ds, file = "data/raw_ds.rda")</code>).</li>
-<li>Create a program in the <code>dev/</code> folder, named <code>update_&lt;name&gt;.R</code>, to load <code>raw_&lt;name&gt;.rda</code>, make the updates, and output <code>admiral_&lt;name&gt;.rda</code> to the <code>data/</code> folder.</li>
+<li>Create a program in the <code>dev/</code> folder, named <code>update_&lt;name&gt;.R</code>, to load <code>raw_&lt;name&gt;.rda</code>, make the updates, and output <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder.</li>
 <li>Run the program.</li>
-<li>Reflect this update, by specifying both <code>raw_&lt;name&gt;</code> and <code>admiral_&lt;name&gt;</code> in <code>R/data.R</code>.</li>
+<li>Reflect this update, by specifying both <code>raw_&lt;name&gt;</code> and <code>&lt;name&gt;</code> in <code>R/data.R</code>.</li>
 <li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 </ul>
 </div>
@@ -170,7 +162,7 @@
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/pharmaverse/admiraldata" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/pharmaverse/pharmaversesdtm" class="external-link">Browse source code</a></li>
 </ul>
 </div>
 
@@ -186,7 +178,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing admiraldata</a></li>
+<li><a href="authors.html#citation">Citing pharmaversesdtm</a></li>
 </ul>
 </div>
 
@@ -201,7 +193,7 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://pharmaverse.org" class="external-link"><img src="http://pharmaverse.org/shields/admiral.svg"></a></li>
-<li><a href="https://github.com/pharmaverse/admiraldata/actions/workflows/code-coverage.yml" class="external-link"><img src="https://raw.githubusercontent.com/pharmaverse/admiraldata/badges/main/test-coverage.svg" alt="Test Coverage"></a></li>
+<li><a href="https://github.com/pharmaverse/pharmaversesdtm/actions/workflows/code-coverage.yml" class="external-link"><img src="https://raw.githubusercontent.com/pharmaverse/pharmaversesdtm/badges/main/test-coverage.svg" alt="Test Coverage"></a></li>
 </ul>
 </div>
 
