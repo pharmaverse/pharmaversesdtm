@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r eval=FALSE}
-library(admiraldata)
+library(pharmaversesdtm)
 ```
 
 Introduction to how to use the package extension...
