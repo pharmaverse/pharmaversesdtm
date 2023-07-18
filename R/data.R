@@ -54,6 +54,13 @@
 #' @source \url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ex.xpt?raw=true} # nolint
 "admiral_ex"
 
+#' Ophthalmology Exposure Dataset
+#'
+#' An example Exposure SDTM dataset with ophthalmology-specific variables such as `EXLOC` and `EXLAT`
+#'
+#' @source Constructed using `ex` from the `{pharmaversesdtm}` package # nolint
+"ex_ophtha"
+
 #' Laboratory Measurements Dataset
 #'
 #' An updated SDTM LB dataset that uses data from the CDISC pilot project
@@ -120,6 +127,13 @@
 #'
 #' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_qs.rda} # nolint
 "admiral_qs"
+
+#' Ophthalmology Questionnaire Dataset
+#'
+#' An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
+#'
+#' @source Constructed using `qs` from the `{pharmaversesdtm}` package # nolint
+"qs_ophtha"
 
 #' Subject Characteristic Dataset
 #'

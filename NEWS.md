@@ -2,7 +2,7 @@
 
 ## New Features
 
- - New `renv` lock files were setup (#ISSUE-NUMBER)
+ - Ophthalmology varianta of `ex` and `qs` SDTM datasets added. (#15)
 
 ## Updates of Existing Functions
 
