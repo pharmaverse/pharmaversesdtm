@@ -1,9 +1,13 @@
 # Update LB by adding percentage differential lab test rows
 
 library(dplyr)
+library(haven)
+library(admiral)
 
-data("raw_lb")
-lb <- raw_lb
+sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
+raw_lb <- read_xpt(paste0(sdtm_path, "lb", ".xpt?raw=true"))
+lb <- raw_lb %>% convert_blanks_to_na()
+
 
 # Subset on differential lab tests
 lb_diff_abs <- lb %>%

@@ -2,11 +2,16 @@
 
 library(metatools)
 library(dplyr)
+library(haven)
+library(admiral)
 
-# take qs test data from previous ADMIRAL project ====
-data("raw_qs")
 
-# create new QS data - keep standard variables from previous ADMIRAL project's QS ====
+# from CDISC pilot study ----
+sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
+raw_qs <- read_xpt(paste0(sdtm_path, "qs", ".xpt?raw=true")) %>%
+  convert_blanks_to_na()
+
+# create new QS data - keep standard variables from previous ADMIRAL project's QS ----
 qs1 <- raw_qs %>%
   # select standard variables
   select(STUDYID, DOMAIN, USUBJID, QSBLFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY) %>%

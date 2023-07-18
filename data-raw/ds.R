@@ -5,13 +5,15 @@ library(tidyselect)
 library(labelled)
 library(admiral)
 library(metatools)
+library(haven)
 
-data("admiral_dm")
-data("raw_ds")
-data("raw_suppds")
+data("dm")
+sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
+raw_ds <- read_xpt(paste0(sdtm_path, "ds", ".xpt?raw=true"))
+raw_suppds <- read_xpt(paste0(sdtm_path, "suppds", ".xpt?raw=true"))
 
 # Converting blank to NA
-dm <- convert_blanks_to_na(admiral_dm)
+dm <- convert_blanks_to_na(dm)
 ds1a <- convert_blanks_to_na(raw_ds)
 suppds1a <- convert_blanks_to_na(raw_suppds)
 

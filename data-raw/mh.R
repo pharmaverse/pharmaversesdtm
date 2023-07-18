@@ -1,12 +1,15 @@
 # Add new variables to MH
 library(metatools)
 library(lubridate)
+library(haven)
+library(admiral)
 
-data("admiral_dm")
-data("raw_mh")
+data("dm")
+sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
+raw_mh <- read_xpt(paste0(sdtm_path, "mh", ".xpt?raw=true"))
 
 # Convert blank to NA
-dm <- convert_blanks_to_na(admiral_dm) %>%
+dm <- convert_blanks_to_na(dm) %>%
   select(STUDYID, USUBJID, RFSTDTC, RFENDTC, RFXSTDTC, RFXENDTC)
 mh <- convert_blanks_to_na(raw_mh)
 # Set seed so that result stays the same for each run
