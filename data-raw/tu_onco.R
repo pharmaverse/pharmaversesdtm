@@ -7,11 +7,11 @@ library(admiral)
 library(metatools)
 
 # Reading input data  --  DUMMY DATA CREATED FROM TR data created from TR
-data("admiral_tr")
-data("admiral_supptr")
+data("tr")
+data("supptr")
 
-tr <- convert_blanks_to_na(admiral_tr)
-supptr <- convert_blanks_to_na(admiral_supptr)
+tr <- convert_blanks_to_na(tr)
+supptr <- convert_blanks_to_na(supptr)
 
 supptr1 <- supptr %>%
   mutate("DOMAIN" = RDOMAIN, TRSEQ = as.numeric(IDVARVAL), "TRLOC" = QVAL) %>%
@@ -58,7 +58,7 @@ tu <- select(tu2, c(
   VISITNUM, VISIT, TUDTC, TUDY
 ))
 
-tu <- tu %>% add_labels(
+tu_onco <- tu %>% add_labels(
   STUDYID = "Study Identifier",
   DOMAIN = "Domain Abbreviation",
   USUBJID = "Unique Subject Identifier",
@@ -79,6 +79,6 @@ tu <- tu %>% add_labels(
   TUDY = "Study Day of Tumor Identification"
 )
 
-attr(tu, "label") <- "Tumor Identification"
+attr(tu_onco, "label") <- "Tumor Identification"
 
-save(tu, file = "data/tu.rda", compress = "bzip2")
+save(tu_onco, file = "data/tu_onco.rda", compress = "bzip2")

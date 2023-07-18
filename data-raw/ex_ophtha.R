@@ -1,12 +1,13 @@
 library(dplyr)
 library(tidyselect)
-library(pharmaversesdtm)
+data("dm")
+data("ex")
 
 # Make ex_ophtha dataset
-ex_ophtha <- admiral_dm %>%
+ex_ophtha <- dm %>%
   # Start by merging on ophtha_dm to use the SUBJID variable
   select(USUBJID, SUBJID) %>%
-  right_join(admiral_ex, by = c("USUBJID"), multiple = "all") %>%
+  right_join(ex, by = c("USUBJID"), multiple = "all") %>%
   # Create EXLOC & EXLAT, change EXROUTE & EXDOSFRM to something eye-related
   mutate(
     EXLOC = "EYE",

@@ -3,6 +3,7 @@ library(metatools)
 library(lubridate)
 library(haven)
 library(admiral)
+library(dplyr)
 
 data("dm")
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint

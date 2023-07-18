@@ -7,10 +7,10 @@ library(admiral)
 library(metatools)
 
 # Reading input data
-data("admiral_tr")
+data("tr")
 
 # Converting blank to NA
-tr <- convert_blanks_to_na(admiral_tr)
+tr <- convert_blanks_to_na(tr)
 
 keyvar <- c(
   "STUDYID", "USUBJID", "TREVAL", "TREVALID",
@@ -188,7 +188,7 @@ rs <- select(rs6, c(
   VISITNUM, VISIT, RSDTC, RSDY
 ))
 
-rs <- rs %>% add_labels(
+rs_onco <- rs %>% add_labels(
   STUDYID = "Study Identifier",
   DOMAIN = "Domain Abbreviation",
   USUBJID = "Unique Subject Identifier",
@@ -210,6 +210,6 @@ rs <- rs %>% add_labels(
   RSDY = "Study Day of Response Assessment"
 )
 
-attr(rs, "label") <- "Disease Response"
+attr(rs_onco, "label") <- "Disease Response"
 
-save(rs, file = "data/rs.rda", compress = "bzip2")
+save(rs_onco, file = "data/rs_onco.rda", compress = "bzip2")

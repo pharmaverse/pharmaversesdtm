@@ -3,11 +3,9 @@
 library(dplyr)
 library(metatools)
 
-data("admiral_dm")
-data("admiral_sv")
+data("dm")
+data("sv")
 
-dm <- admiral_dm
-sv <- admiral_sv
 
 # Remove screen failures, they will not make it to drug infusion
 dm1 <- dm %>%
@@ -42,7 +40,7 @@ sc_seq <- sc %>%
     "SCCAT", "SCORRES", "SCSTRESC", "EPOCH", "SCDTC", "SCDY"
   )
 
-sc <- sc_seq %>%
+sc_ophtha <- sc_seq %>%
   ungroup() %>%
   # Sort data
   arrange(STUDYID, USUBJID, SCSEQ) %>%
@@ -64,7 +62,7 @@ sc <- sc_seq %>%
 
 
 # assign dataset label
-attr(sc, "label") <- "Subject Characteristic"
+attr(sc_ophtha, "label") <- "Subject Characteristic"
 
 # Save output
-save(sc, file = "data/sc.rda", compress = "bzip2")
+save(sc_ophtha, file = "data/sc_ophtha.rda", compress = "bzip2")

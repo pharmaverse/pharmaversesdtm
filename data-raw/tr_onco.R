@@ -9,14 +9,14 @@ library(metatools)
 set.seed(1)
 
 # Reading input data ----
-data("admiral_dm")
-data("admiral_suppdm")
-data("admiral_sv")
+data("dm")
+data("suppdm")
+data("sv")
 
 # Converting blank to NA
-dm <- convert_blanks_to_na(admiral_dm)
-suppdm <- convert_blanks_to_na(admiral_suppdm)
-sv <- convert_blanks_to_na(admiral_sv)
+dm <- convert_blanks_to_na(dm)
+suppdm <- convert_blanks_to_na(suppdm)
+sv <- convert_blanks_to_na(sv)
 
 # Creating data frame with visits ----
 dm1 <- dm %>%
@@ -342,7 +342,7 @@ supptr <- select(
   )
 )
 
-supptr <- supptr %>% add_labels(
+supptr_onco <- supptr %>% add_labels(
   STUDYID = "Study Identifier",
   RDOMAIN = "Related Domain Abbreviation",
   USUBJID = "Unique Subject Identifier",
@@ -354,7 +354,7 @@ supptr <- supptr %>% add_labels(
   QORIG = "Origin"
 )
 
-attr(supptr, "label") <- "Supplemental Tumor Results"
+attr(supptr_onco, "label") <- "Supplemental Tumor Results"
 
 # Creating TR ----
 tr <- select(tr, c(
@@ -364,7 +364,7 @@ tr <- select(tr, c(
   TREVAL, TREVALID, TRACPTFL, VISITNUM, VISIT, TRDTC, TRDY
 ))
 
-tr <- tr %>% add_labels(
+tr_onco <- tr %>% add_labels(
   STUDYID = "Study Identifier",
   DOMAIN = "Domain Abbreviation",
   USUBJID = "Unique Subject Identifier",
@@ -391,8 +391,8 @@ tr <- tr %>% add_labels(
   TRDY = "Study Day of Tumor Measurement"
 )
 
-attr(tr, "label") <- "Tumor Results"
+attr(tr_onco, "label") <- "Tumor Results"
 
 
-save(tr, file = "data/tr.rda", compress = "bzip2")
-save(supptr, file = "data/supptr.rda", compress = "bzip2")
+save(tr_onco, file = "data/tr_onco.rda", compress = "bzip2")
+save(supptr_onco, file = "data/supptr_onco.rda", compress = "bzip2")

@@ -1,9 +1,9 @@
-library(pharmaversesdtm)
 library(dplyr)
 library(stringr)
+data("qs")
 
 # create new QS data - keep standard variables from previous ADMIRAL project's QS ====
-qs1 <- admiral_qs %>%
+qs1 <- qs %>%
   # select standard variables
   select(STUDYID, DOMAIN, USUBJID, QSBLFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY) %>%
   # keep unique subjects and visits per subject
@@ -119,10 +119,10 @@ qs3 <- qs2 %>%
   ) %>%
   ungroup()
 
-# NOTE: the QS2 dataset made above should be stacked below the admiral_qs dataset.
+# NOTE: the QS2 dataset made above should be stacked below the qs dataset.
 # output qs_ophtha.RDS
 # remove the original vfq part from admiral_qs
-admiral_qs_novfq <- admiral_qs %>% filter(QSCAT != "NEI VFQ-25")
+admiral_qs_novfq <- qs %>% filter(QSCAT != "NEI VFQ-25")
 
 qs_ophtha <- rbind(admiral_qs_novfq, qs3)
 

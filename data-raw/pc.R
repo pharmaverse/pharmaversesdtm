@@ -6,10 +6,8 @@ library(ggplot2)
 library(labelled)
 library(admiral)
 
-data("admiral_ex")
-data("admiral_dm")
-ex <- admiral_ex
-dm <- admiral_dm
+data("ex")
+data("dm")
 
 # set seed to get same results each run
 set.seed(999)

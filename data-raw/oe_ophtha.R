@@ -6,12 +6,12 @@ library(tidyselect)
 library(admiral)
 
 # Read in data
-data("admiral_dm")
-data("admiral_sv")
+data("dm")
+data("sv")
 
 # Convert blank to NA
-dm <- convert_blanks_to_na(admiral_dm)
-sv <- convert_blanks_to_na(admiral_sv)
+dm <- convert_blanks_to_na(dm)
+sv <- convert_blanks_to_na(sv)
 
 # set seed to get same results each run
 set.seed(999)
@@ -108,7 +108,7 @@ oe4 <- bind_rows(oe31, oe32, oe33, oe34) %>%
     "OETPTNUM" = NA
   )
 
-oe <- oe4 %>%
+oe_ophtha <- oe4 %>%
   select(
     STUDYID, DOMAIN, USUBJID, OESEQ, OECAT, OESCAT, OEDTC, VISIT, VISITNUM, VISITDY,
     OESTRESN, OESTRESC, OEORRES, OETEST, OETESTCD, OETSTDTL, OELAT, OELOC, OEDY,
@@ -142,7 +142,7 @@ oe <- oe4 %>%
     OETPTNUM = "Planned Time Point Number"
   )
 
-attr(oe, "label") <- "Ophthalmic Examinations"
+attr(oe_ophtha, "label") <- "Ophthalmic Examinations"
 
 
-save(oe, file = "data/oe.rda", compress = "bzip2")
+save(oe_ophtha, file = "data/oe_ophtha.rda", compress = "bzip2")
