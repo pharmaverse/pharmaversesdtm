@@ -7,10 +7,10 @@ library(admiral)
 library(metatools)
 
 # Reading input data
-data("tr")
+data("tr_onco")
 
 # Converting blank to NA
-tr <- convert_blanks_to_na(tr)
+tr <- convert_blanks_to_na(tr_onco)
 
 keyvar <- c(
   "STUDYID", "USUBJID", "TREVAL", "TREVALID",

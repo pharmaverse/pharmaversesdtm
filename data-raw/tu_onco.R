@@ -7,11 +7,11 @@ library(admiral)
 library(metatools)
 
 # Reading input data  --  DUMMY DATA CREATED FROM TR data created from TR
-data("tr")
-data("supptr")
+data("tr_onco")
+data("supptr_onco")
 
-tr <- convert_blanks_to_na(tr)
-supptr <- convert_blanks_to_na(supptr)
+tr <- convert_blanks_to_na(tr_onco)
+supptr <- convert_blanks_to_na(supptr_onco)
 
 supptr1 <- supptr %>%
   mutate("DOMAIN" = RDOMAIN, TRSEQ = as.numeric(IDVARVAL), "TRLOC" = QVAL) %>%
