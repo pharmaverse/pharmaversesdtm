@@ -198,5 +198,4 @@ pp <- pp %>%
 
 
 # ---- Save output ----
-admiral_pp <- pp
-save(admiral_pp, file = "data/admiral_pp.rda", compress = "bzip2")
+save(pp, file = "data/pp.rda", compress = "bzip2")

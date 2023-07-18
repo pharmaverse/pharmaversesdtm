@@ -21,3 +21,4 @@
 ^dev$
 ^vignettes/adxx\.Rmd$
 ^vignettes/pharmaversesdtm\.Rmd$
+^data-raw$
