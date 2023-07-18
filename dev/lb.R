@@ -76,4 +76,5 @@ admiral_lb <- lb %>%
 
 attr(admiral_lb, "label") <- "Laboratory Test Results"
 
-save(admiral_lb, file = "data/admiral_lb.rda", compress = "bzip2")
+lb <- admiral_lb
+save(lb, file = "data/lb.rda", compress = "bzip2")

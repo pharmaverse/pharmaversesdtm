@@ -1,5 +1,6 @@
 # Add new variables to MH
 library(metatools)
+library(lubridate)
 
 data("admiral_dm")
 data("raw_mh")
@@ -68,4 +69,5 @@ admiral_mh <- mh %>%
   )
 
 attr(admiral_mh, "label") <- "Medical History"
-save(admiral_mh, file = "data/admiral_mh.rda", compress = "bzip2")
+mh <- admiral_mh
+save(mh, file = "data/mh.rda", compress = "bzip2")

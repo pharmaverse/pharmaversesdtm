@@ -62,10 +62,9 @@ sc <- sc_seq %>%
     SCDY = "Study Day of Examination"
   )
 
-admiral_sc <- sc
 
 # assign dataset label
-attr(admiral_sc, "label") <- "Subject Characteristic"
+attr(sc, "label") <- "Subject Characteristic"
 
 # Save output
-save(admiral_sc, file = "data/admiral_sc.rda", compress = "bzip2")
+save(sc, file = "data/sc.rda", compress = "bzip2")

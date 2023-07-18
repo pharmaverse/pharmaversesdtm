@@ -144,6 +144,5 @@ oe <- oe4 %>%
 
 attr(oe, "label") <- "Ophthalmic Examinations"
 
-admiral_oe <- oe
 
-save(admiral_oe, file = "data/admiral_oe.rda", compress = "bzip2")
+save(oe, file = "data/oe.rda", compress = "bzip2")

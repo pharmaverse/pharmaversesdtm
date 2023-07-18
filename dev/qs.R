@@ -98,4 +98,5 @@ admiral_qs <- raw_qs %>%
     QSDY = "Study Day of Finding"
   )
 
-save(admiral_qs, file = "data/admiral_qs.rda", compress = "bzip2")
+qs <- admiral_qs
+save(qs, file = "data/qs.rda", compress = "bzip2")

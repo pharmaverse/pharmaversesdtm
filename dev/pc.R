@@ -11,6 +11,9 @@ data("admiral_dm")
 ex <- admiral_ex
 dm <- admiral_dm
 
+# set seed to get same results each run
+set.seed(999)
+
 # Remove screen failures, they will not make it to drug infusion
 dm1 <- dm %>%
   filter(ARMCD != "Scrnfail")
@@ -158,5 +161,4 @@ plot <- ggplot(pc, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
 
 
 # ---- Save output ----
-admiral_pc <- pc
-save(admiral_pc, file = "data/admiral_pc.rda", compress = "bzip2")
+save(pc, file = "data/pc.rda", compress = "bzip2")

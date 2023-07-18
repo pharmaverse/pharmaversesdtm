@@ -393,8 +393,6 @@ tr <- tr %>% add_labels(
 
 attr(tr, "label") <- "Tumor Results"
 
-admiral_tr <- tr
-admiral_supptr <- supptr
 
-save(admiral_tr, file = "data/admiral_tr.rda", compress = "bzip2")
-save(admiral_supptr, file = "data/admiral_supptr.rda", compress = "bzip2")
+save(tr, file = "data/tr.rda", compress = "bzip2")
+save(supptr, file = "data/supptr.rda", compress = "bzip2")

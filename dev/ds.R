@@ -97,5 +97,7 @@ admiral_ds <- select(ds3, all_of(dsnames))
 
 attr(admiral_ds, "label") <- "Disposition"
 
-save(admiral_ds, file = "data/admiral_ds.rda", compress = "bzip2")
-save(admiral_suppds, file = "data/admiral_suppds.rda", compress = "bzip2")
+ds <- admiral_ds
+suppds <- admiral_suppds
+save(ds, file = "data/ds.rda", compress = "bzip2")
+save(suppds, file = "data/suppds.rda", compress = "bzip2")
