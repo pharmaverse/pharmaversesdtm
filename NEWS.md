@@ -2,7 +2,7 @@
 
 ## New Features
 
- - Ophthalmology varianta of `ex` and `qs` SDTM datasets added. (#15)
+ - Ophthalmology variants of `ex` and `qs` SDTM datasets added. (#15)
 
 ## Updates of Existing Functions
 
