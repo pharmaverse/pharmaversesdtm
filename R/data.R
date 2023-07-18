@@ -31,7 +31,7 @@
 #'
 #' An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 #'
-"eg"
+"admiral_eg"
 
 #' Exposure Dataset
 #'
@@ -68,7 +68,7 @@
 #' A SDTM OE dataset simulated by Ophthalmology team
 #'
 #' @author Gordon Miller
-"oe"
+"oe_ophtha"
 
 #' Pharmacokinetics Concentrations Dataset
 #'
@@ -105,28 +105,28 @@
 #' A SDTM SC dataset simulated by Ophthalmology team
 #'
 #' @author Gordon Miller
-"sc"
+"sc_ophtha"
 
 #' Tumor Identification Dataset
 #'
 #' A SDTM TU dataset simulated by Gopi Vegesna
 #'
 #' @author Gopi Vegesna
-"tu"
+"tu_onco"
 
 #' Tumor Results Dataset
 #'
 #' A SDTM TR dataset simulated by Gopi Vegesna
 #'
 #' @author Gopi Vegesna
-"tr"
+"tr_onco"
 
 #' Disease Response Dataset
 #'
 #' A SDTM RS dataset simulated by Gopi Vegesna
 #'
 #' @author Gopi Vegesna
-"rs"
+"rs_onco"
 
 #' Supplemental Adverse Events Dataset
 #'
@@ -154,7 +154,7 @@
 #' A SDTM SUPPTR dataset simulated by Gopi Vegesna
 #'
 #' @author Gopi Vegesna
-"supptr"
+"supptr_onco"
 
 #' Trial Design Dataset
 #'
