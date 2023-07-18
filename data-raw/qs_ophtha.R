@@ -1,6 +1,8 @@
 library(dplyr)
 library(stringr)
 data("qs")
+# set seed to get same results each run
+set.seed(999)
 
 # create new QS data - keep standard variables from previous ADMIRAL project's QS ====
 qs1 <- qs %>%
