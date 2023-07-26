@@ -17,8 +17,8 @@ lat <- c("LEFT", "RIGHT", "BOTH")
 set.seed(1)
 
 ae_ophtha$AELAT <- if_else(ae_ophtha$AESOC == "EYE DISORDERS",
-                           apply(ae_ophtha, 1, function(x) sample(lat, 1)),
-                           NA_character_
+  apply(ae_ophtha, 1, function(x) sample(lat, 1)),
+  NA_character_
 )
 
 ae_ophtha <- ae_ophtha %>%
@@ -28,5 +28,3 @@ attr(ae_ophtha, "label") <- "Adverse Events"
 
 # Save dataset ----
 save(ae_ophtha, file = "data/ae_ophtha.rda", compress = "bzip2")
-
-
