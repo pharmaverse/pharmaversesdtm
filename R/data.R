@@ -5,6 +5,13 @@
 #' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_ae.rda}
 "ae"
 
+#' Ophthalmology Adverse Events Dataset
+#'
+#' An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`
+#'
+#' @source Constructed using `ae` from the `{pharmaversesdtm}` package # nolint
+"ae_ophtha"
+
 #' Concomitant Medication Dataset
 #'
 #' A SDTM CM dataset from the CDISC pilot project
