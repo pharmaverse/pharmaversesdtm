@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r eval=FALSE}
 library(pharmaversesdtm)
+data("ae")
 ```
 
 Introduction to how to use the package extension...
