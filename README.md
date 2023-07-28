@@ -59,9 +59,11 @@ Then there are two main ways to extend the test data: either by adding new datas
 * Run the program.
 * Reflect this update, by specifying `<name>` in `R/data.R`.
 * Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
+* Add your GitHub handle to `.github/CODEOWNERS`
 
 ## Updating Existing SDTM Datasets
 
 * Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly. 
 * Run the program, and output updated `<name>.rda` to the `data/` folder.
 * Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
+* Add your GitHub handle to `.github/CODEOWNERS`
