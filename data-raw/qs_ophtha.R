@@ -141,8 +141,8 @@ qs_ophtha1 <- rbind(admiral_qs_novfq, qs3)
 
 # --SEQ and keep relevant variables;
 qs_ophtha2 <- qs_ophtha1 %>%
-    select(-QSSEQ) %>%
-    arrange(STUDYID, USUBJID, QSCAT, QSTESTCD,QSDTC,VISITNUM)
+  select(-QSSEQ) %>%
+  arrange(STUDYID, USUBJID, QSCAT, QSTESTCD, QSDTC, VISITNUM)
 
 qs_ophtha3 <- qs_ophtha2 %>%
   group_by(STUDYID, USUBJID) %>%
