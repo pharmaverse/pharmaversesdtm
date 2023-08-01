@@ -12,20 +12,14 @@ repo:
     user: https://github.com/
 news:
   cran_dates: true
-reference:
+
 
 navbar:
   structure:
-    left: [getstarted, reference, articles, news]
+    left: [reference, news]
   components:
-    getstarted:
-      text: Get Started
-      href: articles/pharmaversesdtm.html
     reference:
-      text: Reference
-      href: reference/index.html
-    articles:
-      text: User Guides
-      menu:
-      - text: Creating ADXX
-        href: articles/adxx.html
+       text: Reference
+       href: reference/index.html
+
+
