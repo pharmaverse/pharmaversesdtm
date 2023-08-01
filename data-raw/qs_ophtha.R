@@ -1,11 +1,22 @@
 library(dplyr)
 library(stringr)
-data("qs")
+library(metatools)
+library(haven)
+library(admiral)
+
+
+# from CDISC pilot study ----
+sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
+raw_qs <- read_xpt(paste0(sdtm_path, "qs", ".xpt?raw=true")) %>%
+  convert_blanks_to_na()
+
+
 # set seed to get same results each run
 set.seed(999)
 
+# add vfq data
 # create new QS data - keep standard variables from previous ADMIRAL project's QS ====
-qs1 <- qs %>%
+qs1 <- raw_qs %>%
   # select standard variables
   select(STUDYID, DOMAIN, USUBJID, QSBLFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY) %>%
   # keep unique subjects and visits per subject
@@ -124,9 +135,29 @@ qs3 <- qs2 %>%
 # NOTE: the QS2 dataset made above should be stacked below the qs dataset.
 # output qs_ophtha.RDS
 # remove the original vfq part from admiral_qs
-admiral_qs_novfq <- qs %>% filter(QSCAT != "NEI VFQ-25")
+admiral_qs_novfq <- raw_qs %>% filter(QSCAT != "NEI VFQ-25")
 
-qs_ophtha <- rbind(admiral_qs_novfq, qs3)
+qs_ophtha1 <- rbind(admiral_qs_novfq, qs3)
+
+# --SEQ and keep relevant variables;
+qs_ophtha2 <- qs_ophtha1 %>%
+  select(-QSSEQ) %>%
+  arrange(STUDYID, USUBJID, QSCAT, QSTESTCD, QSDTC, VISITNUM)
+
+qs_ophtha3 <- qs_ophtha2 %>%
+  group_by(STUDYID, USUBJID) %>%
+  mutate(QSSEQ = row_number()) %>%
+  select(
+    STUDYID, DOMAIN, USUBJID, QSSEQ, QSTESTCD, QSTEST, QSCAT, QSSCAT, QSORRES, QSORRESU, QSSTRESC, QSSTRESN, QSSTRESU,
+    QSBLFL, QSDRVFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY
+  ) %>%
+  ungroup()
+
+qs_ophtha <- qs_ophtha3
+
+# assign dataset label
+attr(qs_ophtha, "label") <- "Questionnaires"
 
 # ---- Save output for temporary usage ----
-save(qs_ophtha, file = file.path("data", "qs_ophtha.rda"), compress = "bzip2")
+# save(qs_ophtha, file = "data/qs_ophtha.rda", compress = "bzip2")
+usethis::use_data(qs_ophtha, overwrite = TRUE)

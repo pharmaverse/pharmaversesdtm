@@ -5,7 +5,7 @@
 \alias{ae}
 \title{Adverse Events Dataset-updated}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1191 rows and 36 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1191 rows and 35 columns.
 }
 \source{
 \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_ae.rda}
