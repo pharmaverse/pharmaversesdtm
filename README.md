@@ -37,7 +37,7 @@ Some of the test datasets has been sourced from the [CDISC pilot project](https:
 
 # How To Update
 
-Firstly, make a GitHub issue in this repo with the planned updates and tag `@pharmaverse/admiral` so that one of the development core team can sanity check the request. 
+Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmaverse/pharmaversesdtm) with the planned updates and tag `@pharmaverse/admiral` so that one of the development core team can sanity check the request. 
 Then there are two main ways to extend the test data: either by adding new datasets or extending existing datasets with new records/variables. Whichever method you choose, it is worth noting the following:
 
 * Programs that generate test data are stored in the `data-raw/` folder.
