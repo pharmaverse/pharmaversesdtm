@@ -2,7 +2,6 @@ library(haven) # Load xpt
 library(plyr)
 library(dplyr) # apply distincts
 library(lubridate)
-library(ggplot2)
 library(labelled)
 library(admiral)
 
@@ -151,11 +150,6 @@ pc <- pc %>%
     PCTPTNUM = "Planned Time Point Number"
   )
 
-
-# Some test to look the overall figure
-plot <- ggplot(pc, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
-  geom_line() +
-  geom_point()
 
 
 # ---- Save output ----

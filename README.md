@@ -42,7 +42,7 @@ Then there are two main ways to extend the test data: either by adding new datas
 
 * Programs that generate test data are stored in the `data-raw/` folder.
 * Each of these programs is written as a standalone R script: if any packages need to be loaded for a given program, then call `library()` at the start of the program (but please do **not** call `library(pharmaversesdtm)`).
-* Most of the packages that you are likely to need will already be specified in the `renv.lock` file, so they will already be installed if you have been keeping in sync--you can check this by entering `renv::status()` in the Console. However, you may also wish to install `{metatools}` and `{ggplot2}`, which are currently not specified in the `renv.lock` file. If you feel that you need to install any other packages in addition to those just mentioned, then please tag `@pharmaverse/admiral` to discuss with the development core team.
+* Most of the packages that you are likely to need will already be specified in the `renv.lock` file, so they will already be installed if you have been keeping in sync--you can check this by entering `renv::status()` in the Console. However, you may also wish to install `{metatools}`, which is currently not specified in the `renv.lock` file. If you feel that you need to install any other packages in addition to those just mentioned, then please tag `@pharmaverse/admiral` to discuss with the development core team.
 * When you have created a program in the `data-raw/` folder, you need to run it as a standalone R script, in order to generate a test dataset that will become part of the `{pharmaversesdtm}` package, but you do not need to build the package.
 * Following [best practice](https://r-pkgs.org/data.html#sec-data-data), each dataset is stored as a `.rda` file whose name is consistent with the name of the dataset, e.g., dataset `xx` is stored as `xx.rda`. The easiest way to achieve this is to use `usethis::use_data(xx)`
 * The programs in `data-raw/` are stored within the `{pharmaversesdtm}` GitHub repository, but they are **not** part of the `{pharmaversesdtm}` package--the `data-raw/` folder is specified in `.Rbuildignore`.
@@ -57,14 +57,14 @@ Then there are two main ways to extend the test data: either by adding new datas
 * Run the program.
 * Reflect this update, by specifying `<name>` in `R/data.R`.
 * Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
-* Add your GitHub handle to `.github/CODEOWNERS`
-* Update `NEWS.md`
+* Add your GitHub handle to `.github/CODEOWNERS`.
+* Update `NEWS.md`.
 
 ## Updating Existing SDTM Datasets
 
 * Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly. 
 * Run the program, and output updated `<name>.rda` to the `data/` folder.
 * Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
-* Add your GitHub handle to `.github/CODEOWNERS`
-* Update `NEWS.md`
+* Add your GitHub handle to `.github/CODEOWNERS`.
+* Update `NEWS.md`.
 
