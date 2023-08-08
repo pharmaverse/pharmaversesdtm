@@ -1,30 +1,35 @@
-library(haven) # Load xpt
-library(dplyr) # apply distincts
+# Dataset: PP
+# Description: Create PP test SDTM dataset
+
+# Load libraries ----
+library(haven)
+library(dplyr)
 library(lubridate)
 library(ggplot2)
 library(labelled)
 library(admiral)
 
+# Create pc ----
 data("pc")
 
-# Calculate subjects with all missing;
+## Calculate subjects with all missing ----
 blq_usubjid <- pc %>%
   ungroup() %>%
   group_by(STUDYID, DOMAIN, USUBJID) %>%
   summarise(PPORRES = max(PCSTRESN, na.rm = TRUE))
 
-# Remove from PC, subjects with all blq (placebos);
+## Remove from PC, subjects with all blq (placebos) ----
 remove_usubjid <- blq_usubjid %>% filter(PPORRES == 0)
 
 pc1 <- anti_join(pc, remove_usubjid, by = c("STUDYID", "DOMAIN", "USUBJID"))
 
 # PP usually only present values for applicable subjects;
-# Calculate Cmax;
+## Calculate Cmax ----
 pp_cmax <- pc1 %>%
   group_by(STUDYID, DOMAIN, USUBJID) %>%
   summarise(CMAX = max(PCSTRESN, na.rm = TRUE))
 
-# Calculate Tmax
+## Calculate Tmax ----
 pp_tmax <- pc1 %>%
   group_by(STUDYID, DOMAIN, USUBJID) %>%
   filter(PCSTRESN == max(PCSTRESN, na.rm = TRUE)) %>%
@@ -32,7 +37,7 @@ pp_tmax <- pc1 %>%
 pp_tmax$TMAX <- pp_tmax$PCTPTNUM
 pp_tmax <- subset(pp_tmax, select = c("STUDYID", "DOMAIN", "USUBJID", "TMAX"))
 
-# AUC 0_tlast
+## AUC 0_tlast ----
 pc2 <- pc1
 pc2$PCTPTNUM <- ifelse(pc1$PCTPTNUM == -0.5, 0, pc1$PCTPTNUM)
 pc2 <- pc2 %>%
@@ -61,7 +66,7 @@ pp_npts <- pc3 %>%
   group_by(STUDYID, DOMAIN, USUBJID) %>%
   summarise(npts = n())
 
-# Break up pc3 by usubjid, then fit the specified model to each piece and
+## Break up pc3 by usubjid, then fit the specified model to each piece ----
 # return a list
 models <- plyr::dlply(pc3, c("STUDYID", "DOMAIN", "USUBJID"), function(df) {
   lm(-log(PCSTRESN, base = exp(1)) ~ PCTPTNUM, data = df)
@@ -74,12 +79,12 @@ pp_Ke$Ke <- pp_Ke$PCTPTNUM
 pp_Ke <- subset(pp_Ke, select = c("STUDYID", "DOMAIN", "USUBJID", "Ke"))
 
 
-# Halflife
+## Halflife ----
 pp_lambda <- pp_Ke
 pp_lambda$lambda <- 0.693 / pp_lambda$Ke
 pp_lambda <- subset(pp_lambda, select = c("STUDYID", "DOMAIN", "USUBJID", "lambda"))
 
-# AUC_0_inf
+## AUC_0_inf ----
 pc4 <- pc3 %>%
   group_by(STUDYID, DOMAIN, USUBJID) %>%
   mutate(min = min(PCSTRESN, na.rm = TRUE))
@@ -94,8 +99,7 @@ pp_AUC_inf <- merge(pc5, pp_AUC, by = c("STUDYID", "DOMAIN", "USUBJID"))
 pp_AUC_inf$AUC_inf <- pp_AUC_inf$AUC + (pp_AUC_inf$min) / pp_AUC_inf$Ke
 pp_AUC_inf <- subset(pp_AUC_inf, select = c("STUDYID", "DOMAIN", "USUBJID", "AUC_inf"))
 
-# Add all require variables
-
+## Add all require variables -----
 pp_AUC$PPTESTCD <- "AUCLST"
 pp_AUC$PPTEST <- "AUC to Last Nonzero Conc"
 pp_AUC$PPORRESU <- "h*ug/ml"
@@ -137,7 +141,7 @@ pp_tmax$PPORRESU <- "h"
 pp_tmax$PPORRES <- pp_tmax$TMAX
 # R2ADJ	C85553	R Squared Adjusted
 
-# Join all data
+## Join all data ----
 PP <- bind_rows(pp_tmax, pp_npts, pp_lambda, pp_Ke, pp_cmax, pp_Clast, pp_AUC, pp_AUC_inf)
 
 # Constant variables
@@ -148,35 +152,36 @@ PP$PPSTRESU <- PP$PPORRESU
 PP$PPSPEC <- "PLASMA"
 PP$DOMAIN <- "PP"
 
-# Sort
+## Sort ----
 pp <- PP %>%
   arrange(STUDYID, USUBJID, PPTESTCD)
 
-# PPSEQ;
+## PPSEQ ----
 pp <- pp %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(PPSEQ = row_number())
 
-# Load ex to add the reference time (EXSTDTC)
+## Load ex to add the reference time (EXSTDTC) ----
 data("ex")
 
-# we only used baseline
+## Only use baseline ----
 ex1 <- ex %>%
   filter(VISIT == "BASELINE")
 
-# Select needed vars
+## Select needed exvars ----
 ex2 <- subset(ex1, select = c("STUDYID", "USUBJID", "EXSTDTC"))
 
-# merge
+## Merge pp and ex ----
 pp <- merge(pp, ex2, by = c("STUDYID", "USUBJID"))
 pp$PPRFDTC <- pp$EXSTDTC
 
+## Subset pp vars -----
 pp <- subset(pp, select = c(
   "STUDYID", "DOMAIN", "USUBJID", "PPSEQ", "PPTESTCD", "PPTEST", "PPCAT",
   "PPORRES", "PPORRESU", "PPSTRESC", "PPSTRESN", "PPSTRESU", "PPSPEC", "PPRFDTC"
 ))
 
-# add labels
+# Label pp ----
 pp <- pp %>%
   set_variable_labels(
     STUDYID = "Study Identifier",
@@ -195,7 +200,8 @@ pp <- pp %>%
     PPRFDTC = "Date/Time of Reference Point"
   )
 
+# Label dataset ----
+attr(pp, "label") <- "PK Parameters"
 
-
-# ---- Save output ----
-save(pp, file = "data/pp.rda", compress = "bzip2")
+# Save dataset ----
+usethis::use_data(pp, overwrite = TRUE)

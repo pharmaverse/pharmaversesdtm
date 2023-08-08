@@ -1,24 +1,29 @@
-# TR
+# Dataset: tr, supptr
+# Description: TR, SUPPTR test SDTM datasets for Oncology studies
 
+# Load libraries ----
 library(dplyr)
 library(tidyselect)
 library(metatools)
 library(admiral)
 library(metatools)
 
+# Create tr ----
+
+## Set seed to obtain reproducible results -----
 set.seed(1)
 
-# Reading input data ----
+## Read input data ----
 data("dm")
 data("suppdm")
 data("sv")
 
-# Converting blank to NA
+## Converting blank to NA ----
 dm <- convert_blanks_to_na(dm)
 suppdm <- convert_blanks_to_na(suppdm)
 sv <- convert_blanks_to_na(sv)
 
-# Creating data frame with visits ----
+## Create data frame with visits ----
 dm1 <- dm %>%
   combine_supp(suppdm)
 
@@ -30,7 +35,7 @@ tr1 <- select(sv, c(STUDYID, USUBJID, VISIT, VISITNUM, VISITDY, SVSTDTC)) %>%
 
 tr2 <- merge(dm2, tr1, by = c("STUDYID", "USUBJID"))
 
-# Creating dummy tumors ----
+## Create dummy tumors ----
 trloc <- c(
   "ABDOMINAL CAVITY", "ADRENAL GLAND", "LYMPH NODE", "BLADDER",
   "BODY", "BONE", "BREAST", "CHEST", "COLON",
@@ -44,13 +49,12 @@ trloc <- c(
 ttyped <- as.data.frame(trloc) %>% rename("TRLOC" = "trloc")
 ttyped$tar1 <- as.double(row.names(ttyped))
 
-# Adding records for TARGET, NON-TARGET and NEW LESIONS and
-# Selecting Tumor Locations Randomly
+## Add records for TARGET, NON-TARGET and NEW LESIONS and Select Tumor Locations Randomly ----
 nrows <- dim(tr2)[1]
 tar <- floor(runif(n = nrows, min = 1, max = 5))
 new <- floor(runif(n = nrows, min = 21, max = 22))
 
-# Target Tumors
+## Target Tumors ----
 tr3a <- bind_rows(
   (tr2 %>% mutate("tar1" = tar, "TRLNKID" = "T01")),
   (tr2 %>% mutate("tar1" = tar + 1, "TRLNKID" = "T02")),
@@ -95,7 +99,7 @@ tr3c <- bind_rows(
 tr3 <- bind_rows(tr3a, tr3b, tr3c) %>%
   left_join(ttyped, by = "tar1")
 
-# Adding Diameter Values Randomly ----
+## Adding Diameter Values Randomly ----
 trows <- dim(tr3)[1]
 diam <- floor((runif(n = trows, min = 5, max = 15)))
 
@@ -105,7 +109,7 @@ tr3 <- tr3 %>%
     SUBJNO = as.numeric(substr(USUBJID, 8, 12))
   )
 
-# Modifying Diameter Values To Get Some CR And NE In Target Response Data
+## Modifying Diameter Values To Get Some CR And NE In Target Response Data ----
 tr3 <- tr3 %>% mutate(
   "TRSTRESN" = case_when(
     floor(SUBJNO %% 5) == 0 & VISITNUM %in% c(9, 10.1) ~ 0,
@@ -127,7 +131,7 @@ tr3 <- tr3 %>% mutate(
   "TRTEST" = "Diameter"
 )
 
-# Adding LDIAM and LPERP ----
+## Adding LDIAM and LPERP ----
 tr3ldiam <- tr3 %>% mutate(
   TRSTRESN = if_else(
     TRLOC == "LYMPH NODE",
@@ -152,7 +156,7 @@ tr3lperp <- tr3 %>% mutate(
   TRTEST = "Longest Perpendicular"
 )
 
-# SUMDIAM ----
+## SUMDIAM ----
 tr3sum <- tr3 %>%
   group_by(
     STUDYID, USUBJID, VISITNUM, VISIT, TREVAL,
@@ -167,8 +171,7 @@ tr3sum <- tr3 %>%
     "TRSTRESC" = TRORRES
   )
 
-# Non-target Tumors ----
-
+## Non-target Tumors ----
 ntar <- floor(runif(n = nrows, min = 11, max = 15))
 ntr3a <- bind_rows(
   (tr2 %>% mutate("tar1" = ntar, "TRLNKID" = "NT01")),
@@ -207,7 +210,7 @@ ntr3c <- bind_rows(
 
 ntr3 <- bind_rows(ntr3a, ntr3b, ntr3c)
 
-# Adding Non Target Result Values Randomly
+## Adding Non Target Result Values Randomly ----
 ntrorresf <- c("NOT", "UNEQUIVOCAL", "ABSENT", "PRESENT")
 
 ntrespd <- tibble::tibble(ntrorresf)
@@ -231,14 +234,14 @@ ntr3 <- merge(ntr3, ntrespd, by = "ntresn") %>%
     "SUBJNO" = as.numeric(substr(USUBJID, 8, 12))
   )
 
-# Modifying Non-target Values To Get Some CR In Data
+## Modifying Non-target Values To Get Some CR In Data ----
 ntr3 <- ntr3 %>% mutate(
   "TRORRES" = ifelse(floor(SUBJNO %% 5) == 0 &
     VISITNUM %in% c(9, 10.1), "ABSENT", TRORRES),
   "TRSTRESC" = TRORRES
 )
 
-# New Lesions - assigning new lesions only on last visit
+## New Lesions - assigning new lesions only on last visit ----
 new <- floor(runif(n = nrows, min = 21, max = 22))
 new3a <- tr2 %>% mutate(
   "tar1" = new,
@@ -279,7 +282,7 @@ new3 <- bind_rows(new3a, new3b, new3c) %>%
   ) %>%
   filter(VISITNUM > 3 & (TRORRES != "NO"))
 
-# Setting All Tumor Data ----
+## Setting All Tumor Data ----
 tr <- bind_rows(
   tr3 %>% filter(EFFICACY == "Y" | (SAFETY == "Y" & VISITNUM == 3)),
   tr3ldiam %>% filter(EFFICACY == "Y" | (SAFETY == "Y" & VISITNUM == 3)),
@@ -296,7 +299,7 @@ tr <- bind_rows(
     VISITNUM == 12 ~ "A4"
   ))
 
-# TRSEQ and Other Variables ----
+## TRSEQ and Other Variables ----
 tr <- tr %>%
   arrange(STUDYID, USUBJID, VISITNUM, TRDTC, TRGRPID, TRLNKID) %>%
   group_by(STUDYID, USUBJID) %>%
@@ -356,7 +359,7 @@ supptr_onco <- supptr %>% add_labels(
 
 attr(supptr_onco, "label") <- "Supplemental Tumor Results"
 
-# Creating TR ----
+# Create final TR dataset ----
 tr <- select(tr, c(
   STUDYID, DOMAIN, USUBJID, TRSEQ, TRGRPID, TRLNKGRP,
   TRLNKID, TRTESTCD, TRTEST, TRORRES, TRORRESU, TRSTRESC,
@@ -391,8 +394,9 @@ tr_onco <- tr %>% add_labels(
   TRDY = "Study Day of Tumor Measurement"
 )
 
+# Label TR dataset ----
 attr(tr_onco, "label") <- "Tumor Results"
 
-
-save(tr_onco, file = "data/tr_onco.rda", compress = "bzip2")
-save(supptr_onco, file = "data/supptr_onco.rda", compress = "bzip2")
+# Save datasets ----
+usethis::use_data(tr_onco, overwrite = TRUE)
+usethis::use_data(supptr_onco, overwrite = TRUE)

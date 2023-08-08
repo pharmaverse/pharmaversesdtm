@@ -1,24 +1,26 @@
-# SC (ophthalmology)
+# Dataset: sc
+# Description: Create SC test SDTM dataset for ophthalmology studies
 
+# Load libraries -----
 library(dplyr)
 library(metatools)
 
+# Create sc ----
+## Load required datasets ----
 data("dm")
 data("sv")
 
-
-# Remove screen failures, they will not make it to drug infusion
+## Remove screen failures, they will not make it to drug infusion ---
 dm1 <- dm %>%
   filter(ARMCD != "Scrnfail")
 
-
-# Use subjects in DM  and info from SV  Screening 1 visit
+## Use subjects in DM  and info from SV Screening 1 visit ---
 sc <- merge(dm1[, c("STUDYID", "USUBJID", "SUBJID", "RFSTDTC")],
   sv[sv$VISIT == "SCREENING 1", c("STUDYID", "USUBJID", "SVSTDTC", "VISIT")],
   by = c("STUDYID", "USUBJID")
 )
 
-# Create SC domain var
+## Create SC domain vars ----
 sc$DOMAIN <- "SC"
 sc$SCCAT <- "STUDY EYE SELECTION"
 sc$SCTESTCD <- "FOCID"
@@ -30,8 +32,7 @@ sc$SCDY <- as.numeric(as.Date(sc$SCDTC) - as.Date(sc$RFSTDTC))
 sc$SCORRES <- if_else(as.integer(sc$SUBJID) %% 2 == 0, "Left Eye", "Right Eye")
 sc$SCSTRESC <- if_else(as.integer(sc$SUBJID) %% 2 == 0, "OS", "OD")
 
-
-# SCSEQ and keep relevant variables;
+## Create SCSEQ and keep relevant variables ----
 sc_seq <- sc %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(SCSEQ = row_number()) %>%
@@ -40,6 +41,7 @@ sc_seq <- sc %>%
     "SCCAT", "SCORRES", "SCSTRESC", "EPOCH", "SCDTC", "SCDY"
   )
 
+## Sort and variable labels -----
 sc_ophtha <- sc_seq %>%
   ungroup() %>%
   # Sort data
@@ -60,9 +62,8 @@ sc_ophtha <- sc_seq %>%
     SCDY = "Study Day of Examination"
   )
 
-
-# assign dataset label
+# Dataset label ----
 attr(sc_ophtha, "label") <- "Subject Characteristic"
 
-# Save output
-save(sc_ophtha, file = "data/sc_ophtha.rda", compress = "bzip2")
+# Save dataset
+usethis::use_data(sc_ophtha, overwrite = TRUE)

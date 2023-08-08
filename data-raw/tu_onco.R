@@ -1,12 +1,17 @@
-# TU
-# Please note that tr.R should run first
+# Dataset: tu
+# Description: TU test SDTM dataset for Oncology studies
 
+# Please note that tr_onco.R should run first
+
+# Load libraries ----
 library(dplyr)
 library(tidyselect)
 library(admiral)
 library(metatools)
 
-# Reading input data  --  DUMMY DATA CREATED FROM TR data created from TR
+
+# Create tu ----
+## Read input data  --  DUMMY DATA CREATED FROM TR data created from TR ----
 data("tr_onco")
 data("supptr_onco")
 
@@ -19,7 +24,7 @@ supptr1 <- supptr %>%
 
 tr <- full_join(tr, supptr1, by = c("STUDYID", "USUBJID", "TRSEQ"))
 
-# Renaming And Adding TU Variables
+## Rename And Add TU Variables ----
 tu1 <- tr %>%
   filter((VISITNUM == 3 | (TRGRPID == "NEW" &
     !is.na(TRORRES) & TRORRES != "NO"))) %>%
@@ -43,14 +48,14 @@ tu1 <- tr %>%
     TUSTRESC = TUORRES
   )
 
-# TUSEQ
+## TUSEQ ----
 tu2 <- tu1 %>%
   arrange(STUDYID, USUBJID, VISITNUM, TUDTC, TULNKID) %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(TUSEQ = row_number()) %>%
   ungroup()
 
-# Creating TU
+## Create TU ----
 tu <- select(tu2, c(
   STUDYID, DOMAIN, USUBJID, TUSEQ, TULNKID,
   TUTESTCD, TUTEST, TUORRES, TUSTRESC, TULOC,
@@ -79,6 +84,8 @@ tu_onco <- tu %>% add_labels(
   TUDY = "Study Day of Tumor Identification"
 )
 
+# Label dataset ----
 attr(tu_onco, "label") <- "Tumor Identification"
 
-save(tu_onco, file = "data/tu_onco.rda", compress = "bzip2")
+# Save dataset ----
+usethis::use_data(tu_onco, overwrite = TRUE)

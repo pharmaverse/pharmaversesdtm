@@ -1,21 +1,23 @@
+# Dataset: qs
+# Description: Create QS test SDTM dataset with VFQ records for ophthalmology studies
+
+# Load libraries -----
 library(dplyr)
 library(stringr)
 library(metatools)
 library(haven)
 library(admiral)
 
-
-# from CDISC pilot study ----
+# Create qs_ophtha ----
+## Get qs from CDISC pilot study ----
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
 raw_qs <- read_xpt(paste0(sdtm_path, "qs", ".xpt?raw=true")) %>%
   convert_blanks_to_na()
 
-
-# set seed to get same results each run
+## set seed to get same results each run ----
 set.seed(999)
 
-# add vfq data
-# create new QS data - keep standard variables from previous ADMIRAL project's QS ====
+## add VFQ data ----
 qs1 <- raw_qs %>%
   # select standard variables
   select(STUDYID, DOMAIN, USUBJID, QSBLFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY) %>%
@@ -23,7 +25,7 @@ qs1 <- raw_qs %>%
   group_by(USUBJID, VISITDY) %>%
   unique()
 
-# create dummy parameters and results ====
+#### create dummy parameters and results ----
 dummy_param <- data.frame(QSTEST = c(
   "Your Overall Health Is",
   "Eyesight Using Both Eyes Is",
@@ -61,7 +63,7 @@ dummy_param <- data.frame(QSTEST = c(
     QSSCAT = "Original Response"
   )
 
-# dummy answers
+### dummy answers ----
 
 # difficulty in performing tasks
 difficulty_res <- c(
@@ -90,7 +92,7 @@ yesno <- setNames(yn_res, yn_resn)
 answers <- c(difficulty_res, freq_res, qual_res, yn_res)
 answersn <- c(difficulty_resn, freq_resn, qual_resn, yn_resn)
 
-# assign answers to questions randomly for each subjects
+### assign answers to questions randomly for each subjects ----
 
 # take unique subjects
 subjects <- qs1 %>%
@@ -114,7 +116,7 @@ dummy_param_res_by_subj <- merge(subjects, dummy_param) %>%
     QSDRVFL = ""
   )
 
-# merge standard QS with parameters and result variables from temp QS data
+### Merge standard QS with parameters and result variables from ophtha QS data ----
 
 qs2 <- merge(qs1, dummy_param_res_by_subj, by = "USUBJID") %>%
   group_by(USUBJID) %>%
@@ -132,14 +134,12 @@ qs3 <- qs2 %>%
   ) %>%
   ungroup()
 
-# NOTE: the QS2 dataset made above should be stacked below the qs dataset.
-# output qs_ophtha.RDS
-# remove the original vfq part from admiral_qs
-admiral_qs_novfq <- raw_qs %>% filter(QSCAT != "NEI VFQ-25")
+## Keep only VFQ records ----
+qs_novfq <- raw_qs %>% filter(QSCAT != "NEI VFQ-25")
 
-qs_ophtha1 <- rbind(admiral_qs_novfq, qs3)
+qs_ophtha1 <- rbind(qs_novfq, qs3)
 
-# --SEQ and keep relevant variables;
+## xxSEQ and keep relevant variables ----
 qs_ophtha2 <- qs_ophtha1 %>%
   select(-QSSEQ) %>%
   arrange(STUDYID, USUBJID, QSCAT, QSTESTCD, QSDTC, VISITNUM)
@@ -155,9 +155,8 @@ qs_ophtha3 <- qs_ophtha2 %>%
 
 qs_ophtha <- qs_ophtha3
 
-# assign dataset label
+# Assign dataset label ----
 attr(qs_ophtha, "label") <- "Questionnaires"
 
-# ---- Save output for temporary usage ----
-# save(qs_ophtha, file = "data/qs_ophtha.rda", compress = "bzip2")
+# Save dataset ----
 usethis::use_data(qs_ophtha, overwrite = TRUE)
