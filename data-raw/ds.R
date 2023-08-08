@@ -85,7 +85,7 @@ suppds2 <- rename(suppds1, "RDOMAIN" = "DOMAIN") %>%
   select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG)
 
 ## Adding labels ----
-  suppds3 <- suppds2 %>%
+suppds3 <- suppds2 %>%
   add_labels(
     STUDYID = "Study Identifier",
     RDOMAIN = "Related Domain Abbreviation",

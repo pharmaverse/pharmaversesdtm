@@ -42,4 +42,3 @@ attr(ex_ophtha, "label") <- "Exposure"
 
 # Save dataset ----
 usethis::use_data(ex_ophtha, overwrite = TRUE)
-

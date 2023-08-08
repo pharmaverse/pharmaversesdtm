@@ -220,4 +220,3 @@ attr(rs_onco, "label") <- "Disease Response"
 
 # Save dataset ----
 usethis::use_data(rs_onco, overwrite = TRUE)
-
