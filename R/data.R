@@ -93,13 +93,6 @@
 #' @author Antonio Rodríguez Contestí
 "pp"
 
-#' Questionnaire Dataset
-#'
-#' A SDTM QS dataset from the CDISC pilot project & Ophthalmology test data
-#'
-#' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_qs.rda} # nolint
-"qs"
-
 #' Ophthalmology Questionnaire Dataset
 #'
 #' An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25

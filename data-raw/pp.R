@@ -1,7 +1,6 @@
 library(haven) # Load xpt
 library(dplyr) # apply distincts
 library(lubridate)
-library(ggplot2)
 library(labelled)
 library(admiral)
 
