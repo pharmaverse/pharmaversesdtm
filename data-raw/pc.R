@@ -164,7 +164,7 @@ plot <- ggplot(pc, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
   geom_point()
 
 # Label dataset ----
-attr(pc, "label") <- "PK Concentrations"
+attr(pc, "label") <- "Pharmacokinetics Concentrations"
 
 # Save dataset ----
 usethis::use_data(pc, overwrite = TRUE)
