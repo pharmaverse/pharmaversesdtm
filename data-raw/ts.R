@@ -8,7 +8,7 @@ raw_ts <- read_xpt("https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/ma
 ts <- convert_blanks_to_na(raw_ts)
 
 # Label dataset ----
-attr(ts, "label") <- "Trial Summary"
+attr(ts, "label") <- "Trial Summary Information"
 
 # Save dataset -----
 usethis::use_data(ts, overwrite = TRUE)
