@@ -23,11 +23,11 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Gayatri G
   \item Kangjie Zhang
+  \item Pooja Kumari
   \item Stefan Bundfuss
   \item Zelos Zhu
-  \item Gayatri G
-  \item Pooja Kumari
 }
 
 }
