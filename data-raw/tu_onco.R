@@ -85,7 +85,7 @@ tu_onco <- tu %>% add_labels(
 )
 
 # Label dataset ----
-attr(tu_onco, "label") <- "Tumor Identification"
+attr(tu_onco, "label") <- "Tumor/Lesion Identification"
 
 # Save dataset ----
 usethis::use_data(tu_onco, overwrite = TRUE)
