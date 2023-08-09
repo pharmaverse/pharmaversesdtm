@@ -14,7 +14,7 @@ suppdm <- convert_blanks_to_na(raw_suppdm)
 
 # Label dataset ----
 attr(dm, "label") <- "Demographics"
-attr(suppdm, "label") <- "Supplemental Demographics"
+attr(suppdm, "label") <- "Supplemental Qualifiers for DM"
 
 # Save datasets ----
 usethis::use_data(dm, overwrite = TRUE)
