@@ -15,7 +15,7 @@ suppae <- convert_blanks_to_na(raw_suppae)
 
 # Label dataset ----
 attr(ae, "label") <- "Adverse Events"
-attr(suppae, "label") <- "Supplemental Adverse Events"
+attr(suppae, "label") <- "Supplemental Qualifiers for AE"
 
 # Save datasets ----
 usethis::use_data(ae, overwrite = TRUE)
