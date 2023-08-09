@@ -201,7 +201,7 @@ pp <- pp %>%
   )
 
 # Label dataset ----
-attr(pp, "label") <- "PK Parameters"
+attr(pp, "label") <- "Pharmacokinetics Parameters"
 
 # Save dataset ----
 usethis::use_data(pp, overwrite = TRUE)
