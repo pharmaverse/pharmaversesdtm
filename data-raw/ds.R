@@ -99,7 +99,7 @@ suppds3 <- suppds2 %>%
   )
 
 ## Label dataset ----
-attr(suppds3, "label") <- "Supplemental Disposition"
+attr(suppds3, "label") <- "Supplemental Qualifiers for DS"
 
 suppds <- suppds3
 
