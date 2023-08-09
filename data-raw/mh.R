@@ -1,24 +1,31 @@
-# Add new variables to MH
+# Dataset: mh
+# Description: Standard MH dataset from CDISC pilot study with variables MENDTC, MHPRESP, MHOCCUR etc
+
+# Load libraries -----
 library(metatools)
 library(lubridate)
 library(haven)
 library(admiral)
 library(dplyr)
 
-data("dm")
+# CReate mh ----
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
 raw_mh <- read_xpt(paste0(sdtm_path, "mh", ".xpt?raw=true"))
 
-# Convert blank to NA
+## Get dm ----
+data("dm")
+
+## Convert blank to NA ----
 dm <- convert_blanks_to_na(dm) %>%
   select(STUDYID, USUBJID, RFSTDTC, RFENDTC, RFXSTDTC, RFXENDTC)
-mh <- convert_blanks_to_na(raw_mh)
-# Set seed so that result stays the same for each run
+mh_orig <- convert_blanks_to_na(raw_mh)
+
+## Set seed so that result stays the same for each run ----
 set.seed(1)
 ran_int <- sample.int(400, nrow(raw_mh), replace = TRUE)
 
-
-admiral_mh <- mh %>%
+## Add new variables ----
+mh1 <- mh_orig %>%
   # Add MHENDTC
   mutate(MHENDTC = as.character(as.Date(MHSTDTC) + days(ran_int))) %>%
   # Add MHPRESP
@@ -72,6 +79,9 @@ admiral_mh <- mh %>%
     MHSTAT = "Completion Status"
   )
 
-attr(admiral_mh, "label") <- "Medical History"
-mh <- admiral_mh
-save(mh, file = "data/mh.rda", compress = "bzip2")
+# Label dataset ----
+attr(mh1, "label") <- "Medical History"
+mh <- mh1
+
+# Save dataset ----
+usethis::use_data(mh, overwrite = TRUE)

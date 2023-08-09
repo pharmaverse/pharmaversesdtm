@@ -1,19 +1,21 @@
-# Update LB by adding percentage differential lab test rows
+# Dataset: lb
+# Description: Standard LB dataset from CDISC pilot study with added percentage differential lab test rows
 
+# Load libraries -----
 library(dplyr)
 library(haven)
 library(admiral)
 
+# Create LB ----
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
 raw_lb <- read_xpt(paste0(sdtm_path, "lb", ".xpt?raw=true"))
-lb <- raw_lb %>% convert_blanks_to_na()
+lb_orig <- raw_lb %>% convert_blanks_to_na()
 
-
-# Subset on differential lab tests
-lb_diff_abs <- lb %>%
+## Subset on differential lab tests ----
+lb_diff_abs <- lb_orig %>%
   filter(LBTESTCD %in% c("BASO", "EOS", "LYM", "MONO", "NEUT"))
 
-# Subset on a few patients and visits
+## Subset on a few patients and visits ----
 subject_sub <- lb_diff_abs %>%
   distinct(USUBJID) %>%
   head()
@@ -24,7 +26,7 @@ lb_sub <- lb_diff_abs %>%
     VISIT %in% c("SCREENING 1", "WEEK 2")
   )
 
-# Create dummy differential lab tests
+## Create dummy differential lab tests ----
 set.seed(1)
 rand_diff <- sample(seq(0, 0.5, by = 0.05), replace = T, nrow(lb_sub))
 
@@ -73,12 +75,13 @@ lb_diff <- lb_sub %>%
   )
 
 
-# Replace original rows with new records
-admiral_lb <- lb %>%
+## Replace original rows with new records ----
+lb <- lb_orig %>%
   anti_join(lb_diff, by = c("USUBJID", "VISIT", "LBSEQ")) %>%
   rbind(lb_diff)
 
-attr(admiral_lb, "label") <- "Laboratory Test Results"
+# Label dataset ----
+attr(lb, "label") <- "Laboratory Test Results"
 
-lb <- admiral_lb
-save(lb, file = "data/lb.rda", compress = "bzip2")
+# Save dataset ----
+usethis::use_data(lb, overwrite = TRUE)

@@ -1,5 +1,10 @@
+# Dataset: sdg_db, smq_db
+# Description: Create example SDG, SMQ dataset
+
+# Load libraries ----
 library(dplyr)
 
+# Create smq dataset ----
 pregsmq <- tribble(
   ~termname, ~scope,
   "Achromotrichia congenital", "narrow",
@@ -65,9 +70,13 @@ smq_db <- bind_rows(pregsmq, bilismq) %>%
     termvar = "AEDECOD"
   )
 
-# admiral_smq_db <- smq_db
-save(smq_db, file = "data/smq_db.rda", compress = "bzip2")
+# Label dataset ----
+attr(smq_db, "label") <- "SMQ"
 
+# Save smq dataset ----
+usethis::use_data(smq_db, overwrite = TRUE)
+
+# Create sdg dataset ----
 sdg_db <- tribble(
   ~termname,
   "AMINOSALICYLIC ACID",
@@ -94,4 +103,8 @@ sdg_db <- tribble(
     version = "2019-09"
   )
 
-save(sdg_db, file = "data/sdg_db.rda", compress = "bzip2")
+# Label dataset ----
+attr(sdg_db, "label") <- "SDG"
+
+# Save sdg dataset ----
+usethis::use_data(sdg_db, overwrite = TRUE)
