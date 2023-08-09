@@ -1,12 +1,15 @@
 ---
 current_repo:
-  repo: pharmaverse/admiraltemplate
+  repo: pharmaverse/pharmaversesdtm
   host: https://github.com
 upstream_repos:
+downstream_repos:
   - repo: pharmaverse/admiral
     host: https://github.com
-  - repo: pharmaverse/admiral.test
+  - repo: pharmaverse/admiralonco
     host: https://github.com
-  - repo: pharmaverse/admiraldev
+  - repo: pharmaverse/admiralvaccine
     host: https://github.com
-downstream_repos:
+  - repo: pharmaverse/admiralophtha
+    host: https://github.com
+

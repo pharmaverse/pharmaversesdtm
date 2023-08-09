@@ -5,7 +5,6 @@
 library(haven)
 library(dplyr)
 library(lubridate)
-library(ggplot2)
 library(labelled)
 library(admiral)
 
