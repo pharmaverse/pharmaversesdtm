@@ -216,7 +216,7 @@ rs_onco <- rs %>% add_labels(
 )
 
 # Label dataset ----
-attr(rs_onco, "label") <- "Disease Response"
+attr(rs_onco, "label") <- "Disease Response and Clin Classification"
 
 # Save dataset ----
 usethis::use_data(rs_onco, overwrite = TRUE)
