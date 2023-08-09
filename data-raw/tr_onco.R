@@ -357,7 +357,7 @@ supptr_onco <- supptr %>% add_labels(
   QORIG = "Origin"
 )
 
-attr(supptr_onco, "label") <- "Supplemental Tumor Results"
+attr(supptr_onco, "label") <- "Supplemental Qualifiers for TR"
 
 # Create final TR dataset ----
 tr <- select(tr, c(
