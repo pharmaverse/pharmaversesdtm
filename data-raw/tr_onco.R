@@ -395,7 +395,7 @@ tr_onco <- tr %>% add_labels(
 )
 
 # Label TR dataset ----
-attr(tr_onco, "label") <- "Tumor Results"
+attr(tr_onco, "label") <- "Tumor/Lesion Results"
 
 # Save datasets ----
 usethis::use_data(tr_onco, overwrite = TRUE)
