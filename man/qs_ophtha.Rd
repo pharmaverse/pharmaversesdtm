@@ -5,7 +5,7 @@
 \alias{qs_ophtha}
 \title{Ophthalmology Questionnaire Dataset}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 197671 rows and 20 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 75922 rows and 20 columns.
 }
 \source{
 Constructed using `qs` from the `{pharmaversesdtm}` package # nolint
