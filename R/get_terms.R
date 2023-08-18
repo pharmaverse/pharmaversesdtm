@@ -13,18 +13,18 @@ get_terms <- function(basket_select,
                       keep_id,
                       temp_env) {
   if (basket_select$type == "smq") {
-    if (is.null(temp_env$admiral_smq_db)) {
-      data("admiral_smq_db", envir = temp_env)
+    if (is.null(temp_env$smq_db)) {
+      data("smq_db", envir = temp_env)
     }
     if (!is.null(basket_select$name)) {
-      is_in_smq <- temp_env$admiral_smq_db$smq_name == basket_select$name
+      is_in_smq <- temp_env$smq_db$smq_name == basket_select$name
     } else {
-      is_in_smq <- temp_env$admiral_smq_db$smq_id == basket_select$id
+      is_in_smq <- temp_env$smq_db$smq_id == basket_select$id
     }
     if (basket_select$scope == "NARROW") {
-      is_in_scope <- temp_env$admiral_smq_db$scope == "narrow"
+      is_in_scope <- temp_env$smq_db$scope == "narrow"
     } else {
-      is_in_scope <- rep(TRUE, nrow(temp_env$admiral_smq_db))
+      is_in_scope <- rep(TRUE, nrow(temp_env$smq_db))
     }
     if (keep_id) {
       select_id <- c(GRPID = "smq_id")
@@ -39,17 +39,17 @@ get_terms <- function(basket_select,
     )
 
     structure(
-      temp_env$admiral_smq_db[is_in_smq & is_in_scope, keep_cols],
+      temp_env$smq_db[is_in_smq & is_in_scope, keep_cols],
       names = names(keep_cols)
     )
   } else if (basket_select$type == "sdg") {
-    if (is.null(temp_env$admiral_sdg_db)) {
-      data("admiral_sdg_db", envir = temp_env)
+    if (is.null(temp_env$sdg_db)) {
+      data("sdg_db", envir = temp_env)
     }
     if (!is.null(basket_select$name)) {
-      is_in_sdq <- temp_env$admiral_sdg_db$sdg_name == basket_select$name
+      is_in_sdq <- temp_env$sdg_db$sdg_name == basket_select$name
     } else {
-      is_in_sdq <- temp_env$admiral_sdg_db$sdg_id == basket_select$id
+      is_in_sdq <- temp_env$sdg_db$sdg_id == basket_select$id
     }
     if (keep_id) {
       select_id <- c(GRPID = "sdg_id")
@@ -64,7 +64,7 @@ get_terms <- function(basket_select,
     )
 
     structure(
-      temp_env$admiral_sdg_db[is_in_sdq, keep_cols],
+      temp_env$sdg_db[is_in_sdq, keep_cols],
       names = names(keep_cols)
     )
   }
