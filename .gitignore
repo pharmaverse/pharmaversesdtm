@@ -20,6 +20,9 @@
 # RStudio files
 .Rproj.user/
 
+# helper files for interchange data between scripts
+data-raw/tu_help_data.rds
+
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf

@@ -1,9 +1,13 @@
 
 library(tibble)
 library(dplyr)
+library(lubridate)
+library(admiraldev)
+library(admiral)
 
+# create tumor results to be used for RS
 tr <- tribble(
-  ~USUBJID, ~TRLINKID, ~TRTESTCD,  ~TRORRES,  ~VISITNUM,
+  ~SUBJNR,  ~TRLINKID, ~TRTESTCD,  ~TRORRES,  ~VISITNUM,
   # BOR = CR, CBOR = SD
   "1",      "T01",     "LDIAM",    "21",              1,
   "1",      "T02",     "LPERP",    "32",              1,
@@ -108,10 +112,114 @@ tr <- tribble(
   "7",      "T01",     "LDIAM",    "42",              4,
   "7",      "T02",     "LDIAM",    "39",              4,
   "7",      "T03",     "LPERP",    "43",              4
+) %>%
+  mutate(
+    basicfl = "Y"
+  )
+
+# complete TRTESTCDs such that LDIAM and LPERP are present for all tumors
+suppress_warning(
+  tr_compl <- tr %>%
+  mutate(
+    diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 11,
+    TRORRES = case_match(
+      TRTESTCD,
+      "LDIAM" ~ as.character(as.numeric(TRORRES) * (1 - diff_percent / 100)),
+      "LPERP" ~ as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
+      .default = TRORRES
+    ),
+    TRTESTCD = case_match(
+      TRTESTCD,
+      "LDIAM" ~ "LPERP",
+      "LPERP" ~ "LDIAM",
+      .default = TRTESTCD
+    )
+  ) %>%
+    select(-basicfl),
+regexpr = "NAs introduced by coercion"
 )
 
-tr_onco_recist <- tr %>%
+tr <- bind_rows(tr, tr_compl)
+
+# add results for radiologist 1
+suppress_warning(
+tr_radio1 <- tr %>%
   mutate(
+    diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 7 - 3,
+    TRORRES = if_else(
+      TRTESTCD %in% c("LDIAM", "LPERP"),
+      as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
+      TRORRES
+    ),
+    TREVALID = "RADIOLOGIST 1"
+  ),
+  regexpr = "NAs introduced by coercion"
+)
+
+# add results for radiologist 2
+suppress_warning(
+tr_radio2 <- tr %>%
+  mutate(
+    diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM + 3) %% 7 - 3,
+    TRORRES = if_else(
+      TRTESTCD %in% c("LDIAM", "LPERP"),
+      as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
+      TRORRES
+    ),
+    TREVALID = "RADIOLOGIST 2"
+  ),
+regexpr = "NAs introduced by coercion"
+)
+
+tr <- bind_rows(tr, tr_radio1, tr_radio2) %>%
+  select(-diff_percent) %>%
+  mutate(
+    TREVAL = if_else(is.na(TREVALID), "INVESTIGATOR", "INDEPENDENT ASSESSOR"),
+    .before = TREVALID,
+  ) %>%
+mutate(
+  best_assessor = (as.numeric(SUBJNR) + VISITNUM) %% 2 + 1,
+  TRACPTFL = if_else(
+    TREVALID == paste("RADIOLOGIST", best_assessor),
+    "Y",
+    NA_character_),
+  .after = TREVALID
+) %>%
+  select(-best_assessor)
+
+# add date (TRDTC)
+data("dm")
+tr <- tr %>%
+  mutate(
+    USUBJID = case_match(
+      SUBJNR,
+      "1" ~ "01-701-1015",
+      "2" ~ "01-701-1028",
+      "3" ~ "01-701-1034",
+      "4" ~ "01-701-1097",
+      "5" ~ "01-701-1115",
+      "6" ~ "01-701-1118",
+      "7" ~ "01-701-1130"
+    ),
+    .before = SUBJNR
+  ) %>%
+derive_vars_merged(
+  dataset_add = dm,
+  by_vars = exprs(USUBJID),
+  new_vars = exprs(RFSTDT = convert_dtc_to_dt(RFSTDTC))
+) %>%
+  mutate(
+    TRDTC = format_ISO8601(RFSTDT + 21 * (VISITNUM - 1)),
+    TRDTC = if_else(
+      SUBJNR == "1" & VISITNUM == 3,
+      substr(TRDTC, 1, 7),
+      TRDTC
+    )
+  )
+suppress_warning(
+tr <- tr %>%
+  mutate(
+    DOMAIN = "TR",
     STUDYID = "CDISCPILOT01",
     .before = USUBJID
   ) %>%
@@ -132,7 +240,8 @@ tr_onco_recist <- tr %>%
       3 ~ "WEEK 6",
       4 ~ "WEEK 9",
       5 ~ "WEEK 12"
-    )
+    ),
+    .after = VISITNUM
   ) %>%
   mutate(
     TRORRESU = if_else(TRTESTCD %in% c("LDIAM", "LPERP"), "mm", NA_character_),
@@ -140,6 +249,18 @@ tr_onco_recist <- tr %>%
     TRSTRESN = as.double(TRSTRESC),
     TRSTRESU = TRORRESU,
     .after = TRORRES
-  )
+  ),
+regexpr = "NAs introduced by coercion"
+)
+
+# store basic tumor results for creation of TU
+# (LPERP -> TULOC = "LYMPH NODE", LDIAM -> something else)
+
+tr_screen <- tr %>%
+  filter(VISITNUM == 1 & basicfl == "Y") %>%
+  select(STUDYID, USUBJID, SUBJNR, TRLINKID, TRTESTCD, VISIT, VISITNUM, TREVAL, TREVALID, TRACPTFL)
+saveRDS(tr_screen, file = "data-raw/tu_help_data.rds")
+
+tr_onco_recist <- select(tr, -SUBJNR, -basicfl)
 
 usethis::use_data(tr_onco_recist, overwrite = TRUE)
