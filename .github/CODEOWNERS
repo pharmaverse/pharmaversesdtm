@@ -3,10 +3,7 @@
 # that modifies code that they own.
 
 # admiral.test
-data-raw/ds.R @Gopi2345
-data-raw/lb.R @yangc71
-data-raw/mh.R @yangc71
-data-raw/pc.R @toni-1991 @RealSlimMahdi
+data-raw/pc.R @toni-1991
 data-raw/pp.R @toni-1991
 data-raw/query_databases.R @bundfussr
 
