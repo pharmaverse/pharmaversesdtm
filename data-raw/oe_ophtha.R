@@ -1,19 +1,23 @@
-# OE
+# Dataset: oe
+# Description: Create OE test SDTM dataset for ophthalmology studies
 
+# Load libraries -----
 library(dplyr)
 library(metatools)
 library(tidyselect)
 library(admiral)
 
-# Read in data
+# Create OE ----
+
+## Read in data ----
 data("dm")
 data("sv")
 
-# Convert blank to NA
+## Convert blank to NA ----
 dm <- convert_blanks_to_na(dm)
 sv <- convert_blanks_to_na(sv)
 
-# set seed to get same results each run
+## set seed to get same results each run -----
 set.seed(999)
 
 oe1 <- select(sv, c(STUDYID, USUBJID, VISIT, VISITNUM, VISITDY, SVSTDTC)) %>%
@@ -24,7 +28,7 @@ oe2 <- merge(dm, oe1, by = c("STUDYID", "USUBJID"))
 
 oestat <- sample(1:100, nrow(oe2) * 2, replace = TRUE)
 
-# BCVA - Visual Acuity Score
+## BCVA - Visual Acuity Score ----
 oe31 <- bind_rows(
   (oe2 %>% mutate("OELAT" = "LEFT")),
   (oe2 %>% mutate("OELAT" = "RIGHT"))
@@ -40,7 +44,7 @@ oe31 <- bind_rows(
   "OEMETHOD" = "ETDRS EYE CHART"
 )
 
-# DRSS
+## DRSS -----
 oe32 <- bind_rows(
   (oe2 %>% mutate("OELAT" = "LEFT")),
   (oe2 %>% mutate("OELAT" = "RIGHT"))
@@ -58,7 +62,7 @@ oe32 <- bind_rows(
   "OEMETHOD" = "COLOR FUNDUS PHOTOGRAPH"
 )
 
-# IOP
+## IOP -----
 oe33 <- bind_rows(
   (oe2 %>% mutate("OELAT" = "LEFT")),
   (oe2 %>% mutate("OELAT" = "RIGHT"))
@@ -77,7 +81,7 @@ oe33 <- bind_rows(
   "OEMETHOD" = "APPLANATION TONOMETRY"
 )
 
-# CST - Central Subfield Thickness
+## CST - Central Subfield Thickness ----
 oe34 <- bind_rows(
   (oe2 %>% mutate("OELAT" = "LEFT")),
   (oe2 %>% mutate("OELAT" = "RIGHT"))
@@ -97,6 +101,7 @@ oe34 <- bind_rows(
   "OEMETHOD" = "SD-OCT"
 )
 
+## Bind all tests ----
 oe4 <- bind_rows(oe31, oe32, oe33, oe34) %>%
   arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
   group_by(STUDYID, USUBJID) %>%
@@ -108,6 +113,7 @@ oe4 <- bind_rows(oe31, oe32, oe33, oe34) %>%
     "OETPTNUM" = NA
   )
 
+## Select columns and add labels -----
 oe_ophtha <- oe4 %>%
   select(
     STUDYID, DOMAIN, USUBJID, OESEQ, OECAT, OESCAT, OEDTC, VISIT, VISITNUM, VISITDY,
@@ -144,5 +150,5 @@ oe_ophtha <- oe4 %>%
 
 attr(oe_ophtha, "label") <- "Ophthalmic Examinations"
 
-
-save(oe_ophtha, file = "data/oe_ophtha.rda", compress = "bzip2")
+# Save dataset ----
+usethis::use_data(oe_ophtha, overwrite = TRUE)
