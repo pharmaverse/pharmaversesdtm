@@ -173,6 +173,14 @@ suppress_warning(
 tr <- bind_rows(tr, tr_radio1, tr_radio2) %>%
   select(-diff_percent) %>%
   mutate(
+    TRGRPID = if_else(
+      substr(TRLINKID, 1, 1) == "T",
+      "TARGET",
+      "NON-TARGET"
+    ),
+    .before = TRLINKID
+  ) %>%
+  mutate(
     TREVAL = if_else(is.na(TREVALID), "INVESTIGATOR", "INDEPENDENT ASSESSOR"),
     .before = TREVALID,
   ) %>%
