@@ -10,7 +10,7 @@ tu <- tu_onco_recist
 tr <- derive_vars_merged(
   tr_onco_recist,
   dataset_add = tu,
-  by_vars = exprs(USUBJID, TREVAL = TUEVAL, TREVALID = TUEVALID, TRLINKID = TULINKID),
+  by_vars = exprs(USUBJID, TREVAL = TUEVAL, TREVALID = TUEVALID, TRLNKID = TULNKID),
   new_vars = exprs(TRLOC = TULOC)
 )
 
@@ -38,8 +38,8 @@ sums <- tr %>%
   summarise(
     TRSTRESN = sum(TRSTRESN),
     CRFL = all(CRFL),
-    IDS = paste(sort(TRLINKID), collapse = ", "),
-    NTFL = all(substr(TRLINKID, 1, 1) == "N")
+    IDS = paste(sort(TRLNKID), collapse = ", "),
+    NTFL = all(substr(TRLNKID, 1, 1) == "N")
   ) %>%
   mutate(TRTESTCD = "SUMDIAM") %>%
   ungroup()

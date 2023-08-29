@@ -6,7 +6,7 @@ library(admiral)
 
 # create tumor results to be used for RS
 tr <- tribble(
-  ~SUBJNR,  ~TRLINKID, ~TRTESTCD,  ~TRORRES,  ~VISITNUM,
+  ~SUBJNR,  ~TRLNKID,  ~TRTESTCD,  ~TRORRES,  ~VISITNUM,
   # BOR = CR, CBOR = SD
   "1",      "T01",     "LDIAM",    "21",              1,
   "1",      "T02",     "LPERP",    "32",              1,
@@ -120,7 +120,7 @@ tr <- tribble(
 suppress_warning(
   tr_compl <- tr %>%
     mutate(
-      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 11,
+      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLNKID, 3, 3)) + VISITNUM) %% 11,
       TRORRES = case_match(
         TRTESTCD,
         "LDIAM" ~ as.character(as.numeric(TRORRES) * (1 - diff_percent / 100)),
@@ -144,7 +144,7 @@ tr <- bind_rows(tr, tr_compl)
 suppress_warning(
   tr_radio1 <- tr %>%
     mutate(
-      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 7 - 3,
+      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLNKID, 3, 3)) + VISITNUM) %% 7 - 3,
       TRORRES = if_else(
         TRTESTCD %in% c("LDIAM", "LPERP"),
         as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
@@ -159,7 +159,7 @@ suppress_warning(
 suppress_warning(
   tr_radio2 <- tr %>%
     mutate(
-      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM + 3) %% 7 - 3,
+      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLNKID, 3, 3)) + VISITNUM + 3) %% 7 - 3,
       TRORRES = if_else(
         TRTESTCD %in% c("LDIAM", "LPERP"),
         as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
@@ -174,11 +174,11 @@ tr <- bind_rows(tr, tr_radio1, tr_radio2) %>%
   select(-diff_percent) %>%
   mutate(
     TRGRPID = if_else(
-      substr(TRLINKID, 1, 1) == "T",
+      substr(TRLNKID, 1, 1) == "T",
       "TARGET",
       "NON-TARGET"
     ),
-    .before = TRLINKID
+    .before = TRLNKID
   ) %>%
   mutate(
     TREVAL = if_else(is.na(TREVALID), "INVESTIGATOR", "INDEPENDENT ASSESSOR"),
@@ -273,7 +273,7 @@ tr <- derive_var_obs_number(
 
 tr_screen <- tr %>%
   filter(VISITNUM == 1 & basicfl == "Y") %>%
-  select(STUDYID, USUBJID, SUBJNR, TRLINKID, TRTESTCD, VISIT, VISITNUM, TREVAL, TREVALID, TRACPTFL)
+  select(STUDYID, USUBJID, SUBJNR, TRLNKID, TRTESTCD, VISIT, VISITNUM, TREVAL, TREVALID, TRACPTFL)
 saveRDS(tr_screen, file = "data-raw/tu_help_data.rds")
 
 tr_onco_recist <- select(tr, -SUBJNR, -basicfl, -RFSTDT)

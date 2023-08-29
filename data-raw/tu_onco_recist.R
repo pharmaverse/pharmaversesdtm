@@ -21,7 +21,7 @@ tu <- tr_screen %>%
     TULOC = if_else(
       TRTESTCD == "LPERP",
       "LYMPH NODE",
-      locations[as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, str_length(TRLINKID), str_length(TRLINKID)))]
+      locations[as.numeric(SUBJNR) + as.numeric(substr(TRLNKID, str_length(TRLNKID), str_length(TRLNKID)))]
     ),
     TUTESTCD = "TUMIDENT",
     TUTEST = "Tumore Identification"
@@ -33,10 +33,10 @@ tu_onco_recist <- tu %>%
     .before = STUDYID
   ) %>%
   mutate(
-    TUORRES = if_else(substr(TRLINKID, 1, 1) == "T", "TARGET", "NON-TARGET"),
+    TUORRES = if_else(substr(TRLNKID, 1, 1) == "T", "TARGET", "NON-TARGET"),
     TUSTRESC = TUORRES,
     TUMETHOD = "CT SCAN",
-    TULINKID = TRLINKID,
+    TULNKID = TRLNKID,
     TUEVAL = TREVAL,
     TUEVALID = TREVALID,
     TUACPTFL = TRACPTFL
