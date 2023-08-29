@@ -1,4 +1,3 @@
-
 library(tibble)
 library(dplyr)
 library(lubridate)
@@ -120,55 +119,55 @@ tr <- tribble(
 # complete TRTESTCDs such that LDIAM and LPERP are present for all tumors
 suppress_warning(
   tr_compl <- tr %>%
-  mutate(
-    diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 11,
-    TRORRES = case_match(
-      TRTESTCD,
-      "LDIAM" ~ as.character(as.numeric(TRORRES) * (1 - diff_percent / 100)),
-      "LPERP" ~ as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
-      .default = TRORRES
-    ),
-    TRTESTCD = case_match(
-      TRTESTCD,
-      "LDIAM" ~ "LPERP",
-      "LPERP" ~ "LDIAM",
-      .default = TRTESTCD
-    )
-  ) %>%
+    mutate(
+      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 11,
+      TRORRES = case_match(
+        TRTESTCD,
+        "LDIAM" ~ as.character(as.numeric(TRORRES) * (1 - diff_percent / 100)),
+        "LPERP" ~ as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
+        .default = TRORRES
+      ),
+      TRTESTCD = case_match(
+        TRTESTCD,
+        "LDIAM" ~ "LPERP",
+        "LPERP" ~ "LDIAM",
+        .default = TRTESTCD
+      )
+    ) %>%
     select(-basicfl),
-regexpr = "NAs introduced by coercion"
+  regexpr = "NAs introduced by coercion"
 )
 
 tr <- bind_rows(tr, tr_compl)
 
 # add results for radiologist 1
 suppress_warning(
-tr_radio1 <- tr %>%
-  mutate(
-    diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 7 - 3,
-    TRORRES = if_else(
-      TRTESTCD %in% c("LDIAM", "LPERP"),
-      as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
-      TRORRES
+  tr_radio1 <- tr %>%
+    mutate(
+      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM) %% 7 - 3,
+      TRORRES = if_else(
+        TRTESTCD %in% c("LDIAM", "LPERP"),
+        as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
+        TRORRES
+      ),
+      TREVALID = "RADIOLOGIST 1"
     ),
-    TREVALID = "RADIOLOGIST 1"
-  ),
   regexpr = "NAs introduced by coercion"
 )
 
 # add results for radiologist 2
 suppress_warning(
-tr_radio2 <- tr %>%
-  mutate(
-    diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM + 3) %% 7 - 3,
-    TRORRES = if_else(
-      TRTESTCD %in% c("LDIAM", "LPERP"),
-      as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
-      TRORRES
+  tr_radio2 <- tr %>%
+    mutate(
+      diff_percent = (as.numeric(SUBJNR) + as.numeric(substr(TRLINKID, 3, 3)) + VISITNUM + 3) %% 7 - 3,
+      TRORRES = if_else(
+        TRTESTCD %in% c("LDIAM", "LPERP"),
+        as.character(as.numeric(TRORRES) * (1 + diff_percent / 100)),
+        TRORRES
+      ),
+      TREVALID = "RADIOLOGIST 2"
     ),
-    TREVALID = "RADIOLOGIST 2"
-  ),
-regexpr = "NAs introduced by coercion"
+  regexpr = "NAs introduced by coercion"
 )
 
 tr <- bind_rows(tr, tr_radio1, tr_radio2) %>%
@@ -177,14 +176,15 @@ tr <- bind_rows(tr, tr_radio1, tr_radio2) %>%
     TREVAL = if_else(is.na(TREVALID), "INVESTIGATOR", "INDEPENDENT ASSESSOR"),
     .before = TREVALID,
   ) %>%
-mutate(
-  best_assessor = (as.numeric(SUBJNR) + VISITNUM) %% 2 + 1,
-  TRACPTFL = if_else(
-    TREVALID == paste("RADIOLOGIST", best_assessor),
-    "Y",
-    NA_character_),
-  .after = TREVALID
-) %>%
+  mutate(
+    best_assessor = (as.numeric(SUBJNR) + VISITNUM) %% 2 + 1,
+    TRACPTFL = if_else(
+      TREVALID == paste("RADIOLOGIST", best_assessor),
+      "Y",
+      NA_character_
+    ),
+    .after = TREVALID
+  ) %>%
   select(-best_assessor)
 
 # add date (TRDTC)
@@ -203,11 +203,11 @@ tr <- tr %>%
     ),
     .before = SUBJNR
   ) %>%
-derive_vars_merged(
-  dataset_add = dm,
-  by_vars = exprs(USUBJID),
-  new_vars = exprs(RFSTDT = convert_dtc_to_dt(RFSTDTC))
-) %>%
+  derive_vars_merged(
+    dataset_add = dm,
+    by_vars = exprs(USUBJID),
+    new_vars = exprs(RFSTDT = convert_dtc_to_dt(RFSTDTC))
+  ) %>%
   mutate(
     TRDTC = format_ISO8601(RFSTDT + 21 * (VISITNUM - 1)),
     TRDTC = if_else(
@@ -217,40 +217,40 @@ derive_vars_merged(
     )
   )
 suppress_warning(
-tr <- tr %>%
-  mutate(
-    DOMAIN = "TR",
-    STUDYID = "CDISCPILOT01",
-    .before = USUBJID
-  ) %>%
-  mutate(
-    TRTEST = case_match(
-      TRTESTCD,
-      "LDIAM" ~ "Longest Diameter",
-      "LPERP" ~ "Longest Perpendicular",
-      "TUMSTATE" ~ "Tumor State"
+  tr <- tr %>%
+    mutate(
+      DOMAIN = "TR",
+      STUDYID = "CDISCPILOT01",
+      .before = USUBJID
+    ) %>%
+    mutate(
+      TRTEST = case_match(
+        TRTESTCD,
+        "LDIAM" ~ "Longest Diameter",
+        "LPERP" ~ "Longest Perpendicular",
+        "TUMSTATE" ~ "Tumor State"
+      ),
+      .after = TRTESTCD
+    ) %>%
+    mutate(
+      VISIT = case_match(
+        VISITNUM,
+        1 ~ "SCREENING",
+        2 ~ "WEEK 3",
+        3 ~ "WEEK 6",
+        4 ~ "WEEK 9",
+        5 ~ "WEEK 12"
+      ),
+      .after = VISITNUM
+    ) %>%
+    mutate(
+      TRORRESU = if_else(TRTESTCD %in% c("LDIAM", "LPERP"), "mm", NA_character_),
+      TRSTRESC = TRORRES,
+      TRSTRESN = as.double(TRSTRESC),
+      TRSTRESU = TRORRESU,
+      .after = TRORRES
     ),
-    .after = TRTESTCD
-  ) %>%
-  mutate(
-    VISIT = case_match(
-      VISITNUM,
-      1 ~ "SCREENING",
-      2 ~ "WEEK 3",
-      3 ~ "WEEK 6",
-      4 ~ "WEEK 9",
-      5 ~ "WEEK 12"
-    ),
-    .after = VISITNUM
-  ) %>%
-  mutate(
-    TRORRESU = if_else(TRTESTCD %in% c("LDIAM", "LPERP"), "mm", NA_character_),
-    TRSTRESC = TRORRES,
-    TRSTRESN = as.double(TRSTRESC),
-    TRSTRESU = TRORRESU,
-    .after = TRORRES
-  ),
-regexpr = "NAs introduced by coercion"
+  regexpr = "NAs introduced by coercion"
 )
 
 tr <- derive_var_obs_number(

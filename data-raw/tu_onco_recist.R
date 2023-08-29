@@ -45,6 +45,7 @@ tu_onco_recist <- tu %>%
   derive_var_obs_number(
     by_vars = exprs(USUBJID),
     new_var = TUSEQ,
-    order = exprs(TUEVAL, TUEVALID))
+    order = exprs(TUEVAL, TUEVALID)
+  )
 
 usethis::use_data(tu_onco_recist, overwrite = TRUE)

@@ -17,20 +17,20 @@ tr <- derive_vars_merged(
 # select tr results to consider:
 tr <- tr %>%
   filter(
-  TRTESTCD == "LDIAM" & TRLOC != "LYMPH NODE" |
-    TRTESTCD == "LPERP" & TRLOC == "LYMPH NODE" |
-    TRTESTCD == "TUMSTATE"
-) %>%
-# flag complete response by tumor
-mutate(
-  CRFL = if_else(
-    TRTESTCD == "LDIAM" & TRSTRESN == 0 |
-      TRTESTCD == "LPERP" & TRSTRESN < 10 |
-      TRTESTCD == "TUMSTATE" & TRSTRESC == "ABSENT",
-    TRUE,
-    FALSE
+    TRTESTCD == "LDIAM" & TRLOC != "LYMPH NODE" |
+      TRTESTCD == "LPERP" & TRLOC == "LYMPH NODE" |
+      TRTESTCD == "TUMSTATE"
+  ) %>%
+  # flag complete response by tumor
+  mutate(
+    CRFL = if_else(
+      TRTESTCD == "LDIAM" & TRSTRESN == 0 |
+        TRTESTCD == "LPERP" & TRSTRESN < 10 |
+        TRTESTCD == "TUMSTATE" & TRSTRESC == "ABSENT",
+      TRUE,
+      FALSE
+    )
   )
-)
 
 # derive sums of diameters
 sums <- tr %>%
@@ -39,29 +39,30 @@ sums <- tr %>%
     TRSTRESN = sum(TRSTRESN),
     CRFL = all(CRFL),
     IDS = paste(sort(TRLINKID), collapse = ", "),
-    NTFL = all(substr(TRLINKID, 1, 1) == "N")) %>%
+    NTFL = all(substr(TRLINKID, 1, 1) == "N")
+  ) %>%
   mutate(TRTESTCD = "SUMDIAM") %>%
   ungroup()
 
 sums <- derive_vars_merged(
-    sums,
-    dataset_add = sums,
-    filter_add = VISIT == "SCREENING",
-    by_vars = exprs(USUBJID, TREVAL, TREVALID),
-    new_vars = exprs(BASE = TRSTRESN, BASEIDS = IDS)
-  )
+  sums,
+  dataset_add = sums,
+  filter_add = VISIT == "SCREENING",
+  by_vars = exprs(USUBJID, TREVAL, TREVALID),
+  new_vars = exprs(BASE = TRSTRESN, BASEIDS = IDS)
+)
 sums <- derive_vars_joined(
-    sums,
-    dataset_add =sums,
-    by_vars = exprs(USUBJID),
-    order = exprs(TRSTRESN),
-    new_vars = exprs(NADIR = TRSTRESN),
-    join_vars = exprs(VISITNUM),
-    filter_add = BASEIDS == IDS,
-    filter_join = VISITNUM > VISITNUM.join,
-    mode = "first",
-    check_type = "none"
-  )
+  sums,
+  dataset_add = sums,
+  by_vars = exprs(USUBJID),
+  order = exprs(TRSTRESN),
+  new_vars = exprs(NADIR = TRSTRESN),
+  join_vars = exprs(VISITNUM),
+  filter_add = BASEIDS == IDS,
+  filter_join = VISITNUM > VISITNUM.join,
+  mode = "first",
+  check_type = "none"
+)
 
 # derive responses
 rs_onco_recist <- sums %>%
@@ -74,8 +75,8 @@ rs_onco_recist <- sums %>%
     RSTEST = "Overall Response",
     RSORRES = case_when(
       CRFL & IDS == BASEIDS ~ "CR",
-      TRSTRESN - NADIR >= 5 & TRSTRESN/NADIR >= 1.2 ~ "PD",
-      TRSTRESN/BASE <= 0.7 & IDS == BASEIDS ~ "PR",
+      TRSTRESN - NADIR >= 5 & TRSTRESN / NADIR >= 1.2 ~ "PD",
+      TRSTRESN / BASE <= 0.7 & IDS == BASEIDS ~ "PR",
       !is.na(TRSTRESN) & IDS == BASEIDS ~ "SD",
       NTFL ~ "NON-CR/NON-PD",
       TRUE ~ "NE"
@@ -91,6 +92,7 @@ rs_onco_recist <- sums %>%
   derive_var_obs_number(
     by_vars = exprs(USUBJID),
     new_var = RSSEQ,
-    order = exprs(VISITNUM, RSEVAL, RSEVALID))
+    order = exprs(VISITNUM, RSEVAL, RSEVALID)
+  )
 
 usethis::use_data(rs_onco_recist, overwrite = TRUE)
