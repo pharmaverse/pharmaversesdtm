@@ -5,7 +5,7 @@
 \alias{tu_onco_recist}
 \title{Tumor Identification Dataset (RECIST 1.1)}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 66 rows and 16 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 75 rows and 16 columns.
 }
 \usage{
 tu_onco_recist
