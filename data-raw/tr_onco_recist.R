@@ -253,6 +253,13 @@ tr <- tr %>%
 regexpr = "NAs introduced by coercion"
 )
 
+tr <- derive_var_obs_number(
+  tr,
+  by_vars = exprs(USUBJID),
+  new_var = TRSEQ,
+  order = exprs(VISITNUM, TREVAL, TREVALID)
+)
+
 # store basic tumor results for creation of TU
 # (LPERP -> TULOC = "LYMPH NODE", LDIAM -> something else)
 
@@ -261,6 +268,6 @@ tr_screen <- tr %>%
   select(STUDYID, USUBJID, SUBJNR, TRLINKID, TRTESTCD, VISIT, VISITNUM, TREVAL, TREVALID, TRACPTFL)
 saveRDS(tr_screen, file = "data-raw/tu_help_data.rds")
 
-tr_onco_recist <- select(tr, -SUBJNR, -basicfl)
+tr_onco_recist <- select(tr, -SUBJNR, -basicfl, -RFSTDT)
 
 usethis::use_data(tr_onco_recist, overwrite = TRUE)

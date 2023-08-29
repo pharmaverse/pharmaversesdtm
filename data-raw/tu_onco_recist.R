@@ -36,8 +36,15 @@ tu_onco_recist <- tu %>%
     TUORRES = if_else(substr(TRLINKID, 1, 1) == "T", "TARGET", "NON-TARGET"),
     TUSTRESC = TUORRES,
     TUMETHOD = "CT SCAN",
-    TULINKID = TRLINKID
+    TULINKID = TRLINKID,
+    TUEVAL = TREVAL,
+    TUEVALID = TREVALID,
+    TUACPTFL = TRACPTFL
   ) %>%
-  select(-starts_with("TR"))
+  select(-starts_with("TR"), -SUBJNR) %>%
+  derive_var_obs_number(
+    by_vars = exprs(USUBJID),
+    new_var = TUSEQ,
+    order = exprs(TUEVAL, TUEVALID))
 
 usethis::use_data(tu_onco_recist, overwrite = TRUE)
