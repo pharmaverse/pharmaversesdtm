@@ -147,8 +147,9 @@
 #' Disease Response Dataset (RECIST 1.1)
 #'
 #' A SDTM RS dataset using RECIST 1.1. The dataset contains just a few patients.
-#' It is intended for vignettes and examples of ADaM dataset creation. The
-#' dataset is derived from `tr_onco_recist`.
+#' It is intended for vignettes and examples of ADaM dataset creation.
+#'
+#' @source The dataset is derived from \code{tr_onco_recist}.
 #'
 #' @author Stefan Bundfuss
 "rs_onco_recist"

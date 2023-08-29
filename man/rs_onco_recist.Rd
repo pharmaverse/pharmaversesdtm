@@ -7,13 +7,15 @@
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 54 rows and 14 columns.
 }
+\source{
+The dataset is derived from \code{tr_onco_recist}.
+}
 \usage{
 rs_onco_recist
 }
 \description{
 A SDTM RS dataset using RECIST 1.1. The dataset contains just a few patients.
-It is intended for vignettes and examples of ADaM dataset creation. The
-dataset is derived from `tr_onco_recist`.
+It is intended for vignettes and examples of ADaM dataset creation.
 }
 \author{
 Stefan Bundfuss
