@@ -43,6 +43,12 @@ tr <- tribble(
   "2",      "T03",     "LDIAM",    "41",              3,
   "2",      "T04",     "LDIAM",    "26",              3,
   "2",      "T05",     "LDIAM",    "9",               3,
+  # SD
+  "2",      "T01",     "LDIAM",    "17",              4,
+  "2",      "T02",     "LDIAM",    "23",              4,
+  "2",      "T03",     "LDIAM",    "20",              4,
+  "2",      "T04",     "LDIAM",    "25",              4,
+  "2",      "T05",     "LDIAM",    "7",               4,
 
   # BOR = NON-CR/NON-PD, CBOR = NON-CR/NON-PD
   "3",      "NT01",    "TUMSTATE", "PRESENT",         1,
