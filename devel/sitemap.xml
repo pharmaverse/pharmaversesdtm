@@ -19,9 +19,6 @@
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/admiral_eg.html</loc>
-  </url>
-  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/ae.html</loc>
   </url>
   <url>
@@ -35,6 +32,9 @@
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/ds.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/eg.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/ex.html</loc>
