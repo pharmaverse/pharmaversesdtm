@@ -5,7 +5,7 @@
 \alias{rs_onco_recist}
 \title{Disease Response Dataset (RECIST 1.1)}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 63 rows and 14 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 66 rows and 14 columns.
 }
 \source{
 The dataset is derived from \code{tr_onco_recist}.
