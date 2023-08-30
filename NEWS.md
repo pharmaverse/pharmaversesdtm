@@ -3,15 +3,5 @@
 ## New Features
 
  - Ophthalmology variants of `ex` and `qs` SDTM datasets added. (#15)
-
-## Updates of Existing Functions
-
-## Breaking Changes
-
-## Documentation
-
-
-
-## Various
-
+ - Migrate data and function `get_terms()` from `admiral.test`. (#1, #49)
 

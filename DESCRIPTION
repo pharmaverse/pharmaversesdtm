@@ -1,7 +1,7 @@
 Package: pharmaversesdtm
 Type: Package
 Title: Test Data for the Pharmaverse Family of Packages
-Version: 0.0.2
+Version: 0.1.0
 Authors@R: c(
   person("Edoardo", "Mancini", email = "edoardo.mancini@roche.com", role = c("aut", "cre")),
   person("Gayatri", "G", role = "aut"),

@@ -38,7 +38,7 @@
 #'
 #' An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 #'
-"admiral_eg"
+"eg"
 
 #' Exposure Dataset
 #'
