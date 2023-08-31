@@ -128,6 +128,32 @@
 #' @author Gopi Vegesna
 "rs_onco"
 
+#' Tumor Results Dataset (RECIST 1.1)
+#'
+#' A SDTM TR dataset using RECIST 1.1. The dataset contains just a few patients.
+#' It is intended for vignettes and examples of ADaM dataset creation.
+#'
+#' @author Stefan Bundfuss
+"tr_onco_recist"
+
+#' Tumor Identification Dataset (RECIST 1.1)
+#'
+#' A SDTM TU dataset using RECIST 1.1. The dataset contains just a few patients.
+#' It is intended for vignettes and examples of ADaM dataset creation.
+#'
+#' @author Stefan Bundfuss
+"tu_onco_recist"
+
+#' Disease Response Dataset (RECIST 1.1)
+#'
+#' A SDTM RS dataset using RECIST 1.1. The dataset contains just a few patients.
+#' It is intended for vignettes and examples of ADaM dataset creation.
+#'
+#' @source The dataset is derived from \code{tr_onco_recist}.
+#'
+#' @author Stefan Bundfuss
+"rs_onco_recist"
+
 #' Supplemental Adverse Events Dataset
 #'
 #' A SDTM SUPPAE dataset from the CDISC pilot project
