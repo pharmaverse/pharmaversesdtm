@@ -73,6 +73,9 @@
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/rs_onco.html</loc>
   </url>
   <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/rs_onco_recist.html</loc>
+  </url>
+  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/sc_ophtha.html</loc>
   </url>
   <url>
@@ -100,10 +103,16 @@
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/tr_onco.html</loc>
   </url>
   <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/tr_onco_recist.html</loc>
+  </url>
+  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/ts.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/tu_onco.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/tu_onco_recist.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/devel/reference/vs.html</loc>
