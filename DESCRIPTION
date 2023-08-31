@@ -1,9 +1,14 @@
 Package: pharmaversesdtm
 Type: Package
 Title: Test Data for the Pharmaverse Family of Packages
-Version: 0.0.2
+Version: 0.1.0
 Authors@R: c(
-  person("Edoardo", "Mancini", email = "edoardo.mancini@roche.com", role = c("aut", "cre"))
+  person("Edoardo", "Mancini", email = "edoardo.mancini@roche.com", role = c("aut", "cre")),
+  person("Gayatri", "G", role = "aut"),
+  person("Kangjie", "Zhang", role = "aut"),
+  person("Pooja", "Kumari", role = "aut"),
+  person("Stefan", "Bundfuss", role = "aut"),
+  person("Zelos", "Zhu", role = "aut")
   )
 Description: A set of Study Data Tabulation Model (SDTM) datasets from the Clinical
     Data Interchange Standards Consortium (CDISC) pilot project used for testing

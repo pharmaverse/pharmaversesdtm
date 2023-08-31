@@ -21,5 +21,14 @@ Useful links:
 \author{
 \strong{Maintainer}: Edoardo Mancini \email{edoardo.mancini@roche.com}
 
+Authors:
+\itemize{
+  \item Gayatri G
+  \item Kangjie Zhang
+  \item Pooja Kumari
+  \item Stefan Bundfuss
+  \item Zelos Zhu
+}
+
 }
 \keyword{internal}
