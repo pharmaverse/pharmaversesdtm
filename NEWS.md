@@ -6,5 +6,5 @@
  - Migrate data and function `get_terms()` from `admiral.test`. (#1, #49)
  - Oncology datasets `tu_onco_recist`, `tr_onco_recist`, and `rs_onco_recist`
  using RECIST 1.1 response criteria. The datasets contain just a few patients.
- They are intended for vignettes and examples of ADaM datasets creation.
+ They are intended for vignettes and examples of ADaM datasets creation. (#33)
 
