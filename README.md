@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 
-[<img src="http://pharmaverse.org/shields/admiral.svg"/>](https://pharmaverse.org) [![Test Coverage](https://raw.githubusercontent.com/pharmaverse/pharmaversesdtm/badges/main/test-coverage.svg)](https://github.com/pharmaverse/pharmaversesdtm/actions/workflows/code-coverage.yml)
+<!-- [<img src="http://pharmaverse.org/shields/admiral.svg"/>](https://pharmaverse.org) [![Test <!-- Coverage](https://raw.githubusercontent.com/pharmaverse/pharmaversesdtm/badges/main/test-coverage.svg)](https://github.com/pharmaverse/pharmaversesdtm/actions/workflows/code-coverage.yml)-->
 
 <!-- badges: end -->
 
