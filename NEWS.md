@@ -1,3 +1,9 @@
+# pharmaversesdtm 0.1.1
+
+## Documentation
+
+ - Fixed redirected links on website for CRAN release. 
+
 # pharmaversesdtm 0.1.0
 
 ## New Features
