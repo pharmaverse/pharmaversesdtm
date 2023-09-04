@@ -54,14 +54,6 @@
 <li class="nav-item">
   <a class="nav-link" href="news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/pharmaversesdtm/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/pharmaversesdtm/cran-release">cran-release</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/pharmaversesdtm/v0.0.2">v0.0.2</a> </div></li>
-<!-- end dropdown for versions -->
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
@@ -119,7 +111,7 @@
 <li>Datasets that are TA-agnostic: same as SDTM domain name (e.g., <code>dm</code>, <code>rs</code>).</li>
 <li>Datasets that are TA-specific: domain_TA_others, others go from broader categories to more specific ones (e.g., <code>oe_ophtha</code>, <code>rs_onco</code>, <code>rs_onco_irecist</code>).</li>
 </ul>
-<p><strong>Note</strong>: <em>If an SDTM domain is used by multiple TAs, <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> may provide multiple versions of the corresponding test dataset. For instance, the package contains <code>ex</code> and <code>ex_ophtha</code> as the latter contains ophthalmology-specific variables such as <code>EXLAT</code> and <code>EXLOC</code>, and <code>EXROUTE</code> is exchanged for a plausible ophthalmology value.</em></p>
+<p><strong>Note</strong>: <em>If an SDTM domain is used by multiple TAs, <a href="https://pharmaverse.github.io/pharmaversesdtm/cran-release/" class="external-link">pharmaversesdtm</a> may provide multiple versions of the corresponding test dataset. For instance, the package contains <code>ex</code> and <code>ex_ophtha</code> as the latter contains ophthalmology-specific variables such as <code>EXLAT</code> and <code>EXLOC</code>, and <code>EXROUTE</code> is exchanged for a plausible ophthalmology value.</em></p>
 </div>
 <div class="section level1">
 <h1 id="how-to-update">How To Update<a class="anchor" aria-label="anchor" href="#how-to-update"></a>
@@ -127,13 +119,13 @@
 <p>Firstly, make a GitHub issue in <a href="https://github.com/pharmaverse/pharmaversesdtm" class="external-link"><code>{pharmaversesdtm}</code></a> with the planned updates and tag <code>@pharmaverse/admiral</code> so that one of the development core team can sanity check the request. Then there are two main ways to extend the test data: either by adding new datasets or extending existing datasets with new records/variables. Whichever method you choose, it is worth noting the following:</p>
 <ul>
 <li>Programs that generate test data are stored in the <code>data-raw/</code> folder.</li>
-<li>Each of these programs is written as a standalone R script: if any packages need to be loaded for a given program, then call <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> at the start of the program (but please do <strong>not</strong> call <code><a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">library(pharmaversesdtm)</a></code>).</li>
+<li>Each of these programs is written as a standalone R script: if any packages need to be loaded for a given program, then call <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> at the start of the program (but please do <strong>not</strong> call <code><a href="https://pharmaverse.github.io/pharmaversesdtm/cran-release/" class="external-link">library(pharmaversesdtm)</a></code>).</li>
 <li>Most of the packages that you are likely to need will already be specified in the <code>renv.lock</code> file, so they will already be installed if you have been keeping in sync–you can check this by entering <code><a href="https://rstudio.github.io/renv/reference/status.html" class="external-link">renv::status()</a></code> in the Console. However, you may also wish to install <a href="https://pharmaverse.github.io/metatools/" class="external-link">metatools</a>, which is currently not specified in the <code>renv.lock</code> file. If you feel that you need to install any other packages in addition to those just mentioned, then please tag <code>@pharmaverse/admiral</code> to discuss with the development core team.</li>
-<li>When you have created a program in the <code>data-raw/</code> folder, you need to run it as a standalone R script, in order to generate a test dataset that will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> package, but you do not need to build the package.</li>
+<li>When you have created a program in the <code>data-raw/</code> folder, you need to run it as a standalone R script, in order to generate a test dataset that will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm/cran-release/" class="external-link">pharmaversesdtm</a> package, but you do not need to build the package.</li>
 <li>Following <a href="https://r-pkgs.org/data.html#sec-data-data" class="external-link">best practice</a>, each dataset is stored as a <code>.rda</code> file whose name is consistent with the name of the dataset, e.g., dataset <code>xx</code> is stored as <code>xx.rda</code>. The easiest way to achieve this is to use <code>usethis::use_data(xx)</code>
 </li>
-<li>The programs in <code>data-raw/</code> are stored within the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> GitHub repository, but they are <strong>not</strong> part of the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> package–the <code>data-raw/</code> folder is specified in <code>.Rbuildignore</code>.</li>
-<li>When you run a program that is in the <code>data-raw/</code> folder, you generate a dataset that is written to the <code>data/</code> folder, which will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm" class="external-link">pharmaversesdtm</a> package.</li>
+<li>The programs in <code>data-raw/</code> are stored within the <a href="https://pharmaverse.github.io/pharmaversesdtm/cran-release/" class="external-link">pharmaversesdtm</a> GitHub repository, but they are <strong>not</strong> part of the <a href="https://pharmaverse.github.io/pharmaversesdtm/cran-release/" class="external-link">pharmaversesdtm</a> package–the <code>data-raw/</code> folder is specified in <code>.Rbuildignore</code>.</li>
+<li>When you run a program that is in the <code>data-raw/</code> folder, you generate a dataset that is written to the <code>data/</code> folder, which will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm/cran-release/" class="external-link">pharmaversesdtm</a> package.</li>
 <li>The names and sources of test datasets are specified in <code>R/data.R</code>, for the purpose of generating documentation in the <code>man/</code> folder.</li>
 </ul>
 <div class="section level2">
