@@ -13,8 +13,12 @@
 ^man/dev_util_.+\.Rd$
 ^LICENSE\.md$
 ^\.github$
-^admiraltemplate\.Rcheck$
-^admiraltemplate.*\.tar\.gz$
-^admiraltemplate.*\.tgz$
+^pharmaversesdtm\.Rcheck$
+^pharmaversesdtm.*\.tar\.gz$
+^pharmaversesdtm.*\.tgz$
 ^staged_dependencies.yaml$
 ^README.Rmd$
+^dev$
+^vignettes/adxx\.Rmd$
+^vignettes/pharmaversesdtm\.Rmd$
+^data-raw$

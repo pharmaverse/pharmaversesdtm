@@ -1,5 +1,21 @@
 # This a CODEOWNERS file, where you can establish code owners.
 # Code owners are automatically requested for review when someone opens a pull request
-# that modifies code that they own. In this instance, cicdguy will be notified of any
-# changes made the files inside the .github/workflows directory.
-.github/workflows/* @cicdguy
+# that modifies code that they own.
+
+# admiral.test
+data-raw/pc.R @toni-1991
+data-raw/pp.R @toni-1991
+data-raw/query_databases.R @bundfussr
+
+# admiralonco
+data-raw/rs_onco.R @bundfussr
+data-raw/tr_onco.R @bundfussr
+data-raw/tu_onco.R @bundfussr
+
+# admiralophtha
+data-raw/ae_ophtha.R @manciniedoardo
+data-raw/ex_ophtha.R @manciniedoardo
+data-raw/oe_ophtha.R @manciniedoardo
+data-raw/qs_ophtha.R @manciniedoardo
+data-raw/sc_ophtha.R @manciniedoardo
+

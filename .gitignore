@@ -20,6 +20,9 @@
 # RStudio files
 .Rproj.user/
 
+# helper files for interchange data between scripts
+data-raw/tu_help_data.rds
+
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
@@ -41,9 +44,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
-admiraltemplate.Rcheck/
-admiraltemplate*.tar.gz
-admiraltemplate*.tgz
+pharmaversesdtm.Rcheck/
+pharmaversesdtm*.tar.gz
+pharmaversesdtm*.tgz
 
 # MacOS
 .DS_Store

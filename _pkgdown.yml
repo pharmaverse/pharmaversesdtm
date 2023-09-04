@@ -1,4 +1,4 @@
-url: https://pharmaverse.github.io/admiraltemplate
+url: https://pharmaverse.github.io/pharmaversesdtm
 
 template:
   bootstrap: 5
@@ -6,62 +6,20 @@ template:
     bootswatch: flatly
 repo:
   url:
-    home: https://github.com/pharmaverse/admiraltemplate
-    source: https://github.com/pharmaverse/admiraltemplate/blob/main/
-    issue: https://github.com/pharmaverse/admiraltemplate/issues/
+    home: https://github.com/pharmaverse/pharmaversesdtm
+    source: https://github.com/pharmaverse/pharmaversesdtm/blob/main/
+    issue: https://github.com/pharmaverse/pharmaversesdtm/issues/
     user: https://github.com/
 news:
   cran_dates: true
-reference:
 
-- title: Derivations for Adding Variables
-- subtitle: ADXX-specific
-  desc: Derivation Functions helpful for building the ADXX dataset
-- contents:
-  - has_keyword("der_adxx")
-
-- title: Derivations for Adding Parameters
-- subtitle: ADXX-specific
-  desc: Parameter Derivation Functions helpful for building the ADXX dataset
-- contents:
-  - has_keyword("der_prm_adxx")
-
-- title: Advanced Functions
-- subtitle: Pre-Defined Source Objects
-  desc: Source objects defined by {admiraltemplate}
-- contents:
-  - has_keyword("source_specifications")
-
-- title: Utility Functions
-- subtitle: Utilities for Formatting Observations
-- contents:
-  - has_keyword('utils_fmt')
-
-- subtitle: Utilities for Dataset Checking
-- contents:
-  - has_keyword('utils_ds_chk')
-
-- subtitle: Utilities for Filtering Observations
-- contents:
-  - has_keyword('utils_fil')
-
-- title: Example Datasets
-  desc: You can run `admiral::use_ad_template()` to produce additional datasets
-- contents:
-  - has_keyword('datasets')
 
 navbar:
   structure:
-    left: [getstarted, reference, articles, news]
+    left: [reference, news]
   components:
-    getstarted:
-      text: Get Started
-      href: articles/admiraltemplate.html
     reference:
-      text: Reference
-      href: reference/index.html
-    articles:
-      text: User Guides
-      menu:
-      - text: Creating ADXX
-        href: articles/adxx.html
+       text: Reference
+       href: reference/index.html
+
+
