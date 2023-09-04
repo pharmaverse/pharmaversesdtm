@@ -22,3 +22,4 @@
 ^vignettes/adxx\.Rmd$
 ^vignettes/pharmaversesdtm\.Rmd$
 ^data-raw$
+^CRAN-SUBMISSION$
