@@ -1,39 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/404.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/404.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/LICENSE.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/articles/admiraltemplate.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/authors.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/articles/adxx.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/index.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/articles/index.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/news/index.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/authors.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/index.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/ae.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/news/index.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/ae_ophtha.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/pull_request_template.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/cm.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/reference/admiraltemplate-package.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/dm.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/reference/hello_admiral.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/ds.html</loc>
   </url>
   <url>
-    <loc>https://pharmaverse.github.io/admiraltemplate/v0.0.2/reference/index.html</loc>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/eg.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/ex.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/ex_ophtha.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/get_terms.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/lb.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/mh.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/oe_ophtha.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/pc.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/pharmaversesdtm-package.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/pp.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/qs_ophtha.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/rs_onco.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/rs_onco_recist.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/sc_ophtha.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/sdg_db.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/smq_db.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/suppae.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/suppdm.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/suppds.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/supptr_onco.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/sv.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/tr_onco.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/tr_onco_recist.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/ts.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/tu_onco.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/tu_onco_recist.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/v0.1.1/reference/vs.html</loc>
   </url>
 </urlset>
