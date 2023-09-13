@@ -13,6 +13,13 @@ repo:
 news:
   cran_dates: true
 
+reference:
+- title: Data
+- contents:
+  - -get_terms
+- title: Functions
+- contents:
+  - get_terms
 
 navbar:
   structure:

@@ -8,12 +8,12 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 591 rows and 19 columns.
 }
 \source{
-Constructed using `ex` from the `{pharmaversesdtm}` package # nolint
+Constructed using \code{ex} from the \code{{pharmaversesdtm}} package # nolint
 }
 \usage{
 ex_ophtha
 }
 \description{
-An example Exposure SDTM dataset with ophthalmology-specific variables such as `EXLOC` and `EXLAT`
+An example Exposure SDTM dataset with ophthalmology-specific variables such as \code{EXLOC} and \code{EXLAT}
 }
 \keyword{datasets}
