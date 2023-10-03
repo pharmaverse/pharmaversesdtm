@@ -1,10 +1,10 @@
 # pharmaversesdtm <img src="man/figures/logo.png" align="right" width="200" style="margin-left:50px;"/>
 
 <!-- badges: start -->
-
-<!-- [<img src="http://pharmaverse.org/shields/admiral.svg"/>](https://pharmaverse.org) [![Test <!-- Coverage](https://raw.githubusercontent.com/pharmaverse/pharmaversesdtm/badges/main/test-coverage.svg)](https://github.com/pharmaverse/pharmaversesdtm/actions/workflows/code-coverage.yml)-->
-
+[<img src="http://pharmaverse.org/shields/pharmaversesdtm.svg">](https://pharmaverse.org)
+[![CRAN status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-project.org/package=pharmaversesdtm)
 <!-- badges: end -->
+
 
 Test data (SDTM) for the pharmaverse family of packages
 
