@@ -15,14 +15,12 @@ on:
       - "v*"
     branches:
       - main
-      - devel
       - patch
   # 'pull_request' events are triggered when PRs are
   # created against one of these target branches.
   pull_request:
     branches:
       - main
-      - devel
       - patch
   # 'release' events are triggered when...
   # you guessed it - when releases are made.
@@ -63,6 +61,8 @@ jobs:
   check:
     name: Check
     uses: pharmaverse/admiralci/.github/workflows/r-cmd-check.yml@main
+    with:
+      error-on: warning # TODO: find a way to ignore specific notes
     if: github.event_name == 'pull_request'
   docs:
     name: Documentation

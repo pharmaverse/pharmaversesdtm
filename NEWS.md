@@ -1,3 +1,20 @@
+# pharmaversesdtm (development version)
+
+## New Features
+
+Following Vaccine Specific SDTM datasets have been added. (#4)
+
+ - `ce_vaccine`
+ - `dm_vaccine`
+ - `ex_vaccine`
+ - `face_vaccine`
+ - `is_vaccine`
+ - `vs_vaccine`
+ - `suppce_vaccine`
+ - `suppdm_vaccine`
+ - `suppex_vaccine`
+ - `suppface_vaccine`
+
 # pharmaversesdtm 0.1.1
 
 ## Documentation
