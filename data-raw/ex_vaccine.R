@@ -1,5 +1,5 @@
 # Dataset: ex_vaccine
-# Description: EX SDTM dataset for Vaccine  studies
+# Description: EX SDTM dataset for Vaccine studies
 
 # Load libraries ----
 library(tibble)

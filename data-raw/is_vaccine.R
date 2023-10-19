@@ -1,5 +1,5 @@
 # Dataset: is_vaccine
-# Description: IS SDTM dataset for Vaccine  studies
+# Description: IS SDTM dataset for Vaccine studies
 
 # Load libraries ----
 library(tibble)

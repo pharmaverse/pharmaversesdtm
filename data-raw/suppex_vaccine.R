@@ -1,5 +1,5 @@
 # Dataset: suppex_vaccine
-# Description: SUPPEX SDTM dataset for Vaccine  studies
+# Description: SUPPEX SDTM dataset for Vaccine studies
 
 # Load libraries ----
 library(tibble)

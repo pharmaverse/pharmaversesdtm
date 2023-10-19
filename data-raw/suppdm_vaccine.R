@@ -1,5 +1,5 @@
 # Dataset: suppdm_vaccine
-# Description: SUPPDM SDTM dataset for Vaccine  studies
+# Description: SUPPDM SDTM dataset for Vaccine studies
 
 
 # Load libraries ----

@@ -1,5 +1,5 @@
 # Dataset: dm_vaccine
-# Description: DM SDTM dataset for Vaccine  studies
+# Description: DM SDTM dataset for Vaccine studies
 
 
 # Load libraries ----

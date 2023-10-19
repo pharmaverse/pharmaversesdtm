@@ -1,5 +1,5 @@
 # Dataset: is_vaccine
-# Description: SUPPIS SDTM dataset for Vaccine  studies
+# Description: SUPPIS SDTM dataset for Vaccine studies
 
 # Load libraries ----
 library(tibble)

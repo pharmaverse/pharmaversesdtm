@@ -1,5 +1,5 @@
 # Dataset: face_vaccine
-# Description: FACE SDTM dataset for Vaccine  studies
+# Description: FACE SDTM dataset for Vaccine studies
 
 # creating FACE ----
 ## Load libraries ----
