@@ -25,10 +25,16 @@
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/ae_ophtha.html</loc>
   </url>
   <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/ce_vaccine.html</loc>
+  </url>
+  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/cm.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/dm.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/dm_vaccine.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/ds.html</loc>
@@ -43,10 +49,19 @@
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/ex_ophtha.html</loc>
   </url>
   <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/ex_vaccine.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/face_vaccine.html</loc>
+  </url>
+  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/get_terms.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/is_vaccine.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/lb.html</loc>
@@ -88,10 +103,25 @@
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppae.html</loc>
   </url>
   <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppce_vaccine.html</loc>
+  </url>
+  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppdm.html</loc>
   </url>
   <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppdm_vaccine.html</loc>
+  </url>
+  <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppds.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppex_vaccine.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppface_vaccine.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/suppis_vaccine.html</loc>
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/supptr_onco.html</loc>
@@ -116,5 +146,8 @@
   </url>
   <url>
     <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/vs.html</loc>
+  </url>
+  <url>
+    <loc>https://pharmaverse.github.io/pharmaversesdtm/main/reference/vs_vaccine.html</loc>
   </url>
 </urlset>
