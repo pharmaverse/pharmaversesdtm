@@ -8,18 +8,27 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) derivations inside the pharmaverse family of packages.
+A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) datasets inside the pharmaverse family of packages. SDTM dataset specifications are described in: CDISC Submission Data Standards Team (2021) \url{https://www.cdisc.org/system/files/members/standard/foundational/SDTMIG\%20v3.4-FINAL_2022-07-21.pdf}.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://pharmaverse.github.io/pharmaversesdtm}
+  \item \url{https://pharmaverse.github.io/pharmaversesdtm/main/}
   \item \url{https://github.com/pharmaverse/pharmaversesdtm}
 }
 
 }
 \author{
 \strong{Maintainer}: Edoardo Mancini \email{edoardo.mancini@roche.com}
+
+Authors:
+\itemize{
+  \item Gayatri G
+  \item Kangjie Zhang
+  \item Pooja Kumari
+  \item Stefan Bundfuss
+  \item Zelos Zhu
+}
 
 }
 \keyword{internal}

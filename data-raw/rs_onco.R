@@ -1,15 +1,20 @@
-# RS
-# Please note that tr.R should run first
+# Dataset: rs
+# Description: RS test SDTM dataset for Oncology studies
 
+# Please note that tr_onco.R should run first
+
+# Load libraries -----
 library(dplyr)
 library(tidyselect)
 library(admiral)
 library(metatools)
 
-# Reading input data
+# Create rs ----
+
+## Read input data ----
 data("tr_onco")
 
-# Converting blank to NA
+## Convert blank to NA ----
 tr <- convert_blanks_to_na(tr_onco)
 
 keyvar <- c(
@@ -17,7 +22,7 @@ keyvar <- c(
   "TRDTC", "VISIT", "VISITNUM", "TRDY", "TRACPTFL"
 )
 
-# Deriving PCHG
+## Derive PCHG ----
 sumdiam1 <- tr %>%
   filter(TRTESTCD == "SUMDIAM") %>%
   select(., c(all_of(keyvar), TRLNKGRP, TRSTRESN, TRSTAT, TRREASND))
@@ -32,7 +37,7 @@ sumdiam <- left_join(sumdiam1, sumb,
 ) %>%
   mutate("PCHG" = (TRSTRESN - BASE) * 100 / BASE)
 
-# Dummy Data Nadir Not Used In PD Derivation (>5 mm and 20% increase from nadir)
+## Dummy Data Nadir Not Used In PD Derivation (>5 mm and 20% increase from nadir) ----
 trgresp <- sumdiam %>% mutate(
   "TRGRESP" = case_when(
     !is.na(PCHG) & PCHG <= -100 ~ "CR",
@@ -46,7 +51,7 @@ trgresp <- sumdiam %>% mutate(
   "TRTESTCD" = "TRGRESP"
 )
 
-# Select Non-target Response Per Visit
+## Select Non-target Response Per Visit ----
 ntar <- tr %>%
   filter(TRTESTCD == "TUMSTATE" & TRGRPID == "NON-TARGET") %>%
   select(., c(all_of(keyvar), TRORRES, TRREASND)) %>%
@@ -73,7 +78,7 @@ ntrgresp <- ntar %>% mutate(
   "TRTESTCD" = "NTRGRESP"
 )
 
-# Select New Lesions Per Visit
+## Select New Lesions Per Visit ----
 nle <- tr %>%
   filter(TRTESTCD == "TUMSTATE" & TRGRPID == "NEW") %>%
   select(., c(all_of(keyvar), TRORRES)) %>%
@@ -93,11 +98,11 @@ newlprog <- nle %>% mutate(
   "TRTESTCD" = "NEWLPROG"
 )
 
-# Merging All Visit Level Data
+## Merge  All Visit Level Data ----
 rs1 <- full_join(trgresp, ntrgresp, by = c(all_of(keyvar)))
 rs2 <- full_join(rs1, newlprog, by = c(all_of(keyvar)))
 
-# Deriving Overall Response
+## Derive Overall Response ----
 ovrlresp <- rs2 %>%
   filter(VISITNUM > 3) %>%
   mutate(
@@ -132,7 +137,7 @@ ovrlresp <- rs2 %>%
     )
   )
 
-# Setting All Data And Adding Other Variables
+## Set All Data And Add Other Variables ----
 rs5 <- bind_rows(
   select(trgresp, c(all_of(keyvar), "TRREASND", "TRTESTCD", "TRGRESP"))
   %>% rename("RSORRES" = "TRGRESP"),
@@ -170,7 +175,7 @@ rs5 <- bind_rows(
     "RSSTAT" = case_when(!is.na(RSREASND) ~ "NOT DONE")
   )
 
-# RSSEQ
+## RSSEQ ----
 rs6 <- rs5 %>%
   arrange(
     STUDYID, USUBJID, VISITNUM, RSDTC,
@@ -180,7 +185,7 @@ rs6 <- rs5 %>%
   mutate(RSSEQ = row_number()) %>%
   ungroup()
 
-# Creating RS
+## Create labels and final dataset ----
 rs <- select(rs6, c(
   STUDYID, DOMAIN, USUBJID, RSSEQ, RSLNKGRP, RSTESTCD,
   RSTEST, RSCAT, RSORRES, RSSTRESC,
@@ -210,6 +215,8 @@ rs_onco <- rs %>% add_labels(
   RSDY = "Study Day of Response Assessment"
 )
 
-attr(rs_onco, "label") <- "Disease Response"
+# Label dataset ----
+attr(rs_onco, "label") <- "Disease Response and Clin Classification"
 
-save(rs_onco, file = "data/rs_onco.rda", compress = "bzip2")
+# Save dataset ----
+usethis::use_data(rs_onco, overwrite = TRUE)

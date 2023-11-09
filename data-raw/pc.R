@@ -1,26 +1,29 @@
-library(haven) # Load xpt
+# Dataset: PC
+# Description: Create PC test SDTM dataset
+
+# Load libraries ----
+library(haven)
 library(plyr)
-library(dplyr) # apply distincts
+library(dplyr)
 library(lubridate)
-library(ggplot2)
 library(labelled)
 library(admiral)
 
+# Create pc ----
 data("ex")
 data("dm")
 
-# set seed to get same results each run
+## set seed to get same results each run ----
 set.seed(999)
 
-# Remove screen failures, they will not make it to drug infusion
+## Remove screen failures, they will not make it to drug infusion ----
 dm1 <- dm %>%
   filter(ARMCD != "Scrnfail")
 
-# use subjects in both datasets (ex,dm1) to create pc
+## use subjects in both datasets (ex,dm1) to create pc ----
 dmex <- merge(dm1[, c(1, 3)], ex, by = c("STUDYID", "USUBJID"))
 
-# I'm going to calculate only PC on Baseline,
-# so going to filter only visit = BASELINE
+## Calculate only PC on Baseline, so filter only visit = BASELINE ----
 dmex1 <- dmex %>%
   filter(VISIT == "BASELINE")
 
@@ -40,7 +43,7 @@ noise <- runif(n = nrows, min = -0.05, max = 0.05)
 dmex1$K <- 0.7 + noise
 dmex1$V <- dmex1$EXDOSE / (dmex1$K)
 
-# init dataset
+## Start setting up dataset
 PC <- NULL
 for (t0 in t) {
   dmex1$t <- t0
@@ -69,7 +72,7 @@ for (t0 in t) {
   }
 }
 
-# Constant var
+## Constant vars ----
 PC$DOMAIN <- "PC"
 PC$PCTESTCD <- "XAN"
 PC$PCTEST <- "XANOMELINE"
@@ -80,36 +83,36 @@ PC$PCSPEC <- "PLASMA"
 PC$PCLLOQ <- 0.01
 PC$PCTPTNUM <- PC$t
 
-# PCSEQ;
+## PCSEQ; ----
 PC <- PC %>%
   group_by(STUDYID, USUBJID) %>%
   dplyr::mutate(PCSEQ = row_number())
 
-# Concentration related
-# Remove neg values due to pre-dose negative time
+## Concentration-related code ----
+### Remove neg values due to pre-dose negative time ----
 PC$Conc <- ifelse(PC$Conc < 0, 0, PC$Conc)
-
 
 PC$PCSTRESN <- PC$Conc
 
-# Usually as per SAP, only predose BLQ can be set to 0
+## Usually as per SAP, only predose BLQ can be set to 0 ----
 PC$PCSTRESN <- ifelse(PC$PCSTRESN < 0.01 & PC$t == -0.5, 0, PC$PCSTRESN)
 
 # otherwise set it to missing
 PC$PCSTRESN <- ifelse(PC$PCSTRESN < 0.01 & PC$t != -0.5, NA, PC$PCSTRESN)
 
-# set blqs if NA
+## set blqs if NA ----
 PC$Conc <- ifelse(PC$Conc < 0.01, "<BLQ", PC$Conc)
 PC$PCORRES <- PC$Conc
 PC$PCSTRESC <- PC$Conc
 
-# Probably can be done throw factors
+## PCTPT ----
 PC$PCTPT <- ifelse(PC$PCTPTNUM == -0.5, "Pre-dose",
   ifelse(PC$PCTPTNUM == 0.08, "5 Min Post-dose",
     ifelse(PC$PCTPTNUM == 0.5, "30 Min Post-dose", paste0(PC$PCTPTNUM, "h Post-dose"))
   )
 )
 
+## PCDTC ----
 PC$PCDTC <- format(as.Date(PC$EXSTDTC) + minutes(round(PC$t * 60)), "%Y-%m-%dT%H:%M:%S")
 PC$PCDY <- ifelse(PC$t == -0.5, -1,
   ifelse(PC$t == 48, 3,
@@ -117,16 +120,19 @@ PC$PCDY <- ifelse(PC$t == -0.5, -1,
   )
 )
 
+## Select vars of interest ----
 PC <- subset(PC, select = c(
   "STUDYID", "DOMAIN", "USUBJID", "PCSEQ", "PCTESTCD", "PCTEST",
   "PCORRES", "PCORRESU", "PCSTRESC", "PCSTRESN", "PCSTRESU",
   "PCNAM", "PCSPEC", "PCLLOQ", "VISIT", "VISITNUM", "PCDTC", "PCDY", "PCTPT", "PCTPTNUM"
 ))
+
+## Ungroup and sort ----
 pc <- PC %>%
   ungroup() %>%
   arrange(STUDYID, USUBJID, PCSEQ)
 
-# add labels
+## add labels ----
 pc <- pc %>%
   set_variable_labels(
     STUDYID = "Study Identifier",
@@ -151,12 +157,13 @@ pc <- pc %>%
     PCTPTNUM = "Planned Time Point Number"
   )
 
-
-# Some test to look the overall figure
+## Test to look the overall figure ----
 plot <- ggplot(pc, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
   geom_line() +
   geom_point()
 
+# Label dataset ----
+attr(pc, "label") <- "Pharmacokinetics Concentrations"
 
-# ---- Save output ----
-save(pc, file = "data/pc.rda", compress = "bzip2")
+# Save dataset ----
+usethis::use_data(pc, overwrite = TRUE)
