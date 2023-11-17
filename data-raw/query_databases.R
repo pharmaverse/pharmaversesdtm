@@ -6,7 +6,7 @@ library(dplyr)
 
 # Create smq dataset ----
 pregsmq <- tribble(
-  ~termname, ~scope,
+  ~termchar, ~scope,
   "Achromotrichia congenital", "narrow",
   "Craniosynostosis", "narrow",
   "Hypophosphatasia", "narrow",
@@ -36,7 +36,7 @@ pregsmq <- tribble(
   )
 
 bilismq <- tribble(
-  ~termname, ~scope,
+  ~termchar, ~scope,
   "Bile duct cancer recurrent", "narrow",
   "Bile duct cancer recurrent", "broad",
   "Bile duct squamous cell carcinoma", "narrow",
@@ -78,7 +78,7 @@ usethis::use_data(smq_db, overwrite = TRUE)
 
 # Create sdg dataset ----
 sdg_db <- tribble(
-  ~termname,
+  ~termchar,
   "AMINOSALICYLIC ACID",
   "AMINOSALICYLATE CALCIUM",
   "AMINOSALICYLATE CALCIUM ALUMINIUM",
