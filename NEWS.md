@@ -2,7 +2,7 @@
 
 ## New Features
 
-Following Vaccine Specific SDTM datasets have been added. (#4)
+The following Vaccine Specific SDTM datasets have been added. (#4)
 
  - `ce_vaccine`
  - `dm_vaccine`
@@ -14,6 +14,8 @@ Following Vaccine Specific SDTM datasets have been added. (#4)
  - `suppdm_vaccine`
  - `suppex_vaccine`
  - `suppface_vaccine`
+
+- `get_terms()` now expects `TERMCHAR` instead of `TERMNAME` in alignment with [this](https://github.com/pharmaverse/admiral/issues/2186) `{admiral}` issue. (#76)
 
 # pharmaversesdtm 0.1.1
 
