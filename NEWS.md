@@ -17,6 +17,8 @@
  
 - Oncology response data for iRECIST criteria (`rs_onco_irecist`) was added. (#32)
 
+- `get_terms()` now expects `TERMCHAR` instead of `TERMNAME` in alignment with [this](https://github.com/pharmaverse/admiral/issues/2186) `{admiral}` issue. (#76)
+
 # pharmaversesdtm 0.1.1
 
 ## Documentation
