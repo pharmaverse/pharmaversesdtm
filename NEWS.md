@@ -2,18 +2,20 @@
 
 ## New Features
 
-Following Vaccine Specific SDTM datasets have been added. (#4)
+- Following Vaccine Specific SDTM datasets have been added. (#4)
 
- - `ce_vaccine`
- - `dm_vaccine`
- - `ex_vaccine`
- - `face_vaccine`
- - `is_vaccine`
- - `vs_vaccine`
- - `suppce_vaccine`
- - `suppdm_vaccine`
- - `suppex_vaccine`
- - `suppface_vaccine`
+    - `ce_vaccine`
+    - `dm_vaccine`
+    - `ex_vaccine`
+    - `face_vaccine`
+    - `is_vaccine`
+    - `vs_vaccine`
+    - `suppce_vaccine`
+    - `suppdm_vaccine`
+    - `suppex_vaccine`
+    - `suppface_vaccine`
+ 
+- Oncology response data for iRECIST criteria (`rs_onco_irecist`) was added. (#32)
 
 # pharmaversesdtm 0.1.1
 
