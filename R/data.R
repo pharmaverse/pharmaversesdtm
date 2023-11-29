@@ -2,7 +2,7 @@
 #'
 #' An updated SDTM AE dataset that uses the CDISC pilot project
 #'
-#' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_ae.rda}
+#' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda}
 "ae"
 
 #' Ophthalmology Adverse Events Dataset
@@ -30,7 +30,7 @@
 #'
 #' An updated SDTM DS dataset that uses the CDISC pilot project
 #'
-#' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_ds.rda}
+#' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda}
 #' @author Gopi Vegesna
 "ds"
 
@@ -58,7 +58,7 @@
 #'
 #' An updated SDTM LB dataset that uses data from the CDISC pilot project
 #'
-#' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_lb.rda}
+#' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda}
 #' @author Annie Yang
 "lb"
 
@@ -81,7 +81,7 @@
 #'
 #' A SDTM PC dataset simulated by Antonio Rodríguez Contestí
 #'
-#' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_pc.rda}
+#' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda}
 #' @author Antonio Rodríguez Contestí
 "pc"
 
@@ -89,7 +89,7 @@
 #'
 #' A SDTM PP dataset simulated by Antonio Rodríguez Contestí
 #'
-#' @source \url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_pp.rda}
+#' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda}
 #' @author Antonio Rodríguez Contestí
 "pp"
 

@@ -8,7 +8,7 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1191 rows and 35 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_ae.rda}
+\url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda}
 }
 \usage{
 ae

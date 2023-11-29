@@ -8,7 +8,7 @@
 An object of class \code{data.frame} with 2352 rows and 14 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiral.test/blob/main/data/admiral_pp.rda}
+\url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda}
 }
 \usage{
 pp
