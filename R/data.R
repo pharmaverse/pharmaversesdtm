@@ -154,6 +154,14 @@
 #' @author Stefan Bundfuss
 "rs_onco_recist"
 
+#' Disease Response Dataset (iRECIST)
+#'
+#' A SDTM RS dataset using iRECIST. The dataset contains just a few patients.
+#' It is intended for vignettes and examples of ADaM dataset creation.
+#'
+#' @author Rohan Thampi
+"rs_onco_irecist"
+
 #' Supplemental Adverse Events Dataset
 #'
 #' A SDTM SUPPAE dataset from the CDISC pilot project
