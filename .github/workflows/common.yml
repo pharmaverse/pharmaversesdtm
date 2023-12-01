@@ -128,7 +128,7 @@ jobs:
       r-version: "${{ needs.get_r_version.outputs.r-version }}"
   templates:
     name: Check Templates
-    uses: pharmaverse/admiralci/.github/workflows/check-templates.yml@no-get-r-version-job
+    uses: pharmaverse/admiralci/.github/workflows/check-templates.yml@main
     secrets: inherit
     if: github.event.review.state == 'approved'
     needs: get_r_version
