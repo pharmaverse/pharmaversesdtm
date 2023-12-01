@@ -3,7 +3,7 @@ library(dplyr)
 
 # Tribble data: -----------------------------------------------------------
 rs_onco_irecist <- tibble::tribble(
-       ~USUBJID, ~RSSEQ, ~RSLNKGRP,  ~RSTESTCD,                             ~RSTEST,           ~RSORRES,          ~RSSTRESC,    ~RSSTAT,                        ~RSREASND, ~VISITNUM,            ~VISIT,       ~RSDTC, ~RSDY,
+  ~USUBJID,      ~RSSEQ, ~RSLNKGRP,  ~RSTESTCD,                             ~RSTEST,           ~RSORRES,          ~RSSTRESC,    ~RSSTAT,                        ~RSREASND, ~VISITNUM,            ~VISIT, ~RSDTC,       ~RSDY,
   "01-701-1015",     7L,      "A2", "OVRLRESP",                  "Overall Response",             "iUPD",             "iUPD",         NA,                               NA,         7,          "WEEK 6", "2014-02-12",   42L,
   "01-701-1015",     8L,        NA, "NTRGRESP",               "Non-target Response", "NON-iCR/NON-iUPD", "NON-iCR/NON-iUPD",         NA,                               NA,         7,          "WEEK 6", "2014-02-12",   42L,
   "01-701-1015",     9L,        NA,  "TRGRESP",                   "Target Response",             "iUPD",             "iUPD",         NA,                               NA,         7,          "WEEK 6", "2014-02-12",   42L,
@@ -380,15 +380,19 @@ rs_onco_irecist <- tibble::tribble(
   "01-703-1119",    18L,        NA,  "TRGRESP",                   "Target Response",               "NE",               "NE",         NA,                               NA,         9,         "WEEK 12", "2013-05-17",   84L,
   "01-701-1130",    37L,        NA, "IRECLIND", "Last iRECIST Assessment Indicator",                "N",                "N",         NA,                               NA,        12,         "WEEK 24", "2014-08-02",  168L,
   "01-701-1130",    38L,        NA,  "NEWLIND",              "New Lesion Indicator",                "Y",                "Y",         NA,                               NA,        12,         "WEEK 24", "2014-08-02",  168L
+) %>%
+  mutate(
+    STUDYID = "CDISCPILOT01",
+    DOMAIN = "RS",
+    RSCAT = "iRECIST",
+    RSEVAL = "INVESTIGATOR",
+    RSEVALID = NA_character_,
+    RSACPTFL = NA_character_
   ) %>%
-  mutate(STUDYID  = "CDISCPILOT01",
-         DOMAIN   = "RS",
-         RSCAT    = "iRECIST",
-         RSEVAL   = "INVESTIGATOR",
-         RSEVALID = NA_character_,
-         RSACPTFL = NA_character_) %>%
-  relocate(STUDYID,DOMAIN,USUBJID,RSSEQ,RSLNKGRP,RSTESTCD,RSTEST,RSCAT,RSORRES,
-           RSSTRESC,RSSTAT,RSREASND,RSEVAL,RSEVALID,RSACPTFL,VISITNUM,VISIT,RSDTC,
-           RSDY)
+  relocate(
+    STUDYID, DOMAIN, USUBJID, RSSEQ, RSLNKGRP, RSTESTCD, RSTEST, RSCAT, RSORRES,
+    RSSTRESC, RSSTAT, RSREASND, RSEVAL, RSEVALID, RSACPTFL, VISITNUM, VISIT, RSDTC,
+    RSDY
+  )
 
 usethis::use_data(rs_onco_irecist, overwrite = TRUE)
