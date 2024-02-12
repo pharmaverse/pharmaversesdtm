@@ -12,12 +12,14 @@ sv <- sv %>%
   group_by(USUBJID, VISITNUM) %>%
   mutate(
     ASEQ = row_number(),
-    n=n()) %>%
+    n = n()
+  ) %>%
   mutate(
     VISIT = ifelse(n > 1, paste0("UNSCHEDULED ", floor(VISITNUM), ".", ASEQ), VISIT),
-    VISITNUM = ifelse(n > 1, as.numeric(paste0(floor(VISITNUM), ".", ASEQ)), VISITNUM)) %>%
+    VISITNUM = ifelse(n > 1, as.numeric(paste0(floor(VISITNUM), ".", ASEQ)), VISITNUM)
+  ) %>%
   ungroup() %>%
-  select(-ASEQ,-n)
+  select(-ASEQ, -n)
 
 # Label dataset ----
 attr(sv, "label") <- "Subject Visits"
