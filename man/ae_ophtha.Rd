@@ -8,12 +8,12 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1191 rows and 36 columns.
 }
 \source{
-Constructed using `ae` from the `{pharmaversesdtm}` package # nolint
+Constructed using \code{ae} from the \code{{pharmaversesdtm}} package # nolint
 }
 \usage{
 ae_ophtha
 }
 \description{
-An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`
+An example Adverse Events SDTM dataset with ophthalmology-specific variable \code{AELAT}
 }
 \keyword{datasets}

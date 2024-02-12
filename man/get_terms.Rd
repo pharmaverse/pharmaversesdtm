@@ -2,8 +2,8 @@
 % Please edit documentation in R/get_terms.R
 \name{get_terms}
 \alias{get_terms}
-\title{An example function as expected by the `get_terms_fun` parameter of
-`admiral::create_query_data()`}
+\title{An example function as expected by the \code{get_terms_fun} parameter of
+\code{admiral::create_query_data()}}
 \usage{
 get_terms(basket_select, version, keep_id, temp_env)
 }
@@ -12,11 +12,11 @@ get_terms(basket_select, version, keep_id, temp_env)
 
 \item{version}{MedDRA version}
 
-\item{keep_id}{Should `GRPID` be included in the output?}
+\item{keep_id}{Should \code{GRPID} be included in the output?}
 
 \item{temp_env}{Temporary environment}
 }
 \description{
-An example function as expected by the `get_terms_fun` parameter of
-`admiral::create_query_data()`
+An example function as expected by the \code{get_terms_fun} parameter of
+\code{admiral::create_query_data()}
 }
