@@ -5,6 +5,7 @@
 library(haven)
 library(admiral)
 library(dplyr)
+library(metatools)
 raw_sv <- read_xpt("https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true") # nolint
 sv <- convert_blanks_to_na(raw_sv)
 
@@ -19,7 +20,12 @@ sv <- sv %>%
     VISITNUM = ifelse(n > 1, as.numeric(paste0(floor(VISITNUM), ".", ASEQ)), VISITNUM)
   ) %>%
   ungroup() %>%
-  select(-ASEQ, -n)
+  select(-ASEQ, -n) %>%
+  add_labels(
+    VISIT = "Visit Name",
+    VISITNUM = "Visit Number"
+  )
+
 
 # Label dataset ----
 attr(sv, "label") <- "Subject Visits"
