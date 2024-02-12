@@ -219,7 +219,7 @@
 #' Subject Visits Dataset
 #'
 #' A SDTM SV dataset from the CDISC pilot project. Duplicate observation for group
-#' variable USUBJID and VISIT is corrected.
+#' variable `USUBJID` and `VISIT` is corrected.
 #'
 #' @source \url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true} # nolint
 "sv"

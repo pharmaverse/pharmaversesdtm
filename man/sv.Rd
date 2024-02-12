@@ -15,6 +15,6 @@ sv
 }
 \description{
 A SDTM SV dataset from the CDISC pilot project. Duplicate observation for group
-variable USUBJID and VISIT is corrected.
+variable `USUBJID` and `VISIT` is corrected.
 }
 \keyword{datasets}
