@@ -14,6 +14,7 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 sv
 }
 \description{
-A SDTM SV dataset from the CDISC pilot project
+A SDTM SV dataset from the CDISC pilot project. Duplicate observation for group
+variable \code{USUBJID} and \code{VISIT} is corrected.
 }
 \keyword{datasets}

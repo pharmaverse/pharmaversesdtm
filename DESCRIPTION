@@ -21,7 +21,8 @@ URL: https://pharmaverse.github.io/pharmaversesdtm/main/, https://github.com/pha
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
 Suggests:
     devtools,
     lintr,
