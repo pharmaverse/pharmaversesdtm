@@ -144,7 +144,7 @@ pp_tmax$PPORRES <- pp_tmax$TMAX
 PP <- bind_rows(pp_tmax, pp_npts, pp_lambda, pp_Ke, pp_cmax, pp_Clast, pp_AUC, pp_AUC_inf)
 
 # Constant variables
-PP$PPCAT <- "COMPARTMENTAL"
+PP$PPCAT <- unique(pc$PCTEST)
 PP$PPSTRESC <- PP$PPORRES
 PP$PPSTRESN <- PP$PPORRES
 PP$PPSTRESU <- PP$PPORRESU
