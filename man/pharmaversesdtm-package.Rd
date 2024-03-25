@@ -4,7 +4,7 @@
 \name{pharmaversesdtm-package}
 \alias{pharmaversesdtm}
 \alias{pharmaversesdtm-package}
-\title{pharmaversesdtm: Test Data for the Pharmaverse Family of Packages}
+\title{pharmaversesdtm: SDTM Test Data for the 'Pharmaverse' Family of Packages}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
