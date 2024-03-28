@@ -1,3 +1,10 @@
+# pharmaversesdtm 0.3.0
+
+## New Features
+
+ - Add URINE records to `pc` and `pp`. (#90)
+ - Update `PPCAT` so that it corresponds to `PCTEST`. (#91)
+
 # pharmaversesdtm 0.2.0
 
 ## New Features
