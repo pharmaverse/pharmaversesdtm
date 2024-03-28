@@ -64,6 +64,9 @@ for (t0 in t) {
       (dmex1$k0 * (1 - exp(-dmex1$K * t0))) / (dmex1$V * dmex1$K), 0
     )
   }
+  # Urine estimate
+  dmex1$Urine <- -dmex1$K * t0 + dmex1$V / 2.5
+
   if (t0 == -0.5) { # If first timepoint
 
     PC <- dmex1
@@ -83,10 +86,22 @@ PC$PCSPEC <- "PLASMA"
 PC$PCLLOQ <- 0.01
 PC$PCTPTNUM <- PC$t
 
-## PCSEQ; ----
-PC <- PC %>%
-  group_by(STUDYID, USUBJID) %>%
-  dplyr::mutate(PCSEQ = row_number())
+## PCTPT ----
+PC$PCTPT <- ifelse(PC$PCTPTNUM == -0.5, "Pre-dose",
+                   ifelse(PC$PCTPTNUM == 0.08, "5 Min Post-dose",
+                          ifelse(PC$PCTPTNUM == 0.5, "30 Min Post-dose", paste0(PC$PCTPTNUM, "h Post-dose"))))
+
+
+PC_Urine <- PC %>%
+  filter(PCTPTNUM %in% c(6.00, 12.00, 24.00, 48.00)) %>%
+  mutate(PCSPEC = "URINE",
+         PCTPT = case_when(PCTPT == "6h Post-dose" ~ "0-6h Post-dose",
+                           PCTPT == "12h Post-dose" ~ "6-12h Post-dose",
+                           PCTPT == "24h Post-dose" ~ "12-24h Post-dose",
+                           PCTPT == "48h Post-dose" ~ "24-48h Post-dose"),
+         Conc = Urine)
+
+PC <- bind_rows(PC, PC_Urine)
 
 ## Concentration-related code ----
 ### Remove neg values due to pre-dose negative time ----
@@ -105,13 +120,6 @@ PC$Conc <- ifelse(PC$Conc < 0.01, "<BLQ", PC$Conc)
 PC$PCORRES <- PC$Conc
 PC$PCSTRESC <- PC$Conc
 
-## PCTPT ----
-PC$PCTPT <- ifelse(PC$PCTPTNUM == -0.5, "Pre-dose",
-  ifelse(PC$PCTPTNUM == 0.08, "5 Min Post-dose",
-    ifelse(PC$PCTPTNUM == 0.5, "30 Min Post-dose", paste0(PC$PCTPTNUM, "h Post-dose"))
-  )
-)
-
 ## PCDTC ----
 PC$PCDTC <- format(as.Date(PC$EXSTDTC) + minutes(round(PC$t * 60)), "%Y-%m-%dT%H:%M:%S")
 PC$PCDY <- ifelse(PC$t == -0.5, -1,
@@ -119,6 +127,11 @@ PC$PCDY <- ifelse(PC$t == -0.5, -1,
     ifelse(PC$t >= 24, 2, 1)
   )
 )
+
+## PCSEQ; ----
+PC <- PC %>%
+  group_by(STUDYID, USUBJID) %>%
+  dplyr::mutate(PCSEQ = row_number())
 
 ## Select vars of interest ----
 PC <- subset(PC, select = c(
@@ -157,8 +170,19 @@ pc <- pc %>%
     PCTPTNUM = "Planned Time Point Number"
   )
 
+## Subset for plots
+pc_plasma <- pc %>%
+  filter(PCSPEC == "PLASMA")
+
+pc_urine <- pc %>%
+  filter(PCSPEC == "URINE")
+
 ## Test to look the overall figure ----
-plot <- ggplot(pc, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
+plot <- ggplot(pc_plasma, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
+  geom_line() +
+  geom_point()
+
+plot2 <- ggplot(pc_urine, aes(x = PCTPTNUM, y = PCSTRESN, group = USUBJID)) +
   geom_line() +
   geom_point()
 

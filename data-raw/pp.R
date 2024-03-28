@@ -20,21 +20,30 @@ blq_usubjid <- pc %>%
 ## Remove from PC, subjects with all blq (placebos) ----
 remove_usubjid <- blq_usubjid %>% filter(PPORRES == 0)
 
-pc1 <- anti_join(pc, remove_usubjid, by = c("STUDYID", "DOMAIN", "USUBJID"))
+pc0 <- anti_join(pc, remove_usubjid, by = c("STUDYID", "DOMAIN", "USUBJID")) %>%
+  rename(PPCAT = PCTEST, PPSPEC = PCSPEC)
+
+pc1 <- pc0 %>%
+  filter(PPSPEC == "PLASMA")
+
+pc1u <- pc0 %>%
+  filter(PPSPEC == "URINE")
 
 # PP usually only present values for applicable subjects;
 ## Calculate Cmax ----
 pp_cmax <- pc1 %>%
-  group_by(STUDYID, DOMAIN, USUBJID) %>%
+  group_by(STUDYID, DOMAIN, USUBJID, PPCAT, PPSPEC) %>%
   summarise(CMAX = max(PCSTRESN, na.rm = TRUE))
 
 ## Calculate Tmax ----
 pp_tmax <- pc1 %>%
-  group_by(STUDYID, DOMAIN, USUBJID) %>%
+  group_by(STUDYID, DOMAIN, USUBJID, PPCAT, PPSPEC) %>%
   filter(PCSTRESN == max(PCSTRESN, na.rm = TRUE)) %>%
-  arrange(STUDYID, DOMAIN, USUBJID, PCTPTNUM)
+  arrange(STUDYID, DOMAIN, USUBJID, PCTPTNUM) %>%
+  glimpse()
+
 pp_tmax$TMAX <- pp_tmax$PCTPTNUM
-pp_tmax <- subset(pp_tmax, select = c("STUDYID", "DOMAIN", "USUBJID", "TMAX"))
+pp_tmax <- subset(pp_tmax, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC", "TMAX"))
 
 ## AUC 0_tlast ----
 pc2 <- pc1
@@ -52,22 +61,22 @@ for (idx in 1:nrows) {
 }
 
 pp_AUC <- pc2 %>%
-  group_by(STUDYID, DOMAIN, USUBJID) %>%
+  group_by(STUDYID, DOMAIN, USUBJID, PPCAT, PPSPEC) %>%
   summarise(AUC = max(AUC, na.rm = TRUE))
 
 pc2 <- subset(pc2, select = -AUC)
 
 # Elimination rate
-pc3 <- merge(pc2, pp_tmax, by = c("STUDYID", "DOMAIN", "USUBJID"))
+pc3 <- merge(pc2, pp_tmax, by = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC"))
 pc3 <- pc3 %>% filter(PCTPTNUM >= TMAX)
 
 pp_npts <- pc3 %>%
-  group_by(STUDYID, DOMAIN, USUBJID) %>%
+  group_by(STUDYID, DOMAIN, USUBJID, PPCAT, PPSPEC) %>%
   summarise(npts = n())
 
 ## Break up pc3 by usubjid, then fit the specified model to each piece ----
 # return a list
-models <- plyr::dlply(pc3, c("STUDYID", "DOMAIN", "USUBJID"), function(df) {
+models <- plyr::dlply(pc3, c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC"), function(df) {
   lm(-log(PCSTRESN, base = exp(1)) ~ PCTPTNUM, data = df)
 })
 # summarym2=lapply(models,summary)
@@ -75,28 +84,41 @@ models <- plyr::dlply(pc3, c("STUDYID", "DOMAIN", "USUBJID"), function(df) {
 # Apply coef to each model and return a data frame
 pp_Ke <- plyr::ldply(models, coef)
 pp_Ke$Ke <- pp_Ke$PCTPTNUM
-pp_Ke <- subset(pp_Ke, select = c("STUDYID", "DOMAIN", "USUBJID", "Ke"))
+pp_Ke <- subset(pp_Ke, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC", "Ke"))
 
 
 ## Halflife ----
 pp_lambda <- pp_Ke
 pp_lambda$lambda <- 0.693 / pp_lambda$Ke
-pp_lambda <- subset(pp_lambda, select = c("STUDYID", "DOMAIN", "USUBJID", "lambda"))
+pp_lambda <- subset(pp_lambda, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC", "lambda"))
 
 ## AUC_0_inf ----
 pc4 <- pc3 %>%
-  group_by(STUDYID, DOMAIN, USUBJID) %>%
+  group_by(STUDYID, DOMAIN, USUBJID, PPCAT, PPSPEC) %>%
   mutate(min = min(PCSTRESN, na.rm = TRUE))
 
 pp_Clast <- pc4
 pp_Clast$Clast <- pp_Clast$min
-pp_Clast <- subset(pp_Clast, select = c("STUDYID", "DOMAIN", "USUBJID", "Clast"))
+pp_Clast <- subset(pp_Clast, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC", "Clast"))
 
-pc5 <- merge(pc4, pp_Ke, by = c("STUDYID", "DOMAIN", "USUBJID"))
-pp_AUC_inf <- merge(pc5, pp_AUC, by = c("STUDYID", "DOMAIN", "USUBJID"))
+pc5 <- merge(pc4, pp_Ke, by = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC"))
+pp_AUC_inf <- merge(pc5, pp_AUC, by = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC"))
 
 pp_AUC_inf$AUC_inf <- pp_AUC_inf$AUC + (pp_AUC_inf$min) / pp_AUC_inf$Ke
-pp_AUC_inf <- subset(pp_AUC_inf, select = c("STUDYID", "DOMAIN", "USUBJID", "AUC_inf"))
+pp_AUC_inf <- subset(pp_AUC_inf, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "PPSPEC", "AUC_inf"))
+
+# Urine parameters
+# Ae
+pp_Ae <- pc1u %>%
+  group_by(STUDYID, DOMAIN, USUBJID, PPCAT, PPSPEC) %>%
+  summarise(pp_Ae = sum(PCSTRESN, na.rm = TRUE)) %>%
+  glimpse()
+
+# CLR
+pp_AUC_sub <- subset(pp_AUC, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "AUC"))
+pp_CLR <- merge(pp_Ae, pp_AUC_sub, by = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT")) %>%
+  mutate(pp_CLR = pp_Ae / AUC * 1000 / 60 )  %>%
+  glimpse()
 
 ## Add all require variables -----
 pp_AUC$PPTESTCD <- "AUCLST"
@@ -140,15 +162,25 @@ pp_tmax$PPORRESU <- "h"
 pp_tmax$PPORRES <- pp_tmax$TMAX
 # R2ADJ	C85553	R Squared Adjusted
 
+# Urine parameters
+pp_Ae$PPTESTCD <- "RCAMINT"
+pp_Ae$PPTEST <- "Ae"
+pp_Ae$PPORRESU <- "mg"
+pp_Ae$PPORRES <- pp_Ae$pp_Ae
+
+pp_CLR$PPTESTCD <- "RENALCL"
+pp_CLR$PPTEST <- "CLR"
+pp_CLR$PPORRESU <- "mL/min"
+pp_CLR$PPORRES <- pp_CLR$pp_CLR
+
+
 ## Join all data ----
-PP <- bind_rows(pp_tmax, pp_npts, pp_lambda, pp_Ke, pp_cmax, pp_Clast, pp_AUC, pp_AUC_inf)
+PP <- bind_rows(pp_tmax, pp_npts, pp_lambda, pp_Ke, pp_cmax, pp_Clast, pp_AUC, pp_AUC_inf, pp_Ae, pp_CLR)
 
 # Constant variables
-PP$PPCAT <- unique(pc$PCTEST)
 PP$PPSTRESC <- PP$PPORRES
 PP$PPSTRESN <- PP$PPORRES
 PP$PPSTRESU <- PP$PPORRESU
-PP$PPSPEC <- "PLASMA"
 PP$DOMAIN <- "PP"
 
 ## Sort ----
