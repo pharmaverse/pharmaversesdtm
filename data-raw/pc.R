@@ -88,18 +88,24 @@ PC$PCTPTNUM <- PC$t
 
 ## PCTPT ----
 PC$PCTPT <- ifelse(PC$PCTPTNUM == -0.5, "Pre-dose",
-                   ifelse(PC$PCTPTNUM == 0.08, "5 Min Post-dose",
-                          ifelse(PC$PCTPTNUM == 0.5, "30 Min Post-dose", paste0(PC$PCTPTNUM, "h Post-dose"))))
+  ifelse(PC$PCTPTNUM == 0.08, "5 Min Post-dose",
+    ifelse(PC$PCTPTNUM == 0.5, "30 Min Post-dose", paste0(PC$PCTPTNUM, "h Post-dose"))
+  )
+)
 
 
 PC_Urine <- PC %>%
   filter(PCTPTNUM %in% c(6.00, 12.00, 24.00, 48.00)) %>%
-  mutate(PCSPEC = "URINE",
-         PCTPT = case_when(PCTPT == "6h Post-dose" ~ "0-6h Post-dose",
-                           PCTPT == "12h Post-dose" ~ "6-12h Post-dose",
-                           PCTPT == "24h Post-dose" ~ "12-24h Post-dose",
-                           PCTPT == "48h Post-dose" ~ "24-48h Post-dose"),
-         Conc = Urine)
+  mutate(
+    PCSPEC = "URINE",
+    PCTPT = case_when(
+      PCTPT == "6h Post-dose" ~ "0-6h Post-dose",
+      PCTPT == "12h Post-dose" ~ "6-12h Post-dose",
+      PCTPT == "24h Post-dose" ~ "12-24h Post-dose",
+      PCTPT == "48h Post-dose" ~ "24-48h Post-dose"
+    ),
+    Conc = Urine
+  )
 
 PC <- bind_rows(PC, PC_Urine)
 

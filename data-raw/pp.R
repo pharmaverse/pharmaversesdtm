@@ -117,7 +117,7 @@ pp_Ae <- pc1u %>%
 # CLR
 pp_AUC_sub <- subset(pp_AUC, select = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT", "AUC"))
 pp_CLR <- merge(pp_Ae, pp_AUC_sub, by = c("STUDYID", "DOMAIN", "USUBJID", "PPCAT")) %>%
-  mutate(pp_CLR = pp_Ae / AUC * 1000 / 60 )  %>%
+  mutate(pp_CLR = pp_Ae / AUC * 1000 / 60) %>%
   glimpse()
 
 ## Add all require variables -----
