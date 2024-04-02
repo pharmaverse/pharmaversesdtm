@@ -8,6 +8,7 @@ library(dplyr)
 library(lubridate)
 library(labelled)
 library(admiral)
+library(ggplot2)
 
 # Create pc ----
 data("ex")
@@ -103,6 +104,12 @@ PC_Urine <- PC %>%
       PCTPT == "12h Post-dose" ~ "6-12h Post-dose",
       PCTPT == "24h Post-dose" ~ "12-24h Post-dose",
       PCTPT == "48h Post-dose" ~ "24-48h Post-dose"
+    ),
+    PCTPTNUM = case_when(
+      PCTPT == "0-6h Post-dose" ~ 3,
+      PCTPT == "6-12h Post-dose" ~ 9,
+      PCTPT == "12-24h Post-dose" ~ 18,
+      PCTPT == "24-48h Post-dose" ~ 37
     ),
     Conc = Urine
   )
