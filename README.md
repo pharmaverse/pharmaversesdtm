@@ -21,7 +21,7 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
   install.packages("remotes")
 }
 
-remotes::install_github("pharmaverse/pharmaversesdtm", ref = "devel")
+remotes::install_github("pharmaverse/pharmaversesdtm", ref = "main")
 ```
 
 # Data Sources
