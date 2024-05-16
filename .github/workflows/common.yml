@@ -34,8 +34,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  R_VERSION: "4.1"
-  
+  R_VERSION: "release"
+
 jobs:
   get_r_version:
     name: Get R version
@@ -61,13 +61,6 @@ jobs:
     needs: get_r_version
     with:
       r-version: "${{ needs.get_r_version.outputs.r-version }}"
-  readme:
-    name: Render README
-    uses: pharmaverse/admiralci/.github/workflows/readme-render.yml@main
-    if: github.event_name == 'push'
-    needs: get_r_version
-    with:
-      r-version: "${{ needs.get_r_version.outputs.r-version }}"
   validation:
     name: Validation
     uses: pharmaverse/admiralci/.github/workflows/r-pkg-validation.yml@main
@@ -87,20 +80,15 @@ jobs:
     if: github.event_name == 'push' || startsWith(github.ref, 'refs/tags/v')
     needs: get_r_version
     with:
-      r-version: "${{ needs.get_r_version.outputs.r-version }}"
-      # Whether to skip multiversion docs
-      # Note that if you have multiple versions of docs,
-      # your URL links are likely to break due to path changes
-      skip-multiversion-docs: false
-      latest-tag-alt-name: cran-release
-      multiversion-docs-landing-page: cran-release
-      branches-or-tags-to-list: >-
-        ^cran-release$|^main$|^v([0-9]+\\.)?([0-9]+\\.)?([0-9]+)$
+      r-version: "release"
+      skip-multiversion-docs: true
+    secrets:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
   linter:
     name: Lint
     uses: pharmaverse/admiralci/.github/workflows/lintr.yml@main
-    if: github.event_name == 'pull_request'
     needs: get_r_version
+    if: github.event_name == 'pull_request'
     with:
       r-version: "${{ needs.get_r_version.outputs.r-version }}"
   links:
@@ -130,7 +118,13 @@ jobs:
     name: Check Templates
     uses: pharmaverse/admiralci/.github/workflows/check-templates.yml@main
     secrets: inherit
-    if: github.event.review.state == 'approved'
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     needs: get_r_version
     with:
       r-version: "${{ needs.get_r_version.outputs.r-version }}"
+  vbump:
+    name: Version Bump 🤜🤛
+    if: github.event_name == 'push'
+    uses: insightsengineering/r.pkg.template/.github/workflows/version-bump.yaml@main
+    secrets:
+      REPO_GITHUB_TOKEN: ${{ secrets.PHARMAVERSE_BOT }}
