@@ -100,7 +100,7 @@ supprs_onco_imwg <- tibble::tribble(
   "01-701-1148",       36L,  "NACTDT",     "New Anti-Cancer Therapy Date", "2014-02-07",
   "01-701-1302",        7L,   "PDIFL",     "Progressive Disease: Imaging",          "Y",
   "01-701-1345",       26L,   "PDOFL",       "Progressive Disease: Other",          "Y",
-  "01-701-1287",        7L,   "PDOFL",       "Progressive Disease: Other",          "Y",
+  "01-701-1287",       26L,   "PDOFL",       "Progressive Disease: Other",          "Y",
   "01-701-1287",        7L,  "NACTDT",     "New Anti-Cancer Therapy Date", "2014-05-30",
   "01-701-1287",       16L,  "NACTDT",     "New Anti-Cancer Therapy Date", "2014-05-30",
   "01-701-1287",       26L,  "NACTDT",     "New Anti-Cancer Therapy Date", "2014-05-30",
