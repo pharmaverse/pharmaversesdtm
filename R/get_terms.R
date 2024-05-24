@@ -38,7 +38,7 @@ get_terms <- function(basket_select,
       select_id
     )
 
-    structure(
+    structure( # nolint: undesirable_function_linter
       temp_env$smq_db[is_in_smq & is_in_scope, keep_cols],
       names = names(keep_cols)
     )
@@ -63,7 +63,7 @@ get_terms <- function(basket_select,
       select_id
     )
 
-    structure(
+    structure( # nolint: undesirable_function_linter
       temp_env$sdg_db[is_in_sdq, keep_cols],
       names = names(keep_cols)
     )
