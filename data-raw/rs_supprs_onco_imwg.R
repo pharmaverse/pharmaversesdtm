@@ -72,7 +72,7 @@ rs_onco_imwg <- tibble::tribble(
   "01-702-1082",    16L,      "A3", "OVRLRESP", "Overall Response",     "CR",      "CR",      NA,        NA, "INVESTIGATOR",         9,         "WEEK 12", "2013-11-17",   84L,
   "01-703-1076",     7L,      "A2", "OVRLRESP", "Overall Response",     "PR",      "PR",      NA,        NA, "INVESTIGATOR",         7,          "WEEK 6", "2013-12-04",   42L,
   "01-703-1076",    16L,      "A3", "OVRLRESP", "Overall Response",     "NE",      "NE",      NA,        NA, "INVESTIGATOR",         9,         "WEEK 12", "2013-12-24",   84L
-  )%>%
+) %>%
   mutate(
     STUDYID = "CDISCPILOT01",
     DOMAIN = "RS",
@@ -111,13 +111,13 @@ supprs_onco_imwg <- tibble::tribble(
   "01-701-1287",       36L,  "NACTDT",     "New Anti-Cancer Therapy Date", "2014-05-30",
   "01-701-1287",       36L,   "PDOFL",       "Progressive Disease: Other",          "Y",
   "01-702-1082",        7L,   "PDOFL",       "Progressive Disease: Other",          "Y"
-  )%>%
+) %>%
   mutate(
     STUDYID = "CDISCPILOT01",
     RDOMAIN = "RS",
     IDVAR = "RSSEQ",
     QORIG = "CRF",
-    IDVARVAL=as.character(IDVARVAL)
+    IDVARVAL = as.character(IDVARVAL)
   ) %>%
   relocate(
     STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG
