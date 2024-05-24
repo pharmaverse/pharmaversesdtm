@@ -1,10 +1,12 @@
-# Packages: ---------------------------------------------------------------
+# Datasets: rs_onco_imwg, supprs_onco_imwg
+# Description: RS Oncology and SUPPRS dataset using IMWG criteria
+
+# Load libraries -----
 library(dplyr)
 
-# Tribble data: -----------------------------------------------------------
-
+# Create rs_onco_imwg ----
 rs_onco_imwg <- tibble::tribble(
-       ~USUBJID, ~RSSEQ, ~RSLNKGRP,  ~RSTESTCD,            ~RSTEST, ~RSORRES, ~RSSTRESC, ~RSSTAT, ~RSREASND,        ~RSEVAL, ~VISITNUM,            ~VISIT,       ~RSDTC, ~RSDY,
+  ~USUBJID,      ~RSSEQ, ~RSLNKGRP,  ~RSTESTCD,            ~RSTEST, ~RSORRES, ~RSSTRESC, ~RSSTAT, ~RSREASND,        ~RSEVAL, ~VISITNUM,            ~VISIT,       ~RSDTC, ~RSDY,
   "01-701-1015",     7L,      "A2", "OVRLRESP", "Overall Response",     "PD",      "PD",      NA,        NA, "INVESTIGATOR",         7,          "WEEK 6", "2014-02-12",   42L,
   "01-701-1028",     7L,      "A2", "OVRLRESP", "Overall Response",    "sCR",     "sCR",      NA,        NA, "INVESTIGATOR",         7,          "WEEK 6",    "2013-08",    NA,
   "01-701-1028",    16L,      "A3", "OVRLRESP", "Overall Response",    "sCR",     "sCR",      NA,        NA, "INVESTIGATOR",         9,         "WEEK 12", "2013-10-09",   84L,
@@ -83,12 +85,13 @@ rs_onco_imwg <- tibble::tribble(
     RSDY
   )
 
+attr(rs_onco_imwg, "label") <- "Disease Response (IMWG)"
 
 usethis::use_data(rs_onco_imwg, overwrite = TRUE)
 
-
+# Create supprs_onco_imwg ----
 supprs_onco_imwg <- tibble::tribble(
-       ~USUBJID, ~IDVARVAL,     ~QNAM,                            ~QLABEL,        ~QVAL,
+  ~USUBJID,      ~IDVARVAL,     ~QNAM,                            ~QLABEL,        ~QVAL,
   "01-701-1015",        7L,   "PDOFL",       "Progressive Disease: Other",          "Y",
   "01-701-1015",        7L, "DTHPDFL", "Death Due to Progressive Disease",          "Y",
   "01-701-1097",        7L,   "PDOFL",       "Progressive Disease: Other",          "Y",
@@ -119,5 +122,7 @@ supprs_onco_imwg <- tibble::tribble(
   relocate(
     STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG
   )
+
+attr(supprs_onco_imwg, "label") <- "Supplemental Qualifiers for RS_ONCO_IMWG"
 
 usethis::use_data(supprs_onco_imwg, overwrite = TRUE)
