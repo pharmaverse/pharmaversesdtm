@@ -3,12 +3,12 @@
 \docType{data}
 \name{dm_vaccine}
 \alias{dm_vaccine}
-\title{Demographics Dataset for Vaccine Studies}
+\title{Demographics for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2 rows and 28 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_dm.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_dm.rda}  # nolint
 }
 \usage{
 dm_vaccine

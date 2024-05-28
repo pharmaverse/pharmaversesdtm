@@ -3,12 +3,12 @@
 \docType{data}
 \name{vs_vaccine}
 \alias{vs_vaccine}
-\title{Vital Signs Dataset for Vaccine Studies}
+\title{Vital Signs for Vaccine}
 \format{
 An object of class \code{grouped_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 28 rows and 23 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_vs.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_vs.rda}  # nolint
 }
 \usage{
 vs_vaccine

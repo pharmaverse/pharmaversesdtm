@@ -3,7 +3,7 @@
 \docType{data}
 \name{pc}
 \alias{pc}
-\title{Pharmacokinetics Concentrations Dataset}
+\title{Pharmacokinetic Concentrations}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4572 rows and 20 columns.
 }

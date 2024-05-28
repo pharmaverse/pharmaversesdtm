@@ -3,7 +3,7 @@
 \docType{data}
 \name{lb}
 \alias{lb}
-\title{Laboratory Measurements Dataset}
+\title{Laboratory Measurements}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 59580 rows and 23 columns.
 }

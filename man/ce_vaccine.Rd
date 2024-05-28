@@ -3,7 +3,7 @@
 \docType{data}
 \name{ce_vaccine}
 \alias{ce_vaccine}
-\title{Clinical Events Dataset for Vaccine Studies}
+\title{Clinical Events for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 44 rows and 29 columns.
 }

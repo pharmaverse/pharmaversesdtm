@@ -3,12 +3,12 @@
 \docType{data}
 \name{ex_ophtha}
 \alias{ex_ophtha}
-\title{Ophthalmology Exposure Dataset}
+\title{Exposure for Ophthalmology}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 591 rows and 19 columns.
 }
 \source{
-Constructed using \code{ex} from the \code{{pharmaversesdtm}} package # nolint
+Constructed using \code{ex} from the \code{{pharmaversesdtm}} package #nolint
 }
 \usage{
 ex_ophtha

@@ -3,12 +3,12 @@
 \docType{data}
 \name{suppis_vaccine}
 \alias{suppis_vaccine}
-\title{Supplemental Qualifiers for Immunogenicity Specimen Assessments Dataset for Vaccine Studies # nolint}
+\title{Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 16 rows and 10 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppis.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppis.rda}  # nolint
 }
 \usage{
 suppis_vaccine
