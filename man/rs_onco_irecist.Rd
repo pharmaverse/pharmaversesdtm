@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco_irecist}
 \alias{rs_onco_irecist}
-\title{Disease Response Dataset (iRECIST)}
+\title{Disease Response (iRECIST) for Oncology}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 376 rows and 19 columns.
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{oe_ophtha}
 \alias{oe_ophtha}
-\title{Ophthalmic Examinations Dataset}
+\title{Ophthalmic Examinations for Ophthalmology}
 \format{
 An object of class \code{grouped_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 15344 rows and 25 columns.
 }

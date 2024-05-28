@@ -3,12 +3,12 @@
 \docType{data}
 \name{suppdm}
 \alias{suppdm}
-\title{Supplemental Demography Dataset}
+\title{Supplemental Demography}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1197 rows and 10 columns.
 }
 \source{
-\url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppdm.xpt?raw=true} # nolint
+\url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppdm.xpt?raw=true}  # nolint
 }
 \usage{
 suppdm

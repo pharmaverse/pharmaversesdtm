@@ -3,7 +3,7 @@
 \docType{data}
 \name{tu_onco}
 \alias{tu_onco}
-\title{Tumor Identification Dataset}
+\title{Tumor Identification for Oncology}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7734 rows and 18 columns.
 }

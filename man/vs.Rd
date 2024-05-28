@@ -3,12 +3,12 @@
 \docType{data}
 \name{vs}
 \alias{vs}
-\title{Vital Signs Dataset}
+\title{Vital Signs}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 29643 rows and 24 columns.
 }
 \source{
-\url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/vs.xpt?raw=true} # nolint
+\url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/vs.xpt?raw=true}  # nolint
 }
 \usage{
 vs

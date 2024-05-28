@@ -3,12 +3,12 @@
 \docType{data}
 \name{suppex_vaccine}
 \alias{suppex_vaccine}
-\title{Supplemental Qualifiers for Exposures Dataset for Vaccine Studies}
+\title{Supplemental Qualifiers for Exposures for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 9 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppex.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppex.rda}  # nolint
 }
 \usage{
 suppex_vaccine

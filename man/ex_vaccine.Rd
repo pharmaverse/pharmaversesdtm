@@ -3,12 +3,12 @@
 \docType{data}
 \name{ex_vaccine}
 \alias{ex_vaccine}
-\title{Exposures Dataset for Vaccine Studies}
+\title{Exposures for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 21 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_ex.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_ex.rda}  # nolint
 }
 \usage{
 ex_vaccine

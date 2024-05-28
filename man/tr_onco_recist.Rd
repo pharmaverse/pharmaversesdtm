@@ -3,7 +3,7 @@
 \docType{data}
 \name{tr_onco_recist}
 \alias{tr_onco_recist}
-\title{Tumor Results Dataset (RECIST 1.1)}
+\title{Tumor Results (RECIST 1.1) for Oncology}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 546 rows and 19 columns.
 }
