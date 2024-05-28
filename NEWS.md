@@ -1,4 +1,4 @@
-# pharmaversesdtm 0.3.0
+# pharmaversesdtm 1.0.0
 
 ## New Features
 
