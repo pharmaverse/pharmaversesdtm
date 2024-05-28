@@ -3,7 +3,7 @@
 \docType{data}
 \name{supprs_onco_imwg}
 \alias{supprs_onco_imwg}
-\title{Supplemental Disease Response Dataset (IMWG)}
+\title{Supplemental Qualifiers for RS_ONCO_IMWG}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 19 rows and 9 columns.
 }

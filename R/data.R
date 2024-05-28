@@ -162,7 +162,7 @@
 #' @author Rohan Thampi
 "rs_onco_irecist"
 
-#' Disease Response (IMWG) for Oncology
+#' Disease Response (IMWG)
 #'
 #' A SDTM RS dataset using IMWG criteria. The dataset contains just a few patients.
 #' It is intended for vignettes and examples of ADaM dataset creation.
@@ -170,7 +170,7 @@
 #' @author Vinh Nguyen
 "rs_onco_imwg"
 
-#' Supplemental Disease Response (IMWG) for Oncology
+#' Supplemental Qualifiers for RS_ONCO_IMWG
 #'
 #' A SDTM supplemental RS dataset using IMWG criteria. It is intended to be used
 #' together with `rs_onco_imwg`.

@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco_imwg}
 \alias{rs_onco_imwg}
-\title{Disease Response Dataset (IMWG)}
+\title{Disease Response (IMWG)}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 65 rows and 17 columns.
 }
