@@ -3,12 +3,12 @@
 \docType{data}
 \name{suppdm_vaccine}
 \alias{suppdm_vaccine}
-\title{Supplemental Qualifiers for Demographics Dataset for Vaccine Studies}
+\title{Supplemental Qualifiers for Demographics for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2 rows and 9 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppdm.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppdm.rda}  # nolint
 }
 \usage{
 suppdm_vaccine

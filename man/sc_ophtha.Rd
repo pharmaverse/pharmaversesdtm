@@ -3,7 +3,7 @@
 \docType{data}
 \name{sc_ophtha}
 \alias{sc_ophtha}
-\title{Subject Characteristic Dataset}
+\title{Subject Characteristic for Ophthalmology}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 254 rows and 12 columns.
 }

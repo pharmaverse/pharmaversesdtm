@@ -3,7 +3,7 @@
 \docType{data}
 \name{supptr_onco}
 \alias{supptr_onco}
-\title{Supplemental Tumor Results Dataset}
+\title{Supplemental Tumor Results for Oncology}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 55995 rows and 9 columns.
 }

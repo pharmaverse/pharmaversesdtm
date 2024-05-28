@@ -3,7 +3,7 @@
 \docType{data}
 \name{pp}
 \alias{pp}
-\title{Pharmacokinetic Parameters Dataset}
+\title{Pharmacokinetic Parameters}
 \format{
 An object of class \code{data.frame} with 2688 rows and 14 columns.
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{smq_db}
 \alias{smq_db}
-\title{SMQ Dataset}
+\title{Standardized MedDRA Queries}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 44 rows and 6 columns.
 }

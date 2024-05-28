@@ -3,17 +3,17 @@
 \docType{data}
 \name{suppce_vaccine}
 \alias{suppce_vaccine}
-\title{Supplemental Qualifiers for Clinical Events Dataset for Vaccine Studies}
+\title{Supplemental Qualifiers for Clinical Events for Vaccine}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 9 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppce.rda} # nolint
+\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppce.rda}  # nolint
 }
 \usage{
 suppce_vaccine
 }
 \description{
-An example SDTM SUPPCE dataset for vaccine studies
+An example SDTM SUPPCE for vaccine studies
 }
 \keyword{datasets}
