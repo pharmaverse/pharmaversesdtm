@@ -28,6 +28,7 @@ Authors:
   \item Pooja Kumari
   \item Stefan Bundfuss
   \item Zelos Zhu
+  \item Sadchla Mascary
 }
 
 }
