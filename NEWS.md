@@ -9,6 +9,8 @@
 - Oncology response data for IMWG criteria (`rs_onco_imwg` and `supprs_onco_imwg`)
 was added. (#86)
 
+- Update `PPSTRESC` and `PPORRES` so they are character. (#102)
+
 # pharmaversesdtm 0.2.0
 
 ## New Features
