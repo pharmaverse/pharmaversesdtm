@@ -178,9 +178,11 @@ pp_CLR$PPORRES <- pp_CLR$pp_CLR
 PP <- bind_rows(pp_tmax, pp_npts, pp_lambda, pp_Ke, pp_cmax, pp_Clast, pp_AUC, pp_AUC_inf, pp_Ae, pp_CLR)
 
 # Constant variables
-PP$PPSTRESC <- PP$PPORRES
+PP$PPSTRESC <- as.character(PP$PPORRES)
 PP$PPSTRESN <- PP$PPORRES
 PP$PPSTRESU <- PP$PPORRESU
+PP$PPORRES <- as.character(PP$PPORRES)
+
 PP$DOMAIN <- "PP"
 
 ## Sort ----
