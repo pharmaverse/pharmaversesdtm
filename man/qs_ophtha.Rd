@@ -8,7 +8,7 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 75922 rows and 20 columns.
 }
 \source{
-Constructed using \code{qs} from the \code{{pharmaversesdtm}} package #nolint
+Constructed using \code{qs} from the \code{{pharmaversesdtm}} package
 }
 \usage{
 qs_ophtha

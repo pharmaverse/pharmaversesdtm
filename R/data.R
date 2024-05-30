@@ -9,7 +9,7 @@
 #'
 #' An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`
 #'
-#' @source Constructed using `ae` from the `{pharmaversesdtm}` package  # nolint
+#' @source Constructed using `ae` from the `{pharmaversesdtm}` package
 "ae_ophtha"
 
 #' Concomitant Medication
@@ -51,7 +51,7 @@
 #'
 #' An example Exposure SDTM dataset with ophthalmology-specific variables such as `EXLOC` and `EXLAT`
 #'
-#' @source Constructed using `ex` from the `{pharmaversesdtm}` package #nolint
+#' @source Constructed using `ex` from the `{pharmaversesdtm}` package
 "ex_ophtha"
 
 #' Laboratory Measurements
@@ -97,7 +97,7 @@
 #'
 #' An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 #'
-#' @source Constructed using `qs` from the `{pharmaversesdtm}` package #nolint
+#' @source Constructed using `qs` from the `{pharmaversesdtm}` package
 "qs_ophtha"
 
 #' Subject Characteristic for Ophthalmology
@@ -244,75 +244,75 @@
 #'
 #' An example SDTM DM dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_dm.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "dm_vaccine"
 
 #' Vital Signs for Vaccine
 #'
 #' An example SDTM VS dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_vs.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "vs_vaccine"
 
 #' Clinical Events for Vaccine
 #'
 #' An example SDTM CE dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_ce.rda} # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "ce_vaccine"
 
 #' Exposures for Vaccine
 #'
 #' An example SDTM EX dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_ex.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "ex_vaccine"
 
 #' Immunogenicity Specimen Assessments for Vaccine
 #'
 #' An example SDTM IS for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_is.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "is_vaccine"
 
 #' Findings About Clinical Events for Vaccine
 #'
 #' An example SDTM FACE for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_face.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "face_vaccine"
 
 #' Supplemental Qualifiers for Clinical Events for Vaccine
 #'
 #' An example SDTM SUPPCE for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppce.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "suppce_vaccine"
 
 #' Supplemental Qualifiers for Demographics for Vaccine
 #'
 #' An example SDTM SUPPDM dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppdm.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "suppdm_vaccine"
 
 #' Supplemental Qualifiers for Exposures for Vaccine
 #'
 #' An example SDTM SUPPEX dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppex.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "suppex_vaccine"
 
 #' Supplemental Qualifiers for Findings About for Clinical Events for Vaccine
 #'
 #' An example SDTM SUPPFACE dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppface.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "suppface_vaccine"
 
 #' Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine
 #'
 #' An example SDTM SUPPIS dataset for vaccine studies
 #'
-#' @source \url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppis.rda}  # nolint
+#' @source Constructed by `{admiralvaccine}` developers
 "suppis_vaccine"

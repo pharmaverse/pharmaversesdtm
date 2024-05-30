@@ -8,7 +8,7 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 9 columns.
 }
 \source{
-\url{https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_suppface.rda}  # nolint
+Constructed by \code{{admiralvaccine}} developers
 }
 \usage{
 suppface_vaccine

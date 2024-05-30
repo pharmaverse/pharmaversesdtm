@@ -26,7 +26,7 @@ remotes::install_github("pharmaverse/pharmaversesdtm", ref = "main")
 
 # Data Sources
 
-Some of the test datasets has been sourced from the [CDISC pilot project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while other datasets have been constructed ad-hoc by the admiral team. Please check the [Reference page](https://pharmaverse.github.io/pharmaversesdtm/cran-release/reference/index.html) for detailed information regarding the source of specific datasets.
+Some of the test datasets has been sourced from the [CDISC pilot project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while other datasets have been constructed ad-hoc by the admiral team. Please check the [Reference page](https://pharmaverse.github.io/pharmaversesdtm/reference/index.html) for detailed information regarding the source of specific datasets.
 
 # Naming Conventions {#naming}
 
