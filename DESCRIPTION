@@ -18,7 +18,7 @@ Description: A set of Study Data Tabulation Model (SDTM) datasets from the Clini
     (2021) <https://www.cdisc.org/system/files/members/standard/foundational/SDTMIG%20v3.4-FINAL_2022-07-21.pdf>.
 Language: en-US
 License: Apache License (>= 2.0)
-URL: https://pharmaverse.github.io/pharmaversesdtm, https://github.com/pharmaverse/pharmaversesdtm
+URL: https://pharmaverse.github.io/pharmaversesdtm/, https://github.com/pharmaverse/pharmaversesdtm/
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true
