@@ -68,3 +68,6 @@ Then there are two main ways to extend the test data: either by adding new datas
 * Add your GitHub handle to `.github/CODEOWNERS`.
 * Update `NEWS.md`.
 
+## 404 link 
+https://github.com/pharmaverse/admiralvaccine/blob/main/data/vx_vs.rda
+
