@@ -13,8 +13,8 @@ A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Inte
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://pharmaverse.github.io/pharmaversesdtm}
-  \item \url{https://github.com/pharmaverse/pharmaversesdtm}
+  \item \url{https://pharmaverse.github.io/pharmaversesdtm/}
+  \item \url{https://github.com/pharmaverse/pharmaversesdtm/}
 }
 
 }

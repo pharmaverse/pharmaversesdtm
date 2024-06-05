@@ -14,9 +14,9 @@ An object of class \code{data.frame} with 2688 rows and 14 columns.
 pp
 }
 \description{
-A SDTM PP dataset simulated by Antonio Rodríguez Contestí
+A SDTM PP dataset simulated by Antonio Rodriguez Contesti
 }
 \author{
-Antonio Rodríguez Contestí
+Antonio Rodriguez Contesti
 }
 \keyword{datasets}
