@@ -79,18 +79,18 @@
 
 #' Pharmacokinetic Concentrations
 #'
-#' A SDTM PC dataset simulated by Antonio Rodríguez Contestí
+#' A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 #'
 #' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda}
-#' @author Antonio Rodríguez Contestí
+#' @author Antonio Rodriguez Contesti
 "pc"
 
 #' Pharmacokinetic Parameters
 #'
-#' A SDTM PP dataset simulated by Antonio Rodríguez Contestí
+#' A SDTM PP dataset simulated by Antonio Rodriguez Contesti
 #'
 #' @source \url{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda}
-#' @author Antonio Rodríguez Contestí
+#' @author Antonio Rodriguez Contesti
 "pp"
 
 #' Questionnaire for Ophthalmology
