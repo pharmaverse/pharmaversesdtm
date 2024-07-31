@@ -1,3 +1,6 @@
+# Dataset: eg_test
+# Description: Standard EG dataset from CDISC pilot study (includes random data)
+
 # Load necessary libraries
 library(dplyr)
 library(labelled)
@@ -182,7 +185,7 @@ add_patient <- function(usubjid) {
 
 # Apply the add_patient function to each subject ID and combine results
 eg_test <- lapply(usubjids, add_patient) %>%
-  bind_rows()  %>%
+  bind_rows() %>%
   select(
     STUDYID,
     DOMAIN,
