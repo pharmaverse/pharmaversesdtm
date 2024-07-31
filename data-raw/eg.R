@@ -1,4 +1,4 @@
-# Dataset: eg_test
+# Dataset: eg
 # Description: Standard EG dataset from CDISC pilot study (includes random data)
 
 # Load necessary libraries
@@ -184,7 +184,7 @@ add_patient <- function(usubjid) {
 }
 
 # Apply the add_patient function to each subject ID and combine results
-eg_test <- lapply(usubjids, add_patient) %>%
+eg <- lapply(usubjids, add_patient) %>%
   bind_rows() %>%
   select(
     STUDYID,
@@ -213,7 +213,7 @@ eg_test <- lapply(usubjids, add_patient) %>%
   )
 
 # Add labels to the columns
-var_label(eg_test) <- list(
+var_label(eg) <- list(
   STUDYID = "Study Identifier",
   DOMAIN = "Domain Abbreviation",
   USUBJID = "Unique Subject Identifier",
@@ -241,7 +241,7 @@ var_label(eg_test) <- list(
 )
 
 # Label the dataset
-attr(eg_test, "label") <- "Electrocardiogram"
+attr(eg, "label") <- "Electrocardiogram"
 
 # Save the dataset
-usethis::use_data(eg_test, overwrite = TRUE)
+usethis::use_data(eg, overwrite = TRUE)
