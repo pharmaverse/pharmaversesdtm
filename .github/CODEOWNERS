@@ -19,3 +19,6 @@ data-raw/oe_ophtha.R @manciniedoardo
 data-raw/qs_ophtha.R @manciniedoardo
 data-raw/sc_ophtha.R @manciniedoardo
 
+# admiralpeds
+data-raw/dm_peds.R @fanny-gautier
+data_raw/vs_peds.R @fanny-gautier

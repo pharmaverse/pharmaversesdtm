@@ -32,3 +32,7 @@ Rscript data-raw/sc_ophtha.R
 Rscript data-raw/tr_onco.R
 Rscript data-raw/tu_onco.R
 Rscript data-raw/rs_onco.R
+
+# admiralpeds build from program
+Rscript data-raw/dm_peds.R
+Rscript data-raw/vs_peds.R
