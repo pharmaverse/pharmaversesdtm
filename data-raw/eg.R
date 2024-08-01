@@ -1,5 +1,5 @@
 # Dataset: eg
-# Description: Standard EG dataset from CDISC pilot study (includes random data)
+# Description: Standard EG dataset generated using random data. Patients and visit schedule are copied from CDISC pilot study Vital Signs dataset.
 
 # Load necessary libraries
 library(dplyr)
