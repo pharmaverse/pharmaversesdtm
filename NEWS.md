@@ -1,6 +1,6 @@
 # pharmaversesdtm 1.1.0
 
-- Pediatrics data for anthropologic measures (`dm_peds` and `vs_peds`) was added.
+- Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added.
 
 # pharmaversesdtm 1.0.0
 
