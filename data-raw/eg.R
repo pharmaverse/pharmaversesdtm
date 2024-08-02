@@ -20,7 +20,7 @@ egdtc <- vs %>%
 # Generate patients data ----
 eg <- expand.grid(
   USUBJID = unique(vs$USUBJID),
-  EGTESTCD = c("QT", "HR", "RR", "ECGINT"),
+  EGTESTCD = c("QT", "HR", "RR", "ECGINT") %>% as.character(),
   EGTPT = c(
     "AFTER LYING DOWN FOR 5 MINUTES",
     "AFTER STANDING FOR 1 MINUTE",
@@ -44,10 +44,9 @@ eg <- expand.grid(
     "RETRIEVAL"
   )
 ) %>%
-  arrange(EGTESTCD) %>%
-  group_by(VISIT) %>%
+  # The original CDISC dataset kept no information about ECG Interpretation on specified visits
+  # Remove entries with specific visit names where EGTESTCD == "ECGINT"
   filter(!(
-    # The original CDISC dataset kept no information about ECG Interpretation on specified visits.
     EGTESTCD == "ECGINT" &
       VISIT %in% c(
         "AMBUL ECG PLACEMENT",
@@ -55,16 +54,15 @@ eg <- expand.grid(
         "RETRIEVAL",
         "SCREENING 2"
       )
-  ) &
-    !(EGTESTCD == "ECGINT" & duplicated(EGTESTCD))) %>%
+  )) %>%
+  # Remove duplicates for other visit names where EGTESTCD == "ECGINT"
+  group_by(USUBJID, VISIT) %>%
+  filter(!(EGTESTCD == "ECGINT" & duplicated(EGTESTCD))) %>%
   ungroup() %>%
   inner_join(egdtc, by = c("USUBJID", "VISIT")) %>%
   mutate(
     STUDYID = "CDISCPILOT01",
     DOMAIN = "EG",
-    EGSEQ = as.numeric(row_number()),
-    # Generate sequence number
-    EGTESTCD = as.character(EGTESTCD),
     EGTEST = c(
       "QT" = "QT Duration",
       "HR" = "Heart Rate",
@@ -88,27 +86,24 @@ eg <- expand.grid(
     ),
     # Generate random results based on test type and time point
     EGSTRESN = case_when(
-      EGTESTCD == "RR" ~ floor(rnorm(
-        n(), ifelse(
-          EGELTM == "PT5M",
-          543.9985,
-          ifelse(EGELTM == "PT3M", 536.0161, 532.3233)
-        ), 80
-      )),
-      EGTESTCD == "HR" ~ floor(rnorm(
-        n(), ifelse(
-          EGELTM == "PT5M",
-          70.04389,
-          ifelse(EGELTM == "PT3M", 74.27798, 74.77461)
-        ), 8
-      )),
-      EGTESTCD == "QT" ~ floor(rnorm(
-        n(), ifelse(
-          EGELTM == "PT5M",
-          450.9781,
-          ifelse(EGELTM == "PT3M", 457.7265, 455.3394)
-        ), 60
-      ))
+      EGTESTCD == "RR" &
+        EGELTM == "PT5M" ~ floor(rnorm(n(), 543.9985, 80)),
+      EGTESTCD == "RR" &
+        EGELTM == "PT3M" ~ floor(rnorm(n(), 536.0161, 80)),
+      EGTESTCD == "RR" &
+        EGELTM == "PT1M" ~ floor(rnorm(n(), 532.3233, 80)),
+      EGTESTCD == "HR" &
+        EGELTM == "PT5M" ~ floor(rnorm(n(), 70.04389, 8)),
+      EGTESTCD == "HR" &
+        EGELTM == "PT3M" ~ floor(rnorm(n(), 74.27798, 8)),
+      EGTESTCD == "HR" &
+        EGELTM == "PT1M" ~ floor(rnorm(n(), 74.77461, 8)),
+      EGTESTCD == "QT" &
+        EGELTM == "PT5M" ~ floor(rnorm(n(), 450.9781, 60)),
+      EGTESTCD == "QT" &
+        EGELTM == "PT3M" ~ floor(rnorm(n(), 457.7265, 60)),
+      EGTESTCD == "QT" &
+        EGELTM == "PT1M" ~ floor(rnorm(n(), 455.3394, 60))
     ),
     EGSTRESC = ifelse(EGTESTCD == "ECGINT", sample(c(
       "NORMAL", "ABNORMAL"
@@ -166,16 +161,18 @@ eg <- expand.grid(
         "AFTER STANDING FOR 3 MINUTES" = 817
       )[EGTPT]
     ),
-    EGTPTREF = ifelse(
-      EGTESTCD == "ECGINT",
-      "",
-      ifelse(EGELTM == "PT5M", "PATIENT SUPINE", "PATIENT STANDING")
+    EGTPTREF = EGTPTREF <- case_when(
+      EGTESTCD == "ECGINT" ~ "",
+      EGELTM == "PT5M" ~ "PATIENT SUPINE",
+      TRUE ~ "PATIENT STANDING"
     ),
     EGDY = VISITDY,
     EGTPT = ifelse(EGTESTCD == "ECGINT", "", EGTPT)
-  ) %>% arrange(USUBJID, EGTESTCD, VISITNUM) %>%
+  ) %>%
+  arrange(USUBJID, EGTESTCD, VISITNUM) %>%
+  # Generate sequence number
   group_by(USUBJID) %>%
-  mutate(EGSEQ = row_number()) %>%
+  mutate(EGSEQ = row_number() %>% as.numeric()) %>%
   ungroup() %>%
   select(
     STUDYID,
@@ -201,7 +198,8 @@ eg <- expand.grid(
     EGTPTNUM,
     EGELTM,
     EGTPTREF
-  ) %>% add_labels(
+  ) %>%
+  add_labels(
     STUDYID = "Study Identifier",
     DOMAIN = "Domain Abbreviation",
     USUBJID = "Unique Subject Identifier",
