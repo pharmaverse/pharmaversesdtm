@@ -21,11 +21,7 @@ egdtc <- vs %>%
 eg <- expand.grid(
   USUBJID = unique(vs$USUBJID),
   EGTESTCD = c("QT", "HR", "RR", "ECGINT") %>% as.character(),
-  EGTPT = c(
-    "AFTER LYING DOWN FOR 5 MINUTES",
-    "AFTER STANDING FOR 1 MINUTE",
-    "AFTER STANDING FOR 3 MINUTES"
-  ),
+  EGTPT = c("AFTER LYING DOWN FOR 5 MINUTES", "AFTER STANDING FOR 1 MINUTE", "AFTER STANDING FOR 3 MINUTES"),
   VISIT = c(
     "SCREENING 1",
     "SCREENING 2",
@@ -46,15 +42,7 @@ eg <- expand.grid(
 ) %>%
   # The original CDISC dataset kept no information about ECG Interpretation on specified visits
   # Remove entries with specific visit names where EGTESTCD == "ECGINT"
-  filter(!(
-    EGTESTCD == "ECGINT" &
-      VISIT %in% c(
-        "AMBUL ECG PLACEMENT",
-        "AMBUL ECG REMOVAL",
-        "RETRIEVAL",
-        "SCREENING 2"
-      )
-  )) %>%
+  filter(!(EGTESTCD == "ECGINT" & VISIT %in% c("AMBUL ECG PLACEMENT", "AMBUL ECG REMOVAL", "RETRIEVAL", "SCREENING 2"))) %>%
   # Remove duplicates for other visit names where EGTESTCD == "ECGINT"
   group_by(USUBJID, VISIT) %>%
   filter(!(EGTESTCD == "ECGINT" & duplicated(EGTESTCD))) %>%
@@ -63,58 +51,27 @@ eg <- expand.grid(
   mutate(
     STUDYID = "CDISCPILOT01",
     DOMAIN = "EG",
-    EGTEST = c(
-      "QT" = "QT Duration",
-      "HR" = "Heart Rate",
-      "RR" = "RR Duration",
-      "ECGINT" = "ECG Interpretation"
-    )[EGTESTCD],
-    EGORRESU = c(
-      "QT" = "mmHg",
-      "HR" = "BEATS/MIN",
-      "RR" = "mmHg",
-      "ECGINT" = "LB"
-    )[EGTESTCD],
+    EGTEST = c("QT" = "QT Duration", "HR" = "Heart Rate", "RR" = "RR Duration", "ECGINT" = "ECG Interpretation")[EGTESTCD],
+    EGORRESU = c("QT" = "mmHg", "HR" = "BEATS/MIN", "RR" = "mmHg", "ECGINT" = "LB")[EGTESTCD],
     EGELTM = ifelse(
-      EGTESTCD == "ECGINT",
-      "",
-      c(
-        "AFTER LYING DOWN FOR 5 MINUTES" = "PT5M",
-        "AFTER STANDING FOR 1 MINUTE" = "PT1M",
-        "AFTER STANDING FOR 3 MINUTES" = "PT3M"
-      )[EGTPT]
+      EGTESTCD == "ECGINT", "",
+      c("AFTER LYING DOWN FOR 5 MINUTES" = "PT5M", "AFTER STANDING FOR 1 MINUTE" = "PT1M", "AFTER STANDING FOR 3 MINUTES" = "PT3M")[EGTPT]
     ),
     # Generate random results based on test type and time point
     EGSTRESN = case_when(
-      EGTESTCD == "RR" &
-        EGELTM == "PT5M" ~ floor(rnorm(n(), 543.9985, 80)),
-      EGTESTCD == "RR" &
-        EGELTM == "PT3M" ~ floor(rnorm(n(), 536.0161, 80)),
-      EGTESTCD == "RR" &
-        EGELTM == "PT1M" ~ floor(rnorm(n(), 532.3233, 80)),
-      EGTESTCD == "HR" &
-        EGELTM == "PT5M" ~ floor(rnorm(n(), 70.04389, 8)),
-      EGTESTCD == "HR" &
-        EGELTM == "PT3M" ~ floor(rnorm(n(), 74.27798, 8)),
-      EGTESTCD == "HR" &
-        EGELTM == "PT1M" ~ floor(rnorm(n(), 74.77461, 8)),
-      EGTESTCD == "QT" &
-        EGELTM == "PT5M" ~ floor(rnorm(n(), 450.9781, 60)),
-      EGTESTCD == "QT" &
-        EGELTM == "PT3M" ~ floor(rnorm(n(), 457.7265, 60)),
-      EGTESTCD == "QT" &
-        EGELTM == "PT1M" ~ floor(rnorm(n(), 455.3394, 60))
+      EGTESTCD == "RR" & EGELTM == "PT5M" ~ floor(rnorm(n(), 543.9985, 80)),
+      EGTESTCD == "RR" & EGELTM == "PT3M" ~ floor(rnorm(n(), 536.0161, 80)),
+      EGTESTCD == "RR" & EGELTM == "PT1M" ~ floor(rnorm(n(), 532.3233, 80)),
+      EGTESTCD == "HR" & EGELTM == "PT5M" ~ floor(rnorm(n(), 70.04389, 8)),
+      EGTESTCD == "HR" & EGELTM == "PT3M" ~ floor(rnorm(n(), 74.27798, 8)),
+      EGTESTCD == "HR" & EGELTM == "PT1M" ~ floor(rnorm(n(), 74.77461, 8)),
+      EGTESTCD == "QT" & EGELTM == "PT5M" ~ floor(rnorm(n(), 450.9781, 60)),
+      EGTESTCD == "QT" & EGELTM == "PT3M" ~ floor(rnorm(n(), 457.7265, 60)),
+      EGTESTCD == "QT" & EGELTM == "PT1M" ~ floor(rnorm(n(), 455.3394, 60))
     ),
-    EGSTRESC = ifelse(EGTESTCD == "ECGINT", sample(c(
-      "NORMAL", "ABNORMAL"
-    ), 1), as.character(EGSTRESN)),
+    EGSTRESC = ifelse(EGTESTCD == "ECGINT", sample(c( "NORMAL", "ABNORMAL"), 1), as.character(EGSTRESN)),
     EGORRES = EGSTRESC,
-    EGSTRESU = c(
-      "QT" = "msec",
-      "HR" = "BEATS/MIN",
-      "RR" = "msec",
-      "ECGINT" = NA
-    )[EGTESTCD],
+    EGSTRESU = c("QT" = "msec", "HR" = "BEATS/MIN", "RR" = "msec", "ECGINT" = NA)[EGTESTCD],
     EGSTAT = "",
     EGLOC = "",
     EGBLFL = ifelse(VISIT == "BASELINE", "Y", ""),
