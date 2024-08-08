@@ -69,7 +69,7 @@ eg <- expand.grid(
       EGTESTCD == "QT" & EGELTM == "PT3M" ~ floor(rnorm(n(), 457.7265, 60)),
       EGTESTCD == "QT" & EGELTM == "PT1M" ~ floor(rnorm(n(), 455.3394, 60))
     ),
-    EGSTRESC = ifelse(EGTESTCD == "ECGINT", sample(c( "NORMAL", "ABNORMAL"), 1), as.character(EGSTRESN)),
+    EGSTRESC = ifelse(EGTESTCD == "ECGINT", sample(c("NORMAL", "ABNORMAL"), 1), as.character(EGSTRESN)),
     EGORRES = EGSTRESC,
     EGSTRESU = c("QT" = "msec", "HR" = "BEATS/MIN", "RR" = "msec", "ECGINT" = NA)[EGTESTCD],
     EGSTAT = "",
