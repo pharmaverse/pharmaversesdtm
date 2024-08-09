@@ -9,7 +9,8 @@ Authors@R: c(
   person("Pooja", "Kumari", role = "aut"),
   person("Stefan", "Bundfuss", role = "aut"),
   person("Zelos", "Zhu", role = "aut"),
-  person("Sadchla", "Mascary", role = "aut")
+  person("Sadchla", "Mascary", role = "aut"),
+  person("Vladyslav", "Shuliar", role = "aut")
   )
 Description: A set of Study Data Tabulation Model (SDTM) datasets from the Clinical
     Data Interchange Standards Consortium (CDISC) pilot project used for testing
