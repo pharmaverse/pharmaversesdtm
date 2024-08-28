@@ -21,4 +21,4 @@ data-raw/sc_ophtha.R @manciniedoardo
 
 # admiralpeds
 data-raw/dm_peds.R @fanny-gautier
-data_raw/vs_peds.R @fanny-gautier
+data-raw/vs_peds.R @fanny-gautier
