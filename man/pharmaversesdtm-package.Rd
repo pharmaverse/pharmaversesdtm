@@ -19,14 +19,14 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Edoardo Mancini \email{edoardo.mancini@roche.com}
+\strong{Maintainer}: Edoardo Mancini \email{edoardo.mancini@roche.com} (\href{https://orcid.org/0009-0006-4899-8641}{ORCID})
 
 Authors:
 \itemize{
   \item Gayatri G
   \item Kangjie Zhang
   \item Pooja Kumari
-  \item Stefan Bundfuss
+  \item Stefan Bundfuss (\href{https://orcid.org/0009-0005-0027-1198}{ORCID})
   \item Zelos Zhu
   \item Sadchla Mascary
 }
