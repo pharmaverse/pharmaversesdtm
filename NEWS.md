@@ -1,3 +1,14 @@
+# pharmaversesdtm (development version)
+
+# New features
+
+<details>
+<summary>Developer Notes</summary>
+
+- Activated automatic version bumping CICD workflow. (#122)
+
+</details>
+
 # pharmaversesdtm 1.0.0
 
 ## New Features
