@@ -213,8 +213,10 @@ vs_peds <- vs_peds %>%
 
 # Formatting the output dataset ----
 vs_peds <- vs_peds %>%
+  group_by(STUDYID, USUBJID) %>%
+  mutate(VSSEQ = row_number()) %>%
+  ungroup() %>%
   mutate(
-    VSSEQ = row_number(),
     VSPOS = NA_character_,
     VSORRESU = case_when(
       VSTESTCD == "HEIGHT" ~ "cm",
