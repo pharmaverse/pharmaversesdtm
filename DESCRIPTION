@@ -3,11 +3,11 @@ Type: Package
 Title: SDTM Test Data for the 'Pharmaverse' Family of Packages
 Version: 1.0.0
 Authors@R: c(
-  person("Edoardo", "Mancini", email = "edoardo.mancini@roche.com", role = c("aut", "cre")),
+  person("Edoardo", "Mancini", email = "edoardo.mancini@roche.com", role = c("aut", "cre"), comment = c(ORCID = "0009-0006-4899-8641")),
   person("Gayatri", "G", role = "aut"),
   person("Kangjie", "Zhang", role = "aut"),
   person("Pooja", "Kumari", role = "aut"),
-  person("Stefan", "Bundfuss", role = "aut"),
+  person("Stefan", "Bundfuss", role = "aut", comment = c(ORCID = "0009-0005-0027-1198")),
   person("Zelos", "Zhu", role = "aut"),
   person("Sadchla", "Mascary", role = "aut")
   )
