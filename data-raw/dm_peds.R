@@ -6,7 +6,7 @@ library(dplyr)
 library(admiral)
 
 # Read input test data from pharmaversesdtm ----
-data("dm")
+dm <- pharmaversesdtm::dm
 
 # Convert blank to NA ----
 dm <- convert_blanks_to_na(dm)
