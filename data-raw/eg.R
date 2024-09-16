@@ -20,7 +20,7 @@ egdtc <- vs %>%
 # Generate patients data ----
 eg <- expand.grid(
   USUBJID = unique(vs$USUBJID),
-  EGTESTCD = c("QT", "HR", "RR", "ECGINT") %>% as.character(),
+  EGTESTCD = c("QT", "HR", "RR", "ECGINT"),
   EGTPT = c("AFTER LYING DOWN FOR 5 MINUTES", "AFTER STANDING FOR 1 MINUTE", "AFTER STANDING FOR 3 MINUTES"),
   VISIT = c(
     "SCREENING 1",
@@ -38,7 +38,7 @@ eg <- expand.grid(
     "WEEK 24",
     "WEEK 26",
     "RETRIEVAL"
-  )
+  ), stringsAsFactors = FALSE
 ) %>%
   # The original CDISC dataset kept no information about ECG Interpretation on specified visits
   # Remove entries with specific visit names where EGTESTCD == "ECGINT"
@@ -161,13 +161,13 @@ eg <- expand.grid(
     DOMAIN = "Domain Abbreviation",
     USUBJID = "Unique Subject Identifier",
     EGSEQ = "Sequence Number",
-    EGTESTCD = "Test Code",
-    EGTEST = "Test Name",
-    EGORRES = "Original Result",
+    EGTESTCD = "ECG Test Short Name",
+    EGTEST = "ECG Test Name",
+    EGORRES = "Result or Finding in Original Units",
     EGORRESU = "Original Units",
     EGELTM = "Elapsed Time",
-    EGSTRESC = "Standard Character Result",
-    EGSTRESN = "Standard Numeric Result",
+    EGSTRESC = "Character Result/Finding in Std Format",
+    EGSTRESN = "Numeric Result/Finding in Standard Units",
     EGSTRESU = "Standard Units",
     EGSTAT = "Completion Status",
     EGLOC = "Location of Vital Signs Measurement",
