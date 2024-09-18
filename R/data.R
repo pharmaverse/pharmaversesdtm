@@ -320,6 +320,7 @@
 #' Demographic Dataset-pediatrics
 #'
 #' An updated SDTM DM dataset with pediatric patients
+#'
 #' @source Constructed by `{admiralpeds}` developers
 "dm_peds"
 
