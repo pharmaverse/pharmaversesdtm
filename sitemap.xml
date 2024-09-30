@@ -1,159 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/404.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae_ophtha.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ce_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/cm.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ds.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/eg.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ex.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ex_ophtha.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ex_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/face_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/get_terms.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/is_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/mh.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/oe_ophtha.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pc.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pharmaversesdtm-package.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pp.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/qs_ophtha.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_imwg.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_irecist.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_recist.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/sc_ophtha.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/sdg_db.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/smq_db.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppae.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppce_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppdm.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppdm_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppds.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppex_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppface_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppis_vaccine.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supprs_onco_imwg.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supptr_onco.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/sv.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tr_onco.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tr_onco_recist.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ts.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tu_onco.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tu_onco_recist.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/vs.html</loc>
-  </url>
-  <url>
-    <loc>https://pharmaverse.github.io/pharmaversesdtm/reference/vs_vaccine.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/404.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/LICENSE.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/authors.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/index.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/news/index.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae_ophtha.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ce_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/cm.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ds.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/eg.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ex.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ex_ophtha.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ex_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/face_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/get_terms.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/index.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/is_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/mh.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/oe_ophtha.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pc.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pharmaversesdtm-package.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pp.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/qs_ophtha.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_imwg.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_irecist.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_recist.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/sc_ophtha.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/sdg_db.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/smq_db.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppae.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppce_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppdm.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppdm_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppds.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppex_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppface_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppis_vaccine.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supprs_onco_imwg.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supptr_onco.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/sv.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tr_onco.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tr_onco_recist.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ts.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tu_onco.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/tu_onco_recist.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/vs.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/vs_vaccine.html</loc></url>
 </urlset>
+
