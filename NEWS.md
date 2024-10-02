@@ -1,3 +1,10 @@
+# pharmaversesdtm 1.0.1
+
+## New Features
+
+- Add `CMENRTPT` to `cm`. (#120)
+
+
 # pharmaversesdtm 1.0.0
 
 ## New Features

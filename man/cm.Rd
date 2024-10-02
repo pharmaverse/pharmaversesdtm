@@ -5,7 +5,7 @@
 \alias{cm}
 \title{Concomitant Medication}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7510 rows and 21 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7510 rows and 22 columns.
 }
 \source{
 \url{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true}  # nolint
