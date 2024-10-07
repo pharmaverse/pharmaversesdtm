@@ -6,7 +6,7 @@ library(dplyr)
 library(usethis)
 
 # Create rs_onco_ca125 ----
-rs_onco_ca124 <- tibble::tribble(
+rs_onco_ca125 <- tibble::tribble(
   ~DOMAIN,       ~STUDYID,      ~USUBJID, ~VISITNUM,    ~VISIT,               ~RSCAT,  ~RSTESTCD,            ~RSTEST,                               ~RSORRES,       ~RSSTRESC,        ~RSEVAL, ~RSEVALID, ~RSACPTFL,       ~RSDTC, ~RSSEQ,
   "RS", "CDISCPILOT01", "01-701-1015",        2L,  "WEEK 3",              "CA125", "OVRLRESP", "Overall Response",                 "Non-Response/ Non-PD",            "SD", "INVESTIGATOR",        NA,        NA, "2014-01-23",     3L,
   "RS", "CDISCPILOT01", "01-701-1015",        3L,  "WEEK 6",              "CA125", "OVRLRESP", "Overall Response",                        "Not Evaluable",            "NE", "INVESTIGATOR",        NA,        NA,    "2014-02",     6L,
