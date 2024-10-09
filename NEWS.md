@@ -1,3 +1,9 @@
+# pharmaversesdtm (development version)
+
+## New Features
+
+- Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added (#88).
+
 # pharmaversesdtm 1.0.0
 
 ## New Features

@@ -316,3 +316,17 @@
 #'
 #' @source Constructed by `{admiralvaccine}` developers
 "suppis_vaccine"
+
+#' Demographic Dataset-pediatrics
+#'
+#' An updated SDTM DM dataset with pediatric patients
+#'
+#' @source Constructed by `{admiralpeds}` developers
+"dm_peds"
+
+#' Vital signs Dataset-pediatrics
+#'
+#' An updated SDTM VS dataset with anthropometric measurements for pediatric patients
+#'
+#' @source Constructed by `{admiralpeds}` developers
+"vs_peds"
