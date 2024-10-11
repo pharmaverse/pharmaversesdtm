@@ -2,6 +2,8 @@
 
 # New features
 
+- Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added (#88).
+
 <details>
 <summary>Developer Notes</summary>
 
