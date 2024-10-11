@@ -1,8 +1,15 @@
 # pharmaversesdtm (development version)
 
-## New Features
+# New features
 
 - Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added (#88).
+
+<details>
+<summary>Developer Notes</summary>
+
+- Activated automatic version bumping CICD workflow. (#122)
+
+</details>
 
 # pharmaversesdtm 1.0.0
 
