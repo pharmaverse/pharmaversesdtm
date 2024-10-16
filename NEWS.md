@@ -4,6 +4,8 @@
 
 - Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added (#88).
 
+- Add `CMENRTPT` to `cm`. (#120)
+
 <details>
 <summary>Developer Notes</summary>
 
