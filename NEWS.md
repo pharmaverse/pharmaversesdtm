@@ -12,7 +12,6 @@
 - Activated automatic version bumping CICD workflow. (#122)
 
 </details>
->>>>>>> main
 
 # pharmaversesdtm 1.0.0
 
