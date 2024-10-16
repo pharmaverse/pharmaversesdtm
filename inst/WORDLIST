@@ -12,12 +12,11 @@ Immunogenicity
 MH
 MedDRA
 NEI
+ONCO
 ORCID
 Pharmacokinetic
-Pharmacokinetics
 Pharmaverse
 RECIST
-Rodriguez
 Rohan
 SDG
 SDTM
@@ -37,7 +36,8 @@ VFQ
 Vegesna
 Vinh
 anonymized
+anthropometric
 iRECIST
 nolint
-ONCO
 pharmaverse
+CICD

@@ -12,4 +12,7 @@ downstream_repos:
     host: https://github.com
   - repo: pharmaverse/admiralophtha
     host: https://github.com
+  - repo: pharmaverse/admiralpeds
+    host: https://github.com
+
 
