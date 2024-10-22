@@ -1,10 +1,10 @@
 # pharmaversesdtm 1.1.0
 
-# New features
+## New features
 
-- Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added (#88).
+- Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added. (#88)
 
-- Add `CMENRTPT` to `cm`. (#120)
+- `CMENRTPT` variable was added to the `cm` dataset. (#120)
 
 <details>
 <summary>Developer Notes</summary>
