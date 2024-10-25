@@ -6,6 +6,8 @@
 
 - `CMENRTPT` variable was added to the `cm` dataset. (#120)
 
+- `AELOC` variable was added to the `ae_ophtha` dataset. (#110)
+
 <details>
 <summary>Developer Notes</summary>
 
