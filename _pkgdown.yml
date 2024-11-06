@@ -7,7 +7,7 @@ template:
 repo:
   url:
     home: https://github.com/pharmaverse/pharmaversesdtm
-    source: https://github.com/pharmaverse/pharmaversesdtm/blob/main/
+    source: https://github.com/pharmaverse/pharmaversesdtm/tree/111-dataset-contents-ref-pages
     issue: https://github.com/pharmaverse/pharmaversesdtm/issues/
     user: https://github.com/
 news:
