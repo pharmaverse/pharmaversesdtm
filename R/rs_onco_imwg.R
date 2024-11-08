@@ -1,0 +1,32 @@
+#' rs_onco_imwg
+#'
+#' Disease Response (IMWG)
+#'
+#' A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
+#'
+#' @name rs_onco_imwg
+#' @docType data
+#' @format A data frame with 17 columns:
+#'   \describe{
+#'     \item{STUDYID}{undocumented field}
+#'     \item{DOMAIN}{undocumented field}
+#'     \item{USUBJID}{undocumented field}
+#'     \item{RSSEQ}{undocumented field}
+#'     \item{RSLNKGRP}{undocumented field}
+#'     \item{RSTESTCD}{undocumented field}
+#'     \item{RSTEST}{undocumented field}
+#'     \item{RSCAT}{undocumented field}
+#'     \item{RSORRES}{undocumented field}
+#'     \item{RSSTRESC}{undocumented field}
+#'     \item{RSSTAT}{undocumented field}
+#'     \item{RSREASND}{undocumented field}
+#'     \item{RSEVAL}{undocumented field}
+#'     \item{VISITNUM}{undocumented field}
+#'     \item{VISIT}{undocumented field}
+#'     \item{RSDTC}{undocumented field}
+#'     \item{RSDY}{undocumented field}
+#'   }
+#'
+#' @source Derived from tr_onco_recist
+#' @author Vinh Nguyen
+"rs_onco_imwg"

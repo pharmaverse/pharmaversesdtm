@@ -1,0 +1,24 @@
+#' supprs_onco_imwg
+#'
+#' Supplemental Qualifiers for RS_ONCO_IMWG
+#'
+#' A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
+#'
+#' @name supprs_onco_imwg
+#' @docType data
+#' @format A data frame with 9 columns:
+#'   \describe{
+#'     \item{STUDYID}{undocumented field}
+#'     \item{RDOMAIN}{undocumented field}
+#'     \item{USUBJID}{undocumented field}
+#'     \item{IDVAR}{undocumented field}
+#'     \item{IDVARVAL}{undocumented field}
+#'     \item{QNAM}{undocumented field}
+#'     \item{QLABEL}{undocumented field}
+#'     \item{QVAL}{undocumented field}
+#'     \item{QORIG}{undocumented field}
+#'   }
+#'
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true
+#' @author Vinh Nguyen
+"supprs_onco_imwg"

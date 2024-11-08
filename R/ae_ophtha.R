@@ -6,7 +6,7 @@
 #'
 #' @name ae_ophtha
 #' @docType data
-#' @format A data frame with 36 columns:
+#' @format A data frame with 37 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -44,6 +44,7 @@
 #'     \item{AESTDY}{Study Day of Start of Adverse Event}
 #'     \item{AEENDY}{Study Day of End of Adverse Event}
 #'     \item{AELAT}{Laterality}
+#'     \item{AELOC}{Location}
 #'   }
 #'
 #' @source Constructed using ae from the {pharmaversesdtm} package

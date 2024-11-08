@@ -104,3 +104,6 @@ for (dataset_name in datasets) {
     dataset_source
   )
 }
+
+# Generate the documentation
+roxygen2::roxygenize(".", roclets = c("rd", "collate", "namespace"))

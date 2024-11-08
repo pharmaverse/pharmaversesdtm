@@ -6,7 +6,7 @@
 #'
 #' @name cm
 #' @docType data
-#' @format A data frame with 21 columns:
+#' @format A data frame with 22 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -29,6 +29,7 @@
 #'     \item{CMENDTC}{End Date/Time of Medication}
 #'     \item{CMSTDY}{Study Day of Start of Medication}
 #'     \item{CMENDY}{Study Day of End of Medication}
+#'     \item{CMENRTPT}{undocumented field}
 #'   }
 #'
 #' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true
