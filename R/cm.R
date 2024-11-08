@@ -1,0 +1,35 @@
+#' cm
+#'
+#' Concomitant Medication
+#'
+#' A SDTM CM dataset from the CDISC pilot project
+#'
+#' @name cm
+#' @docType data
+#' @format A data frame with 21 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{CMSEQ}{Sequence Number}
+#'     \item{CMSPID}{Sponsor-Defined Identifier}
+#'     \item{CMTRT}{Reported Name of Drug, Med, or Therapy}
+#'     \item{CMDECOD}{Standardized Medication Name}
+#'     \item{CMINDC}{Indication}
+#'     \item{CMCLAS}{Medication Class}
+#'     \item{CMDOSE}{Dose per Administration}
+#'     \item{CMDOSU}{Dose Units}
+#'     \item{CMDOSFRQ}{Dosing Frequency per Interval}
+#'     \item{CMROUTE}{Route of Administration}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{VISITDY}{Planned Study Day of Visit}
+#'     \item{CMDTC}{Date/Time of Collection}
+#'     \item{CMSTDTC}{Start Date/Time of Medication}
+#'     \item{CMENDTC}{End Date/Time of Medication}
+#'     \item{CMSTDY}{Study Day of Start of Medication}
+#'     \item{CMENDY}{Study Day of End of Medication}
+#'   }
+#'
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true
+"cm"

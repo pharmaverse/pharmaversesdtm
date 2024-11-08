@@ -1,0 +1,24 @@
+#' supptr_onco
+#'
+#' Supplemental Tumor Results for Oncology
+#'
+#' A SDTM SUPPTR dataset simulated by Gopi Vegesna
+#'
+#' @name supptr_onco
+#' @docType data
+#' @format A data frame with 9 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{RDOMAIN}{Related Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{IDVAR}{Identifying Variable}
+#'     \item{IDVARVAL}{Identifying Variable Value}
+#'     \item{QNAM}{Qualifier Variable Name}
+#'     \item{QLABEL}{Qualifier Variable Label}
+#'     \item{QVAL}{Data Value}
+#'     \item{QORIG}{Origin}
+#'   }
+#'
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ts.xpt?raw=true
+#' @author Gopi Vegesna
+"supptr_onco"

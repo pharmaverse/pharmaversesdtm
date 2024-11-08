@@ -1,0 +1,19 @@
+#' sdg_db
+#'
+#' SDG
+#'
+#' An example SDG dataset
+#'
+#' @name sdg_db
+#' @docType data
+#' @format A data frame with 5 columns:
+#'   \describe{
+#'     \item{termchar}{undocumented field}
+#'     \item{sdg_name}{undocumented field}
+#'     \item{sdg_id}{undocumented field}
+#'     \item{termvar}{undocumented field}
+#'     \item{version}{undocumented field}
+#'   }
+#'
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true
+"sdg_db"

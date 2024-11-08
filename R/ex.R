@@ -1,0 +1,31 @@
+#' ex
+#'
+#' Exposure
+#'
+#' A SDTM EX dataset from the CDISC pilot project
+#'
+#' @name ex
+#' @docType data
+#' @format A data frame with 17 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{EXSEQ}{Sequence Number}
+#'     \item{EXTRT}{Name of Actual Treatment}
+#'     \item{EXDOSE}{Dose per Administration}
+#'     \item{EXDOSU}{Dose Units}
+#'     \item{EXDOSFRM}{Dose Form}
+#'     \item{EXDOSFRQ}{Dosing Frequency per Interval}
+#'     \item{EXROUTE}{Route of Administration}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{VISITDY}{Planned Study Day of Visit}
+#'     \item{EXSTDTC}{Start Date/Time of Treatment}
+#'     \item{EXENDTC}{End Date/Time of Treatment}
+#'     \item{EXSTDY}{Study Day of Start of Treatment}
+#'     \item{EXENDY}{Study Day of End of Treatment}
+#'   }
+#'
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ex.xpt?raw=true
+"ex"

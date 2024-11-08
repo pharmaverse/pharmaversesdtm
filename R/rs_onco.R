@@ -1,0 +1,34 @@
+#' rs_onco
+#'
+#' Disease Response for Oncology
+#'
+#' A SDTM RS dataset simulated by Gopi Vegesna
+#'
+#' @name rs_onco
+#' @docType data
+#' @format A data frame with 19 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{RSSEQ}{Sequence Number}
+#'     \item{RSLNKGRP}{Link Group}
+#'     \item{RSTESTCD}{Response Assessment Short Name}
+#'     \item{RSTEST}{Response Assessment Name}
+#'     \item{RSCAT}{Category for Response Assessment}
+#'     \item{RSORRES}{Response Assessment Original Result}
+#'     \item{RSSTRESC}{Response Assessment Result in Std Format}
+#'     \item{RSSTAT}{Completion Status}
+#'     \item{RSREASND}{Reason Response Assessment Not Performed}
+#'     \item{RSEVAL}{Evaluator}
+#'     \item{RSEVALID}{Evaluator Identifier}
+#'     \item{RSACPTFL}{Accepted Record Flag}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{RSDTC}{Date/Time of Response Assessment}
+#'     \item{RSDY}{Study Day of Response Assessment}
+#'   }
+#'
+#' @source https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda
+#' @author Gopi Vegesna
+"rs_onco"

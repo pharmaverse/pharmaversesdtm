@@ -1,0 +1,38 @@
+#' lb
+#'
+#' Laboratory Measurements
+#'
+#' An updated SDTM LB dataset that uses data from the CDISC pilot project
+#'
+#' @name lb
+#' @docType data
+#' @format A data frame with 23 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{LBSEQ}{Sequence Number}
+#'     \item{LBTESTCD}{Lab Test or Examination Short Name}
+#'     \item{LBTEST}{Lab Test or Examination Name}
+#'     \item{LBCAT}{Category for Lab Test}
+#'     \item{LBORRES}{Result or Finding in Original Units}
+#'     \item{LBORRESU}{Original Units}
+#'     \item{LBORNRLO}{Reference Range Lower Limit in Orig Unit}
+#'     \item{LBORNRHI}{Reference Range Upper Limit in Orig Unit}
+#'     \item{LBSTRESC}{Character Result/Finding in Std Format}
+#'     \item{LBSTRESN}{Numeric Result/Finding in Standard Units}
+#'     \item{LBSTRESU}{Standard Units}
+#'     \item{LBSTNRLO}{Reference Range Lower Limit-Std Units}
+#'     \item{LBSTNRHI}{Reference Range Upper Limit-Std Units}
+#'     \item{LBNRIND}{Reference Range Indicator}
+#'     \item{LBBLFL}{Baseline Flag}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{VISITDY}{Planned Study Day of Visit}
+#'     \item{LBDTC}{Date/Time of Specimen Collection}
+#'     \item{LBDY}{Study Day of Specimen Collection}
+#'   }
+#'
+#' @source https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda
+#' @author Annie Yang
+"lb"

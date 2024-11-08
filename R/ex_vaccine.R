@@ -1,0 +1,35 @@
+#' ex_vaccine
+#'
+#' Exposures for Vaccine
+#'
+#' An example SDTM EX dataset for vaccine studies
+#'
+#' @name ex_vaccine
+#' @docType data
+#' @format A data frame with 21 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{EXSEQ}{Sequence Number}
+#'     \item{EXLNKGRP}{Link Group ID}
+#'     \item{EXLNKID}{Link ID}
+#'     \item{EXTRT}{Name of Actual Treatment}
+#'     \item{EXCAT}{Category of Treatment}
+#'     \item{EXDOSE}{Dose per Administration}
+#'     \item{EXDOSU}{Dose Units}
+#'     \item{EXDOSFRM}{Dose Form}
+#'     \item{EXROUTE}{Route of Administration}
+#'     \item{EXLOC}{Location of Dose Administration}
+#'     \item{EXLAT}{Laterality}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{EPOCH}{Epoch}
+#'     \item{EXDTC}{undocumented field}
+#'     \item{EXSTDTC}{Start Date/Time of Treatment}
+#'     \item{EXENDTC}{End Date/Time of Treatment}
+#'     \item{EXDY}{undocumented field}
+#'   }
+#'
+#' @source Constructed by {admiralvaccine} developers
+"ex_vaccine"

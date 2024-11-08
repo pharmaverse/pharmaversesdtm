@@ -1,0 +1,44 @@
+#' face_vaccine
+#'
+#' Findings About Clinical Events for Vaccine
+#'
+#' An example SDTM FACE for vaccine studies
+#'
+#' @name face_vaccine
+#' @docType data
+#' @format A data frame with 30 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{FASEQ}{Sequence Number}
+#'     \item{FALNKGRP}{Link Group ID}
+#'     \item{FALAT}{Laterality}
+#'     \item{FALNKID}{Link ID}
+#'     \item{FALOC}{Location of the Finding About}
+#'     \item{FATESTCD}{Findings About Test Short Name}
+#'     \item{FATEST}{Findings About Test Name}
+#'     \item{FAOBJ}{Object of the Observation}
+#'     \item{FACAT}{Category for Findings About}
+#'     \item{FASCAT}{Subcategory for Findings About}
+#'     \item{FAEVAL}{Evaluator}
+#'     \item{FAORRES}{Result or Finding in Original Units}
+#'     \item{FAORRESU}{Original Units}
+#'     \item{EPOCH}{Epoch}
+#'     \item{FADTC}{Date/Time of Collection}
+#'     \item{FADY}{Study Day of Collection}
+#'     \item{FATPT}{Planned Time Point Name}
+#'     \item{FATPTNUM}{Planned Time Point Number}
+#'     \item{FATPTREF}{Time Point Reference}
+#'     \item{FARFTDTC}{Date/Time of Reference Time Point}
+#'     \item{FAEVLINT}{Evaluation Interval}
+#'     \item{FAEVINTX}{Evaluation Interval Text}
+#'     \item{FASTAT}{Completion Status}
+#'     \item{FAREASND}{Reason Not Performed}
+#'     \item{FASTRESC}{Character Result/Finding in Std Format}
+#'     \item{FASTRESN}{Numeric Result/Finding in Standard Units}
+#'     \item{FASTRESU}{Standard Units}
+#'   }
+#'
+#' @source Constructed by {admiralvaccine} developers
+"face_vaccine"

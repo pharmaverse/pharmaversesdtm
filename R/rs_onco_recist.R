@@ -1,0 +1,29 @@
+#' rs_onco_recist
+#'
+#' Disease Response (RECIST 1.1) for Oncology
+#'
+#' A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+#'
+#' @name rs_onco_recist
+#' @docType data
+#' @format A data frame with 14 columns:
+#'   \describe{
+#'     \item{DOMAIN}{undocumented field}
+#'     \item{STUDYID}{undocumented field}
+#'     \item{USUBJID}{undocumented field}
+#'     \item{VISITNUM}{undocumented field}
+#'     \item{VISIT}{undocumented field}
+#'     \item{RSTESTCD}{undocumented field}
+#'     \item{RSTEST}{undocumented field}
+#'     \item{RSORRES}{undocumented field}
+#'     \item{RSSTRESC}{undocumented field}
+#'     \item{RSEVAL}{undocumented field}
+#'     \item{RSEVALID}{undocumented field}
+#'     \item{RSACPTFL}{undocumented field}
+#'     \item{RSDTC}{undocumented field}
+#'     \item{RSSEQ}{undocumented field}
+#'   }
+#'
+#' @source Generated dataset.
+#' @author Stefan Bundfuss
+"rs_onco_recist"

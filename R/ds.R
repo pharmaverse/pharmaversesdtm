@@ -1,0 +1,28 @@
+#' ds
+#'
+#' Disposition
+#'
+#' An updated SDTM DS dataset that uses the CDISC pilot project
+#'
+#' @name ds
+#' @docType data
+#' @format A data frame with 13 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{DSSEQ}{Sequence Number}
+#'     \item{DSSPID}{Sponsor-Defined Identifier}
+#'     \item{DSTERM}{Reported Term for the Disposition Event}
+#'     \item{DSDECOD}{Standardized Disposition Term}
+#'     \item{DSCAT}{Category for Disposition Event}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{DSDTC}{Date/Time of Collection}
+#'     \item{DSSTDTC}{Start Date/Time of Disposition Event}
+#'     \item{DSSTDY}{Study Day of Start of Disposition Event}
+#'   }
+#'
+#' @source https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda
+#' @author Gopi Vegesna
+"ds"

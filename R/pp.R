@@ -1,0 +1,29 @@
+#' pp
+#'
+#' Pharmacokinetic Parameters
+#'
+#' A SDTM PP dataset simulated by Antonio Rodriguez Contesti
+#'
+#' @name pp
+#' @docType data
+#' @format A data frame with 14 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{PPSEQ}{Sequence Number}
+#'     \item{PPTESTCD}{Parameter Short Name}
+#'     \item{PPTEST}{Parameter Name}
+#'     \item{PPCAT}{Parameter Category}
+#'     \item{PPORRES}{Result or Finding in Original Units}
+#'     \item{PPORRESU}{Original Units}
+#'     \item{PPSTRESC}{Character Result/Finding in Std Format}
+#'     \item{PPSTRESN}{Numeric Result/Finding in Standard Units}
+#'     \item{PPSTRESU}{Standard Units}
+#'     \item{PPSPEC}{Specimen Material Type}
+#'     \item{PPRFDTC}{Date/Time of Reference Point}
+#'   }
+#'
+#' @source https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda
+#' @author Antonio Rodriguez Contesti
+"pp"

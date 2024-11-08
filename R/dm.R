@@ -1,0 +1,39 @@
+#' dm
+#'
+#' Demography
+#'
+#' A SDTM DM dataset from the CDISC pilot project
+#'
+#' @name dm
+#' @docType data
+#' @format A data frame with 25 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{SUBJID}{Subject Identifier for the Study}
+#'     \item{RFSTDTC}{Subject Reference Start Date/Time}
+#'     \item{RFENDTC}{Subject Reference End Date/Time}
+#'     \item{RFXSTDTC}{Date/Time of First Study Treatment}
+#'     \item{RFXENDTC}{Date/Time of Last Study Treatment}
+#'     \item{RFICDTC}{Date/Time of Informed Consent}
+#'     \item{RFPENDTC}{Date/Time of End of Participation}
+#'     \item{DTHDTC}{Date/Time of Death}
+#'     \item{DTHFL}{Subject Death Flag}
+#'     \item{SITEID}{Study Site Identifier}
+#'     \item{AGE}{Age}
+#'     \item{AGEU}{Age Units}
+#'     \item{SEX}{Sex}
+#'     \item{RACE}{Race}
+#'     \item{ETHNIC}{Ethnicity}
+#'     \item{ARMCD}{Planned Arm Code}
+#'     \item{ARM}{Description of Planned Arm}
+#'     \item{ACTARMCD}{Actual Arm Code}
+#'     \item{ACTARM}{Description of Actual Arm}
+#'     \item{COUNTRY}{Country}
+#'     \item{DMDTC}{Date/Time of Collection}
+#'     \item{DMDY}{Study Day of Collection}
+#'   }
+#'
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true
+"dm"

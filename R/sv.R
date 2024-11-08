@@ -1,0 +1,22 @@
+#' sv
+#'
+#' Subject Visits
+#'
+#' A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
+#'
+#' @name sv
+#' @docType data
+#' @format A data frame with 8 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{VISITDY}{Planned Study Day of Visit}
+#'     \item{SVSTDTC}{Start Date/Time of Visit}
+#'     \item{SVENDTC}{End Date/Time of Visit}
+#'   }
+#'
+#' @source Constructed by {admiralvaccine} developers
+"sv"

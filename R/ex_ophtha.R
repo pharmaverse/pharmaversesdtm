@@ -1,0 +1,33 @@
+#' ex_ophtha
+#'
+#' Exposure for Ophthalmology
+#'
+#' An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
+#'
+#' @name ex_ophtha
+#' @docType data
+#' @format A data frame with 19 columns:
+#'   \describe{
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{EXSEQ}{Sequence Number}
+#'     \item{EXTRT}{Name of Actual Treatment}
+#'     \item{EXDOSE}{Dose per Administration}
+#'     \item{EXDOSU}{Dose Units}
+#'     \item{EXDOSFRM}{Dose Form}
+#'     \item{EXDOSFRQ}{Dose Frequency per Interval}
+#'     \item{EXROUTE}{Route of Administration}
+#'     \item{EXLOC}{Location of Dose Administration}
+#'     \item{EXLAT}{Laterality}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{VISITDY}{Planned Study Day of Visit}
+#'     \item{EXSTDTC}{Start Date/Time of Treatment}
+#'     \item{EXENDTC}{End Date/Time of Treatment}
+#'     \item{EXSTDY}{Study Day of Start of Treatment}
+#'     \item{EXENDY}{Study Day of End of Treatment}
+#'   }
+#'
+#' @source Constructed using ex from the {pharmaversesdtm} package
+"ex_ophtha"

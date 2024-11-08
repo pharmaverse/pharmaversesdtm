@@ -1,0 +1,37 @@
+#' vs_vaccine
+#'
+#' Vital Signs for Vaccine
+#'
+#' An example SDTM VS dataset for vaccine studies
+#'
+#' @name vs_vaccine
+#' @docType data
+#' @format A data frame with 23 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{VSSEQ}{Sequence Number}
+#'     \item{VSLNKID}{Link ID}
+#'     \item{VSLNKGRP}{Link Group ID}
+#'     \item{VSTESTCD}{Vital Signs Test Short Name}
+#'     \item{VSTEST}{Vital Signs Test Name}
+#'     \item{VSCAT}{Category for Vital Signs}
+#'     \item{VSSCAT}{Subcategory for Vital Signs}
+#'     \item{VSORRES}{Result or Finding in Original Units}
+#'     \item{VSORRESU}{Original Units}
+#'     \item{VSSTRESC}{Character Result/Finding in Std Format}
+#'     \item{VSSTRESN}{Numeric Result/Finding in Standard Units}
+#'     \item{VSSTRESU}{Standard Units}
+#'     \item{VSEVAL}{Evaluator}
+#'     \item{VSLOC}{Location of Vital Signs Measurement}
+#'     \item{EPOCH}{Epoch}
+#'     \item{VSDTC}{Date/Time of Measurements}
+#'     \item{VSDY}{Study Day of Vital Signs}
+#'     \item{VSTPT}{Planned Time Point Name}
+#'     \item{VSTPTNUM}{Planned Time Point Number}
+#'     \item{VSTPTREF}{Time Point Reference}
+#'   }
+#'
+#' @source Constructed by {admiralvaccine} developers
+"vs_vaccine"

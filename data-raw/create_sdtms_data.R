@@ -1,0 +1,106 @@
+# Load the CSV file with metadata
+specs <-
+  read.csv("inst/extdata/sdtms-specs.csv", stringsAsFactors = FALSE)
+
+# Helper function to get attribute for a column, with default as "undocumented field"
+get_attr <- function(data, col_name) {
+  att <- attr(data[[col_name]], "label")
+  if (is.null(att) || att == "null") {
+    att <- "undocumented field"
+  }
+  return(att)
+}
+
+# Define the `write_doc` function, now with `dataset_description`
+write_doc <-
+  function(data,
+           dataset_name,
+           dataset_label = "No label available",
+           dataset_description = "No description available",
+           dataset_author = NULL,
+           dataset_source = "No source available") {
+    # Create documentation for the current dataset
+    doc_string <- paste(
+      sprintf("#' %s", dataset_name),
+      "#'",
+      sprintf("#' %s", dataset_label),
+      "#'",
+      sprintf("#' %s", dataset_description),
+      "#'",
+      sprintf("#' @name %s", dataset_name),
+      "#' @docType data",
+      sprintf("#' @format A data frame with %s columns:", ncol(data)),
+      "#'   \\describe{",
+      paste(sapply(names(data), function(col_name) {
+        paste(sprintf("#'     \\item{%s}{%s}", col_name, get_attr(data, col_name)))
+      }, USE.NAMES = FALSE), collapse = "\n"),
+      "#'   }",
+      "#'",
+      sprintf("#' @source %s", dataset_source),
+      sep = "\n"
+    )
+
+    # Conditionally add the author line if author information is available
+    if (!is.null(dataset_author) && dataset_author != "") {
+      doc_string <-
+        paste(doc_string, sprintf("#' @author %s", dataset_author), sep = "\n")
+    }
+
+    doc_string <-
+      paste(doc_string, sprintf("\"%s\"", dataset_name), sep = "\n")
+    writeLines(doc_string, con = file.path("R", paste0(dataset_name, ".R")))
+  }
+
+# Get the list of datasets in the package
+datasets <- data(package = "pharmaversesdtm")$results[, "Item"]
+
+# Loop through each dataset and generate documentation
+for (dataset_name in datasets) {
+  # Load the dataset
+  data(list = dataset_name, package = "pharmaversesdtm")
+  dataset <- get(dataset_name)
+
+  # Retrieve metadata from the specs CSV
+  metadata <- specs[specs$name == dataset_name,]
+
+  # Set default metadata in case of missing entries
+  if (nrow(metadata) == 0) {
+    cat("No metadata found for",
+        dataset_name,
+        "- using default values.\n")
+    dataset_label <- "No label available"
+    dataset_description <- "No description available"
+    dataset_author <- NULL  # Author not specified
+    dataset_source <- "No source available"
+  } else {
+    # Retrieve metadata and use defaults if partially missing
+    dataset_label <-
+      ifelse(!is.na(metadata$label),
+             metadata$label,
+             "No label available")
+    dataset_description <-
+      ifelse(!is.na(metadata$description),
+             metadata$description,
+             "No description available")
+    dataset_author <-
+      if (!is.na(metadata$author) &&
+          metadata$author != "")
+        metadata$author
+    else
+      NULL
+    dataset_source <-
+      ifelse(!is.na(metadata$source),
+             metadata$source,
+             "No source available")
+  }
+
+  # Call `write_doc` with the dataset and metadata
+  write_doc(
+    dataset,
+    dataset_name,
+    dataset_label,
+    dataset_description,
+    dataset_author,
+    dataset_source
+  )
+}

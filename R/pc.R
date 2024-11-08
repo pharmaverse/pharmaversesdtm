@@ -1,0 +1,35 @@
+#' pc
+#'
+#' Pharmacokinetic Concentrations
+#'
+#' A SDTM PC dataset simulated by Antonio Rodriguez Contesti
+#'
+#' @name pc
+#' @docType data
+#' @format A data frame with 20 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{PCSEQ}{Sequence Number}
+#'     \item{PCTESTCD}{Pharmacokinetic Test Short Name}
+#'     \item{PCTEST}{Pharmacokinetic Test Name}
+#'     \item{PCORRES}{Result or Finding in Original Units}
+#'     \item{PCORRESU}{Original Units}
+#'     \item{PCSTRESC}{Character Result/Finding in Std Format}
+#'     \item{PCSTRESN}{Numeric Result/Finding in Standard Units}
+#'     \item{PCSTRESU}{Standard Units}
+#'     \item{PCNAM}{Vendor Name}
+#'     \item{PCSPEC}{Specimen Material Type}
+#'     \item{PCLLOQ}{Lower Limit of Quantitation}
+#'     \item{VISIT}{Visit Name}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{PCDTC}{Date/Time of Specimen Collection}
+#'     \item{PCDY}{Actual Study Day of Specimen Collection}
+#'     \item{PCTPT}{Planned Time Point Name}
+#'     \item{PCTPTNUM}{Planned Time Point Number}
+#'   }
+#'
+#' @source https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda
+#' @author Antonio Rodriguez Contesti
+"pc"

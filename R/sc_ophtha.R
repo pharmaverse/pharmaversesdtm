@@ -1,0 +1,27 @@
+#' sc_ophtha
+#'
+#' Subject Characteristic for Ophthalmology
+#'
+#' A SDTM SC dataset simulated by Ophthalmology team
+#'
+#' @name sc_ophtha
+#' @docType data
+#' @format A data frame with 12 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{SCSEQ}{Sequence Number}
+#'     \item{SCTESTCD}{Subject Characteristic Short Name}
+#'     \item{SCTEST}{Subject Characteristic}
+#'     \item{SCCAT}{Category for Subject Characteristic}
+#'     \item{SCORRES}{Result or Finding in Original Units}
+#'     \item{SCSTRESC}{Character Result/Finding in Std Format}
+#'     \item{EPOCH}{Epoch}
+#'     \item{SCDTC}{Date/Time of Collection}
+#'     \item{SCDY}{Study Day of Examination}
+#'   }
+#'
+#' @source Generated dataset.
+#' @author Gordon Miller
+"sc_ophtha"

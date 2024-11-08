@@ -1,0 +1,43 @@
+#' ce_vaccine
+#'
+#' Clinical Events for Vaccine
+#'
+#' An example SDTM CE dataset for vaccine studies
+#'
+#' @name ce_vaccine
+#' @docType data
+#' @format A data frame with 29 columns:
+#'   \describe{
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{CESEQ}{Sequence Number}
+#'     \item{CELNKID}{Link ID}
+#'     \item{CELNKGRP}{Link Group ID}
+#'     \item{CETERM}{Reported Term for the Clinical Event}
+#'     \item{CEDECOD}{Dictionary-Derived Term}
+#'     \item{CELAT}{Laterality of Location of Clinical Event}
+#'     \item{CELOC}{Location of Clinical Event}
+#'     \item{CECAT}{Category for Clinical Event}
+#'     \item{CESCAT}{Subcategory for Clinical Event}
+#'     \item{CEPRESP}{Clinical Event Pre-Specified}
+#'     \item{CEOCCUR}{Clinical Event Occurrence}
+#'     \item{CESEV}{Severity/Intensity}
+#'     \item{CEREL}{Causality}
+#'     \item{CEOUT}{Outcome of Clinical Event}
+#'     \item{EPOCH}{Epoch}
+#'     \item{CEDTC}{Date/Time of Event Collection}
+#'     \item{CESTDTC}{Start Date/Time of Clinical Event}
+#'     \item{CEENDTC}{End Date/Time of Clinical Event}
+#'     \item{CEDUR}{Duration of Clinical Event}
+#'     \item{CETPT}{Planned Time Point Name}
+#'     \item{CETPTNUM}{Planned Time Point Number}
+#'     \item{CETPTREF}{Time Point Reference}
+#'     \item{CERFTDTC}{Date/Time of Reference Time Point}
+#'     \item{CEEVINTX}{Evaluation Interval Text}
+#'     \item{CESTAT}{Completion Status}
+#'     \item{CEREASND}{Reason Clinical Event Not Collected}
+#'   }
+#'
+#' @source Constructed by {admiralvaccine} developers
+"ce_vaccine"
