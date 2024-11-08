@@ -61,37 +61,43 @@ for (dataset_name in datasets) {
   dataset <- get(dataset_name)
 
   # Retrieve metadata from the specs CSV
-  metadata <- specs[specs$name == dataset_name,]
+  metadata <- specs[specs$name == dataset_name, ]
 
   # Set default metadata in case of missing entries
   if (nrow(metadata) == 0) {
-    cat("No metadata found for",
-        dataset_name,
-        "- using default values.\n")
+    cat(
+      "No metadata found for",
+      dataset_name,
+      "- using default values.\n"
+    )
     dataset_label <- "No label available"
     dataset_description <- "No description available"
-    dataset_author <- NULL  # Author not specified
+    dataset_author <- NULL # Author not specified
     dataset_source <- "No source available"
   } else {
     # Retrieve metadata and use defaults if partially missing
     dataset_label <-
       ifelse(!is.na(metadata$label),
-             metadata$label,
-             "No label available")
+        metadata$label,
+        "No label available"
+      )
     dataset_description <-
       ifelse(!is.na(metadata$description),
-             metadata$description,
-             "No description available")
+        metadata$description,
+        "No description available"
+      )
     dataset_author <-
       if (!is.na(metadata$author) &&
-          metadata$author != "")
+        metadata$author != "") {
         metadata$author
-    else
-      NULL
+      } else {
+        NULL
+      }
     dataset_source <-
       ifelse(!is.na(metadata$source),
-             metadata$source,
-             "No source available")
+        metadata$source,
+        "No source available"
+      )
   }
 
   # Call `write_doc` with the dataset and metadata

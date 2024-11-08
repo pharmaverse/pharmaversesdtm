@@ -19,6 +19,6 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
-#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ts.xpt?raw=true
+#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ts.xpt?raw=true # nolint
 #' @author Gopi Vegesna
 "supptr_onco"
