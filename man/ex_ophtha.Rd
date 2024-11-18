@@ -38,6 +38,6 @@ ex_ophtha
 Exposure for Ophthalmology
 }
 \details{
-An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
+An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
 }
 \keyword{datasets}

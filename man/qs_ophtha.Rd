@@ -39,6 +39,6 @@ qs_ophtha
 Questionnaire for Ophthalmology
 }
 \details{
-An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
+An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
 }
 \keyword{datasets}
