@@ -82,7 +82,7 @@ The documentation process in `{pharmaversesdtm}` is automated for consistency an
    - Missing fields default to "No label/description/source available."
 
 2. **Run Script**:
-   - The script dynamically retrieves metadata, enriches it with dataset attributes, and generates `.R` files in the `R/` directory.
+   - The `data-raw/create_sdtms_data.R` script dynamically retrieves metadata, enriches it with dataset attributes, and generates `.R` files in the `R/` directory.
 
 3. **Generate Documentation**:
    - Use `roxygen2::roxygenize()` to update `.Rd` files in the `man/` directory.
