@@ -47,7 +47,7 @@ Then there are two main ways to extend the test data: either by adding new datas
 * Following [best practice](https://r-pkgs.org/data.html#sec-data-data), each dataset is stored as a `.rda` file whose name is consistent with the name of the dataset, e.g., dataset `xx` is stored as `xx.rda`. The easiest way to achieve this is to use `usethis::use_data(xx)`
 * The programs in `data-raw/` are stored within the `{pharmaversesdtm}` GitHub repository, but they are **not** part of the `{pharmaversesdtm}` package--the `data-raw/` folder is specified in `.Rbuildignore`.
 * When you run a program that is in the `data-raw/` folder, you generate a dataset that is written to the `data/` folder, which will become part of the `{pharmaversesdtm}` package.
-* The names and sources of test datasets are specified in `R/data.R`, for the purpose of generating documentation in the `man/` folder.
+* The names and sources of test datasets are specified in `R/*.R`, for the purpose of generating documentation in the `man/` folder.
 
 **Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized CSV file (`inst/extdata/sdtms-specs.csv`) and used to generate `.R` documentation files. See the [Documentation Process](#documentation-process) for details.
 
@@ -57,16 +57,17 @@ Then there are two main ways to extend the test data: either by adding new datas
     * Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     * Note that **no personal data should be used** as part of this package, even if anonymized.
 * Run the program.
-* Reflect this update, by specifying `<name>` in `R/data.R`.
-* Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
+* Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.csv` file.
+* Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 * Add your GitHub handle to `.github/CODEOWNERS`.
 * Update `NEWS.md`.
 
 ## Updating Existing SDTM Datasets
 
-* Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly. 
+* Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly.
+* Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.csv` file.
 * Run the program, and output updated `<name>.rda` to the `data/` folder.
-* Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
+* Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 * Add your GitHub handle to `.github/CODEOWNERS`.
 * Update `NEWS.md`.
 
