@@ -49,6 +49,8 @@ Then there are two main ways to extend the test data: either by adding new datas
 * When you run a program that is in the `data-raw/` folder, you generate a dataset that is written to the `data/` folder, which will become part of the `{pharmaversesdtm}` package.
 * The names and sources of test datasets are specified in `R/data.R`, for the purpose of generating documentation in the `man/` folder.
 
+**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized CSV file (`inst/extdata/sdtms-specs.csv`) and used to generate `.R` documentation files. See the [Documentation Process](#documentation-process) for details.
+
 ## Adding New SDTM Datasets
 
 * Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder.
@@ -67,4 +69,28 @@ Then there are two main ways to extend the test data: either by adding new datas
 * Run `devtools::document()` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 * Add your GitHub handle to `.github/CODEOWNERS`.
 * Update `NEWS.md`.
+
+# Documentation Process
+
+The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized CSV file (`inst/extdata/sdtms-specs.csv`) and used to generate `.R` documentation files.
+
+## Workflow
+
+1. **Metadata Preparation**: 
+   - Ensure `sdtms-specs.csv` contains up-to-date metadata for all datasets.
+   - Missing fields default to "No label/description/source available."
+
+2. **Run Script**:
+   - The script dynamically retrieves metadata, enriches it with dataset attributes, and generates `.R` files in the `R/` directory.
+
+3. **Generate Documentation**:
+   - Use `roxygen2::roxygenize()` to update `.Rd` files in the `man/` directory.
+
+### Key Benefits of this Documentation Approach
+
+- **Automation**: Eliminates manual effort in maintaining documentation.
+- **Consistency**: Ensures uniform documentation for all datasets.
+- **Flexibility**: Easily update metadata centrally via the CSV file.
+
+This streamlined approach aligns with best practices for efficient package development.
 
