@@ -49,7 +49,7 @@ Then there are two main ways to extend the test data: either by adding new datas
 * When you run a program that is in the `data-raw/` folder, you generate a dataset that is written to the `data/` folder, which will become part of the `{pharmaversesdtm}` package.
 * The names and sources of test datasets are specified in `R/*.R`, for the purpose of generating documentation in the `man/` folder.
 
-**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized CSV file (`inst/extdata/sdtms-specs.csv`) and used to generate `.R` documentation files. See the [Documentation Process](#documentation-process) for details.
+**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized XLSX file (`inst/extdata/sdtms-specs.xlsx`) and used to generate `.R` documentation files. See the [Documentation Process](#documentation-process) for details.
 
 ## Adding New SDTM Datasets
 
@@ -57,7 +57,7 @@ Then there are two main ways to extend the test data: either by adding new datas
     * Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     * Note that **no personal data should be used** as part of this package, even if anonymized.
 * Run the program.
-* Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.csv` file.
+* Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.xlsx` file.
 * Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 * Add your GitHub handle to `.github/CODEOWNERS`.
 * Update `NEWS.md`.
@@ -65,7 +65,7 @@ Then there are two main ways to extend the test data: either by adding new datas
 ## Updating Existing SDTM Datasets
 
 * Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly.
-* Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.csv` file.
+* Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.xlsx` file.
 * Run the program, and output updated `<name>.rda` to the `data/` folder.
 * Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 * Add your GitHub handle to `.github/CODEOWNERS`.
@@ -73,25 +73,13 @@ Then there are two main ways to extend the test data: either by adding new datas
 
 # Documentation Process
 
-The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized CSV file (`inst/extdata/sdtms-specs.csv`) and used to generate `.R` documentation files.
-
-## Workflow
-
-1. **Metadata Preparation**: 
-   - Ensure `sdtms-specs.csv` contains up-to-date metadata for all datasets.
-   - Missing fields default to "No label/description/source available."
-
-2. **Run Script**:
-   - The `data-raw/create_sdtms_data.R` script dynamically retrieves metadata, enriches it with dataset attributes, and generates `.R` files in the `R/` directory.
-
-3. **Generate Documentation**:
-   - Use `roxygen2::roxygenize()` to update `.Rd` files in the `man/` directory.
+The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized XLSX file (`inst/extdata/sdtms-specs.xlsx`) and used to generate `.R` documentation files.
 
 ### Key Benefits of this Documentation Approach
 
 - **Automation**: Eliminates manual effort in maintaining documentation.
 - **Consistency**: Ensures uniform documentation for all datasets.
-- **Flexibility**: Easily update metadata centrally via the CSV file.
+- **Flexibility**: Easily update metadata centrally via the XLSX file.
 
 This streamlined approach aligns with best practices for efficient package development.
 

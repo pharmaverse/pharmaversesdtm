@@ -1,6 +1,7 @@
-# Load the CSV file with metadata
-specs <-
-  read.csv("inst/extdata/sdtms-specs.csv", stringsAsFactors = FALSE)
+# Load the XLSX file with metadata
+library(readxl)
+
+specs <- read_excel("inst/extdata/sdtms-specs.xlsx")
 
 # Helper function to get attribute for a column, with default as "undocumented field"
 get_attr <- function(data, col_name) {
@@ -78,7 +79,7 @@ for (dataset_name in datasets) {
   data(list = dataset_name, package = "pharmaversesdtm")
   dataset <- get(dataset_name)
 
-  # Retrieve metadata from the specs CSV
+  # Retrieve metadata from the specs XLSX
   metadata <- specs[specs$name == dataset_name, ]
 
   # Set default metadata in case of missing entries
