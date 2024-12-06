@@ -21,7 +21,7 @@ get_attr <- function(data, col_name) {
 
 # Helper function to check the length of a string and append " # nolint" if it exceeds 90 characters
 check_and_append_nolint <- function(text) {
-  if (nchar(text) > 90) {
+  if (nchar(text) > 80) {
     text <- paste0(text, " # nolint")
   }
   return(text)

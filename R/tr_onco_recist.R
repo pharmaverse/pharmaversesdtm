@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Tumor Results (RECIST 1.1) for Oncology
 #'
-#' A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+#' A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation # nolint
 #'
 #' @name tr_onco_recist
 #' @title Tumor Results (RECIST 1.1) for Oncology
-#' @description A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+#' @description A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation # nolint
 #' @docType data
 #' @format A data frame with 19 columns:
 #'   \describe{

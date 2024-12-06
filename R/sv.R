@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Subject Visits
 #'
-#' A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
+#' A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation # nolint
 #'
 #' @name sv
 #' @title Subject Visits
-#' @description A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
+#' @description A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation # nolint
 #' @docType data
 #' @format A data frame with 8 columns:
 #'   \describe{

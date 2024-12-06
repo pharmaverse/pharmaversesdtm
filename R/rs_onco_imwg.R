@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Disease Response (IMWG)
 #'
-#' A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
+#' A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
 #'
 #' @name rs_onco_imwg
 #' @title Disease Response (IMWG)
-#' @description A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
+#' @description A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
 #' @docType data
 #' @format A data frame with 17 columns:
 #'   \describe{

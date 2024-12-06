@@ -33,12 +33,12 @@ Derived from tr_onco_recist
 rs_onco_imwg
 }
 \description{
-A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
+A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
 }
 \details{
 Disease Response (IMWG)
 
-A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
+A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
 }
 \author{
 Vinh Nguyen

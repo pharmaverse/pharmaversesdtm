@@ -25,12 +25,12 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 supprs_onco_imwg
 }
 \description{
-A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
+A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg # nolint
 }
 \details{
 Supplemental Qualifiers for RS_ONCO_IMWG
 
-A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
+A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg # nolint
 }
 \author{
 Vinh Nguyen

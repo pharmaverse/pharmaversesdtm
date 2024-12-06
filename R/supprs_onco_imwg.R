@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Supplemental Qualifiers for RS_ONCO_IMWG
 #'
-#' A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
+#' A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg # nolint
 #'
 #' @name supprs_onco_imwg
 #' @title Supplemental Qualifiers for RS_ONCO_IMWG
-#' @description A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
+#' @description A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg # nolint
 #' @docType data
 #' @format A data frame with 9 columns:
 #'   \describe{
