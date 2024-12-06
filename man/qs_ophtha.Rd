@@ -3,7 +3,7 @@
 \docType{data}
 \name{qs_ophtha}
 \alias{qs_ophtha}
-\title{qs_ophtha}
+\title{Questionnaire for Ophthalmology}
 \format{
 A data frame with 20 columns:
 \describe{
@@ -36,9 +36,11 @@ Constructed using qs from the {pharmaversesdtm} package
 qs_ophtha
 }
 \description{
-Questionnaire for Ophthalmology
+An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
 }
 \details{
+Questionnaire for Ophthalmology
+
 An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
 }
 \keyword{datasets}

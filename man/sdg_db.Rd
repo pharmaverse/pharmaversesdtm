@@ -3,7 +3,7 @@
 \docType{data}
 \name{sdg_db}
 \alias{sdg_db}
-\title{sdg_db}
+\title{SDG}
 \format{
 A data frame with 5 columns:
 \describe{
@@ -21,9 +21,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 sdg_db
 }
 \description{
-SDG
+An example SDG dataset
 }
 \details{
+SDG
+
 An example SDG dataset
 }
 \keyword{datasets}

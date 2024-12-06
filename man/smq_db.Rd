@@ -3,7 +3,7 @@
 \docType{data}
 \name{smq_db}
 \alias{smq_db}
-\title{smq_db}
+\title{Standardized MedDRA Queries}
 \format{
 A data frame with 6 columns:
 \describe{
@@ -22,9 +22,11 @@ Generated dataset.
 smq_db
 }
 \description{
-Standardized MedDRA Queries
+An example SMQ dataset
 }
 \details{
+Standardized MedDRA Queries
+
 An example SMQ dataset
 }
 \keyword{datasets}

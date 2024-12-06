@@ -3,7 +3,7 @@
 \docType{data}
 \name{ex}
 \alias{ex}
-\title{ex}
+\title{Exposure}
 \format{
 A data frame with 17 columns:
 \describe{
@@ -33,9 +33,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 ex
 }
 \description{
-Exposure
+A SDTM EX dataset from the CDISC pilot project
 }
 \details{
+Exposure
+
 A SDTM EX dataset from the CDISC pilot project
 }
 \keyword{datasets}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{dm}
 \alias{dm}
-\title{dm}
+\title{Demography}
 \format{
 A data frame with 25 columns:
 \describe{
@@ -41,9 +41,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 dm
 }
 \description{
-Demography
+A SDTM DM dataset from the CDISC pilot project
 }
 \details{
+Demography
+
 A SDTM DM dataset from the CDISC pilot project
 }
 \keyword{datasets}

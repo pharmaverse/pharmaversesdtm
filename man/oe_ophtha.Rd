@@ -3,7 +3,7 @@
 \docType{data}
 \name{oe_ophtha}
 \alias{oe_ophtha}
-\title{oe_ophtha}
+\title{Ophthalmic Examinations for Ophthalmology}
 \format{
 A data frame with 25 columns:
 \describe{
@@ -41,9 +41,11 @@ Generated dataset.
 oe_ophtha
 }
 \description{
-Ophthalmic Examinations for Ophthalmology
+A SDTM OE dataset simulated by Ophthalmology team
 }
 \details{
+Ophthalmic Examinations for Ophthalmology
+
 A SDTM OE dataset simulated by Ophthalmology team
 }
 \author{

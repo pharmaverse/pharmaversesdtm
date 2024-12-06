@@ -3,7 +3,7 @@
 \docType{data}
 \name{ex_ophtha}
 \alias{ex_ophtha}
-\title{ex_ophtha}
+\title{Exposure for Ophthalmology}
 \format{
 A data frame with 19 columns:
 \describe{
@@ -35,9 +35,11 @@ Constructed using ex from the {pharmaversesdtm} package
 ex_ophtha
 }
 \description{
-Exposure for Ophthalmology
+An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
 }
 \details{
+Exposure for Ophthalmology
+
 An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
 }
 \keyword{datasets}

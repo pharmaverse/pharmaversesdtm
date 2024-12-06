@@ -3,7 +3,7 @@
 \docType{data}
 \name{sc_ophtha}
 \alias{sc_ophtha}
-\title{sc_ophtha}
+\title{Subject Characteristic for Ophthalmology}
 \format{
 A data frame with 12 columns:
 \describe{
@@ -28,9 +28,11 @@ Generated dataset.
 sc_ophtha
 }
 \description{
-Subject Characteristic for Ophthalmology
+A SDTM SC dataset simulated by Ophthalmology team
 }
 \details{
+Subject Characteristic for Ophthalmology
+
 A SDTM SC dataset simulated by Ophthalmology team
 }
 \author{

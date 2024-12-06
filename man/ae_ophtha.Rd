@@ -3,7 +3,7 @@
 \docType{data}
 \name{ae_ophtha}
 \alias{ae_ophtha}
-\title{ae_ophtha}
+\title{Adverse Events for Ophthalmology}
 \format{
 A data frame with 37 columns:
 \describe{
@@ -53,9 +53,11 @@ Constructed using ae from the {pharmaversesdtm} package
 ae_ophtha
 }
 \description{
-Adverse Events for Ophthalmology
+An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
 }
 \details{
+Adverse Events for Ophthalmology
+
 An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
 }
 \keyword{datasets}

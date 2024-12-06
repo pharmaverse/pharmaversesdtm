@@ -3,7 +3,7 @@
 \docType{data}
 \name{pp}
 \alias{pp}
-\title{pp}
+\title{Pharmacokinetic Parameters}
 \format{
 A data frame with 14 columns:
 \describe{
@@ -30,9 +30,11 @@ https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda
 pp
 }
 \description{
-Pharmacokinetic Parameters
+A SDTM PP dataset simulated by Antonio Rodriguez Contesti
 }
 \details{
+Pharmacokinetic Parameters
+
 A SDTM PP dataset simulated by Antonio Rodriguez Contesti
 }
 \author{

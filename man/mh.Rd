@@ -3,7 +3,7 @@
 \docType{data}
 \name{mh}
 \alias{mh}
-\title{mh}
+\title{Medical History}
 \format{
 A data frame with 28 columns:
 \describe{
@@ -44,9 +44,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 mh
 }
 \description{
-Medical History
+An updated SDTM MH dataset that uses data from the CDISC pilot project
 }
 \details{
+Medical History
+
 An updated SDTM MH dataset that uses data from the CDISC pilot project
 }
 \author{

@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco}
 \alias{rs_onco}
-\title{rs_onco}
+\title{Disease Response for Oncology}
 \format{
 A data frame with 19 columns:
 \describe{
@@ -35,9 +35,11 @@ https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda
 rs_onco
 }
 \description{
-Disease Response for Oncology
+A SDTM RS dataset simulated by Gopi Vegesna
 }
 \details{
+Disease Response for Oncology
+
 A SDTM RS dataset simulated by Gopi Vegesna
 }
 \author{

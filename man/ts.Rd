@@ -3,7 +3,7 @@
 \docType{data}
 \name{ts}
 \alias{ts}
-\title{ts}
+\title{Trial Design}
 \format{
 A data frame with 6 columns:
 \describe{
@@ -22,9 +22,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 ts
 }
 \description{
-Trial Design
+A SDTM TS dataset from the CDISC pilot project
 }
 \details{
+Trial Design
+
 A SDTM TS dataset from the CDISC pilot project
 }
 \keyword{datasets}

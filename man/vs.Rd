@@ -3,7 +3,7 @@
 \docType{data}
 \name{vs}
 \alias{vs}
-\title{vs}
+\title{Vital Signs}
 \format{
 A data frame with 24 columns:
 \describe{
@@ -40,9 +40,11 @@ Generated dataset.
 vs
 }
 \description{
-Vital Signs
+A SDTM VS dataset from the CDISC pilot project
 }
 \details{
+Vital Signs
+
 A SDTM VS dataset from the CDISC pilot project
 }
 \keyword{datasets}

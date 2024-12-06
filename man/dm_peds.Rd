@@ -3,7 +3,7 @@
 \docType{data}
 \name{dm_peds}
 \alias{dm_peds}
-\title{dm_peds}
+\title{Demographic Dataset-pediatrics}
 \format{
 A data frame with 26 columns:
 \describe{
@@ -42,9 +42,11 @@ Constructed by {admiralpeds} developers
 dm_peds
 }
 \description{
-Demographic Dataset-pediatrics
+An updated SDTM DM dataset with pediatric patients
 }
 \details{
+Demographic Dataset-pediatrics
+
 An updated SDTM DM dataset with pediatric patients
 }
 \keyword{datasets}

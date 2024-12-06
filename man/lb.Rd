@@ -3,7 +3,7 @@
 \docType{data}
 \name{lb}
 \alias{lb}
-\title{lb}
+\title{Laboratory Measurements}
 \format{
 A data frame with 23 columns:
 \describe{
@@ -39,9 +39,11 @@ https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda
 lb
 }
 \description{
-Laboratory Measurements
+An updated SDTM LB dataset that uses data from the CDISC pilot project
 }
 \details{
+Laboratory Measurements
+
 An updated SDTM LB dataset that uses data from the CDISC pilot project
 }
 \author{

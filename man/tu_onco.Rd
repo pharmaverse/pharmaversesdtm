@@ -3,7 +3,7 @@
 \docType{data}
 \name{tu_onco}
 \alias{tu_onco}
-\title{tu_onco}
+\title{Tumor Identification for Oncology}
 \format{
 A data frame with 18 columns:
 \describe{
@@ -34,9 +34,11 @@ Generated dataset.
 tu_onco
 }
 \description{
-Tumor Identification for Oncology
+A SDTM TU dataset simulated by Gopi Vegesna
 }
 \details{
+Tumor Identification for Oncology
+
 A SDTM TU dataset simulated by Gopi Vegesna
 }
 \author{

@@ -3,7 +3,7 @@
 \docType{data}
 \name{ds}
 \alias{ds}
-\title{ds}
+\title{Disposition}
 \format{
 A data frame with 13 columns:
 \describe{
@@ -29,9 +29,11 @@ https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda
 ds
 }
 \description{
-Disposition
+An updated SDTM DS dataset that uses the CDISC pilot project
 }
 \details{
+Disposition
+
 An updated SDTM DS dataset that uses the CDISC pilot project
 }
 \author{

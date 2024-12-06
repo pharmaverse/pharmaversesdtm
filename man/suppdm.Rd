@@ -3,7 +3,7 @@
 \docType{data}
 \name{suppdm}
 \alias{suppdm}
-\title{suppdm}
+\title{Supplemental Demography}
 \format{
 A data frame with 10 columns:
 \describe{
@@ -26,9 +26,11 @@ Generated dataset.
 suppdm
 }
 \description{
-Supplemental Demography
+A SDTM SUPPDM dataset from the CDISC pilot project
 }
 \details{
+Supplemental Demography
+
 A SDTM SUPPDM dataset from the CDISC pilot project
 }
 \keyword{datasets}

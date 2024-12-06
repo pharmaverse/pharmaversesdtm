@@ -3,7 +3,7 @@
 \docType{data}
 \name{eg}
 \alias{eg}
-\title{eg}
+\title{Electrocardiogram}
 \format{
 A data frame with 23 columns:
 \describe{
@@ -39,9 +39,11 @@ Generated dataset.
 eg
 }
 \description{
-Electrocardiogram
+An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 }
 \details{
+Electrocardiogram
+
 An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 }
 \keyword{datasets}

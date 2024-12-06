@@ -57,7 +57,7 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 
 **Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (`inst/extdata/sdtms-specs.json`) and used to generate `.R` documentation files. See the [Documentation Process](#documentation-process) for details.
 
-## Adding New SDTM Datasets
+### Adding New SDTM Datasets
 
 -   Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder.
     -   Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
@@ -68,7 +68,7 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
 
-## Updating Existing SDTM Datasets
+### Updating Existing SDTM Datasets
 
 -   Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly.
 -   Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.json` file.

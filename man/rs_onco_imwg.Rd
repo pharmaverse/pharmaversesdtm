@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco_imwg}
 \alias{rs_onco_imwg}
-\title{rs_onco_imwg}
+\title{Disease Response (IMWG)}
 \format{
 A data frame with 17 columns:
 \describe{
@@ -33,9 +33,11 @@ Derived from tr_onco_recist
 rs_onco_imwg
 }
 \description{
-Disease Response (IMWG)
+A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 }
 \details{
+Disease Response (IMWG)
+
 A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 }
 \author{

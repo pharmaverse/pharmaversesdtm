@@ -3,7 +3,7 @@
 \docType{data}
 \name{suppce_vaccine}
 \alias{suppce_vaccine}
-\title{suppce_vaccine}
+\title{Supplemental Qualifiers for Clinical Events for Vaccine}
 \format{
 A data frame with 9 columns:
 \describe{
@@ -25,9 +25,11 @@ Constructed by {admiralvaccine} developers
 suppce_vaccine
 }
 \description{
-Supplemental Qualifiers for Clinical Events for Vaccine
+An example SDTM SUPPCE for vaccine studies
 }
 \details{
+Supplemental Qualifiers for Clinical Events for Vaccine
+
 An example SDTM SUPPCE for vaccine studies
 }
 \keyword{datasets}

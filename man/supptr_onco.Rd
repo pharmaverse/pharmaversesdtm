@@ -3,7 +3,7 @@
 \docType{data}
 \name{supptr_onco}
 \alias{supptr_onco}
-\title{supptr_onco}
+\title{Supplemental Tumor Results for Oncology}
 \format{
 A data frame with 9 columns:
 \describe{
@@ -25,9 +25,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 supptr_onco
 }
 \description{
-Supplemental Tumor Results for Oncology
+A SDTM SUPPTR dataset simulated by Gopi Vegesna
 }
 \details{
+Supplemental Tumor Results for Oncology
+
 A SDTM SUPPTR dataset simulated by Gopi Vegesna
 }
 \author{

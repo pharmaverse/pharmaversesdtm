@@ -3,7 +3,7 @@
 \docType{data}
 \name{vs_peds}
 \alias{vs_peds}
-\title{vs_peds}
+\title{No label available}
 \format{
 A data frame with 26 columns:
 \describe{
@@ -42,9 +42,11 @@ No source available
 vs_peds
 }
 \description{
-No label available
+No description available
 }
 \details{
+No label available
+
 No description available
 }
 \keyword{datasets}

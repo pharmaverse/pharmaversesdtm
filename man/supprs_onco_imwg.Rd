@@ -3,7 +3,7 @@
 \docType{data}
 \name{supprs_onco_imwg}
 \alias{supprs_onco_imwg}
-\title{supprs_onco_imwg}
+\title{Supplemental Qualifiers for RS_ONCO_IMWG}
 \format{
 A data frame with 9 columns:
 \describe{
@@ -25,9 +25,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 supprs_onco_imwg
 }
 \description{
-Supplemental Qualifiers for RS_ONCO_IMWG
+A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
 }
 \details{
+Supplemental Qualifiers for RS_ONCO_IMWG
+
 A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
 }
 \author{

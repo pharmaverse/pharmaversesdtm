@@ -3,7 +3,7 @@
 \docType{data}
 \name{suppae}
 \alias{suppae}
-\title{suppae}
+\title{Supplemental Adverse Events}
 \format{
 A data frame with 10 columns:
 \describe{
@@ -26,9 +26,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 suppae
 }
 \description{
-Supplemental Adverse Events
+A SDTM SUPPAE dataset from the CDISC pilot project
 }
 \details{
+Supplemental Adverse Events
+
 A SDTM SUPPAE dataset from the CDISC pilot project
 }
 \keyword{datasets}

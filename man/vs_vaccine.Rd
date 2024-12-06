@@ -3,7 +3,7 @@
 \docType{data}
 \name{vs_vaccine}
 \alias{vs_vaccine}
-\title{vs_vaccine}
+\title{Vital Signs for Vaccine}
 \format{
 A data frame with 23 columns:
 \describe{
@@ -39,9 +39,11 @@ Constructed by {admiralvaccine} developers
 vs_vaccine
 }
 \description{
-Vital Signs for Vaccine
+An example SDTM VS dataset for vaccine studies
 }
 \details{
+Vital Signs for Vaccine
+
 An example SDTM VS dataset for vaccine studies
 }
 \keyword{datasets}

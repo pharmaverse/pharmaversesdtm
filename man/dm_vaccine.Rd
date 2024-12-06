@@ -3,7 +3,7 @@
 \docType{data}
 \name{dm_vaccine}
 \alias{dm_vaccine}
-\title{dm_vaccine}
+\title{Demographics for Vaccine}
 \format{
 A data frame with 28 columns:
 \describe{
@@ -44,9 +44,11 @@ Constructed by {admiralvaccine} developers
 dm_vaccine
 }
 \description{
-Demographics for Vaccine
+An example SDTM DM dataset for vaccine studies
 }
 \details{
+Demographics for Vaccine
+
 An example SDTM DM dataset for vaccine studies
 }
 \keyword{datasets}

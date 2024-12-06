@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco_irecist}
 \alias{rs_onco_irecist}
-\title{rs_onco_irecist}
+\title{Disease Response (iRECIST) for Oncology}
 \format{
 A data frame with 19 columns:
 \describe{
@@ -35,9 +35,11 @@ Generated dataset.
 rs_onco_irecist
 }
 \description{
-Disease Response (iRECIST) for Oncology
+A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
 }
 \details{
+Disease Response (iRECIST) for Oncology
+
 A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
 }
 \author{

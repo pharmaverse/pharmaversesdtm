@@ -3,7 +3,7 @@
 \docType{data}
 \name{sv}
 \alias{sv}
-\title{sv}
+\title{Subject Visits}
 \format{
 A data frame with 8 columns:
 \describe{
@@ -24,9 +24,11 @@ Constructed by {admiralvaccine} developers
 sv
 }
 \description{
-Subject Visits
+A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 }
 \details{
+Subject Visits
+
 A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 }
 \keyword{datasets}

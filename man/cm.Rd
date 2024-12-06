@@ -3,7 +3,7 @@
 \docType{data}
 \name{cm}
 \alias{cm}
-\title{cm}
+\title{Concomitant Medication}
 \format{
 A data frame with 22 columns:
 \describe{
@@ -38,9 +38,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 cm
 }
 \description{
-Concomitant Medication
+A SDTM CM dataset from the CDISC pilot project
 }
 \details{
+Concomitant Medication
+
 A SDTM CM dataset from the CDISC pilot project
 }
 \keyword{datasets}

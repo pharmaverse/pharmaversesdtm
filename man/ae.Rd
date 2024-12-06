@@ -3,7 +3,7 @@
 \docType{data}
 \name{ae}
 \alias{ae}
-\title{ae}
+\title{Adverse Events}
 \format{
 A data frame with 35 columns:
 \describe{
@@ -51,9 +51,11 @@ https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda
 ae
 }
 \description{
-Adverse Events
+An updated SDTM AE dataset that uses the CDISC pilot project
 }
 \details{
+Adverse Events
+
 An updated SDTM AE dataset that uses the CDISC pilot project
 }
 \author{

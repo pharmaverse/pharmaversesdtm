@@ -3,7 +3,7 @@
 \docType{data}
 \name{pc}
 \alias{pc}
-\title{pc}
+\title{Pharmacokinetic Concentrations}
 \format{
 A data frame with 20 columns:
 \describe{
@@ -36,9 +36,11 @@ https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda
 pc
 }
 \description{
-Pharmacokinetic Concentrations
+A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 }
 \details{
+Pharmacokinetic Concentrations
+
 A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 }
 \author{

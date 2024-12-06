@@ -3,7 +3,7 @@
 \docType{data}
 \name{suppds}
 \alias{suppds}
-\title{suppds}
+\title{Supplemental Disposition}
 \format{
 A data frame with 9 columns:
 \describe{
@@ -25,9 +25,11 @@ https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-s
 suppds
 }
 \description{
-Supplemental Disposition
+A SDTM SUPPDS dataset from the CDISC pilot project
 }
 \details{
+Supplemental Disposition
+
 A SDTM SUPPDS dataset from the CDISC pilot project
 }
 \keyword{datasets}

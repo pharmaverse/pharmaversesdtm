@@ -3,7 +3,7 @@
 \docType{data}
 \name{suppis_vaccine}
 \alias{suppis_vaccine}
-\title{suppis_vaccine}
+\title{Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine}
 \format{
 A data frame with 10 columns:
 \describe{
@@ -26,9 +26,11 @@ Constructed by {admiralpeds} developers
 suppis_vaccine
 }
 \description{
-Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine
+An example SDTM SUPPIS dataset for vaccine studies
 }
 \details{
+Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine
+
 An example SDTM SUPPIS dataset for vaccine studies
 }
 \keyword{datasets}

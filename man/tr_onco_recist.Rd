@@ -3,7 +3,7 @@
 \docType{data}
 \name{tr_onco_recist}
 \alias{tr_onco_recist}
-\title{tr_onco_recist}
+\title{Tumor Results (RECIST 1.1) for Oncology}
 \format{
 A data frame with 19 columns:
 \describe{
@@ -35,9 +35,11 @@ Generated dataset.
 tr_onco_recist
 }
 \description{
-Tumor Results (RECIST 1.1) for Oncology
+A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \details{
+Tumor Results (RECIST 1.1) for Oncology
+
 A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \author{

@@ -3,7 +3,7 @@
 \docType{data}
 \name{is_vaccine}
 \alias{is_vaccine}
-\title{is_vaccine}
+\title{Immunogenicity Specimen Assessments for Vaccine}
 \format{
 A data frame with 24 columns:
 \describe{
@@ -40,9 +40,11 @@ Constructed by {admiralvaccine} developers
 is_vaccine
 }
 \description{
-Immunogenicity Specimen Assessments for Vaccine
+An example SDTM IS for vaccine studies
 }
 \details{
+Immunogenicity Specimen Assessments for Vaccine
+
 An example SDTM IS for vaccine studies
 }
 \keyword{datasets}
