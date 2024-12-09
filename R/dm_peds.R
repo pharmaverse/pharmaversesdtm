@@ -39,5 +39,5 @@
 #'     \item{BRTHDTC}{Date/Time of Birth}
 #'   }
 #'
-#' @source Constructed by {admiralpeds} developers
+#' @source <a href="Constructed by {admiralpeds} developers" target="_blank">Access the source of the Demographic Dataset-pediatrics dataset.</a>
 "dm_peds"

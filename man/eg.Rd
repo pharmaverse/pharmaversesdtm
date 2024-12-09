@@ -33,7 +33,7 @@ A data frame with 23 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Electrocardiogram dataset.\if{html}{\out{</a>}}
 }
 \usage{
 eg

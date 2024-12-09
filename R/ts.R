@@ -19,5 +19,5 @@
 #'     \item{TSVAL}{Parameter Value}
 #'   }
 #'
-#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/vs.xpt?raw=true # nolint
+#' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/vs.xpt?raw=true" target="_blank">Access the source of the Trial Design dataset.</a>
 "ts"

@@ -24,7 +24,7 @@ A data frame with 14 columns:
 }
 }
 \source{
-https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda
+\if{html}{\out{<a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda" target="_blank">}}Access the source of the Pharmacokinetic Parameters dataset.\if{html}{\out{</a>}}
 }
 \usage{
 pp

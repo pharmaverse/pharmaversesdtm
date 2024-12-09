@@ -29,7 +29,7 @@ A data frame with 19 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Disease Response (iRECIST) for Oncology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 rs_onco_irecist

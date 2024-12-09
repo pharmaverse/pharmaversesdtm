@@ -30,17 +30,17 @@ A data frame with 20 columns:
 }
 }
 \source{
-Constructed using qs from the {pharmaversesdtm} package
+\if{html}{\out{<a href="Constructed using qs from the {pharmaversesdtm\} package" target="_blank">}}Access the source of the Questionnaire for Ophthalmology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 qs_ophtha
 }
 \description{
-An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
+An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 }
 \details{
 Questionnaire for Ophthalmology
 
-An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
+An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 }
 \keyword{datasets}

@@ -32,6 +32,6 @@
 #'     \item{RSDY}{undocumented field}
 #'   }
 #'
-#' @source Generated dataset.
+#' @source <a href="Generated dataset." target="_blank">Access the source of the Disease Response (iRECIST) for Oncology dataset.</a>
 #' @author Rohan Thampi
 "rs_onco_irecist"

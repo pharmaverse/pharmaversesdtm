@@ -38,7 +38,7 @@ A data frame with 28 columns:
 }
 }
 \source{
-Constructed by {admiralvaccine} developers
+\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Demographics for Vaccine dataset.\if{html}{\out{</a>}}
 }
 \usage{
 dm_vaccine

@@ -47,17 +47,17 @@ A data frame with 37 columns:
 }
 }
 \source{
-Constructed using ae from the {pharmaversesdtm} package
+\if{html}{\out{<a href="Constructed using ae from the {pharmaversesdtm\} package" target="_blank">}}Access the source of the Adverse Events for Ophthalmology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 ae_ophtha
 }
 \description{
-An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT # nolint
+An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
 }
 \details{
 Adverse Events for Ophthalmology
 
-An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT # nolint
+An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
 }
 \keyword{datasets}

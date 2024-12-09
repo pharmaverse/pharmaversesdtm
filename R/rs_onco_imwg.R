@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Disease Response (IMWG)
 #'
-#' A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
+#' A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 #'
 #' @name rs_onco_imwg
 #' @title Disease Response (IMWG)
-#' @description A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
+#' @description A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 17 columns:
 #'   \describe{
@@ -30,6 +30,6 @@
 #'     \item{RSDY}{undocumented field}
 #'   }
 #'
-#' @source Derived from tr_onco_recist
+#' @source <a href="Derived from tr_onco_recist" target="_blank">Access the source of the Disease Response (IMWG) dataset.</a>
 #' @author Vinh Nguyen
 "rs_onco_imwg"

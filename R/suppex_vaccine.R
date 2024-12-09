@@ -22,5 +22,5 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
-#' @source Constructed by {admiralvaccine} developers
+#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Supplemental Qualifiers for Exposures for Vaccine dataset.</a>
 "suppex_vaccine"

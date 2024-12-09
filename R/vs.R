@@ -37,5 +37,5 @@
 #'     \item{VSTPTREF}{Time Point Reference}
 #'   }
 #'
-#' @source Generated dataset.
+#' @source <a href="Generated dataset." target="_blank">Access the source of the Vital Signs dataset.</a>
 "vs"

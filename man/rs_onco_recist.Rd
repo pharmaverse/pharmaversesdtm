@@ -24,18 +24,18 @@ A data frame with 14 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Disease Response (RECIST 1.1) for Oncology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 rs_onco_recist
 }
 \description{
-A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation # nolint
+A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \details{
 Disease Response (RECIST 1.1) for Oncology
 
-A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation # nolint
+A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \author{
 Stefan Bundfuss

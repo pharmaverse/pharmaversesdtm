@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Adverse Events for Ophthalmology
 #'
-#' An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT # nolint
+#' An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
 #'
 #' @name ae_ophtha
 #' @title Adverse Events for Ophthalmology
-#' @description An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT # nolint
+#' @description An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
 #' @docType data
 #' @format A data frame with 37 columns:
 #'   \describe{
@@ -50,5 +50,5 @@
 #'     \item{AELOC}{Location}
 #'   }
 #'
-#' @source Constructed using ae from the {pharmaversesdtm} package
+#' @source <a href="Constructed using ae from the {pharmaversesdtm} package" target="_blank">Access the source of the Adverse Events for Ophthalmology dataset.</a>
 "ae_ophtha"

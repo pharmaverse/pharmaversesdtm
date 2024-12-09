@@ -18,17 +18,17 @@ A data frame with 8 columns:
 }
 }
 \source{
-Constructed by {admiralvaccine} developers
+\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Subject Visits dataset.\if{html}{\out{</a>}}
 }
 \usage{
 sv
 }
 \description{
-A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation # nolint
+A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 }
 \details{
 Subject Visits
 
-A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation # nolint
+A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 }
 \keyword{datasets}

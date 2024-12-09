@@ -28,7 +28,7 @@ A data frame with 18 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Tumor Identification for Oncology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 tu_onco

@@ -18,5 +18,5 @@
 #'     \item{version}{undocumented field}
 #'   }
 #'
-#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true # nolint
+#' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true" target="_blank">Access the source of the SDG dataset.</a>
 "sdg_db"

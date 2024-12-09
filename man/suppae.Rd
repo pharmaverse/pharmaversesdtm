@@ -20,7 +20,7 @@ A data frame with 10 columns:
 }
 }
 \source{
-https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppds.xpt?raw=true # nolint
+\if{html}{\out{<a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppds.xpt?raw=true" target="_blank">}}Access the source of the Supplemental Adverse Events dataset.\if{html}{\out{</a>}}
 }
 \usage{
 suppae

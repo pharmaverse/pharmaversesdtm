@@ -29,7 +29,7 @@ A data frame with 19 columns:
 }
 }
 \source{
-https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda
+\if{html}{\out{<a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda" target="_blank">}}Access the source of the Disease Response for Oncology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 rs_onco

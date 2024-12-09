@@ -19,12 +19,24 @@ get_attr <- function(data, col_name) {
   return(att)
 }
 
-# Helper function to check the length of a string and append " # nolint" if it exceeds 90 characters
-check_and_append_nolint <- function(text) {
-  if (nchar(text) > 80) {
-    text <- paste0(text, " # nolint")
+# Helper function to check the length of a string and break it into lines if it exceeds 80 characters
+check_and_break_line <- function(text, max_length = 80) {
+  if (nchar(text) > max_length) {
+    # Split the text into chunks of at most max_length characters
+    split_text <- strsplit(text, "(?<=.{1," , max_length, "})(\\s|\\n)", perl = TRUE)[[1]]
+    # Join the chunks with newline character
+    text <- paste(split_text, collapse = "\n")
   }
   return(text)
+}
+
+# Function to generate an HTML hyperlink
+generate_hyperlink <- function(url, link_text = "") {
+  if (!nzchar(url)) {
+    stop("URL cannot be empty.")
+  }
+  # Generate and return the HTML hyperlink
+  paste0('<a href="', url, '" target="_blank">', "Access the source of the ", link_text,' dataset.</a>')
 }
 
 # Define the `write_doc` function, now with `dataset_description`
@@ -36,11 +48,11 @@ write_doc <-
            dataset_author = NULL,
            dataset_source = "No source available") {
     # Check and adjust lengths of metadata fields
-    dataset_label <- check_and_append_nolint(dataset_label)
-    dataset_description <- check_and_append_nolint(dataset_description)
-    dataset_source <- check_and_append_nolint(dataset_source)
+    dataset_label <- check_and_break_line(dataset_label)
+    dataset_description <- check_and_break_line(dataset_description)
+    dataset_source <- check_and_break_line(generate_hyperlink(dataset_source, dataset_label))
     if (!is.null(dataset_author)) {
-      dataset_author <- check_and_append_nolint(dataset_author)
+      dataset_author <- check_and_break_line(dataset_author)
     }
 
     # Create documentation for the current dataset

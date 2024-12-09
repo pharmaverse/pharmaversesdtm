@@ -43,5 +43,5 @@
 #'     \item{FASTRESU}{Standard Units}
 #'   }
 #'
-#' @source Constructed by {admiralvaccine} developers
+#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Findings About Clinical Events for Vaccine dataset.</a>
 "face_vaccine"

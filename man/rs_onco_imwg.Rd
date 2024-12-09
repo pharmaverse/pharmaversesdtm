@@ -27,18 +27,18 @@ A data frame with 17 columns:
 }
 }
 \source{
-Derived from tr_onco_recist
+\if{html}{\out{<a href="Derived from tr_onco_recist" target="_blank">}}Access the source of the Disease Response (IMWG) dataset.\if{html}{\out{</a>}}
 }
 \usage{
 rs_onco_imwg
 }
 \description{
-A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
+A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 }
 \details{
 Disease Response (IMWG)
 
-A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation # nolint
+A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 }
 \author{
 Vinh Nguyen

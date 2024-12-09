@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Subject Visits
 #'
-#' A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation # nolint
+#' A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 #'
 #' @name sv
 #' @title Subject Visits
-#' @description A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation # nolint
+#' @description A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 #' @docType data
 #' @format A data frame with 8 columns:
 #'   \describe{
@@ -21,5 +21,5 @@
 #'     \item{SVENDTC}{End Date/Time of Visit}
 #'   }
 #'
-#' @source Constructed by {admiralvaccine} developers
+#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Subject Visits dataset.</a>
 "sv"

@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Supplemental Qualifiers for RS_ONCO_IMWG
 #'
-#' A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg # nolint
+#' A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
 #'
 #' @name supprs_onco_imwg
 #' @title Supplemental Qualifiers for RS_ONCO_IMWG
-#' @description A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg # nolint
+#' @description A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg
 #' @docType data
 #' @format A data frame with 9 columns:
 #'   \describe{
@@ -22,6 +22,6 @@
 #'     \item{QORIG}{undocumented field}
 #'   }
 #'
-#' @source https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true # nolint
+#' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true" target="_blank">Access the source of the Supplemental Qualifiers for RS_ONCO_IMWG dataset.</a>
 #' @author Vinh Nguyen
 "supprs_onco_imwg"

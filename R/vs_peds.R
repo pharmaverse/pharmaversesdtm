@@ -39,5 +39,5 @@
 #'     \item{EPOCH}{Epoch}
 #'   }
 #'
-#' @source No source available
+#' @source <a href="No source available" target="_blank">Access the source of the No label available dataset.</a>
 "vs_peds"

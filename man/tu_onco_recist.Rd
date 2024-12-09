@@ -26,18 +26,18 @@ A data frame with 16 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Tumor Identification (RECIST 1.1) for Oncology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 tu_onco_recist
 }
 \description{
-A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation # nolint
+A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \details{
 Tumor Identification (RECIST 1.1) for Oncology
 
-A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation # nolint
+A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \author{
 Stefan Bundfuss

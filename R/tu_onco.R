@@ -31,6 +31,6 @@
 #'     \item{TUDY}{Study Day of Tumor Identification}
 #'   }
 #'
-#' @source Generated dataset.
+#' @source <a href="Generated dataset." target="_blank">Access the source of the Tumor Identification for Oncology dataset.</a>
 #' @author Gopi Vegesna
 "tu_onco"

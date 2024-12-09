@@ -37,6 +37,6 @@
 #'     \item{TRDY}{Study Day of Tumor Measurement}
 #'   }
 #'
-#' @source Generated dataset.
+#' @source <a href="Generated dataset." target="_blank">Access the source of the Tumor Results for Oncology dataset.</a>
 #' @author Gopi Vegesna
 "tr_onco"

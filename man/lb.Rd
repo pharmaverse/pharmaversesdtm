@@ -33,7 +33,7 @@ A data frame with 23 columns:
 }
 }
 \source{
-https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda
+\if{html}{\out{<a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda" target="_blank">}}Access the source of the Laboratory Measurements dataset.\if{html}{\out{</a>}}
 }
 \usage{
 lb

@@ -34,7 +34,7 @@ A data frame with 24 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Tumor Results for Oncology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 tr_onco

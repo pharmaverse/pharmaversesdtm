@@ -29,17 +29,17 @@ A data frame with 19 columns:
 }
 }
 \source{
-Constructed using ex from the {pharmaversesdtm} package
+\if{html}{\out{<a href="Constructed using ex from the {pharmaversesdtm\} package" target="_blank">}}Access the source of the Exposure for Ophthalmology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 ex_ophtha
 }
 \description{
-An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
+An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
 }
 \details{
 Exposure for Ophthalmology
 
-An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
+An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
 }
 \keyword{datasets}

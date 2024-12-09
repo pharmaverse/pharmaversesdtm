@@ -34,5 +34,5 @@
 #'     \item{EXDY}{undocumented field}
 #'   }
 #'
-#' @source Constructed by {admiralvaccine} developers
+#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Exposures for Vaccine dataset.</a>
 "ex_vaccine"

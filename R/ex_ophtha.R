@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Exposure for Ophthalmology
 #'
-#' An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
+#' An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
 #'
 #' @name ex_ophtha
 #' @title Exposure for Ophthalmology
-#' @description An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT # nolint
+#' @description An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
 #' @docType data
 #' @format A data frame with 19 columns:
 #'   \describe{
@@ -32,5 +32,5 @@
 #'     \item{EXENDY}{Study Day of End of Treatment}
 #'   }
 #'
-#' @source Constructed using ex from the {pharmaversesdtm} package
+#' @source <a href="Constructed using ex from the {pharmaversesdtm} package" target="_blank">Access the source of the Exposure for Ophthalmology dataset.</a>
 "ex_ophtha"

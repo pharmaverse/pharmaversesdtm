@@ -40,7 +40,7 @@ A data frame with 30 columns:
 }
 }
 \source{
-Constructed by {admiralvaccine} developers
+\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Findings About Clinical Events for Vaccine dataset.\if{html}{\out{</a>}}
 }
 \usage{
 face_vaccine

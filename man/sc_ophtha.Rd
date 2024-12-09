@@ -22,7 +22,7 @@ A data frame with 12 columns:
 }
 }
 \source{
-Generated dataset.
+\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Subject Characteristic for Ophthalmology dataset.\if{html}{\out{</a>}}
 }
 \usage{
 sc_ophtha

@@ -31,7 +31,7 @@ A data frame with 21 columns:
 }
 }
 \source{
-Constructed by {admiralvaccine} developers
+\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Exposures for Vaccine dataset.\if{html}{\out{</a>}}
 }
 \usage{
 ex_vaccine

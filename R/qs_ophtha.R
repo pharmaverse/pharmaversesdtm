@@ -3,11 +3,11 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Questionnaire for Ophthalmology
 #'
-#' An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
+#' An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 #'
 #' @name qs_ophtha
 #' @title Questionnaire for Ophthalmology
-#' @description An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25 # nolint
+#' @description An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 #' @docType data
 #' @format A data frame with 20 columns:
 #'   \describe{
@@ -33,5 +33,5 @@
 #'     \item{QSDY}{undocumented field}
 #'   }
 #'
-#' @source Constructed using qs from the {pharmaversesdtm} package
+#' @source <a href="Constructed using qs from the {pharmaversesdtm} package" target="_blank">Access the source of the Questionnaire for Ophthalmology dataset.</a>
 "qs_ophtha"

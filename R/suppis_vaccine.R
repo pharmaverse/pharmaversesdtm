@@ -23,5 +23,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-#' @source Constructed by {admiralpeds} developers
+#' @source <a href="Constructed by {admiralpeds} developers" target="_blank">Access the source of the Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine dataset.</a>
 "suppis_vaccine"

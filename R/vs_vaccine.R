@@ -36,5 +36,5 @@
 #'     \item{VSTPTREF}{Time Point Reference}
 #'   }
 #'
-#' @source Constructed by {admiralvaccine} developers
+#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Vital Signs for Vaccine dataset.</a>
 "vs_vaccine"
