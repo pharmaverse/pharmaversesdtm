@@ -32,5 +32,7 @@
 #'     \item{EXENDY}{Study Day of End of Treatment}
 #'   }
 #'
+# nolint start
 #' @source <a href="Constructed using ex from the {pharmaversesdtm} package" target="_blank">Access the source of the Exposure for Ophthalmology dataset.</a>
+# nolint end
 "ex_ophtha"

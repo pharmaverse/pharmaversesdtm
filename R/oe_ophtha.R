@@ -38,6 +38,8 @@
 #'     \item{OETPTNUM}{Planned Time Point Number}
 #'   }
 #'
+# nolint start
 #' @source <a href="Generated dataset." target="_blank">Access the source of the Ophthalmic Examinations for Ophthalmology dataset.</a>
+# nolint end
 #' @author Gordon Miller
 "oe_ophtha"

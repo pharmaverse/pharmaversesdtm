@@ -33,5 +33,7 @@
 #'     \item{QSDY}{undocumented field}
 #'   }
 #'
+# nolint start
 #' @source <a href="Constructed using qs from the {pharmaversesdtm} package" target="_blank">Access the source of the Questionnaire for Ophthalmology dataset.</a>
+# nolint end
 "qs_ophtha"

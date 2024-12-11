@@ -22,5 +22,7 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
+# nolint start
 #' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Supplemental Qualifiers for Demographics for Vaccine dataset.</a>
+# nolint end
 "suppdm_vaccine"

@@ -25,6 +25,8 @@
 #'     \item{SCDY}{Study Day of Examination}
 #'   }
 #'
+# nolint start
 #' @source <a href="Generated dataset." target="_blank">Access the source of the Subject Characteristic for Ophthalmology dataset.</a>
+# nolint end
 #' @author Gordon Miller
 "sc_ophtha"

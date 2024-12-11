@@ -75,7 +75,9 @@ write_doc <-
       }, USE.NAMES = FALSE), collapse = "\n"),
       "#'   }",
       "#'",
+      "# nolint start", # switch of lintr as source may include long URLs
       sprintf("#' @source %s", dataset_source),
+      "# nolint end",
       sep = "\n"
     )
 

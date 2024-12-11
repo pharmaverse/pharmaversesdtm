@@ -36,5 +36,7 @@
 #'     \item{EGTPTREF}{Time Point Reference}
 #'   }
 #'
+# nolint start
 #' @source <a href="Generated dataset." target="_blank">Access the source of the Electrocardiogram dataset.</a>
+# nolint end
 "eg"

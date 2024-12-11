@@ -30,6 +30,8 @@
 #'     \item{RSDY}{undocumented field}
 #'   }
 #'
+# nolint start
 #' @source <a href="Derived from tr_onco_recist" target="_blank">Access the source of the Disease Response (IMWG) dataset.</a>
+# nolint end
 #' @author Vinh Nguyen
 "rs_onco_imwg"

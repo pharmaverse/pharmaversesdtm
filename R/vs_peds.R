@@ -39,5 +39,7 @@
 #'     \item{EPOCH}{Epoch}
 #'   }
 #'
+# nolint start
 #' @source <a href="No source available" target="_blank">Access the source of the No label available dataset.</a>
+# nolint end
 "vs_peds"

@@ -42,5 +42,7 @@
 #'     \item{CEREASND}{Reason Clinical Event Not Collected}
 #'   }
 #'
+# nolint start
 #' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Clinical Events for Vaccine dataset.</a>
+# nolint end
 "ce_vaccine"

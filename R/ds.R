@@ -26,6 +26,8 @@
 #'     \item{DSSTDY}{Study Day of Start of Disposition Event}
 #'   }
 #'
+# nolint start
 #' @source <a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda" target="_blank">Access the source of the Disposition dataset.</a>
+# nolint end
 #' @author Gopi Vegesna
 "ds"

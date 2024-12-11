@@ -21,5 +21,7 @@
 #'     \item{SVENDTC}{End Date/Time of Visit}
 #'   }
 #'
+# nolint start
 #' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Subject Visits dataset.</a>
+# nolint end
 "sv"
