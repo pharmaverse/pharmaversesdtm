@@ -34,7 +34,7 @@ A data frame with 24 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Generated dataset.
 }
 \usage{
 vs

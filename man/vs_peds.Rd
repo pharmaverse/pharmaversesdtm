@@ -36,7 +36,7 @@ A data frame with 26 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: No source available
 }
 \usage{
 vs_peds

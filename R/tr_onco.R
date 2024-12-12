@@ -37,6 +37,6 @@
 #'     \item{TRDY}{Study Day of Tumor Measurement}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Generated dataset.
 #' @author Gopi Vegesna
 "tr_onco"

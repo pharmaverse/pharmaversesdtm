@@ -34,5 +34,5 @@
 #'     \item{EXDY}{undocumented field}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "ex_vaccine"

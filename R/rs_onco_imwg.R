@@ -30,6 +30,6 @@
 #'     \item{RSDY}{undocumented field}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Derived from tr_onco_recist
 #' @author Vinh Nguyen
 "rs_onco_imwg"

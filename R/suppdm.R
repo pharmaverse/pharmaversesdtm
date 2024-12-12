@@ -23,5 +23,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Generated dataset.
 "suppdm"

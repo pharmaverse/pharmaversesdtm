@@ -38,7 +38,7 @@ A data frame with 28 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Constructed by {admiralvaccine} developers
 }
 \usage{
 dm_vaccine

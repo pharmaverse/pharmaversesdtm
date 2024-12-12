@@ -41,5 +41,5 @@
 #'     \item{DMDY}{Study Day of Collection}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "dm_vaccine"

@@ -18,7 +18,7 @@ A data frame with 8 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Constructed by {admiralvaccine} developers
 }
 \usage{
 sv

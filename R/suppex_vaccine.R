@@ -22,5 +22,5 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "suppex_vaccine"

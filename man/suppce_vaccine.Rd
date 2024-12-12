@@ -19,7 +19,7 @@ A data frame with 9 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Constructed by {admiralvaccine} developers
 }
 \usage{
 suppce_vaccine

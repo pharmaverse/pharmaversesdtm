@@ -39,5 +39,5 @@
 #'     \item{BRTHDTC}{Date/Time of Birth}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralpeds} developers
 "dm_peds"

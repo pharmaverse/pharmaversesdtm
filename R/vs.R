@@ -37,5 +37,5 @@
 #'     \item{VSTPTREF}{Time Point Reference}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Generated dataset.
 "vs"

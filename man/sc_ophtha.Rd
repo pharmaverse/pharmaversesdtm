@@ -22,7 +22,7 @@ A data frame with 12 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Generated dataset.
 }
 \usage{
 sc_ophtha

@@ -32,6 +32,6 @@
 #'     \item{RSDY}{undocumented field}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Generated dataset.
 #' @author Rohan Thampi
 "rs_onco_irecist"

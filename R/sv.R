@@ -21,5 +21,5 @@
 #'     \item{SVENDTC}{End Date/Time of Visit}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "sv"

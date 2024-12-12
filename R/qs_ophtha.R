@@ -33,5 +33,5 @@
 #'     \item{QSDY}{undocumented field}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed using qs from the {pharmaversesdtm} package
 "qs_ophtha"

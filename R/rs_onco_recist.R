@@ -27,6 +27,6 @@
 #'     \item{RSSEQ}{undocumented field}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Generated dataset.
 #' @author Stefan Bundfuss
 "rs_onco_recist"

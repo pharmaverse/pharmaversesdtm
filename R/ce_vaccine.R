@@ -42,5 +42,5 @@
 #'     \item{CEREASND}{Reason Clinical Event Not Collected}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "ce_vaccine"

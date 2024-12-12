@@ -23,5 +23,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralpeds} developers
 "suppis_vaccine"

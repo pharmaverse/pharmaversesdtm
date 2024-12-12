@@ -36,5 +36,5 @@
 #'     \item{VSTPTREF}{Time Point Reference}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "vs_vaccine"

@@ -50,5 +50,5 @@
 #'     \item{AELOC}{Location}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed using ae from the {pharmaversesdtm} package
 "ae_ophtha"

@@ -27,7 +27,7 @@ A data frame with 17 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Derived from tr_onco_recist
 }
 \usage{
 rs_onco_imwg

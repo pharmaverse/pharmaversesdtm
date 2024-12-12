@@ -30,7 +30,7 @@ A data frame with 20 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Constructed using qs from the {pharmaversesdtm} package
 }
 \usage{
 qs_ophtha

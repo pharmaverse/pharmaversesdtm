@@ -47,7 +47,7 @@ A data frame with 37 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Constructed using ae from the {pharmaversesdtm} package
 }
 \usage{
 ae_ophtha

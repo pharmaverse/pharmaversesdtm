@@ -37,17 +37,21 @@ get_attr <- function(data, col_name) {
   return(att)
 }
 
-#' @description Create an HTML hyperlink for use in documentation or return a plain text message if the URL is invalid.
-#' @param url The URL to link to.
+#' @description Create an HTML hyperlink for use in documentation, return plain text if the source is text,
+#' or a default message if the URL is invalid.
+#' @param url The URL to link to or plain text if the source is not a URL.
 #' @param link_text Optional text for the hyperlink. Defaults to an empty string.
-#' @return A string containing the HTML anchor tag or a plain text message if the URL is invalid.
+#' @return A string containing the HTML anchor tag, plain text if the source is text, or a default message for invalid URLs.
 generate_hyperlink <- function(url, link_text = "") {
   # Define a basic regular expression for URL validation
   url_pattern <- "^(https?://)"
 
-  # Check if the URL is valid
-  if (!nzchar(url) || is.null(url) || !grepl(url_pattern, url)) {
+  # Check if the input is a valid URL
+  if (!nzchar(url) || is.null(url)) {
     return("The source is inaccessible.")
+  } else if (!grepl(url_pattern, url)) {
+    # If the source is plain text (not a URL), return it as-is
+    return(paste("Source:", url))
   }
 
   # Generate and return the hyperlink if the URL is valid

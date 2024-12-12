@@ -20,7 +20,7 @@ A data frame with 10 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Constructed by {admiralpeds} developers
 }
 \usage{
 suppis_vaccine

@@ -35,7 +35,7 @@ A data frame with 25 columns:
 }
 }
 \source{
-The source is inaccessible.
+Source: Generated dataset.
 }
 \usage{
 oe_ophtha

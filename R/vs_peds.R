@@ -39,5 +39,5 @@
 #'     \item{EPOCH}{Epoch}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: No source available
 "vs_peds"

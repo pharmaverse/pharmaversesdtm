@@ -37,5 +37,5 @@
 #'     \item{ISULOQ}{Upper Limit of Quantitation}
 #'   }
 #'
-#' @source The source is inaccessible.
+#' @source Source: Constructed by {admiralvaccine} developers
 "is_vaccine"
