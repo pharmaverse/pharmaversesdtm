@@ -10,5 +10,5 @@ exclusions: list(
     "R" = Inf,
     "inst" = list(undesirable_function_linter = Inf),
     "vignettes" = list(undesirable_function_linter = Inf),
-    "data-raw" =  Inf
-    )
+    "data-raw" =Inf
+)
