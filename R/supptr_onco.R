@@ -22,8 +22,6 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
-# nolint start
 #' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ts.xpt?raw=true" target="_blank">Access the source of the Supplemental Tumor Results for Oncology dataset.</a>
-# nolint end
 #' @author Gopi Vegesna
 "supptr_onco"

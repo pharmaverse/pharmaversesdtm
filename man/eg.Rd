@@ -11,12 +11,12 @@ A data frame with 23 columns:
 \item{DOMAIN}{Domain Abbreviation}
 \item{USUBJID}{Unique Subject Identifier}
 \item{EGSEQ}{Sequence Number}
-\item{EGTESTCD}{Test Code}
-\item{EGTEST}{Test Name}
-\item{EGORRES}{Original Result}
+\item{EGTESTCD}{ECG Test Short Name}
+\item{EGTEST}{ECG Test Name}
+\item{EGORRES}{Result or Finding in Original Units}
 \item{EGORRESU}{Original Units}
-\item{EGSTRESC}{Standard Character Result}
-\item{EGSTRESN}{Standard Numeric Result}
+\item{EGSTRESC}{Character Result/Finding in Std Format}
+\item{EGSTRESN}{Numeric Result/Finding in Standard Units}
 \item{EGSTRESU}{Standard Units}
 \item{EGSTAT}{Completion Status}
 \item{EGLOC}{Location of Vital Signs Measurement}
@@ -33,7 +33,7 @@ A data frame with 23 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Electrocardiogram dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 eg

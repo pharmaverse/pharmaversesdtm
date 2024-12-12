@@ -29,8 +29,6 @@
 #'     \item{TUSEQ}{undocumented field}
 #'   }
 #'
-# nolint start
-#' @source <a href="Generated dataset." target="_blank">Access the source of the Tumor Identification (RECIST 1.1) for Oncology dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 #' @author Stefan Bundfuss
 "tu_onco_recist"

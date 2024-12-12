@@ -29,7 +29,7 @@ A data frame with 19 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed using ex from the {pharmaversesdtm\} package" target="_blank">}}Access the source of the Exposure for Ophthalmology dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 ex_ophtha

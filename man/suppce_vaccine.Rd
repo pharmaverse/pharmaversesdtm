@@ -19,7 +19,7 @@ A data frame with 9 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Supplemental Qualifiers for Clinical Events for Vaccine dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 suppce_vaccine

@@ -50,7 +50,5 @@
 #'     \item{AELOC}{Location}
 #'   }
 #'
-# nolint start
-#' @source <a href="Constructed using ae from the {pharmaversesdtm} package" target="_blank">Access the source of the Adverse Events for Ophthalmology dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 "ae_ophtha"

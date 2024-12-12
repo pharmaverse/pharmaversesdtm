@@ -34,7 +34,7 @@ A data frame with 24 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Immunogenicity Specimen Assessments for Vaccine dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 is_vaccine

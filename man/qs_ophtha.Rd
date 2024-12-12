@@ -30,7 +30,7 @@ A data frame with 20 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed using qs from the {pharmaversesdtm\} package" target="_blank">}}Access the source of the Questionnaire for Ophthalmology dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 qs_ophtha

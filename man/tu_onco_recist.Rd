@@ -26,7 +26,7 @@ A data frame with 16 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Tumor Identification (RECIST 1.1) for Oncology dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 tu_onco_recist

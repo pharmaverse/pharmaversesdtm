@@ -18,7 +18,7 @@ A data frame with 8 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed by {admiralvaccine\} developers" target="_blank">}}Access the source of the Subject Visits dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 sv

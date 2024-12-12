@@ -47,7 +47,7 @@ A data frame with 37 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed using ae from the {pharmaversesdtm\} package" target="_blank">}}Access the source of the Adverse Events for Ophthalmology dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 ae_ophtha

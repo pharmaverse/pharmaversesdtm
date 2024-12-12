@@ -36,7 +36,7 @@ A data frame with 26 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="No source available" target="_blank">}}Access the source of the No label available dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 vs_peds

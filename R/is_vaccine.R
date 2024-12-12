@@ -37,7 +37,5 @@
 #'     \item{ISULOQ}{Upper Limit of Quantitation}
 #'   }
 #'
-# nolint start
-#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Immunogenicity Specimen Assessments for Vaccine dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 "is_vaccine"

@@ -34,7 +34,7 @@ A data frame with 24 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Vital Signs dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 vs

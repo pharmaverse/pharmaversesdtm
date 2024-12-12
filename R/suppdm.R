@@ -23,7 +23,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-# nolint start
-#' @source <a href="Generated dataset." target="_blank">Access the source of the Supplemental Demography dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 "suppdm"

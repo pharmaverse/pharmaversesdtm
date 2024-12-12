@@ -36,7 +36,7 @@ A data frame with 26 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed by {admiralpeds\} developers" target="_blank">}}Access the source of the Demographic Dataset-pediatrics dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 dm_peds

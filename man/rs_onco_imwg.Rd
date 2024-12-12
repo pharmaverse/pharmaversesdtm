@@ -27,7 +27,7 @@ A data frame with 17 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Derived from tr_onco_recist" target="_blank">}}Access the source of the Disease Response (IMWG) dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 rs_onco_imwg

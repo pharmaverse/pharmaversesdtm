@@ -39,7 +39,5 @@
 #'     \item{BRTHDTC}{Date/Time of Birth}
 #'   }
 #'
-# nolint start
-#' @source <a href="Constructed by {admiralpeds} developers" target="_blank">Access the source of the Demographic Dataset-pediatrics dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 "dm_peds"

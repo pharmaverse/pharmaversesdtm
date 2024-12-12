@@ -24,7 +24,7 @@ A data frame with 14 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Disease Response (RECIST 1.1) for Oncology dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 rs_onco_recist

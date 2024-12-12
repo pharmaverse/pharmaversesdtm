@@ -7,8 +7,8 @@ linters: linters_with_defaults(
     undesirable_function_linter = undesirable_function_linter()
   )
 exclusions: list(
-    "R/data.R" = Inf,
-    "inst" = list(undesirable_function_linter = Inf),
-    "vignettes" = list(undesirable_function_linter = Inf),
-    "data-raw" = list(undesirable_function_linter = Inf)
+  "inst" = list(undesirable_function_linter = Inf),
+  "vignettes" = list(undesirable_function_linter = Inf),
+  "data-raw" = list(line_length_linter = Inf),
+  "R" = list(line_length_linter = Inf)
   )

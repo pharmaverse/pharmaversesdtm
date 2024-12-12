@@ -41,7 +41,5 @@
 #'     \item{DMDY}{Study Day of Collection}
 #'   }
 #'
-# nolint start
-#' @source <a href="Constructed by {admiralvaccine} developers" target="_blank">Access the source of the Demographics for Vaccine dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 "dm_vaccine"

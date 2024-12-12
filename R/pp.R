@@ -27,8 +27,6 @@
 #'     \item{PPRFDTC}{Date/Time of Reference Point}
 #'   }
 #'
-# nolint start
 #' @source <a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda" target="_blank">Access the source of the Pharmacokinetic Parameters dataset.</a>
-# nolint end
 #' @author Antonio Rodriguez Contesti
 "pp"

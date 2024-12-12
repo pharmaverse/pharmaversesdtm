@@ -16,7 +16,7 @@ A data frame with 6 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Standardized MedDRA Queries dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 smq_db

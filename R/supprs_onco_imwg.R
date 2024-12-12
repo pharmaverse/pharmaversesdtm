@@ -22,8 +22,6 @@
 #'     \item{QORIG}{undocumented field}
 #'   }
 #'
-# nolint start
 #' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true" target="_blank">Access the source of the Supplemental Qualifiers for RS_ONCO_IMWG dataset.</a>
-# nolint end
 #' @author Vinh Nguyen
 "supprs_onco_imwg"

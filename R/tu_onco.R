@@ -31,8 +31,6 @@
 #'     \item{TUDY}{Study Day of Tumor Identification}
 #'   }
 #'
-# nolint start
-#' @source <a href="Generated dataset." target="_blank">Access the source of the Tumor Identification for Oncology dataset.</a>
-# nolint end
+#' @source The source is inaccessible.
 #' @author Gopi Vegesna
 "tu_onco"

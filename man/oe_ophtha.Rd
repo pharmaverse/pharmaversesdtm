@@ -35,7 +35,7 @@ A data frame with 25 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Generated dataset." target="_blank">}}Access the source of the Ophthalmic Examinations for Ophthalmology dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 oe_ophtha

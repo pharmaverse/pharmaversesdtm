@@ -20,7 +20,7 @@ A data frame with 10 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="Constructed by {admiralpeds\} developers" target="_blank">}}Access the source of the Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine dataset.\if{html}{\out{</a>}}
+The source is inaccessible.
 }
 \usage{
 suppis_vaccine
