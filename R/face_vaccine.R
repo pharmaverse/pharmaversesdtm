@@ -43,5 +43,5 @@
 #'     \item{FASTRESU}{Standard Units}
 #'   }
 #'
-#' @source Source: Constructed by {admiralvaccine} developers
+#' @source Constructed by {admiralvaccine} developers
 "face_vaccine"

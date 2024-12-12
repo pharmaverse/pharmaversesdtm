@@ -20,7 +20,7 @@ A data frame with 10 columns:
 }
 }
 \source{
-Source: Constructed by {admiralpeds} developers
+Constructed by {admiralpeds} developers
 }
 \usage{
 suppis_vaccine

@@ -27,7 +27,7 @@ A data frame with 17 columns:
 }
 }
 \source{
-Source: Derived from tr_onco_recist
+Derived from tr_onco_recist
 }
 \usage{
 rs_onco_imwg

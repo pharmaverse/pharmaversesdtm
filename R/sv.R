@@ -21,5 +21,5 @@
 #'     \item{SVENDTC}{End Date/Time of Visit}
 #'   }
 #'
-#' @source Source: Constructed by {admiralvaccine} developers
+#' @source Constructed by {admiralvaccine} developers
 "sv"

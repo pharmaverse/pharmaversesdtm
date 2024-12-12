@@ -34,7 +34,7 @@ A data frame with 24 columns:
 }
 }
 \source{
-Source: Constructed by {admiralvaccine} developers
+Constructed by {admiralvaccine} developers
 }
 \usage{
 is_vaccine

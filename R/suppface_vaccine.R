@@ -22,5 +22,5 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
-#' @source Source: Constructed by {admiralvaccine} developers
+#' @source Constructed by {admiralvaccine} developers
 "suppface_vaccine"

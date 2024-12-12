@@ -50,5 +50,5 @@
 #'     \item{AELOC}{Location}
 #'   }
 #'
-#' @source Source: Constructed using ae from the {pharmaversesdtm} package
+#' @source Constructed using ae from the {pharmaversesdtm} package
 "ae_ophtha"

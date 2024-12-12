@@ -34,7 +34,7 @@ A data frame with 24 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 vs

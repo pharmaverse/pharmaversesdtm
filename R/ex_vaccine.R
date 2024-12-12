@@ -34,5 +34,5 @@
 #'     \item{EXDY}{undocumented field}
 #'   }
 #'
-#' @source Source: Constructed by {admiralvaccine} developers
+#' @source Constructed by {admiralvaccine} developers
 "ex_vaccine"

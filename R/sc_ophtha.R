@@ -25,6 +25,6 @@
 #'     \item{SCDY}{Study Day of Examination}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 #' @author Gordon Miller
 "sc_ophtha"

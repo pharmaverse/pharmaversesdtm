@@ -33,7 +33,7 @@ A data frame with 23 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 eg

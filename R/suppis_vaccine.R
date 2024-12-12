@@ -23,5 +23,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-#' @source Source: Constructed by {admiralpeds} developers
+#' @source Constructed by {admiralpeds} developers
 "suppis_vaccine"

@@ -20,7 +20,7 @@ A data frame with 10 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 suppdm

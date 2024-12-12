@@ -33,7 +33,7 @@ A data frame with 23 columns:
 }
 }
 \source{
-Source: Constructed by {admiralvaccine} developers
+Constructed by {admiralvaccine} developers
 }
 \usage{
 vs_vaccine

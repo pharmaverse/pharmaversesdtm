@@ -32,6 +32,6 @@
 #'     \item{RSDY}{undocumented field}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 #' @author Rohan Thampi
 "rs_onco_irecist"

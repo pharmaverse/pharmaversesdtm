@@ -31,7 +31,7 @@ A data frame with 21 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 tr_onco_recist

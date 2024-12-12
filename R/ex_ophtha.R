@@ -32,5 +32,5 @@
 #'     \item{EXENDY}{Study Day of End of Treatment}
 #'   }
 #'
-#' @source Source: Constructed using ex from the {pharmaversesdtm} package
+#' @source Constructed using ex from the {pharmaversesdtm} package
 "ex_ophtha"

@@ -41,5 +41,5 @@
 #'     \item{DMDY}{Study Day of Collection}
 #'   }
 #'
-#' @source Source: Constructed by {admiralvaccine} developers
+#' @source Constructed by {admiralvaccine} developers
 "dm_vaccine"

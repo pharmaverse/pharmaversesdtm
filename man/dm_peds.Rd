@@ -36,7 +36,7 @@ A data frame with 26 columns:
 }
 }
 \source{
-Source: Constructed by {admiralpeds} developers
+Constructed by {admiralpeds} developers
 }
 \usage{
 dm_peds

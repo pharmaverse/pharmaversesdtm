@@ -35,7 +35,7 @@ A data frame with 25 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 oe_ophtha

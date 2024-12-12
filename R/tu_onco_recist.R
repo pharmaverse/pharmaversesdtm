@@ -29,6 +29,6 @@
 #'     \item{TUSEQ}{undocumented field}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 #' @author Stefan Bundfuss
 "tu_onco_recist"

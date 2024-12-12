@@ -38,6 +38,6 @@
 #'     \item{OETPTNUM}{Planned Time Point Number}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 #' @author Gordon Miller
 "oe_ophtha"

@@ -29,7 +29,7 @@ A data frame with 19 columns:
 }
 }
 \source{
-Source: Constructed using ex from the {pharmaversesdtm} package
+Constructed using ex from the {pharmaversesdtm} package
 }
 \usage{
 ex_ophtha

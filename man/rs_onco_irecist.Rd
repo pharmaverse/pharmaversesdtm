@@ -29,7 +29,7 @@ A data frame with 19 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 rs_onco_irecist

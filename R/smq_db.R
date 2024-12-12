@@ -19,5 +19,5 @@
 #'     \item{termvar}{undocumented field}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 "smq_db"

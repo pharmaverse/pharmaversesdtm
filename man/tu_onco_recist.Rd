@@ -26,7 +26,7 @@ A data frame with 16 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 tu_onco_recist

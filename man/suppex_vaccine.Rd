@@ -19,7 +19,7 @@ A data frame with 9 columns:
 }
 }
 \source{
-Source: Constructed by {admiralvaccine} developers
+Constructed by {admiralvaccine} developers
 }
 \usage{
 suppex_vaccine

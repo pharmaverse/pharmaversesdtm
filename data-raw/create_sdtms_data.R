@@ -51,7 +51,7 @@ generate_hyperlink <- function(url, link_text = "") {
     return("The source is inaccessible.")
   } else if (!grepl(url_pattern, url)) {
     # If the source is plain text (not a URL), return it as-is
-    return(paste("Source:", url))
+    return(url)
   }
 
   # Generate and return the hyperlink if the URL is valid

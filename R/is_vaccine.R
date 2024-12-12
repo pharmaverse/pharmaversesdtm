@@ -37,5 +37,5 @@
 #'     \item{ISULOQ}{Upper Limit of Quantitation}
 #'   }
 #'
-#' @source Source: Constructed by {admiralvaccine} developers
+#' @source Constructed by {admiralvaccine} developers
 "is_vaccine"

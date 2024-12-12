@@ -23,5 +23,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 "suppdm"

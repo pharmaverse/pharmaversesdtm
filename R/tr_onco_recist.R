@@ -34,6 +34,6 @@
 #'     \item{TRSEQ}{undocumented field}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 #' @author Stefan Bundfuss
 "tr_onco_recist"

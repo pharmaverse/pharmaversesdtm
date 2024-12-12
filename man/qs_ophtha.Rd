@@ -30,7 +30,7 @@ A data frame with 20 columns:
 }
 }
 \source{
-Source: Constructed using qs from the {pharmaversesdtm} package
+Constructed using qs from the {pharmaversesdtm} package
 }
 \usage{
 qs_ophtha

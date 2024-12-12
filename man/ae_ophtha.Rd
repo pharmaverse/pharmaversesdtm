@@ -47,7 +47,7 @@ A data frame with 37 columns:
 }
 }
 \source{
-Source: Constructed using ae from the {pharmaversesdtm} package
+Constructed using ae from the {pharmaversesdtm} package
 }
 \usage{
 ae_ophtha

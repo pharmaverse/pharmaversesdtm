@@ -24,7 +24,7 @@ A data frame with 14 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 rs_onco_recist

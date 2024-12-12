@@ -27,6 +27,6 @@
 #'     \item{RSSEQ}{undocumented field}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 #' @author Stefan Bundfuss
 "rs_onco_recist"

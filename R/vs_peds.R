@@ -39,5 +39,5 @@
 #'     \item{EPOCH}{Epoch}
 #'   }
 #'
-#' @source Source: No source available
+#' @source No source available
 "vs_peds"

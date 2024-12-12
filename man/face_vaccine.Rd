@@ -40,7 +40,7 @@ A data frame with 30 columns:
 }
 }
 \source{
-Source: Constructed by {admiralvaccine} developers
+Constructed by {admiralvaccine} developers
 }
 \usage{
 face_vaccine

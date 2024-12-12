@@ -37,5 +37,5 @@
 #'     \item{VSTPTREF}{Time Point Reference}
 #'   }
 #'
-#' @source Source: Generated dataset.
+#' @source Generated dataset.
 "vs"

@@ -16,7 +16,7 @@ A data frame with 6 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 smq_db

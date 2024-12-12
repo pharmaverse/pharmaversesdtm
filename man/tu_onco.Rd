@@ -28,7 +28,7 @@ A data frame with 18 columns:
 }
 }
 \source{
-Source: Generated dataset.
+Generated dataset.
 }
 \usage{
 tu_onco

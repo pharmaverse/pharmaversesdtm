@@ -18,7 +18,7 @@ A data frame with 8 columns:
 }
 }
 \source{
-Source: Constructed by {admiralvaccine} developers
+Constructed by {admiralvaccine} developers
 }
 \usage{
 sv
