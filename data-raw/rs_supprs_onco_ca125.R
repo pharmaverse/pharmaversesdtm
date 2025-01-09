@@ -99,6 +99,7 @@ supprs_onco_ca125 <- tibble::tribble(
        "01-701-1133",        3L, "CAELEPRE",            "Elevated pre-treatment CA-125",   "Y",
        "01-701-1133",        6L, "CAELEPRE",            "Elevated pre-treatment CA-125",   "Y",
        "01-701-1133",        9L, "CAELEPRE",            "Elevated pre-treatment CA-125",   "Y",
+       "01-701-1133",        3L,  "CA50RED",            ">=50% reduction from baseline",   "Y",
        "01-701-1133",        6L, "CANORM2X",    "CA125 normal, lab increased >=2x ULRR",   "Y",
        "01-701-1133",        9L, "CANORM2X",    "CA125 normal, lab increased >=2x ULRR",   "Y",
        "01-701-1130",        3L, "CA125EFL",                "CA-125 response evaluable",   "Y",
@@ -139,8 +140,7 @@ supprs_onco_ca125 <- tibble::tribble(
        "01-701-1118",        6L, "CA125EFL",                "CA-125 response evaluable",   "Y",
        "01-701-1118",        9L, "CA125EFL",                "CA-125 response evaluable",   "Y",
        "01-701-1118",       12L, "CA125EFL",                "CA-125 response evaluable",   "Y",
-       "01-701-1118",        3L,  "CA50RED",            ">=50% reduction from baseline",   "Y",
-       "01-701-1118",        9L,  "CA50RED",            ">=50% reduction from baseline",   "Y",
+       "01-701-1118",        6L,  "CA50RED",            ">=50% reduction from baseline",   "Y",
        "01-701-1118",       12L,  "CA50RED",            ">=50% reduction from baseline",   "Y"
        ) %>%
   mutate(
