@@ -29,6 +29,8 @@ Authors:
   \item Stefan Bundfuss (\href{https://orcid.org/0009-0005-0027-1198}{ORCID})
   \item Zelos Zhu
   \item Sadchla Mascary
+  \item Vladyslav Shuliar (\href{https://orcid.org/0009-0008-2354-8999}{ORCID})
+  \item Vinh Nguyen
 }
 
 }

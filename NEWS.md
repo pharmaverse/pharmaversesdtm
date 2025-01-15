@@ -1,3 +1,10 @@
+# pharmaversesdtm 1.1.0
+
+## New Features
+
+- Oncology response data for GCIG criteria (`rs_onco_ca125` and
+`supprs_onco_ca125`) was added. (#124)
+
 # pharmaversesdtm 1.0.0
 
 ## New Features

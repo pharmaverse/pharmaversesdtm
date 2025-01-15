@@ -1,5 +1,5 @@
 # Datasets: rs_onco_ca125, supprs_onco_ca125
-# Description: RS Oncology and SUPPRS dataset using IMWG criteria
+# Description: RS Oncology and SUPPRS dataset using GCIG criteria
 
 # Load libraries -----
 library(dplyr)
