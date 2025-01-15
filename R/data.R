@@ -178,6 +178,22 @@
 #' @author Vinh Nguyen
 "supprs_onco_imwg"
 
+#' Disease Response (GCIG)
+#'
+#' A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients.
+#' It is intended for vignettes and examples of ADaM dataset creation.
+#'
+#' @author Vinh Nguyen
+"rs_onco_ca125"
+
+#' Supplemental Qualifiers for RS_ONCO_CA125
+#'
+#' A SDTM supplemental RS dataset using GCIG criteria. It is intended to be used
+#' together with `rs_onco_ca125`.
+#'
+#' @author Vinh Nguyen
+"supprs_onco_ca125"
+
 #' Supplemental Adverse Events
 #'
 #' A SDTM SUPPAE dataset from the CDISC pilot project
