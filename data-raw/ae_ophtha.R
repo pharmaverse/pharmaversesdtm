@@ -15,7 +15,7 @@ ae_ophtha <- ae
 ## Create possible AELAT values - as collected on CRF ----
 lat <- c("LEFT", "RIGHT", "BOTH")
 
-## Create AELAT variable ----
+## Create AELAT, AELOC variable ----
 # Use random assignment of lat values where AESOC is "EYE DISORDERS"
 # Set seed so that result stays the same for each run
 set.seed(1)
@@ -26,7 +26,11 @@ ae_ophtha$AELAT <- if_else(ae_ophtha$AESOC == "EYE DISORDERS",
 )
 
 ae_ophtha <- ae_ophtha %>%
-  add_labels(AELAT = "Laterality")
+  mutate(AELOC = if_else(AESOC == "EYE DISORDERS", "EYE", NA_character_))
+
+ae_ophtha <- ae_ophtha %>%
+  add_labels(AELAT = "Laterality") %>%
+  add_labels(AELOC = "Location")
 
 # Label dataset ----
 attr(ae_ophtha, "label") <- "Adverse Events"

@@ -4,10 +4,12 @@
 # Load libraries -----
 library(haven)
 library(admiral)
+library(dplyr)
 
 # Create cm ----
 raw_cm <- read_xpt("https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true") # nolint
-cm <- convert_blanks_to_na(raw_cm)
+cm <- convert_blanks_to_na(raw_cm) %>%
+  mutate(CMENRTPT = if_else(is.na(CMENDTC), "ONGOING", NA_character_))
 
 # Label dataset ----
 attr(cm, "label") <- "Concomitant Medications"

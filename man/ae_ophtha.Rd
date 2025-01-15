@@ -5,7 +5,7 @@
 \alias{ae_ophtha}
 \title{Adverse Events for Ophthalmology}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1191 rows and 36 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1191 rows and 37 columns.
 }
 \source{
 Constructed using \code{ae} from the \code{{pharmaversesdtm}} package
