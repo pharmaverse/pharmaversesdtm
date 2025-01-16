@@ -3,11 +3,12 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Exposure for Ophthalmology
 #'
-#' An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
+#' An example Exposure SDTM dataset with ophthalmology-specific variables such as `EXLOC` and `EXLAT`
 #'
 #' @name ex_ophtha
 #' @title Exposure for Ophthalmology
-#' @description An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 19 columns:
 #'   \describe{

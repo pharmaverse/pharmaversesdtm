@@ -40,7 +40,7 @@ Generated dataset.
 tr_onco
 }
 \description{
-A SDTM TR dataset simulated by Gopi Vegesna
+dataset
 }
 \details{
 Tumor Results for Oncology
@@ -50,4 +50,4 @@ A SDTM TR dataset simulated by Gopi Vegesna
 \author{
 Gopi Vegesna
 }
-\keyword{datasets}
+\keyword{dataset}

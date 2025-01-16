@@ -32,7 +32,7 @@ Generated dataset.
 tu_onco_recist
 }
 \description{
-A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+dataset
 }
 \details{
 Tumor Identification (RECIST 1.1) for Oncology
@@ -42,4 +42,4 @@ A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creatio
 \author{
 Stefan Bundfuss
 }
-\keyword{datasets}
+\keyword{dataset}

@@ -38,11 +38,11 @@ A data frame with 22 columns:
 cm
 }
 \description{
-A SDTM CM dataset from the CDISC pilot project
+dataset
 }
 \details{
 Concomitant Medication
 
 A SDTM CM dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

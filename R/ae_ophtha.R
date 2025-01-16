@@ -3,11 +3,12 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Adverse Events for Ophthalmology
 #'
-#' An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
+#' An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`
 #'
 #' @name ae_ophtha
 #' @title Adverse Events for Ophthalmology
-#' @description An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 37 columns:
 #'   \describe{

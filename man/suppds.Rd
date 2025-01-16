@@ -25,11 +25,11 @@ A data frame with 9 columns:
 suppds
 }
 \description{
-A SDTM SUPPDS dataset from the CDISC pilot project
+dataset
 }
 \details{
 Supplemental Disposition
 
 A SDTM SUPPDS dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

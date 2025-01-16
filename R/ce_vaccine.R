@@ -7,7 +7,8 @@
 #'
 #' @name ce_vaccine
 #' @title Clinical Events for Vaccine
-#' @description An example SDTM CE dataset for vaccine studies
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 29 columns:
 #'   \describe{

@@ -7,7 +7,8 @@
 #'
 #' @name ex
 #' @title Exposure
-#' @description A SDTM EX dataset from the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 17 columns:
 #'   \describe{

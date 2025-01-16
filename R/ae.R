@@ -7,7 +7,8 @@
 #'
 #' @name ae
 #' @title Adverse Events
-#' @description An updated SDTM AE dataset that uses the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 35 columns:
 #'   \describe{

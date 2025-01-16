@@ -42,11 +42,11 @@ Constructed by {admiralpeds} developers
 dm_peds
 }
 \description{
-An updated SDTM DM dataset with pediatric patients
+dataset
 }
 \details{
 Demographic Dataset-pediatrics
 
 An updated SDTM DM dataset with pediatric patients
 }
-\keyword{datasets}
+\keyword{dataset}

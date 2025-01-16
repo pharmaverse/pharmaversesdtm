@@ -46,11 +46,11 @@ Constructed by {admiralvaccine} developers
 face_vaccine
 }
 \description{
-An example SDTM FACE for vaccine studies
+dataset
 }
 \details{
 Findings About Clinical Events for Vaccine
 
 An example SDTM FACE for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

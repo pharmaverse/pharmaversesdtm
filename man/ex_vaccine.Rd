@@ -37,11 +37,11 @@ Constructed by {admiralvaccine} developers
 ex_vaccine
 }
 \description{
-An example SDTM EX dataset for vaccine studies
+dataset
 }
 \details{
 Exposures for Vaccine
 
 An example SDTM EX dataset for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

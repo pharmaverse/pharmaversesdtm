@@ -44,7 +44,7 @@ A data frame with 28 columns:
 mh
 }
 \description{
-An updated SDTM MH dataset that uses data from the CDISC pilot project
+dataset
 }
 \details{
 Medical History
@@ -54,4 +54,4 @@ An updated SDTM MH dataset that uses data from the CDISC pilot project
 \author{
 Annie Yang
 }
-\keyword{datasets}
+\keyword{dataset}

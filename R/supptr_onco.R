@@ -7,7 +7,8 @@
 #'
 #' @name supptr_onco
 #' @title Supplemental Tumor Results for Oncology
-#' @description A SDTM SUPPTR dataset simulated by Gopi Vegesna
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 9 columns:
 #'   \describe{

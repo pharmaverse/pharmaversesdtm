@@ -22,11 +22,11 @@ Generated dataset.
 smq_db
 }
 \description{
-An example SMQ dataset
+dataset
 }
 \details{
 Standardized MedDRA Queries
 
 An example SMQ dataset
 }
-\keyword{datasets}
+\keyword{dataset}

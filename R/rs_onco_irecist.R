@@ -7,7 +7,8 @@
 #'
 #' @name rs_onco_irecist
 #' @title Disease Response (iRECIST) for Oncology
-#' @description A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 19 columns:
 #'   \describe{

@@ -26,11 +26,11 @@ A data frame with 10 columns:
 suppae
 }
 \description{
-A SDTM SUPPAE dataset from the CDISC pilot project
+dataset
 }
 \details{
 Supplemental Adverse Events
 
 A SDTM SUPPAE dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

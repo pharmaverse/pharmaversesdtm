@@ -25,7 +25,7 @@ A data frame with 9 columns:
 supptr_onco
 }
 \description{
-A SDTM SUPPTR dataset simulated by Gopi Vegesna
+dataset
 }
 \details{
 Supplemental Tumor Results for Oncology
@@ -35,4 +35,4 @@ A SDTM SUPPTR dataset simulated by Gopi Vegesna
 \author{
 Gopi Vegesna
 }
-\keyword{datasets}
+\keyword{dataset}

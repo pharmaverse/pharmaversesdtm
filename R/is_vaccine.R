@@ -7,7 +7,8 @@
 #'
 #' @name is_vaccine
 #' @title Immunogenicity Specimen Assessments for Vaccine
-#' @description An example SDTM IS for vaccine studies
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 24 columns:
 #'   \describe{

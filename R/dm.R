@@ -7,7 +7,8 @@
 #'
 #' @name dm
 #' @title Demography
-#' @description A SDTM DM dataset from the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 25 columns:
 #'   \describe{

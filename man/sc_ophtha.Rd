@@ -28,7 +28,7 @@ Generated dataset.
 sc_ophtha
 }
 \description{
-A SDTM SC dataset simulated by Ophthalmology team
+dataset
 }
 \details{
 Subject Characteristic for Ophthalmology
@@ -38,4 +38,4 @@ A SDTM SC dataset simulated by Ophthalmology team
 \author{
 Gordon Miller
 }
-\keyword{datasets}
+\keyword{dataset}

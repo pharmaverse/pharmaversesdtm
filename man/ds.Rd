@@ -29,7 +29,7 @@ A data frame with 13 columns:
 ds
 }
 \description{
-An updated SDTM DS dataset that uses the CDISC pilot project
+dataset
 }
 \details{
 Disposition
@@ -39,4 +39,4 @@ An updated SDTM DS dataset that uses the CDISC pilot project
 \author{
 Gopi Vegesna
 }
-\keyword{datasets}
+\keyword{dataset}

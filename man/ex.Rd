@@ -33,11 +33,11 @@ A data frame with 17 columns:
 ex
 }
 \description{
-A SDTM EX dataset from the CDISC pilot project
+dataset
 }
 \details{
 Exposure
 
 A SDTM EX dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

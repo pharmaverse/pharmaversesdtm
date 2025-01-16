@@ -40,11 +40,11 @@ Generated dataset.
 vs
 }
 \description{
-A SDTM VS dataset from the CDISC pilot project
+dataset
 }
 \details{
 Vital Signs
 
 A SDTM VS dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

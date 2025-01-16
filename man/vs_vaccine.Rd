@@ -39,11 +39,11 @@ Constructed by {admiralvaccine} developers
 vs_vaccine
 }
 \description{
-An example SDTM VS dataset for vaccine studies
+dataset
 }
 \details{
 Vital Signs for Vaccine
 
 An example SDTM VS dataset for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

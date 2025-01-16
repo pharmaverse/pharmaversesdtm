@@ -26,11 +26,11 @@ Generated dataset.
 suppdm
 }
 \description{
-A SDTM SUPPDM dataset from the CDISC pilot project
+dataset
 }
 \details{
 Supplemental Demography
 
 A SDTM SUPPDM dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

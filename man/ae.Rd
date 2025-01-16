@@ -51,7 +51,7 @@ A data frame with 35 columns:
 ae
 }
 \description{
-An updated SDTM AE dataset that uses the CDISC pilot project
+dataset
 }
 \details{
 Adverse Events
@@ -61,4 +61,4 @@ An updated SDTM AE dataset that uses the CDISC pilot project
 \author{
 Gopi Vegesna
 }
-\keyword{datasets}
+\keyword{dataset}

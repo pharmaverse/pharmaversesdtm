@@ -7,7 +7,8 @@
 #'
 #' @name smq_db
 #' @title Standardized MedDRA Queries
-#' @description An example SMQ dataset
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 6 columns:
 #'   \describe{

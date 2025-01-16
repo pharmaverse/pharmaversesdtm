@@ -10,7 +10,7 @@
     {
       "name": "ae_ophtha",
       "label": "Adverse Events for Ophthalmology",
-      "description": "An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT",
+      "description": "An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`",
       "source": "Constructed using ae from the {pharmaversesdtm} package"
     },
     {
@@ -47,7 +47,7 @@
     {
       "name": "ex_ophtha",
       "label": "Exposure for Ophthalmology",
-      "description": "An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT",
+      "description": "An example Exposure SDTM dataset with ophthalmology-specific variables such as `EXLOC` and `EXLAT`",
       "source": "Constructed using ex from the {pharmaversesdtm} package"
     },
     {
@@ -157,7 +157,7 @@
     {
       "name": "supprs_onco_imwg",
       "label": "Supplemental Qualifiers for RS_ONCO_IMWG",
-      "description": "A SDTM supplemental RS dataset using IMWG criteria intended to be used with rs_onco_imwg",
+      "description": "A SDTM supplemental RS dataset using IMWG criteria intended to be used with `rs_onco_imwg`",
       "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true",
       "author": "Vinh Nguyen"
     },

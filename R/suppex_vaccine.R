@@ -7,7 +7,8 @@
 #'
 #' @name suppex_vaccine
 #' @title Supplemental Qualifiers for Exposures for Vaccine
-#' @description An example SDTM SUPPEX dataset for vaccine studies
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 9 columns:
 #'   \describe{

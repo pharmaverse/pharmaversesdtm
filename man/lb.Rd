@@ -39,7 +39,7 @@ A data frame with 23 columns:
 lb
 }
 \description{
-An updated SDTM LB dataset that uses data from the CDISC pilot project
+dataset
 }
 \details{
 Laboratory Measurements
@@ -49,4 +49,4 @@ An updated SDTM LB dataset that uses data from the CDISC pilot project
 \author{
 Annie Yang
 }
-\keyword{datasets}
+\keyword{dataset}

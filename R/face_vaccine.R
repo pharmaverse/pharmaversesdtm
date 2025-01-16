@@ -7,7 +7,8 @@
 #'
 #' @name face_vaccine
 #' @title Findings About Clinical Events for Vaccine
-#' @description An example SDTM FACE for vaccine studies
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 30 columns:
 #'   \describe{

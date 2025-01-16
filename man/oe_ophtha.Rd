@@ -41,7 +41,7 @@ Generated dataset.
 oe_ophtha
 }
 \description{
-A SDTM OE dataset simulated by Ophthalmology team
+dataset
 }
 \details{
 Ophthalmic Examinations for Ophthalmology
@@ -51,4 +51,4 @@ A SDTM OE dataset simulated by Ophthalmology team
 \author{
 Gordon Miller
 }
-\keyword{datasets}
+\keyword{dataset}

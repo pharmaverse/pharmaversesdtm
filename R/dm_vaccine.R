@@ -7,7 +7,8 @@
 #'
 #' @name dm_vaccine
 #' @title Demographics for Vaccine
-#' @description An example SDTM DM dataset for vaccine studies
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 28 columns:
 #'   \describe{

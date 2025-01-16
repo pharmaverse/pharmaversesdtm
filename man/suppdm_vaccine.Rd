@@ -25,11 +25,11 @@ Constructed by {admiralvaccine} developers
 suppdm_vaccine
 }
 \description{
-An example SDTM SUPPDM dataset for vaccine studies
+dataset
 }
 \details{
 Supplemental Qualifiers for Demographics for Vaccine
 
 An example SDTM SUPPDM dataset for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

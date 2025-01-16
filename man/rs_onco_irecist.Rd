@@ -35,7 +35,7 @@ Generated dataset.
 rs_onco_irecist
 }
 \description{
-A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
+dataset
 }
 \details{
 Disease Response (iRECIST) for Oncology
@@ -45,4 +45,4 @@ A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
 \author{
 Rohan Thampi
 }
-\keyword{datasets}
+\keyword{dataset}

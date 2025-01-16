@@ -22,11 +22,11 @@ A data frame with 6 columns:
 ts
 }
 \description{
-A SDTM TS dataset from the CDISC pilot project
+dataset
 }
 \details{
 Trial Design
 
 A SDTM TS dataset from the CDISC pilot project
 }
-\keyword{datasets}
+\keyword{dataset}

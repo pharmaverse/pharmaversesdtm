@@ -35,7 +35,7 @@ A data frame with 19 columns:
 rs_onco
 }
 \description{
-A SDTM RS dataset simulated by Gopi Vegesna
+dataset
 }
 \details{
 Disease Response for Oncology
@@ -45,4 +45,4 @@ A SDTM RS dataset simulated by Gopi Vegesna
 \author{
 Gopi Vegesna
 }
-\keyword{datasets}
+\keyword{dataset}

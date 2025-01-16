@@ -40,11 +40,11 @@ Constructed by {admiralvaccine} developers
 is_vaccine
 }
 \description{
-An example SDTM IS for vaccine studies
+dataset
 }
 \details{
 Immunogenicity Specimen Assessments for Vaccine
 
 An example SDTM IS for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

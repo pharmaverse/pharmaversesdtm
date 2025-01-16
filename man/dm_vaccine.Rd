@@ -44,11 +44,11 @@ Constructed by {admiralvaccine} developers
 dm_vaccine
 }
 \description{
-An example SDTM DM dataset for vaccine studies
+dataset
 }
 \details{
 Demographics for Vaccine
 
 An example SDTM DM dataset for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

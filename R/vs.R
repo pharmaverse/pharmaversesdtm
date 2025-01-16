@@ -7,7 +7,8 @@
 #'
 #' @name vs
 #' @title Vital Signs
-#' @description A SDTM VS dataset from the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 24 columns:
 #'   \describe{

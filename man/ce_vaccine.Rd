@@ -45,11 +45,11 @@ Constructed by {admiralvaccine} developers
 ce_vaccine
 }
 \description{
-An example SDTM CE dataset for vaccine studies
+dataset
 }
 \details{
 Clinical Events for Vaccine
 
 An example SDTM CE dataset for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

@@ -53,11 +53,11 @@ Constructed using ae from the {pharmaversesdtm} package
 ae_ophtha
 }
 \description{
-An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
+dataset
 }
 \details{
 Adverse Events for Ophthalmology
 
-An example Adverse Events SDTM dataset with ophthalmology-specific variable AELAT
+An example Adverse Events SDTM dataset with ophthalmology-specific variable \code{AELAT}
 }
-\keyword{datasets}
+\keyword{dataset}

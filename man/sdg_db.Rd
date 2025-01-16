@@ -21,11 +21,11 @@ A data frame with 5 columns:
 sdg_db
 }
 \description{
-An example SDG dataset
+dataset
 }
 \details{
 SDG
 
 An example SDG dataset
 }
-\keyword{datasets}
+\keyword{dataset}

@@ -7,7 +7,8 @@
 #'
 #' @name mh
 #' @title Medical History
-#' @description An updated SDTM MH dataset that uses data from the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 28 columns:
 #'   \describe{

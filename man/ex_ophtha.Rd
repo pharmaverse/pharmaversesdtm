@@ -35,11 +35,11 @@ Constructed using ex from the {pharmaversesdtm} package
 ex_ophtha
 }
 \description{
-An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
+dataset
 }
 \details{
 Exposure for Ophthalmology
 
-An example Exposure SDTM dataset with ophthalmology-specific variables such as EXLOC and EXLAT
+An example Exposure SDTM dataset with ophthalmology-specific variables such as \code{EXLOC} and \code{EXLAT}
 }
-\keyword{datasets}
+\keyword{dataset}

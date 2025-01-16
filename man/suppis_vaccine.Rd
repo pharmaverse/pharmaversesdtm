@@ -26,11 +26,11 @@ Constructed by {admiralpeds} developers
 suppis_vaccine
 }
 \description{
-An example SDTM SUPPIS dataset for vaccine studies
+dataset
 }
 \details{
 Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine
 
 An example SDTM SUPPIS dataset for vaccine studies
 }
-\keyword{datasets}
+\keyword{dataset}

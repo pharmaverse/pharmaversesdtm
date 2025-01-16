@@ -7,7 +7,8 @@
 #'
 #' @name sdg_db
 #' @title SDG
-#' @description An example SDG dataset
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 5 columns:
 #'   \describe{

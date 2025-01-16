@@ -7,7 +7,8 @@
 #'
 #' @name pc
 #' @title Pharmacokinetic Concentrations
-#' @description A SDTM PC dataset simulated by Antonio Rodriguez Contesti
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 20 columns:
 #'   \describe{

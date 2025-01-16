@@ -7,7 +7,8 @@
 #'
 #' @name suppdm
 #' @title Supplemental Demography
-#' @description A SDTM SUPPDM dataset from the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 10 columns:
 #'   \describe{

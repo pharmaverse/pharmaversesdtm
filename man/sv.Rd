@@ -24,11 +24,11 @@ Constructed by {admiralvaccine} developers
 sv
 }
 \description{
-A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
+dataset
 }
 \details{
 Subject Visits
 
 A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 }
-\keyword{datasets}
+\keyword{dataset}

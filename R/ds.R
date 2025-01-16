@@ -7,7 +7,8 @@
 #'
 #' @name ds
 #' @title Disposition
-#' @description An updated SDTM DS dataset that uses the CDISC pilot project
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 13 columns:
 #'   \describe{

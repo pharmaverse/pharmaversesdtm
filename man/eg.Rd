@@ -39,11 +39,11 @@ Generated dataset.
 eg
 }
 \description{
-An example of standard SDTM EG dataset to be used in deriving ADEG dataset
+dataset
 }
 \details{
 Electrocardiogram
 
 An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 }
-\keyword{datasets}
+\keyword{dataset}

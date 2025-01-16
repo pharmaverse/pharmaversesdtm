@@ -7,7 +7,8 @@
 #'
 #' @name pp
 #' @title Pharmacokinetic Parameters
-#' @description A SDTM PP dataset simulated by Antonio Rodriguez Contesti
+#' @keywords dataset
+#' @description dataset
 #' @docType data
 #' @format A data frame with 14 columns:
 #'   \describe{
