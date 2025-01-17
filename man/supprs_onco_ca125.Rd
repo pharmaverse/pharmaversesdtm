@@ -3,7 +3,7 @@
 \docType{data}
 \name{supprs_onco_ca125}
 \alias{supprs_onco_ca125}
-\title{No label available}
+\title{Supplemental Qualifiers for RS_ONCO_CA125}
 \format{
 A data frame with 9 columns:
 \describe{
@@ -19,7 +19,7 @@ A data frame with 9 columns:
 }
 }
 \source{
-No source available
+Generated dataset (\href{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R}{rs_supprs_onco_ca125.R})
 }
 \usage{
 supprs_onco_ca125
@@ -28,8 +28,11 @@ supprs_onco_ca125
 dataset
 }
 \details{
-No label available
+Supplemental Qualifiers for RS_ONCO_CA125
 
-No description available
+A SDTM supplemental RS dataset using GCIG criteria. It is intended to be used together with \code{rs_onco_ca125}.
+}
+\author{
+Vinh Nguyen
 }
 \keyword{dataset}

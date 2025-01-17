@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco_ca125}
 \alias{rs_onco_ca125}
-\title{No label available}
+\title{Disease Response (GCIG)}
 \format{
 A data frame with 13 columns:
 \describe{
@@ -23,7 +23,7 @@ A data frame with 13 columns:
 }
 }
 \source{
-No source available
+Generated dataset (\href{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R}{rs_supprs_onco_ca125.R})
 }
 \usage{
 rs_onco_ca125
@@ -32,8 +32,11 @@ rs_onco_ca125
 dataset
 }
 \details{
-No label available
+Disease Response (GCIG)
 
-No description available
+A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.
+}
+\author{
+Vinh Nguyen
 }
 \keyword{dataset}
