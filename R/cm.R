@@ -8,7 +8,7 @@
 #' @name cm
 #' @title Concomitant Medication
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM CM dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 22 columns:
 #'   \describe{

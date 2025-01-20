@@ -8,7 +8,7 @@
 #' @name sv
 #' @title Subject Visits
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 #' @docType data
 #' @format A data frame with 8 columns:
 #'   \describe{

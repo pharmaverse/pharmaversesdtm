@@ -29,7 +29,7 @@ Generated dataset (\href{https://github.com/pharmaverse/pharmaversesdtm/blob/mai
 rs_onco_ca125
 }
 \description{
-dataset
+A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.
 }
 \details{
 Disease Response (GCIG)

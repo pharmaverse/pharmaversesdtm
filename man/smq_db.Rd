@@ -22,7 +22,7 @@ Generated dataset.
 smq_db
 }
 \description{
-dataset
+An example SMQ dataset
 }
 \details{
 Standardized MedDRA Queries

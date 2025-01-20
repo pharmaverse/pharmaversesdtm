@@ -82,7 +82,7 @@ write_doc <- function(data, dataset_name, dataset_label = "No label available",
     sprintf("#' @name %s", dataset_name),
     sprintf("#' @title %s", dataset_label),
     sprintf("#' @keywords dataset"),
-    sprintf("#' @description dataset"),
+    sprintf("#' @description %s", dataset_description),
     "#' @docType data",
     sprintf("#' @format A data frame with %s columns:", ncol(data)),
     "#'   \\describe{",
@@ -110,7 +110,7 @@ for (dataset_name in datasets) {
   metadata <- specs[specs$name == dataset_name, ]
 
   if (nrow(metadata) == 0) {
-    cat("No metadata found for", dataset_name, "- using default values.\n")
+    warning(sprintf("No metadata found for %s - using default values.", dataset_name), call. = FALSE)
     dataset_label <- "No label available"
     dataset_description <- "No description available"
     dataset_author <- NULL

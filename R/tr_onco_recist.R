@@ -8,7 +8,7 @@
 #' @name tr_onco_recist
 #' @title Tumor Results (RECIST 1.1) for Oncology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 19 columns:
 #'   \describe{

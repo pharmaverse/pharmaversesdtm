@@ -35,7 +35,7 @@ Generated dataset.
 tr_onco_recist
 }
 \description{
-dataset
+A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \details{
 Tumor Results (RECIST 1.1) for Oncology

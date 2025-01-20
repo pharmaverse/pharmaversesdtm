@@ -8,7 +8,7 @@
 #' @name tu_onco_recist
 #' @title Tumor Identification (RECIST 1.1) for Oncology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 16 columns:
 #'   \describe{

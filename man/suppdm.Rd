@@ -26,7 +26,7 @@ Generated dataset.
 suppdm
 }
 \description{
-dataset
+A SDTM SUPPDM dataset from the CDISC pilot project
 }
 \details{
 Supplemental Demography

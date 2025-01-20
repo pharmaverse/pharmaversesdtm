@@ -30,7 +30,7 @@ A data frame with 14 columns:
 pp
 }
 \description{
-dataset
+A SDTM PP dataset simulated by Antonio Rodriguez Contesti
 }
 \details{
 Pharmacokinetic Parameters

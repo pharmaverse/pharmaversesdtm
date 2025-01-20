@@ -25,7 +25,7 @@ A data frame with 9 columns:
 supprs_onco_imwg
 }
 \description{
-dataset
+A SDTM supplemental RS dataset using IMWG criteria intended to be used with \code{rs_onco_imwg}
 }
 \details{
 Supplemental Qualifiers for RS_ONCO_IMWG

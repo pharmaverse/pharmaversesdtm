@@ -40,7 +40,7 @@ Generated dataset.
 tr_onco
 }
 \description{
-dataset
+A SDTM TR dataset simulated by Gopi Vegesna
 }
 \details{
 Tumor Results for Oncology

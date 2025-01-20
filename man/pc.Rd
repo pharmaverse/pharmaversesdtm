@@ -36,7 +36,7 @@ A data frame with 20 columns:
 pc
 }
 \description{
-dataset
+A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 }
 \details{
 Pharmacokinetic Concentrations

@@ -25,7 +25,7 @@ Constructed by {admiralvaccine} developers
 suppdm_vaccine
 }
 \description{
-dataset
+An example SDTM SUPPDM dataset for vaccine studies
 }
 \details{
 Supplemental Qualifiers for Demographics for Vaccine

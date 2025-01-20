@@ -8,7 +8,7 @@
 #' @name eg
 #' @title Electrocardiogram
 #' @keywords dataset
-#' @description dataset
+#' @description An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 #' @docType data
 #' @format A data frame with 23 columns:
 #'   \describe{

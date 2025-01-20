@@ -28,7 +28,7 @@ Generated dataset.
 sc_ophtha
 }
 \description{
-dataset
+A SDTM SC dataset simulated by Ophthalmology team
 }
 \details{
 Subject Characteristic for Ophthalmology

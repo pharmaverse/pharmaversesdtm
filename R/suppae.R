@@ -8,7 +8,7 @@
 #' @name suppae
 #' @title Supplemental Adverse Events
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM SUPPAE dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 10 columns:
 #'   \describe{

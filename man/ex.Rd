@@ -33,7 +33,7 @@ A data frame with 17 columns:
 ex
 }
 \description{
-dataset
+A SDTM EX dataset from the CDISC pilot project
 }
 \details{
 Exposure

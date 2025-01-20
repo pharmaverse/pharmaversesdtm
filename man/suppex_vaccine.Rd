@@ -25,7 +25,7 @@ Constructed by {admiralvaccine} developers
 suppex_vaccine
 }
 \description{
-dataset
+An example SDTM SUPPEX dataset for vaccine studies
 }
 \details{
 Supplemental Qualifiers for Exposures for Vaccine

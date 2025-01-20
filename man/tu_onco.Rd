@@ -34,7 +34,7 @@ Generated dataset.
 tu_onco
 }
 \description{
-dataset
+A SDTM TU dataset simulated by Gopi Vegesna
 }
 \details{
 Tumor Identification for Oncology

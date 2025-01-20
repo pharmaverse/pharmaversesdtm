@@ -29,7 +29,7 @@ A data frame with 13 columns:
 ds
 }
 \description{
-dataset
+An updated SDTM DS dataset that uses the CDISC pilot project
 }
 \details{
 Disposition

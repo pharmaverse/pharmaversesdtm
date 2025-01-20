@@ -46,7 +46,7 @@ Constructed by {admiralvaccine} developers
 face_vaccine
 }
 \description{
-dataset
+An example SDTM FACE for vaccine studies
 }
 \details{
 Findings About Clinical Events for Vaccine

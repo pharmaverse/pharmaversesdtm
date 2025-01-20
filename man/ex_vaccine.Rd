@@ -37,7 +37,7 @@ Constructed by {admiralvaccine} developers
 ex_vaccine
 }
 \description{
-dataset
+An example SDTM EX dataset for vaccine studies
 }
 \details{
 Exposures for Vaccine

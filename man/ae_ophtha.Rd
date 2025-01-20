@@ -53,7 +53,7 @@ Constructed using ae from the {pharmaversesdtm} package
 ae_ophtha
 }
 \description{
-dataset
+An example Adverse Events SDTM dataset with ophthalmology-specific variable \code{AELAT}
 }
 \details{
 Adverse Events for Ophthalmology

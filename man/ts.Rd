@@ -22,7 +22,7 @@ A data frame with 6 columns:
 ts
 }
 \description{
-dataset
+A SDTM TS dataset from the CDISC pilot project
 }
 \details{
 Trial Design

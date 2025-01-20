@@ -33,7 +33,7 @@ Derived from tr_onco_recist
 rs_onco_imwg
 }
 \description{
-dataset
+A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 }
 \details{
 Disease Response (IMWG)

@@ -8,7 +8,7 @@
 #' @name suppdm_vaccine
 #' @title Supplemental Qualifiers for Demographics for Vaccine
 #' @keywords dataset
-#' @description dataset
+#' @description An example SDTM SUPPDM dataset for vaccine studies
 #' @docType data
 #' @format A data frame with 9 columns:
 #'   \describe{

@@ -44,7 +44,7 @@ Constructed by {admiralvaccine} developers
 dm_vaccine
 }
 \description{
-dataset
+An example SDTM DM dataset for vaccine studies
 }
 \details{
 Demographics for Vaccine

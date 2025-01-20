@@ -8,7 +8,7 @@
 #' @name vs_peds
 #' @title No label available
 #' @keywords dataset
-#' @description dataset
+#' @description No description available
 #' @docType data
 #' @format A data frame with 26 columns:
 #'   \describe{

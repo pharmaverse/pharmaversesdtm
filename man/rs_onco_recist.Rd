@@ -30,7 +30,7 @@ Generated dataset.
 rs_onco_recist
 }
 \description{
-dataset
+A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 }
 \details{
 Disease Response (RECIST 1.1) for Oncology

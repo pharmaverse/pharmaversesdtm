@@ -8,7 +8,7 @@
 #' @name sc_ophtha
 #' @title Subject Characteristic for Ophthalmology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM SC dataset simulated by Ophthalmology team
 #' @docType data
 #' @format A data frame with 12 columns:
 #'   \describe{

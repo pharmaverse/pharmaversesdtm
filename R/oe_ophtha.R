@@ -8,7 +8,7 @@
 #' @name oe_ophtha
 #' @title Ophthalmic Examinations for Ophthalmology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM OE dataset simulated by Ophthalmology team
 #' @docType data
 #' @format A data frame with 25 columns:
 #'   \describe{

@@ -45,7 +45,7 @@ Constructed by {admiralvaccine} developers
 ce_vaccine
 }
 \description{
-dataset
+An example SDTM CE dataset for vaccine studies
 }
 \details{
 Clinical Events for Vaccine

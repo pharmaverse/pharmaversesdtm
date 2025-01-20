@@ -21,7 +21,7 @@ A data frame with 5 columns:
 sdg_db
 }
 \description{
-dataset
+An example SDG dataset
 }
 \details{
 SDG

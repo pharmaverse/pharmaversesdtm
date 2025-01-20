@@ -36,7 +36,7 @@ Constructed using qs from the {pharmaversesdtm} package
 qs_ophtha
 }
 \description{
-dataset
+An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 }
 \details{
 Questionnaire for Ophthalmology

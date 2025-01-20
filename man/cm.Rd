@@ -38,7 +38,7 @@ A data frame with 22 columns:
 cm
 }
 \description{
-dataset
+A SDTM CM dataset from the CDISC pilot project
 }
 \details{
 Concomitant Medication

@@ -8,7 +8,7 @@
 #' @name ts
 #' @title Trial Design
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM TS dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 6 columns:
 #'   \describe{

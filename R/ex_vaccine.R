@@ -8,7 +8,7 @@
 #' @name ex_vaccine
 #' @title Exposures for Vaccine
 #' @keywords dataset
-#' @description dataset
+#' @description An example SDTM EX dataset for vaccine studies
 #' @docType data
 #' @format A data frame with 21 columns:
 #'   \describe{

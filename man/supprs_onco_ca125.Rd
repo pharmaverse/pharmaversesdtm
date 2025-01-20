@@ -25,7 +25,7 @@ Generated dataset (\href{https://github.com/pharmaverse/pharmaversesdtm/blob/mai
 supprs_onco_ca125
 }
 \description{
-dataset
+A SDTM supplemental RS dataset using GCIG criteria. It is intended to be used together with \code{rs_onco_ca125}.
 }
 \details{
 Supplemental Qualifiers for RS_ONCO_CA125

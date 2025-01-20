@@ -42,7 +42,7 @@ Constructed by {admiralpeds} developers
 dm_peds
 }
 \description{
-dataset
+An updated SDTM DM dataset with pediatric patients
 }
 \details{
 Demographic Dataset-pediatrics

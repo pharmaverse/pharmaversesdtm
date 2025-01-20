@@ -41,7 +41,7 @@ Generated dataset.
 oe_ophtha
 }
 \description{
-dataset
+A SDTM OE dataset simulated by Ophthalmology team
 }
 \details{
 Ophthalmic Examinations for Ophthalmology

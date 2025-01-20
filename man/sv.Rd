@@ -24,7 +24,7 @@ Constructed by {admiralvaccine} developers
 sv
 }
 \description{
-dataset
+A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 }
 \details{
 Subject Visits

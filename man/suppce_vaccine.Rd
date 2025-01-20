@@ -25,7 +25,7 @@ Constructed by {admiralvaccine} developers
 suppce_vaccine
 }
 \description{
-dataset
+An example SDTM SUPPCE for vaccine studies
 }
 \details{
 Supplemental Qualifiers for Clinical Events for Vaccine

@@ -8,7 +8,7 @@
 #' @name rs_onco_recist
 #' @title Disease Response (RECIST 1.1) for Oncology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 14 columns:
 #'   \describe{

@@ -35,7 +35,7 @@ A data frame with 19 columns:
 rs_onco
 }
 \description{
-dataset
+A SDTM RS dataset simulated by Gopi Vegesna
 }
 \details{
 Disease Response for Oncology

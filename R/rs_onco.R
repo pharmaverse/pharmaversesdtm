@@ -8,7 +8,7 @@
 #' @name rs_onco
 #' @title Disease Response for Oncology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM RS dataset simulated by Gopi Vegesna
 #' @docType data
 #' @format A data frame with 19 columns:
 #'   \describe{

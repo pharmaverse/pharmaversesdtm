@@ -8,7 +8,7 @@
 #' @name tu_onco
 #' @title Tumor Identification for Oncology
 #' @keywords dataset
-#' @description dataset
+#' @description A SDTM TU dataset simulated by Gopi Vegesna
 #' @docType data
 #' @format A data frame with 18 columns:
 #'   \describe{

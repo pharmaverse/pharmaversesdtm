@@ -40,7 +40,7 @@ Generated dataset.
 vs
 }
 \description{
-dataset
+A SDTM VS dataset from the CDISC pilot project
 }
 \details{
 Vital Signs

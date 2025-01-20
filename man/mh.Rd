@@ -44,7 +44,7 @@ A data frame with 28 columns:
 mh
 }
 \description{
-dataset
+An updated SDTM MH dataset that uses data from the CDISC pilot project
 }
 \details{
 Medical History

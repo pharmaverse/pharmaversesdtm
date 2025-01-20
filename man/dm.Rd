@@ -41,7 +41,7 @@ A data frame with 25 columns:
 dm
 }
 \description{
-dataset
+A SDTM DM dataset from the CDISC pilot project
 }
 \details{
 Demography

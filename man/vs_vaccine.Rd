@@ -39,7 +39,7 @@ Constructed by {admiralvaccine} developers
 vs_vaccine
 }
 \description{
-dataset
+An example SDTM VS dataset for vaccine studies
 }
 \details{
 Vital Signs for Vaccine

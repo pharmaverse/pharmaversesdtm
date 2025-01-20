@@ -40,7 +40,7 @@ Constructed by {admiralvaccine} developers
 is_vaccine
 }
 \description{
-dataset
+An example SDTM IS for vaccine studies
 }
 \details{
 Immunogenicity Specimen Assessments for Vaccine

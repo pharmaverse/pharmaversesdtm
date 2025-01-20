@@ -26,7 +26,7 @@ A data frame with 10 columns:
 suppae
 }
 \description{
-dataset
+A SDTM SUPPAE dataset from the CDISC pilot project
 }
 \details{
 Supplemental Adverse Events
