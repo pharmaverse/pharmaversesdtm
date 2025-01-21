@@ -19,7 +19,6 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="SDTM Test Data for the Pharmaverse Family of Packages">
 <meta name="description" content="A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) datasets inside the pharmaverse family of packages. SDTM dataset specifications are described in the CDISC SDTM implementation guide, accessible by creating a free account on &lt;https://www.cdisc.org/&gt;.">
 <meta property="og:description" content="A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) datasets inside the pharmaverse family of packages. SDTM dataset specifications are described in the CDISC SDTM implementation guide, accessible by creating a free account on &lt;https://www.cdisc.org/&gt;.">
-<meta property="og:image" content="https://pharmaverse.github.io/pharmaversesdtm/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -54,13 +53,20 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="pharmaversesdtm-">pharmaversesdtm <a class="anchor" aria-label="anchor" href="#pharmaversesdtm-"></a>
-</h1>
-</div>
+<div class="page-header"><h1 id="pharmaversesdtm-">pharmaversesdtm <img src="reference/figures/logo.png" align="right" width="200" style="margin-left:50px;"><a class="anchor" aria-label="anchor" href="#pharmaversesdtm-"></a>
+</h1></div>
 <!-- badges: start -->
 
+<!-- badges: end -->
 <p>Test data (SDTM) for the pharmaverse family of packages</p>
+<ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#data-sources">Data Sources</a></li>
+<li><a href="#naming">Naming Conventions</a></li>
+<li><a href="#how-to-update">How To Update</a></li>
+<li><a href="#documentation-process">Documentation Process</a></li>
+</ul>
 </div>
 <div class="section level1">
 <h1 id="purpose">Purpose<a class="anchor" aria-label="anchor" href="#purpose"></a>
@@ -76,12 +82,12 @@
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"pharmaverse/pharmaversesdtm"</span>, ref <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"pharmaverse/pharmaversesdtm"</span>, ref <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span> <span class="co"># This command installs the latest development version directly from GitHub.</span></span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="data-sources">Data Sources<a class="anchor" aria-label="anchor" href="#data-sources"></a>
 </h1>
-<p>Some of the test datasets has been sourced from the <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project" class="external-link">CDISC pilot project</a>, while other datasets have been constructed ad-hoc by the admiral team. Please check the <a href="https://pharmaverse.github.io/pharmaversesdtm/reference/index.html">Reference page</a> for detailed information regarding the source of specific datasets.</p>
+<p>Some test datasets have been sourced from the <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project" class="external-link">CDISC pilot project</a>, while other datasets have been constructed ad-hoc by the {admiral} team. Please check the <a href="https://pharmaverse.github.io/pharmaversesdtm/reference/index.html">Reference page</a> for detailed information regarding the source of specific datasets.</p>
 </div>
 <div class="section level1">
 <h1 id="naming">Naming Conventions<a class="anchor" aria-label="anchor" href="#naming"></a>
@@ -105,11 +111,12 @@
 </li>
 <li>The programs in <code>data-raw/</code> are stored within the <a href="https://pharmaverse.github.io/pharmaversesdtm/">pharmaversesdtm</a> GitHub repository, but they are <strong>not</strong> part of the <a href="https://pharmaverse.github.io/pharmaversesdtm/">pharmaversesdtm</a> package–the <code>data-raw/</code> folder is specified in <code>.Rbuildignore</code>.</li>
 <li>When you run a program that is in the <code>data-raw/</code> folder, you generate a dataset that is written to the <code>data/</code> folder, which will become part of the <a href="https://pharmaverse.github.io/pharmaversesdtm/">pharmaversesdtm</a> package.</li>
-<li>The names and sources of test datasets are specified in <code>R/data.R</code>, for the purpose of generating documentation in the <code>man/</code> folder.</li>
+<li>The names and sources of test datasets are specified in <code>R/*.R</code>, for the purpose of generating documentation in the <code>man/</code> folder.</li>
 </ul>
-<div class="section level2">
-<h2 id="adding-new-sdtm-datasets">Adding New SDTM Datasets<a class="anchor" aria-label="anchor" href="#adding-new-sdtm-datasets"></a>
-</h2>
+<p><strong>Note:</strong> The documentation process in <a href="https://pharmaverse.github.io/pharmaversesdtm/">pharmaversesdtm</a> is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (<code>inst/extdata/sdtms-specs.json</code>) and used to generate <code>.R</code> documentation files. See the <a href="#documentation-process">Documentation Process</a> for details.</p>
+<div class="section level3">
+<h3 id="adding-new-sdtm-datasets">Adding New SDTM Datasets<a class="anchor" aria-label="anchor" href="#adding-new-sdtm-datasets"></a>
+</h3>
 <ul>
 <li>Create a program in the <code>data-raw/</code> folder, named <code>&lt;name&gt;.R</code>, where <code>&lt;name&gt;</code> should follow the <a href="#naming">naming convention</a>, to generate the test data and output <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder.
 <ul>
@@ -118,23 +125,30 @@
 </ul>
 </li>
 <li>Run the program.</li>
-<li>Reflect this update, by specifying <code>&lt;name&gt;</code> in <code>R/data.R</code>.</li>
-<li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
+<li>Reflect this update by adding the relevant information to the <code>inst/extdata/sdtms-specs.json</code> file.</li>
+<li>Run <code>data-raw/create_sdtms_data.R</code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 <li>Add your GitHub handle to <code>.github/CODEOWNERS</code>.</li>
 <li>Update <code>NEWS.md</code>.</li>
 </ul>
 </div>
-<div class="section level2">
-<h2 id="updating-existing-sdtm-datasets">Updating Existing SDTM Datasets<a class="anchor" aria-label="anchor" href="#updating-existing-sdtm-datasets"></a>
-</h2>
+<div class="section level3">
+<h3 id="updating-existing-sdtm-datasets">Updating Existing SDTM Datasets<a class="anchor" aria-label="anchor" href="#updating-existing-sdtm-datasets"></a>
+</h3>
 <ul>
 <li>Locate the existing program <code>&lt;name&gt;.R</code> in the <code>data-raw/</code> folder, update it accordingly.</li>
+<li>Reflect this update by adding the relevant information to the <code>inst/extdata/sdtms-specs.json</code> file.</li>
 <li>Run the program, and output updated <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder.</li>
-<li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
+<li>Run <code>data-raw/create_sdtms_data.R</code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 <li>Add your GitHub handle to <code>.github/CODEOWNERS</code>.</li>
 <li>Update <code>NEWS.md</code>.</li>
 </ul>
 </div>
+</div>
+<div class="section level1">
+<h1 id="documentation-process">Documentation Process<a class="anchor" aria-label="anchor" href="#documentation-process"></a>
+</h1>
+<p>The documentation process in <a href="https://pharmaverse.github.io/pharmaversesdtm/">pharmaversesdtm</a> is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (<code>inst/extdata/sdtms-specs.json</code>) and used to generate <code>.R</code> documentation files.</p>
+<p>This streamlined approach aligns with best practices for efficient package development.</p>
 </div>
 
   </main><aside class="col-md-3"><div class="links">
@@ -179,7 +193,6 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://pharmaverse.org" class="external-link"><img src="http://pharmaverse.org/shields/pharmaversesdtm.svg"></a></li>
 <li><a href="https://CRAN.R-project.org/package=pharmaversesdtm" class="external-link"><img src="https://www.r-pkg.org/badges/version/pharmaversesdtm" alt="CRAN status"></a></li>
 </ul>
 </div>
