@@ -3,7 +3,7 @@
 \docType{data}
 \name{vs_peds}
 \alias{vs_peds}
-\title{No label available}
+\title{Vital signs Dataset-pediatrics}
 \format{
 A data frame with 26 columns:
 \describe{
@@ -36,17 +36,17 @@ A data frame with 26 columns:
 }
 }
 \source{
-No source available
+Constructed by {admiralpeds} developers
 }
 \usage{
 vs_peds
 }
 \description{
-No description available
+An updated SDTM VS dataset with anthropometric measurements for pediatric patients
 }
 \details{
-No label available
+Vital signs Dataset-pediatrics
 
-No description available
+An updated SDTM VS dataset with anthropometric measurements for pediatric patients
 }
 \keyword{dataset}

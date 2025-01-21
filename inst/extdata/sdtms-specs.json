@@ -301,6 +301,12 @@
       "label": "Demographic Dataset-pediatrics",
       "description": "An updated SDTM DM dataset with pediatric patients",
       "source": "Constructed by {admiralpeds} developers"
+    },
+    {
+      "name": "vs_peds",
+      "label": "Vital signs Dataset-pediatrics",
+      "description": "An updated SDTM VS dataset with anthropometric measurements for pediatric patients",
+      "source": "Constructed by {admiralpeds} developers"
     }
   ]
 }
