@@ -13,13 +13,20 @@ repo:
 news:
   cran_dates: true
 
-
 navbar:
   structure:
     left: [reference, news]
   components:
     reference:
-       text: Reference
-       href: reference/index.html
+      text: Reference
+      href: reference/index.html
 
-
+reference:
+  - title: "Datasets"
+    desc: "List of all available datasets."
+    contents:
+      - has_keyword("dataset")
+  - title: "Functions"
+    desc: "List of all available functions."
+    contents:
+      - get_terms

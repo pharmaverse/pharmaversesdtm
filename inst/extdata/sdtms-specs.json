@@ -1,0 +1,312 @@
+{
+  "sdtms-specs": [
+    {
+      "name": "ae",
+      "label": "Adverse Events",
+      "description": "An updated SDTM AE dataset that uses the CDISC pilot project",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda",
+      "author": "Gopi Vegesna"
+    },
+    {
+      "name": "ae_ophtha",
+      "label": "Adverse Events for Ophthalmology",
+      "description": "An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`",
+      "source": "Constructed using ae from the {pharmaversesdtm} package"
+    },
+    {
+      "name": "cm",
+      "label": "Concomitant Medication",
+      "description": "A SDTM CM dataset from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true"
+    },
+    {
+      "name": "dm",
+      "label": "Demography",
+      "description": "A SDTM DM dataset from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true"
+    },
+    {
+      "name": "ds",
+      "label": "Disposition",
+      "description": "An updated SDTM DS dataset that uses the CDISC pilot project",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda",
+      "author": "Gopi Vegesna"
+    },
+    {
+      "name": "eg",
+      "label": "Electrocardiogram",
+      "description": "An example of standard SDTM EG dataset to be used in deriving ADEG dataset",
+      "source": "Generated dataset."
+    },
+    {
+      "name": "ex",
+      "label": "Exposure",
+      "description": "A SDTM EX dataset from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ex.xpt?raw=true"
+    },
+    {
+      "name": "ex_ophtha",
+      "label": "Exposure for Ophthalmology",
+      "description": "An example Exposure SDTM dataset with ophthalmology-specific variables such as `EXLOC` and `EXLAT`",
+      "source": "Constructed using ex from the {pharmaversesdtm} package"
+    },
+    {
+      "name": "lb",
+      "label": "Laboratory Measurements",
+      "description": "An updated SDTM LB dataset that uses data from the CDISC pilot project",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda",
+      "author": "Annie Yang"
+    },
+    {
+      "name": "mh",
+      "label": "Medical History",
+      "description": "An updated SDTM MH dataset that uses data from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/mh.xpt?raw=true",
+      "author": "Annie Yang"
+    },
+    {
+      "name": "oe_ophtha",
+      "label": "Ophthalmic Examinations for Ophthalmology",
+      "description": "A SDTM OE dataset simulated by Ophthalmology team",
+      "source": "Generated dataset.",
+      "author": "Gordon Miller"
+    },
+    {
+      "name": "pc",
+      "label": "Pharmacokinetic Concentrations",
+      "description": "A SDTM PC dataset simulated by Antonio Rodriguez Contesti",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda",
+      "author": "Antonio Rodriguez Contesti"
+    },
+    {
+      "name": "pp",
+      "label": "Pharmacokinetic Parameters",
+      "description": "A SDTM PP dataset simulated by Antonio Rodriguez Contesti",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda",
+      "author": "Antonio Rodriguez Contesti"
+    },
+    {
+      "name": "qs_ophtha",
+      "label": "Questionnaire for Ophthalmology",
+      "description": "An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25",
+      "source": "Constructed using qs from the {pharmaversesdtm} package"
+    },
+    {
+      "name": "sc_ophtha",
+      "label": "Subject Characteristic for Ophthalmology",
+      "description": "A SDTM SC dataset simulated by Ophthalmology team",
+      "source": "Generated dataset.",
+      "author": "Gordon Miller"
+    },
+    {
+      "name": "tu_onco",
+      "label": "Tumor Identification for Oncology",
+      "description": "A SDTM TU dataset simulated by Gopi Vegesna",
+      "source": "Generated dataset.",
+      "author": "Gopi Vegesna"
+    },
+    {
+      "name": "tr_onco",
+      "label": "Tumor Results for Oncology",
+      "description": "A SDTM TR dataset simulated by Gopi Vegesna",
+      "source": "Generated dataset.",
+      "author": "Gopi Vegesna"
+    },
+    {
+      "name": "rs_onco",
+      "label": "Disease Response for Oncology",
+      "description": "A SDTM RS dataset simulated by Gopi Vegesna",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda",
+      "author": "Gopi Vegesna"
+    },
+    {
+      "name": "tr_onco_recist",
+      "label": "Tumor Results (RECIST 1.1) for Oncology",
+      "description": "A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation",
+      "source": "Generated dataset.",
+      "author": "Stefan Bundfuss"
+    },
+    {
+      "name": "tu_onco_recist",
+      "label": "Tumor Identification (RECIST 1.1) for Oncology",
+      "description": "A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation",
+      "source": "Generated dataset.",
+      "author": "Stefan Bundfuss"
+    },
+    {
+      "name": "rs_onco_recist",
+      "label": "Disease Response (RECIST 1.1) for Oncology",
+      "description": "A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation",
+      "source": "Generated dataset.",
+      "author": "Stefan Bundfuss"
+    },
+    {
+      "name": "rs_onco_irecist",
+      "label": "Disease Response (iRECIST) for Oncology",
+      "description": "A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation",
+      "source": "Generated dataset.",
+      "author": "Rohan Thampi"
+    },
+    {
+      "name": "rs_onco_imwg",
+      "label": "Disease Response (IMWG)",
+      "description": "A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation",
+      "source": "Derived from tr_onco_recist",
+      "author": "Vinh Nguyen"
+    },
+    {
+      "name": "supprs_onco_imwg",
+      "label": "Supplemental Qualifiers for RS_ONCO_IMWG",
+      "description": "A SDTM supplemental RS dataset using IMWG criteria intended to be used with `rs_onco_imwg`",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true",
+      "author": "Vinh Nguyen"
+    },
+    {
+      "name": "rs_onco_ca125",
+      "label": "Disease Response (GCIG)",
+      "description": "A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.",
+      "source": "Generated dataset ([rs_supprs_onco_ca125.R](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R))",
+      "author": "Vinh Nguyen"
+    },
+    {
+      "name": "supprs_onco_ca125",
+      "label": "Supplemental Qualifiers for RS_ONCO_CA125",
+      "description": "A SDTM supplemental RS dataset using GCIG criteria. It is intended to be used together with `rs_onco_ca125`.",
+      "source": "Generated dataset ([rs_supprs_onco_ca125.R](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R))",
+      "author": "Vinh Nguyen"
+    },
+    {
+      "name": "suppae",
+      "label": "Supplemental Adverse Events",
+      "description": "A SDTM SUPPAE dataset from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppds.xpt?raw=true"
+    },
+    {
+      "name": "suppds",
+      "label": "Supplemental Disposition",
+      "description": "A SDTM SUPPDS dataset from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppdm.xpt?raw=true"
+    },
+    {
+      "name": "suppdm",
+      "label": "Supplemental Demography",
+      "description": "A SDTM SUPPDM dataset from the CDISC pilot project",
+      "source": "Generated dataset."
+    },
+    {
+      "name": "supptr_onco",
+      "label": "Supplemental Tumor Results for Oncology",
+      "description": "A SDTM SUPPTR dataset simulated by Gopi Vegesna",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/ts.xpt?raw=true",
+      "author": "Gopi Vegesna"
+    },
+    {
+      "name": "ts",
+      "label": "Trial Design",
+      "description": "A SDTM TS dataset from the CDISC pilot project",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/vs.xpt?raw=true"
+    },
+    {
+      "name": "vs",
+      "label": "Vital Signs",
+      "description": "A SDTM VS dataset from the CDISC pilot project",
+      "source": "Generated dataset."
+    },
+    {
+      "name": "smq_db",
+      "label": "Standardized MedDRA Queries",
+      "description": "An example SMQ dataset",
+      "source": "Generated dataset."
+    },
+    {
+      "name": "sdg_db",
+      "label": "SDG",
+      "description": "An example SDG dataset",
+      "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true"
+    },
+    {
+      "name": "sv",
+      "label": "Subject Visits",
+      "description": "A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "dm_vaccine",
+      "label": "Demographics for Vaccine",
+      "description": "An example SDTM DM dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "vs_vaccine",
+      "label": "Vital Signs for Vaccine",
+      "description": "An example SDTM VS dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "ce_vaccine",
+      "label": "Clinical Events for Vaccine",
+      "description": "An example SDTM CE dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "ex_vaccine",
+      "label": "Exposures for Vaccine",
+      "description": "An example SDTM EX dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "is_vaccine",
+      "label": "Immunogenicity Specimen Assessments for Vaccine",
+      "description": "An example SDTM IS for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "face_vaccine",
+      "label": "Findings About Clinical Events for Vaccine",
+      "description": "An example SDTM FACE for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "suppce_vaccine",
+      "label": "Supplemental Qualifiers for Clinical Events for Vaccine",
+      "description": "An example SDTM SUPPCE for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "suppdm_vaccine",
+      "label": "Supplemental Qualifiers for Demographics for Vaccine",
+      "description": "An example SDTM SUPPDM dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "suppex_vaccine",
+      "label": "Supplemental Qualifiers for Exposures for Vaccine",
+      "description": "An example SDTM SUPPEX dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "suppface_vaccine",
+      "label": "Supplemental Qualifiers for Findings About for Clinical Events for Vaccine",
+      "description": "An example SDTM SUPPFACE dataset for vaccine studies",
+      "source": "Constructed by {admiralvaccine} developers"
+    },
+    {
+      "name": "suppis_vaccine",
+      "label": "Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine",
+      "description": "An example SDTM SUPPIS dataset for vaccine studies",
+      "source": "Constructed by {admiralpeds} developers"
+    },
+    {
+      "name": "dm_peds",
+      "label": "Demographic Dataset-pediatrics",
+      "description": "An updated SDTM DM dataset with pediatric patients",
+      "source": "Constructed by {admiralpeds} developers"
+    },
+    {
+      "name": "vs_peds",
+      "label": "Vital signs Dataset-pediatrics",
+      "description": "An updated SDTM VS dataset with anthropometric measurements for pediatric patients",
+      "source": "Constructed by {admiralpeds} developers"
+    }
+  ]
+}
