@@ -45,7 +45,7 @@ A data frame with 35 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda" target="_blank">}}Access the source of the Adverse Events dataset.\if{html}{\out{</a>}}
+\href{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda}{Access the source of the Adverse Events dataset.}
 }
 \usage{
 ae

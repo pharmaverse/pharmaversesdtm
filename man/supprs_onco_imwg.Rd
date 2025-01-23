@@ -19,7 +19,7 @@ A data frame with 9 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true" target="_blank">}}Access the source of the Supplemental Qualifiers for RS_ONCO_IMWG dataset.\if{html}{\out{</a>}}
+\href{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppae.xpt?raw=true}{Access the source of the Supplemental Qualifiers for RS_ONCO_IMWG dataset.}
 }
 \usage{
 supprs_onco_imwg

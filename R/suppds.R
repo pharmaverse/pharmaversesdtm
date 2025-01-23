@@ -23,5 +23,5 @@
 #'     \item{QORIG}{Origin}
 #'   }
 #'
-#' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppdm.xpt?raw=true" target="_blank">Access the source of the Supplemental Disposition dataset.</a>
+#' @source [Access the source of the Supplemental Disposition dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppdm.xpt?raw=true)
 "suppds"

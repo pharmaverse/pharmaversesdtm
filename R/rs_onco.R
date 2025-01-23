@@ -33,6 +33,6 @@
 #'     \item{RSDY}{Study Day of Response Assessment}
 #'   }
 #'
-#' @source <a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda" target="_blank">Access the source of the Disease Response for Oncology dataset.</a>
+#' @source [Access the source of the Disease Response for Oncology dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda)
 #' @author Gopi Vegesna
 "rs_onco"

@@ -37,6 +37,6 @@
 #'     \item{LBDY}{Study Day of Specimen Collection}
 #'   }
 #'
-#' @source <a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda" target="_blank">Access the source of the Laboratory Measurements dataset.</a>
+#' @source [Access the source of the Laboratory Measurements dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda)
 #' @author Annie Yang
 "lb"

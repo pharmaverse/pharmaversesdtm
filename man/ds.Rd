@@ -23,7 +23,7 @@ A data frame with 13 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda" target="_blank">}}Access the source of the Disposition dataset.\if{html}{\out{</a>}}
+\href{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ds.rda}{Access the source of the Disposition dataset.}
 }
 \usage{
 ds

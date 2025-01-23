@@ -36,5 +36,5 @@
 #'     \item{CMENRTPT}{undocumented field}
 #'   }
 #'
-#' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true" target="_blank">Access the source of the Concomitant Medication dataset.</a>
+#' @source [Access the source of the Concomitant Medication dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true)
 "cm"

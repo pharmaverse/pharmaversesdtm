@@ -30,7 +30,7 @@ A data frame with 20 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda" target="_blank">}}Access the source of the Pharmacokinetic Concentrations dataset.\if{html}{\out{</a>}}
+\href{https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda}{Access the source of the Pharmacokinetic Concentrations dataset.}
 }
 \usage{
 pc
