@@ -49,6 +49,6 @@
 #'     \item{AEENDY}{Study Day of End of Adverse Event}
 #'   }
 #'
-#' @source <a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda" target="_blank">Access the source of the Adverse Events dataset.</a>
+#' @source [Access the source of the Adverse Events dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda)
 #' @author Gopi Vegesna
 "ae"

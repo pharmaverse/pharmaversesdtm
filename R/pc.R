@@ -34,6 +34,6 @@
 #'     \item{PCTPTNUM}{Planned Time Point Number}
 #'   }
 #'
-#' @source <a href="https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda" target="_blank">Access the source of the Pharmacokinetic Concentrations dataset.</a>
+#' @source [Access the source of the Pharmacokinetic Concentrations dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda)
 #' @author Antonio Rodriguez Contesti
 "pc"

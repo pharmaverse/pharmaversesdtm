@@ -55,7 +55,7 @@ generate_hyperlink <- function(url, link_text = "") {
   }
 
   # Generate and return the hyperlink if the URL is valid
-  paste0('<a href="', url, '" target="_blank">', "Access the source of the ", link_text, " dataset.</a>")
+  paste0("[Access the source of the ", link_text, " dataset.](", url, ")")
 }
 
 

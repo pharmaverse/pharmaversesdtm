@@ -1,9 +1,22 @@
-# pharmaversesdtm 1.1.0
+# pharmaversesdtm 1.2.0
 
 ## New Features
 
 - Oncology response data for GCIG criteria (`rs_onco_ca125` and
 `supprs_onco_ca125`) was added. (#124)
+
+- Added variable-by-variable breakdown of dataset within reference pages. (#111)
+
+<details>
+<summary>Developer Notes</summary>
+
+- Internally re-worked the way reference pages are constructed to automate the process. (#111)
+
+</details>
+
+# pharmaversesdtm 1.1.0
+
+## New Features
 
 - Pediatrics data for anthropometric measures (`dm_peds` and `vs_peds`) was added. (#88)
 

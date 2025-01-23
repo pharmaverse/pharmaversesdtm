@@ -39,5 +39,5 @@
 #'     \item{DMDY}{Study Day of Collection}
 #'   }
 #'
-#' @source <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true" target="_blank">Access the source of the Demography dataset.</a>
+#' @source [Access the source of the Demography dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true)
 "dm"

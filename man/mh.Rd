@@ -38,7 +38,7 @@ A data frame with 28 columns:
 }
 }
 \source{
-\if{html}{\out{<a href="https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/mh.xpt?raw=true" target="_blank">}}Access the source of the Medical History dataset.\if{html}{\out{</a>}}
+\href{https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/mh.xpt?raw=true}{Access the source of the Medical History dataset.}
 }
 \usage{
 mh
