@@ -1,3 +1,12 @@
+# pharmaversesdtm development version
+
+<details>
+<summary>Developer Notes</summary>
+
+- Units for EG data were updated to be consistent with SDTM guidelines. (#129)
+
+</details>
+
 # pharmaversesdtm 1.2.0
 
 ## New Features
