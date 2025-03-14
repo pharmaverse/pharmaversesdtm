@@ -1,3 +1,13 @@
+# pharmaversesdtm (development version)
+
+## New Features
+
+- Removed outdated references to `{renv}` in the package README. (#113)
+
+<details>
+<summary>Developer Notes</summary>
+</details>
+
 # pharmaversesdtm 1.2.0
 
 ## New Features
