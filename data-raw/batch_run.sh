@@ -36,3 +36,9 @@ Rscript data-raw/rs_onco.R
 # admiralpeds build from program
 Rscript data-raw/dm_peds.R
 Rscript data-raw/vs_peds.R
+
+# admiralmetabolic build from program
+Rscript data-raw/dm_metabolic.R
+Rscript data-raw/vs_metabolic.R
+Rscript data-raw/qs_metabolic.R
+

@@ -307,6 +307,24 @@
       "label": "Vital signs Dataset-pediatrics",
       "description": "An updated SDTM VS dataset with anthropometric measurements for pediatric patients",
       "source": "Constructed by {admiralpeds} developers"
+    },
+    {
+      "name": "dm_metabolic",
+      "label": "Demographic Dataset-metabolic",
+      "description": "A SDTM DM dataset for metabolic studies",
+      "source": "Constructed by {admiralmetabolic} developers"
+    },
+    {
+      "name": "vs_metabolic",
+      "label": "Vital signs Dataset-metabolic",
+      "description": "A SDTM VS dataset for metabolic studies",
+      "source": "Constructed by {admiralmetabolic} developers"
+    },
+    {
+      "name": "qs_metabolic",
+      "label": "Questionnaire Dataset-metabolic",
+      "description": "A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for metabolic studies",
+      "source": "Constructed by {admiralmetabolic} developers"
     }
   ]
 }
