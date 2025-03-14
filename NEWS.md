@@ -1,10 +1,13 @@
-# pharmaversesdtm development version
+# pharmaversesdtm (development version)
+
+## New Features
+
+- Units for EG data were updated to be consistent with SDTM guidelines. (#129)  
+  
+- Removed outdated references to `{renv}` in the package README. (#113)
 
 <details>
 <summary>Developer Notes</summary>
-
-- Units for EG data were updated to be consistent with SDTM guidelines. (#129)
-
 </details>
 
 # pharmaversesdtm 1.2.0
