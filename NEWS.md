@@ -2,6 +2,8 @@
 
 ## New Features
 
+- Units for EG data were updated to be consistent with SDTM guidelines. (#129)  
+  
 - Removed outdated references to `{renv}` in the package README. (#113)
 
 <details>
