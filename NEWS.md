@@ -1,3 +1,21 @@
+# pharmaversesdtm (development version)
+
+## New Features
+
+- Units for EG data were updated to be consistent with SDTM guidelines. (#129)  
+  
+- Removed outdated references to `{renv}` in the package README. (#113)
+
+- Added following Metabolic specific SDTM datasets. (#136)
+
+    - `dm_metabolic`
+    - `qs_metabolic`
+    - `vs_metabolic`
+
+<details>
+<summary>Developer Notes</summary>
+</details>
+
 # pharmaversesdtm 1.2.0
 
 ## New Features

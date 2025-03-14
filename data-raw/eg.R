@@ -71,7 +71,7 @@ eg <- expand.grid(
     ),
     EGSTRESC = ifelse(EGTESTCD == "ECGINT", sample(c("NORMAL", "ABNORMAL"), 1), as.character(EGSTRESN)),
     EGORRES = EGSTRESC,
-    EGSTRESU = c("QT" = "msec", "HR" = "BEATS/MIN", "RR" = "msec", "ECGINT" = NA)[EGTESTCD],
+    EGSTRESU = c("QT" = "ms", "HR" = "beats/min", "RR" = "ms", "ECGINT" = NA)[EGTESTCD],
     EGSTAT = "",
     EGLOC = "",
     EGBLFL = ifelse(VISIT == "BASELINE", "Y", ""),
