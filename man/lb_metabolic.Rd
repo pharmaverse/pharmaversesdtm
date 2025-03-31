@@ -10,7 +10,7 @@ A data frame with 23 columns:
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
 \item{USUBJID}{Unique Subject Identifier}
-\item{LBSEQ}{undocumented field}
+\item{LBSEQ}{Sequence Number}
 \item{LBTESTCD}{Lab Test or Examination Short Name}
 \item{LBTEST}{Lab Test or Examination Name}
 \item{LBCAT}{Category for Lab Test}
