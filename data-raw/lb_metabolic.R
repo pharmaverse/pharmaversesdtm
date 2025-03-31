@@ -86,6 +86,12 @@ metabolic_data_3 <- metabolic_data_2 %>%
 lb_metabolic_3 <- lb_metabolic_2 %>%
   bind_rows(metabolic_data_3)
 
+# Re-assign labels
+walk(
+  .x = colnames(lb_metabolic_3),
+  .f = \(x) attr(lb_metabolic_3[[x]], "label") <<- attr(lb_metabolic_2[[x]], "label")
+)
+
 # Define analysis sequence number ----
 lb_metabolic_4 <- lb_metabolic_3 %>%
   dplyr::group_by(USUBJID) %>%
@@ -94,4 +100,5 @@ lb_metabolic_4 <- lb_metabolic_3 %>%
 
 # Save dataset ----
 lb_metabolic <- lb_metabolic_4
+attr(lb_metabolic, "label") <- "Laboratory Test Results"
 usethis::use_data(lb_metabolic, overwrite = TRUE)

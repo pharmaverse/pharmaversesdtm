@@ -7,29 +7,29 @@
 \format{
 A data frame with 23 columns:
 \describe{
-\item{STUDYID}{undocumented field}
-\item{DOMAIN}{undocumented field}
-\item{USUBJID}{undocumented field}
+\item{STUDYID}{Study Identifier}
+\item{DOMAIN}{Domain Abbreviation}
+\item{USUBJID}{Unique Subject Identifier}
 \item{LBSEQ}{undocumented field}
-\item{LBTESTCD}{undocumented field}
-\item{LBTEST}{undocumented field}
-\item{LBCAT}{undocumented field}
-\item{LBORRES}{undocumented field}
-\item{LBORRESU}{undocumented field}
-\item{LBORNRLO}{undocumented field}
-\item{LBORNRHI}{undocumented field}
-\item{LBSTRESC}{undocumented field}
-\item{LBSTRESN}{undocumented field}
-\item{LBSTRESU}{undocumented field}
-\item{LBSTNRLO}{undocumented field}
-\item{LBSTNRHI}{undocumented field}
-\item{LBNRIND}{undocumented field}
-\item{LBBLFL}{undocumented field}
-\item{VISITNUM}{undocumented field}
-\item{VISIT}{undocumented field}
-\item{VISITDY}{undocumented field}
-\item{LBDTC}{undocumented field}
-\item{LBDY}{undocumented field}
+\item{LBTESTCD}{Lab Test or Examination Short Name}
+\item{LBTEST}{Lab Test or Examination Name}
+\item{LBCAT}{Category for Lab Test}
+\item{LBORRES}{Result or Finding in Original Units}
+\item{LBORRESU}{Original Units}
+\item{LBORNRLO}{Reference Range Lower Limit in Orig Unit}
+\item{LBORNRHI}{Reference Range Upper Limit in Orig Unit}
+\item{LBSTRESC}{Character Result/Finding in Std Format}
+\item{LBSTRESN}{Numeric Result/Finding in Standard Units}
+\item{LBSTRESU}{Standard Units}
+\item{LBSTNRLO}{Reference Range Lower Limit-Std Units}
+\item{LBSTNRHI}{Reference Range Upper Limit-Std Units}
+\item{LBNRIND}{Reference Range Indicator}
+\item{LBBLFL}{Baseline Flag}
+\item{VISITNUM}{Visit Number}
+\item{VISIT}{Visit Name}
+\item{VISITDY}{Planned Study Day of Visit}
+\item{LBDTC}{Date/Time of Specimen Collection}
+\item{LBDY}{Study Day of Specimen Collection}
 }
 }
 \source{
