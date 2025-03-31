@@ -325,6 +325,12 @@
       "label": "Questionnaire Dataset-metabolic",
       "description": "A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for metabolic studies",
       "source": "Constructed by {admiralmetabolic} developers"
+    },
+    {
+     "name": "lb_metabolic",
+     "label": "Laboratory Measurements Dataset-metabolic",
+     "description": "A SDTM LB dataset containing relevant laboratory measurements for metabolic studies",
+     "source": "Constructed by {admiralmetabolic} developers"
     }
   ]
 }

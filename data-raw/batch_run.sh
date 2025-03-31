@@ -41,4 +41,5 @@ Rscript data-raw/vs_peds.R
 Rscript data-raw/dm_metabolic.R
 Rscript data-raw/vs_metabolic.R
 Rscript data-raw/qs_metabolic.R
+Rscript data-raw/lb_metabolic.R
 
