@@ -22,3 +22,9 @@ data-raw/sc_ophtha.R @manciniedoardo
 # admiralpeds
 data-raw/dm_peds.R @fanny-gautier
 data-raw/vs_peds.R @fanny-gautier
+
+# admiralmetabolic
+data-raw/dm_metabolic.R @andersaskeland
+data-raw/lb_metabolic.R @andersaskeland
+data-raw/qs_metabolic.R @andersaskeland
+data-raw/vs_metabolic.R @andersaskeland
