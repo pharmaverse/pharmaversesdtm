@@ -106,7 +106,9 @@ labels <- list(
   QSSTRESC = "Character Result/Finding in Std Format",
   QSSTRESN = "Numeric Result/Finding in Standard Units",
   QSSTRESU = "Standard Units",
-  QSSEQ = "Sequence Number"
+  QSSEQ = "Sequence Number",
+  QSDTC = "Date/Time of Finding",
+  QSDY = "Study Day of Finding"
 )
 
 for (var in names(labels)) {
