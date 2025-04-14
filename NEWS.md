@@ -12,7 +12,8 @@
     - `qs_metabolic`
     - `vs_metabolic`
     - `lb_metabolic`
-    
+
+- OE data was Updated to include pre and post-dose IOP: (#134)   
 
 <details>
 <summary>Developer Notes</summary>

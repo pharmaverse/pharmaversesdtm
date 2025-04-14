@@ -109,7 +109,7 @@ oe41 <- bind_rows(oe31, oe32, oe33, oe34) %>%
     "OESEQ" = row_number(),
     "DOMAIN" = "OE",
     "OEDY" = as.numeric(as.Date(OEDTC) - as.Date(RFSTDTC)) + (as.Date(OEDTC) >= as.Date(RFSTDTC)),
-    "OETPT" = PRE-DOSE,
+    "OETPT" = "PRE-DOSE",
     "OETPTNUM" = NA
   )
 
@@ -117,10 +117,13 @@ oe42 <- bind_rows(oe31, oe32, oe33, oe34) %>%
   arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(
+    "OESTRESN" = ifelse(oestat > 99, NA, round(runif(n(), min = 5, max = 30))),
+    "OESTRESC" = ifelse(is.na(OESTRESN), NA_character_, as.character(OESTRESN)),
+    "OEORRES" = OESTRESC,
     "OESEQ" = row_number(),
     "DOMAIN" = "OE",
     "OEDY" = as.numeric(as.Date(OEDTC) - as.Date(RFSTDTC)) + (as.Date(OEDTC) >= as.Date(RFSTDTC)),
-    "OETPT" = POST-DOSE,
+    "OETPT" = "POST-DOSE",
     "OETPTNUM" = NA
   )
 
