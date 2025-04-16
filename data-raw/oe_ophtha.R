@@ -102,19 +102,35 @@ oe34 <- bind_rows(
 )
 
 ## Bind all tests ----
-oe4 <- bind_rows(oe31, oe32, oe33, oe34) %>%
+oe41 <- bind_rows(oe31, oe32, oe33, oe34) %>%
   arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(
     "OESEQ" = row_number(),
     "DOMAIN" = "OE",
     "OEDY" = as.numeric(as.Date(OEDTC) - as.Date(RFSTDTC)) + (as.Date(OEDTC) >= as.Date(RFSTDTC)),
-    "OETPT" = NA_character_,
+    "OETPT" = "PRE-DOSE",
     "OETPTNUM" = NA
   )
 
+oe42 <- bind_rows(oe31, oe32, oe33, oe34) %>%
+  arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
+  group_by(STUDYID, USUBJID) %>%
+  mutate(
+    "OESTRESN" = ifelse(oestat > 99, NA, round(runif(n(), min = 5, max = 30))),
+    "OESTRESC" = ifelse(is.na(OESTRESN), NA_character_, as.character(OESTRESN)),
+    "OEORRES" = OESTRESC,
+    "OESEQ" = row_number(),
+    "DOMAIN" = "OE",
+    "OEDY" = as.numeric(as.Date(OEDTC) - as.Date(RFSTDTC)) + (as.Date(OEDTC) >= as.Date(RFSTDTC)),
+    "OETPT" = "POST-DOSE",
+    "OETPTNUM" = NA
+  )
+
+oe43 <- bind_rows(oe41, oe42)
+
 ## Select columns and add labels -----
-oe_ophtha <- oe4 %>%
+oe_ophtha <- oe43 %>%
   select(
     STUDYID, DOMAIN, USUBJID, OESEQ, OECAT, OESCAT, OEDTC, VISIT, VISITNUM, VISITDY,
     OESTRESN, OESTRESC, OEORRES, OETEST, OETESTCD, OETSTDTL, OELAT, OELOC, OEDY,

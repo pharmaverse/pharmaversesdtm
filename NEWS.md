@@ -3,8 +3,6 @@
 ## New Features
 
 - Units for EG data were updated to be consistent with SDTM guidelines. (#129)  
-  
-- Removed outdated references to `{renv}` in the package README. (#113)
 
 - Added following Metabolic specific SDTM datasets: (#136, #139)
 
@@ -12,7 +10,12 @@
     - `qs_metabolic`
     - `vs_metabolic`
     - `lb_metabolic`
-    
+
+- Updated OE dataset to include both pre and post-dose IOP. (#134)   
+
+## Documentation
+
+- Removed outdated references to `{renv}` in the package README. (#113)
 
 <details>
 <summary>Developer Notes</summary>
