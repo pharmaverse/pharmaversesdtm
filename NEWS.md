@@ -13,6 +13,8 @@
 
 - Updated OE dataset to include both pre and post-dose IOP. (#134)   
 
+- Oncology response data for PCWG3 criteria (`rs_onco_pcwg3`) was added. (#143)
+
 ## Documentation
 
 - Removed outdated references to `{renv}` in the package README. (#113)
