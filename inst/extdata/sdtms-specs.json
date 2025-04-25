@@ -176,6 +176,13 @@
       "author": "Vinh Nguyen"
     },
     {
+      "name": "rs_onco_pcwg3",
+      "label": "Disease Response (PCWG3)",
+      "description": "A SDTM RS dataset using PCWG3 criteria intended for examples of ADaM dataset creation",
+      "source": "Generated dataset",
+      "author": "Tomoyuki Namai"
+    },
+    {
       "name": "suppae",
       "label": "Supplemental Adverse Events",
       "description": "A SDTM SUPPAE dataset from the CDISC pilot project",
