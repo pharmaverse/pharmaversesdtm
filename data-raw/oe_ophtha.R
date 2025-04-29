@@ -133,6 +133,7 @@ oe43 <- bind_rows(oe41, oe42)
 
 ## Select columns and add labels -----
 oe_ophtha <- oe43 %>%
+  ungroup() %>%
   select(
     STUDYID, DOMAIN, USUBJID, OESEQ, OECAT, OESCAT, OEDTC, VISIT, VISITNUM, VISITDY,
     OESTRESN, OESTRESC, OEORRES, OETEST, OETESTCD, OETSTDTL, OELAT, OELOC, OEDY,
