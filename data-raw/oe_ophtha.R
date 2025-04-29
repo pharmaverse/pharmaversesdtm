@@ -110,7 +110,7 @@ oe41 <- bind_rows(oe31, oe32, oe33, oe34) %>%
     "DOMAIN" = "OE",
     "OEDY" = as.numeric(as.Date(OEDTC) - as.Date(RFSTDTC)) + (as.Date(OEDTC) >= as.Date(RFSTDTC)),
     "OETPT" = "PRE-DOSE",
-    "OETPTNUM" = NA
+    "OETPTNUM" = -0.5
   )
 
 ## Add post-dose records for IOP test ----
@@ -126,13 +126,14 @@ oe42 <- bind_rows(oe31, oe32, oe33, oe34) %>%
     "DOMAIN" = "OE",
     "OEDY" = as.numeric(as.Date(OEDTC) - as.Date(RFSTDTC)) + (as.Date(OEDTC) >= as.Date(RFSTDTC)),
     "OETPT" = "POST-DOSE",
-    "OETPTNUM" = NA
+    "OETPTNUM" = 1
   )
 
 oe43 <- bind_rows(oe41, oe42)
 
 ## Select columns and add labels -----
 oe_ophtha <- oe43 %>%
+  ungroup() %>%
   select(
     STUDYID, DOMAIN, USUBJID, OESEQ, OECAT, OESCAT, OEDTC, VISIT, VISITNUM, VISITDY,
     OESTRESN, OESTRESC, OEORRES, OETEST, OETESTCD, OETSTDTL, OELAT, OELOC, OEDY,
