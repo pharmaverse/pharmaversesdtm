@@ -57,7 +57,7 @@ testnames <- tibble::tribble(
 )
 
 # date of the corresponding visit from LB
-data("lb")
+lb <- pharmaversesdtm::lb
 timingvars <- rs_onco_pcwg3_pre %>%
   distinct(USUBJID) %>%
   left_join(lb, by = "USUBJID") %>%
