@@ -20,7 +20,7 @@
 <details>
 <summary>Developer Notes</summary>
 
--  Ungrouped `lb_metabolic` and `lb` prior to export
+-  Ungrouped `lb_metabolic` and `lb` prior to export (#152)
 -  Removed namespaces from function calls in `lb_metabolic.R`
 
 </details>
