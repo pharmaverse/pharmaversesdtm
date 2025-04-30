@@ -19,6 +19,10 @@
 
 <details>
 <summary>Developer Notes</summary>
+
+-  Un-grouped `lb_metabolic` and `lb` prior to export
+-  Removed namespaced function calls in `lb_metabolic.R`
+
 </details>
 
 # pharmaversesdtm 1.2.0

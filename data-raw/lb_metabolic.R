@@ -55,14 +55,14 @@ metabolic_data_1 <- map2(
 
 # Join and filter based on variables from lb
 lb_metabolic_2_subset <- lb_metabolic_2 %>%
-  dplyr::select(
+  select(
     USUBJID, VISIT, STUDYID, VISITDY, LBDTC,
     LBDY, LBBLFL, DOMAIN, VISITNUM
   ) %>%
-  dplyr::distinct()
+  distinct()
 
 metabolic_data_2 <- metabolic_data_1 %>%
-  dplyr::inner_join(lb_metabolic_2_subset,
+  inner_join(lb_metabolic_2_subset,
     by = c("USUBJID", "VISIT")
   )
 
@@ -75,7 +75,7 @@ metabolic_data_3 <- metabolic_data_2 %>%
     LBSTRESU = LBORRESU,
     LBSTNRLO = as.numeric(LBORNRLO),
     LBSTNRHI = as.numeric(LBORNRHI),
-    LBNRIND = dplyr::case_when(
+    LBNRIND = case_when(
       LBSTRESN < LBORNRLO ~ "LOW",
       LBSTRESN > LBORNRHI ~ "HIGH",
       TRUE ~ "NORMAL"
@@ -88,9 +88,10 @@ lb_metabolic_3 <- lb_metabolic_2 %>%
 
 # Define analysis sequence number ----
 lb_metabolic_4 <- lb_metabolic_3 %>%
-  dplyr::group_by(USUBJID) %>%
-  dplyr::arrange(VISIT, LBTESTCD) %>%
-  dplyr::mutate(LBSEQ = row_number())
+  group_by(USUBJID) %>%
+  arrange(VISIT, LBTESTCD) %>%
+  mutate(LBSEQ = row_number()) %>%
+  ungroup()
 
 # Assign labels ----
 walk(
