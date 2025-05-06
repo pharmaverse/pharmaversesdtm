@@ -22,7 +22,7 @@
 
 -  Ungrouped `lb_metabolic` prior to export (#152)
 -  Removed namespaces from function calls in `lb_metabolic.R`
-- Harmonize codes using `magrittr` pipe. (#158)
+-  Harmonize code using `magrittr` pipe. (#158)
 
 </details>
 
