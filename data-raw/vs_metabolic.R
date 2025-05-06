@@ -219,33 +219,33 @@ vs_mb <- vs_full %>%
   )
 
 # Derive BMI values ----
-vs_mb_bmi <- vs_mb |>
+vs_mb_bmi <- vs_mb %>%
   # use body weight as a base for the table
-  filter(VSTESTCD == "WEIGHT") |>
-  mutate(VSSTRESN = as.numeric(VSSTRESN)) |>
+  filter(VSTESTCD == "WEIGHT") %>%
+  mutate(VSSTRESN = as.numeric(VSSTRESN)) %>%
   # rename value to body weight
-  rename(BODYWEIGHT = VSSTRESN) |>
+  rename(BODYWEIGHT = VSSTRESN) %>%
   # drop irrelevant columns
-  select(-VSORRES, -VSORRESU) |>
+  select(-VSORRES, -VSORRESU) %>%
   # add height
   left_join(
-    vs_mb |>
+    vs_mb %>%
       # pick height
-      filter(VSTESTCD == "HEIGHT") |>
+      filter(VSTESTCD == "HEIGHT") %>%
       # Convert height from cm to m
-      mutate(VSSTRESN = as.numeric(VSSTRESN / 100)) |>
+      mutate(VSSTRESN = as.numeric(VSSTRESN / 100)) %>%
       # rename
-      rename(HEIGHT = VSSTRESN) |>
+      rename(HEIGHT = VSSTRESN) %>%
       # drop irrelevant
       select(USUBJID, HEIGHT),
     by = "USUBJID"
-  ) |>
+  ) %>%
   # calculate bmi
   mutate(
     VSSTRESN = as.numeric(BODYWEIGHT / (HEIGHT^2)),
     VSTESTCD = "BMI",
     VSTEST = "Body Mass Index",
-  ) |>
+  ) %>%
   # drop irrelevant
   select(-BODYWEIGHT, -HEIGHT)
 
