@@ -1,8 +1,8 @@
 # ATTENTION: tr_onco_recist.R and tu_onco_recist.R must be run before this script
 library(admiral)
 
-data("tu_onco_recist")
-data("tr_onco_recist")
+tu_onco_recist <- pharmaversesdtm::tu_onco_recist
+tr_onco_recist <- pharmaversesdtm::tr_onco_recist
 
 tu <- tu_onco_recist
 

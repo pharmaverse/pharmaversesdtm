@@ -12,7 +12,7 @@ library(metatools)
 # Create rs ----
 
 ## Read input data ----
-data("tr_onco")
+tr_onco <- pharmaversesdtm::tr_onco
 
 ## Convert blank to NA ----
 tr <- convert_blanks_to_na(tr_onco)

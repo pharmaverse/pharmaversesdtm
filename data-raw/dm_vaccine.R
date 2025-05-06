@@ -10,7 +10,7 @@ library(metatools)
 
 # create dm ----
 ## Read input data ----
-data("dm")
+dm <- pharmaversesdtm::dm
 
 vx_dm <- tribble(
   ~USUBJID, ~SUBJID, ~RFSTDTC, ~RFENDTC, ~RFXSTDTC, ~RFXENDTC, ~RFICDTC, ~RFPENDTC, ~SITEID, ~INVID,

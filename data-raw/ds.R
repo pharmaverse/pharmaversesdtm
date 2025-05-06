@@ -10,7 +10,7 @@ library(metatools)
 library(haven)
 
 # Create ds ----
-data("dm")
+dm <- pharmaversesdtm::dm
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
 raw_ds <- read_xpt(paste0(sdtm_path, "ds", ".xpt?raw=true"))
 raw_suppds <- read_xpt(paste0(sdtm_path, "suppds", ".xpt?raw=true"))

@@ -218,7 +218,7 @@ tr <- bind_rows(tr, tr_radio1, tr_radio2) %>%
   select(-best_assessor)
 
 # add date (TRDTC)
-data("dm")
+dm <- pharmaversesdtm::dm
 tr <- tr %>%
   mutate(
     USUBJID = case_match(
