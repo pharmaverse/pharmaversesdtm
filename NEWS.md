@@ -22,6 +22,7 @@
 
 -  Ungrouped `lb_metabolic` prior to export (#152)
 -  Removed namespaces from function calls in `lb_metabolic.R`
+-  Harmonize code to load the SDTMs using `pharmaversesdtm::xx` (#157)
 
 </details>
 
