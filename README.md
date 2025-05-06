@@ -1,8 +1,9 @@
-# pharmaversesdtm <img src="man/figures/logo.png" align="right" width="200" style="margin-left:50px;"/>
+# pharmaversesdtm <img src="man/figures/logo.png" align="right" width="200" style="margin-left:50px;" alt="pharmaverse sdtm hex"/>
 
 <!-- badges: start -->
 
-[![pharmaverse admiral Badge]("http://pharmaverse.org/shields/pharmaversesdtm.svg")(https://pharmaverse.org) [![CRAN status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-project.org/package=pharmaversesdtm)
+[![pharmaverse sdtm Badge]("http://pharmaverse.org/shields/pharmaversesdtm.svg")(https://pharmaverse.org)
+[![CRAN status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-project.org/package=pharmaversesdtm)
 
 <!-- badges: end -->
 
