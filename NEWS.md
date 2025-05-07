@@ -22,7 +22,8 @@
 
 -  Ungrouped `lb_metabolic` prior to export (#152)
 -  Removed namespaces from function calls in `lb_metabolic.R`
--  Harmonize code using `magrittr` pipe. (#158)
+-  Harmonized code using `magrittr` pipe (#158)
+-  Add back pharmaversesdtm Hex and corresponding alternative text (#159)
 
 </details>
 
