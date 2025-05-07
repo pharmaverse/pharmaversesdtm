@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 
-[![pharmaverse sdtm Badge](http://pharmaverse.org/shields/pharmaversesdtm.svg)(https://pharmaverse.org)
+[![pharmaverse sdtm Badge](http://pharmaverse.org/shields/pharmaversesdtm.svg)](https://pharmaverse.org)
 [![CRAN status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-project.org/package=pharmaversesdtm)
 
 <!-- badges: end -->
