@@ -88,6 +88,12 @@ rs_onco_pcwg3 <- rs_onco_pcwg3_pre %>%
     RSEVAL, VISITNUM, VISIT, RSDTC, RSDY
   )
 
+# assign labels
+rs_onco <- pharmaversesdtm::rs_onco
+for (col in colnames(rs_onco_pcwg3)) {
+  attr(rs_onco_pcwg3[[col]], "label") <- attr(rs_onco[[col]], "label")
+}
+
 attr(rs_onco_pcwg3, "label") <- "Disease Response (PCWG3)"
 
 usethis::use_data(rs_onco_pcwg3, overwrite = TRUE)

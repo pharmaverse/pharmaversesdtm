@@ -7,20 +7,20 @@
 \format{
 A data frame with 14 columns:
 \describe{
-\item{STUDYID}{undocumented field}
-\item{DOMAIN}{undocumented field}
-\item{USUBJID}{undocumented field}
-\item{RSSEQ}{undocumented field}
-\item{RSTESTCD}{undocumented field}
-\item{RSTEST}{undocumented field}
-\item{RSCAT}{undocumented field}
-\item{RSORRES}{undocumented field}
-\item{RSSTRESC}{undocumented field}
-\item{RSEVAL}{undocumented field}
+\item{STUDYID}{Study Identifier}
+\item{DOMAIN}{Domain Abbreviation}
+\item{USUBJID}{Unique Subject Identifier}
+\item{RSSEQ}{Sequence Number}
+\item{RSTESTCD}{Response Assessment Short Name}
+\item{RSTEST}{Response Assessment Name}
+\item{RSCAT}{Category for Response Assessment}
+\item{RSORRES}{Response Assessment Original Result}
+\item{RSSTRESC}{Response Assessment Result in Std Format}
+\item{RSEVAL}{Evaluator}
 \item{VISITNUM}{Visit Number}
-\item{VISIT}{undocumented field}
-\item{RSDTC}{undocumented field}
-\item{RSDY}{Study Day of Specimen Collection}
+\item{VISIT}{Visit Name}
+\item{RSDTC}{Date/Time of Response Assessment}
+\item{RSDY}{Study Day of Response Assessment}
 }
 }
 \source{
