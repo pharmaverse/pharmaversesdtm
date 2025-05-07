@@ -3,7 +3,7 @@
 \docType{data}
 \name{rs_onco_pcwg3}
 \alias{rs_onco_pcwg3}
-\title{Disease Response (PCWG3)}
+\title{Disease Response (PCWG3) for Oncology}
 \format{
 A data frame with 14 columns:
 \describe{
@@ -30,12 +30,12 @@ Generated dataset
 rs_onco_pcwg3
 }
 \description{
-A SDTM RS dataset using PCWG3 criteria intended for examples of ADaM dataset creation
+A SDTM RS dataset for oncology studies using PCWG3 criteria intended for examples of ADaM dataset creation
 }
 \details{
-Disease Response (PCWG3)
+Disease Response (PCWG3) for Oncology
 
-A SDTM RS dataset using PCWG3 criteria intended for examples of ADaM dataset creation
+A SDTM RS dataset for oncology studies using PCWG3 criteria intended for examples of ADaM dataset creation
 }
 \author{
 Tomoyuki Namai

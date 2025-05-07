@@ -177,8 +177,8 @@
     },
     {
       "name": "rs_onco_pcwg3",
-      "label": "Disease Response (PCWG3)",
-      "description": "A SDTM RS dataset using PCWG3 criteria intended for examples of ADaM dataset creation",
+      "label": "Disease Response (PCWG3) for Oncology",
+      "description": "A SDTM RS dataset for oncology studies using PCWG3 criteria intended for examples of ADaM dataset creation",
       "source": "Generated dataset",
       "author": "Tomoyuki Namai"
     },
