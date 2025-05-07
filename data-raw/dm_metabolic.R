@@ -10,14 +10,14 @@ library(purrr)
 dm <- pharmaversesdtm::dm
 
 # Subset to first 5 subjects ----
-dm_subset <- dm |>
+dm_subset <- dm %>%
   filter(USUBJID %in% c(
     "01-701-1015", "01-701-1023", "01-701-1028",
     "01-701-1033", "01-701-1034"
   ))
 
 # Change treatment arms ----
-dm_metabolic <- dm_subset |>
+dm_metabolic <- dm_subset %>%
   mutate(
     ARMCD = case_when(
       ARMCD == "Pbo" ~ "Pbo",
