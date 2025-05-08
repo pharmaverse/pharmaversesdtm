@@ -21,9 +21,10 @@
 <summary>Developer Notes</summary>
 
 -  Ungrouped `lb_metabolic` prior to export (#152)
+-  Added `metatools` as a dependency needed for development tasks (#153)
 -  Removed namespaces from function calls in `lb_metabolic.R`
 -  Harmonized code using `magrittr` pipe (#158)
--  Add back pharmaversesdtm Hex and corresponding alternative text (#159)
+-  Added back pharmaversesdtm Hex and corresponding alternative text (#159)
 
 </details>
 
