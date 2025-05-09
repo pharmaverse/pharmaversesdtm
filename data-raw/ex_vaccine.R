@@ -9,7 +9,7 @@ library(metatools)
 
 # create ex
 ## Read input data ----
-data("ex")
+ex <- pharmaversesdtm::ex
 
 vx_ex <- tribble(
   ~USUBJID, ~EXSEQ, ~EXDTC, ~EXSTDTC, ~EXENDTC, ~EXDY, ~VISITNUM,

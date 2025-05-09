@@ -6,7 +6,7 @@ library(dplyr)
 library(metatools)
 
 # Read input data ----
-data("vs")
+vs <- pharmaversesdtm::vs
 
 # Set seed for reproducibility ----
 set.seed(123)

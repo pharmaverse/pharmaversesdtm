@@ -11,7 +11,7 @@ library(purrr)
 library(metatools)
 
 ## Read input data ----
-data("vs")
+vs <- pharmaversesdtm::vs
 
 # dummy data frame for 14 observation period for a subject.
 vs_dummy <- as_tibble(matrix(nrow = 14))

@@ -9,7 +9,7 @@ library(metatools)
 
 # create suppis_vaccine
 ## Read input data ----
-data("suppdm_vaccine")
+suppdm_vaccine <- pharmaversesdtm::suppdm_vaccine
 
 vx_suppis <- tribble(
   ~USUBJID, ~IDVAR, ~IDVARVAL, ~QNAM, ~QLABEL, ~QVAL, ~QORIG, ~QEVAL,

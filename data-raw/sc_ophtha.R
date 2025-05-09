@@ -7,8 +7,8 @@ library(metatools)
 
 # Create sc ----
 ## Load required datasets ----
-data("dm")
-data("sv")
+dm <- pharmaversesdtm::dm
+sv <- pharmaversesdtm::sv
 
 ## Remove screen failures, they will not make it to drug infusion ---
 dm1 <- dm %>%

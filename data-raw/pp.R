@@ -9,7 +9,7 @@ library(labelled)
 library(admiral)
 
 # Create pc ----
-data("pc")
+pc <- pharmaversesdtm::pc
 
 ## Calculate subjects with all missing ----
 blq_usubjid <- pc %>%
@@ -195,7 +195,7 @@ pp <- pp %>%
   mutate(PPSEQ = row_number())
 
 ## Load ex to add the reference time (EXSTDTC) ----
-data("ex")
+ex <- pharmaversesdtm::ex
 
 ## Only use baseline ----
 ex1 <- ex %>%

@@ -9,7 +9,7 @@ library(metatools)
 
 # create suppex
 ## Read input data ----
-data("suppdm_vaccine")
+suppdm_vaccine <- pharmaversesdtm::suppdm_vaccine
 
 suppex <- tribble(
   ~STUDYID,

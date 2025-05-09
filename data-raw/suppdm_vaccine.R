@@ -10,7 +10,7 @@ library(metatools)
 
 # create suppdm
 ## Read input data ----
-data("dm_vaccine")
+dm_vaccine <- pharmaversesdtm::dm_vaccine
 
 suppdm <- tribble(
   ~STUDYID,

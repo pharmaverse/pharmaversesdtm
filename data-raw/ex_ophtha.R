@@ -7,8 +7,8 @@ library(dplyr)
 library(tidyselect)
 
 # Make ex_ophtha dataset
-data("dm")
-data("ex")
+dm <- pharmaversesdtm::dm
+ex <- pharmaversesdtm::ex
 
 ex_ophtha <- dm %>%
   ## Merge on ophtha_dm to use the SUBJID variable ----

@@ -14,9 +14,9 @@ library(metatools)
 set.seed(1)
 
 ## Read input data ----
-data("dm")
-data("suppdm")
-data("sv")
+dm <- pharmaversesdtm::dm
+suppdm <- pharmaversesdtm::suppdm
+sv <- pharmaversesdtm::sv
 
 ## Converting blank to NA ----
 dm <- convert_blanks_to_na(dm)

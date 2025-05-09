@@ -11,8 +11,8 @@ library(admiral)
 library(ggplot2)
 
 # Create pc ----
-data("ex")
-data("dm")
+ex <- pharmaversesdtm::ex
+dm <- pharmaversesdtm::dm
 
 ## set seed to get same results each run ----
 set.seed(999)

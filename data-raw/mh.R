@@ -13,7 +13,7 @@ sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/u
 raw_mh <- read_xpt(paste0(sdtm_path, "mh", ".xpt?raw=true"))
 
 ## Get dm ----
-data("dm")
+dm <- pharmaversesdtm::dm
 
 ## Convert blank to NA ----
 dm <- convert_blanks_to_na(dm) %>%
