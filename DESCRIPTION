@@ -32,6 +32,7 @@ Suggests:
     devtools,
     knitr,
     lintr,
+    metatools,
     pkgdown,
     rmarkdown,
     roxygen2,
