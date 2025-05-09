@@ -14,7 +14,6 @@ Test data (SDTM) for the pharmaverse family of packages
 -   [Data Sources](#data-sources)
 -   [Naming Conventions](#naming)
 -   [How To Update](#how-to-update)
--   [Documentation Process](#documentation-process)
 
 # Purpose {#purpose}
 
@@ -55,7 +54,7 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 -   When you run a program that is in the `data-raw/` folder, you generate a dataset that is written to the `data/` folder, which will become part of the `{pharmaversesdtm}` package.
 -   The names and sources of test datasets are specified in `R/*.R`, for the purpose of generating documentation in the `man/` folder.
 
-**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (`inst/extdata/sdtms-specs.json`) and used to generate `.R` documentation files. See the [Documentation Process](#documentation-process) for details.
+**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (`inst/extdata/sdtms-specs.json`) and used to generate `.R` documentation files. This streamlined approach aligns with best practices for efficient package development.
 
 ### Adding New SDTM Datasets
 
@@ -76,9 +75,3 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
-
-# Documentation Process {#documentation-process}
-
-The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (`inst/extdata/sdtms-specs.json`) and used to generate `.R` documentation files.
-
-This streamlined approach aligns with best practices for efficient package development.
