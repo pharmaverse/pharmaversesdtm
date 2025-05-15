@@ -44,9 +44,9 @@ metabolic_data_1 <- map2(
   .f = function(x, y) {
     tibble::tribble(
       ~VISIT, ~USUBJID, ~LBTESTCD, ~LBTEST, ~LBORNRLO, ~LBORNRHI, ~LBORRES, ~LBORRESU,
-      x, y, "INSULIN", "Insulin", "18", "173", round(runif(1, min = 35, max = 350), 1), "pmol/L",
+      x, y, "INSULIN", "Insulin", "5", "40", round(runif(1, min = 3, max = 50), 1), "mIU/L",
       x, y, "HBA1CHGB", "Hemoglobin A1C/Hemoglobin", "4.0", "5.7", round(runif(1, min = 4.0, max = 9.0), 1), "%",
-      x, y, "TRIG", "Triglycerides", "0.0", "2.0", round(runif(1, min = 0.8, max = 4.0), 1), "mmol/L"
+      x, y, "TRIG", "Triglycerides", "150", "200", round(runif(1, min = 120, max = 300), 1), "mg/dL"
     )
   }
 ) %>%
@@ -70,17 +70,28 @@ metabolic_data_2 <- metabolic_data_1 %>%
 metabolic_data_3 <- metabolic_data_2 %>%
   mutate(
     LBCAT = "CHEMISTRY",
-    LBSTRESC = LBORRES,
-    LBSTRESN = as.numeric(LBORRES),
-    LBSTRESU = LBORRESU,
-    LBSTNRLO = as.numeric(LBORNRLO),
-    LBSTNRHI = as.numeric(LBORNRHI),
+    LBSTRESN = dplyr::case_when(
+      LBTESTCD == "INSULIN" ~ as.numeric(LBORRES) * 6,
+      LBTESTCD == "TRIG" ~ as.numeric(LBORRES) * 0.01129,
+      TRUE ~ as.numeric(LBORRES)),
+    LBSTRESC = as.character(LBSTRESN),
+    LBSTRESU = case_when(
+      LBTESTCD == "INSULIN" ~ "pmol/L",
+      LBTESTCD == "TRIG" ~ "mmol/L",
+      TRUE ~ LBORRESU),
+    LBSTNRLO = dplyr::case_when(
+      LBTESTCD == "INSULIN" ~ 18,
+      LBTESTCD == "TRIG" ~ 0.0,
+      TRUE ~ as.numeric(LBORNRLO)),
+    LBSTNRHI = dplyr::case_when(
+      LBTESTCD == "INSULIN" ~ 173,
+      LBTESTCD == "TRIG" ~ 2.0,
+      TRUE ~ as.numeric(LBORNRHI)),
     LBNRIND = case_when(
-      LBSTRESN < LBORNRLO ~ "LOW",
-      LBSTRESN > LBORNRHI ~ "HIGH",
+      LBSTRESN < LBSTNRLO ~ "LOW",
+      LBSTRESN > LBSTNRHI ~ "HIGH",
       TRUE ~ "NORMAL"
-    )
-  )
+    ))
 
 # Bind metabolic parameters with lb ----
 lb_metabolic_3 <- lb_metabolic_2 %>%
