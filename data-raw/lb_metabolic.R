@@ -73,25 +73,30 @@ metabolic_data_3 <- metabolic_data_2 %>%
     LBSTRESN = dplyr::case_when(
       LBTESTCD == "INSULIN" ~ as.numeric(LBORRES) * 6,
       LBTESTCD == "TRIG" ~ as.numeric(LBORRES) * 0.01129,
-      TRUE ~ as.numeric(LBORRES)),
+      TRUE ~ as.numeric(LBORRES)
+    ),
     LBSTRESC = as.character(LBSTRESN),
     LBSTRESU = case_when(
       LBTESTCD == "INSULIN" ~ "pmol/L",
       LBTESTCD == "TRIG" ~ "mmol/L",
-      TRUE ~ LBORRESU),
+      TRUE ~ LBORRESU
+    ),
     LBSTNRLO = dplyr::case_when(
       LBTESTCD == "INSULIN" ~ 18,
       LBTESTCD == "TRIG" ~ 0.0,
-      TRUE ~ as.numeric(LBORNRLO)),
+      TRUE ~ as.numeric(LBORNRLO)
+    ),
     LBSTNRHI = dplyr::case_when(
       LBTESTCD == "INSULIN" ~ 173,
       LBTESTCD == "TRIG" ~ 2.0,
-      TRUE ~ as.numeric(LBORNRHI)),
+      TRUE ~ as.numeric(LBORNRHI)
+    ),
     LBNRIND = case_when(
       LBSTRESN < LBSTNRLO ~ "LOW",
       LBSTRESN > LBSTNRHI ~ "HIGH",
       TRUE ~ "NORMAL"
-    ))
+    )
+  )
 
 # Bind metabolic parameters with lb ----
 lb_metabolic_3 <- lb_metabolic_2 %>%
