@@ -44,9 +44,9 @@ metabolic_data_1 <- map2(
   .f = function(x, y) {
     tibble::tribble(
       ~VISIT, ~USUBJID, ~LBTESTCD, ~LBTEST, ~LBORNRLO, ~LBORNRHI, ~LBORRES, ~LBORRESU,
-      x, y, "INSULIN", "Insulin", "5", "40", round(runif(1, min = 3, max = 50), 1), "mIU/L",
+      x, y, "INSULIN", "Insulin", "2", "25", round(runif(1, min = 2, max = 45), 1), "mIU/L",
       x, y, "HBA1CHGB", "Hemoglobin A1C/Hemoglobin", "4.0", "5.7", round(runif(1, min = 4.0, max = 9.0), 1), "%",
-      x, y, "TRIG", "Triglycerides", "150", "200", round(runif(1, min = 120, max = 300), 1), "mg/dL"
+      x, y, "TRIG", "Triglycerides", "0", "150", round(runif(1, min = 15, max = 250), 1), "mg/dL"
     )
   }
 ) %>%
@@ -82,13 +82,13 @@ metabolic_data_3 <- metabolic_data_2 %>%
       TRUE ~ LBORRESU
     ),
     LBSTNRLO = dplyr::case_when(
-      LBTESTCD == "INSULIN" ~ 18,
-      LBTESTCD == "TRIG" ~ 0.0,
+      LBTESTCD == "INSULIN" ~ as.numeric(LBORNRLO) * 6,
+      LBTESTCD == "TRIG" ~ as.numeric(LBORNRLO) * 0.01129,
       TRUE ~ as.numeric(LBORNRLO)
     ),
     LBSTNRHI = dplyr::case_when(
-      LBTESTCD == "INSULIN" ~ 173,
-      LBTESTCD == "TRIG" ~ 2.0,
+      LBTESTCD == "INSULIN" ~ as.numeric(LBORNRHI) * 6,
+      LBTESTCD == "TRIG" ~ as.numeric(LBORNRHI) * 0.01129,
       TRUE ~ as.numeric(LBORNRHI)
     ),
     LBNRIND = case_when(
