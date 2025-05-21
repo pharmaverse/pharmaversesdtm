@@ -21,6 +21,7 @@
 <summary>Developer Notes</summary>
 
 -  Ungrouped `lb_metabolic` prior to export (#152)
+-  Added `metatools` as a dependency needed for development tasks (#153)
 -  Removed namespaces from function calls in `lb_metabolic.R`
 -  Removed unnecessary "Documentation Process" section from `README.md` (#156)
 -  Harmonized code using `magrittr` pipe (#158)
