@@ -10,8 +10,8 @@ library(admiral)
 # Create OE ----
 
 ## Read in data ----
-data("dm")
-data("sv")
+dm <- pharmaversesdtm::dm
+sv <- pharmaversesdtm::sv
 
 ## Convert blank to NA ----
 dm <- convert_blanks_to_na(dm)

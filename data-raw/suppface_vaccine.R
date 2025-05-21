@@ -9,7 +9,7 @@ library(purrr)
 library(metatools)
 
 ## Read input data ----
-data("suppdm_vaccine")
+suppdm_vaccine <- pharmaversesdtm::suppdm_vaccine
 
 suppface <- tribble(
   ~STUDYID,

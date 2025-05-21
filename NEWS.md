@@ -24,6 +24,7 @@
 -  Added `metatools` as a dependency needed for development tasks (#153)
 -  Removed namespaces from function calls in `lb_metabolic.R`
 -  Removed unnecessary "Documentation Process" section from `README.md` (#156)
+-  Harmonized code to load the SDTMs using `pharmaversesdtm::xx` (#157)
 -  Harmonized code using `magrittr` pipe (#158)
 -  Added back pharmaversesdtm Hex and corresponding alternative text (#159)
 
