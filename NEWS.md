@@ -27,6 +27,7 @@
 -  Harmonized code to load the SDTMs using `pharmaversesdtm::xx` (#157)
 -  Harmonized code using `magrittr` pipe (#158)
 -  Added back pharmaversesdtm Hex and corresponding alternative text (#159)
+-  Changed units of insulin and triglycerides in `lb_metabolic` (#167)
 
 </details>
 
