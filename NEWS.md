@@ -16,6 +16,7 @@
 ## Documentation
 
 - Removed outdated references to `{renv}` in the package README. (#113)
+- Added test names and codes (xxTEST/xxTESTCD) description in the "Details" section, when available. (#145)
 
 <details>
 <summary>Developer Notes</summary>
