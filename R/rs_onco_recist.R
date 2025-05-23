@@ -30,4 +30,9 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{OVRLRESP}{Overall Response}
+#'   }
+#'
 "rs_onco_recist"

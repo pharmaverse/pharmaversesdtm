@@ -36,6 +36,11 @@ A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creatio
 Disease Response (RECIST 1.1) for Oncology
 
 A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+
+Contains a list of 1 unique test code and name:
+\describe{
+\item{OVRLRESP}{Overall Response}
+}
 }
 \author{
 Stefan Bundfuss

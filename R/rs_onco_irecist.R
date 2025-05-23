@@ -35,4 +35,14 @@
 #'
 #' @source Generated dataset.
 #' @author Rohan Thampi
+#' @details Contains a list of 6 unique test codes and names:
+#'   \describe{
+#'     \item{OVRLRESP}{Overall Response}
+#'     \item{NTRGRESP}{Non-target Response}
+#'     \item{TRGRESP}{Target Response}
+#'     \item{IRECLIND}{Last iRECIST Assessment Indicator}
+#'     \item{NEWLIND}{New Lesion Indicator}
+#'     \item{NEWLPROG}{New Lesion Progression}
+#'   }
+#'
 "rs_onco_irecist"

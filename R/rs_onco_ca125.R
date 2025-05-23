@@ -29,4 +29,9 @@
 #'
 #' @source Generated dataset ([rs_supprs_onco_ca125.R](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R))
 #' @author Vinh Nguyen
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{OVRLRESP}{Overall Response}
+#'   }
+#'
 "rs_onco_ca125"

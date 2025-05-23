@@ -101,7 +101,7 @@ write_doc <- function(data, dataset_name, dataset_label = "No label available",
   }
 
   if (!is.null(dataset_testnames) && dataset_testnames != "") {
-    doc_string <- paste(doc_string, sprintf("#' @testnames %s", dataset_testnames), sep = "\n")
+    doc_string <- paste(doc_string, sprintf("#' @details %s", dataset_testnames), sep = "\n")
   }
 
   doc_string <- paste(doc_string, sprintf("\"%s\"", dataset_name), sep = "\n")
@@ -127,15 +127,18 @@ for (dataset_name in datasets) {
 
     # Start building the documentation as a character vector
     # Add each testcd/test pair as an \item{}
-    testname <- paste(sprintf("A list of %s unique test codes and names:", nrow(unique_tests)),
-                               "#'   \\describe{",
-                                paste(apply(unique_tests, 1, function(row) {
-                                  paste(sprintf("#'     \\item{%s}{%s}", row[[testcd_col]], row[[test_col]]))
-                                }), collapse = "\n") ,
-                                "#'   }",
-                                "#'",
-                               sep = "\n")
-  } else {testname = NULL}
+    testnames <- paste(sprintf("Contains a list of %d unique test code%s and name%s:", nrow(unique_tests), ifelse(nrow(unique_tests)==1,"","s"), ifelse(nrow(unique_tests)==1,"","s")),
+      "#'   \\describe{",
+      paste(apply(unique_tests, 1, function(row) {
+        paste(sprintf("#'     \\item{%s}{%s}", row[[testcd_col]], row[[test_col]]))
+      }), collapse = "\n"),
+      "#'   }",
+      "#'",
+      sep = "\n"
+    )
+  } else {
+    testnames <- NULL
+  }
 
   if (nrow(metadata) == 0) {
     warning(sprintf("No metadata found for %s - using default values.", dataset_name), call. = FALSE)
@@ -143,13 +146,13 @@ for (dataset_name in datasets) {
     dataset_description <- "No description available"
     dataset_author <- NULL
     dataset_source <- "No source available"
-    dataset_testnames = NULL
+    dataset_testnames <- NULL
   } else {
     dataset_label <- ifelse(!is.na(metadata$label), metadata$label, "No label available")
     dataset_description <- ifelse(!is.na(metadata$description), metadata$description, "No description available")
     dataset_author <- if (!is.na(metadata$author) && metadata$author != "") metadata$author else NULL
     dataset_source <- ifelse(!is.na(metadata$source), metadata$source, "No source available")
-    dataset_testnames <- if (!is.na(metadata$testnames) && metadata$testnames != "") testname else NULL
+    dataset_testnames <- if (!is.null(testnames) && testnames != "") testnames else NULL
   }
 
   write_doc(dataset, dataset_name, dataset_label, dataset_description, dataset_author, dataset_source, dataset_testnames)

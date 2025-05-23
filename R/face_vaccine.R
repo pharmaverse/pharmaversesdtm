@@ -45,4 +45,11 @@
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers
+#' @details Contains a list of 3 unique test codes and names:
+#'   \describe{
+#'     \item{OCCUR}{Occurrence Indicator}
+#'     \item{SEV}{Severity/Intensity}
+#'     \item{DIAMETER}{Diameter}
+#'   }
+#'
 "face_vaccine"

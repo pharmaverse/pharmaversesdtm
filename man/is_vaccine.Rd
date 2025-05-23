@@ -46,5 +46,13 @@ An example SDTM IS for vaccine studies
 Immunogenicity Specimen Assessments for Vaccine
 
 An example SDTM IS for vaccine studies
+
+Contains a list of 4 unique test codes and names:
+\describe{
+\item{J0033VN}{J0033VN Antibody}
+\item{I0019NT}{I0019NT Antibody}
+\item{M0019LN}{M0019LN Antibody}
+\item{R0003MA}{R0003MA Antibody}
+}
 }
 \keyword{dataset}

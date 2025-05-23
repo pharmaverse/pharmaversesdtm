@@ -47,6 +47,14 @@ A SDTM OE dataset simulated by Ophthalmology team
 Ophthalmic Examinations for Ophthalmology
 
 A SDTM OE dataset simulated by Ophthalmology team
+
+Contains a list of 4 unique test codes and names:
+\describe{
+\item{CSUBTH}{Center Subfield Thickness}
+\item{DRSSR}{Diabetic Retinopathy Sev Recode Value}
+\item{IOP}{Intraocular Pressure}
+\item{VACSCORE}{Visual Acuity Score}
+}
 }
 \author{
 Gordon Miller

@@ -38,4 +38,9 @@
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{TEMP}{Temperature}
+#'   }
+#'
 "vs_vaccine"

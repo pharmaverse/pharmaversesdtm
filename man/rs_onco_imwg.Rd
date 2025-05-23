@@ -39,6 +39,11 @@ A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset crea
 Disease Response (IMWG)
 
 A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
+
+Contains a list of 1 unique test code and name:
+\describe{
+\item{OVRLRESP}{Overall Response}
+}
 }
 \author{
 Vinh Nguyen

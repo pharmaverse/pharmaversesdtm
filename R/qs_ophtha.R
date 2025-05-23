@@ -35,4 +35,37 @@
 #'   }
 #'
 #' @source Constructed using qs from the {pharmaversesdtm} package
+#' @details Contains a list of 29 unique test codes and names:
+#'   \describe{
+#'     \item{VFQ1}{Your Overall Health Is}
+#'     \item{VFQ18}{Driving in Difficult Conditions}
+#'     \item{VFQ2}{Eyesight Using Both Eyes Is}
+#'     \item{VFQ17}{Difficulty Driving at Night}
+#'     \item{VFQ29}{Difficulty Seeing Programs on TV}
+#'     \item{VFQ16}{Difficulty Driving During Daytime}
+#'     \item{VFQ12}{Difficulty Picking Out Own Clothes}
+#'     \item{VFQ28}{Difficulty Taking Part in Sports}
+#'     \item{VFQ9}{Difficulty Going Down Step at Night}
+#'     \item{VFQ26}{Difficulty Shaving or Styling Hair}
+#'     \item{VFQ23}{Worry I'll Do Embarrassing Things}
+#'     \item{VFQ8}{Difficulty Reading Street Signs}
+#'     \item{VFQ20}{I Stay Home Most of the Time}
+#'     \item{VFQ6}{Difficulty Doing Work/Hobbies}
+#'     \item{VFQ3}{How Often You Worry About Eyesight}
+#'     \item{VFQ21}{I Feel Frustrated a Lot of the Time}
+#'     \item{VFQ7}{Difficulty Finding on Crowded Shelf}
+#'     \item{VFQ14}{Difficulty Going Out to See Movies}
+#'     \item{VFQ15}{Are You Currently Driving}
+#'     \item{VFQ13}{Difficulty Visiting With People}
+#'     \item{VFQ4}{How Often Pain in and Around Eyes}
+#'     \item{VFQ25}{Difficulty Figure Out Bill Accuracy}
+#'     \item{VFQ11}{Difficulty Seeing How People React}
+#'     \item{VFQ10}{Difficulty Noticing Objects to Side}
+#'     \item{VFQ5}{Difficulty Reading Newspapers}
+#'     \item{VFQ22}{I Need a Lot of Help From Others}
+#'     \item{VFQ19}{Eye Pain Keep You From Doing What You Like}
+#'     \item{VFQ27}{Difficulty Recognizing People}
+#'     \item{VFQ24}{Difficulty Reading Small Print}
+#'   }
+#'
 "qs_ophtha"

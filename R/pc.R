@@ -36,4 +36,9 @@
 #'
 #' @source [Access the source of the Pharmacokinetic Concentrations dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda)
 #' @author Antonio Rodriguez Contesti
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{XAN}{XANOMELINE}
+#'   }
+#'
 "pc"

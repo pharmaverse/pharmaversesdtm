@@ -34,4 +34,9 @@
 #'
 #' @source Generated dataset.
 #' @author Gopi Vegesna
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{TUMIDENT}{Tumor Identification}
+#'   }
+#'
 "tu_onco"

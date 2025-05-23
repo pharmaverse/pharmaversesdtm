@@ -41,4 +41,12 @@
 #'   }
 #'
 #' @source Constructed by {admiralpeds} developers
+#' @details Contains a list of 4 unique test codes and names:
+#'   \describe{
+#'     \item{BMI}{BMI}
+#'     \item{HDCIRC}{Head Circumference}
+#'     \item{HEIGHT}{Height}
+#'     \item{WEIGHT}{Weight}
+#'   }
+#'
 "vs_peds"
