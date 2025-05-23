@@ -127,7 +127,7 @@ for (dataset_name in datasets) {
 
     # Start building the documentation as a character vector
     # Add each testcd/test pair as an \item{}
-    testnames <- paste(sprintf("Contains a list of %d unique test code%s and name%s:", nrow(unique_tests), ifelse(nrow(unique_tests)==1,"","s"), ifelse(nrow(unique_tests)==1,"","s")),
+    testnames <- paste(sprintf("Contains a list of %d unique test code%s and name%s:", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), ifelse(nrow(unique_tests) == 1, "", "s")),
       "#'   \\describe{",
       paste(apply(unique_tests, 1, function(row) {
         paste(sprintf("#'     \\item{%s}{%s}", row[[testcd_col]], row[[test_col]]))
