@@ -28,4 +28,9 @@
 #'
 #' @source Generated dataset.
 #' @author Gordon Miller
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{FOCID}{Focus of Study-Specific Interest}
+#'   }
+#'
 "sc_ophtha"

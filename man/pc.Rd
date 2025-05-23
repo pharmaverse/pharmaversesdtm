@@ -42,6 +42,11 @@ A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 Pharmacokinetic Concentrations
 
 A SDTM PC dataset simulated by Antonio Rodriguez Contesti
+
+Contains a list of 1 unique test code and name:
+\describe{
+\item{XAN}{XANOMELINE}
+}
 }
 \author{
 Antonio Rodriguez Contesti

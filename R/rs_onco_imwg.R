@@ -33,4 +33,9 @@
 #'
 #' @source Derived from tr_onco_recist
 #' @author Vinh Nguyen
+#' @details Contains a list of 1 unique test code and name:
+#'   \describe{
+#'     \item{OVRLRESP}{Overall Response}
+#'   }
+#'
 "rs_onco_imwg"

@@ -39,4 +39,14 @@
 #'   }
 #'
 #' @source Generated dataset.
+#' @details Contains a list of 6 unique test codes and names:
+#'   \describe{
+#'     \item{DIABP}{Diastolic Blood Pressure}
+#'     \item{HEIGHT}{Height}
+#'     \item{PULSE}{Pulse Rate}
+#'     \item{SYSBP}{Systolic Blood Pressure}
+#'     \item{TEMP}{Temperature}
+#'     \item{WEIGHT}{Weight}
+#'   }
+#'
 "vs"

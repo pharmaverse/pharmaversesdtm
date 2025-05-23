@@ -41,6 +41,14 @@ A SDTM RS dataset simulated by Gopi Vegesna
 Disease Response for Oncology
 
 A SDTM RS dataset simulated by Gopi Vegesna
+
+Contains a list of 4 unique test codes and names:
+\describe{
+\item{OVRLRESP}{Overall Response}
+\item{NTRGRESP}{Non-target Response}
+\item{TRGRESP}{Target Response}
+\item{NEWLPROG}{New Lesion Progression}
+}
 }
 \author{
 Gopi Vegesna

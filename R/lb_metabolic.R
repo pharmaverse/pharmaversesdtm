@@ -38,4 +38,17 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
+#' @details Contains a list of 9 unique test codes and names:
+#'   \describe{
+#'     \item{ALB}{Albumin}
+#'     \item{ALP}{Alkaline Phosphatase}
+#'     \item{AST}{Aspartate Aminotransferase}
+#'     \item{CHOL}{Cholesterol}
+#'     \item{GGT}{Gamma Glutamyl Transferase}
+#'     \item{GLUC}{Glucose}
+#'     \item{HBA1CHGB}{Hemoglobin A1C/Hemoglobin}
+#'     \item{INSULIN}{Insulin}
+#'     \item{TRIG}{Triglycerides}
+#'   }
+#'
 "lb_metabolic"

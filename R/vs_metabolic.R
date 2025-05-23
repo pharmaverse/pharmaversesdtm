@@ -39,4 +39,17 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
+#' @details Contains a list of 9 unique test codes and names:
+#'   \describe{
+#'     \item{BMI}{Body Mass Index}
+#'     \item{DIABP}{Diastolic Blood Pressure}
+#'     \item{HEIGHT}{Height}
+#'     \item{HIPCIR}{Hip Circumference}
+#'     \item{PULSE}{Pulse Rate}
+#'     \item{SYSBP}{Systolic Blood Pressure}
+#'     \item{TEMP}{Temperature}
+#'     \item{WEIGHT}{Weight}
+#'     \item{WSTCIR}{Waist Circumference}
+#'   }
+#'
 "vs_metabolic"

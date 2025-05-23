@@ -33,4 +33,29 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
+#' @details Contains a list of 21 unique test codes and names:
+#'   \describe{
+#'     \item{COEQ01}{How hungry have you felt?}
+#'     \item{COEQ02}{How full have you felt?}
+#'     \item{COEQ03}{How strong was your desire to eat sweet foods?}
+#'     \item{COEQ04}{How strong was your desire to eat savoury foods?}
+#'     \item{COEQ05}{How happy have you felt?}
+#'     \item{COEQ06}{How anxious have you felt?}
+#'     \item{COEQ07}{How alert have you felt?}
+#'     \item{COEQ08}{How contented have you felt?}
+#'     \item{COEQ09}{During the last 7 days how often have you had food cravings?}
+#'     \item{COEQ10}{How strong have any food cravings been?}
+#'     \item{COEQ11}{How difficult has it been to resist any food cravings?}
+#'     \item{COEQ12}{How often have you eaten in response to food cravings?}
+#'     \item{COEQ13}{Chocolate or chocolate flavoured foods}
+#'     \item{COEQ14}{Other sweet foods (cakes, pastries, biscuits, etc)}
+#'     \item{COEQ15}{Fruit or fruit juice}
+#'     \item{COEQ16}{Dairy foods (cheese, yoghurts, milk, etc)}
+#'     \item{COEQ17}{Starchy foods (bread, rice, pasta, etc)}
+#'     \item{COEQ18}{Savoury foods (french fries, crisps, burgers, pizza, etc)}
+#'     \item{COEQ19}{Generally, how difficult has it been to control your eating?}
+#'     \item{COEQ20}{Which one food makes it most difficult for you to control eating?}
+#'     \item{COEQ21}{How difficult has it been to resist eating this food during the last 7 days?}
+#'   }
+#'
 "qs_metabolic"

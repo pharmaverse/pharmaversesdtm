@@ -46,5 +46,18 @@ A SDTM VS dataset for metabolic studies
 Vital signs Dataset-metabolic
 
 A SDTM VS dataset for metabolic studies
+
+Contains a list of 9 unique test codes and names:
+\describe{
+\item{BMI}{Body Mass Index}
+\item{DIABP}{Diastolic Blood Pressure}
+\item{HEIGHT}{Height}
+\item{HIPCIR}{Hip Circumference}
+\item{PULSE}{Pulse Rate}
+\item{SYSBP}{Systolic Blood Pressure}
+\item{TEMP}{Temperature}
+\item{WEIGHT}{Weight}
+\item{WSTCIR}{Waist Circumference}
+}
 }
 \keyword{dataset}

@@ -40,6 +40,11 @@ A SDTM TU dataset simulated by Gopi Vegesna
 Tumor Identification for Oncology
 
 A SDTM TU dataset simulated by Gopi Vegesna
+
+Contains a list of 1 unique test code and name:
+\describe{
+\item{TUMIDENT}{Tumor Identification}
+}
 }
 \author{
 Gopi Vegesna

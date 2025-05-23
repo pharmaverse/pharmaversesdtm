@@ -46,6 +46,15 @@ A SDTM TR dataset simulated by Gopi Vegesna
 Tumor Results for Oncology
 
 A SDTM TR dataset simulated by Gopi Vegesna
+
+Contains a list of 5 unique test codes and names:
+\describe{
+\item{DIAMETER}{Diameter}
+\item{LDIAM}{Longest Diameter}
+\item{LPERP}{Longest Perpendicular}
+\item{SUMDIAM}{Sum of Diameter}
+\item{TUMSTATE}{Tumor State}
+}
 }
 \author{
 Gopi Vegesna

@@ -38,4 +38,12 @@
 #'   }
 #'
 #' @source Generated dataset.
+#' @details Contains a list of 4 unique test codes and names:
+#'   \describe{
+#'     \item{ECGINT}{ECG Interpretation}
+#'     \item{HR}{Heart Rate}
+#'     \item{QT}{QT Duration}
+#'     \item{RR}{RR Duration}
+#'   }
+#'
 "eg"

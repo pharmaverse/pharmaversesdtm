@@ -35,4 +35,11 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
+#' @details Contains a list of 3 unique test codes and names:
+#'   \describe{
+#'     \item{LDIAM}{Longest Diameter}
+#'     \item{LPERP}{Longest Perpendicular}
+#'     \item{TUMSTATE}{Tumor State}
+#'   }
+#'
 "tr_onco_recist"

@@ -35,4 +35,12 @@
 #'
 #' @source [Access the source of the Disease Response for Oncology dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda)
 #' @author Gopi Vegesna
+#' @details Contains a list of 4 unique test codes and names:
+#'   \describe{
+#'     \item{OVRLRESP}{Overall Response}
+#'     \item{NTRGRESP}{Non-target Response}
+#'     \item{TRGRESP}{Target Response}
+#'     \item{NEWLPROG}{New Lesion Progression}
+#'   }
+#'
 "rs_onco"

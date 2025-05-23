@@ -45,5 +45,10 @@ An example SDTM VS dataset for vaccine studies
 Vital Signs for Vaccine
 
 An example SDTM VS dataset for vaccine studies
+
+Contains a list of 1 unique test code and name:
+\describe{
+\item{TEMP}{Temperature}
+}
 }
 \keyword{dataset}

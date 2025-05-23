@@ -41,6 +41,13 @@ A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creatio
 Tumor Results (RECIST 1.1) for Oncology
 
 A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+
+Contains a list of 3 unique test codes and names:
+\describe{
+\item{LDIAM}{Longest Diameter}
+\item{LPERP}{Longest Perpendicular}
+\item{TUMSTATE}{Tumor State}
+}
 }
 \author{
 Stefan Bundfuss

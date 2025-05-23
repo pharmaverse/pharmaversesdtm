@@ -39,4 +39,55 @@
 #'
 #' @source [Access the source of the Laboratory Measurements dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda)
 #' @author Annie Yang
+#' @details Contains a list of 47 unique test codes and names:
+#'   \describe{
+#'     \item{ALB}{Albumin}
+#'     \item{ALP}{Alkaline Phosphatase}
+#'     \item{ALT}{Alanine Aminotransferase}
+#'     \item{ANISO}{Anisocytes}
+#'     \item{AST}{Aspartate Aminotransferase}
+#'     \item{BASO}{Basophils}
+#'     \item{BILI}{Bilirubin}
+#'     \item{BUN}{Blood Urea Nitrogen}
+#'     \item{CA}{Calcium}
+#'     \item{CHOL}{Cholesterol}
+#'     \item{CK}{Creatine Kinase}
+#'     \item{CL}{Chloride}
+#'     \item{COLOR}{Color}
+#'     \item{CREAT}{Creatinine}
+#'     \item{EOS}{Eosinophils}
+#'     \item{GGT}{Gamma Glutamyl Transferase}
+#'     \item{GLUC}{Glucose}
+#'     \item{HCT}{Hematocrit}
+#'     \item{HGB}{Hemoglobin}
+#'     \item{K}{Potassium}
+#'     \item{KETONES}{Ketones}
+#'     \item{LYM}{Lymphocytes}
+#'     \item{MCH}{Ery. Mean Corpuscular Hemoglobin}
+#'     \item{MCHC}{Ery. Mean Corpuscular HGB Concentration}
+#'     \item{MCV}{Ery. Mean Corpuscular Volume}
+#'     \item{MONO}{Monocytes}
+#'     \item{SODIUM}{Sodium}
+#'     \item{PH}{pH}
+#'     \item{PHOS}{Phosphate}
+#'     \item{PLAT}{Platelet}
+#'     \item{PROT}{Protein}
+#'     \item{RBC}{Erythrocytes}
+#'     \item{SPGRAV}{Specific Gravity}
+#'     \item{TSH}{Thyrotropin}
+#'     \item{URATE}{Urate}
+#'     \item{UROBIL}{Urobilinogen}
+#'     \item{VITB12}{Vitamin B12}
+#'     \item{WBC}{Leukocytes}
+#'     \item{MACROCY}{Macrocytes}
+#'     \item{POLYCHR}{Polychromasia}
+#'     \item{HBA1C}{Hemoglobin A1C}
+#'     \item{POIKILO}{Poikilocytes}
+#'     \item{MICROCY}{Microcytes}
+#'     \item{BASOLE}{Basophils/Leukocytes}
+#'     \item{EOSLE}{Eosinophils/Leukocytes}
+#'     \item{LYMLE}{Lymphocytes/Leukocytes}
+#'     \item{MONOLE}{Monocytes/Leukocytes}
+#'   }
+#'
 "lb"

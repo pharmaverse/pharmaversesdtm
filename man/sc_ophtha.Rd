@@ -34,6 +34,11 @@ A SDTM SC dataset simulated by Ophthalmology team
 Subject Characteristic for Ophthalmology
 
 A SDTM SC dataset simulated by Ophthalmology team
+
+Contains a list of 1 unique test code and name:
+\describe{
+\item{FOCID}{Focus of Study-Specific Interest}
+}
 }
 \author{
 Gordon Miller

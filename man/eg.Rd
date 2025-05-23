@@ -45,5 +45,13 @@ An example of standard SDTM EG dataset to be used in deriving ADEG dataset
 Electrocardiogram
 
 An example of standard SDTM EG dataset to be used in deriving ADEG dataset
+
+Contains a list of 4 unique test codes and names:
+\describe{
+\item{ECGINT}{ECG Interpretation}
+\item{HR}{Heart Rate}
+\item{QT}{QT Duration}
+\item{RR}{RR Duration}
+}
 }
 \keyword{dataset}

@@ -46,5 +46,15 @@ A SDTM VS dataset from the CDISC pilot project
 Vital Signs
 
 A SDTM VS dataset from the CDISC pilot project
+
+Contains a list of 6 unique test codes and names:
+\describe{
+\item{DIABP}{Diastolic Blood Pressure}
+\item{HEIGHT}{Height}
+\item{PULSE}{Pulse Rate}
+\item{SYSBP}{Systolic Blood Pressure}
+\item{TEMP}{Temperature}
+\item{WEIGHT}{Weight}
+}
 }
 \keyword{dataset}

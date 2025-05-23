@@ -40,4 +40,13 @@
 #'
 #' @source Generated dataset.
 #' @author Gopi Vegesna
+#' @details Contains a list of 5 unique test codes and names:
+#'   \describe{
+#'     \item{DIAMETER}{Diameter}
+#'     \item{LDIAM}{Longest Diameter}
+#'     \item{LPERP}{Longest Perpendicular}
+#'     \item{SUMDIAM}{Sum of Diameter}
+#'     \item{TUMSTATE}{Tumor State}
+#'   }
+#'
 "tr_onco"
