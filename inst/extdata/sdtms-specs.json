@@ -36,8 +36,7 @@
       "name": "eg",
       "label": "Electrocardiogram",
       "description": "An example of standard SDTM EG dataset to be used in deriving ADEG dataset",
-      "source": "Generated dataset.",
-      "testnames": "Unique test names and codes."
+      "source": "Generated dataset."
     },
     {
       "name": "ex",
@@ -56,8 +55,7 @@
       "label": "Laboratory Measurements",
       "description": "An updated SDTM LB dataset that uses data from the CDISC pilot project",
       "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda",
-      "author": "Annie Yang",
-      "testnames": "Unique test names and codes."
+      "author": "Annie Yang"
     },
     {
       "name": "mh",
@@ -71,87 +69,76 @@
       "label": "Ophthalmic Examinations for Ophthalmology",
       "description": "A SDTM OE dataset simulated by Ophthalmology team",
       "source": "Generated dataset.",
-      "author": "Gordon Miller",
-      "testnames": "Unique test names and codes."
+      "author": "Gordon Miller"
     },
     {
       "name": "pc",
       "label": "Pharmacokinetic Concentrations",
       "description": "A SDTM PC dataset simulated by Antonio Rodriguez Contesti",
       "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda",
-      "author": "Antonio Rodriguez Contesti",
-      "testnames": "Unique test names and codes."
+      "author": "Antonio Rodriguez Contesti"
     },
     {
       "name": "pp",
       "label": "Pharmacokinetic Parameters",
       "description": "A SDTM PP dataset simulated by Antonio Rodriguez Contesti",
       "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda",
-      "author": "Antonio Rodriguez Contesti",
-      "testnames": "Unique test names and codes."
+      "author": "Antonio Rodriguez Contesti"
     },
     {
       "name": "qs_ophtha",
       "label": "Questionnaire for Ophthalmology",
       "description": "An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25",
-      "source": "Constructed using qs from the {pharmaversesdtm} package",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed using qs from the {pharmaversesdtm} package"
     },
     {
       "name": "sc_ophtha",
       "label": "Subject Characteristic for Ophthalmology",
       "description": "A SDTM SC dataset simulated by Ophthalmology team",
       "source": "Generated dataset.",
-      "author": "Gordon Miller",
-      "testnames": "Unique test names and codes."
+      "author": "Gordon Miller"
     },
     {
       "name": "tu_onco",
       "label": "Tumor Identification for Oncology",
       "description": "A SDTM TU dataset simulated by Gopi Vegesna",
       "source": "Generated dataset.",
-      "author": "Gopi Vegesna",
-      "testnames": "Unique test names and codes."
+      "author": "Gopi Vegesna"
     },
     {
       "name": "tr_onco",
       "label": "Tumor Results for Oncology",
       "description": "A SDTM TR dataset simulated by Gopi Vegesna",
       "source": "Generated dataset.",
-      "author": "Gopi Vegesna",
-      "testnames": "Unique test names and codes."
+      "author": "Gopi Vegesna"
     },
     {
       "name": "rs_onco",
       "label": "Disease Response for Oncology",
       "description": "A SDTM RS dataset simulated by Gopi Vegesna",
       "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda",
-      "author": "Gopi Vegesna",
-      "testnames": "Unique test names and codes."
+      "author": "Gopi Vegesna"
     },
     {
       "name": "tr_onco_recist",
       "label": "Tumor Results (RECIST 1.1) for Oncology",
       "description": "A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation",
       "source": "Generated dataset.",
-      "author": "Stefan Bundfuss",
-      "testnames": "Unique test names and codes."
+      "author": "Stefan Bundfuss"
     },
     {
       "name": "tu_onco_recist",
       "label": "Tumor Identification (RECIST 1.1) for Oncology",
       "description": "A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation",
       "source": "Generated dataset.",
-      "author": "Stefan Bundfuss",
-      "testnames": "Unique test names and codes."
+      "author": "Stefan Bundfuss"
     },
     {
       "name": "rs_onco_recist",
       "label": "Disease Response (RECIST 1.1) for Oncology",
       "description": "A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation",
       "source": "Generated dataset.",
-      "author": "Stefan Bundfuss",
-      "testnames": "Unique test names and codes."
+      "author": "Stefan Bundfuss"
     },
     {
       "name": "rs_onco_irecist",
@@ -165,8 +152,7 @@
       "label": "Disease Response (IMWG)",
       "description": "A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation",
       "source": "Derived from tr_onco_recist",
-      "author": "Vinh Nguyen",
-      "testnames": "Unique test names and codes."
+      "author": "Vinh Nguyen"
     },
     {
       "name": "supprs_onco_imwg",
@@ -180,8 +166,7 @@
       "label": "Disease Response (GCIG)",
       "description": "A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.",
       "source": "Generated dataset ([rs_supprs_onco_ca125.R](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R))",
-      "author": "Vinh Nguyen",
-      "testnames": "Unique test names and codes."
+      "author": "Vinh Nguyen"
     },
     {
       "name": "supprs_onco_ca125",
@@ -225,8 +210,7 @@
       "name": "vs",
       "label": "Vital Signs",
       "description": "A SDTM VS dataset from the CDISC pilot project",
-      "source": "Generated dataset.",
-      "testnames": "Unique test names and codes."
+      "source": "Generated dataset."
     },
     {
       "name": "smq_db",
@@ -256,8 +240,7 @@
       "name": "vs_vaccine",
       "label": "Vital Signs for Vaccine",
       "description": "An example SDTM VS dataset for vaccine studies",
-      "source": "Constructed by {admiralvaccine} developers",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed by {admiralvaccine} developers"
     },
     {
       "name": "ce_vaccine",
@@ -275,15 +258,13 @@
       "name": "is_vaccine",
       "label": "Immunogenicity Specimen Assessments for Vaccine",
       "description": "An example SDTM IS for vaccine studies",
-      "source": "Constructed by {admiralvaccine} developers",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed by {admiralvaccine} developers"
     },
     {
       "name": "face_vaccine",
       "label": "Findings About Clinical Events for Vaccine",
       "description": "An example SDTM FACE for vaccine studies",
-      "source": "Constructed by {admiralvaccine} developers",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed by {admiralvaccine} developers"
     },
     {
       "name": "suppce_vaccine",
@@ -325,8 +306,7 @@
       "name": "vs_peds",
       "label": "Vital signs Dataset-pediatrics",
       "description": "An updated SDTM VS dataset with anthropometric measurements for pediatric patients",
-      "source": "Constructed by {admiralpeds} developers",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed by {admiralpeds} developers"
     },
     {
       "name": "dm_metabolic",
@@ -338,22 +318,19 @@
       "name": "vs_metabolic",
       "label": "Vital signs Dataset-metabolic",
       "description": "A SDTM VS dataset for metabolic studies",
-      "source": "Constructed by {admiralmetabolic} developers",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed by {admiralmetabolic} developers"
     },
     {
       "name": "qs_metabolic",
       "label": "Questionnaire Dataset-metabolic",
       "description": "A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for metabolic studies. Note that University of Leeds are the copyright holders of the Control of Eating Questionnaire (CoEQ) and the test data included within {pharmaversesdtm} as well as the ADCOEQ code are for not-for-profit use only within {admiralmetabolic} and pharmaverse-related examples/documentation. Any persons or companies wanting to use the CoEQ should request a license to do so from the following [link](https://licensing.leeds.ac.uk/product/control-of-eating-questionnaire-coeq).",
-      "source": "Constructed by {admiralmetabolic} developers",
-      "testnames": "Unique test names and codes."
+      "source": "Constructed by {admiralmetabolic} developers"
     },
     {
      "name": "lb_metabolic",
      "label": "Laboratory Measurements Dataset-metabolic",
      "description": "A SDTM LB dataset containing relevant laboratory measurements for metabolic studies",
-     "source": "Constructed by {admiralmetabolic} developers",
-     "testnames": "Unique test names and codes."
+     "source": "Constructed by {admiralmetabolic} developers"
     }
   ]
 }
