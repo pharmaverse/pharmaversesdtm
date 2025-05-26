@@ -28,7 +28,7 @@
 #'
 #' @source Generated dataset.
 #' @author Gordon Miller
-#' @details Contains a list of 1 unique Test Short Name (SCTESTCD) and Test Name (SCTEST): 
+#' @details Contains a list of 1 unique Test Short Name (SCTESTCD) and Test Name (SCTEST):
 #'   \describe{
 #'     \item{FOCID}{Focus of Study-Specific Interest}
 #'   }

@@ -35,7 +35,7 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
-#' @details Contains a list of 3 unique Test Short Names (TRTESTCD) and Test Names (TRTEST): 
+#' @details Contains a list of 3 unique Test Short Names (TRTESTCD) and Test Names (TRTEST):
 #'   \describe{
 #'     \item{LDIAM}{Longest Diameter}
 #'     \item{LPERP}{Longest Perpendicular}

@@ -39,7 +39,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
-#' @details Contains a list of 9 unique Test Short Names (VSTESTCD) and Test Names (VSTEST): 
+#' @details Contains a list of 9 unique Test Short Names (VSTESTCD) and Test Names (VSTEST):
 #'   \describe{
 #'     \item{BMI}{Body Mass Index}
 #'     \item{DIABP}{Diastolic Blood Pressure}

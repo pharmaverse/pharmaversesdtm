@@ -39,7 +39,7 @@
 #'
 #' @source [Access the source of the Laboratory Measurements dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda)
 #' @author Annie Yang
-#' @details Contains a list of 47 unique Test Short Names (LBTESTCD) and Test Names (LBTEST): 
+#' @details Contains a list of 47 unique Test Short Names (LBTESTCD) and Test Names (LBTEST):
 #'   \describe{
 #'     \item{ALB}{Albumin}
 #'     \item{ALP}{Alkaline Phosphatase}

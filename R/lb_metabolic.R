@@ -38,7 +38,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
-#' @details Contains a list of 9 unique Test Short Names (LBTESTCD) and Test Names (LBTEST): 
+#' @details Contains a list of 9 unique Test Short Names (LBTESTCD) and Test Names (LBTEST):
 #'   \describe{
 #'     \item{ALB}{Albumin}
 #'     \item{ALP}{Alkaline Phosphatase}

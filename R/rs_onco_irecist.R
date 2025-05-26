@@ -35,7 +35,7 @@
 #'
 #' @source Generated dataset.
 #' @author Rohan Thampi
-#' @details Contains a list of 6 unique Test Short Names (RSTESTCD) and Test Names (RSTEST): 
+#' @details Contains a list of 6 unique Test Short Names (RSTESTCD) and Test Names (RSTEST):
 #'   \describe{
 #'     \item{OVRLRESP}{Overall Response}
 #'     \item{NTRGRESP}{Non-target Response}

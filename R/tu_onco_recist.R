@@ -32,7 +32,7 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
-#' @details Contains a list of 1 unique Test Short Name (TUTESTCD) and Test Name (TUTEST): 
+#' @details Contains a list of 1 unique Test Short Name (TUTESTCD) and Test Name (TUTEST):
 #'   \describe{
 #'     \item{TUMIDENT}{Tumore Identification}
 #'   }

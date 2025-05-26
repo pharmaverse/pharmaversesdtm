@@ -40,7 +40,7 @@
 #'
 #' @source Generated dataset.
 #' @author Gopi Vegesna
-#' @details Contains a list of 5 unique Test Short Names (TRTESTCD) and Test Names (TRTEST): 
+#' @details Contains a list of 5 unique Test Short Names (TRTESTCD) and Test Names (TRTEST):
 #'   \describe{
 #'     \item{DIAMETER}{Diameter}
 #'     \item{LDIAM}{Longest Diameter}

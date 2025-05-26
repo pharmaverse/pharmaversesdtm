@@ -30,7 +30,7 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
-#' @details Contains a list of 1 unique Test Short Name (RSTESTCD) and Test Name (RSTEST): 
+#' @details Contains a list of 1 unique Test Short Name (RSTESTCD) and Test Name (RSTEST):
 #'   \describe{
 #'     \item{OVRLRESP}{Overall Response}
 #'   }

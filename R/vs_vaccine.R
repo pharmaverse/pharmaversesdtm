@@ -38,7 +38,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers
-#' @details Contains a list of 1 unique Test Short Name (VSTESTCD) and Test Name (VSTEST): 
+#' @details Contains a list of 1 unique Test Short Name (VSTESTCD) and Test Name (VSTEST):
 #'   \describe{
 #'     \item{TEMP}{Temperature}
 #'   }

@@ -41,7 +41,7 @@
 #'
 #' @source Generated dataset.
 #' @author Gordon Miller
-#' @details Contains a list of 4 unique Test Short Names (OETESTCD) and Test Names (OETEST): 
+#' @details Contains a list of 4 unique Test Short Names (OETESTCD) and Test Names (OETEST):
 #'   \describe{
 #'     \item{CSUBTH}{Center Subfield Thickness}
 #'     \item{DRSSR}{Diabetic Retinopathy Sev Recode Value}

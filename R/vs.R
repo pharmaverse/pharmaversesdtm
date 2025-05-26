@@ -39,7 +39,7 @@
 #'   }
 #'
 #' @source Generated dataset.
-#' @details Contains a list of 6 unique Test Short Names (VSTESTCD) and Test Names (VSTEST): 
+#' @details Contains a list of 6 unique Test Short Names (VSTESTCD) and Test Names (VSTEST):
 #'   \describe{
 #'     \item{DIABP}{Diastolic Blood Pressure}
 #'     \item{HEIGHT}{Height}
