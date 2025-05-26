@@ -41,7 +41,7 @@
 #'   LAMZNPT \tab Number of Points for Lambda z\cr
 #'   RCAMINT \tab Ae                           \cr
 #'   RENALCL \tab CLR                          \cr
-#'   TMAX    \tab Time of CMAX                 
+#'   TMAX    \tab Time of CMAX
 #' }
 
 "pp"

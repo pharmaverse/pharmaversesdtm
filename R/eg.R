@@ -43,7 +43,7 @@
 #'   ECGINT \tab ECG Interpretation\cr
 #'   HR     \tab Heart Rate        \cr
 #'   QT     \tab QT Duration       \cr
-#'   RR     \tab RR Duration       
+#'   RR     \tab RR Duration
 #' }
 
 "eg"

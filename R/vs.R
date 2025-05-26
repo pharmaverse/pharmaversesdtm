@@ -46,7 +46,7 @@
 #'   PULSE  \tab Pulse Rate              \cr
 #'   SYSBP  \tab Systolic Blood Pressure \cr
 #'   TEMP   \tab Temperature             \cr
-#'   WEIGHT \tab Weight                  
+#'   WEIGHT \tab Weight
 #' }
 
 "vs"

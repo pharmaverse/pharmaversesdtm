@@ -87,7 +87,7 @@
 #'   URATE   \tab Urate                                  \cr
 #'   UROBIL  \tab Urobilinogen                           \cr
 #'   VITB12  \tab Vitamin B12                            \cr
-#'   WBC     \tab Leukocytes                             
+#'   WBC     \tab Leukocytes
 #' }
 
 "lb"

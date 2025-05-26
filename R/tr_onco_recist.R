@@ -39,7 +39,7 @@
 #'   \strong{TRTESTCD} \tab \strong{TRTEST} \cr
 #'   LDIAM    \tab Longest Diameter     \cr
 #'   LPERP    \tab Longest Perpendicular\cr
-#'   TUMSTATE \tab Tumor State          
+#'   TUMSTATE \tab Tumor State
 #' }
 
 "tr_onco_recist"

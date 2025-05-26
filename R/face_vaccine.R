@@ -49,7 +49,7 @@
 #'   \strong{FATESTCD} \tab \strong{FATEST} \cr
 #'   DIAMETER \tab Diameter            \cr
 #'   OCCUR    \tab Occurrence Indicator\cr
-#'   SEV      \tab Severity/Intensity  
+#'   SEV      \tab Severity/Intensity
 #' }
 
 "face_vaccine"

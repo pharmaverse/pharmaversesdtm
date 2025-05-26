@@ -46,7 +46,7 @@
 #'   LDIAM    \tab Longest Diameter     \cr
 #'   LPERP    \tab Longest Perpendicular\cr
 #'   SUMDIAM  \tab Sum of Diameter      \cr
-#'   TUMSTATE \tab Tumor State          
+#'   TUMSTATE \tab Tumor State
 #' }
 
 "tr_onco"

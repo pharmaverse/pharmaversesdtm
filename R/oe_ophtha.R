@@ -46,7 +46,7 @@
 #'   CSUBTH   \tab Center Subfield Thickness            \cr
 #'   DRSSR    \tab Diabetic Retinopathy Sev Recode Value\cr
 #'   IOP      \tab Intraocular Pressure                 \cr
-#'   VACSCORE \tab Visual Acuity Score                  
+#'   VACSCORE \tab Visual Acuity Score
 #' }
 
 "oe_ophtha"
