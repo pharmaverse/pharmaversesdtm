@@ -38,17 +38,17 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
-#' @details Contains a list of 9 unique Test Short Names (LBTESTCD) and Test Names (LBTEST):
-#'   \describe{
-#'     \item{ALB}{Albumin}
-#'     \item{ALP}{Alkaline Phosphatase}
-#'     \item{AST}{Aspartate Aminotransferase}
-#'     \item{CHOL}{Cholesterol}
-#'     \item{GGT}{Gamma Glutamyl Transferase}
-#'     \item{GLUC}{Glucose}
-#'     \item{HBA1CHGB}{Hemoglobin A1C/Hemoglobin}
-#'     \item{INSULIN}{Insulin}
-#'     \item{TRIG}{Triglycerides}
-#'   }
-#'
+#' @details Contains a list of 9 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{LBTESTCD} \tab \strong{LBTEST} \cr
+#'   ALB      \tab Albumin                   \cr
+#'   ALP      \tab Alkaline Phosphatase      \cr
+#'   AST      \tab Aspartate Aminotransferase\cr
+#'   CHOL     \tab Cholesterol               \cr
+#'   GGT      \tab Gamma Glutamyl Transferase\cr
+#'   GLUC     \tab Glucose                   \cr
+#'   HBA1CHGB \tab Hemoglobin A1C/Hemoglobin \cr
+#'   INSULIN  \tab Insulin                   \cr
+#'   TRIG     \tab Triglycerides             
+#' }
+
 "lb_metabolic"

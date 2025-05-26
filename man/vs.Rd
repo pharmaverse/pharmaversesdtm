@@ -47,14 +47,14 @@ Vital Signs
 
 A SDTM VS dataset from the CDISC pilot project
 
-Contains a list of 6 unique Test Short Names (VSTESTCD) and Test Names (VSTEST):
-\describe{
-\item{DIABP}{Diastolic Blood Pressure}
-\item{HEIGHT}{Height}
-\item{PULSE}{Pulse Rate}
-\item{SYSBP}{Systolic Blood Pressure}
-\item{TEMP}{Temperature}
-\item{WEIGHT}{Weight}
+Contains a list of 6 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{VSTESTCD} \tab \strong{VSTEST} \cr
+DIABP  \tab Diastolic Blood Pressure\cr
+HEIGHT \tab Height                  \cr
+PULSE  \tab Pulse Rate              \cr
+SYSBP  \tab Systolic Blood Pressure \cr
+TEMP   \tab Temperature             \cr
+WEIGHT \tab Weight
 }
 }
 \keyword{dataset}

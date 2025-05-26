@@ -33,9 +33,9 @@
 #'
 #' @source Derived from tr_onco_recist
 #' @author Vinh Nguyen
-#' @details Contains a list of 1 unique Test Short Name (RSTESTCD) and Test Name (RSTEST):
-#'   \describe{
-#'     \item{OVRLRESP}{Overall Response}
-#'   }
-#'
+#' @details Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+#'   \strong{RSTESTCD} \tab \strong{RSTEST} \cr
+#'   OVRLRESP \tab Overall Response
+#' }
+
 "rs_onco_imwg"

@@ -40,9 +40,9 @@ Disease Response (IMWG)
 
 A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 
-Contains a list of 1 unique Test Short Name (RSTESTCD) and Test Name (RSTEST):
-\describe{
-\item{OVRLRESP}{Overall Response}
+Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{RSTESTCD} \tab \strong{RSTEST} \cr
+OVRLRESP \tab Overall Response
 }
 }
 \author{

@@ -115,6 +115,7 @@ for (dataset_name in datasets) {
   dataset <- get(dataset_name)
   metadata <- specs[specs$name == dataset_name, ]
 
+  # Add Test Codes and Test Names details in a table
   # Identify column names ending in TEST and TESTCD
   test_col <- names(dataset)[grepl("TEST$", names(dataset))]
   testcd_col <- names(dataset)[grepl("TESTCD$", names(dataset))]
@@ -122,18 +123,29 @@ for (dataset_name in datasets) {
   if (length(test_col) == 1 && length(testcd_col) == 1) {
     # Check both columns exist
     unique_tests <- unique(dataset[c(testcd_col, test_col)])
+    unique_tests <- unique_tests[order(unique_tests[[testcd_col]]), ]
 
-    # Start building the documentation as a character vector
-    # Add each testcd/test pair as an \item{}
-    testnames <- paste(sprintf("Contains a list of %d unique Test Short Name%s (%s) and Test Name%s (%s): ", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), testcd_col, ifelse(nrow(unique_tests) == 1, "", "s"), test_col),
-      "#'   \\describe{",
-      paste(apply(unique_tests, 1, function(row) {
-        paste(sprintf("#'     \\item{%s}{%s}", row[[testcd_col]], row[[test_col]]))
-      }), collapse = "\n"),
-      "#'   }",
-      "#'",
-      sep = "\n"
-    )
+    tabular <- function(df, ...) {
+      stopifnot(is.data.frame(df))
+
+      align <- function(x) if (is.numeric(x)) "r" else "l"
+      col_align <- vapply(df, align, character(1))
+
+      cols <- lapply(df, format, ...)
+      contents <- do.call(
+        "paste",
+        c(cols, list(sep = " \\tab ", collapse = "\\cr\n#'   "))
+      )
+
+      paste(sprintf("Contains a list of %d unique Test Short Name%s and Test Name%s: ", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), ifelse(nrow(unique_tests) == 1, "", "s")),
+        "\\tabular{", paste(col_align, collapse = ""), "}{\n#'   ",
+        paste0("\\strong{", names(df), "}", sep = "", collapse = " \\tab "), " \\cr\n#'   ",
+        contents, "\n#' }\n",
+        sep = ""
+      )
+    }
+
+    testnames <- tabular(unique_tests)
   } else {
     testnames <- NULL
   }

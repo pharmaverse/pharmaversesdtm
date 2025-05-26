@@ -41,12 +41,12 @@
 #'
 #' @source Generated dataset.
 #' @author Gordon Miller
-#' @details Contains a list of 4 unique Test Short Names (OETESTCD) and Test Names (OETEST):
-#'   \describe{
-#'     \item{CSUBTH}{Center Subfield Thickness}
-#'     \item{DRSSR}{Diabetic Retinopathy Sev Recode Value}
-#'     \item{IOP}{Intraocular Pressure}
-#'     \item{VACSCORE}{Visual Acuity Score}
-#'   }
-#'
+#' @details Contains a list of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{OETESTCD} \tab \strong{OETEST} \cr
+#'   CSUBTH   \tab Center Subfield Thickness            \cr
+#'   DRSSR    \tab Diabetic Retinopathy Sev Recode Value\cr
+#'   IOP      \tab Intraocular Pressure                 \cr
+#'   VACSCORE \tab Visual Acuity Score                  
+#' }
+
 "oe_ophtha"

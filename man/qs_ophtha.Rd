@@ -43,37 +43,37 @@ Questionnaire for Ophthalmology
 
 An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 
-Contains a list of 29 unique Test Short Names (QSTESTCD) and Test Names (QSTEST):
-\describe{
-\item{VFQ1}{Your Overall Health Is}
-\item{VFQ18}{Driving in Difficult Conditions}
-\item{VFQ2}{Eyesight Using Both Eyes Is}
-\item{VFQ17}{Difficulty Driving at Night}
-\item{VFQ29}{Difficulty Seeing Programs on TV}
-\item{VFQ16}{Difficulty Driving During Daytime}
-\item{VFQ12}{Difficulty Picking Out Own Clothes}
-\item{VFQ28}{Difficulty Taking Part in Sports}
-\item{VFQ9}{Difficulty Going Down Step at Night}
-\item{VFQ26}{Difficulty Shaving or Styling Hair}
-\item{VFQ23}{Worry I'll Do Embarrassing Things}
-\item{VFQ8}{Difficulty Reading Street Signs}
-\item{VFQ20}{I Stay Home Most of the Time}
-\item{VFQ6}{Difficulty Doing Work/Hobbies}
-\item{VFQ3}{How Often You Worry About Eyesight}
-\item{VFQ21}{I Feel Frustrated a Lot of the Time}
-\item{VFQ7}{Difficulty Finding on Crowded Shelf}
-\item{VFQ14}{Difficulty Going Out to See Movies}
-\item{VFQ15}{Are You Currently Driving}
-\item{VFQ13}{Difficulty Visiting With People}
-\item{VFQ4}{How Often Pain in and Around Eyes}
-\item{VFQ25}{Difficulty Figure Out Bill Accuracy}
-\item{VFQ11}{Difficulty Seeing How People React}
-\item{VFQ10}{Difficulty Noticing Objects to Side}
-\item{VFQ5}{Difficulty Reading Newspapers}
-\item{VFQ22}{I Need a Lot of Help From Others}
-\item{VFQ19}{Eye Pain Keep You From Doing What You Like}
-\item{VFQ27}{Difficulty Recognizing People}
-\item{VFQ24}{Difficulty Reading Small Print}
+Contains a list of 29 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{QSTESTCD} \tab \strong{QSTEST} \cr
+VFQ1  \tab Your Overall Health Is                    \cr
+VFQ10 \tab Difficulty Noticing Objects to Side       \cr
+VFQ11 \tab Difficulty Seeing How People React        \cr
+VFQ12 \tab Difficulty Picking Out Own Clothes        \cr
+VFQ13 \tab Difficulty Visiting With People           \cr
+VFQ14 \tab Difficulty Going Out to See Movies        \cr
+VFQ15 \tab Are You Currently Driving                 \cr
+VFQ16 \tab Difficulty Driving During Daytime         \cr
+VFQ17 \tab Difficulty Driving at Night               \cr
+VFQ18 \tab Driving in Difficult Conditions           \cr
+VFQ19 \tab Eye Pain Keep You From Doing What You Like\cr
+VFQ2  \tab Eyesight Using Both Eyes Is               \cr
+VFQ20 \tab I Stay Home Most of the Time              \cr
+VFQ21 \tab I Feel Frustrated a Lot of the Time       \cr
+VFQ22 \tab I Need a Lot of Help From Others          \cr
+VFQ23 \tab Worry I'll Do Embarrassing Things         \cr
+VFQ24 \tab Difficulty Reading Small Print            \cr
+VFQ25 \tab Difficulty Figure Out Bill Accuracy       \cr
+VFQ26 \tab Difficulty Shaving or Styling Hair        \cr
+VFQ27 \tab Difficulty Recognizing People             \cr
+VFQ28 \tab Difficulty Taking Part in Sports          \cr
+VFQ29 \tab Difficulty Seeing Programs on TV          \cr
+VFQ3  \tab How Often You Worry About Eyesight        \cr
+VFQ4  \tab How Often Pain in and Around Eyes         \cr
+VFQ5  \tab Difficulty Reading Newspapers             \cr
+VFQ6  \tab Difficulty Doing Work/Hobbies             \cr
+VFQ7  \tab Difficulty Finding on Crowded Shelf       \cr
+VFQ8  \tab Difficulty Reading Street Signs           \cr
+VFQ9  \tab Difficulty Going Down Step at Night
 }
 }
 \keyword{dataset}

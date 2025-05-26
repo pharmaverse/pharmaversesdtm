@@ -42,12 +42,12 @@ Disease Response for Oncology
 
 A SDTM RS dataset simulated by Gopi Vegesna
 
-Contains a list of 4 unique Test Short Names (RSTESTCD) and Test Names (RSTEST):
-\describe{
-\item{OVRLRESP}{Overall Response}
-\item{NTRGRESP}{Non-target Response}
-\item{TRGRESP}{Target Response}
-\item{NEWLPROG}{New Lesion Progression}
+Contains a list of 4 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{RSTESTCD} \tab \strong{RSTEST} \cr
+NEWLPROG \tab New Lesion Progression\cr
+NTRGRESP \tab Non-target Response   \cr
+OVRLRESP \tab Overall Response      \cr
+TRGRESP  \tab Target Response
 }
 }
 \author{

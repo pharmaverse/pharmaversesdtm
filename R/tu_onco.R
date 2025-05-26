@@ -34,9 +34,9 @@
 #'
 #' @source Generated dataset.
 #' @author Gopi Vegesna
-#' @details Contains a list of 1 unique Test Short Name (TUTESTCD) and Test Name (TUTEST):
-#'   \describe{
-#'     \item{TUMIDENT}{Tumor Identification}
-#'   }
-#'
+#' @details Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+#'   \strong{TUTESTCD} \tab \strong{TUTEST} \cr
+#'   TUMIDENT \tab Tumor Identification
+#' }
+
 "tu_onco"

@@ -41,9 +41,9 @@ Tumor Identification for Oncology
 
 A SDTM TU dataset simulated by Gopi Vegesna
 
-Contains a list of 1 unique Test Short Name (TUTESTCD) and Test Name (TUTEST):
-\describe{
-\item{TUMIDENT}{Tumor Identification}
+Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{TUTESTCD} \tab \strong{TUTEST} \cr
+TUMIDENT \tab Tumor Identification
 }
 }
 \author{

@@ -42,11 +42,11 @@ Tumor Results (RECIST 1.1) for Oncology
 
 A SDTM TR dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 
-Contains a list of 3 unique Test Short Names (TRTESTCD) and Test Names (TRTEST):
-\describe{
-\item{LDIAM}{Longest Diameter}
-\item{LPERP}{Longest Perpendicular}
-\item{TUMSTATE}{Tumor State}
+Contains a list of 3 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{TRTESTCD} \tab \strong{TRTEST} \cr
+LDIAM    \tab Longest Diameter     \cr
+LPERP    \tab Longest Perpendicular\cr
+TUMSTATE \tab Tumor State
 }
 }
 \author{

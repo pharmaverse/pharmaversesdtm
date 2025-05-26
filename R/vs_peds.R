@@ -41,12 +41,12 @@
 #'   }
 #'
 #' @source Constructed by {admiralpeds} developers
-#' @details Contains a list of 4 unique Test Short Names (VSTESTCD) and Test Names (VSTEST):
-#'   \describe{
-#'     \item{BMI}{BMI}
-#'     \item{HDCIRC}{Head Circumference}
-#'     \item{HEIGHT}{Height}
-#'     \item{WEIGHT}{Weight}
-#'   }
-#'
+#' @details Contains a list of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{VSTESTCD} \tab \strong{VSTEST} \cr
+#'   BMI    \tab BMI               \cr
+#'   HDCIRC \tab Head Circumference\cr
+#'   HEIGHT \tab Height            \cr
+#'   WEIGHT \tab Weight            
+#' }
+
 "vs_peds"

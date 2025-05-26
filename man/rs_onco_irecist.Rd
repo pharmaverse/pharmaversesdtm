@@ -42,14 +42,14 @@ Disease Response (iRECIST) for Oncology
 
 A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
 
-Contains a list of 6 unique Test Short Names (RSTESTCD) and Test Names (RSTEST):
-\describe{
-\item{OVRLRESP}{Overall Response}
-\item{NTRGRESP}{Non-target Response}
-\item{TRGRESP}{Target Response}
-\item{IRECLIND}{Last iRECIST Assessment Indicator}
-\item{NEWLIND}{New Lesion Indicator}
-\item{NEWLPROG}{New Lesion Progression}
+Contains a list of 6 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{RSTESTCD} \tab \strong{RSTEST} \cr
+IRECLIND \tab Last iRECIST Assessment Indicator\cr
+NEWLIND  \tab New Lesion Indicator             \cr
+NEWLPROG \tab New Lesion Progression           \cr
+NTRGRESP \tab Non-target Response              \cr
+OVRLRESP \tab Overall Response                 \cr
+TRGRESP  \tab Target Response
 }
 }
 \author{

@@ -36,9 +36,9 @@
 #'
 #' @source [Access the source of the Pharmacokinetic Concentrations dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pc.rda)
 #' @author Antonio Rodriguez Contesti
-#' @details Contains a list of 1 unique Test Short Name (PCTESTCD) and Test Name (PCTEST):
-#'   \describe{
-#'     \item{XAN}{XANOMELINE}
-#'   }
-#'
+#' @details Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+#'   \strong{PCTESTCD} \tab \strong{PCTEST} \cr
+#'   XAN \tab XANOMELINE
+#' }
+
 "pc"

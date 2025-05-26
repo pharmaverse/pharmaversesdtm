@@ -46,55 +46,55 @@ Laboratory Measurements
 
 An updated SDTM LB dataset that uses data from the CDISC pilot project
 
-Contains a list of 47 unique Test Short Names (LBTESTCD) and Test Names (LBTEST):
-\describe{
-\item{ALB}{Albumin}
-\item{ALP}{Alkaline Phosphatase}
-\item{ALT}{Alanine Aminotransferase}
-\item{ANISO}{Anisocytes}
-\item{AST}{Aspartate Aminotransferase}
-\item{BASO}{Basophils}
-\item{BILI}{Bilirubin}
-\item{BUN}{Blood Urea Nitrogen}
-\item{CA}{Calcium}
-\item{CHOL}{Cholesterol}
-\item{CK}{Creatine Kinase}
-\item{CL}{Chloride}
-\item{COLOR}{Color}
-\item{CREAT}{Creatinine}
-\item{EOS}{Eosinophils}
-\item{GGT}{Gamma Glutamyl Transferase}
-\item{GLUC}{Glucose}
-\item{HCT}{Hematocrit}
-\item{HGB}{Hemoglobin}
-\item{K}{Potassium}
-\item{KETONES}{Ketones}
-\item{LYM}{Lymphocytes}
-\item{MCH}{Ery. Mean Corpuscular Hemoglobin}
-\item{MCHC}{Ery. Mean Corpuscular HGB Concentration}
-\item{MCV}{Ery. Mean Corpuscular Volume}
-\item{MONO}{Monocytes}
-\item{SODIUM}{Sodium}
-\item{PH}{pH}
-\item{PHOS}{Phosphate}
-\item{PLAT}{Platelet}
-\item{PROT}{Protein}
-\item{RBC}{Erythrocytes}
-\item{SPGRAV}{Specific Gravity}
-\item{TSH}{Thyrotropin}
-\item{URATE}{Urate}
-\item{UROBIL}{Urobilinogen}
-\item{VITB12}{Vitamin B12}
-\item{WBC}{Leukocytes}
-\item{MACROCY}{Macrocytes}
-\item{POLYCHR}{Polychromasia}
-\item{HBA1C}{Hemoglobin A1C}
-\item{POIKILO}{Poikilocytes}
-\item{MICROCY}{Microcytes}
-\item{BASOLE}{Basophils/Leukocytes}
-\item{EOSLE}{Eosinophils/Leukocytes}
-\item{LYMLE}{Lymphocytes/Leukocytes}
-\item{MONOLE}{Monocytes/Leukocytes}
+Contains a list of 47 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{LBTESTCD} \tab \strong{LBTEST} \cr
+ALB     \tab Albumin                                \cr
+ALP     \tab Alkaline Phosphatase                   \cr
+ALT     \tab Alanine Aminotransferase               \cr
+ANISO   \tab Anisocytes                             \cr
+AST     \tab Aspartate Aminotransferase             \cr
+BASO    \tab Basophils                              \cr
+BASOLE  \tab Basophils/Leukocytes                   \cr
+BILI    \tab Bilirubin                              \cr
+BUN     \tab Blood Urea Nitrogen                    \cr
+CA      \tab Calcium                                \cr
+CHOL    \tab Cholesterol                            \cr
+CK      \tab Creatine Kinase                        \cr
+CL      \tab Chloride                               \cr
+COLOR   \tab Color                                  \cr
+CREAT   \tab Creatinine                             \cr
+EOS     \tab Eosinophils                            \cr
+EOSLE   \tab Eosinophils/Leukocytes                 \cr
+GGT     \tab Gamma Glutamyl Transferase             \cr
+GLUC    \tab Glucose                                \cr
+HBA1C   \tab Hemoglobin A1C                         \cr
+HCT     \tab Hematocrit                             \cr
+HGB     \tab Hemoglobin                             \cr
+K       \tab Potassium                              \cr
+KETONES \tab Ketones                                \cr
+LYM     \tab Lymphocytes                            \cr
+LYMLE   \tab Lymphocytes/Leukocytes                 \cr
+MACROCY \tab Macrocytes                             \cr
+MCH     \tab Ery. Mean Corpuscular Hemoglobin       \cr
+MCHC    \tab Ery. Mean Corpuscular HGB Concentration\cr
+MCV     \tab Ery. Mean Corpuscular Volume           \cr
+MICROCY \tab Microcytes                             \cr
+MONO    \tab Monocytes                              \cr
+MONOLE  \tab Monocytes/Leukocytes                   \cr
+PH      \tab pH                                     \cr
+PHOS    \tab Phosphate                              \cr
+PLAT    \tab Platelet                               \cr
+POIKILO \tab Poikilocytes                           \cr
+POLYCHR \tab Polychromasia                          \cr
+PROT    \tab Protein                                \cr
+RBC     \tab Erythrocytes                           \cr
+SODIUM  \tab Sodium                                 \cr
+SPGRAV  \tab Specific Gravity                       \cr
+TSH     \tab Thyrotropin                            \cr
+URATE   \tab Urate                                  \cr
+UROBIL  \tab Urobilinogen                           \cr
+VITB12  \tab Vitamin B12                            \cr
+WBC     \tab Leukocytes
 }
 }
 \author{
