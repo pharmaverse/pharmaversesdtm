@@ -47,7 +47,7 @@ Vital signs Dataset-metabolic
 
 A SDTM VS dataset for metabolic studies
 
-Contains a list of 9 unique test codes and names:
+Contains a list of 9 unique Test Short Names (VSTESTCD) and Test Names (VSTEST):
 \describe{
 \item{BMI}{Body Mass Index}
 \item{DIABP}{Diastolic Blood Pressure}

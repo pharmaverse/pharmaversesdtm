@@ -35,7 +35,7 @@
 #'   }
 #'
 #' @source Constructed using qs from the {pharmaversesdtm} package
-#' @details Contains a list of 29 unique test codes and names:
+#' @details Contains a list of 29 unique Test Short Names (QSTESTCD) and Test Names (QSTEST): 
 #'   \describe{
 #'     \item{VFQ1}{Your Overall Health Is}
 #'     \item{VFQ18}{Driving in Difficult Conditions}

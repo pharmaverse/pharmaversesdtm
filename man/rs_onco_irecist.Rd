@@ -42,7 +42,7 @@ Disease Response (iRECIST) for Oncology
 
 A SDTM RS dataset using iRECIST intended for examples of ADaM dataset creation
 
-Contains a list of 6 unique test codes and names:
+Contains a list of 6 unique Test Short Names (RSTESTCD) and Test Names (RSTEST):
 \describe{
 \item{OVRLRESP}{Overall Response}
 \item{NTRGRESP}{Non-target Response}

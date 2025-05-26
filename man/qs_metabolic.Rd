@@ -41,7 +41,7 @@ Questionnaire Dataset-metabolic
 
 A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for metabolic studies. Note that University of Leeds are the copyright holders of the Control of Eating Questionnaire (CoEQ) and the test data included within {pharmaversesdtm} as well as the ADCOEQ code are for not-for-profit use only within {admiralmetabolic} and pharmaverse-related examples/documentation. Any persons or companies wanting to use the CoEQ should request a license to do so from the following \href{https://licensing.leeds.ac.uk/product/control-of-eating-questionnaire-coeq}{link}.
 
-Contains a list of 21 unique test codes and names:
+Contains a list of 21 unique Test Short Names (QSTESTCD) and Test Names (QSTEST):
 \describe{
 \item{COEQ01}{How hungry have you felt?}
 \item{COEQ02}{How full have you felt?}

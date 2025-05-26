@@ -43,7 +43,7 @@ Questionnaire for Ophthalmology
 
 An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 
-Contains a list of 29 unique test codes and names:
+Contains a list of 29 unique Test Short Names (QSTESTCD) and Test Names (QSTEST):
 \describe{
 \item{VFQ1}{Your Overall Health Is}
 \item{VFQ18}{Driving in Difficult Conditions}

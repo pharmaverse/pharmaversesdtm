@@ -42,7 +42,7 @@ Disease Response for Oncology
 
 A SDTM RS dataset simulated by Gopi Vegesna
 
-Contains a list of 4 unique test codes and names:
+Contains a list of 4 unique Test Short Names (RSTESTCD) and Test Names (RSTEST):
 \describe{
 \item{OVRLRESP}{Overall Response}
 \item{NTRGRESP}{Non-target Response}

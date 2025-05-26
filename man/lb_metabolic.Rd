@@ -46,7 +46,7 @@ Laboratory Measurements Dataset-metabolic
 
 A SDTM LB dataset containing relevant laboratory measurements for metabolic studies
 
-Contains a list of 9 unique test codes and names:
+Contains a list of 9 unique Test Short Names (LBTESTCD) and Test Names (LBTEST):
 \describe{
 \item{ALB}{Albumin}
 \item{ALP}{Alkaline Phosphatase}

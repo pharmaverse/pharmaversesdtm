@@ -46,7 +46,7 @@ Laboratory Measurements
 
 An updated SDTM LB dataset that uses data from the CDISC pilot project
 
-Contains a list of 47 unique test codes and names:
+Contains a list of 47 unique Test Short Names (LBTESTCD) and Test Names (LBTEST):
 \describe{
 \item{ALB}{Albumin}
 \item{ALP}{Alkaline Phosphatase}

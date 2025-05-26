@@ -39,7 +39,7 @@ Tumor Identification (RECIST 1.1) for Oncology
 
 A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 
-Contains a list of 1 unique test code and name:
+Contains a list of 1 unique Test Short Name (TUTESTCD) and Test Name (TUTEST):
 \describe{
 \item{TUMIDENT}{Tumore Identification}
 }

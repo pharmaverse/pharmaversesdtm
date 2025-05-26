@@ -37,7 +37,7 @@ Pharmacokinetic Parameters
 
 A SDTM PP dataset simulated by Antonio Rodriguez Contesti
 
-Contains a list of 10 unique test codes and names:
+Contains a list of 10 unique Test Short Names (PPTESTCD) and Test Names (PPTEST):
 \describe{
 \item{AUCALL}{AUC All}
 \item{AUCLST}{AUC to Last Nonzero Conc}

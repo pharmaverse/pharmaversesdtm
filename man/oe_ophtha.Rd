@@ -48,7 +48,7 @@ Ophthalmic Examinations for Ophthalmology
 
 A SDTM OE dataset simulated by Ophthalmology team
 
-Contains a list of 4 unique test codes and names:
+Contains a list of 4 unique Test Short Names (OETESTCD) and Test Names (OETEST):
 \describe{
 \item{CSUBTH}{Center Subfield Thickness}
 \item{DRSSR}{Diabetic Retinopathy Sev Recode Value}

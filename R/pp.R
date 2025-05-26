@@ -30,7 +30,7 @@
 #'
 #' @source [Access the source of the Pharmacokinetic Parameters dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda)
 #' @author Antonio Rodriguez Contesti
-#' @details Contains a list of 10 unique test codes and names:
+#' @details Contains a list of 10 unique Test Short Names (PPTESTCD) and Test Names (PPTEST): 
 #'   \describe{
 #'     \item{AUCALL}{AUC All}
 #'     \item{AUCLST}{AUC to Last Nonzero Conc}

@@ -34,7 +34,7 @@
 #'
 #' @source Generated dataset.
 #' @author Gopi Vegesna
-#' @details Contains a list of 1 unique test code and name:
+#' @details Contains a list of 1 unique Test Short Name (TUTESTCD) and Test Name (TUTEST): 
 #'   \describe{
 #'     \item{TUMIDENT}{Tumor Identification}
 #'   }

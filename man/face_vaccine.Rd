@@ -53,7 +53,7 @@ Findings About Clinical Events for Vaccine
 
 An example SDTM FACE for vaccine studies
 
-Contains a list of 3 unique test codes and names:
+Contains a list of 3 unique Test Short Names (FATESTCD) and Test Names (FATEST):
 \describe{
 \item{OCCUR}{Occurrence Indicator}
 \item{SEV}{Severity/Intensity}

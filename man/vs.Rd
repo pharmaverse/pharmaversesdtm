@@ -47,7 +47,7 @@ Vital Signs
 
 A SDTM VS dataset from the CDISC pilot project
 
-Contains a list of 6 unique test codes and names:
+Contains a list of 6 unique Test Short Names (VSTESTCD) and Test Names (VSTEST):
 \describe{
 \item{DIABP}{Diastolic Blood Pressure}
 \item{HEIGHT}{Height}

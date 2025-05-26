@@ -33,7 +33,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
-#' @details Contains a list of 21 unique test codes and names:
+#' @details Contains a list of 21 unique Test Short Names (QSTESTCD) and Test Names (QSTEST): 
 #'   \describe{
 #'     \item{COEQ01}{How hungry have you felt?}
 #'     \item{COEQ02}{How full have you felt?}

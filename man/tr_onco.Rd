@@ -47,7 +47,7 @@ Tumor Results for Oncology
 
 A SDTM TR dataset simulated by Gopi Vegesna
 
-Contains a list of 5 unique test codes and names:
+Contains a list of 5 unique Test Short Names (TRTESTCD) and Test Names (TRTEST):
 \describe{
 \item{DIAMETER}{Diameter}
 \item{LDIAM}{Longest Diameter}

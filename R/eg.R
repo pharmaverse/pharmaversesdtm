@@ -38,7 +38,7 @@
 #'   }
 #'
 #' @source Generated dataset.
-#' @details Contains a list of 4 unique test codes and names:
+#' @details Contains a list of 4 unique Test Short Names (EGTESTCD) and Test Names (EGTEST): 
 #'   \describe{
 #'     \item{ECGINT}{ECG Interpretation}
 #'     \item{HR}{Heart Rate}

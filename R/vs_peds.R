@@ -41,7 +41,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralpeds} developers
-#' @details Contains a list of 4 unique test codes and names:
+#' @details Contains a list of 4 unique Test Short Names (VSTESTCD) and Test Names (VSTEST): 
 #'   \describe{
 #'     \item{BMI}{BMI}
 #'     \item{HDCIRC}{Head Circumference}

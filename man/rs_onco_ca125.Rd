@@ -36,7 +36,7 @@ Disease Response (GCIG)
 
 A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.
 
-Contains a list of 1 unique test code and name:
+Contains a list of 1 unique Test Short Name (RSTESTCD) and Test Name (RSTEST):
 \describe{
 \item{OVRLRESP}{Overall Response}
 }
