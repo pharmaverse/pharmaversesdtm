@@ -134,6 +134,30 @@ qs3 <- qs2 %>%
   ) %>%
   ungroup()
 
+# Label variables ----
+qs3 <- qs3 %>%
+  add_labels(
+    DOMAIN = "Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    QSSEQ = "Sequence Number",
+    QSTESTCD = "Question Short Name",
+    QSTEST = "Question Name",
+    QSCAT = "Category of Question",
+    QSSCAT = "Subcategory for Question",
+    QSORRES = "Finding in Original Units",
+    QSORRESU = "Original Units",
+    QSSTRESC = "Character Result/Finding in Std Format",
+    QSSTRESN = "Numeric Finding in Standard Units",
+    QSSTRESU = "Standard Units",
+    QSBLFL = "Baseline Flag",
+    QSDRVFL = "Derived Flag",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    VISITDY = "Planned Study Day of Visit",
+    QSDTC = "Date/Time of Finding",
+    QSDY = "Study Day of Finding"
+  )
+
 qs_ophtha <- qs3
 
 # Save dataset ----

@@ -11,6 +11,12 @@ raw_cm <- read_xpt("https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/ma
 cm <- convert_blanks_to_na(raw_cm) %>%
   mutate(CMENRTPT = if_else(is.na(CMENDTC), "ONGOING", NA_character_))
 
+# Label variables ----
+cm <- cm %>%
+  add_labels(
+    CMENRTPT = "End Relative to Reference Time Point"
+  )
+
 # Label dataset ----
 attr(cm, "label") <- "Concomitant Medications"
 

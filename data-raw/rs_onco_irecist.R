@@ -395,4 +395,28 @@ rs_onco_irecist <- tibble::tribble(
     RSDY
   )
 
+# label variables
+rs_onco_irecist <- rs_onco_irecist %>%
+  add_labels(
+    STUDYID = "Study Identifier",
+    DOMAIN = "Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    RSSEQ = "Sequence Number",
+    RSLNKGRP = "Link Group ID",
+    RSTESTCD = "Assessment Short Name",
+    RSTEST = "Assessment Name",
+    RSCAT = "Category for Assessment",
+    RSORRES = "Result or Finding in Original Units",
+    RSSTRESC = "Character Result/Finding in Std Format",
+    RSSTAT = "Completion Status",
+    RSREASND = "Reason Not Done",
+    RSEVAL = "Evaluator",
+    RSEVALID = "Evaluator Identifier",
+    RSACPTFL = "Accepted Record Flag",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    RSDTC = "Date/Time of Assessment",
+    RSDY = "Study Day of Assessment"
+  )
+
 usethis::use_data(rs_onco_irecist, overwrite = TRUE)

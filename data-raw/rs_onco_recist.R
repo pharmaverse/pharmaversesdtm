@@ -95,4 +95,23 @@ rs_onco_recist <- sums %>%
     order = exprs(VISITNUM, RSEVAL, RSEVALID)
   )
 
+# label variables
+rs_onco_recist <- rs_onco_recist %>%
+  add_labels(
+    DOMAIN = "Domain Abbreviation",
+    STUDYID = "Study Identifier",
+    USUBJID = "Unique Subject Identifier",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    RSTESTCD = "Assessment Short Name",
+    RSTEST = "Assessment Name",
+    RSORRES = "Result or Finding in Original Units",
+    RSSTRESC = "Character Result/Finding in Std Format",
+    RSEVAL = "Evaluator",
+    RSEVALID = "Evaluator Identifier",
+    RSACPTFL = "Accepted Record Flag",
+    RSDTC = "Date/Time of Assessment",
+    RSSEQ = "Sequence Number"
+  )
+
 usethis::use_data(rs_onco_recist, overwrite = TRUE)

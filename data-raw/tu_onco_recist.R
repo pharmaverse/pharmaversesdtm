@@ -48,4 +48,25 @@ tu_onco_recist <- tu %>%
     order = exprs(TUEVAL, TUEVALID)
   )
 
+# label variables
+tu_onco_recist <- tu_onco_recist %>%
+  add_labels(
+    DOMAIN = "Domain Abbreviation",
+    STUDYID = "Study Identifier",
+    USUBJID = "Unique Subject Identifier",
+    VISIT = "Visit Name",
+    VISITNUM = "Visit Number",
+    TULOC = "Location of the Tumor/Lesion",
+    TUTESTCD = "Tumor/Lesion ID Short Name",
+    TUTEST = "Tumor/Lesion ID Test Name",
+    TUORRES = "Tumor/Lesion ID Result",
+    TUSTRESC = "Tumor/Lesion ID Result Std. Format",
+    TUMETHOD = "Method of Identification",
+    TULNKID = "Link ID",
+    TUEVAL = "Evaluator",
+    TUEVALID = "Evaluator Identifier",
+    TUACPTFL = "Accepted Record Flag",
+    TUSEQ = "Sequence Number"
+  )
+
 usethis::use_data(tu_onco_recist, overwrite = TRUE)
