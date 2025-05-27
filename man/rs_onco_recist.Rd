@@ -37,7 +37,7 @@ Disease Response (RECIST 1.1) for Oncology
 
 A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
 
-Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
 \strong{RSTESTCD} \tab \strong{RSTEST} \cr
 OVRLRESP \tab Overall Response
 }

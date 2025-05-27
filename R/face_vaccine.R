@@ -45,11 +45,11 @@
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers
-#' @details Contains a list of 3 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 3 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{FATESTCD} \tab \strong{FATEST} \cr
 #'   DIAMETER \tab Diameter            \cr
 #'   OCCUR    \tab Occurrence Indicator\cr
-#'   SEV      \tab Severity/Intensity
+#'   SEV      \tab Severity/Intensity  
 #' }
 
 "face_vaccine"

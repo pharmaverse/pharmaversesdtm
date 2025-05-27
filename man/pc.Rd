@@ -43,7 +43,7 @@ Pharmacokinetic Concentrations
 
 A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 
-Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
 \strong{PCTESTCD} \tab \strong{PCTEST} \cr
 XAN \tab XANOMELINE
 }

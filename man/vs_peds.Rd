@@ -49,7 +49,7 @@ Vital signs Dataset-pediatrics
 
 An updated SDTM VS dataset with anthropometric measurements for pediatric patients
 
-Contains a list of 4 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{VSTESTCD} \tab \strong{VSTEST} \cr
 BMI    \tab BMI               \cr
 HDCIRC \tab Head Circumference\cr

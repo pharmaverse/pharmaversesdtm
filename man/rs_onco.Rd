@@ -42,7 +42,7 @@ Disease Response for Oncology
 
 A SDTM RS dataset simulated by Gopi Vegesna
 
-Contains a list of 4 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{RSTESTCD} \tab \strong{RSTEST} \cr
 NEWLPROG \tab New Lesion Progression\cr
 NTRGRESP \tab Non-target Response   \cr

@@ -47,7 +47,7 @@ Vital Signs
 
 A SDTM VS dataset from the CDISC pilot project
 
-Contains a list of 6 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{VSTESTCD} \tab \strong{VSTEST} \cr
 DIABP  \tab Diastolic Blood Pressure\cr
 HEIGHT \tab Height                  \cr

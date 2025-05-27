@@ -46,7 +46,7 @@ Laboratory Measurements
 
 An updated SDTM LB dataset that uses data from the CDISC pilot project
 
-Contains a list of 47 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 47 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{LBTESTCD} \tab \strong{LBTEST} \cr
 ALB     \tab Albumin                                \cr
 ALP     \tab Alkaline Phosphatase                   \cr

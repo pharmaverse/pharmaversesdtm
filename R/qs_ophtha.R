@@ -35,7 +35,7 @@
 #'   }
 #'
 #' @source Constructed using qs from the {pharmaversesdtm} package
-#' @details Contains a list of 29 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 29 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{QSTESTCD} \tab \strong{QSTEST} \cr
 #'   VFQ1  \tab Your Overall Health Is                    \cr
 #'   VFQ10 \tab Difficulty Noticing Objects to Side       \cr
@@ -65,7 +65,7 @@
 #'   VFQ6  \tab Difficulty Doing Work/Hobbies             \cr
 #'   VFQ7  \tab Difficulty Finding on Crowded Shelf       \cr
 #'   VFQ8  \tab Difficulty Reading Street Signs           \cr
-#'   VFQ9  \tab Difficulty Going Down Step at Night
+#'   VFQ9  \tab Difficulty Going Down Step at Night       
 #' }
 
 "qs_ophtha"

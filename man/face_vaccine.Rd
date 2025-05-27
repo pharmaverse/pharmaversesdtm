@@ -53,7 +53,7 @@ Findings About Clinical Events for Vaccine
 
 An example SDTM FACE for vaccine studies
 
-Contains a list of 3 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 3 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{FATESTCD} \tab \strong{FATEST} \cr
 DIAMETER \tab Diameter            \cr
 OCCUR    \tab Occurrence Indicator\cr

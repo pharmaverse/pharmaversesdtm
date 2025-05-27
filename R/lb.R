@@ -39,7 +39,7 @@
 #'
 #' @source [Access the source of the Laboratory Measurements dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/lb.rda)
 #' @author Annie Yang
-#' @details Contains a list of 47 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 47 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{LBTESTCD} \tab \strong{LBTEST} \cr
 #'   ALB     \tab Albumin                                \cr
 #'   ALP     \tab Alkaline Phosphatase                   \cr
@@ -87,7 +87,7 @@
 #'   URATE   \tab Urate                                  \cr
 #'   UROBIL  \tab Urobilinogen                           \cr
 #'   VITB12  \tab Vitamin B12                            \cr
-#'   WBC     \tab Leukocytes
+#'   WBC     \tab Leukocytes                             
 #' }
 
 "lb"

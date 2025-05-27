@@ -33,7 +33,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
-#' @details Contains a list of 21 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 21 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{QSTESTCD} \tab \strong{QSTEST} \cr
 #'   COEQ01 \tab How hungry have you felt?                                                   \cr
 #'   COEQ02 \tab How full have you felt?                                                     \cr

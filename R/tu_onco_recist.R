@@ -32,7 +32,7 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
-#' @details Contains a list of 1 unique Test Short Name and Test Name: \tabular{ll}{
+#' @details Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
 #'   \strong{TUTESTCD} \tab \strong{TUTEST} \cr
 #'   TUMIDENT \tab Tumore Identification
 #' }

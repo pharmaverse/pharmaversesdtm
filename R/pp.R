@@ -30,7 +30,7 @@
 #'
 #' @source [Access the source of the Pharmacokinetic Parameters dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/pp.rda)
 #' @author Antonio Rodriguez Contesti
-#' @details Contains a list of 10 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 10 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{PPTESTCD} \tab \strong{PPTEST} \cr
 #'   AUCALL  \tab AUC All                      \cr
 #'   AUCLST  \tab AUC to Last Nonzero Conc     \cr
@@ -41,7 +41,7 @@
 #'   LAMZNPT \tab Number of Points for Lambda z\cr
 #'   RCAMINT \tab Ae                           \cr
 #'   RENALCL \tab CLR                          \cr
-#'   TMAX    \tab Time of CMAX
+#'   TMAX    \tab Time of CMAX                 
 #' }
 
 "pp"
