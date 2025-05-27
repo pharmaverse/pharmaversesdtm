@@ -48,7 +48,7 @@
 #'   GLUC     \tab Glucose                   \cr
 #'   HBA1CHGB \tab Hemoglobin A1C/Hemoglobin \cr
 #'   INSULIN  \tab Insulin                   \cr
-#'   TRIG     \tab Triglycerides             
+#'   TRIG     \tab Triglycerides
 #' }
 
 "lb_metabolic"

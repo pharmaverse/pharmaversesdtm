@@ -40,7 +40,7 @@
 #'   NEWLPROG \tab New Lesion Progression\cr
 #'   NTRGRESP \tab Non-target Response   \cr
 #'   OVRLRESP \tab Overall Response      \cr
-#'   TRGRESP  \tab Target Response       
+#'   TRGRESP  \tab Target Response
 #' }
 
 "rs_onco"
