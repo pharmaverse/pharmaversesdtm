@@ -138,7 +138,7 @@ for (dataset_name in datasets) {
         c(cols, list(sep = " \\tab ", collapse = "\\cr\n#'   "))
       )
 
-      paste(sprintf("Contains a list of %d unique Test Short Name%s and Test Name%s: ", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), ifelse(nrow(unique_tests) == 1, "", "s")),
+      paste(sprintf("Contains a set of %d unique Test Short Name%s and Test Name%s: ", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), ifelse(nrow(unique_tests) == 1, "", "s")),
         "\\tabular{", paste(col_align, collapse = ""), "}{\n#'   ",
         paste0("\\strong{", names(df), "}", sep = "", collapse = " \\tab "), " \\cr\n#'   ",
         contents, "\n#' }\n",
