@@ -6,7 +6,8 @@
 #'
 #' ## Key Features
 #' - Reads metadata from a structured JSON file.
-#' - Automatically generates `.R` documentation files in the 'R' directory.
+#' - Automatically generates `.R` documentation files in the 'R' directory,
+#'   including xxTEST and xxTESTCD details in a table when available.
 #' - Handles missing or incomplete metadata with sensible defaults.
 #' - Provides hyperlinks to dataset sources in the documentation.
 #'
