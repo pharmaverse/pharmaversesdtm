@@ -35,4 +35,12 @@
 #'
 #' @source [Access the source of the Disease Response for Oncology dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/tr_onco_recist.rda)
 #' @author Gopi Vegesna
+#' @details Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{RSTESTCD} \tab \strong{RSTEST} \cr
+#'   NEWLPROG \tab New Lesion Progression\cr
+#'   NTRGRESP \tab Non-target Response   \cr
+#'   OVRLRESP \tab Overall Response      \cr
+#'   TRGRESP  \tab Target Response
+#' }
+
 "rs_onco"

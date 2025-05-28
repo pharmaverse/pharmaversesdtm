@@ -30,4 +30,9 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
+#' @details Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+#'   \strong{RSTESTCD} \tab \strong{RSTEST} \cr
+#'   OVRLRESP \tab Overall Response
+#' }
+
 "rs_onco_recist"

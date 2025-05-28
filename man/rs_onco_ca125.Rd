@@ -35,6 +35,11 @@ A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients.
 Disease Response (GCIG)
 
 A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.
+
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{RSTESTCD} \tab \strong{RSTEST} \cr
+OVRLRESP \tab Overall Response
+}
 }
 \author{
 Vinh Nguyen

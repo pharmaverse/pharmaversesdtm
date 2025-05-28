@@ -40,6 +40,11 @@ A SDTM TU dataset simulated by Gopi Vegesna
 Tumor Identification for Oncology
 
 A SDTM TU dataset simulated by Gopi Vegesna
+
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{TUTESTCD} \tab \strong{TUTEST} \cr
+TUMIDENT \tab Tumor Identification
+}
 }
 \author{
 Gopi Vegesna
