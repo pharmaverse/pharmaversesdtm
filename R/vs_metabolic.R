@@ -49,7 +49,7 @@
 #'   SYSBP  \tab Systolic Blood Pressure \cr
 #'   TEMP   \tab Temperature             \cr
 #'   WEIGHT \tab Weight                  \cr
-#'   WSTCIR \tab Waist Circumference     
+#'   WSTCIR \tab Waist Circumference
 #' }
 
 "vs_metabolic"

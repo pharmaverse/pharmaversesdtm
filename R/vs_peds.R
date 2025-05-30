@@ -46,7 +46,7 @@
 #'   BMI    \tab BMI               \cr
 #'   HDCIRC \tab Head Circumference\cr
 #'   HEIGHT \tab Height            \cr
-#'   WEIGHT \tab Weight            
+#'   WEIGHT \tab Weight
 #' }
 
 "vs_peds"

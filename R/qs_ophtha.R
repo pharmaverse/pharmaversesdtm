@@ -65,7 +65,7 @@
 #'   VFQ6  \tab Difficulty Doing Work/Hobbies             \cr
 #'   VFQ7  \tab Difficulty Finding on Crowded Shelf       \cr
 #'   VFQ8  \tab Difficulty Reading Street Signs           \cr
-#'   VFQ9  \tab Difficulty Going Down Step at Night       
+#'   VFQ9  \tab Difficulty Going Down Step at Night
 #' }
 
 "qs_ophtha"
