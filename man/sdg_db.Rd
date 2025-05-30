@@ -7,11 +7,11 @@
 \format{
 A data frame with 5 columns:
 \describe{
-\item{termchar}{undocumented field}
-\item{sdg_name}{undocumented field}
-\item{sdg_id}{undocumented field}
-\item{termvar}{undocumented field}
-\item{version}{undocumented field}
+\item{termchar}{Reported Term}
+\item{sdg_name}{Name}
+\item{sdg_id}{Name ID}
+\item{termvar}{Variable}
+\item{version}{Version}
 }
 }
 \source{

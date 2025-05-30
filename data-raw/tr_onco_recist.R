@@ -3,6 +3,7 @@ library(dplyr)
 library(lubridate)
 library(admiraldev)
 library(admiral)
+library(metatools)
 
 # create tumor results to be used for RS
 tr <- tribble(
@@ -300,5 +301,29 @@ tr_screen <- tr %>%
 saveRDS(tr_screen, file = "data-raw/tu_help_data.rds")
 
 tr_onco_recist <- select(tr, -SUBJNR, -basicfl, -RFSTDT)
+
+# label variables
+tr_onco_recist <- tr_onco_recist %>%
+  add_labels(
+    DOMAIN = "Domain Abbreviation",
+    STUDYID = "Study Identifier",
+    USUBJID = "Unique Subject Identifier",
+    TRGRPID = "Group ID",
+    TRLNKID = "Link ID",
+    TRTESTCD = "Tumor/Lesion Assessment Short Name",
+    TRTEST = "Tumor/Lesion Assessment Test Name",
+    TRORRES = "Result or Finding in Original Units",
+    TRORRESU = "Original Units",
+    TRSTRESC = "Character Result/Finding in Std Format",
+    TRSTRESN = "Numeric Result/Finding in Standard Units",
+    TRSTRESU = "Standard Units",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    TREVAL = "Evaluator",
+    TREVALID = "Evaluator Identifier",
+    TRACPTFL = "Accepted Record Flag",
+    TRDTC = "Date/Time of Tumor/Lesion Measurement",
+    TRSEQ = "Sequence Number"
+  )
 
 usethis::use_data(tr_onco_recist, overwrite = TRUE)

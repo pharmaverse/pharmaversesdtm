@@ -12,15 +12,15 @@
 #' @docType data
 #' @format A data frame with 9 columns:
 #'   \describe{
-#'     \item{STUDYID}{undocumented field}
-#'     \item{RDOMAIN}{undocumented field}
-#'     \item{USUBJID}{undocumented field}
-#'     \item{IDVAR}{undocumented field}
-#'     \item{IDVARVAL}{undocumented field}
-#'     \item{QNAM}{undocumented field}
-#'     \item{QLABEL}{undocumented field}
-#'     \item{QVAL}{undocumented field}
-#'     \item{QORIG}{undocumented field}
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{RDOMAIN}{Related Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{IDVAR}{Identifying Variable}
+#'     \item{IDVARVAL}{Identifying Variable Value}
+#'     \item{QNAM}{Qualifier Variable Name}
+#'     \item{QLABEL}{Qualifier Variable Label}
+#'     \item{QVAL}{Data Value}
+#'     \item{QORIG}{Origin}
 #'   }
 #'
 #' @source Generated dataset ([rs_supprs_onco_ca125.R](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R))

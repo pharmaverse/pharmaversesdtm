@@ -33,7 +33,7 @@
 #'     \item{CMENDTC}{End Date/Time of Medication}
 #'     \item{CMSTDY}{Study Day of Start of Medication}
 #'     \item{CMENDY}{Study Day of End of Medication}
-#'     \item{CMENRTPT}{undocumented field}
+#'     \item{CMENRTPT}{End Relative to Reference Time Point}
 #'   }
 #'
 #' @source [Access the source of the Concomitant Medication dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/cm.xpt?raw=true)

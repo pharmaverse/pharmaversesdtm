@@ -1,5 +1,6 @@
 # ATTENTION: tr_onco_recist.R and tu_onco_recist.R must be run before this script
 library(admiral)
+library(metatools)
 
 tu_onco_recist <- pharmaversesdtm::tu_onco_recist
 tr_onco_recist <- pharmaversesdtm::tr_onco_recist
@@ -93,6 +94,25 @@ rs_onco_recist <- sums %>%
     by_vars = exprs(USUBJID),
     new_var = RSSEQ,
     order = exprs(VISITNUM, RSEVAL, RSEVALID)
+  )
+
+# label variables
+rs_onco_recist <- rs_onco_recist %>%
+  add_labels(
+    DOMAIN = "Domain Abbreviation",
+    STUDYID = "Study Identifier",
+    USUBJID = "Unique Subject Identifier",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    RSTESTCD = "Assessment Short Name",
+    RSTEST = "Assessment Name",
+    RSORRES = "Result or Finding in Original Units",
+    RSSTRESC = "Character Result/Finding in Std Format",
+    RSEVAL = "Evaluator",
+    RSEVALID = "Evaluator Identifier",
+    RSACPTFL = "Accepted Record Flag",
+    RSDTC = "Date/Time of Assessment",
+    RSSEQ = "Sequence Number"
   )
 
 usethis::use_data(rs_onco_recist, overwrite = TRUE)

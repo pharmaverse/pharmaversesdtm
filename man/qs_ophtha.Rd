@@ -8,25 +8,25 @@
 A data frame with 20 columns:
 \describe{
 \item{STUDYID}{undocumented field}
-\item{DOMAIN}{undocumented field}
-\item{USUBJID}{undocumented field}
-\item{QSSEQ}{undocumented field}
-\item{QSTESTCD}{undocumented field}
-\item{QSTEST}{undocumented field}
-\item{QSCAT}{undocumented field}
-\item{QSSCAT}{undocumented field}
-\item{QSORRES}{undocumented field}
-\item{QSORRESU}{undocumented field}
-\item{QSSTRESC}{undocumented field}
-\item{QSSTRESN}{undocumented field}
-\item{QSSTRESU}{undocumented field}
-\item{QSBLFL}{undocumented field}
-\item{QSDRVFL}{undocumented field}
-\item{VISITNUM}{undocumented field}
-\item{VISIT}{undocumented field}
-\item{VISITDY}{undocumented field}
-\item{QSDTC}{undocumented field}
-\item{QSDY}{undocumented field}
+\item{DOMAIN}{Domain Abbreviation}
+\item{USUBJID}{Unique Subject Identifier}
+\item{QSSEQ}{Sequence Number}
+\item{QSTESTCD}{Question Short Name}
+\item{QSTEST}{Question Name}
+\item{QSCAT}{Category of Question}
+\item{QSSCAT}{Subcategory for Question}
+\item{QSORRES}{Finding in Original Units}
+\item{QSORRESU}{Original Units}
+\item{QSSTRESC}{Character Result/Finding in Std Format}
+\item{QSSTRESN}{Numeric Finding in Standard Units}
+\item{QSSTRESU}{Standard Units}
+\item{QSBLFL}{Baseline Flag}
+\item{QSDRVFL}{Derived Flag}
+\item{VISITNUM}{Visit Number}
+\item{VISIT}{Visit Name}
+\item{VISITDY}{Planned Study Day of Visit}
+\item{QSDTC}{Date/Time of Finding}
+\item{QSDY}{Study Day of Finding}
 }
 }
 \source{

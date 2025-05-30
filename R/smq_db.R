@@ -12,12 +12,12 @@
 #' @docType data
 #' @format A data frame with 6 columns:
 #'   \describe{
-#'     \item{termchar}{undocumented field}
-#'     \item{scope}{undocumented field}
-#'     \item{smq_name}{undocumented field}
-#'     \item{smq_id}{undocumented field}
-#'     \item{version}{undocumented field}
-#'     \item{termvar}{undocumented field}
+#'     \item{termchar}{Reported Term}
+#'     \item{scope}{Scope}
+#'     \item{smq_name}{Name}
+#'     \item{smq_id}{Name ID}
+#'     \item{version}{Version}
+#'     \item{termvar}{Variable}
 #'   }
 #'
 #' @source Generated dataset.

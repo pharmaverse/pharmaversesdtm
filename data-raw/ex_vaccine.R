@@ -52,6 +52,8 @@ walk(common_cols, \(x) attr(vx_ex[[x]], "label") <<- attr(ex[[x]], "label"))
 
 ex_vaccine <- vx_ex %>%
   add_labels(
+    EXDTC = "Date/Time of Collection",
+    EXDY = "Study Day of Collection",
     EXLNKID = "Link ID",
     EXLNKGRP = "Link Group ID",
     EXLOC = "Location of Dose Administration",

@@ -29,10 +29,10 @@
 #'     \item{VISITNUM}{Visit Number}
 #'     \item{VISIT}{Visit Name}
 #'     \item{EPOCH}{Epoch}
-#'     \item{EXDTC}{undocumented field}
+#'     \item{EXDTC}{Date/Time of Collection}
 #'     \item{EXSTDTC}{Start Date/Time of Treatment}
 #'     \item{EXENDTC}{End Date/Time of Treatment}
-#'     \item{EXDY}{undocumented field}
+#'     \item{EXDY}{Study Day of Collection}
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers

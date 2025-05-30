@@ -7,25 +7,25 @@
 \format{
 A data frame with 19 columns:
 \describe{
-\item{DOMAIN}{undocumented field}
-\item{STUDYID}{undocumented field}
-\item{USUBJID}{undocumented field}
-\item{TRGRPID}{undocumented field}
-\item{TRLNKID}{undocumented field}
-\item{TRTESTCD}{undocumented field}
-\item{TRTEST}{undocumented field}
-\item{TRORRES}{undocumented field}
-\item{TRORRESU}{undocumented field}
-\item{TRSTRESC}{undocumented field}
-\item{TRSTRESN}{undocumented field}
-\item{TRSTRESU}{undocumented field}
-\item{VISITNUM}{undocumented field}
-\item{VISIT}{undocumented field}
-\item{TREVAL}{undocumented field}
-\item{TREVALID}{undocumented field}
-\item{TRACPTFL}{undocumented field}
-\item{TRDTC}{undocumented field}
-\item{TRSEQ}{undocumented field}
+\item{DOMAIN}{Domain Abbreviation}
+\item{STUDYID}{Study Identifier}
+\item{USUBJID}{Unique Subject Identifier}
+\item{TRGRPID}{Group ID}
+\item{TRLNKID}{Link ID}
+\item{TRTESTCD}{Tumor/Lesion Assessment Short Name}
+\item{TRTEST}{Tumor/Lesion Assessment Test Name}
+\item{TRORRES}{Result or Finding in Original Units}
+\item{TRORRESU}{Original Units}
+\item{TRSTRESC}{Character Result/Finding in Std Format}
+\item{TRSTRESN}{Numeric Result/Finding in Standard Units}
+\item{TRSTRESU}{Standard Units}
+\item{VISITNUM}{Visit Number}
+\item{VISIT}{Visit Name}
+\item{TREVAL}{Evaluator}
+\item{TREVALID}{Evaluator Identifier}
+\item{TRACPTFL}{Accepted Record Flag}
+\item{TRDTC}{Date/Time of Tumor/Lesion Measurement}
+\item{TRSEQ}{Sequence Number}
 }
 }
 \source{

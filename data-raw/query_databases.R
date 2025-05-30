@@ -3,6 +3,7 @@
 
 # Load libraries ----
 library(dplyr)
+library(metatools)
 
 # Create smq dataset ----
 pregsmq <- tribble(
@@ -70,6 +71,17 @@ smq_db <- bind_rows(pregsmq, bilismq) %>%
     termvar = "AEDECOD"
   )
 
+# Label variables ----
+smq_db <- smq_db %>%
+  add_labels(
+    termchar = "Reported Term",
+    scope = "Scope",
+    smq_name = "Name",
+    smq_id = "Name ID",
+    version = "Version",
+    termvar = "Variable"
+  )
+
 # Label dataset ----
 attr(smq_db, "label") <- "SMQ"
 
@@ -101,6 +113,16 @@ sdg_db <- tribble(
     sdg_id = 220L,
     termvar = "CMDECOD",
     version = "2019-09"
+  )
+
+# Label variables ----
+sdg_db <- sdg_db %>%
+  add_labels(
+    termchar = "Reported Term",
+    sdg_name = "Name",
+    sdg_id = "Name ID",
+    termvar = "Variable",
+    version = "Version"
   )
 
 # Label dataset ----

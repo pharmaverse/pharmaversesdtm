@@ -23,14 +23,16 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Fanny Gautier (\href{https://orcid.org/0009-0004-3581-0131}{ORCID})
   \item Gayatri G
   \item Kangjie Zhang
+  \item Lina Patil
   \item Pooja Kumari
-  \item Stefan Bundfuss (\href{https://orcid.org/0009-0005-0027-1198}{ORCID})
-  \item Zelos Zhu
   \item Sadchla Mascary
-  \item Vladyslav Shuliar (\href{https://orcid.org/0009-0008-2354-8999}{ORCID})
+  \item Stefan Bundfuss (\href{https://orcid.org/0009-0005-0027-1198}{ORCID})
   \item Vinh Nguyen
+  \item Vladyslav Shuliar (\href{https://orcid.org/0009-0008-2354-8999}{ORCID})
+  \item Zelos Zhu
 }
 
 }

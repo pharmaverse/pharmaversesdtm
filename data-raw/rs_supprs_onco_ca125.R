@@ -4,6 +4,7 @@
 # Load libraries -----
 library(dplyr)
 library(usethis)
+library(metatools)
 
 # Create rs_onco_ca125 ----
 rs_onco_ca125 <- tibble::tribble(
@@ -85,6 +86,24 @@ rs_onco_ca125 <- tibble::tribble(
     RSSTRESC, RSEVAL, VISITNUM, VISIT, RSDTC
   )
 
+# Label variables ----
+rs_onco_ca125 <- rs_onco_ca125 %>%
+  add_labels(
+    STUDYID = "Study Identifier",
+    DOMAIN = "Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    RSSEQ = "Sequence Number",
+    RSTESTCD = "Assessment Short Name",
+    RSTEST = "Assessment Name",
+    RSCAT = "Category for Assessment",
+    RSORRES = "Result or Finding in Original Units",
+    RSSTRESC = "Character Result/Finding in Std Format",
+    RSEVAL = "Evaluator",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    RSDTC = "Date/Time of Assessment"
+  )
+
 attr(rs_onco_ca125, "label") <- "Disease Response (CA125)"
 
 usethis::use_data(rs_onco_ca125, overwrite = TRUE)
@@ -151,6 +170,20 @@ supprs_onco_ca125 <- tibble::tribble(
   ) %>%
   relocate(
     STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG
+  )
+
+# Label variables ----
+supprs_onco_ca125 <- supprs_onco_ca125 %>%
+  add_labels(
+    STUDYID = "Study Identifier",
+    RDOMAIN = "Related Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    IDVAR = "Identifying Variable",
+    IDVARVAL = "Identifying Variable Value",
+    QNAM = "Qualifier Variable Name",
+    QLABEL = "Qualifier Variable Label",
+    QVAL = "Data Value",
+    QORIG = "Origin"
   )
 
 attr(supprs_onco_ca125, "label") <- "Supplemental Qualifiers for RS_ONCO_CA125"
