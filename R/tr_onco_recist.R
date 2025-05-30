@@ -35,4 +35,11 @@
 #'
 #' @source Generated dataset.
 #' @author Stefan Bundfuss
+#' @details Contains a set of 3 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{TRTESTCD} \tab \strong{TRTEST} \cr
+#'   LDIAM    \tab Longest Diameter     \cr
+#'   LPERP    \tab Longest Perpendicular\cr
+#'   TUMSTATE \tab Tumor State          
+#' }
+
 "tr_onco_recist"

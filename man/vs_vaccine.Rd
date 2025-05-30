@@ -45,5 +45,10 @@ An example SDTM VS dataset for vaccine studies
 Vital Signs for Vaccine
 
 An example SDTM VS dataset for vaccine studies
+
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{VSTESTCD} \tab \strong{VSTEST} \cr
+TEMP \tab Temperature
+}
 }
 \keyword{dataset}

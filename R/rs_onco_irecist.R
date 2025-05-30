@@ -35,4 +35,14 @@
 #'
 #' @source Generated dataset.
 #' @author Rohan Thampi
+#' @details Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{RSTESTCD} \tab \strong{RSTEST} \cr
+#'   IRECLIND \tab Last iRECIST Assessment Indicator\cr
+#'   NEWLIND  \tab New Lesion Indicator             \cr
+#'   NEWLPROG \tab New Lesion Progression           \cr
+#'   NTRGRESP \tab Non-target Response              \cr
+#'   OVRLRESP \tab Overall Response                 \cr
+#'   TRGRESP  \tab Target Response                  
+#' }
+
 "rs_onco_irecist"

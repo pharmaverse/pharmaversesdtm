@@ -40,5 +40,30 @@ A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for met
 Questionnaire Dataset-metabolic
 
 A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for metabolic studies. Note that University of Leeds are the copyright holders of the Control of Eating Questionnaire (CoEQ) and the test data included within {pharmaversesdtm} as well as the ADCOEQ code are for not-for-profit use only within {admiralmetabolic} and pharmaverse-related examples/documentation. Any persons or companies wanting to use the CoEQ should request a license to do so from the following \href{https://licensing.leeds.ac.uk/product/control-of-eating-questionnaire-coeq}{link}.
+
+Contains a set of 21 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{QSTESTCD} \tab \strong{QSTEST} \cr
+COEQ01 \tab How hungry have you felt?                                                   \cr
+COEQ02 \tab How full have you felt?                                                     \cr
+COEQ03 \tab How strong was your desire to eat sweet foods?                              \cr
+COEQ04 \tab How strong was your desire to eat savoury foods?                            \cr
+COEQ05 \tab How happy have you felt?                                                    \cr
+COEQ06 \tab How anxious have you felt?                                                  \cr
+COEQ07 \tab How alert have you felt?                                                    \cr
+COEQ08 \tab How contented have you felt?                                                \cr
+COEQ09 \tab During the last 7 days how often have you had food cravings?                \cr
+COEQ10 \tab How strong have any food cravings been?                                     \cr
+COEQ11 \tab How difficult has it been to resist any food cravings?                      \cr
+COEQ12 \tab How often have you eaten in response to food cravings?                      \cr
+COEQ13 \tab Chocolate or chocolate flavoured foods                                      \cr
+COEQ14 \tab Other sweet foods (cakes, pastries, biscuits, etc)                          \cr
+COEQ15 \tab Fruit or fruit juice                                                        \cr
+COEQ16 \tab Dairy foods (cheese, yoghurts, milk, etc)                                   \cr
+COEQ17 \tab Starchy foods (bread, rice, pasta, etc)                                     \cr
+COEQ18 \tab Savoury foods (french fries, crisps, burgers, pizza, etc)                   \cr
+COEQ19 \tab Generally, how difficult has it been to control your eating?                \cr
+COEQ20 \tab Which one food makes it most difficult for you to control eating?           \cr
+COEQ21 \tab How difficult has it been to resist eating this food during the last 7 days?
+}
 }
 \keyword{dataset}
