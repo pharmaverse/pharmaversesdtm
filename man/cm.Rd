@@ -28,7 +28,7 @@ A data frame with 22 columns:
 \item{CMENDTC}{End Date/Time of Medication}
 \item{CMSTDY}{Study Day of Start of Medication}
 \item{CMENDY}{Study Day of End of Medication}
-\item{CMENRTPT}{undocumented field}
+\item{CMENRTPT}{End Relative to Reference Time Point}
 }
 }
 \source{
