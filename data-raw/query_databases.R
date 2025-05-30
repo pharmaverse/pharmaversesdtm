@@ -3,6 +3,7 @@
 
 # Load libraries ----
 library(dplyr)
+library(metatools)
 
 # Create smq dataset ----
 pregsmq <- tribble(

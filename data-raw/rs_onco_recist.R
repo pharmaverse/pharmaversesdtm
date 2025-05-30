@@ -1,5 +1,6 @@
 # ATTENTION: tr_onco_recist.R and tu_onco_recist.R must be run before this script
 library(admiral)
+library(metatools)
 
 tu_onco_recist <- pharmaversesdtm::tu_onco_recist
 tr_onco_recist <- pharmaversesdtm::tr_onco_recist

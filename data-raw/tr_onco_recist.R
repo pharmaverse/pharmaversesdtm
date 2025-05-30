@@ -3,6 +3,7 @@ library(dplyr)
 library(lubridate)
 library(admiraldev)
 library(admiral)
+library(metatools)
 
 # create tumor results to be used for RS
 tr <- tribble(

@@ -4,6 +4,7 @@
 # Load libraries -----
 library(dplyr)
 library(usethis)
+library(metatools)
 
 # Create rs_onco_ca125 ----
 rs_onco_ca125 <- tibble::tribble(

@@ -7,6 +7,7 @@ library(haven)
 library(admiral)
 library(dplyr)
 library(stringr)
+library(metatools)
 
 # Make qs_ophtha dataset ----
 

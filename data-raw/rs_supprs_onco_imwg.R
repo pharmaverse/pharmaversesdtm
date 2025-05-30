@@ -3,6 +3,7 @@
 
 # Load libraries -----
 library(dplyr)
+library(metatools)
 
 # Create rs_onco_imwg ----
 rs_onco_imwg <- tibble::tribble(
