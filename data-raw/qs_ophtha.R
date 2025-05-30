@@ -56,9 +56,11 @@ dummy_param <- data.frame(QSTEST = c(
   "Difficulty Recognizing People",
   "Difficulty Taking Part in Sports",
   "Difficulty Seeing Programs on TV"
-)) %>%
+),
+QSTESTCD = c('VFQ101', 'VFQ102', 'VFQ103', 'VFQ104', 'VFQ105', 'VFQ106', 'VFQ107', 'VFQ108', 'VFQ109', 'VFQ110', 'VFQ111',
+            'VFQ112', 'VFQ113', 'VFQ114', 'VFQ115', 'VFQ115C', 'VFQ116', 'VFQ116A', 'VFQ119', 'VFQ120', 'VFQ121', 'VFQ124',
+            'VFQ125', 'VFQ1A03', 'VFQ1A04', 'VFQ1A05', 'VFQ1A06', 'VFQ1A07', 'VFQ1A08')) %>%
   mutate(
-    QSTESTCD = paste0("VFQ", row_number()),
     QSCAT = "NEI VFQ-25",
     QSSCAT = "Original Response"
   )
