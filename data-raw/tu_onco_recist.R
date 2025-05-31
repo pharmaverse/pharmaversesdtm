@@ -24,7 +24,7 @@ tu <- tr_screen %>%
       locations[as.numeric(SUBJNR) + as.numeric(substr(TRLNKID, str_length(TRLNKID), str_length(TRLNKID)))]
     ),
     TUTESTCD = "TUMIDENT",
-    TUTEST = "Tumore Identification"
+    TUTEST = "Tumor Identification"
   )
 
 tu_onco_recist <- tu %>%
