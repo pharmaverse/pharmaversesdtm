@@ -26,40 +26,44 @@ qs1 <- qs %>%
   unique()
 
 ## create dummy parameters and results ----
-dummy_param <- data.frame(QSTEST = c(
-  "Your Overall Health Is",
-  "Eyesight Using Both Eyes Is",
-  "How Often You Worry About Eyesight",
-  "How Often Pain in and Around Eyes",
-  "Difficulty Reading Newspapers",
-  "Difficulty Doing Work/Hobbies",
-  "Difficulty Finding on Crowded Shelf",
-  "Difficulty Reading Street Signs",
-  "Difficulty Going Down Step at Night",
-  "Difficulty Noticing Objects to Side",
-  "Difficulty Seeing How People React",
-  "Difficulty Picking Out Own Clothes",
-  "Difficulty Visiting With People",
-  "Difficulty Going Out to See Movies",
-  "Are You Currently Driving",
-  "Difficulty Driving During Daytime",
-  "Difficulty Driving at Night",
-  "Driving in Difficult Conditions",
-  "Eye Pain Keep You From Doing What You Like",
-  "I Stay Home Most of the Time",
-  "I Feel Frustrated a Lot of the Time",
-  "I Need a Lot of Help From Others",
-  "Worry I'll Do Embarrassing Things",
-  "Difficulty Reading Small Print",
-  "Difficulty Figure Out Bill Accuracy",
-  "Difficulty Shaving or Styling Hair",
-  "Difficulty Recognizing People",
-  "Difficulty Taking Part in Sports",
-  "Difficulty Seeing Programs on TV"
-),
-QSTESTCD = c('VFQ101', 'VFQ102', 'VFQ103', 'VFQ104', 'VFQ105', 'VFQ106', 'VFQ107', 'VFQ108', 'VFQ109', 'VFQ110', 'VFQ111',
-            'VFQ112', 'VFQ113', 'VFQ114', 'VFQ115', 'VFQ115C', 'VFQ116', 'VFQ116A', 'VFQ119', 'VFQ120', 'VFQ121', 'VFQ124',
-            'VFQ125', 'VFQ1A03', 'VFQ1A04', 'VFQ1A05', 'VFQ1A06', 'VFQ1A07', 'VFQ1A08')) %>%
+dummy_param <- data.frame(
+  QSTEST = c(
+    "Your Overall Health Is",
+    "Eyesight Using Both Eyes Is",
+    "How Often You Worry About Eyesight",
+    "How Often Pain in and Around Eyes",
+    "Difficulty Reading Newspapers",
+    "Difficulty Doing Work/Hobbies",
+    "Difficulty Finding on Crowded Shelf",
+    "Difficulty Reading Street Signs",
+    "Difficulty Going Down Step at Night",
+    "Difficulty Noticing Objects to Side",
+    "Difficulty Seeing How People React",
+    "Difficulty Picking Out Own Clothes",
+    "Difficulty Visiting With People",
+    "Difficulty Going Out to See Movies",
+    "Are You Currently Driving",
+    "Difficulty Driving During Daytime",
+    "Difficulty Driving at Night",
+    "Driving in Difficult Conditions",
+    "Eye Pain Keep You From Doing What You Like",
+    "I Stay Home Most of the Time",
+    "I Feel Frustrated a Lot of the Time",
+    "I Need a Lot of Help From Others",
+    "Worry I'll Do Embarrassing Things",
+    "Difficulty Reading Small Print",
+    "Difficulty Figure Out Bill Accuracy",
+    "Difficulty Shaving or Styling Hair",
+    "Difficulty Recognizing People",
+    "Difficulty Taking Part in Sports",
+    "Difficulty Seeing Programs on TV"
+  ),
+  QSTESTCD = c(
+    "VFQ101", "VFQ102", "VFQ103", "VFQ104", "VFQ105", "VFQ106", "VFQ107", "VFQ108", "VFQ109", "VFQ110", "VFQ111",
+    "VFQ112", "VFQ113", "VFQ114", "VFQ115", "VFQ115C", "VFQ116", "VFQ116A", "VFQ119", "VFQ120", "VFQ121", "VFQ124",
+    "VFQ125", "VFQ1A03", "VFQ1A04", "VFQ1A05", "VFQ1A06", "VFQ1A07", "VFQ1A08"
+  )
+) %>%
   mutate(
     QSCAT = "NEI VFQ-25",
     QSSCAT = "Original Response"
