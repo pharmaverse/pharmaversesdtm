@@ -65,7 +65,7 @@
 #'   VFQ1A05 \tab Difficulty Shaving or Styling Hair        \cr
 #'   VFQ1A06 \tab Difficulty Recognizing People             \cr
 #'   VFQ1A07 \tab Difficulty Taking Part in Sports          \cr
-#'   VFQ1A08 \tab Difficulty Seeing Programs on TV          
+#'   VFQ1A08 \tab Difficulty Seeing Programs on TV
 #' }
 
 "qs_ophtha"
