@@ -138,6 +138,7 @@ qs3 <- qs2 %>%
 # Label variables ----
 qs3 <- qs3 %>%
   add_labels(
+    STUDYID = "Study Identifier",
     DOMAIN = "Domain Abbreviation",
     USUBJID = "Unique Subject Identifier",
     QSSEQ = "Sequence Number",

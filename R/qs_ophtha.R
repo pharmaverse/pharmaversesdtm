@@ -12,7 +12,7 @@
 #' @docType data
 #' @format A data frame with 20 columns:
 #'   \describe{
-#'     \item{STUDYID}{undocumented field}
+#'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
 #'     \item{USUBJID}{Unique Subject Identifier}
 #'     \item{QSSEQ}{Sequence Number}
