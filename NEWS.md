@@ -30,6 +30,7 @@
 -  Harmonized code using `magrittr` pipe (#158)
 -  Added back pharmaversesdtm Hex and corresponding alternative text (#159)
 -  Changed units of insulin and triglycerides in `lb_metabolic` (#167)
+-  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. (#172)
 
 </details>
 
