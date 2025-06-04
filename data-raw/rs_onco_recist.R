@@ -1,5 +1,6 @@
 # ATTENTION: tr_onco_recist.R and tu_onco_recist.R must be run before this script
 library(admiral)
+library(dplyr)
 library(metatools)
 
 tu_onco_recist <- pharmaversesdtm::tu_onco_recist
@@ -52,6 +53,7 @@ sums <- derive_vars_merged(
   by_vars = exprs(USUBJID, TREVAL, TREVALID),
   new_vars = exprs(BASE = TRSTRESN, BASEIDS = IDS)
 )
+
 sums <- derive_vars_joined(
   sums,
   dataset_add = sums,
@@ -59,6 +61,7 @@ sums <- derive_vars_joined(
   order = exprs(TRSTRESN),
   new_vars = exprs(NADIR = TRSTRESN),
   join_vars = exprs(VISITNUM),
+  join_type = "all",
   filter_add = BASEIDS == IDS,
   filter_join = VISITNUM > VISITNUM.join,
   mode = "first",
