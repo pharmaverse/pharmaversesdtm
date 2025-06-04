@@ -30,6 +30,7 @@
 -  Harmonized code using `magrittr` pipe (#158)
 -  Added back pharmaversesdtm Hex and corresponding alternative text (#159)
 -  Changed units of insulin and triglycerides in `lb_metabolic` (#167)
+-  Fixed typo in `tu_onco_recist` dataset (#171)
 
 </details>
 
