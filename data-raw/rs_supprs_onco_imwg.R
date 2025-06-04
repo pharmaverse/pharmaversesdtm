@@ -3,6 +3,7 @@
 
 # Load libraries -----
 library(dplyr)
+library(metatools)
 
 # Create rs_onco_imwg ----
 rs_onco_imwg <- tibble::tribble(
@@ -85,6 +86,28 @@ rs_onco_imwg <- tibble::tribble(
     RSDY
   )
 
+# Label variables ----
+rs_onco_imwg <- rs_onco_imwg %>%
+  add_labels(
+    STUDYID = "Study Identifier",
+    DOMAIN = "Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    RSSEQ = "Sequence Number",
+    RSLNKGRP = "Link Group ID",
+    RSTESTCD = "Assessment Short Name",
+    RSTEST = "Assessment Name",
+    RSCAT = "Category for Assessment",
+    RSORRES = "Result or Finding in Original Units",
+    RSSTRESC = "Character Result/Finding in Std Format",
+    RSSTAT = "Completion Status",
+    RSREASND = "Reason Not Done",
+    RSEVAL = "Evaluator",
+    VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
+    RSDTC = "Date/Time of Assessment",
+    RSDY = "Study Day of Assessment"
+  )
+
 attr(rs_onco_imwg, "label") <- "Disease Response (IMWG)"
 
 usethis::use_data(rs_onco_imwg, overwrite = TRUE)
@@ -121,6 +144,20 @@ supprs_onco_imwg <- tibble::tribble(
   ) %>%
   relocate(
     STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG
+  )
+
+# Label variables ----
+supprs_onco_imwg <- supprs_onco_imwg %>%
+  add_labels(
+    STUDYID = "Study Identifier",
+    RDOMAIN = "Related Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    IDVAR = "Identifying Variable",
+    IDVARVAL = "Identifying Variable Value",
+    QNAM = "Qualifier Variable Name",
+    QLABEL = "Qualifier Variable Label",
+    QVAL = "Data Value",
+    QORIG = "Origin"
   )
 
 attr(supprs_onco_imwg, "label") <- "Supplemental Qualifiers for RS_ONCO_IMWG"

@@ -12,11 +12,11 @@
 #' @docType data
 #' @format A data frame with 5 columns:
 #'   \describe{
-#'     \item{termchar}{undocumented field}
-#'     \item{sdg_name}{undocumented field}
-#'     \item{sdg_id}{undocumented field}
-#'     \item{termvar}{undocumented field}
-#'     \item{version}{undocumented field}
+#'     \item{termchar}{Reported Term}
+#'     \item{sdg_name}{Name}
+#'     \item{sdg_id}{Name ID}
+#'     \item{termvar}{Variable}
+#'     \item{version}{Version}
 #'   }
 #'
 #' @source [Access the source of the SDG dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/sv.xpt?raw=true)
