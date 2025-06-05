@@ -11,7 +11,9 @@
     - `vs_metabolic`
     - `lb_metabolic`
 
-- Updated OE dataset to include both pre and post-dose IOP. (#134)   
+- Updated OE dataset to include both pre and post-dose IOP. (#134)
+
+- Updated `ex_vaccine` dataset to remove the non-standard CDISC SDMT variables. (#170)
 
 ## Documentation
 
