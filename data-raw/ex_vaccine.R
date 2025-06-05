@@ -12,11 +12,11 @@ library(metatools)
 ex <- pharmaversesdtm::ex
 
 vx_ex <- tribble(
-  ~USUBJID, ~EXSEQ, ~EXDTC, ~EXSTDTC, ~EXENDTC, ~EXDY, ~VISITNUM,
-  "ABC-1001", 1, "2021-11-03T10:50:00", "2021-11-03T10:50:00", "2021-11-03T10:50:00", 1, 1,
-  "ABC-1001", 2, "2021-12-30T09:10:00", "2021-12-30T09:10:00", "2021-12-30T09:10:00", 58, 2,
-  "ABC-1002", 1, "2021-10-07T12:48:00", "2021-10-07T12:48:00", "2021-10-07T12:48:00", 1, 1,
-  "ABC-1002", 2, "2021-12-16T12:41:00", "2021-12-16T12:41:00", "2021-12-16T12:41:00", 71, 2
+  ~USUBJID, ~EXSEQ, ~EXSTDTC, ~EXENDTC, ~VISITNUM,
+  "ABC-1001", 1, "2021-11-03T10:50:00", "2021-11-03T10:50:00", 1,
+  "ABC-1001", 2, "2021-12-30T09:10:00", "2021-12-30T09:10:00", 2,
+  "ABC-1002", 1, "2021-10-07T12:48:00", "2021-10-07T12:48:00", 1,
+  "ABC-1002", 2, "2021-12-16T12:41:00", "2021-12-16T12:41:00", 2
 ) %>%
   mutate(
     STUDYID = "ABC",
@@ -41,7 +41,7 @@ vx_ex <- tribble(
   select(
     STUDYID, DOMAIN, USUBJID, EXSEQ, EXLNKGRP, EXLNKID, EXTRT, EXCAT,
     EXDOSE, EXDOSU, EXDOSFRM, EXROUTE, EXLOC, EXLAT, VISITNUM, VISIT, EPOCH,
-    EXDTC, EXSTDTC, EXENDTC, EXDY
+    EXSTDTC, EXENDTC
   )
 
 # get common column names
@@ -52,8 +52,6 @@ walk(common_cols, \(x) attr(vx_ex[[x]], "label") <<- attr(ex[[x]], "label"))
 
 ex_vaccine <- vx_ex %>%
   add_labels(
-    EXDTC = "Date/Time of Collection",
-    EXDY = "Study Day of Collection",
     EXLNKID = "Link ID",
     EXLNKGRP = "Link Group ID",
     EXLOC = "Location of Dose Administration",
