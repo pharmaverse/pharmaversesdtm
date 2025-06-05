@@ -31,6 +31,7 @@
 -  Added back pharmaversesdtm Hex and corresponding alternative text (#159)
 -  Ensured all datasets have populated variables labels (#162)
 -  Changed units of insulin and triglycerides in `lb_metabolic` (#167)
+-  Fixed typo in `tu_onco_recist` dataset (#171)
 
 </details>
 
