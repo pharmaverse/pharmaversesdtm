@@ -21,6 +21,7 @@
 
 # Load required library
 library(jsonlite)
+library(metatools)
 
 # Load metadata from JSON file
 specs <- fromJSON("inst/extdata/sdtms-specs.json")$`sdtms-specs`
