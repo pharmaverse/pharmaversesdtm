@@ -21,6 +21,7 @@
 
 # Load required library
 library(jsonlite)
+library(metatools)
 
 # Load metadata from JSON file
 specs <- fromJSON("inst/extdata/sdtms-specs.json")$`sdtms-specs`
@@ -141,7 +142,7 @@ for (dataset_name in datasets) {
       paste(sprintf("Contains a set of %d unique Test Short Name%s and Test Name%s: ", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), ifelse(nrow(unique_tests) == 1, "", "s")),
         "\\tabular{", paste(col_align, collapse = ""), "}{\n#'   ",
         paste0("\\strong{", names(df), "}", sep = "", collapse = " \\tab "), " \\cr\n#'   ",
-        contents, "\n#' }\n",
+        trimws(contents), "\n#' }\n",
         sep = ""
       )
     }
