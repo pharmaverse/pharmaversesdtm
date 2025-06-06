@@ -5,7 +5,7 @@
 \alias{lb_metabolic}
 \title{Laboratory Measurements Dataset-metabolic}
 \format{
-A data frame with 23 columns:
+A data frame with 24 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -25,6 +25,7 @@ A data frame with 23 columns:
 \item{LBSTNRHI}{Reference Range Upper Limit-Std Units}
 \item{LBNRIND}{Reference Range Indicator}
 \item{LBBLFL}{Baseline Flag}
+\item{LBFAST}{Fasting Status}
 \item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
 \item{VISITDY}{Planned Study Day of Visit}

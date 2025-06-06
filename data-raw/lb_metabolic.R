@@ -72,22 +72,26 @@ metabolic_data_3 <- metabolic_data_2 %>%
     LBCAT = "CHEMISTRY",
     LBSTRESN = dplyr::case_when(
       LBTESTCD == "INSULIN" ~ as.numeric(LBORRES) * 6,
+      LBTESTCD == "HBA1CHGB" ~ (as.numeric(LBORRES) - 2.15) * 10.929,
       LBTESTCD == "TRIG" ~ as.numeric(LBORRES) * 0.01129,
       TRUE ~ as.numeric(LBORRES)
     ),
     LBSTRESC = as.character(LBSTRESN),
     LBSTRESU = case_when(
       LBTESTCD == "INSULIN" ~ "pmol/L",
+      LBTESTCD == "HBA1CHGB" ~ "mmol/mol",
       LBTESTCD == "TRIG" ~ "mmol/L",
       TRUE ~ LBORRESU
     ),
     LBSTNRLO = dplyr::case_when(
       LBTESTCD == "INSULIN" ~ as.numeric(LBORNRLO) * 6,
+      LBTESTCD == "HBA1CHGB" ~ (as.numeric(LBORNRLO) - 2.15) * 10.929,
       LBTESTCD == "TRIG" ~ as.numeric(LBORNRLO) * 0.01129,
       TRUE ~ as.numeric(LBORNRLO)
     ),
     LBSTNRHI = dplyr::case_when(
       LBTESTCD == "INSULIN" ~ as.numeric(LBORNRHI) * 6,
+      LBTESTCD == "HBA1CHGB" ~ (as.numeric(LBORNRHI) - 2.15) * 10.929,
       LBTESTCD == "TRIG" ~ as.numeric(LBORNRHI) * 0.01129,
       TRUE ~ as.numeric(LBORNRHI)
     ),
@@ -102,6 +106,11 @@ metabolic_data_3 <- metabolic_data_2 %>%
 lb_metabolic_3 <- lb_metabolic_2 %>%
   bind_rows(metabolic_data_3)
 
+# Add Fasting Status (LBFAST) ----
+lb_metabolic_3 <- lb_metabolic_3 %>%
+  mutate(LBFAST = "Y") %>%
+  relocate(LBFAST, .after = LBBLFL)
+
 # Define analysis sequence number ----
 lb_metabolic_4 <- lb_metabolic_3 %>%
   group_by(USUBJID) %>%
@@ -114,6 +123,7 @@ walk(
   .x = colnames(lb_metabolic_4),
   .f = \(x) attr(lb_metabolic_4[[x]], "label") <<- attr(lb_metabolic_2[[x]], "label")
 )
+attr(lb_metabolic_4$LBFAST, "label") <- "Fasting Status"
 attr(lb_metabolic_4, "label") <- "Laboratory Test Results"
 
 # Save dataset ----
