@@ -47,6 +47,14 @@ A SDTM OE dataset simulated by Ophthalmology team
 Ophthalmic Examinations for Ophthalmology
 
 A SDTM OE dataset simulated by Ophthalmology team
+
+Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{OETESTCD} \tab \strong{OETEST} \cr
+CSUBTH   \tab Center Subfield Thickness            \cr
+DRSSR    \tab Diabetic Retinopathy Sev Recode Value\cr
+IOP      \tab Intraocular Pressure                 \cr
+VACSCORE \tab Visual Acuity Score
+}
 }
 \author{
 Gordon Miller

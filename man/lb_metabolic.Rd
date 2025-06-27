@@ -5,7 +5,7 @@
 \alias{lb_metabolic}
 \title{Laboratory Measurements Dataset-metabolic}
 \format{
-A data frame with 23 columns:
+A data frame with 24 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -25,6 +25,7 @@ A data frame with 23 columns:
 \item{LBSTNRHI}{Reference Range Upper Limit-Std Units}
 \item{LBNRIND}{Reference Range Indicator}
 \item{LBBLFL}{Baseline Flag}
+\item{LBFAST}{Fasting Status}
 \item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
 \item{VISITDY}{Planned Study Day of Visit}
@@ -45,5 +46,18 @@ A SDTM LB dataset containing relevant laboratory measurements for metabolic stud
 Laboratory Measurements Dataset-metabolic
 
 A SDTM LB dataset containing relevant laboratory measurements for metabolic studies
+
+Contains a set of 9 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{LBTESTCD} \tab \strong{LBTEST} \cr
+ALB      \tab Albumin                   \cr
+ALP      \tab Alkaline Phosphatase      \cr
+AST      \tab Aspartate Aminotransferase\cr
+CHOL     \tab Cholesterol               \cr
+GGT      \tab Gamma Glutamyl Transferase\cr
+GLUC     \tab Glucose                   \cr
+HBA1CHGB \tab Hemoglobin A1C/Hemoglobin \cr
+INSULIN  \tab Insulin                   \cr
+TRIG     \tab Triglycerides
+}
 }
 \keyword{dataset}

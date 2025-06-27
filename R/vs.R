@@ -39,4 +39,14 @@
 #'   }
 #'
 #' @source Generated dataset.
+#' @details Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{VSTESTCD} \tab \strong{VSTEST} \cr
+#'   DIABP  \tab Diastolic Blood Pressure\cr
+#'   HEIGHT \tab Height                  \cr
+#'   PULSE  \tab Pulse Rate              \cr
+#'   SYSBP  \tab Systolic Blood Pressure \cr
+#'   TEMP   \tab Temperature             \cr
+#'   WEIGHT \tab Weight
+#' }
+
 "vs"

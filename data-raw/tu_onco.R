@@ -12,8 +12,8 @@ library(metatools)
 
 # Create tu ----
 ## Read input data  --  DUMMY DATA CREATED FROM TR data created from TR ----
-data("tr_onco")
-data("supptr_onco")
+tr_onco <- pharmaversesdtm::tr_onco
+supptr_onco <- pharmaversesdtm::supptr_onco
 
 tr <- convert_blanks_to_na(tr_onco)
 supptr <- convert_blanks_to_na(supptr_onco)

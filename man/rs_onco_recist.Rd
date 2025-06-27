@@ -7,20 +7,20 @@
 \format{
 A data frame with 14 columns:
 \describe{
-\item{DOMAIN}{undocumented field}
-\item{STUDYID}{undocumented field}
-\item{USUBJID}{undocumented field}
-\item{VISITNUM}{undocumented field}
-\item{VISIT}{undocumented field}
-\item{RSTESTCD}{undocumented field}
-\item{RSTEST}{undocumented field}
-\item{RSORRES}{undocumented field}
-\item{RSSTRESC}{undocumented field}
-\item{RSEVAL}{undocumented field}
-\item{RSEVALID}{undocumented field}
-\item{RSACPTFL}{undocumented field}
-\item{RSDTC}{undocumented field}
-\item{RSSEQ}{undocumented field}
+\item{DOMAIN}{Domain Abbreviation}
+\item{STUDYID}{Study Identifier}
+\item{USUBJID}{Unique Subject Identifier}
+\item{VISITNUM}{Visit Number}
+\item{VISIT}{Visit Name}
+\item{RSTESTCD}{Assessment Short Name}
+\item{RSTEST}{Assessment Name}
+\item{RSORRES}{Result or Finding in Original Units}
+\item{RSSTRESC}{Character Result/Finding in Std Format}
+\item{RSEVAL}{Evaluator}
+\item{RSEVALID}{Evaluator Identifier}
+\item{RSACPTFL}{Accepted Record Flag}
+\item{RSDTC}{Date/Time of Assessment}
+\item{RSSEQ}{Sequence Number}
 }
 }
 \source{
@@ -36,6 +36,11 @@ A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creatio
 Disease Response (RECIST 1.1) for Oncology
 
 A SDTM RS dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{RSTESTCD} \tab \strong{RSTEST} \cr
+OVRLRESP \tab Overall Response
+}
 }
 \author{
 Stefan Bundfuss

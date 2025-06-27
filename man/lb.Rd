@@ -45,6 +45,57 @@ An updated SDTM LB dataset that uses data from the CDISC pilot project
 Laboratory Measurements
 
 An updated SDTM LB dataset that uses data from the CDISC pilot project
+
+Contains a set of 47 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{LBTESTCD} \tab \strong{LBTEST} \cr
+ALB     \tab Albumin                                \cr
+ALP     \tab Alkaline Phosphatase                   \cr
+ALT     \tab Alanine Aminotransferase               \cr
+ANISO   \tab Anisocytes                             \cr
+AST     \tab Aspartate Aminotransferase             \cr
+BASO    \tab Basophils                              \cr
+BASOLE  \tab Basophils/Leukocytes                   \cr
+BILI    \tab Bilirubin                              \cr
+BUN     \tab Blood Urea Nitrogen                    \cr
+CA      \tab Calcium                                \cr
+CHOL    \tab Cholesterol                            \cr
+CK      \tab Creatine Kinase                        \cr
+CL      \tab Chloride                               \cr
+COLOR   \tab Color                                  \cr
+CREAT   \tab Creatinine                             \cr
+EOS     \tab Eosinophils                            \cr
+EOSLE   \tab Eosinophils/Leukocytes                 \cr
+GGT     \tab Gamma Glutamyl Transferase             \cr
+GLUC    \tab Glucose                                \cr
+HBA1C   \tab Hemoglobin A1C                         \cr
+HCT     \tab Hematocrit                             \cr
+HGB     \tab Hemoglobin                             \cr
+K       \tab Potassium                              \cr
+KETONES \tab Ketones                                \cr
+LYM     \tab Lymphocytes                            \cr
+LYMLE   \tab Lymphocytes/Leukocytes                 \cr
+MACROCY \tab Macrocytes                             \cr
+MCH     \tab Ery. Mean Corpuscular Hemoglobin       \cr
+MCHC    \tab Ery. Mean Corpuscular HGB Concentration\cr
+MCV     \tab Ery. Mean Corpuscular Volume           \cr
+MICROCY \tab Microcytes                             \cr
+MONO    \tab Monocytes                              \cr
+MONOLE  \tab Monocytes/Leukocytes                   \cr
+PH      \tab pH                                     \cr
+PHOS    \tab Phosphate                              \cr
+PLAT    \tab Platelet                               \cr
+POIKILO \tab Poikilocytes                           \cr
+POLYCHR \tab Polychromasia                          \cr
+PROT    \tab Protein                                \cr
+RBC     \tab Erythrocytes                           \cr
+SODIUM  \tab Sodium                                 \cr
+SPGRAV  \tab Specific Gravity                       \cr
+TSH     \tab Thyrotropin                            \cr
+URATE   \tab Urate                                  \cr
+UROBIL  \tab Urobilinogen                           \cr
+VITB12  \tab Vitamin B12                            \cr
+WBC     \tab Leukocytes
+}
 }
 \author{
 Annie Yang

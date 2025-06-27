@@ -10,7 +10,7 @@
 #' @keywords dataset
 #' @description A SDTM LB dataset containing relevant laboratory measurements for metabolic studies
 #' @docType data
-#' @format A data frame with 23 columns:
+#' @format A data frame with 24 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -30,6 +30,7 @@
 #'     \item{LBSTNRHI}{Reference Range Upper Limit-Std Units}
 #'     \item{LBNRIND}{Reference Range Indicator}
 #'     \item{LBBLFL}{Baseline Flag}
+#'     \item{LBFAST}{Fasting Status}
 #'     \item{VISITNUM}{Visit Number}
 #'     \item{VISIT}{Visit Name}
 #'     \item{VISITDY}{Planned Study Day of Visit}
@@ -38,4 +39,17 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
+#' @details Contains a set of 9 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{LBTESTCD} \tab \strong{LBTEST} \cr
+#'   ALB      \tab Albumin                   \cr
+#'   ALP      \tab Alkaline Phosphatase      \cr
+#'   AST      \tab Aspartate Aminotransferase\cr
+#'   CHOL     \tab Cholesterol               \cr
+#'   GGT      \tab Gamma Glutamyl Transferase\cr
+#'   GLUC     \tab Glucose                   \cr
+#'   HBA1CHGB \tab Hemoglobin A1C/Hemoglobin \cr
+#'   INSULIN  \tab Insulin                   \cr
+#'   TRIG     \tab Triglycerides
+#' }
+
 "lb_metabolic"

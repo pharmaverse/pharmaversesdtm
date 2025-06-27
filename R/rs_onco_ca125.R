@@ -12,21 +12,26 @@
 #' @docType data
 #' @format A data frame with 13 columns:
 #'   \describe{
-#'     \item{STUDYID}{undocumented field}
-#'     \item{DOMAIN}{undocumented field}
-#'     \item{USUBJID}{undocumented field}
-#'     \item{RSSEQ}{undocumented field}
-#'     \item{RSTESTCD}{undocumented field}
-#'     \item{RSTEST}{undocumented field}
-#'     \item{RSCAT}{undocumented field}
-#'     \item{RSORRES}{undocumented field}
-#'     \item{RSSTRESC}{undocumented field}
-#'     \item{RSEVAL}{undocumented field}
-#'     \item{VISITNUM}{undocumented field}
-#'     \item{VISIT}{undocumented field}
-#'     \item{RSDTC}{undocumented field}
+#'     \item{STUDYID}{Study Identifier}
+#'     \item{DOMAIN}{Domain Abbreviation}
+#'     \item{USUBJID}{Unique Subject Identifier}
+#'     \item{RSSEQ}{Sequence Number}
+#'     \item{RSTESTCD}{Assessment Short Name}
+#'     \item{RSTEST}{Assessment Name}
+#'     \item{RSCAT}{Category for Assessment}
+#'     \item{RSORRES}{Result or Finding in Original Units}
+#'     \item{RSSTRESC}{Character Result/Finding in Std Format}
+#'     \item{RSEVAL}{Evaluator}
+#'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
+#'     \item{RSDTC}{Date/Time of Assessment}
 #'   }
 #'
 #' @source Generated dataset ([rs_supprs_onco_ca125.R](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data-raw/rs_supprs_onco_ca125.R))
 #' @author Vinh Nguyen
+#' @details Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+#'   \strong{RSTESTCD} \tab \strong{RSTEST} \cr
+#'   OVRLRESP \tab Overall Response
+#' }
+
 "rs_onco_ca125"

@@ -7,26 +7,26 @@
 \format{
 A data frame with 20 columns:
 \describe{
-\item{STUDYID}{undocumented field}
-\item{DOMAIN}{undocumented field}
-\item{USUBJID}{undocumented field}
-\item{QSSEQ}{undocumented field}
-\item{QSTESTCD}{undocumented field}
-\item{QSTEST}{undocumented field}
-\item{QSCAT}{undocumented field}
-\item{QSSCAT}{undocumented field}
-\item{QSORRES}{undocumented field}
-\item{QSORRESU}{undocumented field}
-\item{QSSTRESC}{undocumented field}
-\item{QSSTRESN}{undocumented field}
-\item{QSSTRESU}{undocumented field}
-\item{QSBLFL}{undocumented field}
-\item{QSDRVFL}{undocumented field}
-\item{VISITNUM}{undocumented field}
-\item{VISIT}{undocumented field}
-\item{VISITDY}{undocumented field}
-\item{QSDTC}{undocumented field}
-\item{QSDY}{undocumented field}
+\item{STUDYID}{Study Identifier}
+\item{DOMAIN}{Domain Abbreviation}
+\item{USUBJID}{Unique Subject Identifier}
+\item{QSSEQ}{Sequence Number}
+\item{QSTESTCD}{Question Short Name}
+\item{QSTEST}{Question Name}
+\item{QSCAT}{Category of Question}
+\item{QSSCAT}{Subcategory for Question}
+\item{QSORRES}{Finding in Original Units}
+\item{QSORRESU}{Original Units}
+\item{QSSTRESC}{Character Result/Finding in Std Format}
+\item{QSSTRESN}{Numeric Finding in Standard Units}
+\item{QSSTRESU}{Standard Units}
+\item{QSBLFL}{Baseline Flag}
+\item{QSDRVFL}{Derived Flag}
+\item{VISITNUM}{Visit Number}
+\item{VISIT}{Visit Name}
+\item{VISITDY}{Planned Study Day of Visit}
+\item{QSDTC}{Date/Time of Finding}
+\item{QSDY}{Study Day of Finding}
 }
 }
 \source{
@@ -42,5 +42,38 @@ An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire
 Questionnaire for Ophthalmology
 
 An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
+
+Contains a set of 29 unique Test Short Names and Test Names: \tabular{ll}{
+\strong{QSTESTCD} \tab \strong{QSTEST} \cr
+VFQ1  \tab Your Overall Health Is                    \cr
+VFQ10 \tab Difficulty Noticing Objects to Side       \cr
+VFQ11 \tab Difficulty Seeing How People React        \cr
+VFQ12 \tab Difficulty Picking Out Own Clothes        \cr
+VFQ13 \tab Difficulty Visiting With People           \cr
+VFQ14 \tab Difficulty Going Out to See Movies        \cr
+VFQ15 \tab Are You Currently Driving                 \cr
+VFQ16 \tab Difficulty Driving During Daytime         \cr
+VFQ17 \tab Difficulty Driving at Night               \cr
+VFQ18 \tab Driving in Difficult Conditions           \cr
+VFQ19 \tab Eye Pain Keep You From Doing What You Like\cr
+VFQ2  \tab Eyesight Using Both Eyes Is               \cr
+VFQ20 \tab I Stay Home Most of the Time              \cr
+VFQ21 \tab I Feel Frustrated a Lot of the Time       \cr
+VFQ22 \tab I Need a Lot of Help From Others          \cr
+VFQ23 \tab Worry I'll Do Embarrassing Things         \cr
+VFQ24 \tab Difficulty Reading Small Print            \cr
+VFQ25 \tab Difficulty Figure Out Bill Accuracy       \cr
+VFQ26 \tab Difficulty Shaving or Styling Hair        \cr
+VFQ27 \tab Difficulty Recognizing People             \cr
+VFQ28 \tab Difficulty Taking Part in Sports          \cr
+VFQ29 \tab Difficulty Seeing Programs on TV          \cr
+VFQ3  \tab How Often You Worry About Eyesight        \cr
+VFQ4  \tab How Often Pain in and Around Eyes         \cr
+VFQ5  \tab Difficulty Reading Newspapers             \cr
+VFQ6  \tab Difficulty Doing Work/Hobbies             \cr
+VFQ7  \tab Difficulty Finding on Crowded Shelf       \cr
+VFQ8  \tab Difficulty Reading Street Signs           \cr
+VFQ9  \tab Difficulty Going Down Step at Night
+}
 }
 \keyword{dataset}

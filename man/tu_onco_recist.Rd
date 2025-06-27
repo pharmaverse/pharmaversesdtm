@@ -7,22 +7,22 @@
 \format{
 A data frame with 16 columns:
 \describe{
-\item{DOMAIN}{undocumented field}
-\item{STUDYID}{undocumented field}
-\item{USUBJID}{undocumented field}
-\item{VISIT}{undocumented field}
-\item{VISITNUM}{undocumented field}
-\item{TULOC}{undocumented field}
-\item{TUTESTCD}{undocumented field}
-\item{TUTEST}{undocumented field}
-\item{TUORRES}{undocumented field}
-\item{TUSTRESC}{undocumented field}
-\item{TUMETHOD}{undocumented field}
-\item{TULNKID}{undocumented field}
-\item{TUEVAL}{undocumented field}
-\item{TUEVALID}{undocumented field}
-\item{TUACPTFL}{undocumented field}
-\item{TUSEQ}{undocumented field}
+\item{DOMAIN}{Domain Abbreviation}
+\item{STUDYID}{Study Identifier}
+\item{USUBJID}{Unique Subject Identifier}
+\item{VISIT}{Visit Name}
+\item{VISITNUM}{Visit Number}
+\item{TULOC}{Location of the Tumor/Lesion}
+\item{TUTESTCD}{Tumor/Lesion ID Short Name}
+\item{TUTEST}{Tumor/Lesion ID Test Name}
+\item{TUORRES}{Tumor/Lesion ID Result}
+\item{TUSTRESC}{Tumor/Lesion ID Result Std. Format}
+\item{TUMETHOD}{Method of Identification}
+\item{TULNKID}{Link ID}
+\item{TUEVAL}{Evaluator}
+\item{TUEVALID}{Evaluator Identifier}
+\item{TUACPTFL}{Accepted Record Flag}
+\item{TUSEQ}{Sequence Number}
 }
 }
 \source{
@@ -38,6 +38,11 @@ A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creatio
 Tumor Identification (RECIST 1.1) for Oncology
 
 A SDTM TU dataset using RECIST 1.1 intended for examples of ADaM dataset creation
+
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{TUTESTCD} \tab \strong{TUTEST} \cr
+TUMIDENT \tab Tumor Identification
+}
 }
 \author{
 Stefan Bundfuss

@@ -39,4 +39,12 @@
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers
+#' @details Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{ISTESTCD} \tab \strong{ISTEST} \cr
+#'   I0019NT \tab I0019NT Antibody\cr
+#'   J0033VN \tab J0033VN Antibody\cr
+#'   M0019LN \tab M0019LN Antibody\cr
+#'   R0003MA \tab R0003MA Antibody
+#' }
+
 "is_vaccine"

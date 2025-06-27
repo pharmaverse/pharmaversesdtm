@@ -39,4 +39,17 @@
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
+#' @details Contains a set of 9 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{VSTESTCD} \tab \strong{VSTEST} \cr
+#'   BMI    \tab Body Mass Index         \cr
+#'   DIABP  \tab Diastolic Blood Pressure\cr
+#'   HEIGHT \tab Height                  \cr
+#'   HIPCIR \tab Hip Circumference       \cr
+#'   PULSE  \tab Pulse Rate              \cr
+#'   SYSBP  \tab Systolic Blood Pressure \cr
+#'   TEMP   \tab Temperature             \cr
+#'   WEIGHT \tab Weight                  \cr
+#'   WSTCIR \tab Waist Circumference
+#' }
+
 "vs_metabolic"

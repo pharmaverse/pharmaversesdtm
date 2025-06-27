@@ -40,4 +40,13 @@
 #'
 #' @source Generated dataset.
 #' @author Gopi Vegesna
+#' @details Contains a set of 5 unique Test Short Names and Test Names: \tabular{ll}{
+#'   \strong{TRTESTCD} \tab \strong{TRTEST} \cr
+#'   DIAMETER \tab Diameter             \cr
+#'   LDIAM    \tab Longest Diameter     \cr
+#'   LPERP    \tab Longest Perpendicular\cr
+#'   SUMDIAM  \tab Sum of Diameter      \cr
+#'   TUMSTATE \tab Tumor State
+#' }
+
 "tr_onco"

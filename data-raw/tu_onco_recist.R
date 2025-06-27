@@ -2,7 +2,7 @@
 
 library(stringr)
 library(dplyr)
-
+library(metatools)
 
 # read tr_screen created by tr_onco_recist.R
 tr_screen <- readRDS("data-raw/tu_help_data.rds")
@@ -24,7 +24,7 @@ tu <- tr_screen %>%
       locations[as.numeric(SUBJNR) + as.numeric(substr(TRLNKID, str_length(TRLNKID), str_length(TRLNKID)))]
     ),
     TUTESTCD = "TUMIDENT",
-    TUTEST = "Tumore Identification"
+    TUTEST = "Tumor Identification"
   )
 
 tu_onco_recist <- tu %>%
@@ -46,6 +46,27 @@ tu_onco_recist <- tu %>%
     by_vars = exprs(USUBJID),
     new_var = TUSEQ,
     order = exprs(TUEVAL, TUEVALID)
+  )
+
+# label variables
+tu_onco_recist <- tu_onco_recist %>%
+  add_labels(
+    DOMAIN = "Domain Abbreviation",
+    STUDYID = "Study Identifier",
+    USUBJID = "Unique Subject Identifier",
+    VISIT = "Visit Name",
+    VISITNUM = "Visit Number",
+    TULOC = "Location of the Tumor/Lesion",
+    TUTESTCD = "Tumor/Lesion ID Short Name",
+    TUTEST = "Tumor/Lesion ID Test Name",
+    TUORRES = "Tumor/Lesion ID Result",
+    TUSTRESC = "Tumor/Lesion ID Result Std. Format",
+    TUMETHOD = "Method of Identification",
+    TULNKID = "Link ID",
+    TUEVAL = "Evaluator",
+    TUEVALID = "Evaluator Identifier",
+    TUACPTFL = "Accepted Record Flag",
+    TUSEQ = "Sequence Number"
   )
 
 usethis::use_data(tu_onco_recist, overwrite = TRUE)

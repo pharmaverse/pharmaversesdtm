@@ -34,6 +34,11 @@ A SDTM SC dataset simulated by Ophthalmology team
 Subject Characteristic for Ophthalmology
 
 A SDTM SC dataset simulated by Ophthalmology team
+
+Contains a set of 1 unique Test Short Name and Test Name: \tabular{ll}{
+\strong{SCTESTCD} \tab \strong{SCTEST} \cr
+FOCID \tab Focus of Study-Specific Interest
+}
 }
 \author{
 Gordon Miller
