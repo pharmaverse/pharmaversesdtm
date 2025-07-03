@@ -14,6 +14,7 @@ Authors@R: c(
     person("Sadchla", "Mascary", role = "aut"),
     person("Stefan", "Bundfuss", role = "aut",
            comment = c(ORCID = "0009-0005-0027-1198")),
+    person("Tomoyuki", "Namai", role = "aut"),
     person("Vinh", "Nguyen", role = "aut"),
     person("Vladyslav", "Shuliar", role = "aut",
            comment = c(ORCID = "0009-0008-2354-8999")),

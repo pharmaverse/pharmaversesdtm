@@ -15,6 +15,8 @@
 
 - Updated `ex_vaccine` dataset to remove the non-standard CDISC SDTM variables. (#170)
 
+- Oncology response data for PCWG3 criteria (`rs_onco_pcwg3`) was added. (#143)
+
 ## Documentation
 
 - Removed outdated references to `{renv}` in the package README. (#113)
