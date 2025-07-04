@@ -1,17 +1,17 @@
-# pharmaversesdtm (development version)
+# pharmaversesdtm 1.3.0
 
 ## New Features
 
-- Units for EG data were updated to be consistent with SDTM guidelines. (#129)  
+- Units for `eg` dataset were updated to be consistent with SDTM guidelines. (#129)  
 
 - Added following Metabolic specific SDTM datasets: (#136, #139)
 
     - `dm_metabolic`
     - `qs_metabolic`
     - `vs_metabolic`
-    - `lb_metabolic`
+    - `lb_metabolic`.
 
-- Updated OE dataset to include both pre and post-dose IOP. (#134)
+- Updated `oe_ophtha` to include both pre and post-dose IOP. (#134)
 
 - Updated `ex_vaccine` dataset to remove the non-standard CDISC SDTM variables. (#170)
 
