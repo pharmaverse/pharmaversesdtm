@@ -51,4 +51,12 @@
 #'
 #' @source [Access the source of the Adverse Events dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ae.rda)
 #' @author Gopi Vegesna
+#'
+#' @examplesWebR embed height=450
+#' # Load the data
+#' library(dplyr)
+#' data(ae)
+#' ae %>%
+#'   select(USUBJID, AEDECOD, AESTDTC) %>%
+#'   head()
 "ae"

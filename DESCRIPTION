@@ -42,9 +42,13 @@ Suggests:
     roxygen2,
     spelling,
     testthat,
-    usethis
+    usethis,
+    rocleteer
+Remotes: 
+  coatless-rpkg/rocleteer
+Config/rocleteer/webr-repo: https://rd.thecoatlessprofessor.com/webr-in-pkgdown
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-Roxygen: list(markdown = TRUE)
+Roxygen: list(markdown = TRUE, packages = c("rocleteer"))
 RoxygenNote: 7.3.2
