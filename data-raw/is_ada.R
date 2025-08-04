@@ -41,9 +41,9 @@ noise_group <- runif(n = subrows, min = 1, max = 7)
 allsubs$ADACAT <- floor(noise_group)
 
 
-allsubs  %>%
+allsubs %>%
   group_by(ADACAT) %>%
-  summarize (n = n()) %>%
+  summarize(n = n()) %>%
   print(n = 100)
 
 # Merge allsubs back into dmex1
@@ -57,8 +57,8 @@ dmex2 <- dmex1 %>%
 # Use noise and compute random titer values (in K and V)
 nrows <- dim(dmex2)[1]
 
-noise1 <- runif(n = nrows, min = 1.35, max = 1.6 )
-noise2 <- runif(n = nrows, min = 2.0, max = 3.0 )
+noise1 <- runif(n = nrows, min = 1.35, max = 1.6)
+noise2 <- runif(n = nrows, min = 2.0, max = 3.0)
 
 dmex2$K <- noise1
 dmex2$V <- noise2
@@ -80,46 +80,41 @@ dmex3 <- dmex2 %>%
       ADACAT == 6 ~ V,
       TRUE ~ NA_real_
     ),
-    titer_orig=titer,
-    titer = case_when (
+    titer_orig = titer,
+    titer = case_when(
       ADACAT == 3 & VISITDY == 1 ~ NA_real_,
       ADACAT == 6 & VISITDY == 1 ~ K,
       TRUE ~ titer
     ),
-    titer = round(signif(titer, 3),3),
+    titer = round(signif(titer, 3), 3),
     t = -0.5
   )
 
 IS_PLACEBO <- dmex3 %>%
-  filter (EXTRT == "PLACEBO" & VISITDY ==1)
+  filter(EXTRT == "PLACEBO" & VISITDY == 1)
 
 IS_ACTIVE <- dmex3 %>%
-  filter (! EXTRT == "PLACEBO")
+  filter(!EXTRT == "PLACEBO")
 
-PRE_IS <- rbind (IS_PLACEBO, IS_ACTIVE)  %>%
-  arrange(USUBJID, VISITDY)  %>%
+PRE_IS <- rbind(IS_PLACEBO, IS_ACTIVE) %>%
+  arrange(USUBJID, VISITDY) %>%
   mutate(
-
-    ISSTRESN=titer,
-
-    ISSTRESC=case_when(
+    ISSTRESN = titer,
+    ISSTRESC = case_when(
       !is.na(ISSTRESN) & ISSTRESN < 1.40 ~ "<1.40",
       !is.na(ISSTRESN) ~ as.character(ISSTRESN),
       TRUE ~ "NEGATIVE"
     ),
-
-    ISSTRESN=case_when(
+    ISSTRESN = case_when(
       !is.na(ISSTRESN) & ISSTRESN < 1.40 ~ NA_real_,
       TRUE ~ ISSTRESN
     ),
-
     ISSTRESU = case_when(
-      !is.na(ISSTRESN) ~ 'titer',
+      !is.na(ISSTRESN) ~ "titer",
       TRUE ~ NA_character_
     ),
     ISORRES = ISSTRESN,
     ISORRESU = ISSTRESU
-
   )
 
 ## Constant vars ----
@@ -129,19 +124,19 @@ PRE_IS$ISTEST <- "Binding Antidrug Antibody"
 PRE_IS$ISBDAGNT <- "XANOMELINE"
 PRE_IS$ISNAM <- "Imaginary Labs"
 PRE_IS$ISSPEC <- "SERUM"
-PRE_IS$ISTPTNUM <-  PRE_IS$t
+PRE_IS$ISTPTNUM <- PRE_IS$t
 PRE_IS$ISTPT <- "Pre-dose"
 PRE_IS$ISLLOQ <- NA_character_
 
 ## ISDTC, ISDY and VISITDY ----
 PRE_IS$ISDTC <- format(as.Date(PRE_IS$EXSTDTC) + minutes(round(PRE_IS$t * 60)), "%Y-%m-%dT%H:%M:%S")
-PRE_IS$ISDY <- ifelse(PRE_IS$VISITDY==1, -1, PRE_IS$EXSTDY-1)
+PRE_IS$ISDY <- ifelse(PRE_IS$VISITDY == 1, -1, PRE_IS$EXSTDY - 1)
 PRE_IS$VISITDY_orig <- PRE_IS$VISITDY
-PRE_IS$VISITDY <- ifelse(PRE_IS$VISITDY_orig==1, -1, PRE_IS$VISITDY_orig-1)
+PRE_IS$VISITDY <- ifelse(PRE_IS$VISITDY_orig == 1, -1, PRE_IS$VISITDY_orig - 1)
 
 IS_view <- PRE_IS %>%
-  select (USUBJID, EXTRT, ISSPEC, ISTESTCD, ISTEST, ISBDAGNT, VISIT, VISITNUM, VISITDY_orig, VISITDY, t, ISTPT, ISTPTNUM, EXSTDTC,  ISDTC,  EXSTDY, ISDY, ADACAT, ISSTRESN, ISSTRESC)  %>%
-  arrange (USUBJID, ISTEST, VISITNUM, ISTPTNUM)
+  select(USUBJID, EXTRT, ISSPEC, ISTESTCD, ISTEST, ISBDAGNT, VISIT, VISITNUM, VISITDY_orig, VISITDY, t, ISTPT, ISTPTNUM, EXSTDTC, ISDTC, EXSTDY, ISDY, ADACAT, ISSTRESN, ISSTRESC) %>%
+  arrange(USUBJID, ISTEST, VISITNUM, ISTPTNUM)
 
 
 ## Set or remove to create some unusual situations then compute ISSEQ -------------
@@ -158,53 +153,47 @@ IS_ada <- PRE_IS %>%
       (USUBJID == "01-704-1093" | USUBJID == "01-704-1120") & VISIT == "BASELINE" ~ TRUE,
       TRUE ~ FALSE
     ),
-
     ISSTRESN = case_when(
       USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_real_,
       TRUE ~ ISSTRESN
     ),
-
     ISORRES = case_when(
       USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_real_,
       TRUE ~ ISORRES
     ),
-
     ISSTRESU = case_when(
       USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_character_,
       TRUE ~ ISSTRESU
     ),
-
     ISORRESU = case_when(
       USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_character_,
       TRUE ~ ISORRESU
     ),
-
     ISSTRESC = case_when(
       USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ "POSITIVE CONFIRMATION",
       TRUE ~ ISSTRESC
     ),
-
-
-
-  )  %>%
-  filter (DROPIT == FALSE) %>%
+  ) %>%
+  filter(DROPIT == FALSE) %>%
   group_by(STUDYID, USUBJID) %>%
   dplyr::mutate(ISSEQ = row_number()) %>%
   ungroup() %>%
   arrange(STUDYID, USUBJID, ISSEQ) %>%
-  select(STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, VISIT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU,
-         ISNAM, ISSPEC, ISLLOQ, VISIT, VISITNUM, VISITDY, ISDTC, ISDY, ISTPT, ISTPTNUM)
+  select(
+    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, VISIT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU,
+    ISNAM, ISSPEC, ISLLOQ, VISIT, VISITNUM, VISITDY, ISDTC, ISDY, ISTPT, ISTPTNUM
+  )
 
 
 
 IS_ada %>%
-  group_by(ISTESTCD,ISBDAGNT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU ) %>%
+  group_by(ISTESTCD, ISBDAGNT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU) %>%
   summarize(n = n()) %>%
   print(n = 100)
 
 
 IS_ada %>%
-  group_by(ISTESTCD,ISBDAGNT, VISIT, VISITNUM, ISTPT, ISTPTNUM ) %>%
+  group_by(ISTESTCD, ISBDAGNT, VISIT, VISITNUM, ISTPT, ISTPTNUM) %>%
   summarize(n = n()) %>%
   print(n = 500)
 
