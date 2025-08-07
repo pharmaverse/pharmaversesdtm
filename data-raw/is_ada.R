@@ -31,7 +31,7 @@ dm1 <- dm %>%
 dmex1 <- merge(dm1[, c(1, 3)], ex, by = c("STUDYID", "USUBJID"))
 
 
-# Get unique USUBJID and assign them an random ADACAT
+# Get unique USUBJID and assign them an random ADACAT and NABCAT
 
 allsubs <- dmex1 %>%
   distinct(USUBJID)
@@ -39,12 +39,20 @@ allsubs <- dmex1 %>%
 subrows <- dim(allsubs)[1]
 noise_group <- runif(n = subrows, min = 1, max = 7)
 allsubs$ADACAT <- floor(noise_group)
-
+noise_group <- runif(n = subrows, min = 1, max = 7)
+allsubs$NABCAT <- floor(noise_group)
 
 allsubs %>%
   group_by(ADACAT) %>%
   summarize(n = n()) %>%
   print(n = 100)
+
+
+allsubs %>%
+  group_by(NABCAT) %>%
+  summarize(n = n()) %>%
+  print(n = 100)
+
 
 # Merge allsubs back into dmex1
 
@@ -180,14 +188,53 @@ IS_ada <- PRE_IS %>%
   ungroup() %>%
   arrange(STUDYID, USUBJID, ISSEQ) %>%
   select(
-    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, VISIT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU,
+    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, VISIT, ADACAT, NABCAT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU,
     ISNAM, ISSPEC, ISLLOQ, VISIT, VISITNUM, VISITDY, ISDTC, ISDY, ISTPT, ISTPTNUM
   )
 
 
 
+# Compute NAB data --------------------------------------------------------
+
+
+## Assign NAB results types based on random ADACAT and NABCAT
+# NAB POS: ADACAT=4 and NABCAT=1 or ADACAT=6 and NABCAT=1
+# Note: ADACAT 4 are 6 are ADA Positive categories.
+
+
+IS_positive <- IS_ada %>%
+  filter (ISSTRESC != "NEGATIVE") %>%
+  mutate(
+    ISSTRESC  = case_when(
+      (ADACAT == 4 | ADACAT == 6) &  NABCAT == 1 ~ "POSITIVE",
+      TRUE ~ "NEGATIVE"
+    )
+  )
+
+
+IS_positive$ISTESTCD <- "ADA_NAB"
+IS_positive$ISTEST <- "Neutralizing Binding Antidrug Antibody"
+IS_positive$ISORRES <-  NA_real_
+IS_positive$ISORRESU <- NA_character_
+IS_positive$ISSTRESN <- NA_real_
+IS_positive$ISSTRESU <- NA_character_
+
+
+# View all the unique ADA Analytes kept
+IS_positive %>%
+  group_by(ISTESTCD, ISTEST, ISBDAGNT, ISSTRESC) %>%
+  summarize(n = n()) %>%
+  print(n = 100)
+
+
+# Set main IS_ada with  IS_positive
+
+IS_ada <- rbind (IS_ada, IS_positive)  %>%
+  arrange (ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY)  %>%
+  select (-ADACAT, -NABCAT)
+
 IS_ada %>%
-  group_by(ISTESTCD, ISBDAGNT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU) %>%
+  group_by(ISTESTCD, ISTEST, ISBDAGNT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU) %>%
   summarize(n = n()) %>%
   print(n = 100)
 
@@ -230,3 +277,4 @@ attr(is_ada, "label") <- "Immunogenicity Specimen Assessments"
 
 # Save dataset ----
 usethis::use_data(is_ada, overwrite = TRUE)
+
