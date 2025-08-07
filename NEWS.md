@@ -2,6 +2,10 @@
 
 ## New Features
 
+- Added Anti-Drug Antibody specific SDTM dataset: (#183)
+
+    - `is_ada`
+
 - Units for `eg` dataset were updated to be consistent with SDTM guidelines. (#129)  
 
 - Added following Metabolic specific SDTM datasets: (#136, #139)
