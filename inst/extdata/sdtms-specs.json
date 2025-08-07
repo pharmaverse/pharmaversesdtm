@@ -338,6 +338,12 @@
      "label": "Laboratory Measurements Dataset-metabolic",
      "description": "A SDTM LB dataset containing relevant laboratory measurements for metabolic studies",
      "source": "Constructed by {admiralmetabolic} developers"
+    },
+    {
+     "name": "is_ada",
+     "label": "Immunogenicity Specimen Assessments for ADA",
+     "description": "A SDTM IS dataset containing relevant antidrug antibody aassesment studies",
+     "source": "Constructed by {admiralmetabolic} developers"
     }
   ]
 }
