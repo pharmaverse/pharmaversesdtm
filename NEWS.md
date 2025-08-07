@@ -1,3 +1,9 @@
+# pharmaversesdtm (development version)
+
+## Documentation
+
+- The package maintainer was updated from Edoardo Mancini to Lina Patil. (#186)
+
 # pharmaversesdtm 1.3.0
 
 ## New Features
