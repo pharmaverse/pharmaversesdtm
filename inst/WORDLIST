@@ -10,7 +10,9 @@ Ae
 Alanine
 Aminotransferase
 Anisocytes
+Antidrug
 Aspartate
+BAB
 BASO
 BASOLE
 BILI
@@ -36,6 +38,7 @@ DIABP
 DM
 DRSSR
 DS
+Dahnert
 ECGINT
 EG
 EGTEST
@@ -90,7 +93,6 @@ NEI
 NEWLIND
 NEWLPROG
 NTRGRESP
-Namai
 OETEST
 OETESTCD
 ONCO
@@ -161,9 +163,7 @@ TUTEST
 TUTESTCD
 Thampi
 Thyrotropin
-Tomoyuki
 Transferase
-Tumore
 URATE
 UROBIL
 Ungrouped
@@ -180,12 +180,14 @@ WBC
 WSTCIR
 XAN
 XANOMELINE
+aassesment
 admiralmetabolic
 admiralpeds
 admiralvaccine
 ae
 anonymized
 anthropometric
+antidrug
 flavoured
 iRECIST
 onco
