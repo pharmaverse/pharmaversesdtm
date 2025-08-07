@@ -1,3 +1,9 @@
+# pharmaversesdtm (development version)
+
+## Documentation
+
+- `Cytel Inc.` was added to the `LICENSE.md`. (#185)
+
 # pharmaversesdtm 1.3.0
 
 ## New Features
