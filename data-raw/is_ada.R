@@ -203,10 +203,10 @@ IS_ada <- PRE_IS %>%
 
 
 IS_positive <- IS_ada %>%
-  filter (ISSTRESC != "NEGATIVE") %>%
+  filter(ISSTRESC != "NEGATIVE") %>%
   mutate(
-    ISSTRESC  = case_when(
-      (ADACAT == 4 | ADACAT == 6) &  NABCAT == 1 ~ "POSITIVE",
+    ISSTRESC = case_when(
+      (ADACAT == 4 | ADACAT == 6) & NABCAT == 1 ~ "POSITIVE",
       TRUE ~ "NEGATIVE"
     )
   )
@@ -214,7 +214,7 @@ IS_positive <- IS_ada %>%
 
 IS_positive$ISTESTCD <- "ADA_NAB"
 IS_positive$ISTEST <- "Neutralizing Binding Antidrug Antibody"
-IS_positive$ISORRES <-  NA_real_
+IS_positive$ISORRES <- NA_real_
 IS_positive$ISORRESU <- NA_character_
 IS_positive$ISSTRESN <- NA_real_
 IS_positive$ISSTRESU <- NA_character_
@@ -229,9 +229,9 @@ IS_positive %>%
 
 # Set main IS_ada with  IS_positive
 
-IS_ada <- rbind (IS_ada, IS_positive)  %>%
-  arrange (ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY)  %>%
-  select (-ADACAT, -NABCAT)
+IS_ada <- rbind(IS_ada, IS_positive) %>%
+  arrange(ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY) %>%
+  select(-ADACAT, -NABCAT)
 
 IS_ada %>%
   group_by(ISTESTCD, ISTEST, ISBDAGNT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU) %>%
@@ -277,4 +277,3 @@ attr(is_ada, "label") <- "Immunogenicity Specimen Assessments"
 
 # Save dataset ----
 usethis::use_data(is_ada, overwrite = TRUE)
-
