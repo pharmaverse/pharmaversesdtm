@@ -32,7 +32,7 @@ A data frame with 22 columns:
 }
 }
 \source{
-Constructed by {admiralmetabolic} developers
+Generated dataset
 }
 \usage{
 is_ada
@@ -50,5 +50,8 @@ Contains a set of 2 unique Test Short Names and Test Names: \tabular{ll}{
 ADA_BAB \tab Binding Antidrug Antibody             \cr
 ADA_NAB \tab Neutralizing Binding Antidrug Antibody
 }
+}
+\author{
+Kristin Dahnert
 }
 \keyword{dataset}

@@ -36,7 +36,8 @@
 #'     \item{ISTPTNUM}{Planned Time Point Number}
 #'   }
 #'
-#' @source Constructed by {admiralmetabolic} developers
+#' @source Generated dataset
+#' @author Kristin Dahnert
 #' @details Contains a set of 2 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{ISTESTCD} \tab \strong{ISTEST} \cr
 #'   ADA_BAB \tab Binding Antidrug Antibody             \cr
