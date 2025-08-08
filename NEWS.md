@@ -2,6 +2,7 @@
 
 ## Documentation
 
+- The package maintainer was updated from Edoardo Mancini to Lina Patil. (#186)
 - `Cytel Inc.` was added to the `LICENSE.md`. (#185)
 
 # pharmaversesdtm 1.3.0
