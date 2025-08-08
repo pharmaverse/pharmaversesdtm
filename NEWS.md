@@ -1,3 +1,15 @@
+# pharmaversesdtm (development version)
+
+## Various
+
+<details>
+
+<summary>Developer Notes</summary>
+
+* Added copyright holder logos (#184)
+
+</details>
+
 # pharmaversesdtm 1.3.0
 
 ## New Features

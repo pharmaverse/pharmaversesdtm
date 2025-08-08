@@ -3,22 +3,21 @@ Package: pharmaversesdtm
 Title: SDTM Test Data for the 'Pharmaverse' Family of Packages
 Version: 1.3.0
 Authors@R: c(
-    person("Edoardo", "Mancini", , "edoardo.mancini@roche.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0009-0006-4899-8641")),
-    person("Fanny", "Gautier", role = "aut",
-           comment = c(ORCID = "0009-0004-3581-0131")),
-    person("Gayatri", "G", role = "aut"),
-    person("Kangjie", "Zhang", role = "aut"),
-    person("Lina", "Patil", role = "aut"),
-    person("Pooja", "Kumari", role = "aut"),
-    person("Sadchla", "Mascary", role = "aut"),
+    person("Lina", "Patil", email = "lina.patil@cytel.com", role = c("aut", "cre")),
     person("Stefan", "Bundfuss", role = "aut",
            comment = c(ORCID = "0009-0005-0027-1198")),
+    person("Gayatri", "G", role = "aut"),      
+    person("Fanny", "Gautier", email = "fanny.gautier@cytel.com", role = "aut",
+           comment = c(ORCID = "0009-0004-3581-0131")),
+    person("Edoardo", "Mancini", email = "edoardo.mancini@roche.com", role = "aut",
+           comment = c(ORCID = "0009-0006-4899-8641")),
     person("Tomoyuki", "Namai", role = "aut"),
     person("Vinh", "Nguyen", role = "aut"),
     person("Vladyslav", "Shuliar", role = "aut",
            comment = c(ORCID = "0009-0008-2354-8999")),
-    person("Zelos", "Zhu", role = "aut")
+    person("Cytel Inc.", role = c("cph", "fnd")),           
+    person("F. Hoffmann-La Roche AG", role = c("cph", "fnd")),
+    person("GlaxoSmithKline LLC", role = c("cph", "fnd"))           
   )
 Description: A set of Study Data Tabulation Model (SDTM) datasets from the
     Clinical Data Interchange Standards Consortium (CDISC) pilot project
