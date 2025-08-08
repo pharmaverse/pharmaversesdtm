@@ -6,7 +6,6 @@ Authors@R: c(
     person("Lina", "Patil", , "lina.patil@cytel.com", role = c("aut", "cre")),
     person("Stefan", "Bundfuss", role = "aut",
            comment = c(ORCID = "0009-0005-0027-1198")),
-    person("Gayatri", "G", role = "aut"),
     person("Fanny", "Gautier", , "fanny.gautier@cytel.com", role = "aut",
            comment = c(ORCID = "0009-0004-3581-0131")),
     person("Edoardo", "Mancini", , "edoardo.mancini@roche.com", role = "aut",
@@ -14,7 +13,10 @@ Authors@R: c(
     person("Tomoyuki", "Namai", role = "aut"),
     person("Vinh", "Nguyen", role = "aut"),
     person("Vladyslav", "Shuliar", role = "aut",
-           comment = c(ORCID = "0009-0008-2354-8999"))
+           comment = c(ORCID = "0009-0008-2354-8999")),
+    person("Cytel Inc.", role = c("cph", "fnd")),           
+    person("F. Hoffmann-La Roche AG", role = c("cph", "fnd")),
+    person("GlaxoSmithKline LLC", role = c("cph", "fnd"))
   )
 Description: A set of Study Data Tabulation Model (SDTM) datasets from the
     Clinical Data Interchange Standards Consortium (CDISC) pilot project

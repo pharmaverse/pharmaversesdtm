@@ -13,6 +13,22 @@ repo:
 news:
   cran_dates: true
 
+authors:
+  footer:
+    roles: [aut, cre]
+    text: "Developed by Cytel Inc., F. Hoffmann-La Roche AG, GlaxoSmithKline LLC, "
+  sidebar:
+    roles: [aut, fnd]
+  Cytel Inc.:
+    html: "<a href='https://www.cytel.com/'><img src='man/figures/cytel_logo.png' height='25' alt='Cytel logo' /></a>"
+    href: https://www.cytel.com/
+  F. Hoffmann-La Roche AG:
+    html: "<a href='https://www.roche.com/'><img src='man/figures/roche_logo.png' height='32' alt='Roche logo' /></a>"
+    href: https://www.roche.com/
+  GlaxoSmithKline LLC:
+    html: "<a href='https://www.gsk.com/'><img src='man/figures/gsk_logo.png' height='20' alt='GSK logo' /></a>"
+    href: https://gsk.com/
+
 navbar:
   structure:
     left: [reference, news]

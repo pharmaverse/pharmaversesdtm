@@ -24,12 +24,18 @@ Useful links:
 Authors:
 \itemize{
   \item Stefan Bundfuss (\href{https://orcid.org/0009-0005-0027-1198}{ORCID})
-  \item Gayatri G
   \item Fanny Gautier \email{fanny.gautier@cytel.com} (\href{https://orcid.org/0009-0004-3581-0131}{ORCID})
   \item Edoardo Mancini \email{edoardo.mancini@roche.com} (\href{https://orcid.org/0009-0006-4899-8641}{ORCID})
   \item Tomoyuki Namai
   \item Vinh Nguyen
   \item Vladyslav Shuliar (\href{https://orcid.org/0009-0008-2354-8999}{ORCID})
+}
+
+Other contributors:
+\itemize{
+  \item Cytel Inc. [copyright holder, funder]
+  \item F. Hoffmann-La Roche AG [copyright holder, funder]
+  \item GlaxoSmithKline LLC [copyright holder, funder]
 }
 
 }
