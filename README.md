@@ -80,5 +80,5 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 
 Along with the authors and contributors, thanks to the following people for their work on the package:
 
-Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
+G Gayatri, Pooja Kumari, Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
 
