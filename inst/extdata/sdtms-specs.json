@@ -342,7 +342,7 @@
     {
      "name": "is_ada",
      "label": "Immunogenicity Specimen Assessments for ADA",
-     "description": "A SDTM IS dataset containing relevant antidrug antibody aassesment studies",
+     "description": "A SDTM IS dataset containing relevant antidrug antibody assessment studies",
      "source": "Generated dataset",
      "author": "Kristin Dahnert"
     }

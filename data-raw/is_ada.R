@@ -7,10 +7,8 @@
 # PLACEBO subjects purposely only have BASELINE data.
 # Creates a mix of Baseline pos/neg, Post-Baseline pos/neg, plus some missing visits
 
-
 # Load libraries ----
 library(haven)
-library(plyr)
 library(dplyr)
 library(lubridate)
 library(labelled)
@@ -30,9 +28,7 @@ dm1 <- dm %>%
 ## use subjects in both datasets (ex,dm1) to create IS ----
 dmex1 <- merge(dm1[, c(1, 3)], ex, by = c("STUDYID", "USUBJID"))
 
-
 # Get unique USUBJID and assign them an random ADACAT and NABCAT
-
 allsubs <- dmex1 %>%
   distinct(USUBJID)
 
@@ -47,15 +43,12 @@ allsubs %>%
   summarize(n = n()) %>%
   print(n = 100)
 
-
 allsubs %>%
   group_by(NABCAT) %>%
   summarize(n = n()) %>%
   print(n = 100)
 
-
 # Merge allsubs back into dmex1
-
 dmex2 <- dmex1 %>%
   derive_vars_merged(
     dataset_add = allsubs,
@@ -64,13 +57,10 @@ dmex2 <- dmex1 %>%
 
 # Use noise and compute random titer values (in K and V)
 nrows <- dim(dmex2)[1]
-
 noise1 <- runif(n = nrows, min = 1.35, max = 1.6)
 noise2 <- runif(n = nrows, min = 2.0, max = 3.0)
-
 dmex2$K <- noise1
 dmex2$V <- noise2
-
 
 ## Assign ADASTAT types based on ADACAT
 # If Placebo, only keep VISITDY=1
@@ -102,18 +92,32 @@ IS_PLACEBO <- dmex3 %>%
   filter(EXTRT == "PLACEBO" & VISITDY == 1)
 
 IS_ACTIVE <- dmex3 %>%
-  filter(!EXTRT == "PLACEBO")
+  filter(!EXTRT == "PLACEBO") %>%
+  # Manually set a couple NEGATIVE for the last time point.
+  #  These will create a couple Transitional ADA examples
+  mutate(
+    titer = case_when(
+      USUBJID == "01-701-1442" & VISIT == "WEEK 24" ~ 990,
+      USUBJID == "01-710-1249" & VISIT == "WEEK 24" ~ 990,
+      TRUE ~ titer
+    )
+  )
 
 PRE_IS <- rbind(IS_PLACEBO, IS_ACTIVE) %>%
   arrange(USUBJID, VISITDY) %>%
   mutate(
     ISSTRESN = titer,
     ISSTRESC = case_when(
+      # Set a WEEK 2 to null
+      USUBJID == "01-710-1235" & VISIT == "WEEK 2" ~ NA_character_,
+      # Set the two titer Positive to NEGATIVE examples
+      !is.na(ISSTRESN) & ISSTRESN == 990 ~ "NEGATIVE",
       !is.na(ISSTRESN) & ISSTRESN < 1.40 ~ "<1.40",
       !is.na(ISSTRESN) ~ as.character(ISSTRESN),
       TRUE ~ "NEGATIVE"
     ),
     ISSTRESN = case_when(
+      !is.na(ISSTRESN) & ISSTRESN == 990 ~ NA_real_,
       !is.na(ISSTRESN) & ISSTRESN < 1.40 ~ NA_real_,
       TRUE ~ ISSTRESN
     ),
@@ -142,18 +146,12 @@ PRE_IS$ISDY <- ifelse(PRE_IS$VISITDY == 1, -1, PRE_IS$EXSTDY - 1)
 PRE_IS$VISITDY_orig <- PRE_IS$VISITDY
 PRE_IS$VISITDY <- ifelse(PRE_IS$VISITDY_orig == 1, -1, PRE_IS$VISITDY_orig - 1)
 
-IS_view <- PRE_IS %>%
-  select(USUBJID, EXTRT, ISSPEC, ISTESTCD, ISTEST, ISBDAGNT, VISIT, VISITNUM, VISITDY_orig, VISITDY, t, ISTPT, ISTPTNUM, EXSTDTC, ISDTC, EXSTDY, ISDY, ADACAT, ISSTRESN, ISSTRESC) %>%
-  arrange(USUBJID, ISTEST, VISITNUM, ISTPTNUM)
-
-
-## Set or remove to create some unusual situations then compute ISSEQ -------------
-
-## Baseline Negative - No Post baseline data (USUBJID 01-701-1181 has this already)
-## Baseline Positive - No Post-baseline data (USUBJID 01-703-1197 has this already)
-## Baseline Missing -  One post baseline has Positive (use 01-704-1093)
-## Baseline Missing -  No post baseline Positive (use 01-704-1120)
-## Post Baseline has ISSTRESC="POSITIVE" with ISSTRESN = null
+# Set or remove some records to create some unusual situations then compute ISSEQ -------------
+# Baseline Negative - No Post baseline data (USUBJID 01-701-1181 has this already)
+# Baseline Positive - No Post-baseline data (USUBJID 01-703-1197 has this already)
+# Baseline Missing -  One post baseline has Positive (use 01-704-1093)
+# Baseline Missing -  No post baseline Positive (use 01-704-1120)
+# Post Baseline has ISSTRESC="POSITIVE" with ISSTRESN = null
 
 IS_ada <- PRE_IS %>%
   mutate(
@@ -192,25 +190,21 @@ IS_ada <- PRE_IS %>%
     ISNAM, ISSPEC, ISLLOQ, VISIT, VISITNUM, VISITDY, ISDTC, ISDY, ISTPT, ISTPTNUM
   )
 
-
-
 # Compute NAB data --------------------------------------------------------
-
-
-## Assign NAB results types based on random ADACAT and NABCAT
+# Assign NAB results types based on random ADACAT and NABCAT
 # NAB POS: ADACAT=4 and NABCAT=1 or ADACAT=6 and NABCAT=1
 # Note: ADACAT 4 are 6 are ADA Positive categories.
-
 
 IS_positive <- IS_ada %>%
   filter(ISSTRESC != "NEGATIVE") %>%
   mutate(
     ISSTRESC = case_when(
+      # Set this post-baseline record to null
+      USUBJID == "01-709-1326" & VISIT == "WEEK 2" ~ NA_character_,
       (ADACAT == 4 | ADACAT == 6) & NABCAT == 1 ~ "POSITIVE",
       TRUE ~ "NEGATIVE"
     )
   )
-
 
 IS_positive$ISTESTCD <- "ADA_NAB"
 IS_positive$ISTEST <- "Neutralizing Binding Antidrug Antibody"
@@ -219,16 +213,13 @@ IS_positive$ISORRESU <- NA_character_
 IS_positive$ISSTRESN <- NA_real_
 IS_positive$ISSTRESU <- NA_character_
 
-
 # View all the unique ADA Analytes kept
 IS_positive %>%
   group_by(ISTESTCD, ISTEST, ISBDAGNT, ISSTRESC) %>%
   summarize(n = n()) %>%
   print(n = 100)
 
-
-# Set main IS_ada with  IS_positive
-
+# Set main IS_ada with IS_positive
 IS_ada <- rbind(IS_ada, IS_positive) %>%
   arrange(ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY) %>%
   select(-ADACAT, -NABCAT)
@@ -238,12 +229,10 @@ IS_ada %>%
   summarize(n = n()) %>%
   print(n = 100)
 
-
 IS_ada %>%
   group_by(ISTESTCD, ISBDAGNT, VISIT, VISITNUM, ISTPT, ISTPTNUM) %>%
   summarize(n = n()) %>%
   print(n = 500)
-
 
 ## add labels ----
 is_ada <- IS_ada %>%

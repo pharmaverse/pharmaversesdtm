@@ -2,9 +2,7 @@
 
 ## New Features
 
-- Added Anti-Drug Antibody specific SDTM dataset: (#183)
-
-    - `is_ada`
+- Added Anti-Drug Antibody specific SDTM dataset `is_ada`. (#183)
 
 - Units for `eg` dataset were updated to be consistent with SDTM guidelines. (#129)  
 
