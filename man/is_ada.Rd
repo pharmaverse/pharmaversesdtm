@@ -38,12 +38,12 @@ Generated dataset
 is_ada
 }
 \description{
-A SDTM IS dataset containing relevant antidrug antibody aassesment studies
+A SDTM IS dataset containing relevant antidrug antibody assessment studies
 }
 \details{
 Immunogenicity Specimen Assessments for ADA
 
-A SDTM IS dataset containing relevant antidrug antibody aassesment studies
+A SDTM IS dataset containing relevant antidrug antibody assessment studies
 
 Contains a set of 2 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{ISTESTCD} \tab \strong{ISTEST} \cr

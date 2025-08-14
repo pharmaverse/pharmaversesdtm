@@ -3,12 +3,12 @@
 # Manual edits are not recommended, as changes may be overwritten.
 #' Immunogenicity Specimen Assessments for ADA
 #'
-#' A SDTM IS dataset containing relevant antidrug antibody aassesment studies
+#' A SDTM IS dataset containing relevant antidrug antibody assessment studies
 #'
 #' @name is_ada
 #' @title Immunogenicity Specimen Assessments for ADA
 #' @keywords dataset
-#' @description A SDTM IS dataset containing relevant antidrug antibody aassesment studies
+#' @description A SDTM IS dataset containing relevant antidrug antibody assessment studies
 #' @docType data
 #' @format A data frame with 22 columns:
 #'   \describe{
