@@ -1,5 +1,9 @@
 # pharmaversesdtm (development version)
 
+## New Features
+
+- Added Anti-Drug Antibody specific SDTM dataset `is_ada`. (#183)
+
 ## Documentation
 
 - The package maintainer was updated from Edoardo Mancini to Lina Patil. (#186)
@@ -18,8 +22,6 @@
 # pharmaversesdtm 1.3.0
 
 ## New Features
-
-- Added Anti-Drug Antibody specific SDTM dataset `is_ada`. (#183)
 
 - Units for `eg` dataset were updated to be consistent with SDTM guidelines. (#129)  
 
