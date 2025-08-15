@@ -8,7 +8,7 @@
 # Creates a mix of Baseline pos/neg, Post-Baseline pos/neg, plus some missing visits
 
 # Load libraries ----
-library(haven)
+library(tibble)
 library(dplyr)
 library(lubridate)
 library(labelled)
@@ -37,16 +37,6 @@ noise_group <- runif(n = subrows, min = 1, max = 7)
 allsubs$ADACAT <- floor(noise_group)
 noise_group <- runif(n = subrows, min = 1, max = 7)
 allsubs$NABCAT <- floor(noise_group)
-
-allsubs %>%
-  group_by(ADACAT) %>%
-  summarize(n = n()) %>%
-  print(n = 100)
-
-allsubs %>%
-  group_by(NABCAT) %>%
-  summarize(n = n()) %>%
-  print(n = 100)
 
 # Merge allsubs back into dmex1
 dmex2 <- dmex1 %>%
@@ -126,25 +116,30 @@ PRE_IS <- rbind(IS_PLACEBO, IS_ACTIVE) %>%
       TRUE ~ NA_character_
     ),
     ISORRES = ISSTRESN,
-    ISORRESU = ISSTRESU
+    ISORRESU = ISSTRESU,
+    ISDTC = format(as.Date(EXSTDTC) + minutes(round(t * 60)), "%Y-%m-%dT%H:%M:%S"),
+    ISDY = ifelse(VISITDY == 1, -1, EXSTDY - 1),
+    VISITDY_orig = VISITDY,
+    VISITDY = ifelse(VISITDY_orig == 1, -1, VISITDY_orig - 1),
+    ISBLFL = case_when(
+      VISITDY == -1 ~ "Y",
+      TRUE ~ NA_character_
+    ),
+    # Constant vars
+    DOMAIN = "IS",
+    ISCAT = "IMMUNOLOGY",
+    EPOCH = "TREATMENT",
+    ISTESTCD = "ADA_BAB",
+    ISTEST = "Binding Antidrug Antibody",
+    ISBDAGNT = "XANOMELINE",
+    ISSTAT = NA_character_,
+    ISREASND = NA_character_,
+    ISNAM = "Imaginary Labs",
+    ISSPEC = "SERUM",
+    ISTPTNUM = t,
+    ISTPT = "Pre-dose",
+    ISLLOQ = NA_character_
   )
-
-## Constant vars ----
-PRE_IS$DOMAIN <- "IS"
-PRE_IS$ISTESTCD <- "ADA_BAB"
-PRE_IS$ISTEST <- "Binding Antidrug Antibody"
-PRE_IS$ISBDAGNT <- "XANOMELINE"
-PRE_IS$ISNAM <- "Imaginary Labs"
-PRE_IS$ISSPEC <- "SERUM"
-PRE_IS$ISTPTNUM <- PRE_IS$t
-PRE_IS$ISTPT <- "Pre-dose"
-PRE_IS$ISLLOQ <- NA_character_
-
-## ISDTC, ISDY and VISITDY ----
-PRE_IS$ISDTC <- format(as.Date(PRE_IS$EXSTDTC) + minutes(round(PRE_IS$t * 60)), "%Y-%m-%dT%H:%M:%S")
-PRE_IS$ISDY <- ifelse(PRE_IS$VISITDY == 1, -1, PRE_IS$EXSTDY - 1)
-PRE_IS$VISITDY_orig <- PRE_IS$VISITDY
-PRE_IS$VISITDY <- ifelse(PRE_IS$VISITDY_orig == 1, -1, PRE_IS$VISITDY_orig - 1)
 
 # Set or remove some records to create some unusual situations then compute ISSEQ -------------
 # Baseline Negative - No Post baseline data (USUBJID 01-701-1181 has this already)
@@ -184,11 +179,7 @@ IS_ada <- PRE_IS %>%
   group_by(STUDYID, USUBJID) %>%
   dplyr::mutate(ISSEQ = row_number()) %>%
   ungroup() %>%
-  arrange(STUDYID, USUBJID, ISSEQ) %>%
-  select(
-    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, VISIT, ADACAT, NABCAT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU,
-    ISNAM, ISSPEC, ISLLOQ, VISIT, VISITNUM, VISITDY, ISDTC, ISDY, ISTPT, ISTPTNUM
-  )
+  arrange(STUDYID, USUBJID, ISTESTCD, ISBDAGNT, VISITDY)
 
 # Compute NAB data --------------------------------------------------------
 # Assign NAB results types based on random ADACAT and NABCAT
@@ -203,39 +194,26 @@ IS_positive <- IS_ada %>%
       USUBJID == "01-709-1326" & VISIT == "WEEK 2" ~ NA_character_,
       (ADACAT == 4 | ADACAT == 6) & NABCAT == 1 ~ "POSITIVE",
       TRUE ~ "NEGATIVE"
-    )
+    ),
+    ISTESTCD = "ADA_NAB",
+    ISTEST = "Neutralizing Binding Antidrug Antibody",
+    ISORRES = NA_real_,
+    ISORRESU = NA_character_,
+    ISSTRESN = NA_real_,
+    ISSTRESU = NA_character_
   )
 
-IS_positive$ISTESTCD <- "ADA_NAB"
-IS_positive$ISTEST <- "Neutralizing Binding Antidrug Antibody"
-IS_positive$ISORRES <- NA_real_
-IS_positive$ISORRESU <- NA_character_
-IS_positive$ISSTRESN <- NA_real_
-IS_positive$ISSTRESU <- NA_character_
-
-# View all the unique ADA Analytes kept
-IS_positive %>%
-  group_by(ISTESTCD, ISTEST, ISBDAGNT, ISSTRESC) %>%
-  summarize(n = n()) %>%
-  print(n = 100)
-
 # Set main IS_ada with IS_positive
-IS_ada <- rbind(IS_ada, IS_positive) %>%
+IS_all <- rbind(IS_ada, IS_positive) %>%
   arrange(ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY) %>%
-  select(-ADACAT, -NABCAT)
-
-IS_ada %>%
-  group_by(ISTESTCD, ISTEST, ISBDAGNT, ISORRES, ISORRESU, ISSTRESC, ISSTRESN, ISSTRESU) %>%
-  summarize(n = n()) %>%
-  print(n = 100)
-
-IS_ada %>%
-  group_by(ISTESTCD, ISBDAGNT, VISIT, VISITNUM, ISTPT, ISTPTNUM) %>%
-  summarize(n = n()) %>%
-  print(n = 500)
+  select(
+    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISCAT, ISBDAGNT, ISORRES, ISORRESU,
+    ISSTRESC, ISSTRESN, ISSTRESU, ISSTAT, ISREASND, ISNAM, ISSPEC, ISBLFL, ISLLOQ, VISIT, VISITNUM, VISITDY,
+    EPOCH, ISDTC, ISDY, ISTPT, ISTPTNUM
+  )
 
 ## add labels ----
-is_ada <- IS_ada %>%
+is_ada <- IS_all %>%
   set_variable_labels(
     STUDYID = "Study Identifier",
     DOMAIN = "Domain Abbreviation",
@@ -243,18 +221,23 @@ is_ada <- IS_ada %>%
     ISSEQ = "Sequence Number",
     ISTESTCD = "Immunogenicity Test/Exam Short Name",
     ISTEST = "Immunogenicity Test or Examination Name",
+    ISCAT = "Category for Immunogenicity Test",
     ISBDAGNT = "Binding Agent",
     ISORRES = "Result or Finding in Original Units",
     ISORRESU = "Original Units",
     ISSTRESC = "Character Result/Finding in Std Format",
     ISSTRESN = "Numeric Results/Findings in Std. Units",
     ISSTRESU = "Standard Units",
+    ISSTAT = "Completion Status",
+    ISREASND = "Reason Not Done",
     ISNAM = "Vendor Name",
     ISSPEC = "Specimen Type",
+    ISBLFL = "Baseline Flag",
     ISLLOQ = "Lower Limit of Quantitation",
     VISIT = "Visit Name",
     VISITNUM = "Visit Number",
     VISITDY = "Planned Study Day of Visit",
+    EPOCH = "Epoch",
     ISDTC = "Date/Time of Specimen Collection",
     ISDY = "Actual Study Day of Specimen Collection",
     ISTPT = "Planned Time Point Name",

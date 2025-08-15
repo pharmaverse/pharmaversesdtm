@@ -5,7 +5,7 @@
 \alias{is_ada}
 \title{Immunogenicity Specimen Assessments for ADA}
 \format{
-A data frame with 22 columns:
+A data frame with 27 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -13,18 +13,23 @@ A data frame with 22 columns:
 \item{ISSEQ}{Sequence Number}
 \item{ISTESTCD}{Immunogenicity Test/Exam Short Name}
 \item{ISTEST}{Immunogenicity Test or Examination Name}
+\item{ISCAT}{Category for Immunogenicity Test}
 \item{ISBDAGNT}{Binding Agent}
-\item{VISIT}{Visit Name}
 \item{ISORRES}{Result or Finding in Original Units}
 \item{ISORRESU}{Original Units}
 \item{ISSTRESC}{Character Result/Finding in Std Format}
 \item{ISSTRESN}{Numeric Results/Findings in Std. Units}
 \item{ISSTRESU}{Standard Units}
+\item{ISSTAT}{Completion Status}
+\item{ISREASND}{Reason Not Done}
 \item{ISNAM}{Vendor Name}
 \item{ISSPEC}{Specimen Type}
+\item{ISBLFL}{Baseline Flag}
 \item{ISLLOQ}{Lower Limit of Quantitation}
+\item{VISIT}{Visit Name}
 \item{VISITNUM}{Visit Number}
 \item{VISITDY}{Planned Study Day of Visit}
+\item{EPOCH}{Epoch}
 \item{ISDTC}{Date/Time of Specimen Collection}
 \item{ISDY}{Actual Study Day of Specimen Collection}
 \item{ISTPT}{Planned Time Point Name}
