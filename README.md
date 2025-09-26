@@ -15,11 +15,11 @@ Test data (SDTM) for the pharmaverse family of packages
 -   [Naming Conventions](#naming)
 -   [How To Update](#how-to-update)
 
-# Purpose {#purpose}
+## Purpose {#purpose}
 
 To provide a one-stop-shop for SDTM test data in the pharmaverse family of packages. This includes datasets that are therapeutic area (TA)-agnostic (`DM`, `VS`, `EG`, etc.) as well TA-specific ones (`RS`, `TR`, `OE`, etc.).
 
-# Installation {#installation}
+## Installation {#installation}
 
 The package is available from CRAN and can be installed by running `install.packages("pharmaversesdtm")`. To install the latest development version of the package directly from GitHub use the following code:
 
@@ -31,18 +31,18 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
 remotes::install_github("pharmaverse/pharmaversesdtm", ref = "main") # This command installs the latest development version directly from GitHub.
 ```
 
-# Data Sources {#data-sources}
+## Data Sources {#data-sources}
 
 Some test datasets have been sourced from the [CDISC pilot project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while other datasets have been constructed ad-hoc by the {admiral} team. Please check the [Reference page](https://pharmaverse.github.io/pharmaversesdtm/reference/index.html) for detailed information regarding the source of specific datasets.
 
-# Naming Conventions {#naming}
+## Naming Conventions {#naming}
 
 -   Datasets that are TA-agnostic: same as SDTM domain name (e.g., `dm`, `rs`).
 -   Datasets that are TA-specific: domain_TA_others, others go from broader categories to more specific ones (e.g., `oe_ophtha`, `rs_onco`, `rs_onco_irecist`).
 
 **Note**: *If an SDTM domain is used by multiple TAs, `{pharmaversesdtm}` may provide multiple versions of the corresponding test dataset. For instance, the package contains `ex` and `ex_ophtha` as the latter contains ophthalmology-specific variables such as `EXLAT` and `EXLOC`, and `EXROUTE` is exchanged for a plausible ophthalmology value.*
 
-# How To Update {#how-to-update}
+## How To Update {#how-to-update}
 
 Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmaverse/pharmaversesdtm) with the planned updates and tag `@pharmaverse/admiral` so that one of the development core team can sanity check the request. Then there are two main ways to extend the test data: either by adding new datasets or extending existing datasets with new records/variables. Whichever method you choose, it is worth noting the following:
 
@@ -75,3 +75,10 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
+
+## Acknowledgments
+
+Along with the authors and contributors, thanks to the following people for their work on the package:
+
+G Gayatri, Pooja Kumari, Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
+

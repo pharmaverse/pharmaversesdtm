@@ -5,7 +5,7 @@
 \alias{ex_vaccine}
 \title{Exposures for Vaccine}
 \format{
-A data frame with 21 columns:
+A data frame with 19 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -24,10 +24,8 @@ A data frame with 21 columns:
 \item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
 \item{EPOCH}{Epoch}
-\item{EXDTC}{undocumented field}
 \item{EXSTDTC}{Start Date/Time of Treatment}
 \item{EXENDTC}{End Date/Time of Treatment}
-\item{EXDY}{undocumented field}
 }
 }
 \source{
