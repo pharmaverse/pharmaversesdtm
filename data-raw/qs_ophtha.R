@@ -24,7 +24,12 @@ qs1 <- qs %>%
   select(STUDYID, DOMAIN, USUBJID, QSBLFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY) %>%
   # keep unique subjects and visits per subject
   group_by(USUBJID, VISITDY) %>%
-  unique()
+  unique() %>%
+  # Keep only some patients and visits
+  filter(
+    USUBJID %in% c("01-701-1015", "01-701-1023", "01-701-1028", "01-701-1033", "01-701-1034", "01-701-1047"),
+    VISIT %in% c("BASELINE", "WEEK 12", "WEEK 24")
+  )
 
 ## create dummy parameters and results ----
 dummy_param <- data.frame(
