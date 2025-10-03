@@ -24,42 +24,53 @@ qs1 <- qs %>%
   select(STUDYID, DOMAIN, USUBJID, QSBLFL, VISITNUM, VISIT, VISITDY, QSDTC, QSDY) %>%
   # keep unique subjects and visits per subject
   group_by(USUBJID, VISITDY) %>%
-  unique()
+  unique() %>%
+  # Keep only some patients and visits
+  filter(
+    USUBJID %in% c("01-701-1015", "01-701-1023", "01-701-1028", "01-701-1033", "01-701-1034", "01-701-1047"),
+    VISIT %in% c("BASELINE", "WEEK 12", "WEEK 24")
+  )
 
 ## create dummy parameters and results ----
-dummy_param <- data.frame(QSTEST = c(
-  "Your Overall Health Is",
-  "Eyesight Using Both Eyes Is",
-  "How Often You Worry About Eyesight",
-  "How Often Pain in and Around Eyes",
-  "Difficulty Reading Newspapers",
-  "Difficulty Doing Work/Hobbies",
-  "Difficulty Finding on Crowded Shelf",
-  "Difficulty Reading Street Signs",
-  "Difficulty Going Down Step at Night",
-  "Difficulty Noticing Objects to Side",
-  "Difficulty Seeing How People React",
-  "Difficulty Picking Out Own Clothes",
-  "Difficulty Visiting With People",
-  "Difficulty Going Out to See Movies",
-  "Are You Currently Driving",
-  "Difficulty Driving During Daytime",
-  "Difficulty Driving at Night",
-  "Driving in Difficult Conditions",
-  "Eye Pain Keep You From Doing What You Like",
-  "I Stay Home Most of the Time",
-  "I Feel Frustrated a Lot of the Time",
-  "I Need a Lot of Help From Others",
-  "Worry I'll Do Embarrassing Things",
-  "Difficulty Reading Small Print",
-  "Difficulty Figure Out Bill Accuracy",
-  "Difficulty Shaving or Styling Hair",
-  "Difficulty Recognizing People",
-  "Difficulty Taking Part in Sports",
-  "Difficulty Seeing Programs on TV"
-)) %>%
+dummy_param <- data.frame(
+  QSTEST = c(
+    "Your Overall Health Is",
+    "Eyesight Using Both Eyes Is",
+    "How Often You Worry About Eyesight",
+    "How Often Pain in and Around Eyes",
+    "Difficulty Reading Newspapers",
+    "Difficulty Doing Work/Hobbies",
+    "Difficulty Finding on Crowded Shelf",
+    "Difficulty Reading Street Signs",
+    "Difficulty Going Down Step at Night",
+    "Difficulty Noticing Objects to Side",
+    "Difficulty Seeing How People React",
+    "Difficulty Picking Out Own Clothes",
+    "Difficulty Visiting With People",
+    "Difficulty Going Out to See Movies",
+    "Are You Currently Driving",
+    "Difficulty Driving During Daytime",
+    "Difficulty Driving at Night",
+    "Driving in Difficult Conditions",
+    "Eye Pain Keep You From Doing What You Like",
+    "I Stay Home Most of the Time",
+    "I Feel Frustrated a Lot of the Time",
+    "I Need a Lot of Help From Others",
+    "Worry I'll Do Embarrassing Things",
+    "Difficulty Reading Small Print",
+    "Difficulty Figure Out Bill Accuracy",
+    "Difficulty Shaving or Styling Hair",
+    "Difficulty Recognizing People",
+    "Difficulty Taking Part in Sports",
+    "Difficulty Seeing Programs on TV"
+  ),
+  QSTESTCD = c(
+    "VFQ101", "VFQ102", "VFQ103", "VFQ104", "VFQ105", "VFQ106", "VFQ107", "VFQ108", "VFQ109", "VFQ110", "VFQ111",
+    "VFQ112", "VFQ113", "VFQ114", "VFQ115", "VFQ115C", "VFQ116", "VFQ116A", "VFQ119", "VFQ120", "VFQ121", "VFQ124",
+    "VFQ125", "VFQ1A03", "VFQ1A04", "VFQ1A05", "VFQ1A06", "VFQ1A07", "VFQ1A08"
+  )
+) %>%
   mutate(
-    QSTESTCD = paste0("VFQ", row_number()),
     QSCAT = "NEI VFQ-25",
     QSSCAT = "Original Response"
   )
