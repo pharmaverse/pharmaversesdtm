@@ -208,7 +208,7 @@ IS_all <- rbind(IS_ada, IS_positive) %>%
   arrange(ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY) %>%
   select(
     STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, ISCAT, ISORRES, ISORRESU,
-    ISSTRESC, ISSTRESN, ISSTRESU, ISSTAT, ISREASND, ISNAM, ISSPEC, ISBLFL, ISLLOQ, VISIT, VISITNUM, VISITDY,
+    ISSTRESC, ISSTRESN, ISSTRESU, ISSTAT, ISREASND, ISNAM, ISSPEC, ISBLFL, ISLLOQ, VISITNUM, VISIT, VISITDY,
     EPOCH, ISDTC, ISDY, ISTPT, ISTPTNUM
   )
 
@@ -223,7 +223,7 @@ is_ada <- IS_all %>%
     ISTEST = "Immunogenicity Test or Examination Name",
     ISBDAGNT = "Binding Agent",
     ISCAT = "Category for Immunogenicity Test",
-    ISORRES = "Result or Finding in Original Units",
+    ISORRES = "Results or Findings in Original Units",
     ISORRESU = "Original Units",
     ISSTRESC = "Character Result/Finding in Std Format",
     ISSTRESN = "Numeric Results/Findings in Std. Units",
@@ -234,12 +234,12 @@ is_ada <- IS_all %>%
     ISSPEC = "Specimen Type",
     ISBLFL = "Baseline Flag",
     ISLLOQ = "Lower Limit of Quantitation",
-    VISIT = "Visit Name",
     VISITNUM = "Visit Number",
+    VISIT = "Visit Name",
     VISITDY = "Planned Study Day of Visit",
     EPOCH = "Epoch",
-    ISDTC = "Date/Time of Specimen Collection",
-    ISDY = "Actual Study Day of Specimen Collection",
+    ISDTC = "Date/Time of Collection",
+    ISDY = "Study Day of Visit/Collection/Exam",
     ISTPT = "Planned Time Point Name",
     ISTPTNUM = "Planned Time Point Number"
   )

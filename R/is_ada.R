@@ -18,9 +18,9 @@
 #'     \item{ISSEQ}{Sequence Number}
 #'     \item{ISTESTCD}{Immunogenicity Test/Exam Short Name}
 #'     \item{ISTEST}{Immunogenicity Test or Examination Name}
-#'     \item{ISCAT}{Category for Immunogenicity Test}
 #'     \item{ISBDAGNT}{Binding Agent}
-#'     \item{ISORRES}{Result or Finding in Original Units}
+#'     \item{ISCAT}{Category for Immunogenicity Test}
+#'     \item{ISORRES}{Results or Findings in Original Units}
 #'     \item{ISORRESU}{Original Units}
 #'     \item{ISSTRESC}{Character Result/Finding in Std Format}
 #'     \item{ISSTRESN}{Numeric Results/Findings in Std. Units}
@@ -31,12 +31,12 @@
 #'     \item{ISSPEC}{Specimen Type}
 #'     \item{ISBLFL}{Baseline Flag}
 #'     \item{ISLLOQ}{Lower Limit of Quantitation}
-#'     \item{VISIT}{Visit Name}
 #'     \item{VISITNUM}{Visit Number}
+#'     \item{VISIT}{Visit Name}
 #'     \item{VISITDY}{Planned Study Day of Visit}
 #'     \item{EPOCH}{Epoch}
-#'     \item{ISDTC}{Date/Time of Specimen Collection}
-#'     \item{ISDY}{Actual Study Day of Specimen Collection}
+#'     \item{ISDTC}{Date/Time of Collection}
+#'     \item{ISDY}{Study Day of Visit/Collection/Exam}
 #'     \item{ISTPT}{Planned Time Point Name}
 #'     \item{ISTPTNUM}{Planned Time Point Number}
 #'   }
