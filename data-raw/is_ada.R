@@ -207,7 +207,7 @@ IS_positive <- IS_ada %>%
 IS_all <- rbind(IS_ada, IS_positive) %>%
   arrange(ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY) %>%
   select(
-    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISCAT, ISBDAGNT, ISORRES, ISORRESU,
+    STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, ISCAT, ISORRES, ISORRESU,
     ISSTRESC, ISSTRESN, ISSTRESU, ISSTAT, ISREASND, ISNAM, ISSPEC, ISBLFL, ISLLOQ, VISIT, VISITNUM, VISITDY,
     EPOCH, ISDTC, ISDY, ISTPT, ISTPTNUM
   )
@@ -221,8 +221,8 @@ is_ada <- IS_all %>%
     ISSEQ = "Sequence Number",
     ISTESTCD = "Immunogenicity Test/Exam Short Name",
     ISTEST = "Immunogenicity Test or Examination Name",
-    ISCAT = "Category for Immunogenicity Test",
     ISBDAGNT = "Binding Agent",
+    ISCAT = "Category for Immunogenicity Test",
     ISORRES = "Result or Finding in Original Units",
     ISORRESU = "Original Units",
     ISSTRESC = "Character Result/Finding in Std Format",
