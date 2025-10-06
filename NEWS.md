@@ -1,4 +1,4 @@
-# pharmaversesdtm (development version)
+# pharmaversesdtm 1.3.1
 
 ## New Features
 
@@ -7,6 +7,7 @@
 ## Documentation
 
 - The package maintainer was updated from Edoardo Mancini to Lina Patil. (#186)
+
 - `Cytel Inc.` was added to the `LICENSE.md`. (#185)
 
 ## Various
@@ -15,7 +16,7 @@
 
 <summary>Developer Notes</summary>
 
-* Added copyright holder logos (#184)
+- Added copyright holder logos (#184)
 
 </details>
 
