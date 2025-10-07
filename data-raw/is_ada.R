@@ -18,14 +18,14 @@ library(admiral)
 ex <- pharmaversesdtm::ex
 dm <- pharmaversesdtm::dm
 
-## set seed to get same results each run ----
+# set seed to get same results each run ----
 set.seed(999)
 
-## Remove screen failures, they will not make it to drug infusion ----
+# Remove screen failures, they will not make it to drug infusion ----
 dm1 <- dm %>%
   filter(ARMCD != "Scrnfail")
 
-## use subjects in both datasets (ex,dm1) to create IS ----
+# use subjects in both datasets (ex,dm1) to create IS ----
 dmex1 <- merge(dm1[, c(1, 3)], ex, by = c("STUDYID", "USUBJID"))
 
 # Get unique USUBJID and assign them an random ADACAT and NABCAT
@@ -52,7 +52,7 @@ noise2 <- runif(n = nrows, min = 2.0, max = 3.0)
 dmex2$K <- noise1
 dmex2$V <- noise2
 
-## Assign ADASTAT types based on ADACAT
+# Assign ADASTAT types based on ADACAT
 # If Placebo, only keep VISITDY=1
 # Group 1 and 2:  Neg to Neg
 # Group 3 = Neg to Pos
@@ -84,7 +84,7 @@ IS_PLACEBO <- dmex3 %>%
 IS_ACTIVE <- dmex3 %>%
   filter(!EXTRT == "PLACEBO") %>%
   # Manually set a couple NEGATIVE for the last time point.
-  #  These will create a couple Transitional ADA examples
+  # These will create a couple Transitional ADA examples
   mutate(
     titer = case_when(
       USUBJID == "01-701-1442" & VISIT == "WEEK 24" ~ 990,
@@ -212,7 +212,7 @@ IS_all <- rbind(IS_ada, IS_positive) %>%
     EPOCH, ISDTC, ISDY, ISTPT, ISTPTNUM
   )
 
-## add labels ----
+# add labels ----
 is_ada <- IS_all %>%
   set_variable_labels(
     STUDYID = "Study Identifier",
