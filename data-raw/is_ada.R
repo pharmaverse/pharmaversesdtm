@@ -174,9 +174,6 @@ IS_ada <- PRE_IS %>%
     ),
   ) %>%
   filter(DROPIT == FALSE) %>%
-  group_by(STUDYID, USUBJID) %>%
-  dplyr::mutate(ISSEQ = row_number()) %>%
-  ungroup() %>%
   arrange(STUDYID, USUBJID, ISTESTCD, ISBDAGNT, VISITDY)
 
 # Compute NAB data --------------------------------------------------------
@@ -201,9 +198,12 @@ IS_positive <- IS_ada %>%
     ISSTRESU = NA_character_
   )
 
-# Set main IS_ada with IS_positive
+# Set main IS_ada with IS_positive then compute ISSEQ
 IS_all <- rbind(IS_ada, IS_positive) %>%
-  arrange(ISTESTCD, ISTEST, ISBDAGNT, USUBJID, VISITDY) %>%
+  arrange(STUDYID, USUBJID, ISTESTCD, ISTEST, ISBDAGNT, VISITDY) %>%
+  group_by(STUDYID, USUBJID) %>%
+  dplyr::mutate(ISSEQ = row_number()) %>%
+  ungroup() %>%
   select(
     STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, ISCAT, ISORRES, ISORRESU,
     ISSTRESC, ISSTRESN, ISSTRESU, ISSTAT, ISREASND, ISNAM, ISSPEC, ISBLFL, ISLLOQ, VISITNUM, VISIT, VISITDY,
