@@ -119,10 +119,8 @@ PRE_IS <- rbind(IS_PLACEBO, IS_ACTIVE) %>%
     ISORRESU = ISSTRESU,
     ISDTC = format(as.Date(EXSTDTC) + minutes(round(t * 60)), "%Y-%m-%dT%H:%M:%S"),
     ISDY = ifelse(VISITDY == 1, -1, EXSTDY - 1),
-    VISITDY_orig = VISITDY,
-    VISITDY = ifelse(VISITDY_orig == 1, -1, VISITDY_orig - 1),
     ISBLFL = case_when(
-      VISITDY == -1 ~ "Y",
+      VISITDY == 1 ~ "Y",
       TRUE ~ NA_character_
     ),
     # Constant vars
