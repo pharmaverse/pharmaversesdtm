@@ -125,7 +125,7 @@ PRE_IS <- rbind(IS_PLACEBO, IS_ACTIVE) %>%
     ),
     # Constant vars
     DOMAIN = "IS",
-    ISCAT = "IMMUNOLOGY",
+    ISCAT = "IMMUNOGENICITY",
     EPOCH = "TREATMENT",
     ISTESTCD = "ADA_BAB",
     ISTEST = "Binding Antidrug Antibody",
