@@ -10,7 +10,7 @@
 #' @keywords dataset
 #' @description A SDTM DM dataset from the CDISC pilot project
 #' @docType data
-#' @format A data frame with 25 columns:
+#' @format A data frame with 26 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -37,6 +37,7 @@
 #'     \item{COUNTRY}{Country}
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
+#'     \item{BRTHDTC}{Date/Time of Birth}
 #'   }
 #'
 #' @source [Access the source of the Demography dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true)
