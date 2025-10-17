@@ -47,11 +47,10 @@ Ery
 FATEST
 FATESTCD
 FOCID
-funder
-Gayatri
 GCIG
 GGT
 GLUC
+Gayatri
 GlaxoSmithKline
 Glutamyl
 Gopi
@@ -84,7 +83,6 @@ LYM
 LYMLE
 Laterality
 MACROCY
-Mascary
 MCH
 MCHC
 MCV
@@ -92,6 +90,7 @@ MH
 MICROCY
 MONOLE
 Macrocytes
+Mascary
 MedDRA
 Microcytes
 Monocytes
@@ -99,7 +98,6 @@ NEI
 NEWLIND
 NEWLPROG
 NTRGRESP
-Namai
 OETEST
 OETESTCD
 ONCO
@@ -172,9 +170,7 @@ TUTEST
 TUTESTCD
 Thampi
 Thyrotropin
-Tomoyuki
 Transferase
-Tumore
 URATE
 UROBIL
 Ungrouped
@@ -201,6 +197,7 @@ ae
 anonymized
 anthropometric
 flavoured
+funder
 iRECIST
 onco
 pharmaverse
