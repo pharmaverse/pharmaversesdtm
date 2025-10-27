@@ -115,10 +115,10 @@ pre_is <- rbind(is_placebo, is_active) %>%
       TRUE ~ ISSTRESN
     ),
     ISSTRESU = case_when(
-      !is.na(ISSTRESN) ~ "titer",
+      !is.na(ISSTRESC) ~ "titer",
       TRUE ~ NA_character_
     ),
-    ISORRES = as.character(ISSTRESN),
+    ISORRES = ISSTRESC,
     ISORRESU = ISSTRESU,
     ISDTC = format(as.Date(EXSTDTC) + minutes(round(tp * 60)), "%Y-%m-%dT%H:%M:%S"),
     ISDY = ifelse(VISITDY == 1, -1, EXSTDY - 1),
@@ -150,44 +150,12 @@ pre_is <- rbind(is_placebo, is_active) %>%
 # Post Baseline has ISSTRESC="POSITIVE" with ISSTRESN = null
 
 is_ada <- pre_is %>%
-  mutate(
-    DROPIT = case_when(
-      (USUBJID == "01-704-1093" | USUBJID == "01-704-1120") & VISIT == "BASELINE" ~ TRUE,
-      TRUE ~ FALSE
-    ),
-    ISSTRESN = case_when(
-      USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_real_,
-      TRUE ~ ISSTRESN
-    ),
-    ISORRES = case_when(
-      USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_character_,
-      TRUE ~ ISORRES
-    ),
-    ISSTRESU = case_when(
-      USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_character_,
-      TRUE ~ ISSTRESU
-    ),
-    ISORRESU = case_when(
-      USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ NA_character_,
-      TRUE ~ ISORRESU
-    ),
-    ISSTRESC = case_when(
-      USUBJID == "01-704-1114" & VISIT == "WEEK 2" ~ "POSITIVE CONFIRMATION",
-      TRUE ~ ISSTRESC
-    ),
-  ) %>%
-  filter(DROPIT == FALSE) %>%
-  arrange(STUDYID, USUBJID, ISTESTCD, ISBDAGNT, VISITDY)
-
-is_ada <- pre_is %>%
   restrict_derivation(
     derivation = mutate,
     filter = USUBJID == "01-704-1114" & VISIT == "WEEK 2",
     args = params(
       ISSTRESN = NA_real_,
-      ISORRES = NA_character_,
-      ISSTRESU = NA_character_,
-      ISORRESU = NA_character_,
+      ISORRES = "POSITIVE CONFIRMATION",
       ISSTRESC = "POSITIVE CONFIRMATION"
     )
   ) %>%
@@ -210,7 +178,7 @@ is_positive <- is_ada %>%
     ),
     ISTESTCD = "ADA_NAB",
     ISTEST = "Neutralizing Binding Antidrug Antibody",
-    ISORRES = NA_character_,
+    ISORRES = ISSTRESC,
     ISORRESU = NA_character_,
     ISSTRESN = NA_real_,
     ISSTRESU = NA_character_
