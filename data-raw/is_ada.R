@@ -26,10 +26,7 @@ dm1 <- dm %>%
   filter(ARMCD != "Scrnfail")
 
 # use subjects in both datasets (ex,dm1) to create IS ----
-# dmex1 <- merge(dm1[, c(1, 3)], ex, by = c("STUDYID", "USUBJID"))
-
 dmex1 <- merge(select(dm1, STUDYID, USUBJID), ex, by = c("STUDYID", "USUBJID"))
-
 
 # Get unique USUBJID and assign them an random ADACAT and NABCAT
 allsubs <- dmex1 %>%
@@ -182,8 +179,6 @@ is_ada <- pre_is %>%
   filter(DROPIT == FALSE) %>%
   arrange(STUDYID, USUBJID, ISTESTCD, ISBDAGNT, VISITDY)
 
-
-
 is_ada <- pre_is %>%
   restrict_derivation(
     derivation = mutate,
@@ -198,7 +193,6 @@ is_ada <- pre_is %>%
   ) %>%
   filter(!((USUBJID == "01-704-1093" | USUBJID == "01-704-1120") & VISIT == "BASELINE")) %>%
   arrange(STUDYID, USUBJID, ISTESTCD, ISBDAGNT, VISITDY)
-
 
 # Compute NAB data --------------------------------------------------------
 # Assign NAB results types based on random ADACAT and NABCAT
@@ -226,7 +220,7 @@ is_positive <- is_ada %>%
 is_all <- rbind(is_ada, is_positive) %>%
   arrange(STUDYID, USUBJID, ISTESTCD, ISTEST, ISBDAGNT, VISITDY) %>%
   group_by(STUDYID, USUBJID) %>%
-  dplyr::mutate(ISSEQ = row_number()) %>%
+  mutate(ISSEQ = row_number()) %>%
   ungroup() %>%
   select(
     STUDYID, DOMAIN, USUBJID, ISSEQ, ISTESTCD, ISTEST, ISBDAGNT, ISCAT, ISORRES, ISORRESU,
