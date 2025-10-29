@@ -2,6 +2,15 @@
 
 ## New Features
 
+- Following Neurological Disease Specific SDTM datasets have been added. (#198)
+
+    - `dm_neuro`
+    - `nv_neuro`
+    - `suppnv_neuro`
+    - `ag_neuro`
+
+## New Features
+
 -  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
 # pharmaversesdtm 1.3.1
