@@ -70,9 +70,11 @@ create_records_for_one_id <- function(usubjid = "01-701-1015", amy_tracer = "FBP
     NVORRES = c("Positive", as.character(amy_suvr_value), as.character(tau_suvr_value)),
     NVLOC = c(NA_character_, "NEOCORTICAL COMPOSITE", "NEOCORTICAL COMPOSITE"),
     NVNAM = c("IXICO", vendor, vendor),
-    NVMETHOD = c(paste(amy_tracer, "VISUAL CLASSIFICATION"),
-                 paste(vendor, amy_tracer, "SUVR PIPELINE"),
-                 paste(vendor, "FTP", "SUVR PIPELINE")),
+    NVMETHOD = c(
+      paste(amy_tracer, "VISUAL CLASSIFICATION"),
+      paste(vendor, amy_tracer, "SUVR PIPELINE"),
+      paste(vendor, "FTP", "SUVR PIPELINE")
+    ),
     VISITNUM = visitnum
   )
 }
@@ -202,9 +204,9 @@ all_dat <- dplyr::bind_rows(
     # assessments. For baseline only subtraction is done
     NVDTC = dplyr::case_when(
       NVCAT == "FTP" & VISIT == "BASELINE" ~ as.character(lubridate::ymd(NVDTC) -
-                                                            lubridate::days(rand_diff)),
+        lubridate::days(rand_diff)),
       NVCAT == "FTP" & VISIT != "BASELINE" ~ as.character(lubridate::ymd(NVDTC) +
-                                                          rand_sign * lubridate::days(rand_diff)),
+        rand_sign * lubridate::days(rand_diff)),
       TRUE ~ NVDTC
     ),
     VISITDY = dplyr::case_when(
