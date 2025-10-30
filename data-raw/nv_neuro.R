@@ -117,8 +117,7 @@ pbo_obs_visit9_dat <- all_visit3_dat |>
   filter(NVTESTCD == "SUVR") |>
   mutate(
     VISITNUM = 9,
-    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.1, max = 0.2), 3)),
-    NVORRES
+    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.1, max = 0.2), 3))
   )
 
 # Create visit 9 dataset for treatment group ----
@@ -142,8 +141,7 @@ pbo_obs_visit13_dat <- pbo_obs_visit9_dat |>
   filter(NVTESTCD == "SUVR") |>
   mutate(
     VISITNUM = 13,
-    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.2, max = 0.3), 3)),
-    NVORRES
+    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.2, max = 0.3), 3))
   )
 
 # Create visit 13 dataset for treatment group ----
@@ -247,7 +245,7 @@ labels <- list(
   NVSEQ = "Sequence Number",
   NVLNKID = "Link ID",
 
-  # Topic Variables\
+  # Topic Variables
   NVTESTCD = "Short Name of Nervous System Test",
   NVTEST = "Name of Nervous System Test",
   NVCAT = "Category for Nervous System Test",
