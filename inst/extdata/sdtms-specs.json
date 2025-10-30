@@ -343,25 +343,25 @@
      "name": "dm_neuro",
      "label": "Demographic Dataset-neuro",
      "description": "A SDTM DM dataset for Alzheimer's disease studies",
-     "source": "Constructed by admiralneuro developers"
+     "source": "Constructed by {admiralneuro} developers"
     },
     {
      "name": "nv_neuro",
      "label": "Neurological Assessment Dataset-neuro",
      "description": "A SDTM NV dataset containing neurological assessments or test results",
-     "source": "Constructed by admiralneuro developers"
+     "source": "Constructed by {admiralneuro} developers"
     },
     {
      "name": "suppnv_neuro",
      "label": "Supplemental for Neurological Assessment Dataset-neuro",
      "description": "A SDTM SUPPNV dataset containing additional information about neurological assessments or test results",
-     "source": "Constructed by admiralneuro developers"
+     "source": "Constructed by {admiralneuro} developers"
     },
     {
      "name": "ag_neuro",
      "label": "Procedure Agents Dataset-neuro",
      "description": "A SDTM AG dataset recording details of agents such as a PET tracer used in procedures",
-     "source": "Constructed by admiralneuro developers"
+     "source": "Constructed by {admiralneuro} developers"
     }
   ]
 }

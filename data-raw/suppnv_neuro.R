@@ -1,32 +1,31 @@
 # Dataset: suppnv_neuro
 # Description: Create SUPPNV test SDTM dataset for Alzheimer's Disease (neuro studies)
 
-#' @importFrom dplyr filter mutate select case_when
-#' @importFrom admiral convert_blanks_to_na
-#' @importFrom usethis use_data
-#' @noRd
+library(admiral)
+library(dplyr)
 
 # Read input data ----
 
-data("nv_neuro")
+#data("nv_neuro")
+nv_neuro <- pharmaversesdtm::nv_neuro
 
 # Convert blank to NA ----
 
-nv_neuro <- admiral::convert_blanks_to_na(nv_neuro)
+nv_neuro <- convert_blanks_to_na(nv_neuro)
 
 suppnv_neuro <- nv_neuro |>
-  dplyr::filter(!is.na(NVLOC)) |>
-  dplyr::mutate(
+  filter(!is.na(NVLOC)) |>
+  mutate(
     RDOMAIN = "NV", IDVAR = "NVSEQ", IDVARVAL = NVSEQ, QNAM = "REFREG",
     QLABEL = "Reference Region"
   ) |>
-  dplyr::mutate(QVAL = dplyr::case_when(
+  mutate(QVAL = case_when(
     NVCAT %in% c("FBP", "FBB") ~ "Whole Cerebellum",
     NVCAT == "FTP" ~ "Inferior Cerebellar Gray Matter",
     TRUE ~ NA_character_
   )) |>
-  dplyr::mutate(QORIG = "Assigned", QEVAL = "STATISTICIAN") |>
-  dplyr::select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG, QEVAL)
+  mutate(QORIG = "Assigned", QEVAL = "STATISTICIAN") |>
+  select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG, QEVAL)
 
 # Add labels to variables ----
 

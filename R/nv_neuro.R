@@ -35,7 +35,7 @@
 #'     \item{NVLOBXFL}{Last Observation Before Exposure Flag}
 #'   }
 #'
-#' @source Constructed by admiralneuro developers
+#' @source Constructed by {admiralneuro} developers
 #' @details Contains a set of 2 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{NVTESTCD} \tab \strong{NVTEST} \cr
 #'   SUVR \tab Standardized Uptake Value Ratio  \cr

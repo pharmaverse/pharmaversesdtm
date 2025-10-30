@@ -20,7 +20,7 @@ A data frame with 10 columns:
 }
 }
 \source{
-Constructed by admiralneuro developers
+Constructed by {admiralneuro} developers
 }
 \usage{
 suppnv_neuro

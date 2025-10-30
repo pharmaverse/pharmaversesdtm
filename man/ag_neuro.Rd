@@ -23,7 +23,7 @@ A data frame with 13 columns:
 }
 }
 \source{
-Constructed by admiralneuro developers
+Constructed by {admiralneuro} developers
 }
 \usage{
 ag_neuro

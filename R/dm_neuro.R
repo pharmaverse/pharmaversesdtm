@@ -40,5 +40,5 @@
 #'     \item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
 #'   }
 #'
-#' @source Constructed by admiralneuro developers
+#' @source Constructed by {admiralneuro} developers
 "dm_neuro"

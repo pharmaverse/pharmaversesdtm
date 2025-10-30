@@ -31,7 +31,7 @@ A data frame with 21 columns:
 }
 }
 \source{
-Constructed by admiralneuro developers
+Constructed by {admiralneuro} developers
 }
 \usage{
 nv_neuro

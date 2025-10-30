@@ -36,7 +36,7 @@ A data frame with 26 columns:
 }
 }
 \source{
-Constructed by admiralneuro developers
+Constructed by {admiralneuro} developers
 }
 \usage{
 dm_neuro

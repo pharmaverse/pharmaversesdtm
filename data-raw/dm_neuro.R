@@ -1,21 +1,19 @@
 # Dataset: dm_neuro
 # Description: Create DM test SDTM dataset for Alzheimer's Disease (Neuro)
 
-#' @importFrom dplyr filter mutate across case_when if_else
-#' @importFrom admiral convert_blanks_to_na
-#' @importFrom lubridate days
-#' @importFrom usethis use_data
-#' @noRd
+library(admiral)
+library(dplyr)
+library(lubridate)
 
 # Read input test data from pharmaversesdtm ----
 dm <- pharmaversesdtm::dm
 
 # Convert blank to NA ----
-dm <- admiral::convert_blanks_to_na(dm)
+dm <- convert_blanks_to_na(dm)
 
 # Subset to 15 patients
 dm_neuro <- dm |>
-  dplyr::filter(USUBJID %in% c(
+  filter(USUBJID %in% c(
     "01-701-1015", "01-701-1023", "01-701-1028", "01-701-1034",
     "01-701-1146", "01-701-1153", "01-701-1181", "01-701-1234",
     "01-701-1275", "01-701-1302", "01-701-1345", "01-701-1360",
@@ -33,18 +31,18 @@ var_labels <- lapply(dm_neuro, function(x) attr(x, "label"))
 
 # Modify the dataset
 dm_neuro <- dm_neuro |>
-  dplyr::mutate(
-    dplyr::across(c(ARMCD, ARM, ACTARMCD, ACTARM, RFXSTDTC, RFXENDTC),
-      ~ dplyr::if_else(USUBJID %in% usubjid_to_modify, NA_character_, .),
+  mutate(
+    across(c(ARMCD, ARM, ACTARMCD, ACTARM, RFXSTDTC, RFXENDTC),
+      ~ if_else(USUBJID %in% usubjid_to_modify, NA_character_, .),
       .names = "{.col}"
     ),
-    ARMNRS = dplyr::case_when(
+    ARMNRS = case_when(
       USUBJID %in% usubjid_to_modify ~ "Observational Study",
       TRUE ~ NA_character_
     ),
 
     # Convert RFSDTC from char to date, -2 days, and convert back to char
-    RFICDTC = dplyr::if_else(
+    RFICDTC = if_else(
       !is.na(RFSTDTC), # Check if RFSDTC is not NA
       as.character(as.Date(RFSTDTC, format = "%Y-%m-%d") - lubridate::days(2)),
       NA_character_ # Return NA if RFSDTC is NA

@@ -24,5 +24,5 @@
 #'     \item{QEVAL}{Evaluator}
 #'   }
 #'
-#' @source Constructed by admiralneuro developers
+#' @source Constructed by {admiralneuro} developers
 "suppnv_neuro"

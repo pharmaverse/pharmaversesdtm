@@ -27,5 +27,5 @@
 #'     \item{AGSTDTC}{Start Date/Time of Agent}
 #'   }
 #'
-#' @source Constructed by admiralneuro developers
+#' @source Constructed by {admiralneuro} developers
 "ag_neuro"
