@@ -8,7 +8,7 @@ library(tibble)
 
 # Read input data ----
 
-data("dm_neuro")
+dm_neuro <- pharmaversesdtm::dm_neuro
 
 # Convert blank to NA ----
 
