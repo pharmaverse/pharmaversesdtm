@@ -19,7 +19,7 @@ pcwg3_raw <- tibble::tribble(
   "01-701-1034", "WEEK 16",     "PD",        "SD", "NON-PD",     "SD",
   "01-701-1034", "WEEK 24",     "PD",        "SD", "NON-PD",     "SD",
   "01-701-1097",  "WEEK 8",     "PR",        "SD", "NON-PD",     "SD",
-  "01-701-1097", "WEEK 16",     "PR",        "PR",    "PDu",     "PR",
+  "01-701-1097", "WEEK 16",     "PR",        "PR", "NON-PD",     "PR",
   "01-701-1097", "WEEK 24",     "PR",        "PR",     "PD",     "PD",
   "01-701-1115",  "WEEK 8",     "PR",       "NED",    "PDu",    "PDu",
   "01-701-1118",  "WEEK 8",     "CR",        "CR",    "NED",     "CR",
@@ -37,7 +37,7 @@ pcwg3_raw <- tibble::tribble(
   "01-701-1153",  "WEEK 8",     "SD",        "SD",    "NED",     "SD",
   "01-701-1153", "WEEK 16",     "SD",        "SD",    "NED",     "SD",
   "01-701-1153", "WEEK 24",     "SD",        "SD",    "NED",     "SD",
-  "01-701-1275",  "WEEK 8",     "CR",        "SD",    "PDu",     "SD",
+  "01-701-1275",  "WEEK 8",     "CR",        "SD",     "PD",     "PD",
   "01-701-1275", "WEEK 16",     "CR",        "SD",     "PD",     "PD"
 )
 
