@@ -6,7 +6,6 @@ library(dplyr)
 
 # Read input data ----
 
-#data("nv_neuro")
 nv_neuro <- pharmaversesdtm::nv_neuro
 
 # Convert blank to NA ----
