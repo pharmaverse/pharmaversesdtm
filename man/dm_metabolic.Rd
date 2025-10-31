@@ -21,6 +21,7 @@ A data frame with 26 columns:
 \item{DTHFL}{Subject Death Flag}
 \item{SITEID}{Study Site Identifier}
 \item{AGE}{Age}
+\item{BRTHDTC}{Date/Time of Birth}
 \item{AGEU}{Age Units}
 \item{SEX}{Sex}
 \item{RACE}{Race}
@@ -32,7 +33,6 @@ A data frame with 26 columns:
 \item{COUNTRY}{Country}
 \item{DMDTC}{Date/Time of Collection}
 \item{DMDY}{Study Day of Collection}
-\item{BRTHDTC}{Date/Time of Birth}
 }
 }
 \source{

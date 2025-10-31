@@ -26,6 +26,7 @@
 #'     \item{DTHFL}{Subject Death Flag}
 #'     \item{SITEID}{Study Site Identifier}
 #'     \item{AGE}{Age}
+#'     \item{BRTHDTC}{Date/Time of Birth}
 #'     \item{AGEU}{Age Units}
 #'     \item{SEX}{Sex}
 #'     \item{RACE}{Race}
@@ -37,7 +38,6 @@
 #'     \item{COUNTRY}{Country}
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
-#'     \item{BRTHDTC}{Date/Time of Birth}
 #'   }
 #'
 #' @source [Access the source of the Demography dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true)

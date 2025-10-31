@@ -4,9 +4,9 @@
 # Load libraries -----
 library(haven)
 library(admiral)
-library(dplyr) # <- make sure this is loaded for mutate, coalesce, left_join
-library(purrr) # <- for reduce
-library(lubridate) # <- for ymd/ymd_hms/years
+library(dplyr)
+library(purrr)
+library(lubridate)
 
 # Create dm, suppdm ----
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
@@ -78,7 +78,10 @@ if (!"BRTHDTC" %in% names(dm)) {
     }
 
     # Final fallback: fill remaining NAs with fallback_dummy_brthdtc
-    dm <- dm %>% mutate(BRTHDTC = coalesce(BRTHDTC, as.character(NA)))
+    dm <- dm %>%
+      mutate(BRTHDTC = coalesce(BRTHDTC, as.character(NA))) %>%
+      relocate(BRTHDTC, .after = AGE)
+
     if (any(is.na(dm$BRTHDTC))) {
       dm$BRTHDTC[is.na(dm$BRTHDTC)] <- fallback_dummy_brthdtc
     }

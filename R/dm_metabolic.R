@@ -26,6 +26,7 @@
 #'     \item{DTHFL}{Subject Death Flag}
 #'     \item{SITEID}{Study Site Identifier}
 #'     \item{AGE}{Age}
+#'     \item{BRTHDTC}{Date/Time of Birth}
 #'     \item{AGEU}{Age Units}
 #'     \item{SEX}{Sex}
 #'     \item{RACE}{Race}
@@ -37,7 +38,6 @@
 #'     \item{COUNTRY}{Country}
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
-#'     \item{BRTHDTC}{Date/Time of Birth}
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers
