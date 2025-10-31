@@ -4,6 +4,8 @@
 
 -  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
+-  Added BRTHDTC in `dm` and `dm_metabolic`. (#195)
+
 # pharmaversesdtm 1.3.1
 
 ## Documentation
