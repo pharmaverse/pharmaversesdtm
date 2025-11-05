@@ -11,18 +11,18 @@ nv_neuro <- pharmaversesdtm::nv_neuro
 # Convert blank to NA ----
 nv_neuro <- convert_blanks_to_na(nv_neuro)
 
-suppnv_neuro <- nv_neuro |>
-  filter(!is.na(NVLOC)) |>
+suppnv_neuro <- nv_neuro %>%
+  filter(!is.na(NVLOC)) %>%
   mutate(
     RDOMAIN = "NV", IDVAR = "NVSEQ", IDVARVAL = NVSEQ, QNAM = "REFREG",
     QLABEL = "Reference Region"
-  ) |>
+  ) %>%
   mutate(QVAL = case_when(
     NVCAT %in% c("FBP", "FBB") ~ "Whole Cerebellum",
     NVCAT == "FTP" ~ "Inferior Cerebellar Gray Matter",
     TRUE ~ NA_character_
-  )) |>
-  mutate(QORIG = "Assigned", QEVAL = "STATISTICIAN") |>
+  )) %>%
+  mutate(QORIG = "Assigned", QEVAL = "STATISTICIAN") %>%
   select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG, QEVAL)
 
 # Add labels to variables ----

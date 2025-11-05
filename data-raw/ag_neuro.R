@@ -11,30 +11,30 @@ nv_neuro <- pharmaversesdtm::nv_neuro
 # Convert blank to NA ----
 nv_neuro <- convert_blanks_to_na(nv_neuro)
 
-ag_neuro <- nv_neuro |>
-  select(STUDYID, USUBJID, NVLNKID, NVDTC, NVCAT, VISITNUM, VISIT) |>
-  distinct() |>
-  mutate(DOMAIN = "AG", AGLNKID = NVLNKID, AGSTDTC = NVDTC) |>
+ag_neuro <- nv_neuro %>%
+  select(STUDYID, USUBJID, NVLNKID, NVDTC, NVCAT, VISITNUM, VISIT) %>%
+  distinct() %>%
+  mutate(DOMAIN = "AG", AGLNKID = NVLNKID, AGSTDTC = NVDTC) %>%
   mutate(AGTRT = case_when(
     NVCAT == "FBP" ~ "18F-Florbetapir",
     NVCAT == "FBB" ~ "18F-Florbetaben",
     NVCAT == "FTP" ~ "18F-Flortaucipir"
-  )) |>
+  )) %>%
   mutate(AGCAT = case_when(
     NVCAT == "FBP" ~ "AMYLOID TRACER",
     NVCAT == "FBB" ~ "AMYLOID TRACER",
     NVCAT == "FTP" ~ "TAU TRACER"
-  )) |>
+  )) %>%
   mutate(AGDOSE = case_when(
     NVCAT == "FBP" ~ "370",
     NVCAT == "FBB" ~ "300",
     NVCAT == "FTP" ~ "370"
-  )) |>
-  group_by(USUBJID) |>
-  mutate(AGSEQ = row_number()) |>
-  ungroup() |>
-  mutate(AGDOSEU = "MBq") |>
-  mutate(AGROUTE = "Intravenous") |>
+  )) %>%
+  group_by(USUBJID) %>%
+  mutate(AGSEQ = row_number()) %>%
+  ungroup() %>%
+  mutate(AGDOSEU = "MBq") %>%
+  mutate(AGROUTE = "Intravenous") %>%
   select(
     STUDYID, DOMAIN, USUBJID, AGSEQ, AGTRT, AGCAT,
     AGDOSE, AGDOSEU, AGROUTE, AGLNKID,

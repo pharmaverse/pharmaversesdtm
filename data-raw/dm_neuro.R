@@ -13,7 +13,7 @@ dm <- pharmaversesdtm::dm
 dm <- convert_blanks_to_na(dm)
 
 # Subset to 15 patients
-dm_neuro <- dm |>
+dm_neuro <- dm %>%
   filter(USUBJID %in% c(
     "01-701-1015", "01-701-1023", "01-701-1028", "01-701-1034",
     "01-701-1146", "01-701-1153", "01-701-1181", "01-701-1234",
@@ -31,7 +31,7 @@ usubjid_to_modify <- c(
 var_labels <- lapply(dm_neuro, function(x) attr(x, "label"))
 
 # Modify the dataset
-dm_neuro <- dm_neuro |>
+dm_neuro <- dm_neuro %>%
   mutate(
     across(c(ARMCD, ARM, ACTARMCD, ACTARM, RFXSTDTC, RFXENDTC),
       ~ if_else(USUBJID %in% usubjid_to_modify, NA_character_, .),
