@@ -4,6 +4,8 @@
 
 -  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
+- Updated `rs_onco_pcwg3` to correct the misclassification of `PDu`. (#193)
+
 # pharmaversesdtm 1.3.1
 
 ## Documentation
