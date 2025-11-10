@@ -183,6 +183,13 @@
       "author": "Tomoyuki Namai"
     },
     {
+      "name": "lb_onco_pcwg",
+      "label": "Laboratory Measurements (PSA) for Oncology",
+      "description": "A SDTM LB dataset for prostate cancer studies intended for examples of ADaM dataset creation",
+      "source": "Generated dataset",
+      "author": "Tomoyuki Namai"
+    },
+    {
       "name": "suppae",
       "label": "Supplemental Adverse Events",
       "description": "A SDTM SUPPAE dataset from the CDISC pilot project",
