@@ -102,6 +102,9 @@ NEI
 NEWLIND
 NEWLPROG
 NTRGRESP
+NVTEST
+NVTESTCD
+Namai
 OETEST
 OETESTCD
 ONCO
@@ -153,7 +156,9 @@ SUPPDS
 SUPPEX
 SUPPFACE
 SUPPIS
+SUPPNV
 SUPPTR
+SUVR
 SV
 SYSBP
 Sadchla
@@ -184,6 +189,7 @@ VACSCORE
 VFQ
 VITB
 VN
+VR
 VSTEST
 VSTESTCD
 Vegesna
@@ -195,6 +201,7 @@ Zelos
 Zhang
 Zhu
 admiralmetabolic
+admiralneuro
 admiralpeds
 admiralvaccine
 ae
@@ -203,6 +210,7 @@ anthropometric
 antidrug
 flavoured
 iRECIST
+neuro
 onco
 pharmaverse
 pre
