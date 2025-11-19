@@ -16,6 +16,9 @@
   terminology. Also reduced the number of records for ease of use.
   ([\#172](https://github.com/pharmaverse/pharmaversesdtm/issues/172))
 
+- Added BRTHDTC in `dm` and `dm_metabolic`.
+  ([\#195](https://github.com/pharmaverse/pharmaversesdtm/issues/195))
+
 ## pharmaversesdtm 1.3.1
 
 CRAN release: 2025-08-21

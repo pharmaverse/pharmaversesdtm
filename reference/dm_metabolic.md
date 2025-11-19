@@ -10,7 +10,7 @@ dm_metabolic
 
 ## Format
 
-A data frame with 25 columns:
+A data frame with 26 columns:
 
 - STUDYID:
 
@@ -67,6 +67,10 @@ A data frame with 25 columns:
 - AGE:
 
   Age
+
+- BRTHDTC:
+
+  Date/Time of Birth
 
 - AGEU:
 
