@@ -5,7 +5,7 @@
 \alias{dm}
 \title{Demography}
 \format{
-A data frame with 25 columns:
+A data frame with 26 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -21,6 +21,7 @@ A data frame with 25 columns:
 \item{DTHFL}{Subject Death Flag}
 \item{SITEID}{Study Site Identifier}
 \item{AGE}{Age}
+\item{BRTHDTC}{Date/Time of Birth}
 \item{AGEU}{Age Units}
 \item{SEX}{Sex}
 \item{RACE}{Race}
