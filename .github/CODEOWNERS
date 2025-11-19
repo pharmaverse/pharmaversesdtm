@@ -28,3 +28,9 @@ data-raw/dm_metabolic.R @andersaskeland
 data-raw/lb_metabolic.R @andersaskeland
 data-raw/qs_metabolic.R @andersaskeland
 data-raw/vs_metabolic.R @andersaskeland
+
+# admiralneuro
+data-raw/dm_neuro.R @jwang-lilly
+data-raw/nv_neuro.R @jwang-lilly
+data-raw/suppnv_neuro.R @jwang-lilly
+data-raw/ag_neuro.R @jwang-lilly
