@@ -29,32 +29,10 @@ safe_parse_datetime <- function(x) {
 }
 
 # Add BRTHDTC to dm when missing ----
-# 1. Prefer existing BRTHDTC if present in raw_dm or dm.
-# 2. If missing, attempt to compute approximate birth date = anchor_date - AGE (when AGEU indicates years).
-#    anchor_date chosen from DMDTC, RFSTDTC, RFICDTC, RFXSTDTC (in that order).
-# 3. If still missing, set a fallback dummy value (configurable below).
-fallback_dummy_brthdtc <- "1900-01-01" # dummy date
-
+# If missing, attempt to compute approximate birth date = anchor_date - AGE (when AGEU indicates years).
+#   anchor_date chosen from DMDTC, RFSTDTC, RFICDTC, RFXSTDTC (in that order).
 if (!"BRTHDTC" %in% names(dm)) {
-  # If raw_dm had BRTHDTC but conversion lost it, bring it in
-  if ("BRTHDTC" %in% names(raw_dm)) {
-    dm <- dm %>% mutate(BRTHDTC = as.character(raw_dm$BRTHDTC))
-  } else {
-    # compute from SUPPDM if present (QNAM == "BRTHDTC")
-    if ("QNAM" %in% names(suppdm) && any(suppdm$QNAM == "BRTHDTC")) {
-      birth_supp <- suppdm %>%
-        filter(QNAM == "BRTHDTC") %>%
-        select(USUBJID, QVAL) %>%
-        rename(BRTHDTC = QVAL)
-      if ("USUBJID" %in% names(dm) && "USUBJID" %in% names(birth_supp)) {
-        dm <- dm %>% left_join(birth_supp, by = "USUBJID")
-      } else {
-        # if join key missing, proceed to compute fallback
-        dm <- dm %>% mutate(BRTHDTC = NA_character_)
-      }
-    } else {
-      dm <- dm %>% mutate(BRTHDTC = NA_character_)
-    }
+    dm <- dm %>% mutate(BRTHDTC = NA_character_)
 
     # For any still-missing BRTHDTC, attempt computation from AGE + anchor date
     anchor_cols <- c("DMDTC", "RFSTDTC", "RFICDTC", "RFXSTDTC")
@@ -77,15 +55,11 @@ if (!"BRTHDTC" %in% names(dm)) {
       dm$BRTHDTC[compute_idx] <- format(approx_birth, "%Y-%m-%d")
     }
 
-    # Final fallback: fill remaining NAs with fallback_dummy_brthdtc
+    # Re-arrange the BRTHDTC after AGE
     dm <- dm %>%
       mutate(BRTHDTC = coalesce(BRTHDTC, as.character(NA))) %>%
       relocate(BRTHDTC, .after = AGE)
 
-    if (any(is.na(dm$BRTHDTC))) {
-      dm$BRTHDTC[is.na(dm$BRTHDTC)] <- fallback_dummy_brthdtc
-    }
-  }
 } else {
   # Ensure character type for consistency
   dm <- dm %>% mutate(BRTHDTC = as.character(BRTHDTC))
