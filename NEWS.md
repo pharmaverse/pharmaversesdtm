@@ -4,6 +4,14 @@
 
 -  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
+<details>
+
+<summary>Developer Notes</summary>
+
+- Updated `{lintr}` configurations to use central configurations from `{admiraldev}`. (#194)
+
+</details>
+
 # pharmaversesdtm 1.3.1
 
 ## Documentation
