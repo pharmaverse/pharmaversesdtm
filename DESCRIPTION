@@ -29,8 +29,6 @@ URL: https://pharmaverse.github.io/pharmaversesdtm/,
     https://github.com/pharmaverse/pharmaversesdtm/
 Depends: 
     R (>= 3.5.0)
-Imports: 
-    tibble
 Suggests:
     covr,
     cli,
