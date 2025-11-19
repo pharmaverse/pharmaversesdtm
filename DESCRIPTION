@@ -29,8 +29,11 @@ URL: https://pharmaverse.github.io/pharmaversesdtm/,
     https://github.com/pharmaverse/pharmaversesdtm/
 Depends: 
     R (>= 3.5.0)
+Imports: 
+    tibble
 Suggests:
     covr,
+    cli,
     devtools,
     knitr,
     lintr,
@@ -40,6 +43,7 @@ Suggests:
     roxygen2,
     spelling,
     testthat,
+    admiraldev (>= 1.2.0),
     usethis
 Encoding: UTF-8
 Language: en-US
