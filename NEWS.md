@@ -2,7 +2,16 @@
 
 ## New Features
 
+- Following Neurological Disease Specific SDTM datasets have been added. (#198)
+
+    - `dm_neuro`
+    - `nv_neuro`
+    - `suppnv_neuro`
+    - `ag_neuro`
+
 -  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
+
+-  Added BRTHDTC in `dm` and `dm_metabolic`. (#195)
 
 <details>
 
