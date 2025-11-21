@@ -7,7 +7,7 @@
 #'
 #' @name ae_ophtha
 #' @title Adverse Events for Ophthalmology
-#' @keywords dataset
+#' @keywords dataset ophthalmology
 #' @description An example Adverse Events SDTM dataset with ophthalmology-specific variable `AELAT`
 #' @docType data
 #' @format A data frame with 37 columns:

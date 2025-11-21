@@ -7,7 +7,7 @@
 #'
 #' @name vs
 #' @title Vital Signs
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description A SDTM VS dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 24 columns:

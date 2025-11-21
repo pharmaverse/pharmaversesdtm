@@ -52,3 +52,4 @@ TEMP \tab Temperature
 }
 }
 \keyword{dataset}
+\keyword{vaccine}

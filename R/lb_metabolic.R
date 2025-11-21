@@ -7,7 +7,7 @@
 #'
 #' @name lb_metabolic
 #' @title Laboratory Measurements Dataset-metabolic
-#' @keywords dataset
+#' @keywords dataset metabolic
 #' @description A SDTM LB dataset containing relevant laboratory measurements for metabolic studies
 #' @docType data
 #' @format A data frame with 24 columns:

@@ -7,7 +7,7 @@
 #'
 #' @name ds
 #' @title Disposition
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description An updated SDTM DS dataset that uses the CDISC pilot project
 #' @docType data
 #' @format A data frame with 13 columns:

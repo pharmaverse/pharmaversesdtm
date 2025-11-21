@@ -7,7 +7,7 @@
 #'
 #' @name rs_onco_pcwg3
 #' @title Disease Response (PCWG3) for Oncology
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM RS dataset for oncology studies using PCWG3 criteria intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 14 columns:

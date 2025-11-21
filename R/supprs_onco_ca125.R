@@ -7,7 +7,7 @@
 #'
 #' @name supprs_onco_ca125
 #' @title Supplemental Qualifiers for RS_ONCO_CA125
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM supplemental RS dataset using GCIG criteria. It is intended to be used together with `rs_onco_ca125`.
 #' @docType data
 #' @format A data frame with 9 columns:

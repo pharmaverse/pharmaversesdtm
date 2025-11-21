@@ -43,3 +43,4 @@ Exposure for Ophthalmology
 An example Exposure SDTM dataset with ophthalmology-specific variables such as \code{EXLOC} and \code{EXLAT}
 }
 \keyword{dataset}
+\keyword{ophthalmology}

@@ -7,7 +7,7 @@
 #'
 #' @name vs_peds
 #' @title Vital signs Dataset-pediatrics
-#' @keywords dataset
+#' @keywords dataset pediatrics
 #' @description An updated SDTM VS dataset with anthropometric measurements for pediatric patients
 #' @docType data
 #' @format A data frame with 26 columns:

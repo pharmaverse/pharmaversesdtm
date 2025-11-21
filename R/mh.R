@@ -7,7 +7,7 @@
 #'
 #' @name mh
 #' @title Medical History
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description An updated SDTM MH dataset that uses data from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 28 columns:

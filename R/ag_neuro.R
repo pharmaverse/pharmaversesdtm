@@ -7,7 +7,7 @@
 #'
 #' @name ag_neuro
 #' @title Procedure Agents Dataset-neuro
-#' @keywords dataset
+#' @keywords dataset neurology
 #' @description A SDTM AG dataset recording details of agents such as a PET tracer used in procedures
 #' @docType data
 #' @format A data frame with 13 columns:

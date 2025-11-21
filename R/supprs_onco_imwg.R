@@ -7,7 +7,7 @@
 #'
 #' @name supprs_onco_imwg
 #' @title Supplemental Qualifiers for RS_ONCO_IMWG
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM supplemental RS dataset using IMWG criteria intended to be used with `rs_onco_imwg`
 #' @docType data
 #' @format A data frame with 9 columns:

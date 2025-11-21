@@ -7,7 +7,7 @@
 #'
 #' @name nv_neuro
 #' @title Neurological Assessment Dataset-neuro
-#' @keywords dataset
+#' @keywords dataset neurology
 #' @description A SDTM NV dataset containing neurological assessments or test results
 #' @docType data
 #' @format A data frame with 21 columns:
