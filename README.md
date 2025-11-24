@@ -78,7 +78,7 @@ This script regenerates:
 -   Documentation `.R` files in `R/`
 -   `.Rd` files in `man/`
 -   `Test Name`/`Test Code` table inclusion (when present)
--   pkgdown dataset grouping by `Therapeutic Area`
+-   Dataset grouping by `Therapeutic Area`
 
 ### When You Must Update `sdtms-specs.json`
 
