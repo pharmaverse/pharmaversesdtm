@@ -63,38 +63,18 @@ generate_hyperlink <- function(url, link_text = "") {
 # Helper function to retrieve the dataset keyword to group by TA
 #' @description Retrieve the dataset keyword to group datasets by TA.
 #' @param dataset_name The name of the dataset.
-get_dataset_keyword <- function(dataset_name) {
-  oncology <- c(
-    "tu_onco", "tu_onco_recist", "tr_onco", "tr_onco_recist", "ts",
-    "rs_supprs_onco_imwg", "rs_supprs_onco_cal25", "rs_onco", "rs_onco_recist",
-    "rs_onco_irecist", "rs_onco_pcwg3", "rs_onco_ca125", "rs_onco_imwg",
-    "supprs_onco_ca125", "supprs_onco_imwg", "supptr_onco"
-  )
-  neurology <- c("ag_neuro", "dm_neuro", "nv_neuro", "suppnv_neuro")
-  ophthalmology <- c("ae_ophtha", "ex_ophtha", "qs_ophtha", "oe_ophtha", "sc_ophtha")
-  vaccine <- c(
-    "dm_vaccine", "ex_vaccine", "face_vaccine", "ce_vaccine", "is_vaccine",
-    "suppdm_vaccine", "suppex_vaccine", "suppface_vaccine", "suppce_vaccine",
-    "suppis_vaccine", "vs_vaccine"
-  )
-  pediatrics <- c("dm_peds", "vs_peds")
-  metabolic <- c("dm_metabolic", "lb_metabolic", "qs_metabolic", "vs_metabolic")
-
-  if (dataset_name %in% oncology) {
-    return("oncology")
-  } else if (dataset_name %in% neurology) {
-    return("neurology")
-  } else if (dataset_name %in% ophthalmology) {
-    return("ophthalmology")
-  } else if (dataset_name %in% vaccine) {
-    return("vaccine")
-  } else if (dataset_name %in% pediatrics) {
-    return("pediatrics")
-  } else if (dataset_name %in% metabolic) {
-    return("metabolic")
-  } else {
+#' @param specs The SDTM dataset specs
+get_dataset_keyword <- function(dataset_name, specs) {
+  meta_row <- specs[specs$name == dataset_name, ]
+  if (nrow(meta_row) == 0) {
     return("generic")
   }
+
+  ta <- meta_row$therapeutic_area
+  if (is.null(ta) || is.na(ta) || ta == "") {
+    return("generic")
+  }
+  return(tolower(ta))
 }
 
 # Main function to write documentation for a dataset
@@ -206,7 +186,7 @@ for (dataset_name in datasets) {
     dataset_source <- ifelse(!is.na(metadata$source), metadata$source, "No source available")
     dataset_testnames <- if (!is.null(testnames) && testnames != "") testnames else NULL
     # Add Therapeutic area keyword to the dataset name
-    dataset_keyword <- get_dataset_keyword(dataset_name)
+    dataset_keyword <- get_dataset_keyword(dataset_name, specs)
   }
 
   write_doc(dataset, dataset_name, dataset_label, dataset_description, dataset_author, dataset_source, dataset_testnames, dataset_keyword)

@@ -30,4 +30,4 @@ Trial Design
 A SDTM TS dataset from the CDISC pilot project
 }
 \keyword{dataset}
-\keyword{oncology}
+\keyword{generic}
