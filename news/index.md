@@ -23,6 +23,13 @@
   therapeutic areas.
   ([\#204](https://github.com/pharmaverse/pharmaversesdtm/issues/204))
 
+Developer Notes
+
+- Updated [lintr](https://lintr.r-lib.org) configurations to use central
+  configurations from
+  [admiraldev](https://pharmaverse.github.io/admiraldev/).
+  ([\#194](https://github.com/pharmaverse/pharmaversesdtm/issues/194))
+
 ## pharmaversesdtm 1.3.1
 
 CRAN release: 2025-08-21
