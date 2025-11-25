@@ -67,7 +67,7 @@ This file contains information such as:
 -   author
 -   source
 -   therapeutic area
--   any other dataset-specific metadata
+-   any other dataset-specific metadata.
 
 This metadata drives the automated documentation process, and the file is read by `data-raw/create_sdtms_data.R` to help generate:
 
