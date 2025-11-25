@@ -1,14 +1,14 @@
 # Dataset: nv_neuro
 # Description: Create NV test SDTM dataset for Alzheimer's Disease (neuro studies)
 
+# Load libraries ----
 library(admiral)
 library(dplyr)
 library(lubridate)
 library(tibble)
 
 # Read input data ----
-
-data("dm_neuro")
+dm_neuro <- pharmaversesdtm::dm_neuro
 
 # Convert blank to NA ----
 
@@ -26,7 +26,6 @@ observation_group <- dm_neuro %>%
   filter(is.na(ARMCD) & ARMNRS == "Observational Study")
 
 # Leverage VS visits at BASELINE, WEEK12 and WEEK26
-
 visit_schedule <- pharmaversesdtm::vs %>%
   filter(USUBJID %in% dm_neuro$USUBJID) %>%
   filter(VISITNUM %in% c(3.0, 9.0, 13.0)) %>%
@@ -36,7 +35,6 @@ visit_schedule <- pharmaversesdtm::vs %>%
   distinct()
 
 # All USUBJID have BASELINE but not all have visits 9 or 13 data
-
 visit9_usubjid <- visit_schedule %>%
   filter(VISITNUM == 9) %>%
   select(USUBJID) %>%
@@ -49,7 +47,6 @@ visit13_usubjid <- visit_schedule %>%
   unlist()
 
 # Create records for one USUBJID ----
-
 create_records_for_one_id <- function(usubjid = "01-701-1015", amy_tracer = "FBP", vendor = "AVID",
                                       visitnum = 3, amy_suvr_value, tau_suvr_value, upsit_value) {
   tibble::tibble(
@@ -79,7 +76,6 @@ create_records_for_one_id <- function(usubjid = "01-701-1015", amy_tracer = "FBP
 }
 
 # Create dataset for visit 3 (baseline) for all ids from dm_neuro ----
-
 # Set the seed for reproducibility
 set.seed(2774)
 
@@ -143,7 +139,6 @@ all_visit3_dat <- bind_rows(
 )
 
 # Create visit 9 dataset for placebo and observational groups ----
-
 pbo_obs_visit9_dat <- all_visit3_dat %>%
   filter(USUBJID %in% c(placebo_group$USUBJID, observation_group$USUBJID)) %>%
   filter(NVTESTCD == "SUVR") %>%
@@ -154,7 +149,6 @@ pbo_obs_visit9_dat <- all_visit3_dat %>%
   )
 
 # Create visit 9 dataset for treatment group ----
-
 treat_visit9_dat <- all_visit3_dat %>%
   filter(USUBJID %in% treatment_group$USUBJID) %>%
   filter(NVTESTCD == "SUVR") %>%
@@ -169,7 +163,6 @@ treat_visit9_dat <- all_visit3_dat %>%
   )
 
 # Create visit 13 dataset for placebo and observational groups ----
-
 pbo_obs_visit13_dat <- pbo_obs_visit9_dat %>%
   filter(NVTESTCD == "SUVR") %>%
   mutate(
@@ -179,7 +172,6 @@ pbo_obs_visit13_dat <- pbo_obs_visit9_dat %>%
   )
 
 # Create visit 13 dataset for treatment group ----
-
 treat_visit13_dat <- treat_visit9_dat %>%
   filter(NVTESTCD == "SUVR") %>%
   mutate(
@@ -193,7 +185,6 @@ treat_visit13_dat <- treat_visit9_dat %>%
   )
 
 # Combine datasets and add additional variables ----
-
 all_dat <- bind_rows(
   all_visit3_dat,
   pbo_obs_visit9_dat %>%
@@ -270,7 +261,6 @@ all_dat <- bind_rows(
   )
 
 # Add labels to variables ----
-
 labels <- list(
   # Identifier Variables (Key variables)
   STUDYID = "Study Identifier",
@@ -313,9 +303,7 @@ for (var in names(labels)) {
 nv_neuro <- all_dat
 
 # Label NV dataset ----
-
 attr(nv_neuro, "label") <- "Nervous System Findings"
 
 # Save dataset ----
-
 usethis::use_data(nv_neuro, overwrite = TRUE)

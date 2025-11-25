@@ -1,12 +1,12 @@
 # Dataset: ag_neuro
 # Description: Create AG test SDTM dataset for Alzheimer's Disease (neuro studies)
 
+# Load libraries ----
 library(admiral)
 library(dplyr)
 
 # Read input data ----
-
-data("nv_neuro")
+nv_neuro <- pharmaversesdtm::nv_neuro
 
 # Convert blank to NA ----
 
