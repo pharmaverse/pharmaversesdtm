@@ -34,3 +34,4 @@ Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine
 An example SDTM SUPPIS dataset for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}

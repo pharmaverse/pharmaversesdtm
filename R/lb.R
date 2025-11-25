@@ -7,7 +7,7 @@
 #'
 #' @name lb
 #' @title Laboratory Measurements
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description An updated SDTM LB dataset that uses data from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 23 columns:

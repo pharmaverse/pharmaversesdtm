@@ -61,3 +61,4 @@ Adverse Events for Ophthalmology
 An example Adverse Events SDTM dataset with ophthalmology-specific variable \code{AELAT}
 }
 \keyword{dataset}
+\keyword{ophthalmology}

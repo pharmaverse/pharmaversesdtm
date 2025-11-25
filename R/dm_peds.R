@@ -7,7 +7,7 @@
 #'
 #' @name dm_peds
 #' @title Demographic Dataset-pediatrics
-#' @keywords dataset
+#' @keywords dataset pediatrics
 #' @description An updated SDTM DM dataset with pediatric patients
 #' @docType data
 #' @format A data frame with 26 columns:

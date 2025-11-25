@@ -7,7 +7,7 @@
 #'
 #' @name dm_metabolic
 #' @title Demographic Dataset-metabolic
-#' @keywords dataset
+#' @keywords dataset metabolic
 #' @description A SDTM DM dataset for metabolic studies
 #' @docType data
 #' @format A data frame with 26 columns:

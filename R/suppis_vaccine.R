@@ -7,7 +7,7 @@
 #'
 #' @name suppis_vaccine
 #' @title Supplemental Qualifiers for Immunogenicity Specimen Assessments for Vaccine
-#' @keywords dataset
+#' @keywords dataset vaccine
 #' @description An example SDTM SUPPIS dataset for vaccine studies
 #' @docType data
 #' @format A data frame with 10 columns:

@@ -34,3 +34,4 @@ Supplemental for Neurological Assessment Dataset-neuro
 A SDTM SUPPNV dataset containing additional information about neurological assessments or test results
 }
 \keyword{dataset}
+\keyword{neurology}

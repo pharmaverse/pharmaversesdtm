@@ -33,3 +33,4 @@ Supplemental Qualifiers for Clinical Events for Vaccine
 An example SDTM SUPPCE for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}

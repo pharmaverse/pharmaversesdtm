@@ -7,7 +7,7 @@
 #'
 #' @name sv
 #' @title Subject Visits
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description A SDTM SV dataset from the CDISC pilot project with corrected duplicate observation
 #' @docType data
 #' @format A data frame with 8 columns:

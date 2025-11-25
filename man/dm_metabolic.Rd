@@ -50,3 +50,4 @@ Demographic Dataset-metabolic
 A SDTM DM dataset for metabolic studies
 }
 \keyword{dataset}
+\keyword{metabolic}

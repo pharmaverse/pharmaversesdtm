@@ -7,7 +7,7 @@
 #'
 #' @name suppnv_neuro
 #' @title Supplemental for Neurological Assessment Dataset-neuro
-#' @keywords dataset
+#' @keywords dataset neurology
 #' @description A SDTM SUPPNV dataset containing additional information about neurological assessments or test results
 #' @docType data
 #' @format A data frame with 10 columns:

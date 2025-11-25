@@ -38,10 +38,34 @@ navbar:
       href: reference/index.html
 
 reference:
-  - title: "Datasets"
-    desc: "List of all available datasets."
+  - title: "Generic Datasets"
     contents:
-      - has_keyword("dataset")
+      - has_keyword("generic")
+
+  - title: "Metabolism Datasets"
+    contents:
+      - has_keyword("metabolic")
+
+  - title: "Neurology Datasets"
+    contents:
+      - has_keyword("neurology")
+
+  - title: "Oncology Datasets"
+    contents:
+      - has_keyword("oncology")
+
+  - title: "Ophthalmology Datasets"
+    contents:
+      - has_keyword("ophthalmology")
+
+  - title: "Pediatrics Datasets"
+    contents:
+      - has_keyword("pediatrics")
+
+  - title: "Vaccine Datasets"
+    contents:
+      - has_keyword("vaccine")
+
   - title: "Functions"
     desc: "List of all available functions."
     contents:

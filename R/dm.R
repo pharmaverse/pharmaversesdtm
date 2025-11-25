@@ -7,7 +7,7 @@
 #'
 #' @name dm
 #' @title Demography
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description A SDTM DM dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 26 columns:

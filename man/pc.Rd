@@ -52,3 +52,4 @@ XAN \tab XANOMELINE
 Antonio Rodriguez Contesti
 }
 \keyword{dataset}
+\keyword{generic}

@@ -7,7 +7,7 @@
 #'
 #' @name vs_metabolic
 #' @title Vital signs Dataset-metabolic
-#' @keywords dataset
+#' @keywords dataset metabolic
 #' @description A SDTM VS dataset for metabolic studies
 #' @docType data
 #' @format A data frame with 24 columns:

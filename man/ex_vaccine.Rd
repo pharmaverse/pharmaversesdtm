@@ -43,3 +43,4 @@ Exposures for Vaccine
 An example SDTM EX dataset for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}

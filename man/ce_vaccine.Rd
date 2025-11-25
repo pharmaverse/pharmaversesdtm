@@ -53,3 +53,4 @@ Clinical Events for Vaccine
 An example SDTM CE dataset for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}
