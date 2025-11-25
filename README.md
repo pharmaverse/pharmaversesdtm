@@ -76,23 +76,15 @@ This metadata drives the automated documentation process, and the file is read b
 -   `Test Name`/`Test Code` table inclusion (when present)
 -   Dataset grouping by `Therapeutic Area`
 
-### When You Must Update `sdtms-specs.json`
-
-Update this file every time you:
-
--   Add a new dataset.
--   Change a dataset label, description, author, or source.
--   Modify a dataset purpose or structure.
--   Assign or update the dataset therapeutic_area (used for reference page grouping).
--   If you remove a dataset, remove its entry from the JSON.
-
 ### Adding New SDTM Datasets
 
 -   Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder.
     -   Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     -   Note that **no personal data should be used** as part of this package, even if anonymized.
 -   Run the program.
--   Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.json` file.
+-   Update `inst/extdata/sdtms-specs.json` with the new dataset’s metadata, including:
+    -   Assigning the dataset’s label, description, author, source, purpose, or structure.
+    -   Assigning or updating the dataset’s therapeutic area (used for reference-page grouping).
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
@@ -100,7 +92,11 @@ Update this file every time you:
 ### Updating Existing SDTM Datasets
 
 -   Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly.
--   Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.json` file.
+-   Update the corresponding entry in `inst/extdata/sdtms-specs.json` to reflect the changes, including:
+    -   Changing the dataset’s label, description, author, or source.
+    -   Modifying the dataset’s purpose or structure.
+    -   Updating the dataset’s therapeutic area.
+    -   Removing a dataset (delete its entry from the JSON entirely).
 -   Run the program, and output updated `<name>.rda` to the `data/` folder.
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
