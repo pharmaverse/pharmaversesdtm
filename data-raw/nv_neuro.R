@@ -11,7 +11,6 @@ library(tibble)
 dm_neuro <- pharmaversesdtm::dm_neuro
 
 # Convert blank to NA ----
-
 dm_neuro <- convert_blanks_to_na(dm_neuro)
 
 # Separate placebo and observation from treatment group to mimic different disease progression ----
@@ -269,7 +268,7 @@ labels <- list(
   NVSEQ = "Sequence Number",
   NVLNKID = "Link ID",
 
-  # Topic Variables\
+  # Topic Variables
   NVTESTCD = "Short Name of Nervous System Test",
   NVTEST = "Name of Nervous System Test",
   NVCAT = "Category for Nervous System Test",

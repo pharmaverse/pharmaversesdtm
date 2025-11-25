@@ -9,7 +9,6 @@ library(dplyr)
 nv_neuro <- pharmaversesdtm::nv_neuro
 
 # Convert blank to NA ----
-
 nv_neuro <- convert_blanks_to_na(nv_neuro)
 
 ag_neuro <- nv_neuro %>%
@@ -44,7 +43,6 @@ ag_neuro <- nv_neuro %>%
   )
 
 # Add labels to variables ----
-
 labels <- list(
   STUDYID = "Study Identifier",
   DOMAIN = "Domain Abbreviation",
@@ -66,9 +64,7 @@ for (var in names(labels)) {
 }
 
 # Label AG dataset ----
-
 attr(ag_neuro, "label") <- "Procedure Agents"
 
 # Save dataset ----
-
 usethis::use_data(ag_neuro, overwrite = TRUE)
