@@ -1,17 +1,19 @@
 # Dataset: ag_neuro
 # Description: Create AG test SDTM dataset for Alzheimer's Disease (neuro studies)
 
-# Load libraries ----
 library(admiral)
 library(dplyr)
 
 # Read input data ----
-nv_neuro <- pharmaversesdtm::nv_neuro
+
+data("nv_neuro")
 
 # Convert blank to NA ----
+
 nv_neuro <- convert_blanks_to_na(nv_neuro)
 
 ag_neuro <- nv_neuro %>%
+  filter(NVTESTCD %in% c("VR", "SUVR")) %>%
   select(STUDYID, USUBJID, NVLNKID, NVDTC, NVCAT, VISITNUM, VISIT) %>%
   distinct() %>%
   mutate(DOMAIN = "AG", AGLNKID = NVLNKID, AGSTDTC = NVDTC) %>%
@@ -42,6 +44,7 @@ ag_neuro <- nv_neuro %>%
   )
 
 # Add labels to variables ----
+
 labels <- list(
   STUDYID = "Study Identifier",
   DOMAIN = "Domain Abbreviation",
@@ -63,7 +66,9 @@ for (var in names(labels)) {
 }
 
 # Label AG dataset ----
+
 attr(ag_neuro, "label") <- "Procedure Agents"
 
 # Save dataset ----
+
 usethis::use_data(ag_neuro, overwrite = TRUE)

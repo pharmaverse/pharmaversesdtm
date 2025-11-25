@@ -1,7 +1,6 @@
 # Dataset: dm_neuro
 # Description: Create DM test SDTM dataset for Alzheimer's Disease (Neuro)
 
-# Load libraries ----
 library(admiral)
 library(dplyr)
 library(lubridate)

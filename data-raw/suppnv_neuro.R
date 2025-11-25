@@ -1,14 +1,15 @@
 # Dataset: suppnv_neuro
 # Description: Create SUPPNV test SDTM dataset for Alzheimer's Disease (neuro studies)
 
-# Load libraries ----
 library(admiral)
 library(dplyr)
 
 # Read input data ----
-nv_neuro <- pharmaversesdtm::nv_neuro
+
+data("nv_neuro")
 
 # Convert blank to NA ----
+
 nv_neuro <- convert_blanks_to_na(nv_neuro)
 
 suppnv_neuro <- nv_neuro %>%
@@ -26,6 +27,7 @@ suppnv_neuro <- nv_neuro %>%
   select(STUDYID, RDOMAIN, USUBJID, IDVAR, IDVARVAL, QNAM, QLABEL, QVAL, QORIG, QEVAL)
 
 # Add labels to variables ----
+
 labels <- list(
   STUDYID = "Study Identifier",
   RDOMAIN = "Related Domain Abbreviation",
@@ -44,7 +46,9 @@ for (var in names(labels)) {
 }
 
 # Label SUPPNV dataset ----
+
 attr(suppnv_neuro, "label") <- "Supplemental Qualifiers for Nervous System Findings"
 
 # Save dataset ----
+
 usethis::use_data(suppnv_neuro, overwrite = TRUE)
