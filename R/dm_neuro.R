@@ -7,7 +7,7 @@
 #'
 #' @name dm_neuro
 #' @title Demographic Dataset-neuro
-#' @keywords dataset
+#' @keywords dataset neurology
 #' @description A SDTM DM dataset for Alzheimer's disease studies
 #' @docType data
 #' @format A data frame with 26 columns:

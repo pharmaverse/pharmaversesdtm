@@ -30,3 +30,4 @@ Standardized MedDRA Queries
 An example SMQ dataset
 }
 \keyword{dataset}
+\keyword{generic}

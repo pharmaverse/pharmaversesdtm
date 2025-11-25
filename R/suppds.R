@@ -7,7 +7,7 @@
 #'
 #' @name suppds
 #' @title Supplemental Disposition
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description A SDTM SUPPDS dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 9 columns:

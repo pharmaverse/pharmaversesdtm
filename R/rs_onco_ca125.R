@@ -7,7 +7,7 @@
 #'
 #' @name rs_onco_ca125
 #' @title Disease Response (GCIG)
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM RS dataset using GCIG criteria. The dataset contains just a few patients. It is intended for vignettes and examples of ADaM dataset creation.
 #' @docType data
 #' @format A data frame with 13 columns:

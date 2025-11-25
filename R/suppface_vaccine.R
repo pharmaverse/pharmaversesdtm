@@ -7,7 +7,7 @@
 #'
 #' @name suppface_vaccine
 #' @title Supplemental Qualifiers for Findings About for Clinical Events for Vaccine
-#' @keywords dataset
+#' @keywords dataset vaccine
 #' @description An example SDTM SUPPFACE dataset for vaccine studies
 #' @docType data
 #' @format A data frame with 9 columns:

@@ -7,7 +7,7 @@
 #'
 #' @name qs_metabolic
 #' @title Questionnaire Dataset-metabolic
-#' @keywords dataset
+#' @keywords dataset metabolic
 #' @description A SDTM QS dataset containing COEQ data (Control of Eating Questionnaire) for metabolic studies. Note that University of Leeds are the copyright holders of the Control of Eating Questionnaire (CoEQ) and the test data included within pharmaversesdtm as well as the ADCOEQ code are for not-for-profit use only within admiralmetabolic and pharmaverse-related examples/documentation. Any persons or companies wanting to use the CoEQ should request a license to do so from the following [link](https://licensing.leeds.ac.uk/product/control-of-eating-questionnaire-coeq).
 #' @docType data
 #' @format A data frame with 18 columns:

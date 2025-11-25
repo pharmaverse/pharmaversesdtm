@@ -50,3 +50,4 @@ Demographic Dataset-neuro
 A SDTM DM dataset for Alzheimer's disease studies
 }
 \keyword{dataset}
+\keyword{neurology}

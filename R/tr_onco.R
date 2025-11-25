@@ -7,7 +7,7 @@
 #'
 #' @name tr_onco
 #' @title Tumor Results for Oncology
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM TR dataset simulated by Gopi Vegesna
 #' @docType data
 #' @format A data frame with 24 columns:

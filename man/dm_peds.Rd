@@ -50,3 +50,4 @@ Demographic Dataset-pediatrics
 An updated SDTM DM dataset with pediatric patients
 }
 \keyword{dataset}
+\keyword{pediatrics}
