@@ -22,6 +22,7 @@
 # Load required library
 library(jsonlite)
 library(metatools)
+library(cli)
 
 # Load metadata from JSON file
 specs <- fromJSON("inst/extdata/sdtms-specs.json")$`sdtms-specs`
@@ -65,15 +66,23 @@ generate_hyperlink <- function(url, link_text = "") {
 #' @param dataset_name The name of the dataset.
 #' @param specs The SDTM dataset specs
 get_dataset_keyword <- function(dataset_name, specs) {
-  meta_row <- specs[specs$name == dataset_name, ]
-  if (nrow(meta_row) == 0) {
-    return("generic")
+  # Check that dataset_name exists in specs$name
+  if (!dataset_name %in% specs$name) {
+    cli_abort("The dataset {.val {dataset_name}} is not present in {.field specs$name}.")
   }
 
+  # Extract row for this dataset
+  meta_row <- specs[specs$name == dataset_name, ]
+
+  # Check that therapeutic_area is populated
   ta <- meta_row$therapeutic_area
-  if (is.null(ta) || is.na(ta) || ta == "") {
-    return("generic")
+
+  if (is.null(ta) || is.na(ta) || identical(ta, "") || nchar(trimws(ta)) == 0) {
+    cli_abort(
+      "The field {.field therapeutic_area} is missing or empty for dataset {.val {dataset_name}}."
+    )
   }
+
   return(tolower(ta))
 }
 
