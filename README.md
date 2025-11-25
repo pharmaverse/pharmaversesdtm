@@ -82,9 +82,9 @@ This metadata drives the automated documentation process, and the file is read b
     -   Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     -   Note that **no personal data should be used** as part of this package, even if anonymized.
 -   Run the program.
--   Update `inst/extdata/sdtms-specs.json` with the new dataset’s metadata, including:
-    -   Assigning the dataset’s label, description, author, source, purpose, or structure.
-    -   Assigning or updating the dataset’s therapeutic area (used for reference-page grouping).
+-   Update `inst/extdata/sdtms-specs.json` with the new dataset metadata, including:
+    -   Assigning the dataset label, description, author, source, purpose, or structure.
+    -   Assigning or updating the dataset therapeutic area (used for reference-page grouping).
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
@@ -93,9 +93,9 @@ This metadata drives the automated documentation process, and the file is read b
 
 -   Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly.
 -   Update the corresponding entry in `inst/extdata/sdtms-specs.json` to reflect the changes, including:
-    -   Changing the dataset’s label, description, author, or source.
-    -   Modifying the dataset’s purpose or structure.
-    -   Updating the dataset’s therapeutic area.
+    -   Changing the dataset label, description, author, or source.
+    -   Modifying the dataset purpose or structure.
+    -   Updating the dataset therapeutic area.
     -   Removing a dataset (delete its entry from the JSON entirely).
 -   Run the program, and output updated `<name>.rda` to the `data/` folder.
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
