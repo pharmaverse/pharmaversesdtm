@@ -74,7 +74,7 @@ This metadata drives the automated documentation process, and the file is read b
 -   Documentation `.R` files in `R/`
 -   `.Rd` files in `man/`
 -   `Test Name`/`Test Code` table inclusion (when present)
--   Dataset grouping by `Therapeutic Area`
+-   Dataset grouping by `Therapeutic Area`.
 
 ### Adding New SDTM Datasets
 
