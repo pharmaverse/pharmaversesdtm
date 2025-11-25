@@ -15,6 +15,14 @@
     
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
 
+<details>
+
+<summary>Developer Notes</summary>
+
+- Updated `{lintr}` configurations to use central configurations from `{admiraldev}`. (#194)
+
+</details>
+
 # pharmaversesdtm 1.3.1
 
 ## Documentation

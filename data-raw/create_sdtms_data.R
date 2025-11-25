@@ -23,6 +23,8 @@
 library(jsonlite)
 library(metatools)
 library(cli)
+library(stringr)
+library(dplyr)
 
 # Load metadata from JSON file
 specs <- fromJSON("inst/extdata/sdtms-specs.json")$`sdtms-specs`
@@ -52,7 +54,7 @@ generate_hyperlink <- function(url, link_text = "") {
   # Check if the input is a valid URL
   if (!nzchar(url) || is.null(url)) {
     return("The source is inaccessible.")
-  } else if (!grepl(url_pattern, url)) {
+  } else if (!str_detect(string = url, pattern = url_pattern)) {
     # If the source is plain text (not a URL), return it as-is
     return(url)
   }
@@ -146,8 +148,10 @@ for (dataset_name in datasets) {
 
   # Add Test Codes and Test Names details in a table
   # Identify column names ending in TEST and TESTCD
-  test_col <- names(dataset)[grepl("TEST$", names(dataset))]
-  testcd_col <- names(dataset)[grepl("TESTCD$", names(dataset))]
+  test_col <- names(dataset)[str_detect(string = names(dataset), pattern = "TEST$")]
+  # names(dataset)[str_detect("TEST$", names(dataset))]
+  testcd_col <- names(dataset)[str_detect(string = names(dataset), pattern = "TESTCD$")]
+  # names(dataset)[str_detect("TESTCD$", names(dataset))]
 
   if (length(test_col) == 1 && length(testcd_col) == 1) {
     # Check both columns exist
@@ -166,7 +170,7 @@ for (dataset_name in datasets) {
         c(cols, list(sep = " \\tab ", collapse = "\\cr\n#'   "))
       )
 
-      paste(sprintf("Contains a set of %d unique Test Short Name%s and Test Name%s: ", nrow(unique_tests), ifelse(nrow(unique_tests) == 1, "", "s"), ifelse(nrow(unique_tests) == 1, "", "s")),
+      paste(sprintf("Contains a set of %d unique Test Short Name%s and Test Name%s: ", nrow(unique_tests), if_else(nrow(unique_tests) == 1, "", "s"), if_else(nrow(unique_tests) == 1, "", "s")),
         "\\tabular{", paste(col_align, collapse = ""), "}{\n#'   ",
         paste0("\\strong{", names(df), "}", sep = "", collapse = " \\tab "), " \\cr\n#'   ",
         trimws(contents), "\n#' }\n",
@@ -180,7 +184,7 @@ for (dataset_name in datasets) {
   }
 
   if (nrow(metadata) == 0) {
-    warning(sprintf("No metadata found for %s - using default values.", dataset_name), call. = FALSE)
+    cli_warn(sprintf("No metadata found for %s - using default values.", dataset_name), call. = FALSE)
     dataset_label <- "No label available"
     dataset_description <- "No description available"
     dataset_author <- NULL
@@ -189,10 +193,10 @@ for (dataset_name in datasets) {
     # Add Therapeutic area keyword to the dataset name
     dataset_keyword <- NULL
   } else {
-    dataset_label <- ifelse(!is.na(metadata$label), metadata$label, "No label available")
-    dataset_description <- ifelse(!is.na(metadata$description), metadata$description, "No description available")
+    dataset_label <- if_else(!is.na(metadata$label), metadata$label, "No label available")
+    dataset_description <- if_else(!is.na(metadata$description), metadata$description, "No description available")
     dataset_author <- if (!is.na(metadata$author) && metadata$author != "") metadata$author else NULL
-    dataset_source <- ifelse(!is.na(metadata$source), metadata$source, "No source available")
+    dataset_source <- if_else(!is.na(metadata$source), metadata$source, "No source available")
     dataset_testnames <- if (!is.null(testnames) && testnames != "") testnames else NULL
     # Add Therapeutic area keyword to the dataset name
     dataset_keyword <- get_dataset_keyword(dataset_name, specs)

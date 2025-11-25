@@ -31,6 +31,7 @@ Depends:
     R (>= 3.5.0)
 Suggests:
     covr,
+    cli,
     devtools,
     knitr,
     lintr,
@@ -40,6 +41,7 @@ Suggests:
     roxygen2,
     spelling,
     testthat,
+    admiraldev (>= 1.2.0),
     usethis
 Encoding: UTF-8
 Language: en-US
