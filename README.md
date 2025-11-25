@@ -69,11 +69,7 @@ This file contains information such as:
 -   therapeutic area
 -   any other dataset-specific metadata
 
-This metadata drives the automated documentation process, and the file is read by:
-
-`data-raw/create_sdtms_data.R`
-
-This script regenerates:
+This metadata drives the automated documentation process, and the file is read by `data-raw/create_sdtms_data.R` to help generate:
 
 -   Documentation `.R` files in `R/`
 -   `.Rd` files in `man/`
