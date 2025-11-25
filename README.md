@@ -66,7 +66,7 @@ This file contains information such as:
 -   dataset description
 -   author
 -   source
--   therapeutic area (therapeutic_area)
+-   therapeutic area
 -   any other dataset-specific metadata
 
 This metadata drives the automated documentation process, and the file is read by:
