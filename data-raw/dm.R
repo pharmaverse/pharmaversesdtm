@@ -58,7 +58,7 @@ if (!"BRTHDTC" %in% names(dm)) {
   # Re-arrange the BRTHDTC after AGE
   dm <- dm %>%
     mutate(BRTHDTC = coalesce(BRTHDTC, as.character(NA))) %>%
-    relocate(BRTHDTC, .after = AGE)
+    relocate(BRTHDTC, .after = AGEU)
 } else {
   # Ensure character type for consistency
   dm <- dm %>% mutate(BRTHDTC = as.character(BRTHDTC))
