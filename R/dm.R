@@ -25,9 +25,9 @@
 #'     \item{DTHDTC}{Date/Time of Death}
 #'     \item{DTHFL}{Subject Death Flag}
 #'     \item{SITEID}{Study Site Identifier}
+#'     \item{BRTHDTC}{Date/Time of Birth}
 #'     \item{AGE}{Age}
 #'     \item{AGEU}{Age Units}
-#'     \item{BRTHDTC}{Date/Time of Birth}
 #'     \item{SEX}{Sex}
 #'     \item{RACE}{Race}
 #'     \item{ETHNIC}{Ethnicity}

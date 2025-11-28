@@ -55,10 +55,10 @@ if (!"BRTHDTC" %in% names(dm)) {
     dm$BRTHDTC[compute_idx] <- format(approx_birth, "%Y-%m-%d")
   }
 
-  # Re-arrange the BRTHDTC after AGE
+  # Re-arrange the BRTHDTC before AGE
   dm <- dm %>%
     mutate(BRTHDTC = coalesce(BRTHDTC, as.character(NA))) %>%
-    relocate(BRTHDTC, .after = AGEU)
+    relocate(BRTHDTC, .before = AGE)
 } else {
   # Ensure character type for consistency
   dm <- dm %>% mutate(BRTHDTC = as.character(BRTHDTC))
