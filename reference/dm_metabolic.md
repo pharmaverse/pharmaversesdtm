@@ -64,13 +64,13 @@ A data frame with 26 columns:
 
   Study Site Identifier
 
-- AGE:
-
-  Age
-
 - BRTHDTC:
 
   Date/Time of Birth
+
+- AGE:
+
+  Age
 
 - AGEU:
 
