@@ -7,7 +7,7 @@
 #'
 #' @name is_ada
 #' @title Immunogenicity Specimen Assessments for ADA
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description A SDTM IS dataset containing relevant antidrug antibody assessment studies
 #' @docType data
 #' @format A data frame with 27 columns:
