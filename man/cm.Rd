@@ -46,3 +46,4 @@ Concomitant Medication
 A SDTM CM dataset from the CDISC pilot project
 }
 \keyword{dataset}
+\keyword{generic}

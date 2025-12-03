@@ -33,3 +33,4 @@ Supplemental Qualifiers for Exposures for Vaccine
 An example SDTM SUPPEX dataset for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}

@@ -29,3 +29,4 @@ SDG
 An example SDG dataset
 }
 \keyword{dataset}
+\keyword{generic}

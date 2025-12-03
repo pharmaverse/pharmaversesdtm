@@ -54,7 +54,27 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 -   When you run a program that is in the `data-raw/` folder, you generate a dataset that is written to the `data/` folder, which will become part of the `{pharmaversesdtm}` package.
 -   The names and sources of test datasets are specified in `R/*.R`, for the purpose of generating documentation in the `man/` folder.
 
-**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. Metadata for each dataset, such as names, labels, descriptions, authors, and sources, is managed in a centralized JSON file (`inst/extdata/sdtms-specs.json`) and used to generate `.R` documentation files. This streamlined approach aligns with best practices for efficient package development.
+**Note:** The documentation process in `{pharmaversesdtm}` is automated for consistency and ease of maintenance. 
+
+### Centralized Metadata `(inst/extdata/sdtms-specs.json)`
+
+`{pharmaversesdtm}` uses a single JSON file to store metadata for all SDTM datasets.
+This file contains information such as:
+
+-   dataset name
+-   dataset label
+-   dataset description
+-   author
+-   source
+-   therapeutic area
+-   any other dataset-specific metadata.
+
+This metadata drives the automated documentation process, and the file is read by `data-raw/create_sdtms_data.R` to help generate:
+
+-   Documentation `.R` files in `R/`
+-   `.Rd` files in `man/`
+-   `Test Name`/`Test Code` table inclusion (when present)
+-   Dataset grouping by `Therapeutic Area`.
 
 ### Adding New SDTM Datasets
 
@@ -62,7 +82,9 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
     -   Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     -   Note that **no personal data should be used** as part of this package, even if anonymized.
 -   Run the program.
--   Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.json` file.
+-   Update `inst/extdata/sdtms-specs.json` with the new dataset metadata, including:
+    -   Assigning the dataset label, description, author, source, purpose, or structure.
+    -   Assigning or updating the dataset therapeutic area (used for reference-page grouping).
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
@@ -70,7 +92,11 @@ Firstly, make a GitHub issue in [`{pharmaversesdtm}`](https://github.com/pharmav
 ### Updating Existing SDTM Datasets
 
 -   Locate the existing program `<name>.R` in the `data-raw/` folder, update it accordingly.
--   Reflect this update by adding the relevant information to the `inst/extdata/sdtms-specs.json` file.
+-   Update the corresponding entry in `inst/extdata/sdtms-specs.json` to reflect the changes, including:
+    -   Changing the dataset label, description, author, or source.
+    -   Modifying the dataset purpose or structure.
+    -   Updating the dataset therapeutic area.
+    -   Removing a dataset (delete its entry from the JSON entirely).
 -   Run the program, and output updated `<name>.rda` to the `data/` folder.
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.

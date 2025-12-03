@@ -7,10 +7,10 @@
 #'
 #' @name dm_metabolic
 #' @title Demographic Dataset-metabolic
-#' @keywords dataset
+#' @keywords dataset metabolic
 #' @description A SDTM DM dataset for metabolic studies
 #' @docType data
-#' @format A data frame with 25 columns:
+#' @format A data frame with 26 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -25,6 +25,7 @@
 #'     \item{DTHDTC}{Date/Time of Death}
 #'     \item{DTHFL}{Subject Death Flag}
 #'     \item{SITEID}{Study Site Identifier}
+#'     \item{BRTHDTC}{Date/Time of Birth}
 #'     \item{AGE}{Age}
 #'     \item{AGEU}{Age Units}
 #'     \item{SEX}{Sex}

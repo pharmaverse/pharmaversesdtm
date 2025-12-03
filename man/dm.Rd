@@ -5,7 +5,7 @@
 \alias{dm}
 \title{Demography}
 \format{
-A data frame with 25 columns:
+A data frame with 26 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -20,6 +20,7 @@ A data frame with 25 columns:
 \item{DTHDTC}{Date/Time of Death}
 \item{DTHFL}{Subject Death Flag}
 \item{SITEID}{Study Site Identifier}
+\item{BRTHDTC}{Date/Time of Birth}
 \item{AGE}{Age}
 \item{AGEU}{Age Units}
 \item{SEX}{Sex}
@@ -49,3 +50,4 @@ Demography
 A SDTM DM dataset from the CDISC pilot project
 }
 \keyword{dataset}
+\keyword{generic}

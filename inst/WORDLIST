@@ -18,6 +18,7 @@ BASOLE
 BILI
 BMI
 BONERESP
+BRTHDTC
 Basophils
 CDISC
 CHGB
@@ -50,11 +51,10 @@ Ery
 FATEST
 FATESTCD
 FOCID
-funder
-Gayatri
 GCIG
 GGT
 GLUC
+Gayatri
 GlaxoSmithKline
 Glutamyl
 Gopi
@@ -87,7 +87,6 @@ LYM
 LYMLE
 Laterality
 MACROCY
-Mascary
 MCH
 MCHC
 MCV
@@ -95,6 +94,7 @@ MH
 MICROCY
 MONOLE
 Macrocytes
+Mascary
 MedDRA
 Microcytes
 Monocytes
@@ -104,7 +104,6 @@ NEWLPROG
 NTRGRESP
 NVTEST
 NVTESTCD
-Namai
 OETEST
 OETESTCD
 ONCO
@@ -209,6 +208,7 @@ anonymized
 anthropometric
 antidrug
 flavoured
+funder
 iRECIST
 neuro
 onco
