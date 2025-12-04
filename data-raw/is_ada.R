@@ -8,7 +8,6 @@
 # Creates a mix of Baseline pos/neg, Post-Baseline pos/neg, plus some missing visits
 
 # Load libraries ----
-library(tibble)
 library(dplyr)
 library(lubridate)
 library(labelled)
