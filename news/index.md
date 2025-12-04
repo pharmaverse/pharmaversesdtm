@@ -34,6 +34,11 @@ Developer Notes
 
 CRAN release: 2025-08-21
 
+### New Features
+
+- Added Anti-Drug Antibody specific SDTM dataset `is_ada`.
+  ([\#183](https://github.com/pharmaverse/pharmaversesdtm/issues/183))
+
 ### Documentation
 
 - The package maintainer was updated from Edoardo Mancini to Lina Patil.

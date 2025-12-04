@@ -23,6 +23,8 @@ Authors:
 
 - Stefan Bundfuss ([ORCID](https://orcid.org/0009-0005-0027-1198))
 
+- Kristin Dahnert
+
 - Fanny Gautier <fanny.gautier@cytel.com>
   ([ORCID](https://orcid.org/0009-0004-3581-0131))
 

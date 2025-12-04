@@ -6,6 +6,8 @@
 
 - **Stefan Bundfuss**. Author. [](https://orcid.org/0009-0005-0027-1198)
 
+- **Kristin Dahnert**. Author.
+
 - **Fanny Gautier**. Author. [](https://orcid.org/0009-0004-3581-0131)
 
 - **Edoardo Mancini**. Author. [](https://orcid.org/0009-0006-4899-8641)
@@ -34,15 +36,15 @@
 Source:
 [`DESCRIPTION`](https://github.com/pharmaverse/pharmaversesdtm/blob/main/DESCRIPTION)
 
-Patil L, Bundfuss S, Gautier F, Mancini E, Namai T, Nguyen V, Shuliar V
-(2025). *pharmaversesdtm: SDTM Test Data for the 'Pharmaverse' Family of
-Packages*. R package version 1.3.1.9005,
+Patil L, Bundfuss S, Dahnert K, Gautier F, Mancini E, Namai T, Nguyen V,
+Shuliar V (2025). *pharmaversesdtm: SDTM Test Data for the 'Pharmaverse'
+Family of Packages*. R package version 1.3.1.9006,
 <https://pharmaverse.github.io/pharmaversesdtm/>.
 
     @Manual{,
       title = {pharmaversesdtm: SDTM Test Data for the 'Pharmaverse' Family of Packages},
-      author = {Lina Patil and Stefan Bundfuss and Fanny Gautier and Edoardo Mancini and Tomoyuki Namai and Vinh Nguyen and Vladyslav Shuliar},
+      author = {Lina Patil and Stefan Bundfuss and Kristin Dahnert and Fanny Gautier and Edoardo Mancini and Tomoyuki Namai and Vinh Nguyen and Vladyslav Shuliar},
       year = {2025},
-      note = {R package version 1.3.1.9005},
+      note = {R package version 1.3.1.9006},
       url = {https://pharmaverse.github.io/pharmaversesdtm/},
     }

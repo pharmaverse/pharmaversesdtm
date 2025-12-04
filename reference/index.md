@@ -14,6 +14,8 @@
   : Electrocardiogram
 - [`ex`](https://pharmaverse.github.io/pharmaversesdtm/reference/ex.md)
   : Exposure
+- [`is_ada`](https://pharmaverse.github.io/pharmaversesdtm/reference/is_ada.md)
+  : Immunogenicity Specimen Assessments for ADA
 - [`lb`](https://pharmaverse.github.io/pharmaversesdtm/reference/lb.md)
   : Laboratory Measurements
 - [`mh`](https://pharmaverse.github.io/pharmaversesdtm/reference/mh.md)
