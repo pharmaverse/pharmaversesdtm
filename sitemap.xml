@@ -6,12 +6,10 @@
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/news/index.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae_ophtha.html</loc></url>
-<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ag_neuro.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ce_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/cm.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm_metabolic.html</loc></url>
-<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm_neuro.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm_peds.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ds.html</loc></url>
@@ -22,12 +20,10 @@
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/face_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/get_terms.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/index.html</loc></url>
-<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/is_ada.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/is_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb_metabolic.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/mh.html</loc></url>
-<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/nv_neuro.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/oe_ophtha.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pc.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pharmaversesdtm-package.html</loc></url>
@@ -51,7 +47,6 @@
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppex_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppface_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppis_vaccine.html</loc></url>
-<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/suppnv_neuro.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supprs_onco_ca125.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supprs_onco_imwg.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/supptr_onco.html</loc></url>
