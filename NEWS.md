@@ -12,7 +12,7 @@
     - `nv_neuro`
     - `suppnv_neuro`
     - `ag_neuro`
-    
+
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
 
 <details>
@@ -20,6 +20,8 @@
 <summary>Developer Notes</summary>
 
 - Updated `{lintr}` configurations to use central configurations from `{admiraldev}`. (#194)
+
+- Generated different sites for the development and released versions of the package. (#207)
 
 </details>
 

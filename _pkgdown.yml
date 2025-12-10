@@ -13,6 +13,9 @@ repo:
 news:
   cran_dates: true
 
+development:
+  mode: auto
+
 authors:
   footer:
     roles: [aut, cre]
