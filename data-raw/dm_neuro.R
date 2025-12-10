@@ -45,7 +45,7 @@ dm_neuro <- dm_neuro %>%
     # Convert RFSDTC from char to date, -2 days, and convert back to char
     RFICDTC = if_else(
       !is.na(RFSTDTC), # Check if RFSDTC is not NA
-      as.character(as.Date(RFSTDTC, format = "%Y-%m-%d") - lubridate::days(2)),
+      as.character(as.Date(RFSTDTC, format = "%Y-%m-%d") - days(2)),
       NA_character_ # Return NA if RFSDTC is NA
     )
   )
