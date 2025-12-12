@@ -25,6 +25,8 @@
 
 </details>
 
+- Updated `rs_onco_pcwg3` to correct the misclassification of `PDu`. (#193)
+
 # pharmaversesdtm 1.3.1
 
 ## New Features
