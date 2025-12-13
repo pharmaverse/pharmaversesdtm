@@ -6,12 +6,13 @@
 
 - Added BRTHDTC in `dm` and `dm_metabolic`. (#195)
 
-- Following Neurological Disease Specific SDTM datasets have been added. (#198)
+- Following Neurological Disease Specific SDTM datasets have been added. (#198, #203)
 
     - `dm_neuro`
     - `nv_neuro`
     - `suppnv_neuro`
     - `ag_neuro`
+    - `lb_neuro`
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
 
