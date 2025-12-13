@@ -20,6 +20,7 @@ dm_neuro_pat <- dm_neuro %>%
 
 # Separate randomized group to identify which subjects don't have planned study days
 randomized_group <- dm_neuro %>%
+  # Subjects with non-missing ARMNRS are randomized, otherwise from observational study
   filter(is.na(ARMNRS)) %>%
   select(USUBJID) %>%
   pull()
