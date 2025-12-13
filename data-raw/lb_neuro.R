@@ -14,10 +14,6 @@ adsl_neuro <- admiralneuro::adsl_neuro
 dm_neuro <- convert_blanks_to_na(dm_neuro)
 
 # Select patients from DM Neuro only (following adsl_neuro.R pattern)
-dm_neuro_pat <- dm_neuro %>%
-  pull(USUBJID) %>%
-  unique()
-
 # Separate randomized group to identify which subjects don't have planned study days
 randomized_group <- dm_neuro %>%
   filter(is.na(ARMNRS)) %>%
