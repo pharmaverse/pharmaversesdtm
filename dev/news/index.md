@@ -12,7 +12,8 @@
   ([\#195](https://github.com/pharmaverse/pharmaversesdtm/issues/195))
 
 - Following Neurological Disease Specific SDTM datasets have been added.
-  ([\#198](https://github.com/pharmaverse/pharmaversesdtm/issues/198))
+  ([\#198](https://github.com/pharmaverse/pharmaversesdtm/issues/198),
+  [\#202](https://github.com/pharmaverse/pharmaversesdtm/issues/202))
 
   - `dm_neuro`
   - `nv_neuro`

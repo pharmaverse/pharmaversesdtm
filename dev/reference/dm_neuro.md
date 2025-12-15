@@ -68,6 +68,10 @@ A data frame with 26 columns:
 
   Age
 
+- BRTHDTC:
+
+  Date/Time of Birth
+
 - AGEU:
 
   Age Units
