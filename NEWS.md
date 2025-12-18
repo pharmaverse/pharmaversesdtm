@@ -4,6 +4,8 @@
 
 -  Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
+- Added `lb_onco_pcwg` dataset which contains PSA measurements for PCWG criteria. (#197)
+
 # pharmaversesdtm 1.3.1
 
 ## Documentation
