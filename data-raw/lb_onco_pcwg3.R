@@ -1,4 +1,4 @@
-# Datasets: lb_onco_pcwg
+# Datasets: lb_onco_pcwg3
 # Description: LB test dataset containing PSA measurements for prostate cancer studies
 
 # Load libraries -----
@@ -8,7 +8,7 @@ library(admiral)
 # Read input data ----
 lb <- pharmaversesdtm::lb
 
-# Create lb_onco_pcwg ----
+# Create lb_onco_pcwg3 ----
 lb_data <- tibble::tribble(
   ~USUBJID,             ~VISIT, ~LBORRES,
   "01-701-1015", "SCREENING 1",    "120",
@@ -63,7 +63,7 @@ cols <- c(
   "VISITNUM", "VISIT", "VISITDY", "LBDTC", "LBDY"
 )
 
-lb_onco_pcwg <- lb_base %>%
+lb_onco_pcwg3 <- lb_base %>%
   right_join(lb_data, by = c("USUBJID", "VISIT")) %>%
   mutate(
     LBTESTCD = "PSA",
@@ -84,10 +84,10 @@ lb_onco_pcwg <- lb_base %>%
 
 # Assign labels ----
 for (col in colnames(select(lb, all_of(cols)))) {
-  attr(lb_onco_pcwg[[col]], "label") <- attr(lb[[col]], "label")
+  attr(lb_onco_pcwg3[[col]], "label") <- attr(lb[[col]], "label")
 }
 
-attr(lb_onco_pcwg, "label") <- "Laboratory Test Results (PSA)"
+attr(lb_onco_pcwg3, "label") <- "Laboratory Test Results (PSA)"
 
 # Save dataset ----
-usethis::use_data(lb_onco_pcwg, overwrite = TRUE)
+usethis::use_data(lb_onco_pcwg3, overwrite = TRUE)

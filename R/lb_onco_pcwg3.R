@@ -5,7 +5,7 @@
 #'
 #' A SDTM LB dataset for prostate cancer studies intended for examples of ADaM dataset creation
 #'
-#' @name lb_onco_pcwg
+#' @name lb_onco_pcwg3
 #' @title Laboratory Measurements (PSA) for Oncology
 #' @keywords dataset
 #' @description A SDTM LB dataset for prostate cancer studies intended for examples of ADaM dataset creation
@@ -39,4 +39,4 @@
 #'   PSA \tab Prostate Specific Antigen
 #' }
 
-"lb_onco_pcwg"
+"lb_onco_pcwg3"
