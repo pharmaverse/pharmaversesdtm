@@ -141,3 +141,7 @@ ms <- ms %>%
 	dplyr::group_by(USUBJID) %>%
 	dplyr::mutate(MSSEQ = dplyr::row_number()) %>%
 	dplyr::ungroup()
+
+# Save dataset
+usethis::use_data(ms, overwrite = TRUE)
+
