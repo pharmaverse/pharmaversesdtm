@@ -1,4 +1,4 @@
-# Dataset: ms
+# Dataset: MS
 # Description: A synthetic SDTM MS domain with susceptibility results
 # and linkage to MB domain (mb).
 
@@ -11,81 +11,56 @@ library(labelled)
 studyid <- "MIC"
 subjects <- paste0(studyid, "-", c("001", "002", "003"))
 
-# Treatments table: SDTM-compliant MSTESTCD, MSTEST, MSTEST, MSMETHOD, MSCAT
-treatments_table <- data.frame(
-  MSTESTCD = c(
-    "AMX", "AMX", "CIP", "CIP", "VAN", "VAN"
-  ),
-  MSTEST = c(
-    "Amoxicillin", "Amoxicillin", "Ciprofloxacin", "Ciprofloxacin", "Vancomycin", "Vancomycin"
-  ),
-  MSMETHOD = c(
-    "E-TEST", "DISK DIFFUSSION", "E-TEST", "DISK DIFFUSION", "E-TEST", "DISK DIFFUSION"
-  ),
-  MSCAT = rep("SUSCEPTIBILITY", 6),
-  stringsAsFactors = FALSE
-)
-
 # Define each of the samples collected for each subject
+# First subject: two urine samples (Enterococcus faecalis)
+# Second and third subjects: two skin tissue samples each (Staphylococcus aureus)
 samples_table <- data.frame(
-    STUDYID = rep(studyid, each = 6),
-	USUBJID = rep(subjects, each = 2),
-    MSSPEC = rep(c("URINE", "SKIN TISSUE"), times = length(subjects)),
-    NHOID = rep(c("ENTEROCOCCUS FAECALIS", "STAPHYLOCOCCUS AUREUS"), times = length(subjects)),
-	VISITNUM = rep(c(1, 2), times = length(subjects)),
-
-    # Define an arbitrary base resistance per sample for variability
-    base_resistance = c(0, 0, 1, 0.5, 0, 1)
+  STUDYID = rep(studyid, 6),
+  USUBJID = c(rep(subjects[1], 2), rep(subjects[2], 2), rep(subjects[3], 2)),
+  MSSPEC = c(rep("URINE", 2), rep("SKIN TISSUE", 4)),
+  MSLOC = c(rep("URINARY SYSTEM", 2), rep("SKIN OF THE AXILLA", 4)),
+  NHOID = c(rep("ENTEROCOCCUS FAECALIS", 2), rep("STAPHYLOCOCCUS AUREUS", 4)),
+  VISITNUM = rep(c(1, 2), 3),
+  # Define an arbitrary base resistance per sample for variability
+  base_resistance = c(0.3, 0.7, 1, 1, 0, 0)
 )
 samples_table$MSREFID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM)
 samples_table$MSGRPID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM, "-", samples_table$NHOID)
 samples_table$MSLNKGRP <- paste0("LNKGRP-", samples_table$USUBJID, "-", samples_table$NHOID)
 
-# Clinical breakpoints table for agent/method combinations
-breakpoints <- data.frame(
-	NHOID = c(
-		"ENTEROCOCCUS FAECALIS", "ENTEROCOCCUS FAECALIS", "CIP", "CIP", "VAN", "VAN",
-		"STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS", "CIP", "CIP", "VAN", "VAN"
-	),
-	MSTEST = c(
-		"Amoxicillin", "Amoxicillin", "Ciprofloxacin", "Ciprofloxacin", "Vancomycin", "Vancomycin",
-		"Amoxicillin", "Amoxicillin", "Ciprofloxacin", "Ciprofloxacin", "Vancomycin", "Vancomycin"
-	),
-	MSMETHOD = c(
-		"E-TEST", "DISK DIFFUSION", "E-TEST", "DISK DIFFUSION", "E-TEST", "DISK DIFFUSION",
-		"E-TEST", "DISK DIFFUSION", "E-TEST", "DISK DIFFUSION", "E-TEST", "DISK DIFFUSION"
-	),
-	S_breakpoint = c(0.0001, 14.75, 4, 14.75, 4, 11, 0.5, 31.8, 0.6, 19, 2, 11),
-	R_breakpoint = c(4, 14.75, 4, 14.75, 4, 11, 0.5, 19, 1.2, 19, 8.7, 11),
+
+# Treatments table with breakpoints
+treatments <- data.frame(
+	NHOID = c("ENTEROCOCCUS FAECALIS", "STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS"),
+	MSTESTCD = c("AMX", "CIP", "CIP", "VAN"),
+	MSMETHOD = c("E-TEST", "DISK DIFFUSION", "E-TEST", "E-TEST"),
+	disk_dose = c(NA, "5 mcg", NA, NA),
+	S_breakpoint = c(0.0001, 39, 0.38, 2),
+	R_breakpoint = c(4, 20, 1.2, 9.5),
+	MSTEST = c("Amoxicillin", "Ciprofloxacin", "Ciprofloxacin", "Vancomycin"),
+	MSCAT = c("SUSCEPTIBILITY", "SUSCEPTIBILITY", "SUSCEPTIBILITY", "SUSCEPTIBILITY"),
 	stringsAsFactors = FALSE
 )
 
 # Helper function to generate results per sample, using base resistance and breakpoints
-calculate_susceptibility_finding <- function(agent, method, base_resistance, org) {
-	# Use MSTESTCD for agent lookup in breakpoints
-	bp_sample <- breakpoints[breakpoints$NHOID == org & breakpoints$MSTEST == agent & breakpoints$MSMETHOD == method, ]
-	# Ensure S_bp and R_bp are scalars
-	if (nrow(bp_sample) > 0) {
-		S_bp <- bp_sample$S_breakpoint[1]
-		R_bp <- bp_sample$R_breakpoint[1]
-	} else {
-		S_bp <- 1
-		R_bp <- 4
-	}
-	# E-TEST = MIC, DISK DIFFUSION = disk
-	if (method == "E-TEST") {
-		val <- S_bp + (R_bp - S_bp) * base_resistance
-		val <- round(val, 3)
-		sus <- if (val <= S_bp) "SUSCEPTIBLE" else if (val >= R_bp) "RESISTANT" else "INTERMEDIATE"
-		return(list(MSCONC = val, MSCONCU = "ug/dL", MSORRES = as.character(val), MSORRESU = "ug/dL", MSSTRESC = sus, MSSTRESN = val, MSSTRESU = "ug/dL"))
-	} else if (method == "DISK DIFFUSION") {
-		val <- S_bp + (R_bp - S_bp) * (1 - base_resistance)
-		val <- round(val, 2)
-		sus <- if (val >= S_bp) "SUSCEPTIBLE" else if (val <= R_bp) "RESISTANT" else "INTERMEDIATE"
-		return(list(MSCONC = val, MSCONCU = "mm", MSORRES = as.character(val), MSORRESU = "mm", MSSTRESC = sus, MSSTRESN = val, MSSTRESU = "mm"))
-	} else {
-		return(list(MSCONC = NA, MSCONCU = NA, MSORRES = NA, MSORRESU = NA, MSSTRESC = NA, MSSTRESN = NA, MSSTRESU = NA))
-	}
+calculate_susceptibility_finding <- function(treatment_row, base_resistance) {
+  S_bp <- treatment_row$S_breakpoint
+  R_bp <- treatment_row$R_breakpoint
+  method <- treatment_row$MSMETHOD
+
+  if (method == "E-TEST") {
+    val <- S_bp + (R_bp - S_bp) * base_resistance
+    val <- round(val, 3)
+    sus <- if (val <= S_bp) "SUSCEPTIBLE" else if (val >= R_bp) "RESISTANT" else "INTERMEDIATE"
+    return(list(MSCONC = val, MSCONCU = "ug/mL", MSORRES = as.character(val), MSORRESU = "ug/mL", MSSTRESC = sus, MSSTRESN = val, MSSTRESU = "ug/mL"))
+  } else if (method == "DISK DIFFUSION") {
+    val <- S_bp + (R_bp - S_bp) * (1 - base_resistance)
+    val <- round(val, 2)
+    sus <- if (val >= S_bp) "SUSCEPTIBLE" else if (val <= R_bp) "RESISTANT" else "INTERMEDIATE"
+    return(list(MSCONC = val, MSCONCU = "mm", MSORRES = as.character(val), MSORRESU = "mm", MSSTRESC = sus, MSSTRESN = val, MSSTRESU = "mm"))
+  } else {
+    return(list(MSCONC = NA, MSCONCU = NA, MSORRES = NA, MSORRESU = NA, MSSTRESC = NA, MSSTRESN = NA, MSSTRESU = NA))
+  }
 }
 
 # Build MS dataset with correct keys and linking variables
@@ -96,20 +71,21 @@ ms <- list()
 for (i in seq_len(nrow(samples_table))) {
 	sample <- samples_table[i,]
 	mslnkid <- paste0("LNK-", sample$USUBJID)
-	for (j in seq_len(nrow(treatments_table))) {
-		treatment <- treatments_table[j,]
+	# Subset treatments for this sample's NHOID
+	available_treatments <- treatments[treatments$NHOID == sample$NHOID, ]
+	for (j in seq_len(nrow(available_treatments))) {
+		treatment <- available_treatments[j,]
 		res <- calculate_susceptibility_finding(
-			treatment$MSTEST,
-			treatment$MSMETHOD,
-			sample$base_resistance,
-			sample$NHOID
+			treatment,
+			sample$base_resistance
 		)
 		ms[[length(ms) + 1]] <- data.frame(
 			STUDYID = sample$STUDYID,
 			DOMAIN = "MS",
 			USUBJID = sample$USUBJID,
 			NHOID = sample$NHOID,
-            MSSPEC = sample$MSSPEC,
+			MSSPEC = sample$MSSPEC,
+			MSLOC = sample$MSLOC,
 			MSGRPID = sample$MSGRPID,
 			MSSEQ = seqnum,
 			MSREFID = sample$MSREFID,
@@ -200,3 +176,32 @@ ms <- ms %>%
 
 # Save dataset
 usethis::use_data(ms, overwrite = TRUE)
+
+## Note: Clinical breakpoints were derived from the AMR package
+## (Reference: )
+## using the next commented R code:
+##
+## treatments <- AMR::clinical_breakpoints %>%
+##   dplyr::filter(
+##     ab %in% AMR::as.ab(c("Amoxicillin", "Ciprofloxacin", "Vancomycin")),
+##     method %in% c("MIC", "DISK"),
+##     mo %in% AMR::as.mo(c("Enterococcus faecalis", "Staphylococcus aureus")),
+##     host == "human"
+##   ) %>%
+##   group_by(mo, ab, method, disk_dose) %>%
+##   summarise(
+##     S_breakpoint = signif(mean(breakpoint_S, na.rm = TRUE), 2),
+##     R_breakpoint = signif(mean(breakpoint_R, na.rm = TRUE), 2)
+##   ) %>%
+##   ungroup() %>%
+##   rename(
+##     NHOID = mo,
+##     MSTESTCD = ab,
+##     MSMETHOD = method
+##   ) %>%
+##   as.data.frame() %>%
+##   mutate(
+##     MSTEST = recode(MSTESTCD, AMX = "Amoxicillin", CIP = "Ciprofloxacin", VAN = "Vancomycin"),
+##     MSMETHOD = recode(MSMETHOD, MIC = "E-TEST", DISK = "DISK DIFFUSION"),
+##     NHOID = recode(NHOID, ENTRC_FCLS = "ENTEROCOCCUS FAECALIS", STPFY_AURS = "STAPHYLOCOCCUS AUREUS")
+##   )
