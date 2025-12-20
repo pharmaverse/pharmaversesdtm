@@ -142,6 +142,62 @@ ms <- ms %>%
 	dplyr::mutate(MSSEQ = dplyr::row_number()) %>%
 	dplyr::ungroup()
 
+
+# Reorder columns according to CDISC SDTM MS standards
+ms <- ms %>%
+	select(
+		STUDYID,
+		DOMAIN,
+		USUBJID,
+		MSSEQ,
+		MSGRPID,
+		MSREFID,
+		MSLNKID,
+		MSLNKGRP,
+		NHOID,
+		MSSPEC,
+		MSTESTCD,
+		MSTEST,
+		MSCAT,
+		MSCONC,
+		MSCONCU,
+		MSORRES,
+		MSORRESU,
+		MSSTRESC,
+		MSSTRESN,
+		MSSTRESU,
+		MSMETHOD,
+		MSDTC,
+		VISITNUM
+	)
+
+# Add variable labels
+ms <- ms %>%
+	set_variable_labels(
+		STUDYID = "Study Identifier",
+		DOMAIN = "Domain Abbreviation",
+		USUBJID = "Unique Subject Identifier",
+		MSSEQ = "Sequence Number",
+		MSGRPID = "Group ID",
+		MSREFID = "Reference ID",
+		MSLNKID = "Link ID",
+		MSLNKGRP = "Link Group ID",
+		NHOID = "Non-host Organism ID",
+		MSSPEC = "Specimen Type",
+		MSTESTCD = "Short Name of Assessment",
+		MSTEST = "Name of Assessment",
+		MSCAT = "Category of Assessment",
+		MSCONC = "Agent Concentration",
+		MSCONCU = "Agent Concentration Units",
+		MSORRES = "Result or Finding in Original Units",
+		MSORRESU = "Original Units",
+		MSSTRESC = "Result or Finding in Standard Format",
+		MSSTRESN = "Numeric Result/Finding in Standard Units",
+		MSSTRESU = "Standard Units",
+		MSMETHOD = "Method of Test or Examination",
+		MSDTC = "Date/Time of Specimen Collection",
+		VISITNUM = "Visit Number"
+	)
+
 # Save dataset
 usethis::use_data(ms, overwrite = TRUE)
-
