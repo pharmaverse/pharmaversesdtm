@@ -5,6 +5,7 @@
 # Load libraries -----
 library(dplyr)
 library(tidyselect)
+library(labelled)
 
 # Example subjects, organisms, antibiotics, and labs
 studyid <- "MIC"
@@ -32,15 +33,13 @@ samples_table <- data.frame(
     MSSPEC = rep(c("URINE", "SKIN TISSUE"), times = length(subjects)),
     NHOID = rep(c("ENTEROCOCCUS FAECALIS", "STAPHYLOCOCCUS AUREUS"), times = length(subjects)),
 	VISITNUM = rep(c(1, 2), times = length(subjects)),
-	NHOID = rep(organisms, length.out = 6),
-	MSLNKGRP = paste0("GRP-", rep(subjects, each = 2), "-", rep(organisms, length.out = 6)),
 
     # Define an arbitrary base resistance per sample for variability
     base_resistance = c(0, 0, 1, 0.5, 0, 1)
 )
 samples_table$MSREFID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM)
 samples_table$MSGRPID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM, "-", samples_table$NHOID)
-
+samples_table$MSLNKGRP <- paste0("LNKGRP-", samples_table$USUBJID, "-", samples_table$NHOID)
 
 # Clinical breakpoints table for agent/method combinations
 breakpoints <- data.frame(
