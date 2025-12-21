@@ -16,7 +16,7 @@ samples_identified_per_patient = list(
     ms_finding = rep("", 2),
     specimen = rep("SKIN TISSUE", 2),
     spec_location = rep("SKIN OF THE AXILLA", 2),
-    growth_date = c("2025-06-16T08:00", "2025-06-23T08:00"),
+    collection_date = c("2025-06-16T08:00", "2025-06-23T08:00"),
     infection = c(FALSE, FALSE)
   ),
   # Case 2: organism with no infection initially, then infection later
