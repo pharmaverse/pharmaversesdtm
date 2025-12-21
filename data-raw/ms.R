@@ -19,30 +19,31 @@ samples_table <- data.frame(
   USUBJID = c(rep(subjects[1], 2), rep(subjects[2], 2), rep(subjects[3], 2)),
   MSSPEC = c(rep("URINE", 2), rep("SKIN TISSUE", 4)),
   MSLOC = c(rep("URINARY SYSTEM", 2), rep("SKIN OF THE AXILLA", 4)),
-  NHOID = c(rep("ENTEROCOCCUS FAECALIS", 2), rep("STAPHYLOCOCCUS AUREUS", 4)),
+  organism = c(rep("ENTEROCOCCUS FAECALIS", 2), rep("STAPHYLOCOCCUS AUREUS", 4)),
   VISITNUM = rep(c(1, 2), 3),
-  # Define an arbitrary base resistance per sample for variability
+
+  # Define an arbitrary base resistance per sample that will be used to calculate susceptibility results
   base_resistance = c(0.3, 0.7, 1, 1, 0, 0)
 )
-samples_table$MSREFID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM)
-samples_table$MSGRPID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM, "-", samples_table$NHOID)
-samples_table$MSLNKGRP <- paste0("LNKGRP-", samples_table$USUBJID, "-", samples_table$NHOID)
+samples_table$MSREFID <- paste0("MS-", samples_table$MSSPEC, "-", samples_table$VISITNUM)
+samples_table$MSGRPID <- paste0(samples_table$MSSPEC, "-", samples_table$VISITNUM, "-", samples_table$organism)
 
 
 # Treatments table with breakpoints
 treatments <- data.frame(
-	NHOID = c("ENTEROCOCCUS FAECALIS", "STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS"),
+	organism = c("ENTEROCOCCUS FAECALIS", "STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS", "STAPHYLOCOCCUS AUREUS"),
 	MSTESTCD = c("AMX", "CIP", "CIP", "VAN"),
 	MSMETHOD = c("E-TEST", "DISK DIFFUSION", "E-TEST", "E-TEST"),
-	disk_dose = c(NA, "5 mcg", NA, NA),
-	S_breakpoint = c(0.0001, 39, 0.38, 2),
-	R_breakpoint = c(4, 20, 1.2, 9.5),
 	MSTEST = c("Amoxicillin", "Ciprofloxacin", "Ciprofloxacin", "Vancomycin"),
 	MSCAT = c("SUSCEPTIBILITY", "SUSCEPTIBILITY", "SUSCEPTIBILITY", "SUSCEPTIBILITY"),
-	stringsAsFactors = FALSE
+
+	# Clinical breakpoints (example values)
+	disk_dose = c(NA, "5 mcg", NA, NA),
+	S_breakpoint = c(0.0001, 39, 0.38, 2),
+	R_breakpoint = c(4, 20, 1.2, 9.5)
 )
 
-# Helper function to generate results per sample, using base resistance and breakpoints
+# Helper function to generate results per sample, using sample base resistance and clinical breakpoints
 calculate_susceptibility_finding <- function(treatment_row, base_resistance) {
   S_bp <- treatment_row$S_breakpoint
   R_bp <- treatment_row$R_breakpoint
@@ -71,8 +72,8 @@ ms <- list()
 for (i in seq_len(nrow(samples_table))) {
 	sample <- samples_table[i,]
 	mslnkid <- paste0("LNK-", sample$USUBJID)
-	# Subset treatments for this sample's NHOID
-	available_treatments <- treatments[treatments$NHOID == sample$NHOID, ]
+	# Subset treatments for this sample's organism
+	available_treatments <- treatments[treatments$organism == sample$organism, ]
 	for (j in seq_len(nrow(available_treatments))) {
 		treatment <- available_treatments[j,]
 		res <- calculate_susceptibility_finding(
@@ -83,14 +84,12 @@ for (i in seq_len(nrow(samples_table))) {
 			STUDYID = sample$STUDYID,
 			DOMAIN = "MS",
 			USUBJID = sample$USUBJID,
-			NHOID = sample$NHOID,
+			organism = sample$organism,
 			MSSPEC = sample$MSSPEC,
 			MSLOC = sample$MSLOC,
 			MSGRPID = sample$MSGRPID,
 			MSSEQ = seqnum,
 			MSREFID = sample$MSREFID,
-			MSLNKID = mslnkid,
-			MSLNKGRP = sample$MSLNKGRP,
 			MSTESTCD = treatment$MSTESTCD,
 			MSTEST = treatment$MSTEST,
 			MSCAT = treatment$MSCAT,
@@ -127,9 +126,7 @@ ms <- ms %>%
 		MSSEQ,
 		MSGRPID,
 		MSREFID,
-		MSLNKID,
-		MSLNKGRP,
-		NHOID,
+		MSLOC,
 		MSSPEC,
 		MSTESTCD,
 		MSTEST,
@@ -155,9 +152,7 @@ ms <- ms %>%
 		MSSEQ = "Sequence Number",
 		MSGRPID = "Group ID",
 		MSREFID = "Reference ID",
-		MSLNKID = "Link ID",
-		MSLNKGRP = "Link Group ID",
-		NHOID = "Non-host Organism ID",
+		organism = "Non-host Organism ID",
 		MSSPEC = "Specimen Type",
 		MSTESTCD = "Short Name of Assessment",
 		MSTEST = "Name of Assessment",
@@ -195,7 +190,7 @@ usethis::use_data(ms, overwrite = TRUE)
 ##   ) %>%
 ##   ungroup() %>%
 ##   rename(
-##     NHOID = mo,
+##     organism = mo,
 ##     MSTESTCD = ab,
 ##     MSMETHOD = method
 ##   ) %>%
@@ -203,5 +198,5 @@ usethis::use_data(ms, overwrite = TRUE)
 ##   mutate(
 ##     MSTEST = recode(MSTESTCD, AMX = "Amoxicillin", CIP = "Ciprofloxacin", VAN = "Vancomycin"),
 ##     MSMETHOD = recode(MSMETHOD, MIC = "E-TEST", DISK = "DISK DIFFUSION"),
-##     NHOID = recode(NHOID, ENTRC_FCLS = "ENTEROCOCCUS FAECALIS", STPFY_AURS = "STAPHYLOCOCCUS AUREUS")
+##     organism = recode(organism, ENTRC_FCLS = "ENTEROCOCCUS FAECALIS", STPFY_AURS = "STAPHYLOCOCCUS AUREUS")
 ##   )
