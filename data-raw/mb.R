@@ -50,5 +50,26 @@ mb <- mb_base %>%
     VISIT, VISITNUM, MBDTC
   )
 
+## Add variable labels ----
+mb <- mb %>%
+  labelled::set_variable_labels(
+    STUDYID = "Study Identifier",
+    DOMAIN = "Domain Abbreviation",
+    USUBJID = "Unique Subject Identifier",
+    MBSEQ = "Sequence Number",
+    MBSPID = "Sponsor-Defined Identifier",
+    MBGRPID = "Group ID",
+    MBREFID = "Reference ID",
+    MBTESTCD = "Microbiology Test or Finding Short Name",
+    MBTEST = "Microbiology Test or Finding Name",
+    MBORRES = "Original Result",
+    MBRESCAT = "Result Category",
+    MBLOC = "Specimen Collection Location",
+    MBSPEC = "Specimen Type",
+    VISIT = "Visit Name",
+    VISITNUM = "Visit Number",
+    MBDTC = "Date/Time of Specimen Collection"
+  )
+
 ## Save MB domain ----
 usethis::use_data(mb, overwrite = TRUE)
