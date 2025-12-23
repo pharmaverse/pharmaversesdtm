@@ -214,7 +214,8 @@
       "label": "Laboratory Measurements (PSA) for Oncology",
       "description": "A SDTM LB dataset for prostate cancer studies intended for examples of ADaM dataset creation",
       "source": "Generated dataset",
-      "author": "Tomoyuki Namai"
+      "author": "Tomoyuki Namai",
+      "therapeutic_area": "oncology"
     },
     {
       "name": "suppae",
