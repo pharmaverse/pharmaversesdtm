@@ -36,10 +36,11 @@
 #'   }
 #'
 #' @source Constructed by {admiralneuro} developers
-#' @details Contains a set of 2 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 3 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{NVTESTCD} \tab \strong{NVTEST} \cr
-#'   SUVR \tab Standardized Uptake Value Ratio  \cr
-#'   VR   \tab Qualitative Visual Classification
+#'   SUVR  \tab Standardized Uptake Value Ratio                     \cr
+#'   UPSIT \tab University of Pennsylvania Smell Identification Test\cr
+#'   VR    \tab Qualitative Visual Classification
 #' }
 
 "nv_neuro"

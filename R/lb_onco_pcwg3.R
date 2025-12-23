@@ -7,7 +7,7 @@
 #'
 #' @name lb_onco_pcwg3
 #' @title Laboratory Measurements (PSA) for Oncology
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM LB dataset for prostate cancer studies intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 18 columns:

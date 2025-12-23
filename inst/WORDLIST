@@ -40,7 +40,6 @@ DIABP
 DM
 DRSSR
 DS
-Dahnert
 ECGINT
 EG
 EGTEST
@@ -168,7 +167,6 @@ Signif
 Subfield
 TAs
 TMAX
-TMRESP
 TRGRESP
 TRTEST
 TRTESTCD
@@ -180,6 +178,7 @@ TUTESTCD
 Thampi
 Thyrotropin
 Transferase
+UPSIT
 URATE
 UROBIL
 Ungrouped

@@ -10,7 +10,7 @@
 #' @keywords dataset neurology
 #' @description A SDTM DM dataset for Alzheimer's disease studies
 #' @docType data
-#' @format A data frame with 26 columns:
+#' @format A data frame with 27 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
