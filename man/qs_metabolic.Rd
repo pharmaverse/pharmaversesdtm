@@ -67,3 +67,4 @@ COEQ21 \tab How difficult has it been to resist eating this food during the last
 }
 }
 \keyword{dataset}
+\keyword{metabolic}

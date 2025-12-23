@@ -7,7 +7,7 @@
 #'
 #' @name vs_vaccine
 #' @title Vital Signs for Vaccine
-#' @keywords dataset
+#' @keywords dataset vaccine
 #' @description An example SDTM VS dataset for vaccine studies
 #' @docType data
 #' @format A data frame with 23 columns:

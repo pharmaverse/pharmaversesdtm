@@ -34,3 +34,4 @@ Supplemental Adverse Events
 A SDTM SUPPAE dataset from the CDISC pilot project
 }
 \keyword{dataset}
+\keyword{generic}

@@ -33,3 +33,4 @@ Supplemental Disposition
 A SDTM SUPPDS dataset from the CDISC pilot project
 }
 \keyword{dataset}
+\keyword{generic}

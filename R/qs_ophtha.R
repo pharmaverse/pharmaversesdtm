@@ -7,7 +7,7 @@
 #'
 #' @name qs_ophtha
 #' @title Questionnaire for Ophthalmology
-#' @keywords dataset
+#' @keywords dataset ophthalmology
 #' @description An example Questionnaires SDTM dataset with ophthalmology-specific questionnaire of NEI VFQ-25
 #' @docType data
 #' @format A data frame with 20 columns:

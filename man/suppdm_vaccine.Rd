@@ -33,3 +33,4 @@ Supplemental Qualifiers for Demographics for Vaccine
 An example SDTM SUPPDM dataset for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}

@@ -7,7 +7,7 @@
 #'
 #' @name ex
 #' @title Exposure
-#' @keywords dataset
+#' @keywords dataset generic
 #' @description A SDTM EX dataset from the CDISC pilot project
 #' @docType data
 #' @format A data frame with 17 columns:

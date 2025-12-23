@@ -52,3 +52,4 @@ Demographics for Vaccine
 An example SDTM DM dataset for vaccine studies
 }
 \keyword{dataset}
+\keyword{vaccine}

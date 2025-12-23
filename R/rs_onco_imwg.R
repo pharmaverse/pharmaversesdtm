@@ -7,7 +7,7 @@
 #'
 #' @name rs_onco_imwg
 #' @title Disease Response (IMWG)
-#' @keywords dataset
+#' @keywords dataset oncology
 #' @description A SDTM RS dataset using IMWG criteria intended for examples of ADaM dataset creation
 #' @docType data
 #' @format A data frame with 17 columns:

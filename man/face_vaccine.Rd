@@ -61,3 +61,4 @@ SEV      \tab Severity/Intensity
 }
 }
 \keyword{dataset}
+\keyword{vaccine}
