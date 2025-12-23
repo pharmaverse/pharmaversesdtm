@@ -65,6 +65,8 @@
 
 ## Oncology Datasets
 
+- [`lb_onco_pcwg3`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/lb_onco_pcwg3.md)
+  : Laboratory Measurements (PSA) for Oncology
 - [`rs_onco`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/rs_onco.md)
   : Disease Response for Oncology
 - [`rs_onco_ca125`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/rs_onco_ca125.md)

@@ -106,10 +106,11 @@ Neurological Assessment Dataset-neuro
 
 A SDTM NV dataset containing neurological assessments or test results
 
-Contains a set of 2 unique Test Short Names and Test Names:
+Contains a set of 3 unique Test Short Names and Test Names:
 
-|              |                                   |
-|--------------|-----------------------------------|
-| **NVTESTCD** | **NVTEST**                        |
-| SUVR         | Standardized Uptake Value Ratio   |
-| VR           | Qualitative Visual Classification |
+|              |                                                      |
+|--------------|------------------------------------------------------|
+| **NVTESTCD** | **NVTEST**                                           |
+| SUVR         | Standardized Uptake Value Ratio                      |
+| UPSIT        | University of Pennsylvania Smell Identification Test |
+| VR           | Qualitative Visual Classification                    |

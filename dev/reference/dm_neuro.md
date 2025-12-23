@@ -10,7 +10,7 @@ dm_neuro
 
 ## Format
 
-A data frame with 26 columns:
+A data frame with 27 columns:
 
 - STUDYID:
 
