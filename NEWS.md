@@ -13,7 +13,15 @@
     - `suppnv_neuro`
     - `ag_neuro`
 
+- Updated `rs_onco_pcwg3` to correct the misclassification of `PDu` and to remove the `TMRESP` records.  (#193)
+
+- Added `lb_onco_pcwg3` dataset which contains PSA measurements for PCWG criteria. (#197)
+
+## Documentation
+
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
+
+## Various
 
 <details>
 
@@ -24,10 +32,6 @@
 - Generated different sites for the development and released versions of the package. (#207)
 
 </details>
-
-- Added `lb_onco_pcwg3` dataset which contains PSA measurements for PCWG criteria. (#197)
-
-- Updated `rs_onco_pcwg3` to correct the misclassification of `PDu` and to remove the `TMRESP` records.  (#193)
 
 # pharmaversesdtm 1.3.1
 
