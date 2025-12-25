@@ -78,7 +78,7 @@ mb_colony_count_result <- function(orres, orresu = NULL, stres = NULL, stresu = 
 }
 
 # MB domain: NAAT
-mb_naat_result <- function(testcd, id_test_org, cd_id_test_org, id_org_successful = TRUE) {
+mb_naat_result <- function(id_test_org, cd_id_test_org, id_org_successful = TRUE) {
   data.frame(
     DOMAIN = "MB",
     MBTEST = id_test_org,
@@ -166,7 +166,7 @@ ms_disk_diffusion_result <- function(ab, orres = 20, orresu = "mm", stres = orre
       MSTESTCD = "MICROSUS",
       MSORRES = ifelse(ab_resistance, "RESISTANT", "SUSCEPTIBLE"),
       MSORRESU = NA_character_,
-      MSSTRESC = MSORRES,
+      MSSTRESC = ifelse(ab_resistance, "RESISTANT", "SUSCEPTIBLE"),
       MSSTRESN = NA_character_,
       MSSTRESU = NA_character_
     )
@@ -174,8 +174,7 @@ ms_disk_diffusion_result <- function(ab, orres = 20, orresu = "mm", stres = orre
 }
 
 # MS domain: NAAT
-ms_naat_result <- function(genotype, ab, ab_resistance = FALSE) {
-  for (ab in names(ab_gen_list)) {
+ms_naat_result <- function(ab, ab_resistance = FALSE) {
     data.frame(
       DOMAIN = "MS",
       MSTEST = "Microbial Susceptibility",
@@ -185,13 +184,12 @@ ms_naat_result <- function(genotype, ab, ab_resistance = FALSE) {
       MSCONCU = NA_character_,
       MSORRES = if (ab_resistance) "RESISTANT" else "SUSCEPTIBLE",
       MSORRESU = NA_character_,
-      MSSTRESC = MSORRES,
+      MSSTRESC = ifelse(ab_resistance, "RESISTANT", "SUSCEPTIBLE"),
       MSMETHOD = "NUCLEIC ACID AMPLIFICATION TEST",
       MSSTRESN = NA_character_,
       MSSTRESU = NA_character_,
       stringsAsFactors = FALSE
     )
-  }
 }
 
 ############################################################
@@ -234,8 +232,7 @@ micro_df <- list(
               culture_end_dt = "2025-06-30T10:00",
               MB = list(
                 mb_gram_stain_result(test = "Gram Negative Cocci", count = "2+"),
-                mb_colony_count_result(orres = 100, orresu = "CFU/mL", stres = 100, stresu = "CFU/mL"),
-                mb_naat_result(testcd = "GENE1", genotype = list(TEST = "Complex", TESTCD = "CMPLX"))
+                mb_colony_count_result(orres = 100, orresu = "CFU/mL", stres = 100, stresu = "CFU/mL")
               ),
               MS = list(
                 ms_epsilometer_result(
@@ -537,12 +534,12 @@ micro_df <- list(
             )
          )
     ),
-    # Patient 7: Mycobaterium tuberculosis complex resistant identified by NAAT
+    # Patient 7: Mycobaterium tuberculosis complex rifampicin resistant identified by NAAT
     "7" = list(
         # Specimen 1
         "1" = list(
-            specimen = "SPUTUM",
-            spec_location = "LUNG",
+            specimen = "LAVAGE FLUID",
+            spec_location = "STOMACH",
             collection_date = "2025-12-01T08:00",
             not_cultured_aliquots = list(
               "1" = list(
@@ -551,28 +548,28 @@ micro_df <- list(
             ),
             cultured_aliquots = list(
             "1" = list(
-              organism = "MYCOBACTERIUM TUBERCULOSIS COMPLEX",
-              resistance_ab = c("RIFAMPIN"),
+              organism = "MYCOBACTERIUM TUBERCULOSIS",
+              resistance_ab = c("RIFAMPICIN"),
               aliquot_preparation_dt = "2025-12-02T09:30",
               culture_start_dt = "2025-12-02T10:00",
               culture_end_dt = "2025-12-17T10:00",
               MB = list(
                 mb_naat_result(
-                  testcd = "MTBC", genotype = list(TEST = "MTBC DETECTED", TESTCD = "MTBCDET"),
+                  id_test_org = "MYCOBACTERIUM TUBERCULOSIS COMPLEX",
+                  cd_id_test_org = "MTBCMPLX",
                   id_org_successful = TRUE
                 )
               ),
               MS = list(
                 ms_naat_result(
-                  genotype = list(TEST = "RIFAMPIN RESISTANT", TESTCD = "INHRRIFRR"),
-                  ab = "RIFAMPIN",
+                  ab = "RIFAMPICIN",
                   ab_resistance = TRUE
                 )
               )
             )
           )
         )
-
+    )
 )
 
 
