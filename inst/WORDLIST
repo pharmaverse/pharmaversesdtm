@@ -40,7 +40,6 @@ DIABP
 DM
 DRSSR
 DS
-Dahnert
 ECGINT
 EG
 EGTEST
@@ -118,6 +117,7 @@ POLYCHR
 PPTEST
 PPTESTCD
 PROT
+PSA
 Pharmacokinetic
 Pharmaverse
 Phosphatase
@@ -167,7 +167,6 @@ Signif
 Subfield
 TAs
 TMAX
-TMRESP
 TRGRESP
 TRTEST
 TRTESTCD
@@ -179,6 +178,7 @@ TUTESTCD
 Thampi
 Thyrotropin
 Transferase
+UPSIT
 URATE
 UROBIL
 Ungrouped

@@ -30,12 +30,11 @@
 #'
 #' @source Generated dataset
 #' @author Tomoyuki Namai
-#' @details Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 3 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{RSTESTCD} \tab \strong{RSTEST} \cr
-#'   BONERESP \tab Bone Response        \cr
-#'   OVRLRESP \tab Overall Response     \cr
-#'   SFTSRESP \tab Soft Tissue Response \cr
-#'   TMRESP   \tab Tumor Marker Response
+#'   BONERESP \tab Bone Response       \cr
+#'   OVRLRESP \tab Overall Response    \cr
+#'   SFTSRESP \tab Soft Tissue Response
 #' }
 
 "rs_onco_pcwg3"
