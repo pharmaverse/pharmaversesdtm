@@ -15,6 +15,8 @@
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
 
+- Added Microbiology (MS), Susceptibility (MS) and Biospecimen Events (BE) SDTM linked datasets. (#217)
+
 <details>
 
 <summary>Developer Notes</summary>
