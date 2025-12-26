@@ -38,7 +38,7 @@ ms <- ms %>%
   )
 
 # Add variable labels
-ms <- ms %>% 
+ms <- ms %>%
   set_variable_labels(
     STUDYID = "Study Identifier",
     DOMAIN = "Domain Abbreviation",

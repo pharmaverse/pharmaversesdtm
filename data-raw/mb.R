@@ -47,8 +47,7 @@ mb_gram_stain_result <- function(test, count = NULL, presence = TRUE) {
   detection <- data.frame(
     DOMAIN = "MB",
     MBTEST = test,
-    MBTESTCD = switch(
-      test,
+    MBTESTCD = switch(test,
       "Gram Negative Cocci" = "GMNCOC",
       "Gram Positive Cocci" = "GPRCOC",
       "Gram Negative Rods" = "GNROD",
@@ -78,8 +77,7 @@ mb_gram_stain_result <- function(test, count = NULL, presence = TRUE) {
       MBMETHOD = "GRAM STAIN",
       MBRSLSCL = "Ord",
       MBORRESU = NA_character_,
-      MBSTRESN = switch(
-        count,
+      MBSTRESN = switch(count,
         "1+" = 1,
         "2+" = 2,
         "3+" = 3,
@@ -213,21 +211,21 @@ ms_disk_diffusion_result <- function(ab, orres = 20, orresu = "mm", stres = orre
 
 # MS domain: NAAT
 ms_naat_result <- function(ab, ab_resistance = FALSE) {
-    data.frame(
-      DOMAIN = "MS",
-      MSTEST = "Microbial Susceptibility",
-      MSTESTCD = "MICROSUS",
-      MSAGENT = ab,
-      MSCONC = NA_character_,
-      MSCONCU = NA_character_,
-      MSORRES = if (ab_resistance) "RESISTANT" else "SUSCEPTIBLE",
-      MSORRESU = NA_character_,
-      MSSTRESC = ifelse(ab_resistance, "RESISTANT", "SUSCEPTIBLE"),
-      MSMETHOD = "NUCLEIC ACID AMPLIFICATION TEST",
-      MSSTRESN = NA_character_,
-      MSSTRESU = NA_character_,
-      stringsAsFactors = FALSE
-    )
+  data.frame(
+    DOMAIN = "MS",
+    MSTEST = "Microbial Susceptibility",
+    MSTESTCD = "MICROSUS",
+    MSAGENT = ab,
+    MSCONC = NA_character_,
+    MSCONCU = NA_character_,
+    MSORRES = if (ab_resistance) "RESISTANT" else "SUSCEPTIBLE",
+    MSORRESU = NA_character_,
+    MSSTRESC = ifelse(ab_resistance, "RESISTANT", "SUSCEPTIBLE"),
+    MSMETHOD = "NUCLEIC ACID AMPLIFICATION TEST",
+    MSSTRESN = NA_character_,
+    MSSTRESU = NA_character_,
+    stringsAsFactors = FALSE
+  )
 }
 
 ############################################################
@@ -249,379 +247,379 @@ ms_naat_result <- function(ab, ab_resistance = FALSE) {
 ############################################################
 
 study_microb_data <- list(
-    # Patient 1: organism identified with no infection and no resistance
-      "1" = list(
-        # Specimen 1
+  # Patient 1: organism identified with no infection and no resistance
+  "1" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "SKIN TISSUE",
+      spec_location = "SKIN OF THE AXILLA",
+      collection_date = "2025-06-14T08:00",
+      not_cultured_aliquots = list(
         "1" = list(
-            specimen = "SKIN TISSUE",
-            spec_location = "SKIN OF THE AXILLA",
-            collection_date = "2025-06-14T08:00",
-            not_cultured_aliquots = list(
-              "1" = list(
-                aliquot_preparation_dt = "2025-06-14T09:00"
-              )
+          aliquot_preparation_dt = "2025-06-14T09:00"
+        )
+      ),
+      cultured_aliquots = list(
+        "2" = list(
+          organism = "STAPHYLOCOCCUS AUREUS",
+          aliquot_preparation_dt = "2025-06-15T09:30",
+          culture_start_dt = "2025-06-15T10:00",
+          culture_end_dt = "2025-06-30T10:00",
+          MB = list(
+            mb_gram_stain_result(test = "Gram Negative Cocci", count = "2+"),
+            mb_colony_count_result(orres = 100, orresu = "CFU/mL", stres = 100, stresu = "CFU/mL")
+          ),
+          MS = list(
+            ms_epsilometer_result(
+              ab = "VANCOMYCIN", orres = 3, orresu = "ug/dL", stres = 3, stresu = "ug/dL",
+              ab_resistance = TRUE
             ),
-            cultured_aliquots = list(
-            "2" = list(
-              organism = "STAPHYLOCOCCUS AUREUS",
-              aliquot_preparation_dt = "2025-06-15T09:30",
-              culture_start_dt = "2025-06-15T10:00",
-              culture_end_dt = "2025-06-30T10:00",
-              MB = list(
-                mb_gram_stain_result(test = "Gram Negative Cocci", count = "2+"),
-                mb_colony_count_result(orres = 100, orresu = "CFU/mL", stres = 100, stresu = "CFU/mL")
-              ),
-              MS = list(
-                ms_epsilometer_result(
-                  ab = "VANCOMYCIN", orres = 3, orresu = "ug/dL", stres = 3, stresu = "ug/dL",
-                  ab_resistance = TRUE
-                ),
-                ms_disk_diffusion_result(
-                  ab = "CIPROFLOXACIN", orres = 14, orresu = "mm", stres = 14, stresu = "mm",
-                  ab_resistance = FALSE
-                )
-              )
-            ),
-            "3" = list(
-              organism = "KLEBSIELLA PNEUMONIAE",
-              aliquot_preparation_dt = "2025-06-15T09:45",
-              culture_start_dt = "2025-06-15T11:00",
-              culture_end_dt = "2025-06-30T11:00",
-              MB = list(
-                mb_gram_stain_result(test = "Gram Negative Rods", count = "1+"),
-                mb_colony_count_result(orres = 50, orresu = "CFU/mL", stres = 50, stresu = "CFU/mL")
-              ),
-              MS = list(
-                ms_epsilometer_result(
-                  ab = "AMIKACIN", orres = 1.5, orresu = "ug/dL", stres = 1.5, stresu = "ug/dL",
-                  ab_resistance = FALSE
-                )
-              )
+            ms_disk_diffusion_result(
+              ab = "CIPROFLOXACIN", orres = 14, orresu = "mm", stres = 14, stresu = "mm",
+              ab_resistance = FALSE
             )
           )
         ),
-        # Specimen 2
-        "2" = list(
-            specimen = "SKIN TISSUE",
-            spec_location = "SKIN OF THE AXILLA",
-            collection_date = "2025-06-21T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-            "1" = list(
-                  organism = "KLEBSIELLA PNEUMONIAE",
-                  resistance_ab = c("CIPROFLOXACIN", "AMOXICILLIN/CLAVULANATE", "CEFTAZIDIME"),
-                  aliquot_preparation_dt = "2025-06-22T09:30",
-                  culture_start_dt = "2025-06-22T10:00",
-                  culture_end_dt = "2025-07-07T10:00",
-                  MB = list(
-                    mb_gram_stain_result(test = "Gram Negative Rods", count = "3+"),
-                    mb_colony_count_result(orres = 500, orresu = "CFU/mL", stres = 500, stresu = "CFU/mL")
-                  ),
-                  MS = list(
-                    ms_epsilometer_result(
-                      ab = "AMIKACIN", orres = 10, orresu = "ug/dL", stres = 10, stresu = "ug/dL",
-                      ab_resistance = TRUE
-                    )
-                  )
-              )
+        "3" = list(
+          organism = "KLEBSIELLA PNEUMONIAE",
+          aliquot_preparation_dt = "2025-06-15T09:45",
+          culture_start_dt = "2025-06-15T11:00",
+          culture_end_dt = "2025-06-30T11:00",
+          MB = list(
+            mb_gram_stain_result(test = "Gram Negative Rods", count = "1+"),
+            mb_colony_count_result(orres = 50, orresu = "CFU/mL", stres = 50, stresu = "CFU/mL")
+          ),
+          MS = list(
+            ms_epsilometer_result(
+              ab = "AMIKACIN", orres = 1.5, orresu = "ug/dL", stres = 1.5, stresu = "ug/dL",
+              ab_resistance = FALSE
             )
+          )
         )
+      )
     ),
-    # Patient 2: organism identified with infection and resistance
+    # Specimen 2
     "2" = list(
-        # Specimen 1
+      specimen = "SKIN TISSUE",
+      spec_location = "SKIN OF THE AXILLA",
+      collection_date = "2025-06-21T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
         "1" = list(
-            specimen = "URINE",
-            spec_location = "URINARY SYSTEM",
-            collection_date = "2025-07-15T08:00",
-            not_cultured_aliquots = list(
-              "1" = list(
-                aliquot_preparation_dt = "2025-07-15T09:30"
-              )
-            ),
-            cultured_aliquots = list(
-            "2" = list(
-                    organism = "ENTEROCOCCUS FAECALIS",
-                    resistance_ab = c("AMOXICILLIN"),
-                    aliquot_preparation_dt = "2025-07-16T09:30",
-                    culture_start_dt = "2025-07-16T10:00",
-                    culture_end_dt = "2025-07-31T10:00",
-                    MB = list(
-                      mb_gram_stain_result(test = "Gram Positive Cocci", count = "4+"),
-                      mb_colony_count_result(orres = 300, orresu = "CFU/mL", stres = 300, stresu = "CFU/mL")
-                    ),
-                    MS = list(
-                      ms_disk_diffusion_result(
-                        ab = "AMOXICILLIN", orres = 8, orresu = "mm", stres = 8, stresu = "mm",
-                        ab_resistance = TRUE
-                      )
-                    )
-                )
-            )
-        ),
-        # Specimen 2
-        "2" = list(
-            specimen = "URINE",
-            spec_location = "URINARY SYSTEM",
-            collection_date = "2025-07-22T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-            "1" = list(
-                    organism = "ENTEROCOCCUS FAECALIS",
-                    resistance_ab = c("AMOXICILLIN"),
-                    aliquot_preparation_dt = "2025-07-23T09:30",
-                    culture_start_dt = "2025-07-23T10:00",
-                    culture_end_dt = "2025-08-07T10:00",
-                    MS = list(
-                      ms_disk_diffusion_result(
-                        ab = "AMOXICILLIN", orres = 7, orresu = "mm", stres = 7, stresu = "mm",
-                        ab_resistance = TRUE
-                      )
-                    )
-                )
-            )
-        )
-    ),
-    # Patient 3: organism identified with infection and multidrug resistance
-    "3" = list(
-        # Specimen 1
-        "1" = list(
-            specimen = "SKIN TISSUE",
-            spec_location = "SKIN OF THE AXILLA",
-            collection_date = "2025-08-11T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-              "1" = list(
-                      organism = "STAPHYLOCOCCUS AUREUS",
-                      resistance_ab = c("VANCOMYCIN"),
-                      aliquot_preparation_dt = "2025-08-12T09:30",
-                      culture_start_dt = "2025-08-12T10:00",
-                      culture_end_dt = "2025-08-27T10:00",
-                      MS = list(
-                        ms_epsilometer_result(
-                          ab = "VANCOMYCIN", orres = 32, orresu = "ug/dL", stres = 32, stresu = "ug/dL",
-                          ab_resistance = TRUE
-                        )
-                      )
-              ),
-              "2" = list(
-                      organism = "STAPHYLOCOCCUS AUREUS",
-                      resistance_ab = c("PENICILLIN", "CIPROFLOXACIN", "CLINDAMYCIN"),
-                      aliquot_preparation_dt = "2025-08-30T09:30",
-                      culture_start_dt = "2025-08-30T10:00",
-                      culture_end_dt = "2025-09-14T10:00",
-                      MS = list(
-                        ms_epsilometer_result(
-                          ab = "PENICILLIN", orres = 2, orresu = "ug/dL", stres = 2, stresu = "ug/dL",
-                          ab_resistance = TRUE
-                        ),
-                        ms_epsilometer_result(
-                          ab = "CIPROFLOXACIN", orres = 8, orresu = "ug/dL", stres = 8, stresu = "ug/dL",
-                          ab_resistance = TRUE
-                        ),
-                        ms_disk_diffusion_result(
-                          ab = "CLINDAMYCIN", orres = 12, orresu = "mm", stres = 12, stresu = "mm",
-                          ab_resistance = TRUE
-                        )
-                      )
-              )
-            )
-        )
-    ),
-    # Patient 4: organism identified with infection and no resistance
-    "4" = list(
-        # Specimen 1
-        "1" = list(
-            specimen = "SPUTUM",
-            spec_location = "LUNG",
-            collection_date = "2025-09-10T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-              "1" = list(
-                      organism = "STREPTOCOCCUS PNEUMONIAE",
-                      resistance_ab = "",
-                      aliquot_preparation_dt = "2025-09-11T09:30",
-                      culture_start_dt = "2025-09-11T10:00",
-                      culture_end_dt = "2025-09-26T10:00",
-                      MB = list(
-                        mb_gram_stain_result(test = "Gram Positive Cocci", count = "2+"),
-                        mb_colony_count_result(orres = 150, orresu = "CFU/mL", stres = 150, stresu = "CFU/mL")
-                      ),
-                      MS = list(
-                        ms_disk_diffusion_result(
-                          ab = "ERYTHROMYCIN", orres = 6, orresu = "mm", stres = 6, stresu = "mm",
-                          ab_resistance = FALSE
-                        )
-                      )
-              )
-            )
-        )
-    ),
-    # Patient 5: multiple organisms identified in same specimen with later multidrug resistance (MDR)
-    "5" = list(
-        # Specimen 1
-        "1" = list(
-            specimen = "SPUTUM",
-            spec_location = "LUNG",
-            collection_date = "2025-10-05T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-            "1" = list(
-                    organism = "STAPHYLOCOCCUS AUREUS",
-                    resistance_ab = c("PENICILLIN"),
-                    aliquot_preparation_dt = "2025-10-05T09:30",
-                    culture_start_dt = "2025-10-05T10:00",
-                    culture_end_dt = "2025-10-20T10:00",
-                    MS = list(
-                      ms_disk_diffusion_result(
-                        ab = "ERYTHROMYCIN", orres = 22, orresu = "mm", stres = 22, stresu = "mm",
-                        ab_resistance = FALSE
-                      ),
-                      ms_disk_diffusion_result(
-                        ab = "RIFAMPICIN", orres = 28, orresu = "mm", stres = 28, stresu = "mm",
-                        ab_resistance = FALSE
-                      ),
-                      ms_epsilometer_result(
-                        ab = "CLARITHROMYCIN", orres = 0.1, orresu = "ug/dL", stres = 0.1, stresu = "ug/dL",
-                        ab_resistance = FALSE
-                      )
-                    )
-            ),
-            "2" = list(
-                    organism = "STREPTOCOCCUS PNEUMONIAE",
-                    resistance_ab = c("ERYTHROMYCIN"),
-                    aliquot_preparation_dt = "2025-10-05T09:45",
-                    culture_start_dt = "2025-10-05T11:00",
-                    culture_end_dt = "2025-10-20T11:00",
-                    MS = list(
-                      ms_disk_diffusion_result(
-                        ab = "ERYTHROMYCIN", orres = 25, orresu = "mm", stres = 25, stresu = "mm",
-                        ab_resistance = FALSE
-                      ),
-                      ms_disk_diffusion_result(
-                        ab = "RIFAMPICIN", orres = 30, orresu = "mm", stres = 30, stresu = "mm",
-                        ab_resistance = FALSE
-                      ),
-                      ms_epsilometer_result(
-                        ab = "CLARITHROMYCIN", orres = 0.2, orresu = "ug/dL", stres = 0.2, stresu = "ug/dL",
-                        ab_resistance = FALSE
-                      )
-                    )
-            )
-          )
-        ),
-        # Specimen 2: MDR development in S. aureus
-        "2" = list(
-            specimen = "SPUTUM",
-            spec_location = "LUNG",
-            collection_date = "2025-10-15T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-              "1" = list(
-                      organism = "STAPHYLOCOCCUS AUREUS",
-                      resistance_ab = c("PENICILLIN", "VANCOMYCIN"),
-                      aliquot_preparation_dt = "2025-10-16T09:30",
-                      culture_start_dt = "2025-10-16T10:00",
-                      culture_end_dt = "2025-10-31T10:00",
-                      MS = list(
-                        ms_disk_diffusion_result(
-                          ab = "ERYTHROMYCIN", orres = 18, orresu = "mm", stres = 18, stresu = "mm",
-                          ab_resistance = TRUE
-                      ),
-                        ms_disk_diffusion_result(
-                          ab = "RIFAMPICIN", orres = 20, orresu = "mm", stres = 20, stresu = "mm",
-                          ab_resistance = TRUE
-                        ),
-                        ms_epsilometer_result(
-                          ab = "CLARITHROMYCIN", orres = 2, orresu = "ug/dL", stres = 2, stresu = "ug/dL",
-                          ab_resistance = TRUE
-                        )
-                      )
-              ),
-              "2" = list(
-                      organism = "STREPTOCOCCUS PNEUMONIAE",
-                      resistance_ab = c("ERYTHROMYCIN", "CLARITHROMYCIN"),
-                      aliquot_preparation_dt = "2025-10-16T09:45",
-                      culture_start_dt = "2025-10-16T11:00",
-                      culture_end_dt = "2025-10-31T11:00",
-                      MS = list(
-                        ms_disk_diffusion_result(
-                          ab = "ERYTHROMYCIN", orres = 25, orresu = "mm", stres = 25, stresu = "mm",
-                          ab_resistance = FALSE
-                        ),
-                        ms_disk_diffusion_result(
-                          ab = "RIFAMPICIN", orres = 30, orresu = "mm", stres = 30, stresu = "mm",
-                          ab_resistance = FALSE
-                        ),
-                        ms_epsilometer_result(
-                          ab = "CLARITHROMYCIN", orres = 0.2, orresu = "ug/dL", stres = 0.2, stresu = "ug/dL",
-                          ab_resistance = FALSE
-                        )
-                      )
-              )
-            )
-        )
-    ),
-    # Patient 6: nothing grown from specimen
-    "6" = list(
-        # Specimen 1
-        "1" = list(
-            specimen = "SPUTUM",
-            spec_location = "LUNG",
-            collection_date = "2025-11-01T08:00",
-            not_cultured_aliquots = list(),
-            cultured_aliquots = list(
-              "1" = list(
-                aliquot_preparation_dt = "2025-11-01T09:30",
-                culture_start_dt = "2025-11-01T10:00",
-                culture_end_dt = "2025-11-16T10:00",
-                MB = list(mb_no_growth_result())
-              ),
-              "2" = list(
-                aliquot_preparation_dt = "2025-11-01T09:30",
-                culture_start_dt = "2025-11-01T10:00",
-                culture_end_dt = "2025-11-16T10:00",
-                MB = list(mb_no_growth_result())
-              )
-            )
-         )
-    ),
-    # Patient 7: Mycobaterium tuberculosis complex rifampicin resistant identified by NAAT
-    "7" = list(
-        # Specimen 1
-        "1" = list(
-            specimen = "LAVAGE FLUID",
-            spec_location = "STOMACH",
-            collection_date = "2025-12-01T08:00",
-            not_cultured_aliquots = list(
-              "1" = list(
-                aliquot_preparation_dt = "2025-12-01T09:30"
-              )
-            ),
-            cultured_aliquots = list(
-            "1" = list(
-              organism = "MYCOBACTERIUM TUBERCULOSIS",
-              resistance_ab = c("RIFAMPICIN"),
-              aliquot_preparation_dt = "2025-12-02T09:30",
-              culture_start_dt = "2025-12-02T10:00",
-              culture_end_dt = "2025-12-17T10:00",
-              MB = list(
-                mb_naat_result(
-                  id_test_org = "MYCOBACTERIUM TUBERCULOSIS COMPLEX",
-                  cd_id_test_org = "MTBCMPLX",
-                  id_org_successful = TRUE
-                )
-              ),
-              MS = list(
-                ms_naat_result(
-                  ab = "RIFAMPICIN",
-                  ab_resistance = TRUE
-                )
-              )
+          organism = "KLEBSIELLA PNEUMONIAE",
+          resistance_ab = c("CIPROFLOXACIN", "AMOXICILLIN/CLAVULANATE", "CEFTAZIDIME"),
+          aliquot_preparation_dt = "2025-06-22T09:30",
+          culture_start_dt = "2025-06-22T10:00",
+          culture_end_dt = "2025-07-07T10:00",
+          MB = list(
+            mb_gram_stain_result(test = "Gram Negative Rods", count = "3+"),
+            mb_colony_count_result(orres = 500, orresu = "CFU/mL", stres = 500, stresu = "CFU/mL")
+          ),
+          MS = list(
+            ms_epsilometer_result(
+              ab = "AMIKACIN", orres = 10, orresu = "ug/dL", stres = 10, stresu = "ug/dL",
+              ab_resistance = TRUE
             )
           )
         )
+      )
     )
+  ),
+  # Patient 2: organism identified with infection and resistance
+  "2" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "URINE",
+      spec_location = "URINARY SYSTEM",
+      collection_date = "2025-07-15T08:00",
+      not_cultured_aliquots = list(
+        "1" = list(
+          aliquot_preparation_dt = "2025-07-15T09:30"
+        )
+      ),
+      cultured_aliquots = list(
+        "2" = list(
+          organism = "ENTEROCOCCUS FAECALIS",
+          resistance_ab = c("AMOXICILLIN"),
+          aliquot_preparation_dt = "2025-07-16T09:30",
+          culture_start_dt = "2025-07-16T10:00",
+          culture_end_dt = "2025-07-31T10:00",
+          MB = list(
+            mb_gram_stain_result(test = "Gram Positive Cocci", count = "4+"),
+            mb_colony_count_result(orres = 300, orresu = "CFU/mL", stres = 300, stresu = "CFU/mL")
+          ),
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "AMOXICILLIN", orres = 8, orresu = "mm", stres = 8, stresu = "mm",
+              ab_resistance = TRUE
+            )
+          )
+        )
+      )
+    ),
+    # Specimen 2
+    "2" = list(
+      specimen = "URINE",
+      spec_location = "URINARY SYSTEM",
+      collection_date = "2025-07-22T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
+        "1" = list(
+          organism = "ENTEROCOCCUS FAECALIS",
+          resistance_ab = c("AMOXICILLIN"),
+          aliquot_preparation_dt = "2025-07-23T09:30",
+          culture_start_dt = "2025-07-23T10:00",
+          culture_end_dt = "2025-08-07T10:00",
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "AMOXICILLIN", orres = 7, orresu = "mm", stres = 7, stresu = "mm",
+              ab_resistance = TRUE
+            )
+          )
+        )
+      )
+    )
+  ),
+  # Patient 3: organism identified with infection and multidrug resistance
+  "3" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "SKIN TISSUE",
+      spec_location = "SKIN OF THE AXILLA",
+      collection_date = "2025-08-11T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
+        "1" = list(
+          organism = "STAPHYLOCOCCUS AUREUS",
+          resistance_ab = c("VANCOMYCIN"),
+          aliquot_preparation_dt = "2025-08-12T09:30",
+          culture_start_dt = "2025-08-12T10:00",
+          culture_end_dt = "2025-08-27T10:00",
+          MS = list(
+            ms_epsilometer_result(
+              ab = "VANCOMYCIN", orres = 32, orresu = "ug/dL", stres = 32, stresu = "ug/dL",
+              ab_resistance = TRUE
+            )
+          )
+        ),
+        "2" = list(
+          organism = "STAPHYLOCOCCUS AUREUS",
+          resistance_ab = c("PENICILLIN", "CIPROFLOXACIN", "CLINDAMYCIN"),
+          aliquot_preparation_dt = "2025-08-30T09:30",
+          culture_start_dt = "2025-08-30T10:00",
+          culture_end_dt = "2025-09-14T10:00",
+          MS = list(
+            ms_epsilometer_result(
+              ab = "PENICILLIN", orres = 2, orresu = "ug/dL", stres = 2, stresu = "ug/dL",
+              ab_resistance = TRUE
+            ),
+            ms_epsilometer_result(
+              ab = "CIPROFLOXACIN", orres = 8, orresu = "ug/dL", stres = 8, stresu = "ug/dL",
+              ab_resistance = TRUE
+            ),
+            ms_disk_diffusion_result(
+              ab = "CLINDAMYCIN", orres = 12, orresu = "mm", stres = 12, stresu = "mm",
+              ab_resistance = TRUE
+            )
+          )
+        )
+      )
+    )
+  ),
+  # Patient 4: organism identified with infection and no resistance
+  "4" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "SPUTUM",
+      spec_location = "LUNG",
+      collection_date = "2025-09-10T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
+        "1" = list(
+          organism = "STREPTOCOCCUS PNEUMONIAE",
+          resistance_ab = "",
+          aliquot_preparation_dt = "2025-09-11T09:30",
+          culture_start_dt = "2025-09-11T10:00",
+          culture_end_dt = "2025-09-26T10:00",
+          MB = list(
+            mb_gram_stain_result(test = "Gram Positive Cocci", count = "2+"),
+            mb_colony_count_result(orres = 150, orresu = "CFU/mL", stres = 150, stresu = "CFU/mL")
+          ),
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "ERYTHROMYCIN", orres = 6, orresu = "mm", stres = 6, stresu = "mm",
+              ab_resistance = FALSE
+            )
+          )
+        )
+      )
+    )
+  ),
+  # Patient 5: multiple organisms identified in same specimen with later multidrug resistance (MDR)
+  "5" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "SPUTUM",
+      spec_location = "LUNG",
+      collection_date = "2025-10-05T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
+        "1" = list(
+          organism = "STAPHYLOCOCCUS AUREUS",
+          resistance_ab = c("PENICILLIN"),
+          aliquot_preparation_dt = "2025-10-05T09:30",
+          culture_start_dt = "2025-10-05T10:00",
+          culture_end_dt = "2025-10-20T10:00",
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "ERYTHROMYCIN", orres = 22, orresu = "mm", stres = 22, stresu = "mm",
+              ab_resistance = FALSE
+            ),
+            ms_disk_diffusion_result(
+              ab = "RIFAMPICIN", orres = 28, orresu = "mm", stres = 28, stresu = "mm",
+              ab_resistance = FALSE
+            ),
+            ms_epsilometer_result(
+              ab = "CLARITHROMYCIN", orres = 0.1, orresu = "ug/dL", stres = 0.1, stresu = "ug/dL",
+              ab_resistance = FALSE
+            )
+          )
+        ),
+        "2" = list(
+          organism = "STREPTOCOCCUS PNEUMONIAE",
+          resistance_ab = c("ERYTHROMYCIN"),
+          aliquot_preparation_dt = "2025-10-05T09:45",
+          culture_start_dt = "2025-10-05T11:00",
+          culture_end_dt = "2025-10-20T11:00",
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "ERYTHROMYCIN", orres = 25, orresu = "mm", stres = 25, stresu = "mm",
+              ab_resistance = FALSE
+            ),
+            ms_disk_diffusion_result(
+              ab = "RIFAMPICIN", orres = 30, orresu = "mm", stres = 30, stresu = "mm",
+              ab_resistance = FALSE
+            ),
+            ms_epsilometer_result(
+              ab = "CLARITHROMYCIN", orres = 0.2, orresu = "ug/dL", stres = 0.2, stresu = "ug/dL",
+              ab_resistance = FALSE
+            )
+          )
+        )
+      )
+    ),
+    # Specimen 2: MDR development in S. aureus
+    "2" = list(
+      specimen = "SPUTUM",
+      spec_location = "LUNG",
+      collection_date = "2025-10-15T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
+        "1" = list(
+          organism = "STAPHYLOCOCCUS AUREUS",
+          resistance_ab = c("PENICILLIN", "VANCOMYCIN"),
+          aliquot_preparation_dt = "2025-10-16T09:30",
+          culture_start_dt = "2025-10-16T10:00",
+          culture_end_dt = "2025-10-31T10:00",
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "ERYTHROMYCIN", orres = 18, orresu = "mm", stres = 18, stresu = "mm",
+              ab_resistance = TRUE
+            ),
+            ms_disk_diffusion_result(
+              ab = "RIFAMPICIN", orres = 20, orresu = "mm", stres = 20, stresu = "mm",
+              ab_resistance = TRUE
+            ),
+            ms_epsilometer_result(
+              ab = "CLARITHROMYCIN", orres = 2, orresu = "ug/dL", stres = 2, stresu = "ug/dL",
+              ab_resistance = TRUE
+            )
+          )
+        ),
+        "2" = list(
+          organism = "STREPTOCOCCUS PNEUMONIAE",
+          resistance_ab = c("ERYTHROMYCIN", "CLARITHROMYCIN"),
+          aliquot_preparation_dt = "2025-10-16T09:45",
+          culture_start_dt = "2025-10-16T11:00",
+          culture_end_dt = "2025-10-31T11:00",
+          MS = list(
+            ms_disk_diffusion_result(
+              ab = "ERYTHROMYCIN", orres = 25, orresu = "mm", stres = 25, stresu = "mm",
+              ab_resistance = FALSE
+            ),
+            ms_disk_diffusion_result(
+              ab = "RIFAMPICIN", orres = 30, orresu = "mm", stres = 30, stresu = "mm",
+              ab_resistance = FALSE
+            ),
+            ms_epsilometer_result(
+              ab = "CLARITHROMYCIN", orres = 0.2, orresu = "ug/dL", stres = 0.2, stresu = "ug/dL",
+              ab_resistance = FALSE
+            )
+          )
+        )
+      )
+    )
+  ),
+  # Patient 6: nothing grown from specimen
+  "6" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "SPUTUM",
+      spec_location = "LUNG",
+      collection_date = "2025-11-01T08:00",
+      not_cultured_aliquots = list(),
+      cultured_aliquots = list(
+        "1" = list(
+          aliquot_preparation_dt = "2025-11-01T09:30",
+          culture_start_dt = "2025-11-01T10:00",
+          culture_end_dt = "2025-11-16T10:00",
+          MB = list(mb_no_growth_result())
+        ),
+        "2" = list(
+          aliquot_preparation_dt = "2025-11-01T09:30",
+          culture_start_dt = "2025-11-01T10:00",
+          culture_end_dt = "2025-11-16T10:00",
+          MB = list(mb_no_growth_result())
+        )
+      )
+    )
+  ),
+  # Patient 7: Mycobaterium tuberculosis complex rifampicin resistant identified by NAAT
+  "7" = list(
+    # Specimen 1
+    "1" = list(
+      specimen = "LAVAGE FLUID",
+      spec_location = "STOMACH",
+      collection_date = "2025-12-01T08:00",
+      not_cultured_aliquots = list(
+        "1" = list(
+          aliquot_preparation_dt = "2025-12-01T09:30"
+        )
+      ),
+      cultured_aliquots = list(
+        "1" = list(
+          organism = "MYCOBACTERIUM TUBERCULOSIS",
+          resistance_ab = c("RIFAMPICIN"),
+          aliquot_preparation_dt = "2025-12-02T09:30",
+          culture_start_dt = "2025-12-02T10:00",
+          culture_end_dt = "2025-12-17T10:00",
+          MB = list(
+            mb_naat_result(
+              id_test_org = "MYCOBACTERIUM TUBERCULOSIS COMPLEX",
+              cd_id_test_org = "MTBCMPLX",
+              id_org_successful = TRUE
+            )
+          ),
+          MS = list(
+            ms_naat_result(
+              ab = "RIFAMPICIN",
+              ab_resistance = TRUE
+            )
+          )
+        )
+      )
+    )
+  )
 )
 
 
@@ -630,159 +628,164 @@ study_microb_data <- list(
 # ---- Extraction Loop: Build BE, MB, MS Domains ----
 # ============================================================
 
-studyid = "MI"
+studyid <- "MI"
 be <- data.frame()
 ms <- data.frame()
 mb <- data.frame()
 
 # Loop over each subject (patient) in the study
 for (subj_ix in seq_along(study_microb_data)) {
-    usubjid <- paste0(studyid, "-", sprintf("%02d", subj_ix))
-    subj_data <- study_microb_data[[subj_ix]]
+  usubjid <- paste0(studyid, "-", sprintf("%02d", subj_ix))
+  subj_data <- study_microb_data[[subj_ix]]
 
-    # Initialize subject-level counters
-    visitnum <- 0; msgrpid <- 0; mbgrpid <- 0; beseq <- 0; mbseq <- 0; msseq <- 0
+  # Initialize subject-level counters
+  visitnum <- 0
+  msgrpid <- 0
+  mbgrpid <- 0
+  beseq <- 0
+  mbseq <- 0
+  msseq <- 0
 
-    # Loop over each specimen for the subject
-    for (spec_ix in seq_along(subj_data)) {
-        specid <- paste0("SPEC", subj_ix, ".", spec_ix)
-        spec_data <- subj_data[[spec_ix]]
+  # Loop over each specimen for the subject
+  for (spec_ix in seq_along(subj_data)) {
+    specid <- paste0("SPEC", subj_ix, ".", spec_ix)
+    spec_data <- subj_data[[spec_ix]]
 
-        # Extract specimen-level metadata
-        spec <- spec_data$specimen
-        specloc <- spec_data$spec_location
-        collection_date <- spec_data$collection_date
-        beseq <- beseq + 1
-        visitnum <- visitnum + 1
+    # Extract specimen-level metadata
+    spec <- spec_data$specimen
+    specloc <- spec_data$spec_location
+    collection_date <- spec_data$collection_date
+    beseq <- beseq + 1
+    visitnum <- visitnum + 1
 
-        # Record specimen collection event in BE domain
-        be_collection <- data.frame(
-            STUDYID = studyid,
-            DOMAIN = "BE",
-            USUBJID = usubjid,
+    # Record specimen collection event in BE domain
+    be_collection <- data.frame(
+      STUDYID = studyid,
+      DOMAIN = "BE",
+      USUBJID = usubjid,
+      BESEQ = beseq,
+      BEREFID = specid,
+      BELNKID = NA,
+      BETERM = "Specimen Collection",
+      BECAT = "COLLECTION",
+      BELOC = specloc,
+      VISITNUM = visitnum,
+      BEDTC = collection_date,
+      BESTDTC = collection_date,
+      BEENDTC = NA
+    )
+    be <- rbind(be, be_collection)
+
+    # Loop over not cultured aliquots for this specimen
+    for (aliq_ix in seq_len(length(spec_data$not_cultured_aliquots))) {
+      # Generate aliquot ID and extract data
+      aliquot_nr <- names(spec_data$not_cultured_aliquots)[aliq_ix]
+      aliquot_id <- gsub("SPEC", "ALIQ", paste0(specid, ".", aliquot_nr))
+      aliquot_data <- spec_data$not_cultured_aliquots[[aliq_ix]]
+
+      # Record aliquoting event in BE domain
+      beseq <- beseq + 1
+      be <- rbind(
+        be,
+        be_collection %>%
+          mutate(
             BESEQ = beseq,
-            BEREFID = specid,
-            BELNKID = NA,
-            BETERM = "Specimen Collection",
-            BECAT = "COLLECTION",
-            BELOC = specloc,
-            VISITNUM = visitnum,
-            BEDTC = collection_date,
-            BESTDTC = collection_date,
-            BEENDTC = NA
-        )
-        be <- rbind(be, be_collection)
-
-        # Loop over not cultured aliquots for this specimen
-        for (aliq_ix in seq_len(length(spec_data$not_cultured_aliquots))) {
-            # Generate aliquot ID and extract data
-            aliquot_nr <- names(spec_data$not_cultured_aliquots)[aliq_ix]
-            aliquot_id <- gsub("SPEC", "ALIQ", paste0(specid, ".", aliquot_nr))
-            aliquot_data <- spec_data$not_cultured_aliquots[[aliq_ix]]
-
-            # Record aliquoting event in BE domain
-            beseq <- beseq + 1
-            be <- rbind(
-                be,
-                be_collection %>%
-                  mutate(
-                    BESEQ = beseq,
-                    BEREFID = aliquot_id,
-                    BETERM = "Aliquoting",
-                    BECAT = "PREPARATION",
-                    BESTDTC = aliquot_data$aliquot_preparation_dt
-                )
-            )
-        }
-
-        # Loop over cultured aliquots for this specimen
-        for (aliq_ix in seq_len(length(spec_data$cultured_aliquots))) {
-            # Generate IDs and extract data
-            aliquot_nr <- names(spec_data$cultured_aliquots)[aliq_ix]
-            aliquot_id <- gsub("SPEC", "ALIQ", paste0(specid, ".", aliquot_nr))
-            culture_id <- paste0(aliquot_id, "-C")
-            aliquot_data <- spec_data$cultured_aliquots[[aliq_ix]]
-
-            # Extract organism and resistance info
-            nhoid <- aliquot_data$organism
-            ab_resist <- aliquot_data$resistance_ab
-            bestdtc_prep <- aliquot_data$aliquot_preparation_dt
-            bestdtc_cult <- aliquot_data$culture_start_dt
-            beendtc_cult <- aliquot_data$culture_end_dt
-
-            # Record aliquoting and culturing events in BE domain
-            beseq <- beseq + 2
-            be <- rbind(
-                be,
-                be_collection %>% mutate(
-                    BESEQ = beseq - 1,
-                    BEREFID = aliquot_id,
-                    BETERM = "Aliquoting",
-                    BECAT = "PREPARATION",
-                    BESTDTC = bestdtc_prep
-                ),
-                be_collection %>% mutate(
-                    BESEQ = beseq,
-                    BEREFID = culture_id,
-                    BETERM = "Culturing",
-                    BECAT = "CULTURE",
-                    BESTDTC = bestdtc_cult,
-                    BEENDTC = beendtc_cult
-                )
-            )
-
-            # Add MB results if present
-            if (!is.null(aliquot_data$MB)) {
-              for (res_grp_ix in seq_len(length(aliquot_data$MB))) {
-                mbgrpid <- mbgrpid + 1
-                res_grp_data <- aliquot_data$MB[[res_grp_ix]]
-                mbseq <- mbseq + nrow(res_grp_data)
-
-                # Add MB rows to MB domain
-                res <- res_grp_data %>%
-                  dplyr::mutate(
-                    STUDYID = studyid,
-                    USUBJID = usubjid,
-                    MBSEQ = seq(mbseq - nrow(.) + 1, mbseq),
-                    MBREFID = aliquot_id,
-                    MBGRPID = mbgrpid,
-                    MBLNKGRP = culture_id,
-                    MBSPEC = spec,
-                    MBLOC = specloc,
-                    VISITNUM = visitnum,
-                    MBDTC = collection_date
-                  )
-                mb <- rbind(mb, res)
-              }
-            }
-
-            # Add MS results if present
-            if (!is.null(aliquot_data$MS)) {
-              for (res_grp_ix in seq_len(length(aliquot_data$MS))) {
-                msgrpid <- msgrpid + 1
-                res_grp_data <- aliquot_data$MS[[res_grp_ix]]
-                msseq <- msseq + nrow(res_grp_data)
-
-                # Add MS rows to MS domain
-                res <- res_grp_data %>%
-                  dplyr::mutate(
-                    STUDYID = studyid,
-                    USUBJID = usubjid,
-                    MSSEQ = seq(msseq - nrow(.) + 1, msseq),
-                    MSREFID = aliquot_id,
-                    NHOID = nhoid,
-                    MSGRPID = msgrpid,
-                    MSLNKID = culture_id,
-                    MSSPEC = spec,
-                    MSLOC = specloc,
-                    VISITNUM = visitnum,
-                    MSDTC = collection_date
-                  )
-                ms <- dplyr::bind_rows(ms, res)
-              }
-            }
-        }
+            BEREFID = aliquot_id,
+            BETERM = "Aliquoting",
+            BECAT = "PREPARATION",
+            BESTDTC = aliquot_data$aliquot_preparation_dt
+          )
+      )
     }
+
+    # Loop over cultured aliquots for this specimen
+    for (aliq_ix in seq_len(length(spec_data$cultured_aliquots))) {
+      # Generate IDs and extract data
+      aliquot_nr <- names(spec_data$cultured_aliquots)[aliq_ix]
+      aliquot_id <- gsub("SPEC", "ALIQ", paste0(specid, ".", aliquot_nr))
+      culture_id <- paste0(aliquot_id, "-C")
+      aliquot_data <- spec_data$cultured_aliquots[[aliq_ix]]
+
+      # Extract organism and resistance info
+      nhoid <- aliquot_data$organism
+      ab_resist <- aliquot_data$resistance_ab
+      bestdtc_prep <- aliquot_data$aliquot_preparation_dt
+      bestdtc_cult <- aliquot_data$culture_start_dt
+      beendtc_cult <- aliquot_data$culture_end_dt
+
+      # Record aliquoting and culturing events in BE domain
+      beseq <- beseq + 2
+      be <- rbind(
+        be,
+        be_collection %>% mutate(
+          BESEQ = beseq - 1,
+          BEREFID = aliquot_id,
+          BETERM = "Aliquoting",
+          BECAT = "PREPARATION",
+          BESTDTC = bestdtc_prep
+        ),
+        be_collection %>% mutate(
+          BESEQ = beseq,
+          BEREFID = culture_id,
+          BETERM = "Culturing",
+          BECAT = "CULTURE",
+          BESTDTC = bestdtc_cult,
+          BEENDTC = beendtc_cult
+        )
+      )
+
+      # Add MB results if present
+      if (!is.null(aliquot_data$MB)) {
+        for (res_grp_ix in seq_len(length(aliquot_data$MB))) {
+          mbgrpid <- mbgrpid + 1
+          res_grp_data <- aliquot_data$MB[[res_grp_ix]]
+          mbseq <- mbseq + nrow(res_grp_data)
+
+          # Add MB rows to MB domain
+          res <- res_grp_data %>%
+            dplyr::mutate(
+              STUDYID = studyid,
+              USUBJID = usubjid,
+              MBSEQ = seq(mbseq - nrow(.) + 1, mbseq),
+              MBREFID = aliquot_id,
+              MBGRPID = mbgrpid,
+              MBLNKGRP = culture_id,
+              MBSPEC = spec,
+              MBLOC = specloc,
+              VISITNUM = visitnum,
+              MBDTC = collection_date
+            )
+          mb <- rbind(mb, res)
+        }
+      }
+
+      # Add MS results if present
+      if (!is.null(aliquot_data$MS)) {
+        for (res_grp_ix in seq_len(length(aliquot_data$MS))) {
+          msgrpid <- msgrpid + 1
+          res_grp_data <- aliquot_data$MS[[res_grp_ix]]
+          msseq <- msseq + nrow(res_grp_data)
+
+          # Add MS rows to MS domain
+          res <- res_grp_data %>%
+            dplyr::mutate(
+              STUDYID = studyid,
+              USUBJID = usubjid,
+              MSSEQ = seq(msseq - nrow(.) + 1, msseq),
+              MSREFID = aliquot_id,
+              NHOID = nhoid,
+              MSGRPID = msgrpid,
+              MSLNKID = culture_id,
+              MSSPEC = spec,
+              MSLOC = specloc,
+              VISITNUM = visitnum,
+              MSDTC = collection_date
+            )
+          ms <- dplyr::bind_rows(ms, res)
+        }
+      }
+    }
+  }
 }
 
 
@@ -900,5 +903,3 @@ ms <- ms %>%
     VISITNUM = "Visit Number",
     MSDTC = "Date/Time of Specimen Collection"
   )
-
-
