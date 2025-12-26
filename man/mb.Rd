@@ -16,7 +16,7 @@ A data frame with 21 columns:
 \item{MBLNKGRP}{Link Group ID}
 \item{MBTESTCD}{Microbiology Test or Finding Short Name}
 \item{MBTEST}{Microbiology Test or Finding Name}
-\item{MBTSTDTL}{Measuremet, Test or Examination Detail}
+\item{MBTSTDTL}{Measurement, Test or Examination Detail}
 \item{MBORRES}{Original Result}
 \item{MBORRESU}{Original Units}
 \item{MBRSLSCL}{Result Scale}

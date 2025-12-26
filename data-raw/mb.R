@@ -835,7 +835,7 @@ mb <- mb %>%
     MBREFID = "Reference ID",
     MBTESTCD = "Microbiology Test or Finding Short Name",
     MBTEST = "Microbiology Test or Finding Name",
-    MBTSTDTL = "Measuremet, Test or Examination Detail",
+    MBTSTDTL = "Measurement, Test or Examination Detail",
     MBORRES = "Original Result",
     MBORRESU = "Original Units",
     MBRSLSCL = "Result Scale",
