@@ -5,7 +5,7 @@
 \alias{dm_neuro}
 \title{Demographic Dataset-neuro}
 \format{
-A data frame with 26 columns:
+A data frame with 27 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
