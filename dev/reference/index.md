@@ -58,6 +58,8 @@
   : Procedure Agents Dataset-neuro
 - [`dm_neuro`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/dm_neuro.md)
   : Demographic Dataset-neuro
+- [`lb_neuro`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/lb_neuro.md)
+  : Laboratory Test Dataset-neuro
 - [`nv_neuro`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/nv_neuro.md)
   : Neurological Assessment Dataset-neuro
 - [`suppnv_neuro`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/suppnv_neuro.md)

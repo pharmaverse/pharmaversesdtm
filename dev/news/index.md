@@ -13,12 +13,14 @@
 
 - Following Neurological Disease Specific SDTM datasets have been added.
   ([\#198](https://github.com/pharmaverse/pharmaversesdtm/issues/198),
-  [\#202](https://github.com/pharmaverse/pharmaversesdtm/issues/202))
+  [\#202](https://github.com/pharmaverse/pharmaversesdtm/issues/202),
+  [\#203](https://github.com/pharmaverse/pharmaversesdtm/issues/203))
 
   - `dm_neuro`
   - `nv_neuro`
   - `suppnv_neuro`
   - `ag_neuro`
+  - `lb_neuro`
 
 - Updated `rs_onco_pcwg3` to correct the misclassification of `PDu` and
   to remove the `TMRESP` records.
