@@ -118,6 +118,7 @@ POLYCHR
 PPTEST
 PPTESTCD
 PROT
+PSA
 Pharmacokinetic
 Pharmaverse
 Phosphatase
@@ -167,7 +168,6 @@ Subfield
 Synuclein
 TAs
 TMAX
-TMRESP
 TRGRESP
 TRTEST
 TRTESTCD
@@ -179,6 +179,7 @@ TUTESTCD
 Thampi
 Thyrotropin
 Transferase
+UPSIT
 URATE
 UROBIL
 Ungrouped

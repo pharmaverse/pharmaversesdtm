@@ -47,26 +47,28 @@ visit13_usubjid <- visit_schedule %>%
 
 # Create records for one USUBJID ----
 create_records_for_one_id <- function(usubjid = "01-701-1015", amy_tracer = "FBP", vendor = "AVID",
-                                      visitnum = 3, amy_suvr_value, tau_suvr_value) {
+                                      visitnum = 3, amy_suvr_value, tau_suvr_value, upsit_value) {
   tibble(
     STUDYID = "CDISCPILOT01",
     DOMAIN = "NV",
     USUBJID = usubjid,
     SUBJID = sub(".*-", "", usubjid),
-    NVTESTCD = c("VR", "SUVR", "SUVR"),
+    NVTESTCD = c("VR", "SUVR", "SUVR", "UPSIT"),
     NVTEST = c(
       "Qualitative Visual Classification",
       "Standardized Uptake Value Ratio",
-      "Standardized Uptake Value Ratio"
+      "Standardized Uptake Value Ratio",
+      "University of Pennsylvania Smell Identification Test"
     ),
-    NVCAT = c(amy_tracer, amy_tracer, "FTP"),
-    NVORRES = c("Positive", as.character(amy_suvr_value), as.character(tau_suvr_value)),
-    NVLOC = c(NA_character_, "NEOCORTICAL COMPOSITE", "NEOCORTICAL COMPOSITE"),
-    NVNAM = c("IXICO", vendor, vendor),
+    NVCAT = c(amy_tracer, amy_tracer, "FTP", "OLFACTORY FUNCTION"),
+    NVORRES = c("Positive", as.character(amy_suvr_value), as.character(tau_suvr_value), as.character(upsit_value)),
+    NVLOC = c(NA_character_, "NEOCORTICAL COMPOSITE", "NEOCORTICAL COMPOSITE", NA_character_),
+    NVNAM = c("IXICO", vendor, vendor, "Sensonics International"),
     NVMETHOD = c(
       paste(amy_tracer, "VISUAL CLASSIFICATION"),
       paste(vendor, amy_tracer, "SUVR PIPELINE"),
-      paste(vendor, "FTP", "SUVR PIPELINE")
+      paste(vendor, "FTP", "SUVR PIPELINE"),
+      NA_character_
     ),
     VISITNUM = visitnum
   )
@@ -78,7 +80,10 @@ set.seed(2774)
 
 # Generate the data using lapply
 all_visit3_dat <- bind_rows(
-  lapply(dm_neuro$USUBJID, function(id) {
+  lapply(seq_len(nrow(dm_neuro)), function(i) {
+    id <- dm_neuro$USUBJID[i]
+    sex <- dm_neuro$SEX[i]
+
     # Generate random values for the parameters
     amy_tracer <- sample(c("FBP", "FBB"), size = 1)
     vendor <- sample(c("AVID", "BERKELEY"), size = 1)
@@ -93,6 +98,32 @@ all_visit3_dat <- bind_rows(
       suvr_value <- fbb_suvr_com
     }
 
+    upsit_cat <- runif(1, 0, 1)
+
+    if (upsit_cat <= 0.05) {
+      if (sex == "F") {
+        upsit_value <- sample(35:40, 1, replace = TRUE)
+      } else if (sex == "M") {
+        upsit_value <- sample(34:40, 1, replace = TRUE)
+      }
+    } else if (upsit_cat <= 0.1) {
+      if (sex == "F") {
+        upsit_value <- sample(31:34, 1, replace = TRUE)
+      } else if (sex == "M") {
+        upsit_value <- sample(30:33, 1, replace = TRUE)
+      }
+    } else if (upsit_cat <= 0.2) {
+      if (sex == "F") {
+        upsit_value <- sample(26:30, 1, replace = TRUE)
+      } else if (sex == "M") {
+        upsit_value <- sample(26:29, 1, replace = TRUE)
+      }
+    } else if (upsit_cat <= 0.3) {
+      upsit_value <- sample(19:25, 1, replace = TRUE)
+    } else {
+      upsit_value <- sample(0:18, 1, replace = TRUE)
+    }
+
     # Create the dataset using create_records_for_one_id function
     create_records_for_one_id(
       usubjid = id,
@@ -100,7 +131,8 @@ all_visit3_dat <- bind_rows(
       vendor = vendor,
       visitnum = 3,
       amy_suvr_value = suvr_value,
-      tau_suvr_value = ftp_suvr_icbgm
+      tau_suvr_value = ftp_suvr_icbgm,
+      upsit_value = upsit_value
     )
   })
 )
@@ -111,7 +143,8 @@ pbo_obs_visit9_dat <- all_visit3_dat %>%
   filter(NVTESTCD == "SUVR") %>%
   mutate(
     VISITNUM = 9,
-    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.1, max = 0.2), 3))
+    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.1, max = 0.2), 3)),
+    NVORRES
   )
 
 # Create visit 9 dataset for treatment group ----
@@ -133,7 +166,8 @@ pbo_obs_visit13_dat <- pbo_obs_visit9_dat %>%
   filter(NVTESTCD == "SUVR") %>%
   mutate(
     VISITNUM = 13,
-    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.2, max = 0.3), 3))
+    NVORRES = as.character(round(as.numeric(NVORRES) + runif(1, min = 0.2, max = 0.3), 3)),
+    NVORRES
   )
 
 # Create visit 13 dataset for treatment group ----
@@ -167,7 +201,7 @@ all_dat <- bind_rows(
       "RATIO", NA
     ),
     NVSTRESC = NVORRES,
-    NVSTRESN = if_else(NVTESTCD == "SUVR",
+    NVSTRESN = if_else(NVTESTCD %in% c("SUVR", "UPSIT"),
       suppressWarnings(as.numeric(NVORRES)), NA
     ),
     NVSTRESU = if_else(NVTESTCD == "SUVR",
@@ -212,7 +246,7 @@ all_dat <- bind_rows(
   arrange(USUBJID, VISIT) %>%
   group_by(USUBJID) %>%
   mutate(
-    NVLNKID = match(NVCAT, c("FBP", "FBB", "FTP")) +
+    NVLNKID = match(NVCAT, c("FBP", "FBB", "FTP", "OLFACTORY FUNCTION")) +
       (n_distinct(NVCAT) * (dense_rank(VISIT) - 1))
   ) %>%
   ungroup() %>%

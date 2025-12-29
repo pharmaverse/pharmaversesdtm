@@ -37,12 +37,11 @@ Disease Response (PCWG3) for Oncology
 
 A SDTM RS dataset for oncology studies using PCWG3 criteria intended for examples of ADaM dataset creation
 
-Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 3 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{RSTESTCD} \tab \strong{RSTEST} \cr
-BONERESP \tab Bone Response        \cr
-OVRLRESP \tab Overall Response     \cr
-SFTSRESP \tab Soft Tissue Response \cr
-TMRESP   \tab Tumor Marker Response
+BONERESP \tab Bone Response       \cr
+OVRLRESP \tab Overall Response    \cr
+SFTSRESP \tab Soft Tissue Response
 }
 }
 \author{
