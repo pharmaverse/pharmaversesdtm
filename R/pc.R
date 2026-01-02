@@ -10,7 +10,7 @@
 #' @keywords dataset generic
 #' @description A SDTM PC dataset simulated by Antonio Rodriguez Contesti
 #' @docType data
-#' @format A data frame with 20 columns:
+#' @format A data frame with 21 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -28,6 +28,7 @@
 #'     \item{PCLLOQ}{Lower Limit of Quantitation}
 #'     \item{VISIT}{Visit Name}
 #'     \item{VISITNUM}{Visit Number}
+#'     \item{VISITDY}{Planned Study Day of Visit}
 #'     \item{PCDTC}{Date/Time of Specimen Collection}
 #'     \item{PCDY}{Actual Study Day of Specimen Collection}
 #'     \item{PCTPT}{Planned Time Point Name}

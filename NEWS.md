@@ -2,6 +2,8 @@
 
 ## New Features
 
+- Added VISITDY in `pc`. (#219)
+
 - Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
 - Added BRTHDTC in `dm` and `dm_metabolic`. (#195)
