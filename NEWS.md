@@ -32,6 +32,8 @@
 
 - Generated different sites for the development and released versions of the package. (#207)
 
+- Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in `lb_neuro`. (#211)
+
 </details>
 
 # pharmaversesdtm 1.3.1
