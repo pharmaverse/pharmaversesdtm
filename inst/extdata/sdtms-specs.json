@@ -456,6 +456,13 @@
      "description": "A SDTM AG dataset recording details of agents such as a PET tracer used in procedures",
      "source": "Constructed by {admiralneuro} developers",
      "therapeutic_area": "neurology"
+    },
+    {
+     "name": "lb_neuro",
+     "label": "Laboratory Test Dataset-neuro",
+     "description": "A SDTM LB domain dataset containing laboratory test results for Alzheimer's Disease studies",
+     "source": "Constructed by {admiralneuro} developers",
+     "therapeutic_area": "neurology"
     }
   ]
 }
