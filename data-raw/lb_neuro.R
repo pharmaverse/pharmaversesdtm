@@ -8,7 +8,7 @@ library(dplyr)
 # Read input data
 dm_neuro <- pharmaversesdtm::dm_neuro
 nv_neuro <- pharmaversesdtm::nv_neuro
-adsl_neuro <- admiralneuro::adsl_neuro
+# adsl_neuro <- admiralneuro::adsl_neuro
 
 # Convert blank to NA
 dm_neuro <- convert_blanks_to_na(dm_neuro)
@@ -42,16 +42,13 @@ visit_schedule <- nv_neuro %>%
 
 # Get subject characteristics with treatment information from adsl_neuro ----
 subject_chars <- dm_neuro %>%
-  select(STUDYID, USUBJID) %>%
-  left_join(
-    adsl_neuro %>% select(STUDYID, USUBJID, TRT01P, TRT01PN, TRTSDT),
-    by = c("STUDYID", "USUBJID")
-  ) %>%
-  mutate(
-    # Create treatment groups for analysis
+  select(STUDYID, USUBJID, ARM, ARMCD) %>%
+  mutate( # Create treatment groups for analysis (pattern as in nv_neuro.R)
     TRTGRP = case_when(
-      TRT01P %in% c("Placebo", "No Treatment") ~ "PLACEBO_CONTROL",
-      TRUE ~ "TREATMENT"
+      ARM == "Placebo" ~ "PLACEBO_CONTROL",
+      ARMCD == "Pbo" ~ "PLACEBO_CONTROL",
+      ARMCD == "Xan_Hi" ~ "TREATMENT",
+      is.na(ARMCD) ~ "PLACEBO_CONTROL"
     )
   )
 
@@ -118,8 +115,142 @@ all_lb_records <- visit_schedule %>%
   ) %>%
   ungroup()
 
+# Create LB record for one subject-visit with pTau, Amyloid, and Ratio ----
+create_lb_ratio_record <- function(usubjid, visitnum, visit, visitdy, lbdtc, lbdy, trtgrp) {
+  # Define positive rates based on treatment group and visit for generating random results
+  pos_rate <- case_when(
+    trtgrp == "PLACEBO_CONTROL" ~ 0.30, # 30% positive for placebo/control at all visits
+    trtgrp == "TREATMENT" & visit == "BASELINE" ~ 0.30, # Assume baseline similar for all
+    TRUE ~ 0.00 # Default
+  )
+
+  # Generate random values for pTau and Amyloid in pg/mL (using uniform distribution for test data)
+  amyloid_value <- runif(1, min = 0.8, max = 500.0) # Generate Amyloid value (0.8 to 500.0 pg/mL)
+  ptau_value <- runif(1, min = 0.047, max = 10.000) # Generate pTau value (0.047 to 10.000 pg/mL)
+
+  # Calculate the pTau / Amyloid ratio
+  ratio_value <- ptau_value / amyloid_value
+
+  # Generate results for pTau and Amyloid (just to match your previous format)
+  ptau_lborres <- if (runif(1) < pos_rate) "Positive" else "Negative"
+  amyloid_lborres <- if (runif(1) < pos_rate) "Positive" else "Negative"
+
+  # Define result based on ratio value for LBORRES (Positive, Negative, Indeterminate)
+  ratio_lborres <- case_when(
+    ratio_value <= 0.00370 ~ "Negative", # Negative if result is less than or equal to 0.00370
+    ratio_value >= 0.00738 ~ "Positive", # Positive if result is greater than or equal to 0.00738
+    TRUE ~ "Indeterminate" # Indeterminate if result is between 0.00370 and 0.00738
+  )
+
+  # Create the record for Lumipulse G pTau 217 Plasma
+  ptau_record <- tibble(
+    STUDYID = "CDISCPILOT01",
+    DOMAIN = "LB",
+    USUBJID = usubjid,
+    LBSEQ = "missing",
+    LBTESTCD = "PTAU217",
+    LBTEST = "Lumipulse G pTau 217 Plasma",
+    LBCAT = "Biomarkers",
+    LBORRES = ptau_lborres,
+    LBORRESU = "pg/mL",
+    LBORNRLO = NA_character_,
+    LBORNRHI = NA_character_,
+    LBSTRESC = ptau_lborres,
+    LBSTRESN = ptau_value,
+    LBSTRESU = "pg/mL",
+    LBSTNRLO = NA_real_,
+    LBSTNRHI = NA_real_,
+    LBNRIND = NA_character_,
+    LBBLFL = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM = visitnum,
+    VISIT = visit,
+    VISITDY = visitdy,
+    LBDTC = lbdtc,
+    LBDY = lbdy
+  )
+
+  # Create the record for Lumipulse G β-Amyloid 1-42-N Plasma
+  amyloid_record <- tibble(
+    STUDYID = "CDISCPILOT01",
+    DOMAIN = "LB",
+    USUBJID = usubjid,
+    LBSEQ = "missing",
+    LBTESTCD = "ABETA42",
+    LBTEST = "Lumipulse G β-Amyloid 1-42-N Plasma",
+    LBCAT = "Biomarkers",
+    LBORRES = amyloid_lborres,
+    LBORRESU = "pg/mL",
+    LBORNRLO = NA_character_,
+    LBORNRHI = NA_character_,
+    LBSTRESC = amyloid_lborres,
+    LBSTRESN = amyloid_value,
+    LBSTRESU = "pg/mL",
+    LBSTNRLO = NA_real_,
+    LBSTNRHI = NA_real_,
+    LBNRIND = NA_character_,
+    LBBLFL = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM = visitnum,
+    VISIT = visit,
+    VISITDY = visitdy,
+    LBDTC = lbdtc,
+    LBDY = lbdy
+  )
+
+  # Create the record for Lumipulse G pTau 217/β-Amyloid 1-42 Plasma Ratio
+  ratio_record <- tibble(
+    STUDYID = "CDISCPILOT01",
+    DOMAIN = "LB",
+    USUBJID = usubjid,
+    LBSEQ = "missing",
+    LBTESTCD = "PTARATIO",
+    LBTEST = "Lumipulse G pTau 217/β-Amyloid 1-42 Plasma Ratio",
+    LBCAT = "Biomarkers",
+    LBORRES = ratio_lborres,
+    LBORRESU = NA_character_,
+    LBORNRLO = NA_character_,
+    LBORNRHI = NA_character_,
+    LBSTRESC = ratio_lborres,
+    LBSTRESN = ratio_value,
+    LBSTRESU = NA_character_,
+    LBSTNRLO = NA_real_,
+    LBSTNRHI = NA_real_,
+    LBNRIND = NA_character_,
+    LBBLFL = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM = visitnum,
+    VISIT = visit,
+    VISITDY = visitdy,
+    LBDTC = lbdtc,
+    LBDY = lbdy
+  )
+
+  # Combine all records into a single tibble
+  combined_record <- bind_rows(ptau_record, amyloid_record, ratio_record)
+
+  return(combined_record)
+}
+
+# Example of generating all LB records for a visit schedule ----
+set.seed(2774)
+
+# Generate all LB records by joining 'visit_schedule' and 'subject_chars' ----
+all_lb_ratio_records <- visit_schedule %>%
+  left_join(subject_chars, by = c("USUBJID")) %>%
+  rowwise() %>%
+  do(
+    create_lb_ratio_record(
+      usubjid = .$USUBJID,
+      visitnum = .$VISITNUM,
+      visit = .$VISIT,
+      visitdy = .$VISITDY,
+      lbdtc = .$LBDTC,
+      lbdy = .$LBDY,
+      trtgrp = .$TRTGRP
+    )
+  ) %>%
+  ungroup()
+
 # Add sequence numbers and finalize
-lb_neuro <- all_lb_records %>%
+lb_neuro <- bind_rows(all_lb_records, all_lb_ratio_records) %>%
   arrange(USUBJID, VISITNUM) %>%
   group_by(USUBJID) %>%
   mutate(LBSEQ = row_number()) %>%
