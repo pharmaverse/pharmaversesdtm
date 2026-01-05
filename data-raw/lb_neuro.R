@@ -8,7 +8,6 @@ library(dplyr)
 # Read input data
 dm_neuro <- pharmaversesdtm::dm_neuro
 nv_neuro <- pharmaversesdtm::nv_neuro
-# adsl_neuro <- admiralneuro::adsl_neuro
 
 # Convert blank to NA
 dm_neuro <- convert_blanks_to_na(dm_neuro)
