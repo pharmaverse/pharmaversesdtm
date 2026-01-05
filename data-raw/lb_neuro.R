@@ -39,7 +39,7 @@ visit_schedule <- nv_neuro %>%
   ) %>%
   distinct()
 
-# Get subject characteristics with treatment information from adsl_neuro ----
+# Get subject characteristics with treatment information from dm_neuro ----
 subject_chars <- dm_neuro %>%
   select(STUDYID, USUBJID, ARM, ARMCD) %>%
   mutate( # Create treatment groups for analysis (pattern as in nv_neuro.R)
