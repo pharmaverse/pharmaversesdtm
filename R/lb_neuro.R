@@ -38,12 +38,10 @@
 #'   }
 #'
 #' @source Constructed by {admiralneuro} developers
-#' @details Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 2 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{LBTESTCD} \tab \strong{LBTEST} \cr
-#'   ABETA42  \tab Lumipulse G β-Amyloid 1-42-N Plasma             \cr
-#'   ASYNASAA \tab Alpha Synuclein Seed Amplification Assay (CSF)  \cr
-#'   PTARATIO \tab Lumipulse G pTau 217/β-Amyloid 1-42 Plasma Ratio\cr
-#'   PTAU217  \tab Lumipulse G pTau 217 Plasma
+#'   ASYNASAA \tab Alpha Synuclein Seed Amplification Assay (CSF)     \cr
+#'   PTAB42R  \tab Lumipulse G pTau 217/Beta-Amyloid 1-42 Plasma Ratio
 #' }
 
 "lb_neuro"
