@@ -20,6 +20,8 @@
 
 - Added `lb_onco_pcwg3` dataset which contains PSA measurements for PCWG criteria. (#197)
 
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen Events (`be`) SDTM linked datasets. (#217)
+
 ## Documentation
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
