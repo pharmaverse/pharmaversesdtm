@@ -150,7 +150,8 @@ PC <- PC %>%
 PC <- subset(PC, select = c(
   "STUDYID", "DOMAIN", "USUBJID", "PCSEQ", "PCTESTCD", "PCTEST",
   "PCORRES", "PCORRESU", "PCSTRESC", "PCSTRESN", "PCSTRESU",
-  "PCNAM", "PCSPEC", "PCLLOQ", "VISIT", "VISITNUM", "PCDTC", "PCDY", "PCTPT", "PCTPTNUM"
+  "PCNAM", "PCSPEC", "PCLLOQ", "VISIT", "VISITNUM", "VISITDY",
+  "PCDTC", "PCDY", "PCTPT", "PCTPTNUM"
 ))
 
 ## Ungroup and sort ----
@@ -177,6 +178,7 @@ pc <- pc %>%
     PCLLOQ = "Lower Limit of Quantitation",
     VISIT = "Visit Name",
     VISITNUM = "Visit Number",
+    VISITDY = "Planned Study Day of Visit",
     PCDTC = "Date/Time of Specimen Collection",
     PCDY = "Actual Study Day of Specimen Collection",
     PCTPT = "Planned Time Point Name",

@@ -2,6 +2,8 @@
 
 ## New Features
 
+- Added `VISITDY` in `pc`. (#219)
+
 - Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (#172)
 
 - Added BRTHDTC in `dm` and `dm_metabolic`. (#195)
@@ -14,7 +16,7 @@
     - `ag_neuro`
     - `lb_neuro`
 
-- Updated `rs_onco_pcwg3` to correct the misclassification of `PDu` and to remove the `TMRESP` records.  (#193)
+- Updated `rs_onco_pcwg3` to correct the misclassification of `PDu` and to remove the `TMRESP` records. (#193)
 
 - Added `lb_onco_pcwg3` dataset which contains PSA measurements for PCWG criteria. (#197)
 
@@ -33,6 +35,8 @@
 - Generated different sites for the development and released versions of the package. (#207)
 
 - Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in `lb_neuro`. (#211)
+
+- Updated the pull request template to include the corrected package website name. (#223)
 
 </details>
 

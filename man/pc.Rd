@@ -5,7 +5,7 @@
 \alias{pc}
 \title{Pharmacokinetic Concentrations}
 \format{
-A data frame with 20 columns:
+A data frame with 21 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -23,6 +23,7 @@ A data frame with 20 columns:
 \item{PCLLOQ}{Lower Limit of Quantitation}
 \item{VISIT}{Visit Name}
 \item{VISITNUM}{Visit Number}
+\item{VISITDY}{Planned Study Day of Visit}
 \item{PCDTC}{Date/Time of Specimen Collection}
 \item{PCDY}{Actual Study Day of Specimen Collection}
 \item{PCTPT}{Planned Time Point Name}
