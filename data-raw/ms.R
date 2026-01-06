@@ -45,24 +45,24 @@ ms <- ms %>%
     USUBJID = "Unique Subject Identifier",
     MSSEQ = "Sequence Number",
     MSREFID = "Reference ID",
-    NHOID = "Name of Organism Identified",
+    NHOID = "Non-host Organism ID",
     MSGRPID = "Group ID",
     MSLNKID = "Link ID",
-    MSTESTCD = "Microbial Susceptibility Test Short Name",
-    MSTEST = "Microbial Susceptibility Test Name",
+    MSTESTCD = "Short Name of Assessment",
+    MSTEST = "Name of Assessment",
     MSAGENT = "Agent Name",
     MSCONC = "Agent Concentration",
     MSCONCU = "Agent Concentration Units",
-    MSORRES = "Original Result",
+    MSORRES = "Result or Finding in Original Units",
     MSORRESU = "Original Units",
     MSSTRESC = "Result or Finding in Standard Format",
     MSSTRESN = "Numeric Result/Finding in Standard Units",
     MSSTRESU = "Standard Units",
-    MSSPEC = "Specimen Type",
-    MSLOC = "Specimen Collection Location",
+    MSSPEC = "Specimen Material Type",
+    MSLOC = "Location Used for the Measurement",
     MSMETHOD = "Method of Test or Examination",
     VISITNUM = "Visit Number",
-    MSDTC = "Date/Time of Specimen Collection"
+    MSDTC = "Date/Time of Collection"
   )
 
 # Save dataset

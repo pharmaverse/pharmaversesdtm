@@ -1,7 +1,7 @@
 # This file only processes and saves the BE domain from that shared data source.
 # Dataset: BE
 # A synthetic SDTM BE domain representing specimen collection, aliquoting
-# and culturing events with linkage to MB (mb) and MS (ms) domains
+# and culturing events with linkage to Microbiology Specimen (mb) and Microbiology Susceptibility (ms) domains
 
 # NOTE: To add or modify records in the BE domain, you must edit the data structure in 'mb.R'.
 # All synthetic microbiology data (patients, specimens, results) are defined in 'mb.R'.

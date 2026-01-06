@@ -75,7 +75,7 @@
     },
     {
       "name": "mb",
-      "label": "Microbiology Findings",
+      "label": "Microbiology Specimen",
       "description": "A synthetic SDTM MB domain representing microbiology findings and linkage to MS domain (ms)",
       "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/mb.rda",
       "therapeutic_area": "microbiology"
