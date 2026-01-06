@@ -4,6 +4,9 @@
 
 ### New Features
 
+- Added `VISITDY` in `pc`.
+  ([\#219](https://github.com/pharmaverse/pharmaversesdtm/issues/219))
+
 - Updated QSTESTCD in `qs_ophtha` to be consistent with CDISC
   terminology. Also reduced the number of records for ease of use.
   ([\#172](https://github.com/pharmaverse/pharmaversesdtm/issues/172))

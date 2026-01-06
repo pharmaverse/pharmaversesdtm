@@ -10,7 +10,7 @@ pc
 
 ## Format
 
-A data frame with 20 columns:
+A data frame with 21 columns:
 
 - STUDYID:
 
@@ -75,6 +75,10 @@ A data frame with 20 columns:
 - VISITNUM:
 
   Visit Number
+
+- VISITDY:
+
+  Planned Study Day of Visit
 
 - PCDTC:
 
