@@ -624,15 +624,17 @@ study_microb_data <- list(
 
 
 # Extraction Loop: Build BE, MB, MS Domains ----
+dm <- pharmaversesdtm::dm
+studyid <- unique(dm$STUDYID)[1]
+usubjids <- unique(dm$USUBJID)
 
-studyid <- "MI"
 be <- data.frame()
 ms <- data.frame()
 mb <- data.frame()
 
 # Loop over each subject (patient) in the study
 for (subj_ix in seq_along(study_microb_data)) {
-  usubjid <- paste0(studyid, "-", sprintf("%02d", subj_ix))
+  usubjid <- usubjids[subj_ix]
   subj_data <- study_microb_data[[subj_ix]]
 
   # Initialize subject-level counters
