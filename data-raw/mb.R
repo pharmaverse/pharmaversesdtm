@@ -605,7 +605,7 @@ study_microb_data <- list(
           culture_end_dt = "2025-12-17T10:00",
           MB = list(
             mb_naat_result(
-              id_test_org = "MYCOBACTERIUM TUBERCULOSIS COMPLEX",
+              id_test_org = "Mycobaterium tuberculosis complex",
               cd_id_test_org = "MTBCMPLX",
               id_org_successful = TRUE
             )
@@ -742,7 +742,7 @@ for (subj_ix in seq_along(study_microb_data)) {
 
           # Add MB rows to MB domain
           res <- res_grp_data %>%
-            dplyr::mutate(
+            mutate(
               STUDYID = studyid,
               USUBJID = usubjid,
               MBSEQ = seq(mbseq - nrow(.) + 1, mbseq),
@@ -767,7 +767,7 @@ for (subj_ix in seq_along(study_microb_data)) {
 
           # Add MS rows to MS domain
           res <- res_grp_data %>%
-            dplyr::mutate(
+            mutate(
               STUDYID = studyid,
               USUBJID = usubjid,
               MSSEQ = seq(msseq - nrow(.) + 1, msseq),
@@ -780,7 +780,7 @@ for (subj_ix in seq_along(study_microb_data)) {
               VISITNUM = visitnum,
               MSDTC = collection_date
             )
-          ms <- dplyr::bind_rows(ms, res)
+          ms <- bind_rows(ms, res)
         }
       }
     }
@@ -801,8 +801,8 @@ mb <- mb %>%
     STUDYID,
     DOMAIN,
     USUBJID,
-    MBGRPID,
     MBSEQ,
+    MBGRPID,
     MBGRPID,
     MBREFID,
     MBLNKGRP,
@@ -838,11 +838,13 @@ mb <- mb %>%
     MBORRES = "Original Result",
     MBORRESU = "Original Units",
     MBRSLSCL = "Result Scale",
-    MBSTRESC = "Character Result/Finding in Standard Format",
+    MBSTRESC = "Result or Finding in Standard Format",
+    MBSTRESN = "Numeric Result/Finding in Standard Units",
+    MBSTRESU = "Standard Units",
     MBLOC = "Specimen Collection Location",
-    MBSPEC = "Specimen Type",
+    MBSPEC = "Specimen Material Type",
     VISITNUM = "Visit Number",
-    MBDTC = "Date/Time of Specimen Collection"
+    MBDTC = "Date/Time of Collection"
   )
 
 # Save MB domain

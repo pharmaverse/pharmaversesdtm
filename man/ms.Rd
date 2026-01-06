@@ -12,24 +12,24 @@ A data frame with 23 columns:
 \item{USUBJID}{Unique Subject Identifier}
 \item{MSSEQ}{Sequence Number}
 \item{MSREFID}{Reference ID}
-\item{NHOID}{Name of Organism Identified}
+\item{NHOID}{Non-host Organism ID}
 \item{MSGRPID}{Group ID}
 \item{MSLNKID}{Link ID}
-\item{MSTESTCD}{Microbial Susceptibility Test Short Name}
-\item{MSTEST}{Microbial Susceptibility Test Name}
+\item{MSTESTCD}{Short Name of Assessment}
+\item{MSTEST}{Name of Assessment}
 \item{MSAGENT}{Agent Name}
 \item{MSCONC}{Agent Concentration}
 \item{MSCONCU}{Agent Concentration Units}
-\item{MSORRES}{Original Result}
+\item{MSORRES}{Result or Finding in Original Units}
 \item{MSORRESU}{Original Units}
 \item{MSSTRESC}{Result or Finding in Standard Format}
 \item{MSSTRESN}{Numeric Result/Finding in Standard Units}
 \item{MSSTRESU}{Standard Units}
-\item{MSSPEC}{Specimen Type}
-\item{MSLOC}{Specimen Collection Location}
+\item{MSSPEC}{Specimen Material Type}
+\item{MSLOC}{Location Used for the Measurement}
 \item{MSMETHOD}{Method of Test or Examination}
 \item{VISITNUM}{Visit Number}
-\item{MSDTC}{Date/Time of Specimen Collection}
+\item{MSDTC}{Date/Time of Collection}
 }
 }
 \source{
