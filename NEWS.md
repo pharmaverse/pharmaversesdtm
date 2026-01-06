@@ -34,6 +34,8 @@
 
 - Generated different sites for the development and released versions of the package. (#207)
 
+- Updated the pull request template to include the corrected package website name. (#223)
+
 </details>
 
 # pharmaversesdtm 1.3.1
