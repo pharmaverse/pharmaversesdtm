@@ -36,11 +36,12 @@
 #   6. Run all the relevant scripts (mb.R, ms.R, be.R) to generate and save the updated datasets.
 #
 # ============================================================
-# ---- Libraries ----
+
+# Libraries ----
 library(dplyr)
 library(labelled)
 
-# ---- Helper Functions ----
+# Helper Functions ----
 # MB domain: Gram stain (CDISC v3.4)
 mb_gram_stain_result <- function(test, count = NULL, presence = TRUE) {
   ## Detection record (presence/absence)
@@ -228,8 +229,8 @@ ms_naat_result <- function(ab, ab_resistance = FALSE) {
   )
 }
 
-############################################################
-# ---- Data Structure: study_microb_data ----
+
+# Data Structure: study_microb_data ----
 # Nested list defining for a study each of the process steps:
 # - Patient studied
 #   - Specimen collected
@@ -244,7 +245,6 @@ ms_naat_result <- function(ab, ab_resistance = FALSE) {
 # - MS: microbial susceptibility test results
 #
 # Test results for MB and MS are created using the helper functions defined above.
-############################################################
 
 study_microb_data <- list(
   # Patient 1: organism identified with no infection and no resistance
@@ -623,9 +623,7 @@ study_microb_data <- list(
 )
 
 
-# ============================================================
-# ---- Extraction Loop: Build BE, MB, MS Domains ----
-# ============================================================
+# Extraction Loop: Build BE, MB, MS Domains ----
 
 studyid <- "MI"
 be <- data.frame()
@@ -788,14 +786,9 @@ for (subj_ix in seq_along(study_microb_data)) {
 }
 
 
-############################################################
-# ---- Finalize and save MB domain ----
-#
-# Order columns and add variable labels as per CDISC SDTM v3.4
-############################################################
+# Finalize and save MB domain ----
 
-
-# Add variable labels
+# Reorder columns according to CDISC SDTM MS standards (v3.4)
 mb <- mb %>%
   select(
     STUDYID,
@@ -822,6 +815,8 @@ mb <- mb %>%
     VISITNUM,
     MBDTC
   ) %>%
+
+  # Add variable labels
   set_variable_labels(
     STUDYID = "Study Identifier",
     DOMAIN = "Domain Abbreviation",
