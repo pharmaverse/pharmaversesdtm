@@ -52,6 +52,10 @@ Developer Notes
   the package.
   ([\#207](https://github.com/pharmaverse/pharmaversesdtm/issues/207))
 
+- Updated the pull request template to include the corrected package
+  website name.
+  ([\#223](https://github.com/pharmaverse/pharmaversesdtm/issues/223))
+
 ## pharmaversesdtm 1.3.1
 
 CRAN release: 2025-08-21
