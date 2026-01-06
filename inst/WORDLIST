@@ -78,6 +78,7 @@ ISTEST
 ISTESTCD
 Immunogenicity
 Intraocular
+JSON
 Kangjie
 Kumari
 LAMZ
@@ -106,12 +107,12 @@ MONOLE
 MSTEST
 MSTESTCD
 MTBCMPLX
-MYCOBACTERIUM
 Macrocytes
 Mascary
 MedDRA
 Microcytes
 Monocytes
+Mycobacterium
 NEI
 NEWLIND
 NEWLPROG
@@ -150,6 +151,7 @@ RECIST
 RENALCL
 RSTEST
 RSTESTCD
+Recode
 Retinopathy
 Rohan
 SCTEST

@@ -38,12 +38,12 @@
 #' @source [Access the source of the Microbiology Specimen dataset.](https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/mb.rda)
 #' @details Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{MBTESTCD} \tab \strong{MBTEST} \cr
-#'   GMNCOC   \tab Gram Negative Cocci              \cr
-#'   GNROD    \tab Gram Negative Rods               \cr
-#'   GPRCOC   \tab Gram Positive Cocci              \cr
-#'   MCCOLCNT \tab Colony Count                     \cr
-#'   MCORGIDN \tab Microbial Organism Identification\cr
-#'   MTBCMPLX \tab Mycobaterium tuberculosis complex
+#'   GMNCOC   \tab Gram Negative Cocci               \cr
+#'   GNROD    \tab Gram Negative Rods                \cr
+#'   GPRCOC   \tab Gram Positive Cocci               \cr
+#'   MCCOLCNT \tab Colony Count                      \cr
+#'   MCORGIDN \tab Microbial Organism Identification \cr
+#'   MTBCMPLX \tab Mycobacterium tuberculosis complex
 #' }
 
 "mb"

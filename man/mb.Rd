@@ -46,12 +46,12 @@ A synthetic SDTM MB domain representing microbiology findings and linkage to MS 
 
 Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{MBTESTCD} \tab \strong{MBTEST} \cr
-GMNCOC   \tab Gram Negative Cocci              \cr
-GNROD    \tab Gram Negative Rods               \cr
-GPRCOC   \tab Gram Positive Cocci              \cr
-MCCOLCNT \tab Colony Count                     \cr
-MCORGIDN \tab Microbial Organism Identification\cr
-MTBCMPLX \tab Mycobaterium tuberculosis complex
+GMNCOC   \tab Gram Negative Cocci               \cr
+GNROD    \tab Gram Negative Rods                \cr
+GPRCOC   \tab Gram Positive Cocci               \cr
+MCCOLCNT \tab Colony Count                      \cr
+MCORGIDN \tab Microbial Organism Identification \cr
+MTBCMPLX \tab Mycobacterium tuberculosis complex
 }
 }
 \keyword{dataset}

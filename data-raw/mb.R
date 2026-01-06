@@ -584,7 +584,7 @@ study_microb_data <- list(
       )
     )
   ),
-  # Patient 7: Mycobaterium tuberculosis complex rifampicin resistant identified by NAAT
+  # Patient 7: Mycobacterium tuberculosis complex rifampicin resistant identified by NAAT
   "7" = list(
     # Specimen 1
     "1" = list(
@@ -605,7 +605,7 @@ study_microb_data <- list(
           culture_end_dt = "2025-12-17T10:00",
           MB = list(
             mb_naat_result(
-              id_test_org = "Mycobaterium tuberculosis complex",
+              id_test_org = "Mycobacterium tuberculosis complex",
               cd_id_test_org = "MTBCMPLX",
               id_org_successful = TRUE
             )
@@ -817,7 +817,6 @@ mb <- mb %>%
     VISITNUM,
     MBDTC
   ) %>%
-
   # Add variable labels
   set_variable_labels(
     STUDYID = "Study Identifier",
