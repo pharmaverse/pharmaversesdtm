@@ -51,7 +51,7 @@ subject_chars <- dm_neuro %>%
     )
   )
 
-# Create LB record for one subject-visit ----
+# Create Alpha Synuclein Seed Amplification Assay record for one subject-visit ----
 create_asyn_record <- function(usubjid, visitnum, visit, visitdy, lbdtc, lbdy, trtgrp) {
   # Define positive rates based on treatment group and visit
   pos_rate <- case_when(
@@ -192,11 +192,11 @@ create_ratio_record <- function(usubjid, visitnum, visit, visitdy, lbdtc, lbdy, 
     LBTESTCD = "PTAB42R",
     LBTEST = "Lumipulse G pTau 217/Beta-Amyloid 1-42 Plasma Ratio",
     LBCAT = "Biomarkers",
-    LBORRES = as.character(round(ratio_value, 4)),
+    LBORRES = sprintf("%.4f", ratio_value),
     LBORRESU = NA_character_,
     LBORNRLO = "0.00370",
     LBORNRHI = "0.00738",
-    LBSTRESC = as.character(round(ratio_value, 4)),
+    LBSTRESC = sprintf("%.4f", ratio_value),
     LBSTRESN = ratio_value,
     LBSTRESU = NA_character_,
     LBSTNRLO = 0.00370,
@@ -210,8 +210,8 @@ create_ratio_record <- function(usubjid, visitnum, visit, visitdy, lbdtc, lbdy, 
     LBDY = lbdy
   )
 
-  # Combine all records into a single tibble
-  combined_record <- bind_rows(pTau_amylb42_ratio)
+  # Combine all records into a single tibble - Keeping the Ratio only
+  combined_record <- pTau_amylb42_ratio
 
   return(combined_record)
 }
@@ -248,13 +248,28 @@ lb_neuro <- bind_rows(asyn_records, ratio_records) %>%
 
 # Validation checks
 expected_visits <- c("BASELINE")
-stopifnot(all(lb_neuro$VISIT %in% expected_visits))
-# stopifnot(all(lb_neuro$LBORRES %in% c("Positive", "Negative")))
-stopifnot(all(nchar(lb_neuro$LBTESTCD) <= 8))
+
+# Check if all VISIT values are in the expected set
+if (!all(lb_neuro$VISIT %in% expected_visits)) {
+  cli_abort("The values in 'lb_neuro$VISIT' are not all in the expected 'expected_visits'.")
+}
+
+# Check if LBORRES values are either "Positive" or "Negative"
+ASYNASAA_data <- lb_neuro[lb_neuro$LBTESTCD == "ASYNASAA", ]
+if (!all(ASYNASAA_data$LBORRES %in% c("Positive", "Negative"))) {
+  cli_abort(
+    message = "For LBTESTCD = ASYNASAA, the values in 'LBORRES' must be either 'Positive' or 'Negative'."
+  )
+}
+
+# Check if LBTESTCD values have more than 8 characters
+if (!all(nchar(lb_neuro$LBTESTCD) <= 8)) {
+  cli_abort("The length of values in 'lb_neuro$LBTESTCD' must not exceed 8 characters.")
+}
 
 # Check for one record per subject per visit
 visit_counts <- lb_neuro %>%
-  count(USUBJID, VISIT) %>%
+  count(USUBJID, LBTESTCD, VISIT) %>%
   filter(n > 1)
 
 if (nrow(visit_counts) > 0) {
