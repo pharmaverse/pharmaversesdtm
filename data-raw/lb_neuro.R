@@ -4,6 +4,7 @@
 # Load libraries
 library(admiral)
 library(dplyr)
+library(cli)
 
 # Read input data
 dm_neuro <- pharmaversesdtm::dm_neuro
@@ -114,124 +115,191 @@ asyn_records <- visit_schedule %>%
   ) %>%
   ungroup()
 
-# Create LB record for one subject-visit with pTau, Amyloid, and Ratio ----
-create_ratio_record <- function(usubjid, visitnum, visit, visitdy, lbdtc, lbdy, trtgrp) {
-  # Generate random values for pTau and Amyloid in pg/mL (using uniform distribution for test data)
-  amyloid_value <- runif(1, min = 0.8, max = 500.0) # Generate Amyloid value (0.8 to 500.0 pg/mL)
-  ptau_value <- runif(1, min = 0.047, max = 10.000) # Generate pTau value (0.047 to 10.000 pg/mL)
+#
+visit_all <- tribble(
+  ~USUBJID, ~CRIT1FL, ~CRIT1, ~VISITNUM, ~VISIT, ~LBDTC, ~LBDY,
+  "01-701-1015", "N", "CENTILOID < 24.1", 0, "BASELINE", "2014-01-02", 1,
+  "01-701-1015", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2014-03-26", 84,
+  "01-701-1015", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2014-07-02", 182,
+  "01-701-1023", "N", "CENTILOID < 24.1", 0, "BASELINE", "2012-08-05", 1,
+  "01-701-1028", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-07-19", NA,
+  "01-701-1028", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2013-10-09", NA,
+  "01-701-1028", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2014-01-14", NA,
+  "01-701-1034", "N", "CENTILOID < 24.1", 0, "BASELINE", "2014-07-01", 1,
+  "01-701-1034", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2014-09-25", 87,
+  "01-701-1034", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2014-12-30", 183,
+  "01-701-1146", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-05-20", 1,
+  "01-701-1153", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-09-23", 1,
+  "01-701-1153", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2013-12-16", 85,
+  "01-701-1153", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2014-04-01", 191,
+  "01-701-1181", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-12-05", NA,
+  "01-701-1234", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-03-30", 1,
+  "01-701-1234", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2013-07-07", 100,
+  "01-701-1234", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2013-09-22", 177,
+  "01-701-1275", "N", "CENTILOID < 24.1", 0, "BASELINE", "2014-02-07", 1,
+  "01-701-1275", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2014-05-03", 86,
+  "01-701-1302", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-08-29", 1,
+  "01-701-1302", "Y", "CENTILOID < 24.1", 12, "WEEK 12", "2013-11-05", 69,
+  "01-701-1345", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-10-08", NA,
+  "01-701-1345", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2013-12-31", NA,
+  "01-701-1360", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-07-31", NA,
+  "01-701-1383", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-02-04", 1,
+  "01-701-1383", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2013-04-30", 86,
+  "01-701-1383", "Y", "CENTILOID < 24.1", 26, "WEEK 26", "2013-08-06", 184,
+  "01-701-1392", "N", "CENTILOID < 24.1", 0, "BASELINE", "2012-10-28", 1,
+  "01-701-1392", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2013-01-20", 85,
+  "01-701-1392", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2013-04-28", 183,
+  "01-714-1288", "N", "CENTILOID < 24.1", 0, "BASELINE", "2013-12-04", NA,
+  "01-714-1288", "N", "CENTILOID < 24.1", 12, "WEEK 12", "2014-03-02", NA,
+  "01-714-1288", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2014-06-17", NA
+)
 
-  # Calculate the pTau / Amyloid ratio
+# Create LB record for one subject-visit with pTau, Amyloid, and Ratio ----
+create_ratio_record <- function(
+  usubjid,
+  visitnum,
+  visit,
+  visitdy,
+  lbdtc,
+  lbdy,
+  trtgrp,
+  crit1fl
+) {
+  set.seed(as.numeric(gsub("\\D", "", usubjid)) + visitnum)
+
+  # Generate Aβ42 plasma  ----
+  amyloid_value <- runif(1, 80, 1200) # pg/mL
+
+  # Generate pTau conditional on crit1fl status
+  ptau_value <- dplyr::case_when(
+    crit1fl == "Y" ~ runif(1,
+      min = 0.0015 * amyloid_value,
+      max = 0.00370 * amyloid_value
+    ),
+    crit1fl == "N" ~ runif(1,
+      min = 0.00738 * amyloid_value,
+      max = 0.0120 * amyloid_value
+    ),
+    TRUE ~ runif(1,
+      min = 0.00371 * amyloid_value,
+      max = 0.00737 * amyloid_value
+    )
+  )
+
+  # Placebo / Untreated stability
+  if (trtgrp %in% c("Placebo", "No Treatment") && visit != "BASELINE") {
+    ptau_value <- ptau_value * runif(1, 0.98, 1.02)
+    amyloid_value <- amyloid_value * runif(1, 0.98, 1.02)
+  }
+
+  # add Intermediate cases
+  make_intermediate <- runif(1) < 0.15 # ~15% of visits
+
+  if (make_intermediate) {
+    # Force ratio into intermediate band
+    ratio_target <- runif(1, 0.00371, 0.00737)
+
+    # Adjust pTau (Aβ42 unchanged)
+    ptau_value <- ratio_target * amyloid_value
+  }
+
+  # Derive ratio
   ratio_value <- ptau_value / amyloid_value
 
-  # Define result based on ratio value for LBORRES (Positive, Negative, Indeterminate)
-  ratio_lborres <- case_when(
-    ratio_value <= 0.00370 ~ "Negative", # Negative if result is less than or equal to 0.00370
-    ratio_value >= 0.00738 ~ "Positive", # Positive if result is greater than or equal to 0.00738
-    TRUE ~ "Indeterminate" # Indeterminate if result is between 0.00370 and 0.00738
+  # Interpretation
+  ratio_lbnrind <- dplyr::case_when(
+    ratio_value <= 0.00370 ~ "Negative",
+    ratio_value >= 0.00738 ~ "Positive",
+    TRUE ~ "Indeterminate"
   )
 
-  # Create the record for Lumipulse G pTau 217 Plasma
+  # ---- pTau record ----
   ptau_record <- tibble(
-    STUDYID = "CDISCPILOT01",
-    DOMAIN = "LB",
-    USUBJID = usubjid,
-    LBSEQ = "missing",
-    LBTESTCD = "PTAU217",
-    LBTEST = "Lumipulse G pTau 217 Plasma",
-    LBCAT = "Biomarkers",
-    LBORRES = as.character(ptau_value),
-    LBORRESU = "pg/mL",
-    LBORNRLO = NA_character_,
-    LBORNRHI = NA_character_,
-    LBSTRESC = as.character(ptau_value),
-    LBSTRESN = ptau_value,
-    LBSTRESU = "pg/mL",
-    LBSTNRLO = NA_real_,
-    LBSTNRHI = NA_real_,
-    LBNRIND = NA_character_,
-    LBBLFL = ifelse(visit == "BASELINE", "Y", NA_character_),
-    VISITNUM = visitnum,
-    VISIT = visit,
-    VISITDY = visitdy,
-    LBDTC = lbdtc,
-    LBDY = lbdy
+    STUDYID   = "CDISCPILOT01",
+    DOMAIN    = "LB",
+    USUBJID   = usubjid,
+    LBTESTCD  = "PTAU217",
+    LBTEST    = "Lumipulse G pTau 217 Plasma",
+    LBCAT     = "Biomarkers",
+    LBORRES   = sprintf("%.4f", ptau_value),
+    LBORRESU  = "pg/mL",
+    LBSTRESC  = sprintf("%.4f", ptau_value),
+    LBSTRESN  = ptau_value,
+    LBSTRESU  = "pg/mL",
+    LBBLFL    = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM  = visitnum,
+    VISIT     = visit,
+    VISITDY   = visitdy,
+    LBDTC     = lbdtc,
+    LBDY      = lbdy
   )
 
-  # Create the record for Lumipulse G β-Amyloid 1-42-N Plasma
+  # ---- Aβ42 record ----
   amyloid_record <- tibble(
-    STUDYID = "CDISCPILOT01",
-    DOMAIN = "LB",
-    USUBJID = usubjid,
-    LBSEQ = "missing",
-    LBTESTCD = "AMYLB42",
-    LBTEST = "Lumipulse G Beta-Amyloid 1-42-N Plasma",
-    LBCAT = "Biomarkers",
-    LBORRES = as.character(amyloid_value),
-    LBORRESU = "pg/mL",
-    LBORNRLO = NA_character_,
-    LBORNRHI = NA_character_,
-    LBSTRESC = as.character(amyloid_value),
-    LBSTRESN = amyloid_value,
-    LBSTRESU = "pg/mL",
-    LBSTNRLO = NA_real_,
-    LBSTNRHI = NA_real_,
-    LBNRIND = NA_character_,
-    LBBLFL = ifelse(visit == "BASELINE", "Y", NA_character_),
-    VISITNUM = visitnum,
-    VISIT = visit,
-    VISITDY = visitdy,
-    LBDTC = lbdtc,
-    LBDY = lbdy
+    STUDYID   = "CDISCPILOT01",
+    DOMAIN    = "LB",
+    USUBJID   = usubjid,
+    LBTESTCD  = "AMYLB42",
+    LBTEST    = "Lumipulse G Beta-Amyloid 1-42-N Plasma",
+    LBCAT     = "Biomarkers",
+    LBORRES   = sprintf("%.1f", amyloid_value),
+    LBORRESU  = "pg/mL",
+    LBSTRESC  = sprintf("%.1f", amyloid_value),
+    LBSTRESN  = amyloid_value,
+    LBSTRESU  = "pg/mL",
+    LBBLFL    = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM  = visitnum,
+    VISIT     = visit,
+    VISITDY   = visitdy,
+    LBDTC     = lbdtc,
+    LBDY      = lbdy
   )
 
-  # Create the record for Lumipulse G pTau 217/β-Amyloid 1-42 Plasma Ratio
-  pTau_amylb42_ratio <- tibble(
-    STUDYID = "CDISCPILOT01",
-    DOMAIN = "LB",
-    USUBJID = usubjid,
-    LBTESTCD = "PTAB42R",
-    LBTEST = "Lumipulse G pTau 217/Beta-Amyloid 1-42 Plasma Ratio",
-    LBCAT = "Biomarkers",
-    LBORRES = sprintf("%.4f", ratio_value),
-    LBORRESU = NA_character_,
-    LBORNRLO = "0.00370",
-    LBORNRHI = "0.00738",
-    LBSTRESC = sprintf("%.4f", ratio_value),
-    LBSTRESN = ratio_value,
-    LBSTRESU = NA_character_,
-    LBSTNRLO = 0.00370,
-    LBSTNRHI = 0.00738,
-    LBNRIND = ratio_lborres,
-    LBBLFL = ifelse(visit == "BASELINE", "Y", NA_character_),
-    VISITNUM = visitnum,
-    VISIT = visit,
-    VISITDY = visitdy,
-    LBDTC = lbdtc,
-    LBDY = lbdy
+  # ---- Ratio record ----
+  ratio_record <- tibble(
+    STUDYID   = "CDISCPILOT01",
+    DOMAIN    = "LB",
+    USUBJID   = usubjid,
+    LBTESTCD  = "PTAB42R",
+    LBTEST    = "Lumipulse G pTau 217/Beta-Amyloid 1-42 Plasma Ratio",
+    LBCAT     = "Biomarkers",
+    LBORRES   = sprintf("%.5f", ratio_value),
+    LBORNRLO  = "0.00370",
+    LBORNRHI  = "0.00738",
+    LBSTRESC  = sprintf("%.5f", ratio_value),
+    LBSTRESN  = ratio_value,
+    LBSTNRLO  = 0.00370,
+    LBSTNRHI  = 0.00738,
+    LBNRIND   = ratio_lbnrind,
+    LBBLFL    = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM  = visitnum,
+    VISIT     = visit,
+    VISITDY   = visitdy,
+    LBDTC     = lbdtc,
+    LBDY      = lbdy
   )
 
-  # Combine all records into a single tibble - Keeping the Ratio only
-  combined_record <- pTau_amylb42_ratio
-
-  return(combined_record)
+  bind_rows(ptau_record, amyloid_record, ratio_record)
 }
 
 # Generate all LB pTau, Amyloid and corresponding Ratio's records by joining 'visit_schedule' and 'subject_chars' ----
-ratio_records <- visit_schedule %>%
-  left_join(subject_chars, by = c("USUBJID")) %>%
+ratio_records <- visit_all %>%
+  left_join(subject_chars, by = "USUBJID") %>%
   rowwise() %>%
   do(
     create_ratio_record(
-      usubjid = .$USUBJID,
+      usubjid  = .$USUBJID,
       visitnum = .$VISITNUM,
-      visit = .$VISIT,
-      visitdy = .$VISITDY,
-      lbdtc = .$LBDTC,
-      lbdy = .$LBDY,
-      trtgrp = .$TRTGRP
+      visit    = .$VISIT,
+      visitdy  = .$LBDY,
+      lbdtc    = .$LBDTC,
+      lbdy     = .$LBDY,
+      trtgrp   = .$TRTGRP,
+      crit1fl  = .$CRIT1FL
     )
   ) %>%
   ungroup()
+
 
 # Add sequence numbers and finalize
 lb_neuro <- bind_rows(asyn_records, ratio_records) %>%
@@ -247,7 +315,7 @@ lb_neuro <- bind_rows(asyn_records, ratio_records) %>%
   )
 
 # Validation checks
-expected_visits <- c("BASELINE")
+expected_visits <- c("BASELINE", "WEEK 12", "WEEK 26")
 
 # Check if all VISIT values are in the expected set
 if (!all(lb_neuro$VISIT %in% expected_visits)) {
