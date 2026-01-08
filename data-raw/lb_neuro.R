@@ -6,6 +6,7 @@ library(admiral)
 library(dplyr)
 library(cli)
 
+# Print numeric numbers in regular decimal format
 options(scipen = 999)
 
 # Read input data
