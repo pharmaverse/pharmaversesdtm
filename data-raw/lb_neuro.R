@@ -6,6 +6,8 @@ library(admiral)
 library(dplyr)
 library(cli)
 
+options(scipen = 999)
+
 # Read input data
 dm_neuro <- pharmaversesdtm::dm_neuro
 nv_neuro <- pharmaversesdtm::nv_neuro
@@ -39,6 +41,8 @@ visit_schedule <- nv_neuro %>%
     LBDTC = as.character(LBDTC)
   ) %>%
   distinct()
+
+# Alpha Synuclein data generation
 
 # Get subject characteristics with treatment information from dm_neuro ----
 subject_chars <- dm_neuro %>%
@@ -115,7 +119,8 @@ asyn_records <- visit_schedule %>%
   ) %>%
   ungroup()
 
-#
+# pTau, Amyloid, and Ratio data generation
+# Input amyloid data from admiralneuro.adapet - ensure the data is accurate
 visit_all <- tribble(
   ~USUBJID, ~CRIT1FL, ~CRIT1, ~VISITNUM, ~VISIT, ~LBDTC, ~LBDY,
   "01-701-1015", "N", "CENTILOID < 24.1", 0, "BASELINE", "2014-01-02", 1,
@@ -171,7 +176,7 @@ create_ratio_record <- function(
   amyloid_value <- runif(1, 80, 1200) # pg/mL
 
   # Generate pTau conditional on crit1fl status
-  ptau_value <- dplyr::case_when(
+  ptau_value <- case_when(
     crit1fl == "Y" ~ runif(1,
       min = 0.0015 * amyloid_value,
       max = 0.00370 * amyloid_value
@@ -207,7 +212,7 @@ create_ratio_record <- function(
   ratio_value <- ptau_value / amyloid_value
 
   # Interpretation
-  ratio_lbnrind <- dplyr::case_when(
+  ratio_lbnrind <- case_when(
     ratio_value <= 0.00370 ~ "Negative",
     ratio_value >= 0.00738 ~ "Positive",
     TRUE ~ "Indeterminate"
@@ -299,7 +304,6 @@ ratio_records <- visit_all %>%
     )
   ) %>%
   ungroup()
-
 
 # Add sequence numbers and finalize
 lb_neuro <- bind_rows(asyn_records, ratio_records) %>%
