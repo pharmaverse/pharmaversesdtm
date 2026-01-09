@@ -52,6 +52,10 @@ Developer Notes
   the package.
   ([\#207](https://github.com/pharmaverse/pharmaversesdtm/issues/207))
 
+- Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio
+  in `lb_neuro`.
+  ([\#211](https://github.com/pharmaverse/pharmaversesdtm/issues/211))
+
 - Updated the pull request template to include the corrected package
   website name.
   ([\#223](https://github.com/pharmaverse/pharmaversesdtm/issues/223))
