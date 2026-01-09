@@ -15,7 +15,7 @@ nv_neuro <- pharmaversesdtm::nv_neuro
 
 # Convert blank to NA
 dm_neuro <- convert_blanks_to_na(dm_neuro)
-nv_neuro  <- convert_blanks_to_na(nv_neuro)
+nv_neuro <- convert_blanks_to_na(nv_neuro)
 
 # Select patients from DM Neuro only (following adsl_neuro.R pattern)
 # Separate randomized group to identify which subjects don't have planned study days
