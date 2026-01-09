@@ -20,6 +20,8 @@
 
 - Added `lb_onco_pcwg3` dataset which contains PSA measurements for PCWG criteria. (#197)
 
+- Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in `lb_neuro`. (#211)
+
 ## Documentation
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
@@ -33,8 +35,6 @@
 - Updated `{lintr}` configurations to use central configurations from `{admiraldev}`. (#194)
 
 - Generated different sites for the development and released versions of the package. (#207)
-
-- Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in `lb_neuro`. (#211)
 
 - Updated the pull request template to include the corrected package website name. (#223)
 
