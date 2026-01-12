@@ -1,0 +1,320 @@
+# pharmaversesdtm
+
+Test data (SDTM) for the pharmaverse family of packages
+
+- [Purpose](#purpose)
+- [Installation](#installation)
+- [Data Sources](#data-sources)
+- [Naming Conventions](#naming)
+- [How To Update](#how-to-update)
+
+## Purpose
+
+To provide a one-stop-shop for SDTM test data in the pharmaverse family
+of packages. This includes datasets that are therapeutic area
+(TA)-agnostic (`DM`, `VS`, `EG`, etc.) as well TA-specific ones (`RS`,
+`TR`, `OE`, etc.).
+
+## Installation
+
+The package is available from CRAN and can be installed by running
+`install.packages("pharmaversesdtm")`. To install the latest development
+version of the package directly from GitHub use the following code:
+
+``` r
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+remotes::install_github("pharmaverse/pharmaversesdtm", ref = "main") # This command installs the latest development version directly from GitHub.
+```
+
+## Data Sources
+
+Some test datasets have been sourced from the [CDISC pilot
+project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while
+other datasets have been constructed ad-hoc by the {admiral} team.
+Please check the [Reference
+page](https://pharmaverse.github.io/pharmaversesdtm/reference/index.html)
+for detailed information regarding the source of specific datasets.
+
+## Naming Conventions
+
+- Datasets that are TA-agnostic: same as SDTM domain name (e.g., `dm`,
+  `rs`).
+- Datasets that are TA-specific: domain_TA_others, others go from
+  broader categories to more specific ones (e.g., `oe_ophtha`,
+  `rs_onco`, `rs_onco_irecist`).
+
+**Note**: *If an SDTM domain is used by multiple TAs,
+[pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/) may
+provide multiple versions of the corresponding test dataset. For
+instance, the package contains `ex` and `ex_ophtha` as the latter
+contains ophthalmology-specific variables such as `EXLAT` and `EXLOC`,
+and `EXROUTE` is exchanged for a plausible ophthalmology value.*
+
+## How To Update
+
+Firstly, make a GitHub issue in
+[`{pharmaversesdtm}`](https://github.com/pharmaverse/pharmaversesdtm)
+with the planned updates and tag `@pharmaverse/admiral` so that one of
+the development core team can sanity check the request. Then there are
+two main ways to extend the test data: either by adding new datasets or
+extending existing datasets with new records/variables. Whichever method
+you choose, it is worth noting the following:
+
+- Programs that generate test data are stored in the `data-raw/` folder.
+- Each of these programs is written as a standalone R script: if any
+  packages need to be loaded for a given program, then call
+  [`library()`](https://rdrr.io/r/base/library.html) at the start of the
+  program (but please do **not** call
+  [`library(pharmaversesdtm)`](https://pharmaverse.github.io/pharmaversesdtm/)).
+- When you have created a program in the `data-raw/` folder, you need to
+  run it as a standalone R script, in order to generate a test dataset
+  that will become part of the
+  [pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/)
+  package, but you do not need to build the package.
+- Following [best practice](https://r-pkgs.org/data.html#sec-data-data),
+  each dataset is stored as a `.rda` file whose name is consistent with
+  the name of the dataset, e.g., dataset `xx` is stored as `xx.rda`. The
+  easiest way to achieve this is to use `usethis::use_data(xx)`
+- The programs in `data-raw/` are stored within the
+  [pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/)
+  GitHub repository, but they are **not** part of the
+  [pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/)
+  package–the `data-raw/` folder is specified in `.Rbuildignore`.
+- When you run a program that is in the `data-raw/` folder, you generate
+  a dataset that is written to the `data/` folder, which will become
+  part of the
+  [pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/)
+  package.
+- The names and sources of test datasets are specified in `R/*.R`, for
+  the purpose of generating documentation in the `man/` folder.
+
+**Note:** The documentation process in
+[pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/) is
+automated for consistency and ease of maintenance.
+
+### Centralized Metadata `(inst/extdata/sdtms-specs.json)`
+
+[pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/) uses a
+single JSON file to store metadata for all SDTM datasets. This file
+contains information such as:
+
+- dataset name
+- dataset label
+- dataset description
+- author
+- source
+- therapeutic area
+- any other dataset-specific metadata.
+
+This metadata drives the automated documentation process, and the file
+is read by `data-raw/create_sdtms_data.R` to help generate:
+
+- Documentation `.R` files in `R/`
+- `.Rd` files in `man/`
+- `Test Name`/`Test Code` table inclusion (when present)
+- Dataset grouping by `Therapeutic Area`.
+
+### Adding New SDTM Datasets
+
+- Create a program in the `data-raw/` folder, named `<name>.R`, where
+  `<name>` should follow the [naming convention](#naming), to generate
+  the test data and output `<name>.rda` to the `data/` folder.
+  - Use CDISC pilot data such as `dm` as input in this program in order
+    to create realistic synthetic data that remains consistent with
+    other domains (not mandatory).
+  - Note that **no personal data should be used** as part of this
+    package, even if anonymized.
+- Run the program.
+- Update `inst/extdata/sdtms-specs.json` with the new dataset metadata,
+  including:
+  - Assigning the dataset label, description, author, source, purpose,
+    or structure.
+  - Assigning or updating the dataset therapeutic area (used for
+    reference-page grouping).
+- Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and
+  update the `.Rd` files in `man/`.
+- Add your GitHub handle to `.github/CODEOWNERS`.
+- Update `NEWS.md`.
+
+### Updating Existing SDTM Datasets
+
+- Locate the existing program `<name>.R` in the `data-raw/` folder,
+  update it accordingly.
+- Update the corresponding entry in `inst/extdata/sdtms-specs.json` to
+  reflect the changes, including:
+  - Changing the dataset label, description, author, or source.
+  - Modifying the dataset purpose or structure.
+  - Updating the dataset therapeutic area.
+  - Removing a dataset (delete its entry from the JSON entirely).
+- Run the program, and output updated `<name>.rda` to the `data/`
+  folder.
+- Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and
+  update the `.Rd` files in `man/`.
+- Add your GitHub handle to `.github/CODEOWNERS`.
+- Update `NEWS.md`.
+
+## Acknowledgments
+
+Along with the authors and contributors, thanks to the following people
+for their work on the package:
+
+G Gayatri, Pooja Kumari, Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
+
+# Package index
+
+## Generic Datasets
+
+- [`ae`](https://pharmaverse.github.io/pharmaversesdtm/reference/ae.md)
+  : Adverse Events
+- [`cm`](https://pharmaverse.github.io/pharmaversesdtm/reference/cm.md)
+  : Concomitant Medication
+- [`dm`](https://pharmaverse.github.io/pharmaversesdtm/reference/dm.md)
+  : Demography
+- [`ds`](https://pharmaverse.github.io/pharmaversesdtm/reference/ds.md)
+  : Disposition
+- [`eg`](https://pharmaverse.github.io/pharmaversesdtm/reference/eg.md)
+  : Electrocardiogram
+- [`ex`](https://pharmaverse.github.io/pharmaversesdtm/reference/ex.md)
+  : Exposure
+- [`is_ada`](https://pharmaverse.github.io/pharmaversesdtm/reference/is_ada.md)
+  : Immunogenicity Specimen Assessments for ADA
+- [`lb`](https://pharmaverse.github.io/pharmaversesdtm/reference/lb.md)
+  : Laboratory Measurements
+- [`mh`](https://pharmaverse.github.io/pharmaversesdtm/reference/mh.md)
+  : Medical History
+- [`pc`](https://pharmaverse.github.io/pharmaversesdtm/reference/pc.md)
+  : Pharmacokinetic Concentrations
+- [`pp`](https://pharmaverse.github.io/pharmaversesdtm/reference/pp.md)
+  : Pharmacokinetic Parameters
+- [`sdg_db`](https://pharmaverse.github.io/pharmaversesdtm/reference/sdg_db.md)
+  : SDG
+- [`smq_db`](https://pharmaverse.github.io/pharmaversesdtm/reference/smq_db.md)
+  : Standardized MedDRA Queries
+- [`suppae`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppae.md)
+  : Supplemental Adverse Events
+- [`suppdm`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppdm.md)
+  : Supplemental Demography
+- [`suppds`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppds.md)
+  : Supplemental Disposition
+- [`sv`](https://pharmaverse.github.io/pharmaversesdtm/reference/sv.md)
+  : Subject Visits
+- [`ts`](https://pharmaverse.github.io/pharmaversesdtm/reference/ts.md)
+  : Trial Design
+- [`vs`](https://pharmaverse.github.io/pharmaversesdtm/reference/vs.md)
+  : Vital Signs
+
+## Metabolism Datasets
+
+- [`dm_metabolic`](https://pharmaverse.github.io/pharmaversesdtm/reference/dm_metabolic.md)
+  : Demographic Dataset-metabolic
+- [`lb_metabolic`](https://pharmaverse.github.io/pharmaversesdtm/reference/lb_metabolic.md)
+  : Laboratory Measurements Dataset-metabolic
+- [`qs_metabolic`](https://pharmaverse.github.io/pharmaversesdtm/reference/qs_metabolic.md)
+  : Questionnaire Dataset-metabolic
+- [`vs_metabolic`](https://pharmaverse.github.io/pharmaversesdtm/reference/vs_metabolic.md)
+  : Vital signs Dataset-metabolic
+
+## Neurology Datasets
+
+- [`ag_neuro`](https://pharmaverse.github.io/pharmaversesdtm/reference/ag_neuro.md)
+  : Procedure Agents Dataset-neuro
+- [`dm_neuro`](https://pharmaverse.github.io/pharmaversesdtm/reference/dm_neuro.md)
+  : Demographic Dataset-neuro
+- [`lb_neuro`](https://pharmaverse.github.io/pharmaversesdtm/reference/lb_neuro.md)
+  : Laboratory Test Dataset-neuro
+- [`nv_neuro`](https://pharmaverse.github.io/pharmaversesdtm/reference/nv_neuro.md)
+  : Neurological Assessment Dataset-neuro
+- [`suppnv_neuro`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppnv_neuro.md)
+  : Supplemental for Neurological Assessment Dataset-neuro
+
+## Oncology Datasets
+
+- [`lb_onco_pcwg3`](https://pharmaverse.github.io/pharmaversesdtm/reference/lb_onco_pcwg3.md)
+  : Laboratory Measurements (PSA) for Oncology
+- [`rs_onco`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco.md)
+  : Disease Response for Oncology
+- [`rs_onco_ca125`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_ca125.md)
+  : Disease Response (GCIG)
+- [`rs_onco_imwg`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_imwg.md)
+  : Disease Response (IMWG)
+- [`rs_onco_irecist`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_irecist.md)
+  : Disease Response (iRECIST) for Oncology
+- [`rs_onco_pcwg3`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_pcwg3.md)
+  : Disease Response (PCWG3) for Oncology
+- [`rs_onco_recist`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_recist.md)
+  : Disease Response (RECIST 1.1) for Oncology
+- [`supprs_onco_ca125`](https://pharmaverse.github.io/pharmaversesdtm/reference/supprs_onco_ca125.md)
+  : Supplemental Qualifiers for RS_ONCO_CA125
+- [`supprs_onco_imwg`](https://pharmaverse.github.io/pharmaversesdtm/reference/supprs_onco_imwg.md)
+  : Supplemental Qualifiers for RS_ONCO_IMWG
+- [`supptr_onco`](https://pharmaverse.github.io/pharmaversesdtm/reference/supptr_onco.md)
+  : Supplemental Tumor Results for Oncology
+- [`tr_onco`](https://pharmaverse.github.io/pharmaversesdtm/reference/tr_onco.md)
+  : Tumor Results for Oncology
+- [`tr_onco_recist`](https://pharmaverse.github.io/pharmaversesdtm/reference/tr_onco_recist.md)
+  : Tumor Results (RECIST 1.1) for Oncology
+- [`tu_onco`](https://pharmaverse.github.io/pharmaversesdtm/reference/tu_onco.md)
+  : Tumor Identification for Oncology
+- [`tu_onco_recist`](https://pharmaverse.github.io/pharmaversesdtm/reference/tu_onco_recist.md)
+  : Tumor Identification (RECIST 1.1) for Oncology
+
+## Ophthalmology Datasets
+
+- [`ae_ophtha`](https://pharmaverse.github.io/pharmaversesdtm/reference/ae_ophtha.md)
+  : Adverse Events for Ophthalmology
+- [`ex_ophtha`](https://pharmaverse.github.io/pharmaversesdtm/reference/ex_ophtha.md)
+  : Exposure for Ophthalmology
+- [`oe_ophtha`](https://pharmaverse.github.io/pharmaversesdtm/reference/oe_ophtha.md)
+  : Ophthalmic Examinations for Ophthalmology
+- [`qs_ophtha`](https://pharmaverse.github.io/pharmaversesdtm/reference/qs_ophtha.md)
+  : Questionnaire for Ophthalmology
+- [`sc_ophtha`](https://pharmaverse.github.io/pharmaversesdtm/reference/sc_ophtha.md)
+  : Subject Characteristic for Ophthalmology
+
+## Pediatrics Datasets
+
+- [`dm_peds`](https://pharmaverse.github.io/pharmaversesdtm/reference/dm_peds.md)
+  : Demographic Dataset-pediatrics
+- [`vs_peds`](https://pharmaverse.github.io/pharmaversesdtm/reference/vs_peds.md)
+  : Vital signs Dataset-pediatrics
+
+## Vaccine Datasets
+
+- [`ce_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/ce_vaccine.md)
+  : Clinical Events for Vaccine
+- [`dm_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/dm_vaccine.md)
+  : Demographics for Vaccine
+- [`ex_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/ex_vaccine.md)
+  : Exposures for Vaccine
+- [`face_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/face_vaccine.md)
+  : Findings About Clinical Events for Vaccine
+- [`is_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/is_vaccine.md)
+  : Immunogenicity Specimen Assessments for Vaccine
+- [`suppce_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppce_vaccine.md)
+  : Supplemental Qualifiers for Clinical Events for Vaccine
+- [`suppdm_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppdm_vaccine.md)
+  : Supplemental Qualifiers for Demographics for Vaccine
+- [`suppex_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppex_vaccine.md)
+  : Supplemental Qualifiers for Exposures for Vaccine
+- [`suppface_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppface_vaccine.md)
+  : Supplemental Qualifiers for Findings About for Clinical Events for
+  Vaccine
+- [`suppis_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/suppis_vaccine.md)
+  : Supplemental Qualifiers for Immunogenicity Specimen Assessments for
+  Vaccine
+- [`vs_vaccine`](https://pharmaverse.github.io/pharmaversesdtm/reference/vs_vaccine.md)
+  : Vital Signs for Vaccine
+
+## Functions
+
+List of all available functions.
+
+- [`get_terms()`](https://pharmaverse.github.io/pharmaversesdtm/reference/get_terms.md)
+  :
+
+  An example function as expected by the `get_terms_fun` parameter of
+  `admiral::create_query_data()`
+
