@@ -233,11 +233,11 @@ ms_naat_result <- function(ab, ab_resistance = FALSE) {
 # Data Structure: study_microb_data ----
 # Nested list defining for a study each of the process steps:
 # - Patient studied
-#   - Specimen collected
-#     - Specimen aliquots
-#       - Aliquots cultured
-#        - Microbiology tests (MB) performed on the cultured aliquot
-#        - Susceptibility tests (MS) performed on the cultured aliquot
+# - Specimen collected
+# - Specimen aliquots
+# - Aliquots cultured
+# - Microbiology tests (MB) performed on the cultured aliquot
+# - Susceptibility tests (MS) performed on the cultured aliquot
 #
 # Each level contains the relevant information to create the SDTM domains:
 # - BE: specimen collection and aliquoting events
@@ -725,7 +725,8 @@ for (subj_ix in seq_along(study_microb_data)) {
         ),
         be_collection %>% mutate(
           BESEQ = beseq,
-          BEREFID = culture_id,
+          BEREFID = aliquot_id,
+          BELNKID = culture_id,
           BETERM = "Culturing",
           BECAT = "CULTURE",
           BESTDTC = bestdtc_cult,
@@ -831,7 +832,7 @@ mb <- mb %>%
     MBTESTCD = "Microbiology Test or Finding Short Name",
     MBTEST = "Microbiology Test or Finding Name",
     MBTSTDTL = "Measurement, Test or Examination Detail",
-    MBORRES = "Original Result",
+    MBORRES = "Result or Finding in Original Units",
     MBORRESU = "Original Units",
     MBRSLSCL = "Result Scale",
     MBSTRESC = "Result or Finding in Standard Format",

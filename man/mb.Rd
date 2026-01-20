@@ -17,7 +17,7 @@ A data frame with 21 columns:
 \item{MBTESTCD}{Microbiology Test or Finding Short Name}
 \item{MBTEST}{Microbiology Test or Finding Name}
 \item{MBTSTDTL}{Measurement, Test or Examination Detail}
-\item{MBORRES}{Original Result}
+\item{MBORRES}{Result or Finding in Original Units}
 \item{MBORRESU}{Original Units}
 \item{MBRSLSCL}{Result Scale}
 \item{MBSTRESC}{Result or Finding in Standard Format}
