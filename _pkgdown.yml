@@ -69,6 +69,10 @@ reference:
     contents:
       - has_keyword("vaccine")
 
+  - title: "Microbiology Datasets"
+    contents:
+      - has_keyword("microbiology")
+
   - title: "Functions"
     desc: "List of all available functions."
     contents:
