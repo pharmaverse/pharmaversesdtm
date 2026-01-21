@@ -16,6 +16,13 @@
       "therapeutic_area": "ophthalmology"
     },
     {
+      "name": "be",
+      "label": "Biospecimen Events",
+      "description": "A synthetic SDTM BE domain representing specimen collection, aliquoting, and culturing events, with linkage to MB and MS domains",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/be.rda",
+      "therapeutic_area": "microbiology"
+    },
+    {
       "name": "cm",
       "label": "Concomitant Medication",
       "description": "A SDTM CM dataset from the CDISC pilot project",
@@ -67,12 +74,26 @@
       "therapeutic_area": "generic"
     },
     {
+      "name": "mb",
+      "label": "Microbiology Specimen",
+      "description": "A synthetic SDTM MB domain representing microbiology findings and linkage to MS domain (ms)",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/mb.rda",
+      "therapeutic_area": "microbiology"
+    },
+    {
       "name": "mh",
       "label": "Medical History",
       "description": "An updated SDTM MH dataset that uses data from the CDISC pilot project",
       "source": "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/mh.xpt?raw=true",
       "author": "Annie Yang",
       "therapeutic_area": "generic"
+    },
+    {
+      "name": "ms",
+      "label": "Microbiology Susceptibility",
+      "description": "A synthetic SDTM MS domain with susceptibility results and linkage to MB domain (mb)",
+      "source": "https://github.com/pharmaverse/pharmaversesdtm/blob/main/data/ms.rda",
+      "therapeutic_area": "microbiology"
     },
     {
       "name": "oe_ophtha",
