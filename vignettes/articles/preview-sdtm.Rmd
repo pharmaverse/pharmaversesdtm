@@ -1,0 +1,53 @@
+---
+title: "Introduction to pharmaversesdtm"
+date: "2026-01-17"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to pharmaversesdtm}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+# Datasets Preview
+
+Here is a preview of the datasets included in the `pharmaversesdtm` package. Each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
+
+```{r echo=FALSE}
+library(pharmaversesdtm)
+library(knitr)
+library(htmltools)
+
+summary_sdtm_data <- data(package = "pharmaversesdtm")
+sdtm_names <- summary_sdtm_data$results[, "Item"]
+sdtm_titles <- summary_sdtm_data$results[, "Title"]
+
+
+collapsibles <- lapply(seq_along(sdtm_names), function(ix) {
+  dataset_name <- sdtm_names[ix]
+  dataset_title <- sdtm_titles[ix]
+  # Ensure valid UTF-8 for names, titles, and dataset content
+  dataset_name_utf8 <- iconv(dataset_name, to = "UTF-8", sub = "?")
+  dataset_title_utf8 <- iconv(dataset_title, to = "UTF-8", sub = "?")
+  dataset <- get(dataset_name, envir = asNamespace("pharmaversesdtm"))
+  # Convert all character columns to valid UTF-8
+  if (is.data.frame(dataset)) {
+    for (col in names(dataset)) {
+      if (is.character(dataset[[col]])) {
+        dataset[[col]] <- iconv(dataset[[col]], to = "UTF-8", sub = "?")
+      }
+    }
+  }
+
+  panel <- tags$details(
+    tags$summary(paste0(dataset_name_utf8, ": ", dataset_title_utf8)),
+    DT::datatable(
+      head(dataset, 50),
+      filter = "top"
+    )
+  )
+  panel
+})
+
+htmltools::browsable(tagList(collapsibles))
+```
