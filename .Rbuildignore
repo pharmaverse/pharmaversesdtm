@@ -24,3 +24,4 @@
 ^cran-comments\.md$
 ^.devcontainer$
 ^revdep
+^vignettes/articles$
