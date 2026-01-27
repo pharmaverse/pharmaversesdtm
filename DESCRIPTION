@@ -36,6 +36,7 @@ Suggests:
     covr,
     devtools,
     DT,
+    htmltools,
     knitr,
     lintr,
     metatools,
