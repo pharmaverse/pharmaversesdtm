@@ -17,6 +17,8 @@ Here is a preview of the datasets included in the `pharmaversesdtm` package. Eac
 library(pharmaversesdtm)
 library(knitr)
 library(htmltools)
+library(rlang)
+library(DT)
 
 summary_sdtm_data <- data(package = "pharmaversesdtm")
 sdtm_names <- summary_sdtm_data$results[, "Item"]
