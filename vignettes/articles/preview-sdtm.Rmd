@@ -23,7 +23,7 @@ specs_yml <- yaml::read_yaml(system.file("extdata/sdtms-specs.json", package = "
 specs_yml <- specs_yml$`sdtms-specs`
 
 # Group datasets by therapeutic area
-areas <- unique(sapply(specs_yml, function(x) x$therapeutic_area))
+areas <- sort(unique(sapply(specs_yml, function(x) x$therapeutic_area)))
 
 collapsible_groups <- lapply(areas, function(area) {
   # Indices of datasets in this area
