@@ -41,12 +41,12 @@ Suggests:
     metatools,
     pkgdown,
     reactable,
-    rlang,
     rmarkdown,
     roxygen2,
     spelling,
     testthat,
-    usethis
+    usethis,
+    yaml
 Encoding: UTF-8
 Language: en-US
 LazyData: true
