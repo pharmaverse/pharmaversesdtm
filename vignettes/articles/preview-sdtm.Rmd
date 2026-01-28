@@ -14,6 +14,7 @@ vignette: >
 Here is a preview of all datasets included in the `pharmaversesdtm` package. Divided by areas, each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
 
 ```{r echo=FALSE}
+library(pharmaversesdtm)
 library(htmltools)
 library(reactable)
 library(yaml)
