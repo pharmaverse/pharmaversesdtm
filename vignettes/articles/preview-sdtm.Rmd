@@ -11,14 +11,12 @@ vignette: >
 
 # Datasets Preview
 
-Here is a preview of the datasets included in the `pharmaversesdtm` package. Each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
+Here is a preview of all datasets included in the `pharmaversesdtm` package. Each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
 
 ```{r echo=FALSE}
 library(pharmaversesdtm)
-library(knitr)
 library(htmltools)
-library(rlang)
-library(DT)
+library(reactable)
 
 summary_sdtm_data <- data(package = "pharmaversesdtm")
 sdtm_names <- summary_sdtm_data$results[, "Item"]
@@ -43,9 +41,12 @@ collapsibles <- lapply(seq_along(sdtm_names), function(ix) {
 
   panel <- tags$details(
     tags$summary(paste0(dataset_name_utf8, ": ", dataset_title_utf8)),
-    DT::datatable(
+    reactable::reactable(
       head(dataset, 50),
-      filter = "top"
+      filterable = TRUE,
+      pagination = TRUE,
+      defaultPageSize = 10,
+      pageSizeOptions = c(10, 25, 50)
     )
   )
   panel
