@@ -11,46 +11,49 @@ vignette: >
 
 # Datasets Preview
 
-Here is a preview of all datasets included in the `pharmaversesdtm` package. Each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
+Here is a preview of all datasets included in the `pharmaversesdtm` package. Divided by areas, each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
 
 ```{r echo=FALSE}
-library(pharmaversesdtm)
 library(htmltools)
 library(reactable)
+library(yaml)
 
-summary_sdtm_data <- data(package = "pharmaversesdtm")
-sdtm_names <- summary_sdtm_data$results[, "Item"]
-sdtm_titles <- summary_sdtm_data$results[, "Title"]
+specs_yml <- yaml::read_yaml(system.file("extdata/sdtms-specs.json", package = "pharmaversesdtm"))
+specs_yml <- specs_yml$`sdtms-specs`
 
+# Group datasets by therapeutic area
+areas <- unique(sapply(specs_yml, function(x) x$therapeutic_area))
 
-collapsibles <- lapply(seq_along(sdtm_names), function(ix) {
-  dataset_name <- sdtm_names[ix]
-  dataset_title <- sdtm_titles[ix]
-  # Ensure valid UTF-8 for names, titles, and dataset content
-  dataset_name_utf8 <- iconv(dataset_name, to = "UTF-8", sub = "?")
-  dataset_title_utf8 <- iconv(dataset_title, to = "UTF-8", sub = "?")
-  dataset <- get(dataset_name, envir = asNamespace("pharmaversesdtm"))
-  # Convert all character columns to valid UTF-8
-  if (is.data.frame(dataset)) {
-    for (col in names(dataset)) {
-      if (is.character(dataset[[col]])) {
-        dataset[[col]] <- iconv(dataset[[col]], to = "UTF-8", sub = "?")
+collapsible_groups <- lapply(areas, function(area) {
+  # Indices of datasets in this area
+  area_indices <- which(sapply(specs_yml, function(x) x$therapeutic_area) == area)
+  # Create collapsibles for this area
+  area_panels <- lapply(area_indices, function(ix) {
+    dataset_name <- specs_yml[[ix]]$name
+    dataset_title <- specs_yml[[ix]]$label
+    # Ensure valid UTF-8 dataset content
+    dataset <- get(dataset_name, envir = asNamespace("pharmaversesdtm"))
+    if (is.data.frame(dataset)) {
+      for (col in names(dataset)) {
+        if (is.character(dataset[[col]])) {
+          dataset[[col]] <- iconv(dataset[[col]], to = "UTF-8", sub = "?")
+        }
       }
     }
-  }
-
-  panel <- tags$details(
-    tags$summary(paste0(dataset_name_utf8, ": ", dataset_title_utf8)),
-    reactable::reactable(
-      head(dataset, 50),
-      filterable = TRUE,
-      pagination = TRUE,
-      defaultPageSize = 10,
-      pageSizeOptions = c(10, 25, 50)
+    tags$details(
+      tags$summary(paste0(dataset_name, ": ", dataset_title)),
+      reactable::reactable(
+        head(dataset, 50),
+        filterable = TRUE,
+        pagination = TRUE,
+        defaultPageSize = 5,
+        pageSizeOptions = c(5, 10, 25, 50),
+        showPageSizeOptions = TRUE
+      )
     )
-  )
-  panel
+  })
+  tagList(tags$h3(area), area_panels)
 })
 
-htmltools::browsable(tagList(collapsibles))
+htmltools::browsable(tagList(collapsible_groups))
 ```
