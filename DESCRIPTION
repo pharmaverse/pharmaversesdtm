@@ -35,15 +35,18 @@ Suggests:
     cli,
     covr,
     devtools,
+    htmltools,
     knitr,
     lintr,
     metatools,
     pkgdown,
+    reactable,
     rmarkdown,
     roxygen2,
     spelling,
     testthat,
-    usethis
+    usethis,
+    yaml
 Encoding: UTF-8
 Language: en-US
 LazyData: true

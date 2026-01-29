@@ -34,11 +34,14 @@ authors:
 
 navbar:
   structure:
-    left: [reference, news]
+    left: [reference, news, preview]
   components:
     reference:
       text: Reference
       href: reference/index.html
+    preview:
+      text: Preview SDTM
+      href: articles/preview-sdtm.html
 
 reference:
   - title: "Generic Datasets"
