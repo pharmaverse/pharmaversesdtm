@@ -11,7 +11,7 @@ vignette: >
 
 # Datasets Preview
 
-Here is a preview of all datasets included in the `pharmaversesdtm` package. Divided by areas, each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
+Here is a preview of all datasets included in the `pharmaversesdtm` package. Organized by therapeutic area, each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
 
 ```{r echo=FALSE}
 library(pharmaversesdtm)
