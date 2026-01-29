@@ -34,7 +34,7 @@ authors:
 
 navbar:
   structure:
-    left: [reference, news, preview]
+    left: [reference, preview, news]
   components:
     reference:
       text: Reference
