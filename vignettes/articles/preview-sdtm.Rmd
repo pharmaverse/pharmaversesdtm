@@ -23,6 +23,7 @@ specs_yml <- specs_yml$`sdtms-specs`
 
 # Group datasets by therapeutic area
 areas <- sort(unique(sapply(specs_yml, function(x) x$therapeutic_area)))
+propercase <- \(w) paste0(toupper(substr(w, 1, 1)), tolower(substring(w, 2)))
 
 collapsible_groups <- lapply(areas, function(area) {
   # Indices of datasets in this area
@@ -46,6 +47,11 @@ collapsible_groups <- lapply(areas, function(area) {
         style = "cursor: pointer; font-weight: bold;",
         paste0(dataset_name, ": ", dataset_title)
       ),
+      tags$a(
+        href = paste0("https://pharmaverse.github.io/pharmaversesdtm/reference/", dataset_name, ".html"),
+        target = "_blank",
+        "Reference link"
+      ),
       reactable::reactable(
         head(dataset, 50),
         filterable = TRUE,
@@ -56,7 +62,7 @@ collapsible_groups <- lapply(areas, function(area) {
       )
     )
   })
-  tagList(tags$h3(area), area_panels)
+  tagList(tags$h3(propercase(area)), area_panels)
 })
 
 htmltools::browsable(tagList(collapsible_groups))
