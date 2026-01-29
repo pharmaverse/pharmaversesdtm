@@ -1,6 +1,5 @@
 ---
-title: "Preview of SDTM Datasets"
-date: "2026-01-17"
+title: "Explore SDTM Datasets"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Preview of SDTM Datasets}
@@ -42,7 +41,11 @@ collapsible_groups <- lapply(areas, function(area) {
       }
     }
     tags$details(
-      tags$summary(paste0(dataset_name, ": ", dataset_title)),
+      style = "margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; padding: 5px;",
+      tags$summary(
+        style = "cursor: pointer; font-weight: bold;",
+        paste0(dataset_name, ": ", dataset_title)
+      ),
       reactable::reactable(
         head(dataset, 50),
         filterable = TRUE,
