@@ -2,7 +2,7 @@
 title: "Explore SDTM Datasets"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Preview of SDTM Datasets}
+  %\VignetteIndexEntry{Explore SDTM Datasets}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -53,11 +53,17 @@ collapsible_groups <- lapply(areas, function(area) {
       ),
       reactable(
         head(dataset, 50),
+        defaultPageSize = 50,
+        height = 500,
         filterable = TRUE,
         pagination = TRUE,
-        defaultPageSize = 5,
-        pageSizeOptions = c(5, 10, 25, 50),
-        showPageSizeOptions = TRUE
+        wrap = FALSE,
+        resizable = TRUE,
+        striped = TRUE,
+        defaultColDef = colDef(
+          minWidth = 120,
+          align = "center"
+        )
       )
     )
   })

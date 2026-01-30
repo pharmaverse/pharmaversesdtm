@@ -40,7 +40,7 @@ navbar:
       text: Reference
       href: reference/index.html
     preview:
-      text: Preview SDTM
+      text: Explore SDTM Datasets
       href: articles/preview-sdtm.html
 
 reference:
