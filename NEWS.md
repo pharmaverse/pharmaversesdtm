@@ -1,3 +1,9 @@
+# pharmaversesdtm (development version)
+
+## Documentation
+
+- Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
+
 # pharmaversesdtm 1.4.0
 
 ## New Features
@@ -26,7 +32,6 @@
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
 
-- Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
 
 ## Various
 

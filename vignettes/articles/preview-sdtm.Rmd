@@ -7,7 +7,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
 # Datasets Preview
 
 Here is a preview of all datasets included in the `{pharmaversesdtm}` package. Organized by therapeutic area, each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
@@ -18,7 +17,7 @@ library(htmltools)
 library(reactable)
 library(yaml)
 
-specs_yml <- yaml::read_yaml(system.file("extdata/sdtms-specs.json", package = "pharmaversesdtm"))
+specs_yml <- read_yaml(system.file("extdata/sdtms-specs.json", package = "pharmaversesdtm"))
 specs_yml <- specs_yml$`sdtms-specs`
 
 # Group datasets by therapeutic area
@@ -52,7 +51,7 @@ collapsible_groups <- lapply(areas, function(area) {
         target = "_blank",
         "Reference link"
       ),
-      reactable::reactable(
+      reactable(
         head(dataset, 50),
         filterable = TRUE,
         pagination = TRUE,
@@ -65,5 +64,5 @@ collapsible_groups <- lapply(areas, function(area) {
   tagList(tags$h3(propercase(area)), area_panels)
 })
 
-htmltools::browsable(tagList(collapsible_groups))
+browsable(tagList(collapsible_groups))
 ```
