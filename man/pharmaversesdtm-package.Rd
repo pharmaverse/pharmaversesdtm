@@ -30,7 +30,7 @@ Authors:
   \item Tomoyuki Namai
   \item Vinh Nguyen
   \item Vladyslav Shuliar (\href{https://orcid.org/0009-0008-2354-8999}{ORCID})
-  \item Gerardo Jose gerardo.jrac@gmail.com Rodriguez (\href{https://orcid.org/0000-0003-1413-0060}{ORCID})
+  \item Gerardo Jose Rodriguez \email{gerardo.jrac@gmail.com} (\href{https://orcid.org/0000-0003-1413-0060}{ORCID})
 }
 
 Other contributors:
