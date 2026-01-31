@@ -20,6 +20,7 @@
 ^vignettes/adxx\.Rmd$
 ^vignettes/pharmaversesdtm\.Rmd$
 ^data-raw$
+^inst/extdata/.*\.csv$
 ^CRAN-SUBMISSION$
 ^cran-comments\.md$
 ^.devcontainer$

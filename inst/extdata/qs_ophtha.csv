@@ -1,0 +1,349 @@
+"STUDYID","DOMAIN","USUBJID","QSSEQ","QSTESTCD","QSTEST","QSCAT","QSSCAT","QSORRES","QSORRESU","QSSTRESC","QSSTRESN","QSSTRESU","QSBLFL","QSDRVFL","VISITNUM","VISIT","VISITDY","QSDTC","QSDY"
+"CDISCPILOT01","QS","01-701-1015",1,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",2,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",3,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",4,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",5,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",6,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",7,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",8,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",9,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",10,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",11,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",12,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",13,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","VERY GOOD","","VERY GOOD",4,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",14,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",15,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",16,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",17,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",18,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",19,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",20,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",21,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",22,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",23,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",24,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",25,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",26,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",27,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",28,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",29,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-01-02",1
+"CDISCPILOT01","QS","01-701-1015",30,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",31,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",32,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",33,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",34,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",35,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",36,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",37,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",38,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",39,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",40,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",41,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",42,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",43,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",44,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",45,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",46,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",47,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",48,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",49,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",50,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",51,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",52,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",53,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",54,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",55,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",56,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",57,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",58,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-03-26",84
+"CDISCPILOT01","QS","01-701-1015",59,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","VERY POOR","","VERY POOR",5,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",60,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",61,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",62,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",63,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",64,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",65,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",66,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",67,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",68,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",69,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","GOOD","","GOOD",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",70,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",71,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",72,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",73,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",74,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",75,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",76,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",77,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",78,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",79,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",80,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",81,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",82,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",83,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",84,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",85,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",86,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1015",87,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-06-18",168
+"CDISCPILOT01","QS","01-701-1023",1,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","FAIR","","FAIR",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",2,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",3,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",4,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",5,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",6,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",7,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","VERY POOR","","VERY POOR",5,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",8,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",9,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",10,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",11,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",12,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",13,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",14,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",15,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",16,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",17,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","NO","","NO",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",18,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",19,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",20,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",21,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",22,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",23,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",24,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",25,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",26,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",27,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",28,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1023",29,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2012-08-05",1
+"CDISCPILOT01","QS","01-701-1028",1,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",2,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",3,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","GOOD","","GOOD",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",4,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","VERY GOOD","","VERY GOOD",4,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",5,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",6,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",7,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",8,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",9,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",10,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",11,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",12,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",13,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",14,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",15,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",16,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",17,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",18,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",19,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",20,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",21,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",22,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",23,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",24,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",25,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",26,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",27,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",28,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",29,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-07-19",1
+"CDISCPILOT01","QS","01-701-1028",30,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",31,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",32,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",33,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",34,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","GOOD","","GOOD",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",35,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",36,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",37,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","FAIR","","FAIR",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",38,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",39,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",40,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",41,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",42,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",43,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",44,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",45,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",46,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",47,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",48,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",49,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",50,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",51,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",52,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",53,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",54,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",55,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",56,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",57,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",58,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2013-10-09",83
+"CDISCPILOT01","QS","01-701-1028",59,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",60,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",61,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","GOOD","","GOOD",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",62,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",63,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",64,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",65,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",66,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",67,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",68,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",69,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",70,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",71,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",72,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",73,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",74,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",75,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",76,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",77,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",78,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",79,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",80,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",81,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",82,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",83,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",84,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",85,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",86,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1028",87,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-01-06",172
+"CDISCPILOT01","QS","01-701-1033",1,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",2,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",3,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","FAIR","","FAIR",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",4,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",5,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",6,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","VERY POOR","","VERY POOR",5,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",7,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",8,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",9,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",10,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",11,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",12,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","NO","","NO",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",13,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",14,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",15,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",16,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",17,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",18,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",19,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",20,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",21,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",22,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",23,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",24,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",25,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",26,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",27,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",28,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1033",29,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-03-18",1
+"CDISCPILOT01","QS","01-701-1034",1,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",2,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",3,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",4,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",5,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",6,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",7,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","GOOD","","GOOD",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",8,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","GOOD","","GOOD",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",9,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",10,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",11,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",12,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",13,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","NO","","NO",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",14,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",15,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",16,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",17,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",18,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",19,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",20,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",21,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",22,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",23,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",24,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",25,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",26,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",27,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",28,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",29,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2014-07-01",1
+"CDISCPILOT01","QS","01-701-1034",30,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",31,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",32,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",33,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",34,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",35,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",36,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",37,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",38,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",39,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",40,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",41,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","VERY GOOD","","VERY GOOD",4,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",42,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","VERY GOOD","","VERY GOOD",4,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",43,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",44,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",45,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",46,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",47,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",48,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",49,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",50,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",51,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",52,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",53,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",54,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",55,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",56,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",57,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",58,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",9,"WEEK 12",84,"2014-09-25",87
+"CDISCPILOT01","QS","01-701-1034",59,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",60,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",61,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",62,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",63,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",64,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",65,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",66,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",67,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",68,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",69,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",70,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",71,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",72,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",73,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","VERY POOR","","VERY POOR",5,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",74,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",75,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",76,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",77,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",78,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",79,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",80,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",81,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",82,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",83,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",84,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",85,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",86,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1034",87,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"",NA,"",12,"WEEK 24",168,"2014-12-17",170
+"CDISCPILOT01","QS","01-701-1047",1,"VFQ106","Difficulty Doing Work/Hobbies","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",2,"VFQ103","How Often You Worry About Eyesight","NEI VFQ-25","Original Response","RARELY","","RARELY",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",3,"VFQ107","Difficulty Finding on Crowded Shelf","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",4,"VFQ116","Difficulty Driving at Night","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",5,"VFQ115C","Difficulty Driving During Daytime","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",6,"VFQ105","Difficulty Reading Newspapers","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",7,"VFQ104","How Often Pain in and Around Eyes","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",8,"VFQ114","Difficulty Going Out to See Movies","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",9,"VFQ113","Difficulty Visiting With People","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",10,"VFQ102","Eyesight Using Both Eyes Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",11,"VFQ101","Your Overall Health Is","NEI VFQ-25","Original Response","POOR","","POOR",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",12,"VFQ111","Difficulty Seeing How People React","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",13,"VFQ110","Difficulty Noticing Objects to Side","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",14,"VFQ109","Difficulty Going Down Step at Night","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",15,"VFQ108","Difficulty Reading Street Signs","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",16,"VFQ116A","Driving in Difficult Conditions","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",17,"VFQ1A07","Difficulty Taking Part in Sports","NEI VFQ-25","Original Response","SOME DIFFICULTY","","SOME DIFFICULTY",2,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",18,"VFQ1A06","Difficulty Recognizing People","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",19,"VFQ1A05","Difficulty Shaving or Styling Hair","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",20,"VFQ115","Are You Currently Driving","NEI VFQ-25","Original Response","YES","","YES",2,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",21,"VFQ1A04","Difficulty Figure Out Bill Accuracy","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",22,"VFQ1A03","Difficulty Reading Small Print","NEI VFQ-25","Original Response","VERY DIFFICULT","","VERY DIFFICULT",3,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",23,"VFQ125","Worry I'll Do Embarrassing Things","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",24,"VFQ112","Difficulty Picking Out Own Clothes","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",25,"VFQ124","I Need a Lot of Help From Others","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",26,"VFQ121","I Feel Frustrated a Lot of the Time","NEI VFQ-25","Original Response","SOMETIMES","","SOMETIMES",4,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",27,"VFQ120","I Stay Home Most of the Time","NEI VFQ-25","Original Response","NEVER","","NEVER",2,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",28,"VFQ119","Eye Pain Keep You From Doing What You Like","NEI VFQ-25","Original Response","FREQUENTLY","","FREQUENTLY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1
+"CDISCPILOT01","QS","01-701-1047",29,"VFQ1A08","Difficulty Seeing Programs on TV","NEI VFQ-25","Original Response","NO DIFFICULTY","","NO DIFFICULTY",1,"","Y","",3,"BASELINE",1,"2013-02-12",1

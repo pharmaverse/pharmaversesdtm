@@ -146,6 +146,9 @@ for (dataset_name in datasets) {
   dataset <- get(dataset_name)
   metadata <- specs[specs$name == dataset_name, ]
 
+  # For each dataset, save a CSV version in inst/extdata/
+  write.csv(dataset, file = file.path("inst/extdata/", paste0(dataset_name, ".csv")), row.names = FALSE)
+
   # Add Test Codes and Test Names details in a table
   # Identify column names ending in TEST and TESTCD
   test_col <- names(dataset)[str_detect(string = names(dataset), pattern = "TEST$")]
@@ -201,7 +204,7 @@ for (dataset_name in datasets) {
     # Add Therapeutic area keyword to the dataset name
     dataset_keyword <- get_dataset_keyword(dataset_name, specs)
   }
-
+  # Write the R documentation
   write_doc(dataset, dataset_name, dataset_label, dataset_description, dataset_author, dataset_source, dataset_testnames, dataset_keyword)
 }
 
