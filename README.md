@@ -1,5 +1,7 @@
 # pharmaversesdtm <img src="man/figures/logo.png" align="right" width="200" style="margin-left:50px;" alt="pharmaverse sdtm hex"/>
 
+> <sup>Interactive data exploration: <a href="https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html">Preview SDTM vignette</a></sup>
+
 <!-- badges: start -->
 
 [![pharmaverse sdtm Badge](http://pharmaverse.org/shields/pharmaversesdtm.svg)](https://pharmaverse.org)
