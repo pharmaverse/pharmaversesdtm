@@ -32,7 +32,6 @@
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
 
-
 ## Various
 
 <details>
