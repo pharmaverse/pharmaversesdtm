@@ -1,0 +1,5 @@
+"STUDYID","USUBJID","RDOMAIN","IDVAR","IDVARVAL","QNAM","QVAL","QLABEL","QORIG"
+"ABC","ABC-1001","EX","EXSEQ","1","EXTDV","N","Temporary Delay of Vaccination","ASSIGNED"
+"ABC","ABC-1001","EX","EXSEQ","2","EXTDV","Y","Temporary Delay of Vaccination","ASSIGNED"
+"ABC","ABC-1002","EX","EXSEQ","1","EXTDV","N","Temporary Delay of Vaccination","ASSIGNED"
+"ABC","ABC-1002","EX","EXSEQ","2","EXTDV","Y","Temporary Delay of Vaccination","ASSIGNED"
