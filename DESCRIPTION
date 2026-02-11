@@ -1,7 +1,7 @@
 Type: Package
 Package: pharmaversesdtm
 Title: SDTM Test Data for the 'Pharmaverse' Family of Packages
-Version: 1.4.0
+Version: 1.4.0.9000
 Authors@R: c(
     person("Lina", "Patil", , "lina.patil@cytel.com", role = c("aut", "cre")),
     person("Stefan", "Bundfuss", role = "aut",
@@ -13,6 +13,8 @@ Authors@R: c(
            comment = c(ORCID = "0009-0006-4899-8641")),
     person("Tomoyuki", "Namai", role = "aut"),
     person("Vinh", "Nguyen", role = "aut"),
+    person("Gerardo Jose", "Rodriguez", , "gerardo.jrac@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0003-1413-0060")),
     person("Vladyslav", "Shuliar", role = "aut",
            comment = c(ORCID = "0009-0008-2354-8999")),
     person("Cytel Inc.", role = c("cph", "fnd")),
@@ -35,15 +37,18 @@ Suggests:
     cli,
     covr,
     devtools,
+    htmltools,
     knitr,
     lintr,
     metatools,
     pkgdown,
+    reactable,
     rmarkdown,
     roxygen2,
     spelling,
     testthat,
-    usethis
+    usethis,
+    yaml
 Encoding: UTF-8
 Language: en-US
 LazyData: true
