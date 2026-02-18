@@ -42,7 +42,7 @@ Some test datasets have been sourced from the [CDISC pilot project](https://gith
 
 ### Data Formats
 
-Each dataset is provided in both RDA and CSV formats. The `.rda` files are used within the R package and saved in the repository [here](data/). The `.csv` files are saved [here](inst/extdata/).
+Each dataset is provided in both RDA and CSV formats. The `.rda` files are used within the R package and saved in the [data](https://github.com/pharmaverse/pharmaversesdtm/tree/main/data) folder. The `.csv` files are saved in the [inst/extdata/](https://github.com/pharmaverse/pharmaversesdtm/tree/main/inst/extdata) folder.
 
 ## Naming Conventions {#naming}
 
