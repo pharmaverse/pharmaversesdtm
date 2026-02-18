@@ -87,7 +87,7 @@ This metadata drives the automated documentation process, and the file is read b
 
 ### Adding New SDTM Datasets
 
--   Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder,  as well as `<name>.csv` to the `inst/extdata` folder.
+-   Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder, as well as `<name>.csv` to the `inst/extdata` folder.
     -   Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     -   Note that **no personal data should be used** as part of this package, even if anonymized.
 -   Run the program.
