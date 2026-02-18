@@ -2,7 +2,7 @@
 
 ## Documentation
 
-- Included CSV versions of all SDTM data under `extdata/sdtm-csv/` for ease of use of  non R programmers. (#221)
+- Included CSV versions of all SDTM data under `extdata/sdtm-csv/` for ease of use of non R programmers. (#221)
 
 # pharmaversesdtm 1.4.0
 
