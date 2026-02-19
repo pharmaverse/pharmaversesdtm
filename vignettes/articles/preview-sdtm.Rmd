@@ -1,0 +1,77 @@
+---
+title: "Explore SDTM Datasets"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore SDTM Datasets}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Datasets Preview
+
+Here is a preview of all datasets included in the `{pharmaversesdtm}` package. Organized by therapeutic area, each dataset is displayed in a collapsible panel with filtering options for easier exploration. For simplicity, only the first 50 rows of each dataset are shown.
+
+```{r echo=FALSE}
+library(pharmaversesdtm)
+library(htmltools)
+library(reactable)
+library(yaml)
+
+specs_yml <- read_yaml(system.file("extdata/sdtms-specs.json", package = "pharmaversesdtm"))
+specs_yml <- specs_yml$`sdtms-specs`
+
+# Group datasets by therapeutic area
+areas <- sort(unique(sapply(specs_yml, function(x) x$therapeutic_area)))
+propercase <- \(w) paste0(toupper(substr(w, 1, 1)), tolower(substring(w, 2)))
+
+collapsible_groups <- lapply(areas, function(area) {
+  # Indices of datasets in this area, ordered alphabetically by name
+  area_indices <- which(sapply(specs_yml, function(x) x$therapeutic_area) == area)
+  order_indices <- order(sapply(specs_yml[area_indices], function(x) x$name))
+  area_indices <- area_indices[order_indices]
+
+  # Create collapsibles for this area
+  area_panels <- lapply(area_indices, function(ix) {
+    dataset_name <- specs_yml[[ix]]$name
+    dataset_title <- specs_yml[[ix]]$label
+    # Ensure valid UTF-8 dataset content
+    dataset <- get(dataset_name, envir = asNamespace("pharmaversesdtm"))
+    if (is.data.frame(dataset)) {
+      for (col in names(dataset)) {
+        if (is.character(dataset[[col]])) {
+          dataset[[col]] <- iconv(dataset[[col]], to = "UTF-8", sub = "?")
+        }
+      }
+    }
+    tags$details(
+      style = "margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; padding: 5px;",
+      tags$summary(
+        style = "cursor: pointer; font-weight: bold;",
+        paste0(dataset_name, ": ", dataset_title)
+      ),
+      tags$a(
+        href = paste0("https://pharmaverse.github.io/pharmaversesdtm/reference/", dataset_name, ".html"),
+        target = "_blank",
+        "Reference link"
+      ),
+      reactable(
+        head(dataset, 50),
+        defaultPageSize = 50,
+        height = 500,
+        filterable = TRUE,
+        pagination = TRUE,
+        wrap = FALSE,
+        resizable = TRUE,
+        striped = TRUE,
+        defaultColDef = colDef(
+          minWidth = 120,
+          align = "center"
+        )
+      )
+    )
+  })
+  tagList(tags$h3(propercase(area)), area_panels)
+})
+
+browsable(tagList(collapsible_groups))
+```
