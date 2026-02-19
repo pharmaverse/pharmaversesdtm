@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">pharmaversesdtm</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.3.1.9014</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.4.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,6 +16,7 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/preview-sdtm.html">Explore SDTM Datasets</a></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
@@ -34,7 +35,14 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="pharmaversesdtm-development-version">pharmaversesdtm (development version)<a class="anchor" aria-label="anchor" href="#pharmaversesdtm-development-version"></a></h2>
 <div class="section level3">
-<h3 id="new-features-development-version">New Features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
+<h3 id="documentation-development-version">Documentation<a class="anchor" aria-label="anchor" href="#documentation-development-version"></a></h3>
+<ul><li>Added a new vignette “Datasets Preview” to preview all datasets included in the package. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/146" class="external-link">#146</a>)</li>
+</ul></div>
+</div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.4.0" id="pharmaversesdtm-140">pharmaversesdtm 1.4.0<a class="anchor" aria-label="anchor" href="#pharmaversesdtm-140"></a></h2><p class="text-muted">CRAN release: 2026-01-10</p>
+<div class="section level3">
+<h3 id="new-features-1-4-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-1-4-0"></a></h3>
 <ul><li><p>Added <code>VISITDY</code> in <code>pc</code>. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/219" class="external-link">#219</a>)</p></li>
 <li><p>Updated QSTESTCD in <code>qs_ophtha</code> to be consistent with CDISC terminology. Also reduced the number of records for ease of use. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/172" class="external-link">#172</a>)</p></li>
 <li><p>Added BRTHDTC in <code>dm</code> and <code>dm_metabolic</code>. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/195" class="external-link">#195</a>)</p></li>
@@ -48,18 +56,18 @@
 </ul></li>
 <li><p>Updated <code>rs_onco_pcwg3</code> to correct the misclassification of <code>PDu</code> and to remove the <code>TMRESP</code> records. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/193" class="external-link">#193</a>)</p></li>
 <li><p>Added <code>lb_onco_pcwg3</code> dataset which contains PSA measurements for PCWG criteria. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/197" class="external-link">#197</a>)</p></li>
+<li><p>Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in <code>lb_neuro</code>. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/211" class="external-link">#211</a>)</p></li>
 </ul></div>
 <div class="section level3">
-<h3 id="documentation-development-version">Documentation<a class="anchor" aria-label="anchor" href="#documentation-development-version"></a></h3>
+<h3 id="documentation-1-4-0">Documentation<a class="anchor" aria-label="anchor" href="#documentation-1-4-0"></a></h3>
 <ul><li>The reference page has been updated to categorize datasets by therapeutic areas. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/204" class="external-link">#204</a>)</li>
 </ul></div>
 <div class="section level3">
-<h3 id="various-development-version">Various<a class="anchor" aria-label="anchor" href="#various-development-version"></a></h3>
+<h3 id="various-1-4-0">Various<a class="anchor" aria-label="anchor" href="#various-1-4-0"></a></h3>
 <details><summary>
 Developer Notes
 </summary><ul><li><p>Updated <a href="https://lintr.r-lib.org" class="external-link">lintr</a> configurations to use central configurations from <a href="https://pharmaverse.github.io/admiraldev/" class="external-link">admiraldev</a>. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/194" class="external-link">#194</a>)</p></li>
 <li><p>Generated different sites for the development and released versions of the package. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/207" class="external-link">#207</a>)</p></li>
-<li><p>Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in <code>lb_neuro</code>. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/211" class="external-link">#211</a>)</p></li>
 <li><p>Updated the pull request template to include the corrected package website name. (<a href="https://github.com/pharmaverse/pharmaversesdtm/issues/223" class="external-link">#223</a>)</p></li>
 </ul></details></div>
 </div>
@@ -193,7 +201,7 @@ Developer Notes
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Cytel Inc., F. Hoffmann-La Roche AG, GlaxoSmithKline LLC, Lina Patil, Stefan Bundfuss, Kristin Dahnert, Fanny Gautier, Edoardo Mancini, Tomoyuki Namai, Vinh Nguyen, Vladyslav Shuliar.</p>
+  <p>Developed by Cytel Inc., F. Hoffmann-La Roche AG, GlaxoSmithKline LLC, Lina Patil, Stefan Bundfuss, Kristin Dahnert, Fanny Gautier, Edoardo Mancini, Tomoyuki Namai, Vinh Nguyen, Gerardo Jose Rodriguez, Vladyslav Shuliar.</p>
 </div>
 
 <div class="pkgdown-footer-right">

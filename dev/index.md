@@ -1,5 +1,7 @@
 # pharmaversesdtm
 
+> ^(Interactive data exploration: [Preview SDTM vignette](https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html))
+
 Test data (SDTM) for the pharmaverse family of packages
 
 - [Purpose](#purpose)

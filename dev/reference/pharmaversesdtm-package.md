@@ -35,6 +35,9 @@ Authors:
 
 - Vinh Nguyen
 
+- Gerardo Jose Rodriguez <gerardo.jrac@gmail.com>
+  ([ORCID](https://orcid.org/0000-0003-1413-0060))
+
 - Vladyslav Shuliar ([ORCID](https://orcid.org/0009-0008-2354-8999))
 
 Other contributors:

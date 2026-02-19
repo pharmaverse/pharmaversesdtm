@@ -1,5 +1,7 @@
 # pharmaversesdtm
 
+> ^(Interactive data exploration: [Preview SDTM vignette](https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html))
+
 Test data (SDTM) for the pharmaverse family of packages
 
 - [Purpose](#purpose)
@@ -318,3 +320,9 @@ List of all available functions.
   An example function as expected by the `get_terms_fun` parameter of
   `admiral::create_query_data()`
 
+# Articles
+
+### All vignettes
+
+- [Explore SDTM
+  Datasets](https://pharmaverse.github.io/pharmaversesdtm/dev/articles/preview-sdtm.md):

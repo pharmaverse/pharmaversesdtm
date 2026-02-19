@@ -2,6 +2,16 @@
 
 ## pharmaversesdtm (development version)
 
+### Documentation
+
+- Added a new vignette “Datasets Preview” to preview all datasets
+  included in the package.
+  ([\#146](https://github.com/pharmaverse/pharmaversesdtm/issues/146))
+
+## pharmaversesdtm 1.4.0
+
+CRAN release: 2026-01-10
+
 ### New Features
 
 - Added `VISITDY` in `pc`.
@@ -33,6 +43,10 @@
   criteria.
   ([\#197](https://github.com/pharmaverse/pharmaversesdtm/issues/197))
 
+- Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio
+  in `lb_neuro`.
+  ([\#211](https://github.com/pharmaverse/pharmaversesdtm/issues/211))
+
 ### Documentation
 
 - The reference page has been updated to categorize datasets by
@@ -51,10 +65,6 @@ Developer Notes
 - Generated different sites for the development and released versions of
   the package.
   ([\#207](https://github.com/pharmaverse/pharmaversesdtm/issues/207))
-
-- Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio
-  in `lb_neuro`.
-  ([\#211](https://github.com/pharmaverse/pharmaversesdtm/issues/211))
 
 - Updated the pull request template to include the corrected package
   website name.
