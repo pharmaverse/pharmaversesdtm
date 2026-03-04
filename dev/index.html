@@ -29,7 +29,7 @@
 
     <a class="navbar-brand me-2" href="index.html">pharmaversesdtm</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.4.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.4.0.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +69,7 @@
 <ul>
 <li><a href="#purpose">Purpose</a></li>
 <li><a href="#installation">Installation</a></li>
-<li><a href="#data-sources">Data Sources</a></li>
+<li><a href="#data">Data</a></li>
 <li><a href="#naming">Naming Conventions</a></li>
 <li><a href="#how-to-update">How To Update</a></li>
 </ul>
@@ -90,9 +90,18 @@
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"pharmaverse/pharmaversesdtm"</span>, ref <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span> <span class="co"># This command installs the latest development version directly from GitHub.</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="data-sources">Data Sources<a class="anchor" aria-label="anchor" href="#data-sources"></a>
+<h2 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
 </h2>
+<div class="section level3">
+<h3 id="data-sources">Data Sources<a class="anchor" aria-label="anchor" href="#data-sources"></a>
+</h3>
 <p>Some test datasets have been sourced from the <a href="https://github.com/cdisc-org/sdtm-adam-pilot-project" class="external-link">CDISC pilot project</a>, while other datasets have been constructed ad-hoc by the {admiral} team. Please check the <a href="https://pharmaverse.github.io/pharmaversesdtm/reference/index.html">Reference page</a> for detailed information regarding the source of specific datasets.</p>
+</div>
+<div class="section level3">
+<h3 id="data-formats">Data Formats<a class="anchor" aria-label="anchor" href="#data-formats"></a>
+</h3>
+<p>Each dataset is provided in both RDA and CSV formats. The <code>.rda</code> files are used within the R package and saved in the <a href="https://github.com/pharmaverse/pharmaversesdtm/tree/main/data" class="external-link">data</a> folder, while the <code>.csv</code> files are saved in the <a href="https://github.com/pharmaverse/pharmaversesdtm/tree/main/inst/extdata" class="external-link">inst/extdata/</a> folder.</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="naming">Naming Conventions<a class="anchor" aria-label="anchor" href="#naming"></a>
@@ -148,7 +157,7 @@
 <h3 id="adding-new-sdtm-datasets">Adding New SDTM Datasets<a class="anchor" aria-label="anchor" href="#adding-new-sdtm-datasets"></a>
 </h3>
 <ul>
-<li>Create a program in the <code>data-raw/</code> folder, named <code>&lt;name&gt;.R</code>, where <code>&lt;name&gt;</code> should follow the <a href="#naming">naming convention</a>, to generate the test data and output <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder.
+<li>Create a program in the <code>data-raw/</code> folder, named <code>&lt;name&gt;.R</code>, where <code>&lt;name&gt;</code> should follow the <a href="#naming">naming convention</a>, to generate the test data and output <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder, and the <code>&lt;name&gt;.csv</code> to the <code>inst/extdata</code> folder.
 <ul>
 <li>Use CDISC pilot data such as <code>dm</code> as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).</li>
 <li>Note that <strong>no personal data should be used</strong> as part of this package, even if anonymized.</li>
@@ -179,7 +188,7 @@
 <li>Removing a dataset (delete its entry from the JSON entirely).</li>
 </ul>
 </li>
-<li>Run the program, and output updated <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder.</li>
+<li>Run the program, and output updated <code>&lt;name&gt;.rda</code> to the <code>data/</code> folder, and the <code>&lt;name&gt;.csv</code> to the <code>inst/extdata</code> folder.</li>
 <li>Run <code>data-raw/create_sdtms_data.R</code> in order to update <code>NAMESPACE</code> and update the <code>.Rd</code> files in <code>man/</code>.</li>
 <li>Add your GitHub handle to <code>.github/CODEOWNERS</code>.</li>
 <li>Update <code>NEWS.md</code>.</li>
