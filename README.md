@@ -13,7 +13,7 @@ Test data (SDTM) for the pharmaverse family of packages
 
 -   [Purpose](#purpose)
 -   [Installation](#installation)
--   [Data Sources](#data-sources)
+-   [Data](#data)
 -   [Naming Conventions](#naming)
 -   [How To Update](#how-to-update)
 
@@ -33,9 +33,16 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
 remotes::install_github("pharmaverse/pharmaversesdtm", ref = "main") # This command installs the latest development version directly from GitHub.
 ```
 
-## Data Sources {#data-sources}
+
+## Data {#data}
+
+### Data Sources
 
 Some test datasets have been sourced from the [CDISC pilot project](https://github.com/cdisc-org/sdtm-adam-pilot-project), while other datasets have been constructed ad-hoc by the {admiral} team. Please check the [Reference page](https://pharmaverse.github.io/pharmaversesdtm/reference/index.html) for detailed information regarding the source of specific datasets.
+
+### Data Formats
+
+Each dataset is provided in both RDA and CSV formats. The `.rda` files are used within the R package and saved in the [data](https://github.com/pharmaverse/pharmaversesdtm/tree/main/data) folder, while the `.csv` files are saved in the [inst/extdata/](https://github.com/pharmaverse/pharmaversesdtm/tree/main/inst/extdata) folder.
 
 ## Naming Conventions {#naming}
 
@@ -80,7 +87,7 @@ This metadata drives the automated documentation process, and the file is read b
 
 ### Adding New SDTM Datasets
 
--   Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder.
+-   Create a program in the `data-raw/` folder, named `<name>.R`, where `<name>` should follow the [naming convention](#naming), to generate the test data and output `<name>.rda` to the `data/` folder, and the `<name>.csv` to the `inst/extdata` folder.
     -   Use CDISC pilot data such as `dm` as input in this program in order to create realistic synthetic data that remains consistent with other domains (not mandatory).
     -   Note that **no personal data should be used** as part of this package, even if anonymized.
 -   Run the program.
@@ -99,7 +106,7 @@ This metadata drives the automated documentation process, and the file is read b
     -   Modifying the dataset purpose or structure.
     -   Updating the dataset therapeutic area.
     -   Removing a dataset (delete its entry from the JSON entirely).
--   Run the program, and output updated `<name>.rda` to the `data/` folder.
+-   Run the program, and output updated `<name>.rda` to the `data/` folder, and the `<name>.csv` to the `inst/extdata` folder. 
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.

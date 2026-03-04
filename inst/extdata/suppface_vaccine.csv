@@ -1,0 +1,5 @@
+"STUDYID","USUBJID","RDOMAIN","IDVAR","IDVARVAL","QNAM","QVAL","QLABEL","QORIG"
+"ABC","ABC-1001","FACE","FASEQ","1","CLTYP","DAIRY","Collection Type","Predecessor"
+"ABC","ABC-1001","FACE","FASEQ","2","CLTYP","DAIRY","Collection Type","Predecessor"
+"ABC","ABC-1002","FACE","FASEQ","1","CLTYP","DAIRY","Collection Type","Predecessor"
+"ABC","ABC-1002","FACE","FASEQ","2","CLTYP","DAIRY","Collection Type","Predecessor"
