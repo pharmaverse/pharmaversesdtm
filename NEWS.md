@@ -29,6 +29,8 @@
 
 - Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in `lb_neuro`. (#211)
 
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen Events (`be`) SDTM linked datasets. (#217)
+
 ## Documentation
 
 - The reference page has been updated to categorize datasets by therapeutic areas. (#204)
