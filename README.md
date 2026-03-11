@@ -2,12 +2,14 @@
 
 > <sup>Interactive data exploration: <a href="https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html">Preview SDTM vignette</a></sup>
 
-<!-- badges: start -->
+<!-- start badges -->
 
 [![pharmaverse sdtm Badge](http://pharmaverse.org/shields/pharmaversesdtm.svg)](https://pharmaverse.org)
 [![CRAN status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-project.org/package=pharmaversesdtm)
+[![Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/pharmaversesdtm?color=green)](https://cran.r-project.org/package=pharmaversesdtm)
 
-<!-- badges: end -->
+
+<!-- end badges -->
 
 Test data (SDTM) for the pharmaverse family of packages
 
