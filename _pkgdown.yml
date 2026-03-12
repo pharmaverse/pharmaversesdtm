@@ -2,8 +2,11 @@ url: https://pharmaverse.github.io/pharmaversesdtm
 
 template:
   bootstrap: 5
+  light-switch: true
   params:
     bootswatch: flatly
+  includes:
+    css: pkgdown/extra.css
 repo:
   url:
     home: https://github.com/pharmaverse/pharmaversesdtm
@@ -35,6 +38,7 @@ authors:
 navbar:
   structure:
     left: [reference, preview, news]
+    right: [search, slack, newissue, github, lightswitch]
   components:
     reference:
       text: Reference
@@ -42,6 +46,14 @@ navbar:
     preview:
       text: Explore SDTM Datasets
       href: articles/preview-sdtm.html
+    slack:
+      icon: fa-slack
+      href: https://pharmaverse.slack.com/
+      aria-label: Join the pharmaverse Slack!
+    newissue:
+      icon: fa-bug
+      href: https://github.com/pharmaverse/pharmaversesdtm/issues/new/choose
+      aria-label: Report an issue
 
 reference:
   - title: "Generic Datasets"
