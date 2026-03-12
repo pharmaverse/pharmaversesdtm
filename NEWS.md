@@ -3,7 +3,18 @@
 ## Documentation
 
 - Included CSV versions of all SDTM data under `inst/extdata` for ease of use of non R programmers. (#221)
+
 - Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
+
+## Various
+
+<details>
+
+<summary>Developer Notes</summary>
+
+- Updated the `pkgdown` website and its functionalities, and added a new PR workflow in `.github/common.yml` triggered by "[create website]" in PR titles. (#230)
+
+</details>
 
 # pharmaversesdtm 1.4.0
 

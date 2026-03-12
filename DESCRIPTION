@@ -48,7 +48,9 @@ Suggests:
     spelling,
     testthat,
     usethis,
-    yaml
+    yaml,
+    DT,
+    htmltools
 Encoding: UTF-8
 Language: en-US
 LazyData: true
