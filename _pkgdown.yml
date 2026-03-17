@@ -49,6 +49,10 @@ reference:
     contents:
       - has_keyword("metabolic")
 
+  - title: "Microbiology Datasets"
+    contents:
+      - has_keyword("microbiology")
+
   - title: "Neurology Datasets"
     contents:
       - has_keyword("neurology")
@@ -68,10 +72,6 @@ reference:
   - title: "Vaccine Datasets"
     contents:
       - has_keyword("vaccine")
-
-  - title: "Microbiology Datasets"
-    contents:
-      - has_keyword("microbiology")
 
   - title: "Functions"
     desc: "List of all available functions."
