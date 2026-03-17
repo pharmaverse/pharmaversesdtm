@@ -5,7 +5,7 @@
 \alias{dm}
 \title{Demography}
 \format{
-A data frame with 26 columns:
+A data frame with 28 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -33,6 +33,8 @@ A data frame with 26 columns:
 \item{COUNTRY}{Country}
 \item{DMDTC}{Date/Time of Collection}
 \item{DMDY}{Study Day of Collection}
+\item{ARMNRS}{undocumented field}
+\item{ACTARMUD}{undocumented field}
 }
 }
 \source{

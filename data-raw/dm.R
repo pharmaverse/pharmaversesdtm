@@ -10,10 +10,34 @@ library(lubridate)
 
 # Create dm, suppdm ----
 sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
-raw_dm <- read_xpt(paste0(sdtm_path, "dm", ".xpt?raw=true"))
-raw_suppdm <- read_xpt(paste0(sdtm_path, "suppdm", ".xpt?raw=true"))
+#raw_dm <- read_xpt(paste0(sdtm_path, "dm", ".xpt?raw=true"))
+#raw_suppdm <- read_xpt(paste0(sdtm_path, "suppdm", ".xpt?raw=true"))
+
+url <- "https://raw.githubusercontent.com/cdisc-org/sdtm-adam-pilot-project/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt"
+raw_dm <- read_xpt(url)
+url <- "https://raw.githubusercontent.com/cdisc-org/sdtm-adam-pilot-project/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/suppdm.xpt"
+raw_suppdm <- read_xpt(url)
+
 dm <- convert_blanks_to_na(raw_dm)
 suppdm <- convert_blanks_to_na(raw_suppdm)
+
+dm <- dm %>%
+  mutate(
+    # Derive ARMNRS
+    ARMNRS = case_when(
+      ARM == "Screen Failure" | ACTARM == "Screen Failure" ~ "SCREEN FAILURE",
+      is.na(ARM) & is.na(ACTARM) ~ "NOT ASSIGNED",
+      !is.na(ARM) & is.na(ACTARM) ~ "ASSIGNED, NOT TREATED",
+      is.na(ARM) & !is.na(ACTARM) ~ "UNPLANNED TREATMENT",
+      TRUE ~ NA_character_
+    ),
+
+    # Derive ACTARMUD
+    ACTARMUD = case_when(
+      ARMNRS == "UNPLANNED TREATMENT" ~ ACTARM,
+      TRUE ~ NA_character_
+    )
+  )
 
 # Helper: robust ISO date/datetime parse (returns POSIXct or NA)
 safe_parse_datetime <- function(x) {
