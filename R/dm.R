@@ -38,8 +38,8 @@
 #'     \item{COUNTRY}{Country}
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
-#'     \item{ARMNRS}{undocumented field}
-#'     \item{ACTARMUD}{undocumented field}
+#'     \item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
+#'     \item{ACTARMUD}{Description of Unplanned Actual Arm}
 #'   }
 #'
 #' @source [Access the source of the Demography dataset.](https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/dm.xpt?raw=true)

@@ -91,6 +91,8 @@ if (!"BRTHDTC" %in% names(dm)) {
 # Label dataset ----
 attr(dm, "label") <- "Demographics"
 attr(dm$BRTHDTC, "label") <- "Date/Time of Birth"
+attr(dm$ARMNRS, "label") <- "Reason Arm and/or Actual Arm is Null"
+attr(dm$ACTARMUD, "label") <- "Description of Unplanned Actual Arm"
 attr(suppdm, "label") <- "Supplemental Qualifiers for DM"
 
 # Save datasets ----

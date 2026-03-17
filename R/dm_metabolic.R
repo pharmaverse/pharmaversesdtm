@@ -38,8 +38,8 @@
 #'     \item{COUNTRY}{Country}
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
-#'     \item{ARMNRS}{undocumented field}
-#'     \item{ACTARMUD}{undocumented field}
+#'     \item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
+#'     \item{ACTARMUD}{Description of Unplanned Actual Arm}
 #'   }
 #'
 #' @source Constructed by {admiralmetabolic} developers

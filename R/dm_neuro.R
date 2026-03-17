@@ -39,7 +39,7 @@
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
 #'     \item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
-#'     \item{ACTARMUD}{undocumented field}
+#'     \item{ACTARMUD}{Description of Unplanned Actual Arm}
 #'   }
 #'
 #' @source Constructed by {admiralneuro} developers
