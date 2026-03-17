@@ -3,7 +3,10 @@
 ## Documentation
 
 - Included CSV versions of all SDTM data under `inst/extdata` for ease of use of non R programmers. (#221)
+
 - Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
+
+- Added `ARMNRS` and `ACTARMUD` to `dm`, `dm_metabolic`, `dm_neuro`, `dm_peds`, `dm_vaccine`. (#214)
 
 # pharmaversesdtm 1.4.0
 
