@@ -14,7 +14,7 @@
 
 <summary>Developer Notes</summary>
 
-- Updated the `pkgdown` website and its functionalities, and added a new PR workflow in `.github/common.yml` triggered by "[create website]" in PR titles. (#230)
+- Updated the `pkgdown` website and its functionalities included a dark mode, and added a new PR workflow in `.github/common.yml` triggered by "[create website]" in PR titles. (#230)
 
 - Added the `Downloads` Badge. (#229)
 
