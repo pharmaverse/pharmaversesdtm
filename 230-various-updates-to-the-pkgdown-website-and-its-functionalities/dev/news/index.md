@@ -20,9 +20,9 @@
 
 Developer Notes
 
-- Updated the `pkgdown` website and its functionalities, and added a new
-  PR workflow in `.github/common.yml` triggered by “\[create website\]”
-  in PR titles.
+- Updated the `pkgdown` website and its functionalities included a dark
+  mode, and added a new PR workflow in `.github/common.yml` triggered by
+  “\[create website\]” in PR titles.
   ([\#230](https://github.com/pharmaverse/pharmaversesdtm/issues/230))
 
 - Added the `Downloads` Badge.
