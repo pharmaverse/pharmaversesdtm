@@ -8,6 +8,10 @@
   of use of non R programmers.
   ([\#221](https://github.com/pharmaverse/pharmaversesdtm/issues/221))
 
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen
+  Events (`be`) SDTM linked datasets.
+  ([\#217](https://github.com/pharmaverse/pharmaversesdtm/issues/217))
+
 - Added a new vignette “Datasets Preview” to preview all datasets
   included in the package.
   ([\#146](https://github.com/pharmaverse/pharmaversesdtm/issues/146))
@@ -20,6 +24,9 @@ Developer Notes
   PR workflow in `.github/common.yml` triggered by “\[create website\]”
   in PR titles.
   ([\#230](https://github.com/pharmaverse/pharmaversesdtm/issues/230))
+
+- Added the `Downloads` Badge.
+  ([\#229](https://github.com/pharmaverse/pharmaversesdtm/issues/229))
 
 ## pharmaversesdtm 1.4.0
 

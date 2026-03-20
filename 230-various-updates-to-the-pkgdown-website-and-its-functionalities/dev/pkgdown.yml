@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   articles/preview-sdtm: preview-sdtm.html
-last_built: 2026-03-12T11:39Z
+last_built: 2026-03-20T05:13Z
 urls:
   reference: https:/pharmaverse.github.io/pharmaversesdtm/230-various-updates-to-the-pkgdown-website-and-its-functionalities/reference
   article: https:/pharmaverse.github.io/pharmaversesdtm/230-various-updates-to-the-pkgdown-website-and-its-functionalities/articles
