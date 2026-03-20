@@ -1,5 +1,12 @@
 # pharmaversesdtm
 
+[![pharmaverse sdtm
+Badge](http://pharmaverse.org/shields/pharmaversesdtm.svg)](https://pharmaverse.org)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-project.org/package=pharmaversesdtm)
+[![Total
+Downloads](http://cranlogs.r-pkg.org/badges/grand-total/pharmaversesdtm?color=green)](https://cran.r-project.org/package=pharmaversesdtm)
+
 > ^(Interactive data exploration: [Preview SDTM vignette](https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html))
 
 Test data (SDTM) for the pharmaverse family of packages
@@ -230,6 +237,15 @@ G Gayatri, Pooja Kumari, Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
   : Questionnaire Dataset-metabolic
 - [`vs_metabolic`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/vs_metabolic.md)
   : Vital signs Dataset-metabolic
+
+## Microbiology Datasets
+
+- [`be`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/be.md)
+  : Biospecimen Events
+- [`mb`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/mb.md)
+  : Microbiology Specimen
+- [`ms`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/ms.md)
+  : Microbiology Susceptibility
 
 ## Neurology Datasets
 

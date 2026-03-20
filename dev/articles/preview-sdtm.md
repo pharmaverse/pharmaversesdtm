@@ -127,6 +127,23 @@ vs_metabolic: Vital signs Dataset-metabolic
 [Reference
 link](https://pharmaverse.github.io/pharmaversesdtm/reference/vs_metabolic.html)
 
+#### Microbiology
+
+be: Biospecimen Events
+
+[Reference
+link](https://pharmaverse.github.io/pharmaversesdtm/reference/be.html)
+
+mb: Microbiology Specimen
+
+[Reference
+link](https://pharmaverse.github.io/pharmaversesdtm/reference/mb.html)
+
+ms: Microbiology Susceptibility
+
+[Reference
+link](https://pharmaverse.github.io/pharmaversesdtm/reference/ms.html)
+
 #### Neurology
 
 ag_neuro: Procedure Agents Dataset-neuro

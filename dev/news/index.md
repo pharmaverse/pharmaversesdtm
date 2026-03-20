@@ -11,6 +11,13 @@
   included in the package.
   ([\#146](https://github.com/pharmaverse/pharmaversesdtm/issues/146))
 
+### Various
+
+Developer Notes
+
+- Added the `Downloads` Badge.
+  ([\#229](https://github.com/pharmaverse/pharmaversesdtm/issues/229))
+
 ## pharmaversesdtm 1.4.0
 
 CRAN release: 2026-01-10
@@ -49,6 +56,10 @@ CRAN release: 2026-01-10
 - Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio
   in `lb_neuro`.
   ([\#211](https://github.com/pharmaverse/pharmaversesdtm/issues/211))
+
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen
+  Events (`be`) SDTM linked datasets.
+  ([\#217](https://github.com/pharmaverse/pharmaversesdtm/issues/217))
 
 ### Documentation
 

@@ -52,6 +52,15 @@
 - [`vs_metabolic`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/vs_metabolic.md)
   : Vital signs Dataset-metabolic
 
+## Microbiology Datasets
+
+- [`be`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/be.md)
+  : Biospecimen Events
+- [`mb`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/mb.md)
+  : Microbiology Specimen
+- [`ms`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/ms.md)
+  : Microbiology Susceptibility
+
 ## Neurology Datasets
 
 - [`ag_neuro`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/ag_neuro.md)
