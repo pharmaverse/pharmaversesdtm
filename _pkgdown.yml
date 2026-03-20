@@ -64,6 +64,10 @@ reference:
     contents:
       - has_keyword("metabolic")
 
+  - title: "Microbiology Datasets"
+    contents:
+      - has_keyword("microbiology")
+
   - title: "Neurology Datasets"
     contents:
       - has_keyword("neurology")

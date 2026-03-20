@@ -4,6 +4,8 @@
 
 - Included CSV versions of all SDTM data under `inst/extdata` for ease of use of non R programmers. (#221)
 
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen Events (`be`) SDTM linked datasets. (#217)
+
 - Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
 
 ## Various
@@ -13,6 +15,8 @@
 <summary>Developer Notes</summary>
 
 - Updated the `pkgdown` website and its functionalities, and added a new PR workflow in `.github/common.yml` triggered by "[create website]" in PR titles. (#230)
+
+- Added the `Downloads` Badge. (#229)
 
 </details>
 
