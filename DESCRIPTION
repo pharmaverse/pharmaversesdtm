@@ -1,7 +1,7 @@
 Type: Package
 Package: pharmaversesdtm
 Title: SDTM Test Data for the 'Pharmaverse' Family of Packages
-Version: 1.4.0.9004
+Version: 1.4.0.9005
 Authors@R: c(
     person("Lina", "Patil", , "lina.patil@cytel.com", role = c("aut", "cre")),
     person("Stefan", "Bundfuss", role = "aut",
@@ -37,6 +37,8 @@ Suggests:
     cli,
     covr,
     devtools,
+    DT,
+    htmltools,
     htmltools,
     knitr,
     lintr,
@@ -48,9 +50,7 @@ Suggests:
     spelling,
     testthat,
     usethis,
-    yaml,
-    DT,
-    htmltools
+    yaml
 Encoding: UTF-8
 Language: en-US
 LazyData: true
