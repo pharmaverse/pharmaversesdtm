@@ -4,15 +4,19 @@
 
 - Included CSV versions of all SDTM data under `inst/extdata` for ease of use of non R programmers. (#221)
 
-- Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen Events (`be`) SDTM linked datasets. (#217)
 
 - Added `ARMNRS` and `ACTARMUD` to `dm`, `dm_metabolic`, `dm_neuro`, `dm_peds`, `dm_vaccine`. (#214)
+
+- Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
 
 ## Various
 
 <details>
 
 <summary>Developer Notes</summary>
+
+- Updated the `pkgdown` website and its functionalities included a dark mode, and added a new PR workflow in `.github/common.yml` triggered by "[create website]" in PR titles. (#230)
 
 - Added the `Downloads` Badge. (#229)
 
@@ -41,8 +45,6 @@
 - Added `lb_onco_pcwg3` dataset which contains PSA measurements for PCWG criteria. (#197)
 
 - Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio in `lb_neuro`. (#211)
-
-- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen Events (`be`) SDTM linked datasets. (#217)
 
 ## Documentation
 
