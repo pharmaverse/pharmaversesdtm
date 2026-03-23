@@ -7,6 +7,11 @@
 - Included CSV versions of all SDTM data under `inst/extdata` for ease
   of use of non R programmers.
   ([\#221](https://github.com/pharmaverse/pharmaversesdtm/issues/221))
+
+- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen
+  Events (`be`) SDTM linked datasets.
+  ([\#217](https://github.com/pharmaverse/pharmaversesdtm/issues/217))
+
 - Added a new vignette “Datasets Preview” to preview all datasets
   included in the package.
   ([\#146](https://github.com/pharmaverse/pharmaversesdtm/issues/146))
@@ -14,6 +19,11 @@
 ### Various
 
 Developer Notes
+
+- Updated the `pkgdown` website and its functionalities included a dark
+  mode, and added a new PR workflow in `.github/common.yml` triggered by
+  “\[create website\]” in PR titles.
+  ([\#230](https://github.com/pharmaverse/pharmaversesdtm/issues/230))
 
 - Added the `Downloads` Badge.
   ([\#229](https://github.com/pharmaverse/pharmaversesdtm/issues/229))
@@ -56,10 +66,6 @@ CRAN release: 2026-01-10
 - Added the Lumipulse G pTau217, β-Amyloid 1-42 Plasma and their Ratio
   in `lb_neuro`.
   ([\#211](https://github.com/pharmaverse/pharmaversesdtm/issues/211))
-
-- Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen
-  Events (`be`) SDTM linked datasets.
-  ([\#217](https://github.com/pharmaverse/pharmaversesdtm/issues/217))
 
 ### Documentation
 
