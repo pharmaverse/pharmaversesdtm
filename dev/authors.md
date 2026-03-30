@@ -41,13 +41,13 @@ Source:
 
 Patil L, Bundfuss S, Dahnert K, Gautier F, Mancini E, Namai T, Nguyen V,
 Rodriguez G, Shuliar V (2026). *pharmaversesdtm: SDTM Test Data for the
-'Pharmaverse' Family of Packages*. R package version 1.4.0.9005,
+'Pharmaverse' Family of Packages*. R package version 1.4.0.9006,
 <https://pharmaverse.github.io/pharmaversesdtm/>.
 
     @Manual{,
       title = {pharmaversesdtm: SDTM Test Data for the 'Pharmaverse' Family of Packages},
       author = {Lina Patil and Stefan Bundfuss and Kristin Dahnert and Fanny Gautier and Edoardo Mancini and Tomoyuki Namai and Vinh Nguyen and Gerardo Jose Rodriguez and Vladyslav Shuliar},
       year = {2026},
-      note = {R package version 1.4.0.9005},
+      note = {R package version 1.4.0.9006},
       url = {https://pharmaverse.github.io/pharmaversesdtm/},
     }

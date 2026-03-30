@@ -10,7 +10,7 @@ dm_neuro
 
 ## Format
 
-A data frame with 27 columns:
+A data frame with 28 columns:
 
 - STUDYID:
 
@@ -64,13 +64,13 @@ A data frame with 27 columns:
 
   Study Site Identifier
 
-- AGE:
-
-  Age
-
 - BRTHDTC:
 
   Date/Time of Birth
+
+- AGE:
+
+  Age
 
 - AGEU:
 
@@ -119,6 +119,10 @@ A data frame with 27 columns:
 - ARMNRS:
 
   Reason Arm and/or Actual Arm is Null
+
+- ACTARMUD:
+
+  Description of Unplanned Actual Arm
 
 ## Source
 
