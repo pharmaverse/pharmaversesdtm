@@ -7,8 +7,6 @@ status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-pr
 [![Total
 Downloads](http://cranlogs.r-pkg.org/badges/grand-total/pharmaversesdtm?color=green)](https://cran.r-project.org/package=pharmaversesdtm)
 
-> ^(Interactive data exploration: [Preview SDTM vignette](https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html))
-
 Test data (SDTM) for the pharmaverse family of packages
 
 - [Purpose](#purpose)
