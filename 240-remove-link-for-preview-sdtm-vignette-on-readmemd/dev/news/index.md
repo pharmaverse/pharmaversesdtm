@@ -24,7 +24,7 @@
 
 Developer Notes
 
-- Removed the link for “Preview SDTM vignette” from README as it is
+- Removed the link for “Preview SDTM vignette” from `README.md` as it is
   causing issue for release.
   ([\#240](https://github.com/pharmaverse/pharmaversesdtm/issues/240))
 
