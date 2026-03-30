@@ -12,14 +12,15 @@ dm <- pharmaversesdtm::dm
 # Convert blank to NA ----
 dm <- convert_blanks_to_na(dm)
 
-# Subset to 15 patients
+# Subset to 15 patients, dropping ARMNRS and ACTARMUD to re-derive for neuro
 dm_neuro <- dm %>%
   filter(USUBJID %in% c(
     "01-701-1015", "01-701-1023", "01-701-1028", "01-701-1034",
     "01-701-1146", "01-701-1153", "01-701-1181", "01-701-1234",
     "01-701-1275", "01-701-1302", "01-701-1345", "01-701-1360",
     "01-701-1383", "01-701-1392", "01-714-1288"
-  ))
+  )) %>%
+  select(-any_of(c("ARMNRS", "ACTARMUD")))
 
 # Create a vector of USUBJID values to modify
 usubjid_to_modify <- c(
@@ -41,6 +42,10 @@ dm_neuro <- dm_neuro %>%
       USUBJID %in% usubjid_to_modify ~ "Observational Study",
       TRUE ~ NA_character_
     ),
+    ACTARMUD = case_when(
+      ARMNRS == "UNPLANNED TREATMENT" ~ ACTARM,
+      TRUE ~ NA_character_
+    ),
 
     # Convert RFSDTC from char to date, -2 days, and convert back to char
     RFICDTC = if_else(
@@ -55,8 +60,9 @@ for (col in names(var_labels)) {
   attr(dm_neuro[[col]], "label") <- var_labels[[col]]
 }
 
-# Assign the label for ARMNRS
+# Assign the labels for ARMNRS and ACTARMUD
 attr(dm_neuro$ARMNRS, "label") <- "Reason Arm and/or Actual Arm is Null"
+attr(dm_neuro$ACTARMUD, "label") <- "Description of Unplanned Actual Arm"
 
 # Label dataset ----
 attr(dm_neuro, "label") <- "Demographics"

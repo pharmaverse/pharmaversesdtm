@@ -6,6 +6,8 @@
 
 - Added Microbiology (`mb`), Susceptibility (`ms`) and Biospecimen Events (`be`) SDTM linked datasets. (#217)
 
+- Added `ARMNRS` and `ACTARMUD` to `dm`, `dm_metabolic`, `dm_neuro`, `dm_peds`, `dm_vaccine`. (#214)
+
 - Added a new vignette "Datasets Preview" to preview all datasets included in the package. (#146)
 
 ## Various

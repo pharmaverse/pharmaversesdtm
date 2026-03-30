@@ -9,11 +9,30 @@ library(purrr)
 library(lubridate)
 
 # Create dm, suppdm ----
-sdtm_path <- "https://github.com/cdisc-org/sdtm-adam-pilot-project/blob/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm/" # nolint
-raw_dm <- read_xpt(paste0(sdtm_path, "dm", ".xpt?raw=true"))
-raw_suppdm <- read_xpt(paste0(sdtm_path, "suppdm", ".xpt?raw=true"))
+url <- "https://raw.githubusercontent.com/cdisc-org/sdtm-adam-pilot-project/master/updated-pilot-submission-package/900172/m5/datasets/cdiscpilot01/tabulations/sdtm" # nolint
+raw_dm <- read_xpt(file.path(url, "dm.xpt"))
+raw_suppdm <- read_xpt(file.path(url, "suppdm.xpt"))
+
 dm <- convert_blanks_to_na(raw_dm)
 suppdm <- convert_blanks_to_na(raw_suppdm)
+
+dm <- dm %>%
+  mutate(
+    # Derive ARMNRS
+    ARMNRS = case_when(
+      ARM == "Screen Failure" | ACTARM == "Screen Failure" ~ "SCREEN FAILURE",
+      is.na(ARM) & is.na(ACTARM) ~ "NOT ASSIGNED",
+      !is.na(ARM) & is.na(ACTARM) ~ "ASSIGNED, NOT TREATED",
+      is.na(ARM) & !is.na(ACTARM) ~ "UNPLANNED TREATMENT",
+      TRUE ~ NA_character_
+    ),
+
+    # Derive ACTARMUD
+    ACTARMUD = case_when(
+      ARMNRS == "UNPLANNED TREATMENT" ~ ACTARM,
+      TRUE ~ NA_character_
+    )
+  )
 
 # Helper: robust ISO date/datetime parse (returns POSIXct or NA)
 safe_parse_datetime <- function(x) {
@@ -67,6 +86,8 @@ if (!"BRTHDTC" %in% names(dm)) {
 # Label dataset ----
 attr(dm, "label") <- "Demographics"
 attr(dm$BRTHDTC, "label") <- "Date/Time of Birth"
+attr(dm$ARMNRS, "label") <- "Reason Arm and/or Actual Arm is Null"
+attr(dm$ACTARMUD, "label") <- "Description of Unplanned Actual Arm"
 attr(suppdm, "label") <- "Supplemental Qualifiers for DM"
 
 # Save datasets ----

@@ -5,7 +5,7 @@
 \alias{dm_peds}
 \title{Demographic Dataset-pediatrics}
 \format{
-A data frame with 26 columns:
+A data frame with 28 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -20,6 +20,7 @@ A data frame with 26 columns:
 \item{DTHDTC}{Date/Time of Death}
 \item{DTHFL}{Subject Death Flag}
 \item{SITEID}{Study Site Identifier}
+\item{BRTHDTC}{Date/Time of Birth}
 \item{AGE}{Age}
 \item{AGEU}{Age Units}
 \item{SEX}{Sex}
@@ -32,7 +33,8 @@ A data frame with 26 columns:
 \item{COUNTRY}{Country}
 \item{DMDTC}{Date/Time of Collection}
 \item{DMDY}{Study Day of Collection}
-\item{BRTHDTC}{Date/Time of Birth}
+\item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
+\item{ACTARMUD}{Description of Unplanned Actual Arm}
 }
 }
 \source{

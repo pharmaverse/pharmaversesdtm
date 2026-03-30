@@ -10,7 +10,7 @@
 #' @keywords dataset vaccine
 #' @description An example SDTM DM dataset for vaccine studies
 #' @docType data
-#' @format A data frame with 28 columns:
+#' @format A data frame with 30 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -40,6 +40,8 @@
 #'     \item{COUNTRY}{Country}
 #'     \item{DMDTC}{Date/Time of Collection}
 #'     \item{DMDY}{Study Day of Collection}
+#'     \item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
+#'     \item{ACTARMUD}{Description of Unplanned Actual Arm}
 #'   }
 #'
 #' @source Constructed by {admiralvaccine} developers

@@ -33,13 +33,15 @@ vx_dm <- tribble(
     ACTARM = "VACCINE A VACCINE B",
     COUNTRY = "USA",
     DMDTC = NA_character_,
-    DMDY = NA_integer_
+    DMDY = NA_integer_,
+    ARMNRS = NA_character_,
+    ACTARMUD = NA_character_
   ) %>%
   # ordering the variables
   select(
     STUDYID, DOMAIN, USUBJID, SUBJID, RFSTDTC, RFENDTC, RFXSTDTC, RFXENDTC,
     RFICDTC, RFPENDTC, DTHDTC, DTHFL, SITEID, INVID, INVNAM, BRTHDTC, AGE, AGEU,
-    SEX, RACE, ETHNIC, ARMCD, ARM, ACTARMCD, ACTARM, COUNTRY, DMDTC, DMDY
+    SEX, RACE, ETHNIC, ARMCD, ARM, ACTARMCD, ACTARM, COUNTRY, DMDTC, DMDY, ARMNRS, ACTARMUD
   )
 
 # get common column names

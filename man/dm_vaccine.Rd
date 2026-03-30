@@ -5,7 +5,7 @@
 \alias{dm_vaccine}
 \title{Demographics for Vaccine}
 \format{
-A data frame with 28 columns:
+A data frame with 30 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -35,6 +35,8 @@ A data frame with 28 columns:
 \item{COUNTRY}{Country}
 \item{DMDTC}{Date/Time of Collection}
 \item{DMDY}{Study Day of Collection}
+\item{ARMNRS}{Reason Arm and/or Actual Arm is Null}
+\item{ACTARMUD}{Description of Unplanned Actual Arm}
 }
 }
 \source{
