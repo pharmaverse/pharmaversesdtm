@@ -16,7 +16,7 @@
 
 <summary>Developer Notes</summary>
 
-- Removed the link for "Preview SDTM vignette" from README.md as it is causing issue for release. (#240)
+- Removed the link for "Preview SDTM vignette" from README as it is causing issue for release. (#240)
 
 - Updated the `pkgdown` website and its functionalities included a dark mode, and added a new PR workflow in `.github/common.yml` triggered by "[create website]" in PR titles. (#230)
 
