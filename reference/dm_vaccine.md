@@ -10,7 +10,7 @@ dm_vaccine
 
 ## Format
 
-A data frame with 28 columns:
+A data frame with 30 columns:
 
 - STUDYID:
 
@@ -123,6 +123,14 @@ A data frame with 28 columns:
 - DMDY:
 
   Study Day of Collection
+
+- ARMNRS:
+
+  Reason Arm and/or Actual Arm is Null
+
+- ACTARMUD:
+
+  Description of Unplanned Actual Arm
 
 ## Source
 

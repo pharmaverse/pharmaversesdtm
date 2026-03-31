@@ -16,6 +16,9 @@
 
 - **Vinh Nguyen**. Author.
 
+- **Gerardo Jose Rodriguez**. Author.
+  [](https://orcid.org/0000-0003-1413-0060)
+
 - **Vladyslav Shuliar**. Author.
   [](https://orcid.org/0009-0008-2354-8999)
 
@@ -37,14 +40,14 @@ Source:
 [`DESCRIPTION`](https://github.com/pharmaverse/pharmaversesdtm/blob/main/DESCRIPTION)
 
 Patil L, Bundfuss S, Dahnert K, Gautier F, Mancini E, Namai T, Nguyen V,
-Shuliar V (2026). *pharmaversesdtm: SDTM Test Data for the 'Pharmaverse'
-Family of Packages*. R package version 1.4.0,
+Rodriguez G, Shuliar V (2026). *pharmaversesdtm: SDTM Test Data for the
+'Pharmaverse' Family of Packages*. R package version 1.4.1,
 <https://pharmaverse.github.io/pharmaversesdtm/>.
 
     @Manual{,
       title = {pharmaversesdtm: SDTM Test Data for the 'Pharmaverse' Family of Packages},
-      author = {Lina Patil and Stefan Bundfuss and Kristin Dahnert and Fanny Gautier and Edoardo Mancini and Tomoyuki Namai and Vinh Nguyen and Vladyslav Shuliar},
+      author = {Lina Patil and Stefan Bundfuss and Kristin Dahnert and Fanny Gautier and Edoardo Mancini and Tomoyuki Namai and Vinh Nguyen and Gerardo Jose Rodriguez and Vladyslav Shuliar},
       year = {2026},
-      note = {R package version 1.4.0},
+      note = {R package version 1.4.1},
       url = {https://pharmaverse.github.io/pharmaversesdtm/},
     }

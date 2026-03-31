@@ -1,12 +1,15 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/404.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/LICENSE.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/articles/index.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/authors.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/index.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/news/index.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ae_ophtha.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ag_neuro.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/be.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ce_vaccine.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/cm.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/dm.html</loc></url>
@@ -28,7 +31,9 @@
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb_metabolic.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb_neuro.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/lb_onco_pcwg3.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/mb.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/mh.html</loc></url>
+<url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/ms.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/nv_neuro.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/oe_ophtha.html</loc></url>
 <url><loc>https://pharmaverse.github.io/pharmaversesdtm/reference/pc.html</loc></url>

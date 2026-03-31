@@ -10,7 +10,7 @@ dm
 
 ## Format
 
-A data frame with 26 columns:
+A data frame with 28 columns:
 
 - STUDYID:
 
@@ -115,6 +115,14 @@ A data frame with 26 columns:
 - DMDY:
 
   Study Day of Collection
+
+- ARMNRS:
+
+  Reason Arm and/or Actual Arm is Null
+
+- ACTARMUD:
+
+  Description of Unplanned Actual Arm
 
 ## Source
 
