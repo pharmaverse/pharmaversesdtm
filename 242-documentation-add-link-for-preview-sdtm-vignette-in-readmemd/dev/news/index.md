@@ -4,7 +4,7 @@
 
 ### Documentation
 
-- Added the link for “Preview SDTM vignette” from `README.md`.
+- Added the link for “Preview SDTM vignette” in `README.md`.
   ([\#242](https://github.com/pharmaverse/pharmaversesdtm/issues/242))
 
 ## pharmaversesdtm 1.4.1
