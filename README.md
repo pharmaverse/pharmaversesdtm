@@ -8,6 +8,8 @@
 
 <!-- end badges -->
 
+> <sup>Interactive data exploration: <a href="https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html">Preview SDTM vignette</a></sup>
+
 Test data (SDTM) for the pharmaverse family of packages
 
 -   [Purpose](#purpose)

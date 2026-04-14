@@ -1,3 +1,9 @@
+# pharmaversesdtm (development version)
+
+## Documentation
+
+- Added the link for "Preview SDTM vignette" in `README.md`. (#242)
+
 # pharmaversesdtm 1.4.1
 
 ## Documentation
