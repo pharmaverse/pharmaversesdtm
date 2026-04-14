@@ -4,6 +4,15 @@
 
 ### Documentation
 
+- Added the link for “Preview SDTM vignette” in `README.md`.
+  ([\#242](https://github.com/pharmaverse/pharmaversesdtm/issues/242))
+
+## pharmaversesdtm 1.4.1
+
+CRAN release: 2026-03-30
+
+### Documentation
+
 - Included CSV versions of all SDTM data under `inst/extdata` for ease
   of use of non R programmers.
   ([\#221](https://github.com/pharmaverse/pharmaversesdtm/issues/221))
