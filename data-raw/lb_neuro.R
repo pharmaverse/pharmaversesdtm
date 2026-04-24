@@ -161,23 +161,22 @@ visit_all <- tribble(
   "01-714-1288", "N", "CENTILOID < 24.1", 26, "WEEK 26", "2014-06-17", NA
 )
 
-# Create LB record for one subject-visit with pTau, Amyloid, and Ratio ----
+# Create LB record for one subject-visit with pTau-217, Amyloid, and Ratio ----
 create_ratio_record <- function(
-  usubjid,
-  visitnum,
-  visit,
-  visitdy,
-  lbdtc,
-  lbdy,
-  trtgrp,
-  crit1fl
-) {
+    usubjid,
+    visitnum,
+    visit,
+    visitdy,
+    lbdtc,
+    lbdy,
+    trtgrp,
+    crit1fl) {
   set.seed(as.numeric(gsub("\\D", "", usubjid)) + visitnum)
 
   # Generate Aβ42 plasma  ----
   amyloid_value <- runif(1, 80, 1200) # pg/mL
 
-  # Generate pTau conditional on crit1fl status
+  # Generate pTau-217 conditional on crit1fl status
   ptau_value <- case_when(
     crit1fl == "Y" ~ runif(1,
       min = 0.0015 * amyloid_value,
@@ -206,7 +205,7 @@ create_ratio_record <- function(
     # Force ratio into intermediate band
     ratio_target <- runif(1, 0.00371, 0.00737)
 
-    # Adjust pTau (Aβ42 unchanged)
+    # Adjust pTau-217 (Aβ42 unchanged)
     ptau_value <- ratio_target * amyloid_value
   }
 
@@ -220,7 +219,7 @@ create_ratio_record <- function(
     TRUE ~ "Indeterminate"
   )
 
-  # ---- pTau record ----
+  # ---- pTau-217 record ----
   ptau_record <- tibble(
     STUDYID   = "CDISCPILOT01",
     DOMAIN    = "LB",
@@ -289,7 +288,7 @@ create_ratio_record <- function(
   bind_rows(ptau_record, amyloid_record, ratio_record)
 }
 
-# Generate all LB pTau, Amyloid and corresponding Ratio's records by joining 'visit_schedule' and 'subject_chars' ----
+# Generate all LB pTau-217, Amyloid and corresponding Ratio's records by joining 'visit_schedule' and 'subject_chars' ----
 ratio_records <- visit_all %>%
   left_join(subject_chars, by = "USUBJID") %>%
   rowwise() %>%
@@ -307,8 +306,77 @@ ratio_records <- visit_all %>%
   ) %>%
   ungroup()
 
+# Create pTau-181 record for one subject-visit ----
+create_ptau_181_record <- function(
+    usubjid,
+    visitnum,
+    visit,
+    visitdy,
+    lbdtc,
+    lbdy,
+    crit1fl) {
+  set.seed(as.numeric(gsub("\\D", "", usubjid)) + visitnum)
+
+  # Generate pTau-181 conditional on crit1fl status
+  ptau_value <- case_when(
+    crit1fl == "Y" ~ runif(1,
+      min = 0.25,
+      max = 3.5
+    ),
+    crit1fl == "N" ~ runif(1,
+      min = 1,
+      max = 5.5
+    ),
+    TRUE ~ runif(1,
+      min = 0.5,
+      max = 5
+    )
+  )
+
+  # ---- pTau-181 record ----
+  ptau_record <- tibble(
+    STUDYID   = "CDISCPILOT01",
+    DOMAIN    = "LB",
+    USUBJID   = usubjid,
+    LBTESTCD  = "TAU181P",
+    LBTEST    = "Elecsys Tau Protein Phosphorylated 181",
+    LBCAT     = "Biomarkers",
+    LBORRES   = sprintf("%.3f", ptau_value),
+    LBORRESU  = "pg/mL",
+    LBSTRESC  = sprintf("%.3f", ptau_value),
+    LBSTRESN  = ptau_value,
+    LBSTRESU  = "pg/mL",
+    LBBLFL    = ifelse(visit == "BASELINE", "Y", NA_character_),
+    VISITNUM  = visitnum,
+    VISIT     = visit,
+    VISITDY   = visitdy,
+    LBDTC     = lbdtc,
+    LBDY      = lbdy
+  )
+
+
+  ptau_record
+}
+
+# Generate all pTau-181 records ----
+ptau_181_records <- visit_all %>%
+  left_join(subject_chars, by = "USUBJID") %>%
+  rowwise() %>%
+  do(
+    create_ptau_181_record(
+      usubjid  = .$USUBJID,
+      visitnum = .$VISITNUM,
+      visit    = .$VISIT,
+      visitdy  = .$LBDY,
+      lbdtc    = .$LBDTC,
+      lbdy     = .$LBDY,
+      crit1fl  = .$CRIT1FL
+    )
+  ) %>%
+  ungroup()
+
 # Add sequence numbers and finalize
-lb_neuro <- bind_rows(asyn_records, ratio_records) %>%
+lb_neuro <- bind_rows(asyn_records, ratio_records, ptau_181_records) %>%
   arrange(USUBJID, VISITNUM) %>%
   group_by(USUBJID) %>%
   mutate(LBSEQ = row_number()) %>%
