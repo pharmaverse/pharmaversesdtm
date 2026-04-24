@@ -163,15 +163,14 @@ visit_all <- tribble(
 
 # Create LB record for one subject-visit with pTau-217, Amyloid, and Ratio ----
 create_ratio_record <- function(
-  usubjid,
-  visitnum,
-  visit,
-  visitdy,
-  lbdtc,
-  lbdy,
-  trtgrp,
-  crit1fl
-) {
+    usubjid,
+    visitnum,
+    visit,
+    visitdy,
+    lbdtc,
+    lbdy,
+    trtgrp,
+    crit1fl) {
   set.seed(as.numeric(gsub("\\D", "", usubjid)) + visitnum)
 
   # Generate Aβ42 plasma  ----
@@ -315,23 +314,23 @@ create_ptau_181_record <- function(
     visitdy,
     lbdtc,
     lbdy,
-    crit1fl
-) {
+    crit1fl) {
   set.seed(as.numeric(gsub("\\D", "", usubjid)) + visitnum)
 
   # Generate pTau-181 conditional on crit1fl status
   ptau_value <- case_when(
     crit1fl == "Y" ~ runif(1,
-                           min = 0.25,
-                           max = 3.5
+      min = 0.25,
+      max = 3.5
     ),
     crit1fl == "N" ~ runif(1,
-                           min = 1,
-                           max = 5.5
+      min = 1,
+      max = 5.5
     ),
     TRUE ~ runif(1,
-                 min = 0.5,
-                 max = 5)
+      min = 0.5,
+      max = 5
+    )
   )
 
   # ---- pTau-181 record ----
@@ -357,7 +356,6 @@ create_ptau_181_record <- function(
 
 
   ptau_record
-
 }
 
 # Generate all pTau-181 records ----
