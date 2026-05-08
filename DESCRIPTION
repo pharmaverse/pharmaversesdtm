@@ -13,6 +13,7 @@ Authors@R: c(
            comment = c(ORCID = "0009-0006-4899-8641")),
     person("Tomoyuki", "Namai", role = "aut"),
     person("Vinh", "Nguyen", role = "aut"),
+    person("Kiran", "Peddamudium", role = "aut"),
     person("Gerardo Jose", "Rodriguez", , "gerardo.jrac@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0003-1413-0060")),
     person("Vladyslav", "Shuliar", role = "aut",

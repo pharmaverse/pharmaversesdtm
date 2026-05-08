@@ -238,6 +238,14 @@
       "author": "Tomoyuki Namai",
       "therapeutic_area": "oncology"
     },
+     {
+      "name": "rs_onco_lymphoma",
+      "label": "Disease Response (Lymphoma Lugano 2014)",
+      "description": "A SDTM RS domain for lymphoma studies using Lugano 2014 response criteria intended for examples of ADaM dataset creation",
+      "source": "Generated dataset.",
+      "author": "Kiran Peddamudium",
+      "therapeutic_area": "oncology"
+    },
     {
       "name": "suppae",
       "label": "Supplemental Adverse Events",
