@@ -7,10 +7,10 @@ library(tidyr)
 library(admiral)
 library(pharmaversesdtm)
 
-# Extract timing from pharmaverse LB ----
+# Extract timing from pharmaversesdtm LB ----
 lb <- pharmaversesdtm::lb
 
-timing_ref <- lb %>%
+timing_lb <- lb %>%
   filter(VISITNUM %in% c(1, 8, 10, 12)) %>%
   distinct(USUBJID, VISITNUM, VISIT, LBDTC, LBDY) %>%
   mutate(
@@ -21,71 +21,70 @@ timing_ref <- lb %>%
 
 # Create rs_onco_lymphoma ----
 lymphoma_raw <- tibble::tribble(
-  ~USUBJID,       ~VISITNUM, ~VISIT,      ~PET,  ~CT,  ~Overall, ~OVRSSCAT,                ~PETSTAT,
-  "01-701-1015", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1015", 8,         "WEEK 8",    "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1015", 10,        "WEEK 16",   "PMR", "PR", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1015", 12,        "WEEK 24",   "CMR", "PR", "CR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1028", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1028", 8,         "WEEK 8",    "PMR", "PR", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1028", 10,        "WEEK 16",   "PMR", "PR", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1028", 12,        "WEEK 24",   "PMD", "PD", "PD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1034", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1034", 8,         "WEEK 8",    "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1034", 10,        "WEEK 16",   "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1034", 12,        "WEEK 24",   "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1097", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1097", 8,         "WEEK 8",    "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1097", 10,        "WEEK 16",   "PMD", "PR", "PD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1097", 12,        "WEEK 24",   "PMD", "PR", "PD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1115", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1115", 8,         "WEEK 8",    NA,    "PD", "PD",     "NOT INCLUDING PET SCAN", "NOT DONE",
-  "01-701-1118", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1118", 8,         "WEEK 8",    "CMR", "CR", "CR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1118", 10,        "WEEK 16",   "CMR", "CR", "CR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1118", 12,        "WEEK 24",   "CMR", "CR", "CR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1130", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1130", 8,         "WEEK 8",    "PMR", "PR", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1130", 10,        "WEEK 16",   "PMR", "PR", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1130", 12,        "WEEK 24",   "PMD", "PD", "PD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1133", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1133", 8,         "WEEK 8",    "NE",  "PR", "PR",     "NOT INCLUDING PET SCAN", NA,
-  "01-701-1133", 10,        "WEEK 16",   "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1133", 12,        "WEEK 24",   "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1148", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1148", 8,         "WEEK 8",    NA,    "PR", "PR",     "NOT INCLUDING PET SCAN", "NOT DONE",
-  "01-701-1148", 10,        "WEEK 16",   NA,    "PR", "PR",     "NOT INCLUDING PET SCAN", "NOT DONE",
-  "01-701-1148", 12,        "WEEK 24",   NA,    "PR", "PR",     "NOT INCLUDING PET SCAN", "NOT DONE",
-  "01-701-1153", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1153", 8,         "WEEK 8",    "ND",  "SD", "SD",     "NOT INCLUDING PET SCAN", NA,
-  "01-701-1153", 10,        "WEEK 16",   "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1153", 12,        "WEEK 24",   "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1275", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1275", 8,         "WEEK 8",    "PMD", "PD", "PD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1275", 10,        "WEEK 16",   "PMD", "PD", "PD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-716-1311", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-716-1311", 8,         "WEEK 8",    "PMR", "NE", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-716-1311", 10,        "WEEK 16",   "CMR", "NE", "CR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-710-1315", 1,         "BASELINE",  "SMD", "SD", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-710-1315", 8,         "WEEK 8",    "SMD", "PR", "SD",     "INCLUDING PET-CT SCAN",  NA,
-  "01-710-1315", 10,        "WEEK 16",   "PMR", "PR", "PR",     "INCLUDING PET-CT SCAN",  NA,
-  "01-701-1023", 1,         "BASELINE",  "ND",  "NE", "ND",     "NOT INCLUDING PET SCAN", NA
+  ~USUBJID,       ~VISITNUM, ~VISIT,      ~PET,  ~CT,  ~OVRL, ~PETSTAT,
+  "01-701-1015", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1015", 8,         "WEEK 8",    "SMD", "SD", "SD",  NA,
+  "01-701-1015", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
+  "01-701-1015", 12,        "WEEK 24",   "CMR", "PR", "CR",  NA,
+  "01-701-1028", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1028", 8,         "WEEK 8",    "PMR", "PR", "PR",  NA,
+  "01-701-1028", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
+  "01-701-1028", 12,        "WEEK 24",   "PMD", "PD", "PD",  NA,
+  "01-701-1034", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1034", 8,         "WEEK 8",    "SMD", "SD", "SD",  NA,
+  "01-701-1034", 10,        "WEEK 16",   "SMD", "SD", "SD",  NA,
+  "01-701-1034", 12,        "WEEK 24",   "SMD", "SD", "SD",  NA,
+  "01-701-1097", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1097", 8,         "WEEK 8",    "SMD", "SD", "SD",  NA,
+  "01-701-1097", 10,        "WEEK 16",   "PMD", "PR", "PD",  NA,
+  "01-701-1097", 12,        "WEEK 24",   "PMD", "PR", "PD",  NA,
+  "01-701-1115", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1115", 8,         "WEEK 8",    NA,    "PD", "PD",  "NOT DONE",
+  "01-701-1118", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1118", 8,         "WEEK 8",    "CMR", "CR", "CR",  NA,
+  "01-701-1118", 10,        "WEEK 16",   "CMR", "CR", "CR",  NA,
+  "01-701-1118", 12,        "WEEK 24",   "CMR", "CR", "CR",  NA,
+  "01-701-1130", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1130", 8,         "WEEK 8",    "PMR", "PR", "PR",  NA,
+  "01-701-1130", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
+  "01-701-1130", 12,        "WEEK 24",   "PMD", "PD", "PD",  NA,
+  "01-701-1133", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1133", 8,         "WEEK 8",    "NE",  "PR", "SD",  NA,
+  "01-701-1133", 10,        "WEEK 16",   "SMD", "SD", "SD",  NA,
+  "01-701-1133", 12,        "WEEK 24",   "SMD", "SD", "SD",  NA,
+  "01-701-1148", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1148", 8,         "WEEK 8",    NA,    "PR", "PR",  "NOT DONE",
+  "01-701-1148", 10,        "WEEK 16",   NA,    "PR", "PR",  "NOT DONE",
+  "01-701-1148", 12,        "WEEK 24",   NA,    "PR", "PR",  "NOT DONE",
+  "01-701-1153", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1153", 8,         "WEEK 8",    "ND",  "SD", "SD",  NA,
+  "01-701-1153", 10,        "WEEK 16",   "SMD", "SD", "SD",  NA,
+  "01-701-1153", 12,        "WEEK 24",   "SMD", "SD", "SD",  NA,
+  "01-701-1275", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-701-1275", 8,         "WEEK 8",    "PMD", "PD", "PD",  NA,
+  "01-701-1275", 10,        "WEEK 16",   "PMD", "PD", "PD",  NA,
+  "01-716-1311", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-716-1311", 8,         "WEEK 8",    "PMR", "NE", "PR",  NA,
+  "01-716-1311", 10,        "WEEK 16",   "CMR", "NE", "CR",  NA,
+  "01-710-1315", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
+  "01-710-1315", 8,         "WEEK 8",    "SMD", "PR", "SD",  NA,
+  "01-710-1315", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
+  "01-701-1023", 1,         "BASELINE",  "ND",  "NE", "ND",  NA
 ) %>%
-  left_join(timing_ref, by = c("USUBJID", "VISITNUM"))
+  left_join(timing_lb, by = c("USUBJID", "VISITNUM"))
 
 rs_onco_lymphoma_pre <- lymphoma_raw %>%
   pivot_longer(
-    cols = c("PET", "CT", "Overall"),
+    cols = c("PET", "CT"), # cols = c("PET", "CT", "OVRL")
     names_to = "assessment",
     values_to = "RSORRES",
     values_drop_na = FALSE
   )
 
 testnames <- tibble::tribble(
-  ~assessment, ~RSTESTCD,  ~RSTEST,                               ~RSCAT,         ~RSMETHOD, ~RSSCAT,
-  "PET",       "PETRESP",  "Response (PET-CT)",                   "LUGANO 2014",  "PET-CT",  "PET-BASED ASSESSMENT",
-  "CT",        "CTRESP",   "Response (CT or MRI without PET)",    "LUGANO 2014",  "CT",      "CT-BASED ASSESSMENT",
-  "Overall",   "OVRLRESP", "Overall Response",                    "LUGANO 2014",  NA,        NA
+  ~assessment, ~RSTESTCD,  ~RSTEST,            ~RSCAT,        ~RSMETHOD, ~RSSCAT,
+  "PET",       "OVRLRESP", "Overall Response", "LUGANO 2014", "PET-CT",  "INCLUDING PET-CT SCAN",
+  "CT",        "OVRLRESP", "Overall Response", "LUGANO 2014", "CT",      "NOT INCLUDING PET SCAN"
 )
 
 rs_onco_lymphoma <- rs_onco_lymphoma_pre %>%
@@ -94,30 +93,21 @@ rs_onco_lymphoma <- rs_onco_lymphoma_pre %>%
     STUDYID = "CDISCPILOT01",
     DOMAIN = "RS",
     RSEVAL = "INVESTIGATOR",
-    RSMETHOD = case_when(
-      assessment == "PET" & PETSTAT == "NOT DONE" ~ NA_character_,
-      assessment == "Overall" & OVRSSCAT == "INCLUDING PET-CT SCAN" ~ "PET-CT",
-      assessment == "Overall" & OVRSSCAT == "NOT INCLUDING PET SCAN" ~ "CT",
-      TRUE ~ RSMETHOD
-    ),
-    RSSCAT = case_when(
-      assessment == "Overall" ~ OVRSSCAT,
-      TRUE ~ RSSCAT
-    ),
     RSSTAT = case_when(
-      assessment == "PET" ~ PETSTAT,
+      assessment == "PET" & PETSTAT == "NOT DONE" ~ "NOT DONE",
       TRUE ~ NA_character_
     ),
     RSSTRESC = case_when(
       assessment == "PET" & RSSTAT == "NOT DONE" ~ NA_character_,
       TRUE ~ RSORRES
     ),
-    RSBLFL = if_else(VISIT == "BASELINE" & assessment == "Overall", "Y", NA_character_)
+    RSBLFL = if_else(VISIT == "BASELINE", "Y", NA_character_)
   ) %>%
   filter(!(assessment == "PET" & is.na(RSORRES) & is.na(RSSTAT))) %>%
+  filter(!(assessment == "CT" & is.na(RSORRES))) %>%
   derive_var_obs_number(
     by_vars = exprs(USUBJID),
-    order = exprs(VISITNUM, RSEVAL, RSTESTCD),
+    order = exprs(VISITNUM, RSEVAL, RSTESTCD, RSSCAT),
     new_var = RSSEQ
   ) %>%
   select(
