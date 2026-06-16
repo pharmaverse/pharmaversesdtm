@@ -1,5 +1,10 @@
 # pharmaversesdtm (development version)
 
+
+## New Features
+
+- Updated `oe_ophtha` to include new `OETESTCD's`  applicable for indication "Geographic atrophy(GA)". (#247)
+
 ## Documentation
 
 - Added the link for "Preview SDTM vignette" in `README.md`. (#242)

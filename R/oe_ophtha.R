@@ -41,10 +41,12 @@
 #'
 #' @source Generated dataset.
 #' @author Gordon Miller
-#' @details Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{OETESTCD} \tab \strong{OETEST} \cr
+#'   AREA     \tab Total GA Area                        \cr
 #'   CSUBTH   \tab Center Subfield Thickness            \cr
 #'   DRSSR    \tab Diabetic Retinopathy Sev Recode Value\cr
+#'   GAFLOC   \tab GA Foveal Location                   \cr
 #'   IOP      \tab Intraocular Pressure                 \cr
 #'   VACSCORE \tab Visual Acuity Score
 #' }

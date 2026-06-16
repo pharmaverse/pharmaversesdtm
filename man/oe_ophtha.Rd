@@ -48,10 +48,12 @@ Ophthalmic Examinations for Ophthalmology
 
 A SDTM OE dataset simulated by Ophthalmology team
 
-Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+Contains a set of 6 unique Test Short Names and Test Names: \tabular{ll}{
 \strong{OETESTCD} \tab \strong{OETEST} \cr
+AREA     \tab Total GA Area                        \cr
 CSUBTH   \tab Center Subfield Thickness            \cr
 DRSSR    \tab Diabetic Retinopathy Sev Recode Value\cr
+GAFLOC   \tab GA Foveal Location                   \cr
 IOP      \tab Intraocular Pressure                 \cr
 VACSCORE \tab Visual Acuity Score
 }
