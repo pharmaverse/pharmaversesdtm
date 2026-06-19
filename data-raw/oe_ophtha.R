@@ -101,8 +101,45 @@ oe34 <- bind_rows(
   "OEMETHOD" = "SD-OCT"
 )
 
+
+## GA- Total Area - FAF ----
+oe35 <- bind_rows(
+  (oe2 %>% mutate("OELAT" = "LEFT")),
+  (oe2 %>% mutate("OELAT" = "RIGHT"))
+) %>% mutate(
+  "OETESTCD" = "AREA",
+  "OETEST" = "Total GA Area",
+  "OETSTDTL" = "TOTAL GA",
+  "OECAT" = "OPHTHALMIC ASSESSMENTS",
+  "OESTAT" = NA_character_,
+  "OESTRESN" = round(runif(n(), 0, 40), 6),
+  "OESTRESC" = as.character(OESTRESN),
+  "OEORRES" = OESTRESC,
+  "OEORRESU" = "mm2",
+  "OESTRESU" = "mm2",
+  "OELOC" = "RETINA",
+  "OEMETHOD" = "FUNDUS AUTOFLUORESCENCE"
+)
+
+## GA- Foveal Location- FAF ----
+oe36 <- bind_rows(
+  (oe2 %>% mutate("OELAT" = "LEFT")),
+  (oe2 %>% mutate("OELAT" = "RIGHT"))
+) %>% mutate(
+  "OETESTCD" = "GAFLOC",
+  "OETEST" = "GA Foveal Location",
+  "OETSTDTL" = "GA lesion location related to foveal center",
+  "OECAT" = "OPHTHALMIC ASSESSMENTS",
+  "OESTAT" = NA_character_,
+  "OESTRESC" = sample(c("S", "NS"), n(), replace = TRUE),
+  "OEORRES" = OESTRESC,
+  "OELOC" = "RETINA",
+  "OEMETHOD" = "FUNDUS AUTOFLUORESCENCE"
+)
+
+
 ## Bind all tests ----
-oe41 <- bind_rows(oe31, oe32, oe33, oe34) %>%
+oe41 <- bind_rows(oe31, oe32, oe33, oe34, oe35, oe36) %>%
   arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(
@@ -114,7 +151,7 @@ oe41 <- bind_rows(oe31, oe32, oe33, oe34) %>%
   )
 
 ## Add post-dose records for IOP test ----
-oe42 <- bind_rows(oe31, oe32, oe33, oe34) %>%
+oe42 <- bind_rows(oe31, oe32, oe33, oe34, oe35, oe36) %>%
   filter(OETESTCD == "IOP") %>%
   arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
   group_by(STUDYID, USUBJID) %>%
