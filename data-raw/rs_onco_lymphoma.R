@@ -21,57 +21,58 @@ timing_lb <- lb %>%
 
 # Create rs_onco_lymphoma ----
 lymphoma_raw <- tibble::tribble(
-  ~USUBJID,       ~VISITNUM, ~VISIT,      ~PET,  ~CT,  ~OVRL, ~PETSTAT,
-  "01-701-1015", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1015", 8,         "WEEK 8",    "SMD", "SD", "SD",  NA,
-  "01-701-1015", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
-  "01-701-1015", 12,        "WEEK 24",   "CMR", "PR", "CR",  NA,
-  "01-701-1028", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1028", 8,         "WEEK 8",    "PMR", "PR", "PR",  NA,
-  "01-701-1028", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
-  "01-701-1028", 12,        "WEEK 24",   "PMD", "PD", "PD",  NA,
-  "01-701-1034", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1034", 8,         "WEEK 8",    "SMD", "SD", "SD",  NA,
-  "01-701-1034", 10,        "WEEK 16",   "SMD", "SD", "SD",  NA,
-  "01-701-1034", 12,        "WEEK 24",   "SMD", "SD", "SD",  NA,
-  "01-701-1097", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1097", 8,         "WEEK 8",    "SMD", "SD", "SD",  NA,
-  "01-701-1097", 10,        "WEEK 16",   "PMD", "PR", "PD",  NA,
-  "01-701-1097", 12,        "WEEK 24",   "PMD", "PR", "PD",  NA,
-  "01-701-1115", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1115", 8,         "WEEK 8",    NA,    "PD", "PD",  "NOT DONE",
-  "01-701-1118", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1118", 8,         "WEEK 8",    "CMR", "CR", "CR",  NA,
-  "01-701-1118", 10,        "WEEK 16",   "CMR", "CR", "CR",  NA,
-  "01-701-1118", 12,        "WEEK 24",   "CMR", "CR", "CR",  NA,
-  "01-701-1130", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1130", 8,         "WEEK 8",    "PMR", "PR", "PR",  NA,
-  "01-701-1130", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
-  "01-701-1130", 12,        "WEEK 24",   "PMD", "PD", "PD",  NA,
-  "01-701-1133", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1133", 8,         "WEEK 8",    "NE",  "PR", "SD",  NA,
-  "01-701-1133", 10,        "WEEK 16",   "SMD", "SD", "SD",  NA,
-  "01-701-1133", 12,        "WEEK 24",   "SMD", "SD", "SD",  NA,
-  "01-701-1148", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1148", 8,         "WEEK 8",    NA,    "PR", "PR",  "NOT DONE",
-  "01-701-1148", 10,        "WEEK 16",   NA,    "PR", "PR",  "NOT DONE",
-  "01-701-1148", 12,        "WEEK 24",   NA,    "PR", "PR",  "NOT DONE",
-  "01-701-1153", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1153", 8,         "WEEK 8",    "ND",  "SD", "SD",  NA,
-  "01-701-1153", 10,        "WEEK 16",   "SMD", "SD", "SD",  NA,
-  "01-701-1153", 12,        "WEEK 24",   "SMD", "SD", "SD",  NA,
-  "01-701-1275", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-701-1275", 8,         "WEEK 8",    "PMD", "PD", "PD",  NA,
-  "01-701-1275", 10,        "WEEK 16",   "PMD", "PD", "PD",  NA,
-  "01-716-1311", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-716-1311", 8,         "WEEK 8",    "PMR", "NE", "PR",  NA,
-  "01-716-1311", 10,        "WEEK 16",   "CMR", "NE", "CR",  NA,
-  "01-710-1315", 1,         "BASELINE",  "SMD", "SD", "SD",  NA,
-  "01-710-1315", 8,         "WEEK 8",    "SMD", "PR", "SD",  NA,
-  "01-710-1315", 10,        "WEEK 16",   "PMR", "PR", "PR",  NA,
-  "01-701-1023", 1,         "BASELINE",  "ND",  "NE", "ND",  NA
+  ~USUBJID,       ~VISITNUM, ~VISIT,      ~PET,  ~CT,    ~OVRL, ~PETSTAT,
+  "01-701-1015", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1015", 8,         "WEEK 8",    "NMR", "SAD",  "SD",  NA,
+  "01-701-1015", 10,        "WEEK 16",   "PMR", "PAR",  "PR",  NA,
+  "01-701-1015", 12,        "WEEK 24",   "CMR", "PAR",  "CR",  NA,
+  "01-701-1028", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1028", 8,         "WEEK 8",    "PMR", "PAR",  "PR",  NA,
+  "01-701-1028", 10,        "WEEK 16",   "PMR", "PAR",  "PR",  NA,
+  "01-701-1028", 12,        "WEEK 24",   "PMD", "PAD",  "PD",  NA,
+  "01-701-1034", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1034", 8,         "WEEK 8",    "NMR", "SAD",  "SD",  NA,
+  "01-701-1034", 10,        "WEEK 16",   "NMR", "SAD",  "SD",  NA,
+  "01-701-1034", 12,        "WEEK 24",   "NMR", "SAD",  "SD",  NA,
+  "01-701-1097", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1097", 8,         "WEEK 8",    "NMR", "SAD",  "SD",  NA,
+  "01-701-1097", 10,        "WEEK 16",   "PMD", "PAR",  "PD",  NA,
+  "01-701-1097", 12,        "WEEK 24",   "PMD", "PAR",  "PD",  NA,
+  "01-701-1115", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1115", 8,         "WEEK 8",    NA,    "PAD",  "PD",  "NOT DONE",
+  "01-701-1118", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1118", 8,         "WEEK 8",    "CMR", "CAR",  "CR",  NA,
+  "01-701-1118", 10,        "WEEK 16",   "CMR", "CAR",  "CR",  NA,
+  "01-701-1118", 12,        "WEEK 24",   "CMR", "CAR",  "CR",  NA,
+  "01-701-1130", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1130", 8,         "WEEK 8",    "PMR", "PAR",  "PR",  NA,
+  "01-701-1130", 10,        "WEEK 16",   "PMR", "PAR",  "PR",  NA,
+  "01-701-1130", 12,        "WEEK 24",   "PMD", "PAD",  "PD",  NA,
+  "01-701-1133", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1133", 8,         "WEEK 8",    "NE",  "PAR",  "SD",  NA,
+  "01-701-1133", 10,        "WEEK 16",   "NMR", "PAR",  "SD",  NA,
+  "01-701-1133", 12,        "WEEK 24",   "NMR", "PAR",  "SD",  NA,
+  "01-701-1148", 1,         "BASELINE",  "NMR", "PAR",  "SD",  NA,
+  "01-701-1148", 8,         "WEEK 8",    NA,    "PAR",  "PR",  "NOT DONE",
+  "01-701-1148", 10,        "WEEK 16",   NA,    "PAR",  "PR",  "NOT DONE",
+  "01-701-1148", 12,        "WEEK 24",   NA,    "PAR",  "PR",  "NOT DONE",
+  "01-701-1153", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1153", 8,         "WEEK 8",    "ND",  "SAD",  "SD",  NA,
+  "01-701-1153", 10,        "WEEK 16",   "NMR", "SAD",  "SD",  NA,
+  "01-701-1153", 12,        "WEEK 24",   "NMR", "SAD",  "SD",  NA,
+  "01-701-1275", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1275", 8,         "WEEK 8",    "PMD", "PAD",  "PD",  NA,
+  "01-701-1275", 10,        "WEEK 16",   "PMD", "PAD",  "PD",  NA,
+  "01-716-1311", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-716-1311", 8,         "WEEK 8",    "PMR", "NE",   "PR",  NA,
+  "01-716-1311", 10,        "WEEK 16",   "CMR", "NE",   "CR",  NA,
+  "01-710-1315", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-710-1315", 8,         "WEEK 8",    "NMR", "PAR",  "SD",  NA,
+  "01-710-1315", 10,        "WEEK 16",   "PMR", "PAR",  "PR",  NA,
+  "01-701-1023", 1,         "BASELINE",  "ND",  "NE",   "ND",  NA
 ) %>%
   left_join(timing_lb, by = c("USUBJID", "VISITNUM"))
+
 
 rs_onco_lymphoma_pre <- lymphoma_raw %>%
   pivot_longer(
@@ -126,3 +127,11 @@ for (col in colnames(rs_onco_lymphoma)) {
 attr(rs_onco_lymphoma, "label") <- "Disease Response (Lymphoma Lugano 2014)"
 
 usethis::use_data(rs_onco_lymphoma, overwrite = TRUE)
+
+# Lugano 2014 response terminology for Reference----
+# CMR / CAR / CR = Complete Metabolic Response / Complete Anatomic Response / Complete Response
+# PMR / PAR / PR = Partial Metabolic Response / Partial Anatomic Response / Partial Response
+# NMR / SAD / SD = No Metabolic Response / Stable Anatomic Response / Stable Disease
+# PMD / PAD / PD = Progressive Metabolic Disease / Progressive Anatomic Disease / Progressive Disease
+# PSP = Pseudoprogression
+# NED = No Evidence of Disease (used by BICR only)
