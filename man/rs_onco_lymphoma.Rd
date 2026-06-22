@@ -20,7 +20,7 @@ A data frame with 18 columns:
 \item{RSSTRESC}{Response Assessment Result in Std Format}
 \item{RSSTAT}{Completion Status}
 \item{RSEVAL}{Evaluator}
-\item{RSBLFL}{undocumented field}
+\item{RSLOBXFL}{Last Observation Before Exposure Flag}
 \item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
 \item{RSDTC}{Date/Time of Response Assessment}

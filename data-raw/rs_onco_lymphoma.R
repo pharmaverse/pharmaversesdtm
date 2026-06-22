@@ -102,7 +102,7 @@ rs_onco_lymphoma <- rs_onco_lymphoma_pre %>%
       assessment == "PET" & RSSTAT == "NOT DONE" ~ NA_character_,
       TRUE ~ RSORRES
     ),
-    RSBLFL = if_else(VISIT == "BASELINE", "Y", NA_character_)
+    RSLOBXFL = if_else(VISIT == "BASELINE", "Y", NA_character_)
   ) %>%
   filter(!(assessment == "PET" & is.na(RSORRES) & is.na(RSSTAT))) %>%
   filter(!(assessment == "CT" & is.na(RSORRES))) %>%
@@ -113,7 +113,7 @@ rs_onco_lymphoma <- rs_onco_lymphoma_pre %>%
   ) %>%
   select(
     STUDYID, DOMAIN, USUBJID, RSSEQ, RSTESTCD, RSTEST, RSCAT, RSMETHOD, RSSCAT,
-    RSORRES, RSSTRESC, RSSTAT, RSEVAL, RSBLFL, VISITNUM, VISIT, RSDTC, RSDY
+    RSORRES, RSSTRESC, RSSTAT, RSEVAL, RSLOBXFL, VISITNUM, VISIT, RSDTC, RSDY
   )
 
 # assign labels
@@ -123,6 +123,9 @@ for (col in colnames(rs_onco_lymphoma)) {
     attr(rs_onco_lymphoma[[col]], "label") <- attr(rs_onco[[col]], "label")
   }
 }
+
+rs_onco_lymphoma <- rs_onco_lymphoma %>%
+  add_labels(RSLOBXFL = "Last Observation Before Exposure Flag")
 
 attr(rs_onco_lymphoma, "label") <- "Disease Response (Lymphoma Lugano 2014)"
 
