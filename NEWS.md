@@ -2,7 +2,7 @@
 
 ## New Features
 
-- Updated `oe_ophtha` to include new `OETESTCD's`  applicable for indication "Geographic atrophy(GA)". (#247)
+- Updated `oe_ophtha` to include new tests applicable for Geographic atrophy (GA) indication . (#247)
 
 ## Documentation
 
