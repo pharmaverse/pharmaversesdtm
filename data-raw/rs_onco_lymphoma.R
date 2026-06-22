@@ -21,7 +21,7 @@ timing_lb <- lb %>%
 
 # Create rs_onco_lymphoma ----
 lymphoma_raw <- tibble::tribble(
-  ~USUBJID,       ~VISITNUM, ~VISIT,      ~PET,  ~CT,    ~OVRL, ~PETSTAT,
+  ~USUBJID,      ~VISITNUM, ~VISIT,      ~PET,  ~CT,    ~OVRL, ~PETSTAT,
   "01-701-1015", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
   "01-701-1015", 8,         "WEEK 8",    "NMR", "SAD",  "SD",  NA,
   "01-701-1015", 10,        "WEEK 16",   "PMR", "PAR",  "PR",  NA,
