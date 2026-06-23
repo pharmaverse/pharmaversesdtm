@@ -19,6 +19,14 @@ timing_lb <- lb %>%
   ) %>%
   select(USUBJID, VISITNUM, RSDTC, RSDY)
 
+# Lugano 2014 response terminology for Reference----
+# CMR / CAR / CR = Complete Metabolic Response / Complete Anatomic Response / Complete Response
+# PMR / PAR / PR = Partial Metabolic Response / Partial Anatomic Response / Partial Response
+# NMR / SAD / SD = No Metabolic Response / Stable Anatomic Response / Stable Disease
+# PMD / PAD / PD = Progressive Metabolic Disease / Progressive Anatomic Disease / Progressive Disease
+# PSP = Pseudoprogression
+# NED = No Evidence of Disease (used by BICR only)
+
 # Create rs_onco_lymphoma ----
 lymphoma_raw <- tibble::tribble(
   ~USUBJID,      ~VISITNUM, ~VISIT,      ~PET,  ~CT,    ~OVRL, ~PETSTAT,
@@ -38,8 +46,8 @@ lymphoma_raw <- tibble::tribble(
   "01-701-1097", 8,         "WEEK 8",    "NMR", "SAD",  "SD",  NA,
   "01-701-1097", 10,        "WEEK 16",   "PMD", "PAR",  "PD",  NA,
   "01-701-1097", 12,        "WEEK 24",   "PMD", "PAR",  "PD",  NA,
-  "01-701-1115", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
-  "01-701-1115", 8,         "WEEK 8",    NA,    "PAD",  "PD",  "NOT DONE",
+  "01-701-1115", 1,         "BASELINE",  "ND",  "SAD",  "SD",  NA,
+  "01-701-1115", 8,         "WEEK 8",     NA,    "PAD",  "PD", NA,
   "01-701-1118", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
   "01-701-1118", 8,         "WEEK 8",    "CMR", "CAR",  "CR",  NA,
   "01-701-1118", 10,        "WEEK 16",   "CMR", "CAR",  "CR",  NA,
@@ -52,10 +60,10 @@ lymphoma_raw <- tibble::tribble(
   "01-701-1133", 8,         "WEEK 8",    "NE",  "PAR",  "SD",  NA,
   "01-701-1133", 10,        "WEEK 16",   "NMR", "PAR",  "SD",  NA,
   "01-701-1133", 12,        "WEEK 24",   "NMR", "PAR",  "SD",  NA,
-  "01-701-1148", 1,         "BASELINE",  "NMR", "PAR",  "SD",  NA,
-  "01-701-1148", 8,         "WEEK 8",    NA,    "PAR",  "PR",  "NOT DONE",
-  "01-701-1148", 10,        "WEEK 16",   NA,    "PAR",  "PR",  "NOT DONE",
-  "01-701-1148", 12,        "WEEK 24",   NA,    "PAR",  "PR",  "NOT DONE",
+  "01-701-1148", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
+  "01-701-1148", 8,         "WEEK 8",    NA,    "PAR",  "SD",  "NOT DONE",
+  "01-701-1148", 10,        "WEEK 16",   NA,    "PAR",  "SD",  "NOT DONE",
+  "01-701-1148", 12,        "WEEK 24",   NA,    "PAR",  "SD",  "NOT DONE",
   "01-701-1153", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
   "01-701-1153", 8,         "WEEK 8",    "ND",  "SAD",  "SD",  NA,
   "01-701-1153", 10,        "WEEK 16",   "NMR", "SAD",  "SD",  NA,
@@ -65,7 +73,7 @@ lymphoma_raw <- tibble::tribble(
   "01-701-1275", 10,        "WEEK 16",   "PMD", "PAD",  "PD",  NA,
   "01-716-1311", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
   "01-716-1311", 8,         "WEEK 8",    "PMR", "NE",   "PR",  NA,
-  "01-716-1311", 10,        "WEEK 16",   "CMR", "NE",   "CR",  NA,
+  "01-716-1311", 10,        "WEEK 16",   "CMR", NA,     "CR",  NA,
   "01-710-1315", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
   "01-710-1315", 8,         "WEEK 8",    "NMR", "PAR",  "SD",  NA,
   "01-710-1315", 10,        "WEEK 16",   "PMR", "PAR",  "PR",  NA,
@@ -131,10 +139,3 @@ attr(rs_onco_lymphoma, "label") <- "Disease Response (Lymphoma Lugano 2014)"
 
 usethis::use_data(rs_onco_lymphoma, overwrite = TRUE)
 
-# Lugano 2014 response terminology for Reference----
-# CMR / CAR / CR = Complete Metabolic Response / Complete Anatomic Response / Complete Response
-# PMR / PAR / PR = Partial Metabolic Response / Partial Anatomic Response / Partial Response
-# NMR / SAD / SD = No Metabolic Response / Stable Anatomic Response / Stable Disease
-# PMD / PAD / PD = Progressive Metabolic Disease / Progressive Anatomic Disease / Progressive Disease
-# PSP = Pseudoprogression
-# NED = No Evidence of Disease (used by BICR only)
