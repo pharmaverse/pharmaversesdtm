@@ -47,7 +47,7 @@ lymphoma_raw <- tibble::tribble(
   "01-701-1097", 10,        "WEEK 16",   "PMD", "PAR",  "PD",  NA,
   "01-701-1097", 12,        "WEEK 24",   "PMD", "PAR",  "PD",  NA,
   "01-701-1115", 1,         "BASELINE",  "ND",  "SAD",  "SD",  NA,
-  "01-701-1115", 8,         "WEEK 8",     NA,    "PAD",  "PD", NA,
+  "01-701-1115", 8,         "WEEK 8",    NA,    "PAD",  "PD",  NA,
   "01-701-1118", 1,         "BASELINE",  "NMR", "SAD",  "SD",  NA,
   "01-701-1118", 8,         "WEEK 8",    "CMR", "CAR",  "CR",  NA,
   "01-701-1118", 10,        "WEEK 16",   "CMR", "CAR",  "CR",  NA,
@@ -138,4 +138,3 @@ rs_onco_lymphoma <- rs_onco_lymphoma %>%
 attr(rs_onco_lymphoma, "label") <- "Disease Response (Lymphoma Lugano 2014)"
 
 usethis::use_data(rs_onco_lymphoma, overwrite = TRUE)
-
