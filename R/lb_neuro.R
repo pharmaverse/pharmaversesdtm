@@ -38,7 +38,7 @@
 #'   }
 #'
 #' @source Constructed by {admiralneuro} developers
-#' @details Contains a set of 4 unique Test Short Names and Test Names: \tabular{ll}{
+#' @details Contains a set of 5 unique Test Short Names and Test Names: \tabular{ll}{
 #'   \strong{LBTESTCD} \tab \strong{LBTEST} \cr
 #'   AMYLB42  \tab Lumipulse G Beta-Amyloid 1-42-N Plasma             \cr
 #'   ASYNASAA \tab Alpha Synuclein Seed Amplification Assay (CSF)     \cr
