@@ -5,7 +5,7 @@
 \alias{rs_onco_lymphoma}
 \title{Disease Response (Lymphoma Lugano 2014)}
 \format{
-A data frame with 18 columns:
+A data frame with 17 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -20,7 +20,6 @@ A data frame with 18 columns:
 \item{RSSTRESC}{Response Assessment Result in Std Format}
 \item{RSSTAT}{Completion Status}
 \item{RSEVAL}{Evaluator}
-\item{RSLOBXFL}{Last Observation Before Exposure Flag}
 \item{VISITNUM}{Visit Number}
 \item{VISIT}{Visit Name}
 \item{RSDTC}{Date/Time of Response Assessment}

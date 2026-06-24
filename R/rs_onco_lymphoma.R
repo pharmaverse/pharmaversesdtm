@@ -10,7 +10,7 @@
 #' @keywords dataset oncology
 #' @description A SDTM RS domain for lymphoma studies using Lugano 2014 response criteria intended for examples of ADaM dataset creation
 #' @docType data
-#' @format A data frame with 18 columns:
+#' @format A data frame with 17 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -25,7 +25,6 @@
 #'     \item{RSSTRESC}{Response Assessment Result in Std Format}
 #'     \item{RSSTAT}{Completion Status}
 #'     \item{RSEVAL}{Evaluator}
-#'     \item{RSLOBXFL}{Last Observation Before Exposure Flag}
 #'     \item{VISITNUM}{Visit Number}
 #'     \item{VISIT}{Visit Name}
 #'     \item{RSDTC}{Date/Time of Response Assessment}
