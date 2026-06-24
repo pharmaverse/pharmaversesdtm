@@ -33,50 +33,50 @@ lymphoma_raw <- tibble::tribble(
   "01-701-1015", 8,         "WEEK 8",  "NMR", "SAD",  "SD",  NA,
   "01-701-1015", 10,        "WEEK 16", "PMR", "PAR",  "PR",  NA,
   "01-701-1015", 12,        "WEEK 24", "CMR", "PAR",  "CR",  NA,
-
+  #
   "01-701-1028", 8,         "WEEK 8",  "PMR", "PAR",  "PR",  NA,
   "01-701-1028", 10,        "WEEK 16", "PMR", "PAR",  "PR",  NA,
   "01-701-1028", 12,        "WEEK 24", "PMD", "PAD",  "PD",  NA,
-
+  #
   "01-701-1034", 8,         "WEEK 8",  "NMR", "SAD",  "SD",  NA,
   "01-701-1034", 10,        "WEEK 16", "NMR", "SAD",  "SD",  NA,
   "01-701-1034", 12,        "WEEK 24", "NMR", "SAD",  "SD",  NA,
-
+  #
   "01-701-1097", 8,         "WEEK 8",  "NMR", "SAD",  "SD",  NA,
   "01-701-1097", 10,        "WEEK 16", "PMD", "PAR",  "PD",  NA,
   "01-701-1097", 12,        "WEEK 24", "PMD", "PAR",  "PD",  NA,
-
+  #
   "01-701-1115", 8,         "WEEK 8",  NA,    "PAD",  "PD",  NA,
-
+  #
   "01-701-1118", 8,         "WEEK 8",  "CMR", "CAR",  "CR",  NA,
   "01-701-1118", 10,        "WEEK 16", "CMR", "CAR",  "CR",  NA,
   "01-701-1118", 12,        "WEEK 24", "CMR", "CAR",  "CR",  NA,
-
+  #
   "01-701-1130", 8,         "WEEK 8",  "PMR", "PAR",  "PR",  NA,
   "01-701-1130", 10,        "WEEK 16", "PMR", "PAR",  "PR",  NA,
   "01-701-1130", 12,        "WEEK 24", "PMD", "PAD",  "PD",  NA,
-
+  #
   "01-701-1133", 8,         "WEEK 8",  "NMR", "PAR",  "SD",  NA,
   "01-701-1133", 10,        "WEEK 16", "NE",  "PAR",  "SD",  NA,
   "01-701-1133", 12,        "WEEK 24", "NMR", "PAR",  "SD",  NA,
-
+  #
   "01-701-1148", 8,         "WEEK 8",  NA,    "PAR",  "PR",  "NOT DONE",
   "01-701-1148", 10,        "WEEK 16", NA,    "PAR",  "PR",  "NOT DONE",
   "01-701-1148", 12,        "WEEK 24", NA,    "PAR",  "PR",  "NOT DONE",
-
+  #
   "01-701-1153", 8,         "WEEK 8",  "NE",  "SAD",  "SD",  NA,
   "01-701-1153", 10,        "WEEK 16", "NMR", "SAD",  "SD",  NA,
   "01-701-1153", 12,        "WEEK 24", "NMR", "SAD",  "SD",  NA,
-
+  #
   "01-701-1275", 8,         "WEEK 8",  "PMD", "PAD",  "PD",  NA,
   "01-701-1275", 10,        "WEEK 16", "PMD", "PAD",  "PD",  NA,
-
+  #
   "01-716-1311", 8,         "WEEK 8",  "PMR", "NE",   "PR",  NA,
   "01-716-1311", 10,        "WEEK 16", "CMR", NA,     "CR",  NA,
-
+  #
   "01-710-1315", 8,         "WEEK 8",  "NMR", "PAR",  "SD",  NA,
   "01-710-1315", 10,        "WEEK 16", "PMR", "PAR",  "PR",  NA,
-
+  #
   "01-701-1023", 8,         "WEEK 8",  "ND",  "NE",   "ND",  NA
 ) %>%
   left_join(timing_lb, by = c("USUBJID", "VISITNUM"))
