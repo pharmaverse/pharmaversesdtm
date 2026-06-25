@@ -1,5 +1,9 @@
 # pharmaversesdtm (development version)
 
+## New Features
+
+- Added pTau-181 to `lb_neuro`
+
 ## Documentation
 
 - Added the link for "Preview SDTM vignette" in `README.md`. (#242)
