@@ -198,6 +198,11 @@ rs_onco_irecist: Disease Response (iRECIST) for Oncology
 [Reference
 link](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_irecist.html)
 
+rs_onco_lymphoma: Disease Response (Lymphoma Lugano 2014)
+
+[Reference
+link](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_lymphoma.html)
+
 rs_onco_pcwg3: Disease Response (PCWG3) for Oncology
 
 [Reference

@@ -37,6 +37,8 @@ Authors:
 
 - Vinh Nguyen
 
+- Kiran Peddamudium
+
 - Gerardo Jose Rodriguez <gerardo.jrac@gmail.com>
   ([ORCID](https://orcid.org/0000-0003-1413-0060))
 
