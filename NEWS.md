@@ -1,8 +1,10 @@
 # pharmaversesdtm (development version)
 
 ## New Features
+- Added `rs_onco_lymphoma` RS domain dataset for lymphoma studies using Lugano
+  2014 response criteria. (#235)
 
-- Added pTau-181 to `lb_neuro`
+- Added pTau-181 to `lb_neuro`. (#244)
 
 ## Documentation
 
