@@ -272,6 +272,8 @@ G Gayatri, Pooja Kumari, Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
   : Disease Response (IMWG)
 - [`rs_onco_irecist`](https:/pharmaverse.github.io/pharmaversesdtm/247-feature-request-update-oe_ophtha-to-include-geographic-atrophy-ga-testcds/dev/reference/rs_onco_irecist.md)
   : Disease Response (iRECIST) for Oncology
+- [`rs_onco_lymphoma`](https:/pharmaverse.github.io/pharmaversesdtm/247-feature-request-update-oe_ophtha-to-include-geographic-atrophy-ga-testcds/dev/reference/rs_onco_lymphoma.md)
+  : Disease Response (Lymphoma Lugano 2014)
 - [`rs_onco_pcwg3`](https:/pharmaverse.github.io/pharmaversesdtm/247-feature-request-update-oe_ophtha-to-include-geographic-atrophy-ga-testcds/dev/reference/rs_onco_pcwg3.md)
   : Disease Response (PCWG3) for Oncology
 - [`rs_onco_recist`](https:/pharmaverse.github.io/pharmaversesdtm/247-feature-request-update-oe_ophtha-to-include-geographic-atrophy-ga-testcds/dev/reference/rs_onco_recist.md)

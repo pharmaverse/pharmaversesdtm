@@ -21,6 +21,8 @@ Useful links:
 
 Authors:
 
+- Lina Patil <lina.patil@cytel.com>
+
 - Stefan Bundfuss ([ORCID](https://orcid.org/0009-0005-0027-1198))
 
 - Kristin Dahnert
@@ -34,6 +36,8 @@ Authors:
 - Tomoyuki Namai
 
 - Vinh Nguyen
+
+- Kiran Peddamudium
 
 - Gerardo Jose Rodriguez <gerardo.jrac@gmail.com>
   ([ORCID](https://orcid.org/0000-0003-1413-0060))
