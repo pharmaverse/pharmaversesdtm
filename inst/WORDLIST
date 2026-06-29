@@ -49,6 +49,7 @@ ECGINT
 EG
 EGTEST
 EGTESTCD
+Elecsys
 EOS
 EOSLE
 Ery
@@ -79,7 +80,6 @@ ISTEST
 ISTESTCD
 Immunogenicity
 Intraocular
-JSON
 Kangjie
 Kumari
 LAMZ
@@ -93,6 +93,7 @@ LPERP
 LYM
 LYMLE
 Laterality
+Lugano
 Lumipulse
 MACROCY
 MBTEST
@@ -130,6 +131,7 @@ PCTEST
 PCTESTCD
 PCWG
 PHOS
+Phosphorylated
 POIKILO
 POLYCHR
 PPTEST
@@ -155,7 +157,6 @@ RECIST
 RENALCL
 RSTEST
 RSTESTCD
-Recode
 Retinopathy
 Rohan
 SCTEST

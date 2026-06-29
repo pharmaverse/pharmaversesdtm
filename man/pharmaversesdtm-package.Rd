@@ -30,6 +30,7 @@ Authors:
   \item Edoardo Mancini \email{edoardo.mancini@roche.com} (\href{https://orcid.org/0009-0006-4899-8641}{ORCID})
   \item Tomoyuki Namai
   \item Vinh Nguyen
+  \item Kiran Peddamudium
   \item Gerardo Jose Rodriguez \email{gerardo.jrac@gmail.com} (\href{https://orcid.org/0000-0003-1413-0060}{ORCID})
   \item Vladyslav Shuliar (\href{https://orcid.org/0009-0008-2354-8999}{ORCID})
 }
