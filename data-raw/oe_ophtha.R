@@ -152,7 +152,7 @@ oe41 <- bind_rows(oe31, oe32, oe33, oe34, oe35, oe36) %>%
 
 ## Add post-dose records for IOP test ----
 oe42 <- bind_rows(oe31, oe32, oe33, oe34, oe35, oe36) %>%
-  filter(OETESTCD == "IOP") %>%
+  filter(OETESTCD %in% c("IOP", "AREA")) %>%
   arrange(STUDYID, USUBJID, VISITNUM, OEDTC, OETESTCD, OELAT) %>%
   group_by(STUDYID, USUBJID) %>%
   mutate(
