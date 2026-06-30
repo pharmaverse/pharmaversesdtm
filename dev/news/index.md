@@ -4,6 +4,10 @@
 
 ### New Features
 
+- Updated `oe_ophtha` to include new tests applicable for Geographic
+  atrophy (GA) indication.
+  ([\#247](https://github.com/pharmaverse/pharmaversesdtm/issues/247))
+
 - Added `rs_onco_lymphoma` RS domain dataset for lymphoma studies using
   Lugano 2014 response criteria.
   ([\#235](https://github.com/pharmaverse/pharmaversesdtm/issues/235))
