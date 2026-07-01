@@ -1,4 +1,4 @@
-# pharmaversesdtm (development version)
+# pharmaversesdtm 1.5.0
 
 ## New Features
 
