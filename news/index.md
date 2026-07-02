@@ -1,5 +1,27 @@
 # Changelog
 
+## pharmaversesdtm 1.5.0
+
+CRAN release: 2026-07-01
+
+### New Features
+
+- Updated `oe_ophtha` to include new tests applicable for Geographic
+  atrophy (GA) indication.
+  ([\#247](https://github.com/pharmaverse/pharmaversesdtm/issues/247))
+
+- Added `rs_onco_lymphoma` RS domain dataset for lymphoma studies using
+  Lugano 2014 response criteria.
+  ([\#235](https://github.com/pharmaverse/pharmaversesdtm/issues/235))
+
+- Added pTau-181 to `lb_neuro`.
+  ([\#244](https://github.com/pharmaverse/pharmaversesdtm/issues/244))
+
+### Documentation
+
+- Added the link for “Preview SDTM vignette” in `README.md`.
+  ([\#242](https://github.com/pharmaverse/pharmaversesdtm/issues/242))
+
 ## pharmaversesdtm 1.4.1
 
 CRAN release: 2026-03-30

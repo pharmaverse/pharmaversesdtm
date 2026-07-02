@@ -7,6 +7,8 @@ status](https://www.r-pkg.org/badges/version/pharmaversesdtm)](https://CRAN.R-pr
 [![Total
 Downloads](http://cranlogs.r-pkg.org/badges/grand-total/pharmaversesdtm?color=green)](https://cran.r-project.org/package=pharmaversesdtm)
 
+> ^(Interactive data exploration: [Preview SDTM vignette](https://pharmaverse.github.io/pharmaversesdtm/articles/preview-sdtm.html))
+
 Test data (SDTM) for the pharmaverse family of packages
 
 - [Purpose](#purpose)
@@ -270,6 +272,8 @@ G Gayatri, Pooja Kumari, Sadchla Mascary, Kangjie Zhang and Zelos Zhu.
   : Disease Response (IMWG)
 - [`rs_onco_irecist`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_irecist.md)
   : Disease Response (iRECIST) for Oncology
+- [`rs_onco_lymphoma`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_lymphoma.md)
+  : Disease Response (Lymphoma Lugano 2014)
 - [`rs_onco_pcwg3`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_pcwg3.md)
   : Disease Response (PCWG3) for Oncology
 - [`rs_onco_recist`](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_recist.md)

@@ -116,7 +116,7 @@ Laboratory Test Dataset-neuro
 A SDTM LB domain dataset containing laboratory test results for
 Alzheimer's Disease studies
 
-Contains a set of 4 unique Test Short Names and Test Names:
+Contains a set of 5 unique Test Short Names and Test Names:
 
 |              |                                                     |
 |--------------|-----------------------------------------------------|
@@ -125,3 +125,4 @@ Contains a set of 4 unique Test Short Names and Test Names:
 | ASYNASAA     | Alpha Synuclein Seed Amplification Assay (CSF)      |
 | PTAB42R      | Lumipulse G pTau 217/Beta-Amyloid 1-42 Plasma Ratio |
 | PTAU217      | Lumipulse G pTau 217 Plasma                         |
+| TAU181P      | Elecsys Tau Protein Phosphorylated 181              |
