@@ -25,6 +25,25 @@ authors:
     text: "Developed by Cytel Inc., F. Hoffmann-La Roche AG, GlaxoSmithKline LLC, "
   sidebar:
     roles: [aut, fnd]
+  Lina Patil:
+    href: https://github.com/Lina2689
+  Stefan Bundfuss:
+    href: https://github.com/bundfussr
+  Kristin Dahnert:
+    href: https://github.com/Kcdahn
+  Fanny Gautier:
+    href: https://github.com/Fanny-Gautier
+  Edoardo Mancini:
+    href: https://manciniedoardo.github.io/
+  Tomoyuki Namai:
+    href: https://github.com/tomyukn
+  Vinh Nguyen:
+    href: https://github.com/vinhn23
+  Gerardo Jose Rodriguez:
+    href: https://github.com/Gero1999
+  Vladyslav Shuliar:
+    href: https://github.com/vbshuliar
+
   Cytel Inc.:
     html: "<a href='https://www.cytel.com/'><img src='man/figures/cytel_logo.png' height='25' alt='Cytel logo' /></a>"
     href: https://www.cytel.com/
