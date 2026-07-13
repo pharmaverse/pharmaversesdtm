@@ -19,7 +19,7 @@
 
 - **[Vinh Nguyen](https://github.com/vinhn23)**. Author.
 
-- **Kiran Peddamudium**. Author.
+- **[Kiran Peddamudium](https://github.com/kiran-peddamudium)**. Author.
 
 - **[Gerardo Jose Rodriguez](https://github.com/Gero1999)**. Author.
   [](https://orcid.org/0000-0003-1413-0060)
