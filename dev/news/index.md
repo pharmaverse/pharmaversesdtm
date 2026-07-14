@@ -2,6 +2,20 @@
 
 ## pharmaversesdtm (development version)
 
+### Various
+
+Developer Notes
+
+- Added clickable links to personal websites or GitHub profiles in the
+  home page sidebar for every
+  [pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/)
+  author.
+  ([\#252](https://github.com/pharmaverse/pharmaversesdtm/issues/252))
+
+## pharmaversesdtm 1.5.0
+
+CRAN release: 2026-07-01
+
 ### New Features
 
 - Updated `oe_ophtha` to include new tests applicable for Geographic

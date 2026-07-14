@@ -2,26 +2,29 @@
 
 ## Authors
 
-- **Lina Patil**. Author, maintainer.
+- **[Lina Patil](https://github.com/Lina2689)**. Author, maintainer.
 
-- **Stefan Bundfuss**. Author. [](https://orcid.org/0009-0005-0027-1198)
+- **[Stefan Bundfuss](https://github.com/bundfussr)**. Author.
+  [](https://orcid.org/0009-0005-0027-1198)
 
-- **Kristin Dahnert**. Author.
+- **[Kristin Dahnert](https://github.com/Kcdahn)**. Author.
 
-- **Fanny Gautier**. Author. [](https://orcid.org/0009-0004-3581-0131)
+- **[Fanny Gautier](https://github.com/Fanny-Gautier)**. Author.
+  [](https://orcid.org/0009-0004-3581-0131)
 
-- **Edoardo Mancini**. Author. [](https://orcid.org/0009-0006-4899-8641)
+- **[Edoardo Mancini](https://manciniedoardo.github.io/)**. Author.
+  [](https://orcid.org/0009-0006-4899-8641)
 
-- **Tomoyuki Namai**. Author.
+- **[Tomoyuki Namai](https://github.com/tomyukn)**. Author.
 
-- **Vinh Nguyen**. Author.
+- **[Vinh Nguyen](https://github.com/vinhn23)**. Author.
 
-- **Kiran Peddamudium**. Author.
+- **[Kiran Peddamudium](https://github.com/kiran-peddamudium)**. Author.
 
-- **Gerardo Jose Rodriguez**. Author.
+- **[Gerardo Jose Rodriguez](https://github.com/Gero1999)**. Author.
   [](https://orcid.org/0000-0003-1413-0060)
 
-- **Vladyslav Shuliar**. Author.
+- **[Vladyslav Shuliar](https://github.com/vbshuliar)**. Author.
   [](https://orcid.org/0009-0008-2354-8999)
 
 - **[](https://www.cytel.com/)[![Cytel
@@ -44,12 +47,12 @@ Source:
 Patil L, Bundfuss S, Dahnert K, Gautier F, Mancini E, Namai T, Nguyen V,
 Peddamudium K, Rodriguez G, Shuliar V (2026). *pharmaversesdtm: SDTM
 Test Data for the 'Pharmaverse' Family of Packages*. R package version
-1.4.1.9003, <https://pharmaverse.github.io/pharmaversesdtm/>.
+1.5.0.9000, <https://pharmaverse.github.io/pharmaversesdtm/>.
 
     @Manual{,
       title = {pharmaversesdtm: SDTM Test Data for the 'Pharmaverse' Family of Packages},
       author = {Lina Patil and Stefan Bundfuss and Kristin Dahnert and Fanny Gautier and Edoardo Mancini and Tomoyuki Namai and Vinh Nguyen and Kiran Peddamudium and Gerardo Jose Rodriguez and Vladyslav Shuliar},
       year = {2026},
-      note = {R package version 1.4.1.9003},
+      note = {R package version 1.5.0.9000},
       url = {https://pharmaverse.github.io/pharmaversesdtm/},
     }
