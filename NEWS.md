@@ -1,3 +1,15 @@
+# pharmaversesdtm (development version)
+
+## Various
+
+<details>
+
+<summary>Developer Notes</summary>
+
+- Added clickable links to personal websites or GitHub profiles in the home page sidebar for every `{pharmaversesdtm}` author. (#252)
+
+</details>
+
 # pharmaversesdtm 1.5.0
 
 ## New Features
