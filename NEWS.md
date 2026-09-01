@@ -14,6 +14,8 @@
 
 ## New Features
 
+- Updated `oe_ophtha` to remove post dose records for OETESTCD "AREA" .
+
 - Updated `oe_ophtha` to include new tests applicable for Geographic atrophy (GA) indication. (#247)
 
 - Added `rs_onco_lymphoma` RS domain dataset for lymphoma studies using Lugano
