@@ -14,7 +14,7 @@
 
 ## New Features
 
-- Updated `oe_ophtha` to remove post dose records for OETESTCD "AREA" .
+- Updated `oe_ophtha` to remove post dose records for OETESTCD "AREA". (#255)
 
 - Updated `oe_ophtha` to include new tests applicable for Geographic atrophy (GA) indication. (#247)
 
