@@ -21,6 +21,21 @@
 <meta property="og:description" content="A set of Study Data Tabulation Model (SDTM) datasets from the Clinical Data Interchange Standards Consortium (CDISC) pilot project used for testing and developing Analysis Data Model (ADaM) datasets inside the pharmaverse family of packages. SDTM dataset specifications are described in the CDISC SDTM implementation guide, accessible by creating a free account on &lt;https://www.cdisc.org/&gt;.">
 <meta property="og:image" content="https://pharmaverse.github.io/pharmaversesdtm/logo.png">
 <meta name="robots" content="noindex">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all navbar links that have an aria-label
+  var navLinks = document.querySelectorAll('.navbar-nav .nav-link[aria-label]');
+
+  navLinks.forEach(function (link) {
+    // Initialize Bootstrap 5 Tooltip
+    link.setAttribute('title', link.getAttribute('aria-label'));
+    new bootstrap.Tooltip(link, {
+      placement: 'bottom', // Tooltip appears below the icon
+      trigger: 'hover'
+    });
+  });
+});
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -30,7 +45,7 @@
 
     <a class="navbar-brand me-2" href="index.html">pharmaversesdtm</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.5.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.5.0.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">

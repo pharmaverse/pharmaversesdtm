@@ -12,6 +12,10 @@ Developer Notes
   author.
   ([\#252](https://github.com/pharmaverse/pharmaversesdtm/issues/252))
 
+- Fixed an issue with newly added documentation tool tips not appearing
+  as expected.
+  ([\#251](https://github.com/pharmaverse/pharmaversesdtm/issues/251))
+
 ## pharmaversesdtm 1.5.0
 
 CRAN release: 2026-07-01
