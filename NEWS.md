@@ -8,6 +8,8 @@
 
 - Added clickable links to personal websites or GitHub profiles in the home page sidebar for every `{pharmaversesdtm}` author. (#252)
 
+- Fixed an issue with newly added documentation tool tips not appearing as expected. (#251)
+
 </details>
 
 # pharmaversesdtm 1.5.0
