@@ -6,6 +6,8 @@
 
 <summary>Developer Notes</summary>
 
+- Updated `oe_ophtha` to remove post dose records for OETESTCD "AREA". (#255)
+
 - Added clickable links to personal websites or GitHub profiles in the home page sidebar for every `{pharmaversesdtm}` author. (#252)
 
 </details>
@@ -13,8 +15,6 @@
 # pharmaversesdtm 1.5.0
 
 ## New Features
-
-- Updated `oe_ophtha` to remove post dose records for OETESTCD "AREA". (#255)
 
 - Updated `oe_ophtha` to include new tests applicable for Geographic atrophy (GA) indication. (#247)
 
