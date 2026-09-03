@@ -6,6 +6,9 @@
 
 Developer Notes
 
+- Updated `oe_ophtha` to remove post dose records for OETESTCD “AREA”.
+  ([\#255](https://github.com/pharmaverse/pharmaversesdtm/issues/255))
+
 - Added clickable links to personal websites or GitHub profiles in the
   home page sidebar for every
   [pharmaversesdtm](https://pharmaverse.github.io/pharmaversesdtm/)
