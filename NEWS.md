@@ -1,5 +1,8 @@
 # pharmaversesdtm (development version)
 
+## New Features
+- Added qs_neuro QS dataset with item-level CDR and MMSE data for Alzheimer's Disease studies. (#258)
+
 ## Various
 
 <details>

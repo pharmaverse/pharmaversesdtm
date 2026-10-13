@@ -24,6 +24,7 @@ BRTHDTC
 Basophils
 Biospecimen
 CDISC
+CDR
 CHGB
 CHOL
 CICD
@@ -82,7 +83,7 @@ ISTEST
 ISTESTCD
 Immunogenicity
 Intraocular
-JSON
+Jiang
 Kangjie
 Kumari
 LAMZ
@@ -109,6 +110,8 @@ MCV
 MH
 MICROCY
 MICROSUS
+MMS
+MMSE
 MONOLE
 MSTEST
 MSTESTCD
@@ -116,6 +119,7 @@ MTBCMPLX
 Macrocytes
 Mascary
 MedDRA
+Meilin
 Microcytes
 Monocytes
 Mycobacterium
@@ -151,6 +155,7 @@ Polychromasia
 Pooja
 Pre
 QS
+QSALL
 QSTEST
 QSTESTCD
 RBC
@@ -160,7 +165,6 @@ RECIST
 RENALCL
 RSTEST
 RSTESTCD
-Recode
 Retinopathy
 Rohan
 SCTEST
