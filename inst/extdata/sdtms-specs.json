@@ -473,12 +473,12 @@
      "therapeutic_area": "neurology"
     },
     {
- "name": "qs_neuro",
- "label": "Questionnaire Dataset-neuro",
- "description": "A SDTM QS dataset containing item-level CDR box scores and MMSE item scores for Alzheimer's Disease studies",
- "source": "Constructed by {admiralneuro} developers",
- "author": "Meilin Jiang",
- "therapeutic_area": "neurology"
-}
+      "name": "qs_neuro",
+      "label": "Questionnaire Dataset-neuro",
+      "description": "A SDTM QS dataset containing item-level CDR box scores and MMSE item scores for Alzheimer's Disease studies",
+      "source": "Constructed by {admiralneuro} developers",
+      "author": "Meilin Jiang",
+      "therapeutic_area": "neurology"
+    }
   ]
 }
