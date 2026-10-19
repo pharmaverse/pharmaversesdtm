@@ -186,7 +186,7 @@ result_check <- rs_neuro %>%
   filter(!is.na(RSSTRESN)) %>%
   left_join(rename(cdr_responses, expected = RSORRES), by = c("RSSTRESN" = "score"))
 if (any(result_check$RSORRES != result_check$expected) ||
-    any(result_check$RSSTRESC != as.character(result_check$RSSTRESN))) {
+  any(result_check$RSSTRESC != as.character(result_check$RSSTRESN))) {
   cli_abort("RSORRES, RSSTRESC and RSSTRESN are not consistent.")
 }
 if (any(rs_neuro$RSORRES[rs_neuro$RSTESTCD == "CDR0106"] %in% "QUESTIONABLE")) {

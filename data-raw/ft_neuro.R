@@ -210,7 +210,7 @@ result_check <- ft_neuro %>%
   filter(!is.na(FTSTRESN)) %>%
   left_join(rename(mmse_responses, expected = FTORRES), by = c("FTSTRESN" = "score"))
 if (any(result_check$FTORRES != result_check$expected) ||
-    any(result_check$FTSTRESC != as.character(result_check$FTSTRESN))) {
+  any(result_check$FTSTRESC != as.character(result_check$FTSTRESN))) {
   cli_abort("FTORRES, FTSTRESC and FTSTRESN are not consistent.")
 }
 
