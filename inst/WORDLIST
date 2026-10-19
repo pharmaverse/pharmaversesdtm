@@ -57,6 +57,8 @@ Ery
 FATEST
 FATESTCD
 FOCID
+FTTEST
+FTTESTCD
 Foveal
 GAFLOC
 GCIG
@@ -83,7 +85,6 @@ ISTEST
 ISTESTCD
 Immunogenicity
 Intraocular
-Jiang
 Kangjie
 Kumari
 LAMZ
@@ -119,7 +120,6 @@ MTBCMPLX
 Macrocytes
 Mascary
 MedDRA
-Meilin
 Microcytes
 Monocytes
 Mycobacterium
@@ -155,7 +155,6 @@ Polychromasia
 Pooja
 Pre
 QS
-QSALL
 QSTEST
 QSTESTCD
 RBC
@@ -163,6 +162,7 @@ RCAMINT
 README
 RECIST
 RENALCL
+RSALL
 RSTEST
 RSTESTCD
 Retinopathy
