@@ -471,6 +471,20 @@
      "description": "A SDTM LB domain dataset containing laboratory test results for Alzheimer's Disease studies",
      "source": "Constructed by {admiralneuro} developers",
      "therapeutic_area": "neurology"
+    },
+    {
+     "name": "rs_neuro",
+     "label": "Clinical Classification Dataset-neuro",
+     "description": "A SDTM RS dataset containing item-level Clinical Dementia Rating (CDR) box scores for Alzheimer's Disease studies",
+     "source": "Constructed by {admiralneuro} developers",
+     "therapeutic_area": "neurology"
+    },
+    {
+     "name": "ft_neuro",
+     "label": "Functional Test Dataset-neuro",
+     "description": "A SDTM FT dataset containing item-level Mini-Mental State Examination (MMSE) results for Alzheimer's Disease studies",
+     "source": "Constructed by {admiralneuro} developers",
+     "therapeutic_area": "neurology"
     }
   ]
 }
