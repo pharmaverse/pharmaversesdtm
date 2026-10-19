@@ -2,6 +2,8 @@
 
 ## New Features
 
+- Neurological disease specific SDTM datasets have been added: `rs_neuro` item-level Clinical Dementia Rating (CDR) box scores and `ft_neuro`: item-level Mini-Mental State Examination (MMSE) results. (#258)
+
 ## Various
 
 <details>
