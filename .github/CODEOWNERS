@@ -36,6 +36,8 @@ data-raw/nv_neuro.R @jwang-lilly
 data-raw/suppnv_neuro.R @jwang-lilly
 data-raw/ag_neuro.R @jwang-lilly
 data-raw/lb_neuro.R @jackychen651
+data-raw/rs_neuro.R @meilinjiang
+data-raw/ft_neuro.R @meilinjiang
 
 # microbiology
 data-raw/be.R @Gero1999
