@@ -55,7 +55,6 @@ testnames <- tibble::tribble(
   "Bone",       "BONERESP",         "Bone Response", "PCWG SCHER PROSTATE CANCER 2016",
   "Overall",    "OVRLRESP",      "Overall Response", "PCWG SCHER PROSTATE CANCER 2016",
   "PSMA_PET",   "OVRLRESP",      "Overall Response",                        "PSMA-PET"
-
 )
 
 # date of the corresponding visit from LB
