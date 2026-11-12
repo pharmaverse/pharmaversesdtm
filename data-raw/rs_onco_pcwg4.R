@@ -1,5 +1,5 @@
 # Datasets: rs_onco_pcwg4
-# Description: RS Oncology dataset using PCWG3 criteria
+# Description: RS Oncology dataset using PCWG4 criteria
 
 # Load libraries -----
 library(dplyr)
@@ -95,6 +95,6 @@ for (col in colnames(rs_onco_pcwg4)) {
   attr(rs_onco_pcwg4[[col]], "label") <- attr(rs_onco[[col]], "label")
 }
 
-attr(rs_onco_pcwg4, "label") <- "Disease Response (PCWG3)"
+attr(rs_onco_pcwg4, "label") <- "Disease Response (PCWG4)"
 
 usethis::use_data(rs_onco_pcwg4, overwrite = TRUE)
