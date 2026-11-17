@@ -11,7 +11,7 @@ rs_onco_pcwg4
 
 ## Format
 
-A data frame with 14 columns:
+A data frame with 15 columns:
 
 - STUDYID:
 
@@ -40,6 +40,10 @@ A data frame with 14 columns:
 - RSCAT:
 
   Category for Response Assessment
+
+- RSSCAT:
+
+  Subcategory
 
 - RSORRES:
 
