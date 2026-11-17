@@ -50,11 +50,11 @@ rs_onco_pcwg4_pre <- pcwg4_raw %>%
   )
 
 testnames <- tibble::tribble(
-  ~assessment,   ~RSTESTCD,                 ~RSTEST,                            ~RSCAT,
-  "SoftTissue", "SFTSRESP",  "Soft Tissue Response",                      "RECIST 1.1",
-  "Bone",       "BONERESP",         "Bone Response", "PCWG SCHER PROSTATE CANCER 2016",
-  "Overall",    "OVRLRESP",      "Overall Response", "PCWG SCHER PROSTATE CANCER 2016",
-  "PSMA_PET",   "OVRLRESP",      "Overall Response",                        "PSMA-PET"
+  ~assessment,   ~RSTESTCD,                 ~RSTEST,                            ~RSCAT, ~RSSCAT,
+  "SoftTissue", "SFTSRESP",  "Soft Tissue Response",                      "RECIST 1.1", NA_character_,
+  "Bone",       "BONERESP",         "Bone Response", "PCWG SCHER PROSTATE CANCER 2026", NA_character_,
+  "Overall",    "OVRLRESP",      "Overall Response", "PCWG SCHER PROSTATE CANCER 2026", NA_character_,
+  "PSMA_PET",   "OVRLRESP",      "Overall Response", "PCWG SCHER PROSTATE CANCER 2026", "PSMA-PET"
 )
 
 # date of the corresponding visit from LB
@@ -85,8 +85,8 @@ rs_onco_pcwg4 <- rs_onco_pcwg4_pre %>%
     new_var = RSSEQ
   ) %>%
   select(
-    STUDYID, DOMAIN, USUBJID, RSSEQ, RSTESTCD, RSTEST, RSCAT, RSORRES, RSSTRESC,
-    RSEVAL, VISITNUM, VISIT, RSDTC, RSDY
+    STUDYID, DOMAIN, USUBJID, RSSEQ, RSTESTCD, RSTEST, RSCAT, RSSCAT, RSORRES,
+    RSSTRESC, RSEVAL, VISITNUM, VISIT, RSDTC, RSDY
   )
 
 # assign labels
@@ -94,6 +94,8 @@ rs_onco <- pharmaversesdtm::rs_onco
 for (col in colnames(rs_onco_pcwg4)) {
   attr(rs_onco_pcwg4[[col]], "label") <- attr(rs_onco[[col]], "label")
 }
+
+attr(rs_onco_pcwg4$RSSCAT, "label") <- "Subcategory"
 
 attr(rs_onco_pcwg4, "label") <- "Disease Response (PCWG4)"
 

@@ -10,7 +10,7 @@
 #' @keywords dataset oncology
 #' @description A SDTM RS dataset for oncology studies using PCWG4 criteria intended for examples of ADaM dataset creation
 #' @docType data
-#' @format A data frame with 14 columns:
+#' @format A data frame with 15 columns:
 #'   \describe{
 #'     \item{STUDYID}{Study Identifier}
 #'     \item{DOMAIN}{Domain Abbreviation}
@@ -19,6 +19,7 @@
 #'     \item{RSTESTCD}{Response Assessment Short Name}
 #'     \item{RSTEST}{Response Assessment Name}
 #'     \item{RSCAT}{Category for Response Assessment}
+#'     \item{RSSCAT}{Subcategory}
 #'     \item{RSORRES}{Response Assessment Original Result}
 #'     \item{RSSTRESC}{Response Assessment Result in Std Format}
 #'     \item{RSEVAL}{Evaluator}

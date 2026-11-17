@@ -5,7 +5,7 @@
 \alias{rs_onco_pcwg4}
 \title{Disease Response (PCWG4) for Oncology}
 \format{
-A data frame with 14 columns:
+A data frame with 15 columns:
 \describe{
 \item{STUDYID}{Study Identifier}
 \item{DOMAIN}{Domain Abbreviation}
@@ -14,6 +14,7 @@ A data frame with 14 columns:
 \item{RSTESTCD}{Response Assessment Short Name}
 \item{RSTEST}{Response Assessment Name}
 \item{RSCAT}{Category for Response Assessment}
+\item{RSSCAT}{Subcategory}
 \item{RSORRES}{Response Assessment Original Result}
 \item{RSSTRESC}{Response Assessment Result in Std Format}
 \item{RSEVAL}{Evaluator}
