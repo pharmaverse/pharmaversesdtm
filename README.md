@@ -95,6 +95,9 @@ This metadata drives the automated documentation process, and the file is read b
 -   Update `inst/extdata/sdtms-specs.json` with the new dataset metadata, including:
     -   Assigning the dataset label, description, author, source, purpose, or structure.
     -   Assigning or updating the dataset therapeutic area (used for reference-page grouping).
+- Install the package locally, e.g., by calling `pak::local_install(upgrade =
+  FALSE)`. This ensures that the `create_sdtms_data.R` script in the next step
+  finds the new dataset as it reads the data from the installed version.
 -   Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and update the `.Rd` files in `man/`.
 -   Add your GitHub handle to `.github/CODEOWNERS`.
 -   Update `NEWS.md`.
