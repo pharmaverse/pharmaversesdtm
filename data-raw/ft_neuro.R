@@ -6,8 +6,9 @@
 # Note: Only the 30 collected item results are included (serial 7s path for
 #   attention). The attention subtotal (MMS104) and total score (MMS112) are left
 #   for ADaM derivation.
-# Note: FTORRES holds the CRF response (CORRECT, INCORRECT); FTSTRESC/FTSTRESN hold
-#   the item score (1, 0). CDISC CT has no MMSE response codelist.
+# Note: FTORRES holds the CRF response (Correct, Incorrect); FTSTRESC/FTSTRESN hold
+#   the item score (1, 0). CDISC CT has no MMSE response codelist; this follows the
+#   pattern of CT response codelists (text in ORRES, score in STRESC).
 # Note: The MMSE is copyrighted by Psychological Assessment Resources (PAR). Only
 #   CDISC test names are used; all values are simulated and are for not-for-profit
 #   use within `pharmaverse`-related examples/documentation only.
@@ -116,8 +117,8 @@ mmse_items <- tribble(
 # Item score to CRF response text
 mmse_responses <- tribble(
   ~score, ~FTORRES,
-  1, "CORRECT",
-  0, "INCORRECT"
+  1, "Correct",
+  0, "Incorrect"
 )
 
 # Simulate a total, then mark (30 - total) items incorrect one at a time,
@@ -133,10 +134,12 @@ allocate_mmse <- function(total, weight) {
   score
 }
 
-# MMSE total from CDR Sum of Boxes: about 29 when unimpaired, about 20 at CDR-SB 9
+# MMSE total from CDR Sum of Boxes: about 29 when unimpaired, about 20 at CDR-SB 9,
+# falling faster above CDR-SB 10 so severe dementia gives totals of 10 or below
 ft_scores <- ft_frame %>%
   mutate(
-    total = pmin(pmax(round(29.3 - 1.0 * cdr_sb + rnorm(n(), mean = 0, sd = 1.5)), 0), 30),
+    mmse_mean = 29.3 - 1.0 * cdr_sb - 1.2 * pmax(cdr_sb - 10, 0),
+    total = pmin(pmax(round(mmse_mean + rnorm(n(), mean = 0, sd = 1.5)), 0), 30),
     FTTESTCD = list(mmse_items$FTTESTCD),
     score = map(total, ~ allocate_mmse(.x, mmse_items$weight))
   ) %>%
@@ -210,7 +213,7 @@ result_check <- ft_neuro %>%
   filter(!is.na(FTSTRESN)) %>%
   left_join(rename(mmse_responses, expected = FTORRES), by = c("FTSTRESN" = "score"))
 if (any(result_check$FTORRES != result_check$expected) ||
-  any(result_check$FTSTRESC != as.character(result_check$FTSTRESN))) {
+    any(result_check$FTSTRESC != as.character(result_check$FTSTRESN))) {
   cli_abort("FTORRES, FTSTRESC and FTSTRESN are not consistent.")
 }
 

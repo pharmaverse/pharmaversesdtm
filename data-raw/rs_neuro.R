@@ -5,9 +5,11 @@
 #   (codelists C101811/C101812), so it is stored in RS (SDTMIG v3.3+).
 # Note: Only the six collected box scores are included. CDR Sum of Boxes (CDR0107)
 #   and Global CDR (CDR0108) are left for ADaM derivation.
-# Note: RSORRES holds the CRF response text (NONE, QUESTIONABLE, MILD, MODERATE,
-#   SEVERE); RSSTRESC/RSSTRESN hold the box score (0, 0.5, 1, 2, 3). CDISC CT has
-#   no CDR response codelist, so the text follows the CDR rating anchors.
+# Note: RSORRES holds the CRF response text as worded on the instrument (None,
+#   Questionable, Mild, Moderate, Severe); RSSTRESC/RSSTRESN hold the box score
+#   (0, 0.5, 1, 2, 3). CDISC CT has no CDR response codelist; this follows the
+#   pattern of CT response codelists for comparable clinical classifications
+#   (e.g. HAM-A: ORRES C182468, STRESC C182506).
 # Note: The CDR is copyrighted by Washington University in St. Louis. Only CDISC
 #   test names are used; all values are simulated and are for not-for-profit use
 #   within `pharmaverse`-related examples/documentation only.
@@ -55,9 +57,11 @@ subjects <- dm_neuro %>%
   mutate(
     z_base = runif(n(), min = 0.35, max = 1.05),
     z_base = if_else(USUBJID %in% c("01-701-1015", "01-714-1288"), 0.10, z_base),
-    # One more impaired subject so MODERATE/SEVERE ratings occur, exercising the
+    # One moderate subject so Moderate ratings occur, exercising the
     # Global CDR rules for Memory >= 1 in ADaM
     z_base = if_else(USUBJID == "01-701-1153", 1.60, z_base),
+    # One severe subject so Severe (3) ratings occur
+    z_base = if_else(USUBJID == "01-701-1028", 2.90, z_base),
     z_slope = case_when(
       ARMCD == "Xan_Hi" ~ 0.15,
       TRUE ~ 0.25 # Placebo and observational
@@ -90,11 +94,11 @@ cdr_boxes <- tribble(
 # Box score to CRF response text (Personal Care has no QUESTIONABLE)
 cdr_responses <- tribble(
   ~score, ~RSORRES,
-  0, "NONE",
-  0.5, "QUESTIONABLE",
-  1, "MILD",
-  2, "MODERATE",
-  3, "SEVERE"
+  0, "None",
+  0.5, "Questionable",
+  1, "Mild",
+  2, "Moderate",
+  3, "Severe"
 )
 
 # Round a continuous value to the nearest allowed CDR rating
@@ -186,10 +190,10 @@ result_check <- rs_neuro %>%
   filter(!is.na(RSSTRESN)) %>%
   left_join(rename(cdr_responses, expected = RSORRES), by = c("RSSTRESN" = "score"))
 if (any(result_check$RSORRES != result_check$expected) ||
-  any(result_check$RSSTRESC != as.character(result_check$RSSTRESN))) {
+    any(result_check$RSSTRESC != as.character(result_check$RSSTRESN))) {
   cli_abort("RSORRES, RSSTRESC and RSSTRESN are not consistent.")
 }
-if (any(rs_neuro$RSORRES[rs_neuro$RSTESTCD == "CDR0106"] %in% "QUESTIONABLE")) {
+if (any(rs_neuro$RSORRES[rs_neuro$RSTESTCD == "CDR0106"] %in% "Questionable")) {
   cli_abort("CDR Personal Care (CDR0106) cannot be QUESTIONABLE.")
 }
 
