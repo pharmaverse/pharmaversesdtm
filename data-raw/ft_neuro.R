@@ -1,19 +1,31 @@
 # Dataset: ft_neuro
 # Description: Create FT test SDTM dataset for Alzheimer's Disease (Neuro),
 #   containing item-level Mini-Mental State Examination (MMSE) results.
-# Note: Under CDISC Controlled Terminology the MMSE is a Functional Test
-#   (codelists C100142/C100141), so it is stored in FT (SDTMIG v3.3+).
-# Note: Only the 30 collected item results are included (serial 7s path for
-#   attention). The attention subtotal (MMS104) and total score (MMS112) are left
-#   for ADaM derivation.
-# Note: FTORRES holds the CRF response (Correct, Incorrect); FTSTRESC/FTSTRESN hold
-#   the item score (1, 0). CDISC CT has no MMSE response codelist; this follows the
-#   pattern of CT response codelists (text in ORRES, score in STRESC).
-# Note: The MMSE is copyrighted by Psychological Assessment Resources (PAR). Only
-#   CDISC test names are used; all values are simulated and are for not-for-profit
-#   use within `pharmaverse`-related examples/documentation only.
-# Note: rs_neuro.R must run first. Each subject's MMSE is simulated from their CDR
-#   Sum of Boxes at the same visit, so the two datasets stay consistent.
+#
+# Standards:
+#   - Domain: MMSE is a Functional Test in CDISC CT (codelists C100142/C100141),
+#     so it is stored in FT (SDTMIG v3.3+).
+#   - Results: FTORRES holds the CRF response (Correct, Incorrect); FTSTRESC
+#     holds the standardized item score (1, 0) and FTSTRESN its numeric form.
+#     Per the SDTM --STRESC definition, numeric results in --STRESC are also
+#     stored in --STRESN, so the two must match (Pinnacle 21 rule SD1212).
+#   - CDISC CT has no MMSE response codelist; this follows CT response
+#     codelists such as HAM-A (ORRES C182468, STRESC C182506).
+#
+# Scope:
+#   - Only the 30 collected item results are included (serial 7s path for
+#     attention). The attention subtotal (MMS104) and total score (MMS112) are
+#     left for ADaM derivation.
+#
+# Dependencies:
+#   - rs_neuro.R must run first. Each subject's MMSE is simulated from their CDR
+#     Sum of Boxes at the same visit, so the two datasets stay consistent.
+#
+# Copyright:
+#   - The MMSE is copyrighted by Psychological Assessment Resources (PAR). Only
+#     CDISC test names are used; all values are simulated and are for
+#     not-for-profit use within `pharmaverse`-related examples/documentation
+#     only.
 
 # Load libraries ----
 library(admiral)

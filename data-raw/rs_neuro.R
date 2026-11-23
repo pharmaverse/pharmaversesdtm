@@ -1,19 +1,30 @@
 # Dataset: rs_neuro
 # Description: Create RS test SDTM dataset for Alzheimer's Disease (Neuro),
 #   containing item-level Clinical Dementia Rating (CDR) box scores.
-# Note: Under CDISC Controlled Terminology the CDR is a Clinical Classification
-#   (codelists C101811/C101812), so it is stored in RS (SDTMIG v3.3+).
-# Note: Only the six collected box scores are included. CDR Sum of Boxes (CDR0107)
-#   and Global CDR (CDR0108) are left for ADaM derivation.
-# Note: RSORRES holds the CRF response text as worded on the instrument (None,
-#   Questionable, Mild, Moderate, Severe); RSSTRESC/RSSTRESN hold the box score
-#   (0, 0.5, 1, 2, 3). CDISC CT has no CDR response codelist; this follows the
-#   pattern of CT response codelists for comparable clinical classifications
-#   (e.g. HAM-A: ORRES C182468, STRESC C182506).
-# Note: The CDR is copyrighted by Washington University in St. Louis. Only CDISC
-#   test names are used; all values are simulated and are for not-for-profit use
-#   within `pharmaverse`-related examples/documentation only.
-# Note: ft_neuro.R reads this dataset, so rs_neuro.R must run first.
+#
+# Standards:
+#   - Domain: CDR is a Clinical Classification in CDISC CT (codelists
+#     C101811/C101812), so it is stored in RS (SDTMIG v3.3+).
+#   - Results: RSORRES holds the CRF response as worded on the instrument (None,
+#     Questionable, Mild, Moderate, Severe); RSSTRESC holds the standardized
+#     score (0, 0.5, 1, 2, 3) and RSSTRESN its numeric form. Per the SDTM
+#     --STRESC definition, numeric results in --STRESC are also stored in
+#     --STRESN, so the two must match (Pinnacle 21 rule SD1212).
+#   - CDISC CT has no CDR response codelist; this follows CT for comparable
+#     clinical classifications, e.g. HAM-A: ORRES "Mild" (C182468),
+#     STRESC "1" (C182506).
+#
+# Scope:
+#   - Only the six collected box scores are included. CDR Sum of Boxes (CDR0107)
+#     and Global CDR (CDR0108) are left for ADaM derivation.
+#
+# Dependencies:
+#   - ft_neuro.R reads this dataset, so rs_neuro.R must run first.
+#
+# Copyright:
+#   - The CDR is copyrighted by Washington University in St. Louis. Only CDISC
+#     test names are used; all values are simulated and are for not-for-profit
+#     use within `pharmaverse`-related examples/documentation only.
 
 # Load libraries ----
 library(admiral)
