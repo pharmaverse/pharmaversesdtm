@@ -50,11 +50,11 @@ rs_onco_pcwg4_pre <- pcwg4_raw %>%
   )
 
 testnames <- tibble::tribble(
-  ~assessment,   ~RSTESTCD,                 ~RSTEST,                            ~RSCAT, ~RSSCAT,
-  "SoftTissue", "SFTSRESP",  "Soft Tissue Response",                      "RECIST 1.1", NA_character_,
-  "Bone",       "BONERESP",         "Bone Response", "PCWG SCHER PROSTATE CANCER 2026", NA_character_,
-  "Overall",    "OVRLRESP",      "Overall Response", "PCWG SCHER PROSTATE CANCER 2026", NA_character_,
-  "PSMA_PET",   "OVRLRESP",      "Overall Response", "PCWG SCHER PROSTATE CANCER 2026", "PSMA-PET"
+  ~assessment,  ~RSTESTCD,  ~RSTEST,                ~RSCAT,                 ~RSSCAT,
+  "SoftTissue", "SFTSRESP", "Soft Tissue Response", "RECIST 1.1",           NA_character_,
+  "Bone",       "BONERESP", "Bone Response",        "PCWG4 Armstrong 2026", NA_character_,
+  "Overall",    "OVRLRESP", "Overall Response",     "PCWG4 Armstrong 2026", NA_character_,
+  "PSMA_PET",   "OVRLRESP", "Overall Response",     "PCWG4 Armstrong 2026", "PSMA-PET"
 )
 
 # date of the corresponding visit from LB
