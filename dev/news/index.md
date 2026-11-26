@@ -2,6 +2,11 @@
 
 ## pharmaversesdtm (development version)
 
+### New Features
+
+- Oncology response data for PCWG4 criteria (`rs_onco_pcwg4`) was added.
+  ([\#261](https://github.com/pharmaverse/pharmaversesdtm/issues/261))
+
 ### Various
 
 Developer Notes

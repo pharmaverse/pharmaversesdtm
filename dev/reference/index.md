@@ -90,6 +90,8 @@
   : Disease Response (Lymphoma Lugano 2014)
 - [`rs_onco_pcwg3`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/rs_onco_pcwg3.md)
   : Disease Response (PCWG3) for Oncology
+- [`rs_onco_pcwg4`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/rs_onco_pcwg4.md)
+  : Disease Response (PCWG4) for Oncology
 - [`rs_onco_recist`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/rs_onco_recist.md)
   : Disease Response (RECIST 1.1) for Oncology
 - [`supprs_onco_ca125`](https://pharmaverse.github.io/pharmaversesdtm/dev/reference/supprs_onco_ca125.md)

@@ -155,6 +155,10 @@ is read by `data-raw/create_sdtms_data.R` to help generate:
     or structure.
   - Assigning or updating the dataset therapeutic area (used for
     reference-page grouping).
+- Install the package locally, e.g., by calling
+  `pak::local_install(upgrade = FALSE)`. This ensures that the
+  `create_sdtms_data.R` script in the next step finds the new dataset as
+  it reads the data from the installed version.
 - Run `data-raw/create_sdtms_data.R` in order to update `NAMESPACE` and
   update the `.Rd` files in `man/`.
 - Add your GitHub handle to `.github/CODEOWNERS`.

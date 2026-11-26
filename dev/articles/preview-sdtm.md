@@ -208,6 +208,11 @@ rs_onco_pcwg3: Disease Response (PCWG3) for Oncology
 [Reference
 link](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_pcwg3.html)
 
+rs_onco_pcwg4: Disease Response (PCWG4) for Oncology
+
+[Reference
+link](https://pharmaverse.github.io/pharmaversesdtm/reference/rs_onco_pcwg4.html)
+
 rs_onco_recist: Disease Response (RECIST 1.1) for Oncology
 
 [Reference
