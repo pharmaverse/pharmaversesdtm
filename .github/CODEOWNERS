@@ -8,7 +8,7 @@ data-raw/pp.R @toni-1991
 data-raw/query_databases.R @bundfussr
 
 # admiralonco
-data-raw/rs_onco.R @bundfussr
+data-raw/rs_onco*.R @bundfussr
 data-raw/tr_onco.R @bundfussr
 data-raw/tu_onco.R @bundfussr
 
