@@ -4,6 +4,8 @@
 
 - Neurological disease specific SDTM datasets have been added: `rs_neuro` item-level Clinical Dementia Rating (CDR) box scores and `ft_neuro`: item-level Mini-Mental State Examination (MMSE) results. (#258)
 
+- Oncology response data for PCWG4 criteria (`rs_onco_pcwg4`) was added. (#261)
+
 ## Various
 
 <details>
